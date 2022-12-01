@@ -1,0 +1,44 @@
+project:
+  type: website
+
+
+lang: pt
+
+
+website:
+  title: "R-Ladies São Paulo"
+  page-footer: 
+    right: "Página criada com [Quarto](https://quarto.org/). "
+    left: "&copy; Copyright 2022, R-Ladies São Paulo"
+    background: "#562457"  
+  page-navigation: true  
+  navbar:
+    background: "#562457"  
+    right:
+#      - sobre.qmd
+      - icon: github
+        href: https://github.com/R-Ladies-Sao-Paulo
+      - icon: twitter
+        href: https://twitter.com/rladiessaopaulo
+      - icon: instagram
+        href: https://instagram.com/rladiessaopaulo
+      - icon: youtube
+        href: https://www.youtube.com/c/RLadiesS%C3%A3oPaulo
+      - icon: person-plus
+        href: https://www.meetup.com/rladies-sao-paulo/
+
+
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    toc: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+
+
+editor: visual
+
+execute:
+  freeze: true

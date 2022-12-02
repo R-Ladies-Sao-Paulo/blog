@@ -13,6 +13,7 @@ website:
     creator: "@beamilz"
     site: "@RLadiesSaoPaulo"
   favicon: "img/logo.jpg"
+  google-analytics: "G-EB5DDC6HCJ"
   description: "Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes."
   page-footer: 
     right: "Página criada com [Quarto](https://quarto.org/). "

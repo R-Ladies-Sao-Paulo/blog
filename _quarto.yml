@@ -52,3 +52,7 @@ editor: visual
 
 execute:
   freeze: true
+  
+comments:
+  giscus: 
+    repo: R-Ladies-Sao-Paulo/blog

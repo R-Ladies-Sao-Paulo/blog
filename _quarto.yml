@@ -7,6 +7,7 @@ lang: pt
 
 website:
   title: "R-Ladies São Paulo"
+  reader-mode: true
   site-url: "https://rladies-sp.org"
   description: "Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes."
   page-footer: 
@@ -14,14 +15,26 @@ website:
     left: "&copy; Copyright 2022, R-Ladies São Paulo"
     background: "#562457"  
   page-navigation: true  
+  repo-url: https://github.com/R-Ladies-Sao-Paulo/blog/
+  repo-actions: [edit, issue]  
+  sidebar: 
+    logo: "img/logo.jpg"
+    style: "docked"
+    search: true
+    border: true
+    foreground: "#562457" 
+    alignment: "center"
+    contents:
+      - text: "Página inicial"
+        href: /         
+      - text: "Sobre a R-Ladies SP"
+        href: sobre.qmd        
+
+    
+      
   navbar:
     background: "#562457"  
-    left:
-      - text: "Sobre a R-Ladies SP"
-        href: sobre.qmd    
     right:
-      - icon: github
-        href: https://github.com/R-Ladies-Sao-Paulo
       - icon: twitter
         href: https://twitter.com/rladiessaopaulo
       - icon: instagram
@@ -34,6 +47,14 @@ website:
         href: mailto:saopaulo@rladies.org
       - icon: rss
         href: index.xml        
+      - icon: github
+        menu:
+          - text: "Repositórios da R-Ladies São Paulo"
+            url:  https://github.com/R-Ladies-Sao-Paulo      
+          - text: "Código fonte deste site"
+            url:  https://github.com/R-Ladies-Sao-Paulo/blog
+          - text: "Como contribuir"
+            url:  https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/README.md            
 
 
 format:
@@ -50,10 +71,6 @@ format:
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/www\.rladies-sp\.org\/**'
     citations-hover: true
-
-
-
-
 
 
 editor: visual

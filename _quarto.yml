@@ -9,6 +9,10 @@ website:
   title: "R-Ladies São Paulo"
   reader-mode: true
   site-url: "https://rladies-sp.org"
+  twitter-card:
+    creator: "@beamilz"
+    site: "@RLadiesSaoPaulo"
+  favicon: "img/logo.jpg"
   description: "Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes."
   page-footer: 
     right: "Página criada com [Quarto](https://quarto.org/). "

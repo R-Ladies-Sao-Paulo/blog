@@ -26,6 +26,8 @@ website:
         href: https://www.youtube.com/c/RLadiesS%C3%A3oPaulo
       - icon: person-plus
         href: https://www.meetup.com/rladies-sao-paulo/
+      - icon: envelope
+        href: mailto:saopaulo@rladies.org       
 
 
 format:

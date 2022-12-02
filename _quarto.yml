@@ -57,12 +57,10 @@ website:
         href: index.xml        
       - icon: github
         menu:
-          - text: "Repositórios da R-Ladies São Paulo"
+          - text: "GitHub da R-Ladies São Paulo"
             url:  https://github.com/R-Ladies-Sao-Paulo      
           - text: "Código fonte deste site"
-            url:  https://github.com/R-Ladies-Sao-Paulo/blog
-          - text: "Como contribuir"
-            url:  https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/README.md            
+            url:  https://github.com/R-Ladies-Sao-Paulo/blog        
 
 
 format:

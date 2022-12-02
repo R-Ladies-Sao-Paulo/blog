@@ -1,14 +1,1 @@
 /* css styles */
-
-.sidebar nav[role="doc-toc"] ul > li > a.active {
-
-    border-left: 1px solid #562457;
-    color: #562457 !important;
-
-}
-
-a {
-  color: #562457;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-}

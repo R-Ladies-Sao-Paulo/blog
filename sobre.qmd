@@ -2,6 +2,7 @@
 title: "Sobre a R-Ladies São Paulo"
 editor: visual
 toc: true
+comments: false
 ---
 
 ```{r include=FALSE}
@@ -37,7 +38,6 @@ primeiro_meetup <-  rladies |>
 
 As atividades incluem meetups e mentorias em um ambiente seguro e amigável.
 
-
 ```{r}
 #| out.width: "65%"
 #| fig.align: 'center'
@@ -46,12 +46,9 @@ As atividades incluem meetups e mentorias em um ambiente seguro e amigável.
 knitr::include_graphics("https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg")
 ```
 
-
 ## Objetivo
 
 Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.
-
-
 
 ## Público-alvo
 
@@ -65,13 +62,11 @@ Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma repr
 
 A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.
 
-O nosso [Código de conduta](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)  aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline. 
-
-
+O nosso [Código de conduta](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese) aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.
 
 ## R-Ladies no Brasil
 
-Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista: 
+Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista:
 
 ```{r echo=FALSE}
 rladies_br <- rladies |>
@@ -89,8 +84,6 @@ rladies_br
 
 Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: [R-Ladies - How do get involved](https://rladies.org/about-us/help/).
 
-
-
 ## Saiba mais sobre a R-Ladies
 
 -   R-Ladies Global: [Website](https://rladies.org/), [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/rladiesglobal)
@@ -104,8 +97,6 @@ Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: [
     -   [<i class="fab fa-github"></i> GitHub](https://github.com/R-Ladies-Sao-Paulo)
     -   [<i class="fab fa-youtube"></i> Youtube](https://www.youtube.com/c/RLadiesSãoPaulo)
 
-
-
 <!-- inicio font awesome -->
 
 ```{=html}
@@ -113,12 +104,10 @@ Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: [
 ```
 <!-- final font awesome -->
 
-
 ## Fonte / Saiba mais
 
+-   [About us - R-Ladies](https://rladies.org/about-us/)
 
-- [About us - R-Ladies](https://rladies.org/about-us/)
+-   [Meetup - São Paulo](https://www.meetup.com/rladies-sao-paulo/)
 
-- [Meetup - São Paulo](https://www.meetup.com/rladies-sao-paulo/)
-
-- [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)
+-   [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)

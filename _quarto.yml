@@ -33,7 +33,9 @@ website:
       - text: "Página inicial"
         href: /         
       - text: "Sobre a R-Ladies SP"
-        href: sobre.qmd        
+        href: sobre.qmd  
+      - text: "Como participar?"
+        href: como-participar.qmd          
 
     
       

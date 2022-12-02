@@ -22,6 +22,7 @@ website:
   page-navigation: true  
   repo-url: https://github.com/R-Ladies-Sao-Paulo/blog/
   repo-actions: [edit, issue]  
+  margin-header: "subscribe.html"  
   sidebar: 
     logo: "img/logo.jpg"
     style: "docked"

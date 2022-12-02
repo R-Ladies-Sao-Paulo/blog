@@ -46,6 +46,14 @@ format:
     code-overflow: wrap
     fontsize: "15pt"
     footnotes-hover: true
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.rladies-sp\.org\/**'
+    citations-hover: true
+
+
+
+
 
 
 editor: visual

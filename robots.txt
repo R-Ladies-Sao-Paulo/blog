@@ -1,0 +1,1 @@
+Sitemap: https://github.com/R-Ladies-Sao-Paulo/blog/sitemap.xml

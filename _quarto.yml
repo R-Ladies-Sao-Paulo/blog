@@ -7,6 +7,8 @@ lang: pt
 
 website:
   title: "R-Ladies São Paulo"
+  site-url: "https://rladies-sp.org"
+  description: "Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes."
   page-footer: 
     right: "Página criada com [Quarto](https://quarto.org/). "
     left: "&copy; Copyright 2022, R-Ladies São Paulo"
@@ -29,7 +31,9 @@ website:
       - icon: person-plus
         href: https://www.meetup.com/rladies-sao-paulo/
       - icon: envelope
-        href: mailto:saopaulo@rladies.org       
+        href: mailto:saopaulo@rladies.org
+      - icon: rss
+        href: index.xml        
 
 
 format:

@@ -1,0 +1,124 @@
+---
+title: "Sobre a R-Ladies São Paulo"
+editor: visual
+toc: true
+---
+
+```{r include=FALSE}
+# Base de dados
+url <- "https://benubah.github.io/r-community-explorer/data/rladies.csv"
+
+fs::dir_create("data")
+
+download.file(url, "data/rladies.csv", method = "curl")
+
+rladies <- readr::read_csv("data/rladies.csv") |> tibble::as_tibble()
+
+
+meetup_url <- rladies |>
+  dplyr::filter(city == "São Paulo") |> 
+  dplyr::pull(fullurl)
+
+pessoas_participantes <- rladies |> 
+  dplyr::filter(city == "São Paulo") |>
+  dplyr::select(members) |>
+  dplyr::pull()
+
+primeiro_meetup <-  rladies |>
+  dplyr::filter(city == "São Paulo") |> 
+  dplyr::pull(created) 
+```
+
+## O que é a R-Ladies?
+
+[R-Ladies](https://rladies.org/) é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.
+
+**R-Ladies São Paulo** integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.
+
+As atividades incluem meetups e mentorias em um ambiente seguro e amigável.
+
+
+```{r}
+#| out.width: "65%"
+#| fig.align: 'center'
+#| fig-cap: "Foto do primeiro encontro da R-Ladies São Paulo, em agosto de 2018!"
+#| echo: false
+knitr::include_graphics("https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg")
+```
+
+
+## Objetivo
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.
+
+
+
+## Público-alvo
+
+Nosso principal público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.
+
+## Missão
+
+Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e capacitando-as.
+
+## Código de conduta
+
+A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.
+
+O nosso [Código de conduta](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)  aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline. 
+
+
+
+## R-Ladies no Brasil
+
+Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista: 
+
+```{r echo=FALSE}
+rladies_br <- rladies |>
+  dplyr::arrange(desc(members)) |>
+  dplyr::filter(country == "Brazil") |>
+  dplyr::mutate(name = paste0("<a href='", fullurl, "' target='_blank'>", name, "</a>")) |>
+  dplyr::select(name) |> 
+  reactable::reactable(sortable = TRUE, searchable = TRUE,
+    columns = list(name = reactable::colDef(html = TRUE, name = "Cidade")))
+
+rladies_br
+```
+
+<br>
+
+Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: [R-Ladies - How do get involved](https://rladies.org/about-us/help/).
+
+
+
+## Saiba mais sobre a R-Ladies
+
+-   R-Ladies Global: [Website](https://rladies.org/), [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/rladiesglobal)
+
+-   R-Ladies São Paulo:
+
+    -   [<i class="fab fa-twitter"></i> Twitter](https://twitter.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-instagram"></i> Instagram](https://instagram.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-facebook"></i> Facebook](https://facebook.com/RLadiesSaoPaulo)
+    -   [<i class="fab fa-meetup"></i> Meetup](https://www.meetup.com/rladies-sao-paulo/)
+    -   [<i class="fab fa-github"></i> GitHub](https://github.com/R-Ladies-Sao-Paulo)
+    -   [<i class="fab fa-youtube"></i> Youtube](https://www.youtube.com/c/RLadiesSãoPaulo)
+
+
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->
+
+
+## Fonte / Saiba mais
+
+
+- [About us - R-Ladies](https://rladies.org/about-us/)
+
+- [Meetup - São Paulo](https://www.meetup.com/rladies-sao-paulo/)
+
+- [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)

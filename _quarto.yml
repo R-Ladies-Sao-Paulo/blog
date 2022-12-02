@@ -14,8 +14,10 @@ website:
   page-navigation: true  
   navbar:
     background: "#562457"  
+    left:
+      - text: "Sobre a R-Ladies SP"
+        href: sobre.qmd    
     right:
-#      - sobre.qmd
       - icon: github
         href: https://github.com/R-Ladies-Sao-Paulo
       - icon: twitter
@@ -33,11 +35,13 @@ website:
 format:
   html:
     theme: cosmo
-    css: custom.css
+    css: styles.css
     toc: true
     code-copy: true
     code-link: true
     code-overflow: wrap
+    fontsize: "15pt"
+    footnotes-hover: true
 
 
 editor: visual

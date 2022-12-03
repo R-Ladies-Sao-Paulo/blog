@@ -12,3 +12,7 @@ a {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
+
+div.csl-entry {
+  padding-bottom: 1.5em;
+}

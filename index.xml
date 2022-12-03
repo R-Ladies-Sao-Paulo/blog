@@ -29,5 +29,91 @@
   <guid>https://rladies-sp.org/posts/em-breve/index.html</guid>
   <pubDate>Thu, 24 Nov 2022 00:00:00 GMT</pubDate>
 </item>
+<item>
+  <title></title>
+  <link>https://rladies-sp.org/posts/template-post/index.html</link>
+  <description><![CDATA[ <p>Aqui podemos adicionar o conteúdo do post! Segue abaixo alguns exemplos que podem facilitar a criação do post:</p>
+<section id="exemplo-de-texto-com-marcações" class="level2"><h2 class="anchored" data-anchor-id="exemplo-de-texto-com-marcações">Exemplo de texto com marcações</h2>
+<p>O pacote <a href="https://github.com/cienciadedatos/dados">dados</a> <span class="citation" data-cites="R-dados">[@R-dados]</span> disponibiliza a base de dados <code>pinguins</code>, uma versão traduzida para português do pacote <a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a> <span class="citation" data-cites="R-palmerpenguins">[@R-palmerpenguins]</span>. A tradução dessa base foi feita por Jean Prado, que faz parte da co-organização da R-Ladies São Paulo!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://allisonhorst.github.io/palmerpenguins/"><img src="https://rladies-sp.org/posts/template-post/images/paste-9B5D36BA.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Arte por @allison_horst .</figcaption><p></p>
+</figure>
+</div>
+<p>Além destes pacotes, nesse arquivo foram usados o <a href="https://yihui.org/knitr/">knitr</a> <span class="citation" data-cites="R-knitr">[@R-knitr]</span> e <a href="https://tidyverse.tidyverse.org">tidyverse</a> <span class="citation" data-cites="R-tidyverse">[@R-tidyverse]</span>.</p>
+</section><section id="carregando-pacotes" class="level2"><h2 class="anchored" data-anchor-id="carregando-pacotes">Carregando pacotes</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section><section id="exemplo-de-código-em-linha" class="level2"><h2 class="anchored" data-anchor-id="exemplo-de-código-em-linha">Exemplo de código em linha</h2>
+<p>A base pinguins apresenta 344 pinguins (pois cada linha representa um pinguim). As colunas presentes na base são: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano.</p>
+</section><section id="exemplo-de-gráfico" class="level2"><h2 class="anchored" data-anchor-id="exemplo-de-gráfico">Exemplo de gráfico</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">pinguins</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">massa_corporal</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">comprimento_nadadeira</span>, color <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">especie</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_color_viridis_d</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/template-post/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="exemplo-de-tabela" class="level2"><h2 class="anchored" data-anchor-id="exemplo-de-tabela">Exemplo de tabela</h2>
+<div class="cell">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">pinguins</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">especie</span>, <span class="va" style="color: #111111;">ilha</span>, name <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"quantidade"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="fu" style="color: #4758AB;">knitr</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">especie</th>
+<th style="text-align: left;">ilha</th>
+<th style="text-align: right;">quantidade</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Dream</td>
+<td style="text-align: right;">56</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-de-adélia</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pinguim-de-barbicha</td>
+<td style="text-align: left;">Dream</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pinguim-gentoo</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">124</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+
+</div>
+
+
+</section> ]]></description>
+  <guid>https://rladies-sp.org/posts/template-post/index.html</guid>
+  <pubDate>Sat, 03 Dec 2022 15:41:08 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/template-post/images/paste-9B5D36BA.png" medium="image" type="image/png" height="86" width="144"/>
+</item>
 </channel>
 </rss>

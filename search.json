@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "contribuir-com-o-blog.html",
+    "href": "contribuir-com-o-blog.html",
+    "title": "Como contribuir com o blog?",
+    "section": "",
+    "text": "Se você faz parte da comunidade R-Ladies São Paulo e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!"
+  },
+  {
+    "objectID": "contribuir-com-o-blog.html#tipos-de-contribuição",
+    "href": "contribuir-com-o-blog.html#tipos-de-contribuição",
+    "title": "Como contribuir com o blog?",
+    "section": "Tipos de contribuição",
+    "text": "Tipos de contribuição\nExistem várias formas de contribuir, como:\n\ncaso encontre alguma informação desatualizada e/ou que precise de correção, pode fazer a atualização/correção;\nescrever algum texto não-técnico relacionado às atividades do grupo;\nescrever algum texto técnico para o blog (por exemplo, mostrando alguma análise feita com R por você);\nescrever algum tutorial sobre uso de algum pacote para o blog;\nenviar algum texto técnico já escrito no seu blog pessoal, que possa ser re-compartilhado aqui;\nentre outros!"
+  },
+  {
+    "objectID": "contribuir-com-o-blog.html#como-contribuir",
+    "href": "contribuir-com-o-blog.html#como-contribuir",
+    "title": "Como contribuir com o blog?",
+    "section": "Como contribuir?",
+    "text": "Como contribuir?\nAs alterações no código costumam ser feitas através do GitHub. Você pode criar uma conta gratuita e seguir o passo-a-passo indicado abaixo.\n\n\n\n\n\n\nNota\n\n\n\nCaso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/.docx ou RMarkdown/Quarto, por exemplo, e enviando para a gente."
+  },
+  {
+    "objectID": "contribuir-com-o-blog.html#contribuindo-com-alguma-página-que-já-existe",
+    "href": "contribuir-com-o-blog.html#contribuindo-com-alguma-página-que-já-existe",
+    "title": "Como contribuir com o blog?",
+    "section": "Contribuindo com alguma página que já existe",
+    "text": "Contribuindo com alguma página que já existe\nCaso queira sugerir uma alteração em uma página já existente, siga os passos abaixo:\n1 - Primeiro confira se na barra do lado direito aparece o link chamado “Edite essa página”:\n\n\n\n\nEsse link te encaminhará para o arquivo que deve ser alterado no GitHub.\n2 - Caso não encontre o link “Editar essa página”, procure o arquivo referente à página que deseja alterar no repositório no GitHub. Os arquivos de texto que devem ser alterados são apenas os que tem extensão .qmd.\n3 - Fazendo a alteração no GitHub: EM BREVE!"
+  },
+  {
+    "objectID": "contribuir-com-o-blog.html#contribuindo-com-um-textopost-para-o-blog",
+    "href": "contribuir-com-o-blog.html#contribuindo-com-um-textopost-para-o-blog",
+    "title": "Como contribuir com o blog?",
+    "section": "Contribuindo com um texto/post para o blog",
+    "text": "Contribuindo com um texto/post para o blog\nOs arquivos que geram os posts do blog estão na pasta posts/.\n1 - Faça uma cópia da pasta template-post/. Nomeie a pasta iniciando com o ano e mês, e algumas palavras que indicam o conteúdo do texto de uma forma “limpa”, sem usar acentos, espaços, e outros caracteres especiais. Ex: 2022-12-tutorial-tidyverse.\nNessa pasta, tem arquivos para gerar um post:\n\nindex.qmd: esse é o arquivo principal! Neste arquivo, estão descritos os metadados do arquivo (quem escreveu o post, data, categorias, entre outros), e o texto do post. Tem vários exemplos e comentários neste arquivo para ajudar quem ainda não tem muita familiaridade com Quarto!\nimages/: é uma pasta onde pode guardar as imagens que você queira usar no post.\npacotes.bib: é um arquivo opcional e gerado automaticamente, contém as referências dos pacotes utilizados no post.\n\n2 - Edite os conteúdos na pasta copiada!\n3 - Envie suas mudanças como um Pull request no GitHub: EM BREVE!."
+  },
+  {
+    "objectID": "contribuir-com-o-blog.html#lista-de-pessoas-que-já-contribuiram-com-esse-site",
+    "href": "contribuir-com-o-blog.html#lista-de-pessoas-que-já-contribuiram-com-esse-site",
+    "title": "Como contribuir com o blog?",
+    "section": "Lista de pessoas que já contribuiram com esse site",
+    "text": "Lista de pessoas que já contribuiram com esse site\nA lista a seguir é gerada automaticamente a partir da busca de pessoas que contribuiram com código e Issues no repositório do GitHub do blog, utilizando o pacote allcontributors."
+  },
+  {
     "objectID": "como-participar.html",
     "href": "como-participar.html",
     "title": "Como fazer parte da R-Ladies São Paulo?",

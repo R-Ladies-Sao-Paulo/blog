@@ -39,3 +39,8 @@ vignettes/*.pdf
 .Renviron
 
 /.quarto/
+
+
+# arquivos gerados pelo MAC
+.DS_Store
+*/.DS_Store

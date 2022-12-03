@@ -28,7 +28,7 @@ Existem várias formas de contribuir, como:
 As alterações no código costumam ser feitas através do [GitHub](https://github.com/R-Ladies-Sao-Paulo/blog). Você pode criar uma conta gratuita e seguir o passo-a-passo indicado abaixo.
 
 ::: callout-note
-Caso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/`.docx` ou RMarkdown/Quarto, por exemplo, e enviando para a gente.
+Caso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/`.docx` ou RMarkdown/Quarto, por exemplo, e enviando para a gente através de uma [issue no GitHub](https://github.com/R-Ladies-Sao-Paulo/blog/issues/new?assignees=beatrizmilz&labels=textos&template=novo-post.md&title=%5BPOST%5D+Nome+do+post).
 :::
 
 ## Contribuindo com alguma página que já existe

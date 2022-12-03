@@ -21,48 +21,6 @@
     "text": "Grupo no Telegram\nExiste um grupo no telegram da R-Ladies São Paulo! O acesso é apenas para pessoas que fazem parte do público-alvo da R-Ladies: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.\nPortanto, o grupo não é aberto, portanto é necessário solicitar o convite. Caso você faça parte do público-alvo e queira participar do grupo, solicite o convite enviando uma mensagem privada no nosso perfil do  Instagram."
   },
   {
-    "objectID": "posts/template-post/index.html",
-    "href": "posts/template-post/index.html",
-    "title": "R-Ladies São Paulo",
-    "section": "",
-    "text": "Aqui podemos adicionar o conteúdo do post! Segue abaixo alguns exemplos que podem facilitar a criação do post:"
-  },
-  {
-    "objectID": "posts/template-post/index.html#exemplo-de-texto-com-marcações",
-    "href": "posts/template-post/index.html#exemplo-de-texto-com-marcações",
-    "title": "R-Ladies São Paulo",
-    "section": "Exemplo de texto com marcações",
-    "text": "Exemplo de texto com marcações\nO pacote dados [@R-dados] disponibiliza a base de dados pinguins, uma versão traduzida para português do pacote palmerpenguins [@R-palmerpenguins]. A tradução dessa base foi feita por Jean Prado, que faz parte da co-organização da R-Ladies São Paulo!\n\n\nArte por @allison_horst .\n\n\nAlém destes pacotes, nesse arquivo foram usados o knitr [@R-knitr] e tidyverse [@R-tidyverse]."
-  },
-  {
-    "objectID": "posts/template-post/index.html#carregando-pacotes",
-    "href": "posts/template-post/index.html#carregando-pacotes",
-    "title": "R-Ladies São Paulo",
-    "section": "Carregando pacotes",
-    "text": "Carregando pacotes\n\nlibrary(tidyverse)\nlibrary(dados)"
-  },
-  {
-    "objectID": "posts/template-post/index.html#exemplo-de-código-em-linha",
-    "href": "posts/template-post/index.html#exemplo-de-código-em-linha",
-    "title": "R-Ladies São Paulo",
-    "section": "Exemplo de código em linha",
-    "text": "Exemplo de código em linha\nA base pinguins apresenta 344 pinguins (pois cada linha representa um pinguim). As colunas presentes na base são: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano."
-  },
-  {
-    "objectID": "posts/template-post/index.html#exemplo-de-gráfico",
-    "href": "posts/template-post/index.html#exemplo-de-gráfico",
-    "title": "R-Ladies São Paulo",
-    "section": "Exemplo de gráfico",
-    "text": "Exemplo de gráfico\n\npinguins |> \n  ggplot() +\n  aes(x = massa_corporal, y = comprimento_nadadeira, color = especie) +\n  geom_point() +\n  theme_light() + \n  scale_color_viridis_d()"
-  },
-  {
-    "objectID": "posts/template-post/index.html#exemplo-de-tabela",
-    "href": "posts/template-post/index.html#exemplo-de-tabela",
-    "title": "R-Ladies São Paulo",
-    "section": "Exemplo de tabela",
-    "text": "Exemplo de tabela\n\npinguins |> \n  count(especie, ilha, name = \"quantidade\") |> \n  knitr::kable()\n\n\n\nespecie\nilha\nquantidade\n\n\n\nPinguim-de-adélia\nBiscoe\n44\n\n\nPinguim-de-adélia\nDream\n56\n\n\nPinguim-de-adélia\nTorgersen\n52\n\n\nPinguim-de-barbicha\nDream\n68\n\n\nPinguim-gentoo\nBiscoe\n124"
-  },
-  {
     "objectID": "posts/em-breve/index.html",
     "href": "posts/em-breve/index.html",
     "title": "Em breve!",
@@ -74,7 +32,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Exemplo de texto com marcações\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nEm breve!\n\n\n\n\n\n\n\nNovidades\n\n\n\n\n\n\n\n\n\n\n\n24 de nov. de 2022\n\n\nEquipe R-Ladies SP\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Em breve!\n\n\n\n\n\n\n\nNovidades\n\n\n\n\n\n\n\n\n\n\n\n24 de nov. de 2022\n\n\nEquipe R-Ladies SP\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "sobre.html",

@@ -36,7 +36,8 @@ jobs:
             github::hadley/emo
             any::knitr
             any::kableExtra
-
+            any::allcontributors
+            any::reactable
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2

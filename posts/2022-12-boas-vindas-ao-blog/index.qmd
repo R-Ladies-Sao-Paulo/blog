@@ -3,7 +3,7 @@ title: "Boas vindas ao blog da R-Ladies São Paulo!"
 author: 
   - "Equipe R-Ladies SP" # Exemplo
   - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
-date: "2022-12-04" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+date: "2022-12-05" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
 categories: 
 # exemplo de categorias:
   - "Novidades"

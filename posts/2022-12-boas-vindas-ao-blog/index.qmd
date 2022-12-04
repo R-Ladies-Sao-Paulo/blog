@@ -1,6 +1,5 @@
 ---
 title: "Boas vindas ao blog da R-Ladies São Paulo!"
-subtitle: "Subtítulo do post"
 author: 
   - "Equipe R-Ladies SP" # Exemplo
   - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"

@@ -1,8 +1,0 @@
----
-title: "Em breve!"
-author: "Equipe R-Ladies SP"
-date: "2022-11-24"
-categories: [Novidades]
----
-
-Logo este blog estará no ar :D

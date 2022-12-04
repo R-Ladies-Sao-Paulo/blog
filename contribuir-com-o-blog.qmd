@@ -5,7 +5,7 @@ toc: true
 comments: false
 ---
 
-Se você faz parte da comunidade R-Ladies São Paulo e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!
+Se você faz parte da comunidade R-Ladies São Paulo ou outros capítulos do Brasil, e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!
 
 ## Tipos de contribuição
 
@@ -47,24 +47,21 @@ Esse link te encaminhará para o arquivo que deve ser alterado no GitHub.
 
 ## Contribuindo com um texto/post para o blog
 
-
 Os arquivos que geram os posts do blog estão na pasta [`posts/`](https://github.com/R-Ladies-Sao-Paulo/blog/tree/main/posts/).
 
 1 - Faça uma cópia da pasta [`template-post/`](https://github.com/R-Ladies-Sao-Paulo/blog/tree/main/posts/template-post). Nomeie a pasta iniciando com o ano e mês, e algumas palavras que indicam o conteúdo do texto de uma forma "limpa", sem usar acentos, espaços, e outros caracteres especiais. Ex: `2022-12-tutorial-tidyverse`.
 
 Nessa pasta, tem arquivos para gerar um post:
 
-  - [`index.qmd`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/index.qmd): esse é o arquivo principal! Neste arquivo, estão descritos os metadados do arquivo (quem escreveu o post, data,  categorias, entre outros), e o texto do post. Tem vários exemplos e comentários neste arquivo para ajudar quem ainda não tem muita familiaridade com Quarto!
-  
-  - [`images/`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/images/): é uma pasta onde pode guardar as imagens que você queira usar no post. 
-  
-  - [`pacotes.bib`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/pacotes.bib): é um arquivo opcional e gerado automaticamente, contém as referências dos pacotes utilizados no post.
-  
+-   [`index.qmd`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/index.qmd): esse é o arquivo principal! Neste arquivo, estão descritos os metadados do arquivo (quem escreveu o post, data, categorias, entre outros), e o texto do post. Tem vários exemplos e comentários neste arquivo para ajudar quem ainda não tem muita familiaridade com Quarto!
+
+-   [`images/`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/images/): é uma pasta onde pode guardar as imagens que você queira usar no post.
+
+-   [`pacotes.bib`](https://github.com/R-Ladies-Sao-Paulo/blog/blob/main/posts/template-post/pacotes.bib): é um arquivo opcional e gerado automaticamente, contém as referências dos pacotes utilizados no post.
 
 2 - Edite os conteúdos na pasta copiada!
 
-3 - Envie suas mudanças como um Pull request no GitHub: **EM BREVE!**. 
-
+3 - Envie suas mudanças como um Pull request no GitHub: **EM BREVE!**.
 
 ## Lista de pessoas que já contribuiram com esse site
 

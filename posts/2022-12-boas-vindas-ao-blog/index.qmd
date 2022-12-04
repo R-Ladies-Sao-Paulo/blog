@@ -1,0 +1,40 @@
+---
+title: "Boas vindas ao blog da R-Ladies São Paulo!"
+subtitle: "Subtítulo do post"
+author: 
+  - "Equipe R-Ladies SP" # Exemplo
+  - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+date: "2022-12-04" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+categories: 
+# exemplo de categorias:
+  - "Novidades"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: false # enquanto estiver draft: true, o post é um rascunho
+---
+
+## O que é a R-Ladies São Paulo?
+
+A R-Ladies São Paulo é uma comunidade que iniciou em 2018, e desde então buscamos  promover a diversidade de gênero na comunidade da linguagem R: organizando eventos presenciais e online, tirando dúvidas no nosso grupo do telegram, disponibilizando os materiais utilizados nos eventos, entre outros.
+
+Caso queira saber mais, consulte a página [Sobre a R-Ladies São Paulo](https://rladies-sp.org/sobre.html).
+
+## Porque um blog?
+
+Ter um site/blog é uma forma de facilitar a divulgar o conteúdo que produzimos, além de ser uma forma de incentivar as pessoas da comunidade a compartilharem seus conhecimentos por aqui também! Essa é uma vontade que as pessoas da comunidade expressaram algumas vezes no passado: já discutimos anteriormente sobre criar um [blog das R-Ladies na América Latina (R-Ladies LATAM)](https://github.com/rladies/blog-rladies-latam) e a ideia foi liderada pela [Bruna Wundervald](https://github.com/brunaw), uma das co-organizadoras da R-Ladies São Paulo na época (em janeiro de 2019); em junho de 2021 a ideia voltou para criar um [blog para a comunidade em São Paulo](https://github.com/R-Ladies-Sao-Paulo/blog-old), mas infelizmente nenhuma dessas versões chegou a ser utilizada e divulgada.
+
+A volta dos eventos presenciais (em novembro de 2022) foi um impulso para voltar a trabalhar na criação de um blog para a comunidade! 
+
+
+## Posso contribuir com o blog?
+
+Sim! Começamos a preparar uma página com informações para pessoas que queiram enviar seus textos por aqui:  [Como contribuir com o blog?](https://rladies-sp.org/contribuir-com-o-blog.html). Também é possível contribuir sugerindo novos conteúdos, avisando caso tenha alguma informação desatualizada, entre outros.
+
+## O que esperar?
+
+A ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.  
+
+
+Esperamos que seja um lugar rico de troca e compartilhamento! Até logo!
+

@@ -2,8 +2,8 @@ project:
   type: website
 
 
+language: "custom-pt-br.yml"
 lang: pt
-
 
 website:
   title: "R-Ladies São Paulo"

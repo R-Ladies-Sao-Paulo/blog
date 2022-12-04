@@ -1,0 +1,16 @@
+{
+  "hash": "18a5a90b791d69ae1e05f04f8c79f181",
+  "result": {
+    "markdown": "---\ntitle: \"Título do post\"\nsubtitle: \"Subtítulo do post\"\nauthor: \n  - \"Equipe R-Ladies SP\" # Exemplo\n  - \"[Beatriz Milz](https://beamilz.com)\" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: \"[NOME](https://link.com)\"\ndate: \"2022-12-03\" # Data do post, no formato ano-mes-dia (ex: \"2022-11-24\")\ncategories: \n# exemplo de categorias:\n  - \"Novidades\"\n  - \"Tutorial\"\n  - \"Eventos\"\ntoc: true # isso habilita o sumário ao lado do post\nimage: \"images/logo.jpg\" # imagem usada na página inicial junto ao post\nbibliography: \"pacotes.bib\" # arquivo de bibliografia. Pode adicionar mais arquivos!\ndraft: true # enquanto estiver draft: true, o post é um rascunho\n---\n\n\nAqui podemos adicionar o conteúdo do post! Segue abaixo alguns exemplos que podem facilitar a criação do post:\n\n## Exemplo de texto com marcações\n\nO pacote `{dados}` [@R-dados] disponibiliza a base de dados `pinguins`, uma versão traduzida para português do pacote `{palmerpenguins}` [@R-palmerpenguins]. A tradução dessa base foi feita por Jean Prado, que faz parte da co-organização da R-Ladies São Paulo!\n\n[![Arte por \\@allison_horst .](images/paste-9B5D36BA.png){fig-align=\"center\"}](https://allisonhorst.github.io/palmerpenguins/)\n\nAlém destes pacotes, nesse arquivo foram usados o `{knitr}` [@R-knitr] e `{tidyverse}` [@R-tidyverse].\n\n## Carregando pacotes\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(dados)\n```\n:::\n\n\n## Exemplo de código em linha\n\nA base pinguins apresenta 344 pinguins (pois cada linha representa um pinguim). As colunas presentes na base são: especie, ilha, comprimento_bico, profundidade_bico, comprimento_nadadeira, massa_corporal, sexo e ano.\n\n## Exemplo de gráfico\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\npinguins |> \n  ggplot() +\n  aes(x = massa_corporal, y = comprimento_nadadeira, color = especie) +\n  geom_point() +\n  theme_light() + \n  scale_color_viridis_d()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){fig-align='center' width=672}\n:::\n:::\n\n\n## Exemplo de tabela\n\n\n::: {.cell}\n\n```{.r .cell-code}\npinguins |> \n  count(especie, ilha, name = \"quantidade\") |> \n  knitr::kable()\n```\n\n::: {.cell-output-display}\n|especie             |ilha      | quantidade|\n|:-------------------|:---------|----------:|\n|Pinguim-de-adélia   |Biscoe    |         44|\n|Pinguim-de-adélia   |Dream     |         56|\n|Pinguim-de-adélia   |Torgersen |         52|\n|Pinguim-de-barbicha |Dream     |         68|\n|Pinguim-gentoo      |Biscoe    |        124|\n:::\n:::\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

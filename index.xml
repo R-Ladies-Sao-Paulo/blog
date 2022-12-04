@@ -10,7 +10,7 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Sun, 04 Dec 2022 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 05 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Boas vindas ao blog da R-Ladies São Paulo!</title>
   <dc:creator>Equipe R-Ladies SP</dc:creator>
@@ -64,7 +64,7 @@
  ]]></description>
   <category>Novidades</category>
   <guid>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</guid>
-  <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 05 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/logo.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

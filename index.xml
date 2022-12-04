@@ -25,6 +25,9 @@
 <h2 class="anchored" data-anchor-id="o-que-é-a-r-ladies-são-paulo">O que é a R-Ladies São Paulo?</h2>
 <p>A R-Ladies São Paulo é uma comunidade que iniciou em 2018, e desde então buscamos promover a diversidade de gênero na comunidade da linguagem R: organizando eventos presenciais e online, tirando dúvidas no nosso grupo do telegram, disponibilizando os materiais utilizados nos eventos, entre outros.</p>
 <p>Caso queira saber mais, consulte a página <a href="https://rladies-sp.org/sobre.html">Sobre a R-Ladies São Paulo</a>.</p>
+<center>
+<img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-conre-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2020.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-loggi-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2022.jpg" class="img-fluid" style="width:40.0%" data-fig-align="center">
+</center>
 </section>
 <section id="porque-um-blog" class="level2">
 <h2 class="anchored" data-anchor-id="porque-um-blog">Porque um blog?</h2>
@@ -35,9 +38,24 @@
 <h2 class="anchored" data-anchor-id="posso-contribuir-com-o-blog">Posso contribuir com o blog?</h2>
 <p>Sim! Começamos a preparar uma página com informações para pessoas que queiram enviar seus textos por aqui: <a href="https://rladies-sp.org/contribuir-com-o-blog.html">Como contribuir com o blog?</a>. Também é possível contribuir sugerindo novos conteúdos, avisando caso tenha alguma informação desatualizada, entre outros.</p>
 </section>
+<section id="inscreva-se-para-receber-novidades" class="level2">
+<h2 class="anchored" data-anchor-id="inscreva-se-para-receber-novidades">Inscreva-se para receber novidades</h2>
+<p>Neste blog, existe um formulário simples para inscrição do seu email, caso queira receber as novidades! O formulário se encontra na coluna à direita do texto principal, e se parece com a imagem a seguir:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/paste-83C384D7.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</section>
 <section id="o-que-esperar" class="level2">
 <h2 class="anchored" data-anchor-id="o-que-esperar">O que esperar?</h2>
 <p>A ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">Arte por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption><p></p>
+</figure>
+</div>
 <p>Esperamos que seja um lugar rico de troca e compartilhamento! Até logo!</p>
 
 

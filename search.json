@@ -4,7 +4,7 @@
     "href": "contribuir-com-o-blog.html",
     "title": "Como contribuir com o blog?",
     "section": "",
-    "text": "Se você faz parte da comunidade R-Ladies São Paulo e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!"
+    "text": "Se você faz parte da comunidade R-Ladies São Paulo ou outros capítulos do Brasil, e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!"
   },
   {
     "objectID": "contribuir-com-o-blog.html#tipos-de-contribuição",
@@ -18,7 +18,7 @@
     "href": "contribuir-com-o-blog.html#como-contribuir",
     "title": "Como contribuir com o blog?",
     "section": "Como contribuir?",
-    "text": "Como contribuir?\nAs alterações no código costumam ser feitas através do GitHub. Você pode criar uma conta gratuita e seguir o passo-a-passo indicado abaixo.\n\n\n\n\n\n\nNota\n\n\n\nCaso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/.docx ou RMarkdown/Quarto, por exemplo, e enviando para a gente."
+    "text": "Como contribuir?\nAs alterações no código costumam ser feitas através do GitHub. Você pode criar uma conta gratuita e seguir o passo-a-passo indicado abaixo.\n\n\n\n\n\n\nNota\n\n\n\nCaso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/.docx ou RMarkdown/Quarto, por exemplo, e enviando para a gente através de uma issue no GitHub."
   },
   {
     "objectID": "contribuir-com-o-blog.html#contribuindo-com-alguma-página-que-já-existe",
@@ -63,18 +63,39 @@
     "text": "Grupo no Telegram\nExiste um grupo no telegram da R-Ladies São Paulo! O acesso é apenas para pessoas que fazem parte do público-alvo da R-Ladies: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.\nPortanto, o grupo não é aberto, portanto é necessário solicitar o convite. Caso você faça parte do público-alvo e queira participar do grupo, solicite o convite enviando uma mensagem privada no nosso perfil do  Instagram."
   },
   {
-    "objectID": "posts/em-breve/index.html",
-    "href": "posts/em-breve/index.html",
-    "title": "Em breve!",
+    "objectID": "posts/2022-12-boas-vindas-ao-blog/index.html",
+    "href": "posts/2022-12-boas-vindas-ao-blog/index.html",
+    "title": "Boas vindas ao blog da R-Ladies São Paulo!",
     "section": "",
-    "text": "Logo este blog estará no ar :D"
+    "text": "A R-Ladies São Paulo é uma comunidade que iniciou em 2018, e desde então buscamos promover a diversidade de gênero na comunidade da linguagem R: organizando eventos presenciais e online, tirando dúvidas no nosso grupo do telegram, disponibilizando os materiais utilizados nos eventos, entre outros.\nCaso queira saber mais, consulte a página Sobre a R-Ladies São Paulo."
+  },
+  {
+    "objectID": "posts/2022-12-boas-vindas-ao-blog/index.html#porque-um-blog",
+    "href": "posts/2022-12-boas-vindas-ao-blog/index.html#porque-um-blog",
+    "title": "Boas vindas ao blog da R-Ladies São Paulo!",
+    "section": "Porque um blog?",
+    "text": "Porque um blog?\nTer um site/blog é uma forma de facilitar a divulgar o conteúdo que produzimos, além de ser uma forma de incentivar as pessoas da comunidade a compartilharem seus conhecimentos por aqui também! Essa é uma vontade que as pessoas da comunidade expressaram algumas vezes no passado: já discutimos anteriormente sobre criar um blog das R-Ladies na América Latina (R-Ladies LATAM) e a ideia foi liderada pela Bruna Wundervald, uma das co-organizadoras da R-Ladies São Paulo na época (em janeiro de 2019); em junho de 2021 a ideia voltou para criar um blog para a comunidade em São Paulo, mas infelizmente nenhuma dessas versões chegou a ser utilizada e divulgada.\nA volta dos eventos presenciais (em novembro de 2022) foi um impulso para voltar a trabalhar na criação de um blog para a comunidade!"
+  },
+  {
+    "objectID": "posts/2022-12-boas-vindas-ao-blog/index.html#posso-contribuir-com-o-blog",
+    "href": "posts/2022-12-boas-vindas-ao-blog/index.html#posso-contribuir-com-o-blog",
+    "title": "Boas vindas ao blog da R-Ladies São Paulo!",
+    "section": "Posso contribuir com o blog?",
+    "text": "Posso contribuir com o blog?\nSim! Começamos a preparar uma página com informações para pessoas que queiram enviar seus textos por aqui: Como contribuir com o blog?. Também é possível contribuir sugerindo novos conteúdos, avisando caso tenha alguma informação desatualizada, entre outros."
+  },
+  {
+    "objectID": "posts/2022-12-boas-vindas-ao-blog/index.html#o-que-esperar",
+    "href": "posts/2022-12-boas-vindas-ao-blog/index.html#o-que-esperar",
+    "title": "Boas vindas ao blog da R-Ladies São Paulo!",
+    "section": "O que esperar?",
+    "text": "O que esperar?\nA ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.\nEsperamos que seja um lugar rico de troca e compartilhamento! Até logo!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Em breve!\n\n\n\n\n\n\n\nNovidades\n\n\n\n\n\n\n\n\n\n\n\n24 de nov. de 2022\n\n\nEquipe R-Ladies SP\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nBoas vindas ao blog da R-Ladies São Paulo!\n\n\nSubtítulo do post\n\n\n\n\nNovidades\n\n\n \n\n\n\n\n4 de dez. de 2022\n\n\nEquipe R-Ladies SP, Beatriz Milz\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "sobre.html",

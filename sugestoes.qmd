@@ -1,0 +1,11 @@
+---
+title: "Sugestão de conteúdos"
+editor: visual
+toc: true
+---
+
+Tem algum conteúdo que gostaria de ver por aqui? Algum tema para eventos? Aproveite o espaço de comentários abaixo para fazer a sugestão!
+
+Caso alguém já tenha sugerido algo que você tem interesse, você também pode reagir com emojis em um comentário existente para demonstrar seu apoio!
+
+Os comentários são vinculados à sua conta do GitHub. Caso não tenha, [crie uma gratuitamente](https://github.com/signup).

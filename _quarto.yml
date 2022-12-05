@@ -38,7 +38,9 @@ website:
       - text: "Como participar?"
         href: como-participar.qmd          
       - text: "Como contribuir com o blog?"
-        href: contribuir-com-o-blog.qmd         
+        href: contribuir-com-o-blog.qmd       
+      - text: "Sugestão de conteúdos"
+        href: sugestoes.qmd               
     
       
   navbar:

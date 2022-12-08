@@ -21,7 +21,7 @@ Caso queira saber mais, consulte a página [Sobre a R-Ladies São Paulo](https:/
 
 <center>![](images/evento-conre-2019.png){fig-align="center" width="40%"} ![](images/evento-insper-2020.png){fig-align="center" width="40%"} ![](images/evento-loggi-2019.png){fig-align="center" width="40%"} ![](images/evento-insper-2022.jpg){fig-align="center" width="40%"}</center>
 
-## Porque um blog?
+## Por que um blog?
 
 Ter um site/blog é uma forma de facilitar a divulgar o conteúdo que produzimos, além de ser uma forma de incentivar as pessoas da comunidade a compartilharem seus conhecimentos por aqui também! Essa é uma vontade que as pessoas da comunidade expressaram algumas vezes no passado: já discutimos anteriormente sobre criar um [blog das R-Ladies na América Latina (R-Ladies LATAM)](https://github.com/rladies/blog-rladies-latam) e a ideia foi liderada pela [Bruna Wundervald](https://github.com/brunaw), uma das co-organizadoras da R-Ladies São Paulo na época (em janeiro de 2019); em junho de 2021 a ideia voltou para criar um [blog para a comunidade em São Paulo](https://github.com/R-Ladies-Sao-Paulo/blog-old), mas infelizmente nenhuma dessas versões chegou a ser utilizada e divulgada.
 

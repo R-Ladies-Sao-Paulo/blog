@@ -1,0 +1,85 @@
+---
+title: "Evento: Oficina de Introdução ao R"
+subtitle: "Primeiro evento desde o início da pandemia"
+author: 
+  - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+date: "2022-12-10" # Data do post, no formato ano-mes-dia (ex: "2022-11-24"). alterar quando o post ficar pronto para publicar.
+categories: 
+# exemplo de categorias:
+  - "Eventos"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: true # enquanto estiver draft: true, o post é um rascunho
+---
+
+<!--# TODO: ADICIONAR IMAGENS  -->
+
+Olá, pessoal!
+
+Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma oficina de introdução ao R. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.
+
+O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.
+
+![Foto do grupo ao final do evento](images/logo.jpg){fig-align="center"}
+
+## Conteúdo abordado
+
+Os materiais utilizados no evento estão disponíveis online e gratuitamente, [na página que criamos para a atividade](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html).
+
+A oficina começou com uma rápida apresentação do coordenador do Programa Avançado em Comunicação e Jornalismo do Insper, [Pedro Burgos](https://www.insper.edu.br/pesquisa-e-conhecimento/docentes-pesquisadores/pedro-burgos/) sobre o Insper.
+
+Então, a [Tatyane Paz](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/) fez uma apresentação sobre o comunidade R-Ladies ([slides disponíveis aqui](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-rladies.html)).
+
+No restante da manhã, o conteúdo foi focado em R básico, apresentado por [Bruna Garbes](https://www.linkedin.com/in/brunagarbes/) e [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/) (slides disponíveis [aqui](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-i.html) e [aqui](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-ii.html)).
+
+Após o almoço, o conteúdo foi focado nos pacotes `{tidyverse}` e `{dplyr}`! Apresentado por [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/) e [Jean Prado](https://www.linkedin.com/in/jeangprado/), o período da tarde foi muito dinâmico, apresentando conceitos utilizando bases de dados reais e recentes: quem são as pessoas eleitas como deputadas e que farão parte da Assembleia Legislativa do Estado de S. Paulo (ALESP) a partir de 2023 ([slide disponível aqui](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-tidyverse.html-), e [material aqui](https://github.com/R-Ladies-Sao-Paulo/2022-11-oficina-introducao-R/raw/main/materiais-oficina.zip)).
+
+O último conteúdo apresentado foi uma prática feita pela [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/) utilizando o pacote `{esquisse}`, uma forma interativa para começar a criar gráficos usando o pacote `{ggplot2}`.
+
+## Diversidade
+
+**TODO**: falar sobre a inscrição e as vagas reservadas, falar sobre quantas pessoas se inscreveram por grupo e também quantas foram.
+
+## Espaço Gugudadados
+
+**TODO**: comentar, mas dizer que terá um post focado nisso.
+
+## Pandemia de COVID-19
+
+**TODO**: COFFE BREAK QUE NÃO ROLOU :(
+
+Embora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore.
+
+## Sorteios
+
+**TODO**
+
+## Apoiadores do evento
+
+### Insper
+
+Insper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o [Programa Avançado em Data Science e Decisão](https://www.insper.edu.br/pos-graduacao/programas-avancados/data-science-e-decisao/), e o [Master em Jornalismo de Dados, Automação e Data Storytelling](https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/). O Insper também mantém um [Centro de Ciência de Dados](https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-ciencia-de-dados/), que realiza pesquisas de ponta em ciência de dados e inteligência artificial.
+
+### Curso-R
+
+TODO
+
+## Encerramento e próximos eventos
+
+Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.
+
+Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros!
+
+A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.
+
+Até a próxima!
+
+```{r}
+#| echo: false
+# codigo para gerar as referencias dos pacotes!
+knitr::write_bib(
+  x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
+  file = "pacotes.bib"
+  )
+```

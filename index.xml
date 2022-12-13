@@ -10,7 +10,271 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Mon, 05 Dec 2022 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Gráficos de barras com barras de erros</title>
+  <dc:creator>[Fernanda Peres](https://fernandafperes.com.br)</dc:creator>
+  <link>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</link>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="columns">
+
+
+
+</div>
+</div>
+</div>
+</div><div class="no-row-height column-margin column-container"><div class="column callout-1-contents callout-collapse collapse show callout-margin-content" style="width:70%;">
+<p>Este post foi escrito pela <strong>Fernanda Peres</strong>, uma integrante da comunidade R-Ladies São Paulo. Saiba mais sobre ela em sua <a href="https://fernandafperes.com.br/sobre/">página pessoal</a>!</p>
+<p>A Fernanda tem um <a href="https://www.youtube.com/c/FernandaPeres">Canal no Youtube</a> sobre estatística aplicada à vida real. Confira também a gravação do meetup apresentado pela Fernanda na R-Ladies SP, sobre <a href="https://www.youtube.com/watch?v=EtV3_3aN884">como escolher o teste estatístico adequado</a>!</p>
+<p><em>Post publicado originalmente no blog <a href="https://fernandafperes.com.br/blog/graficos-dinamite/">fernandafperes.com.br</a></em></p>
+</div><div class="column callout-1-contents callout-collapse collapse show callout-margin-content" style="width:3%;">
+
+</div><div class="column callout-1-contents callout-collapse collapse show callout-margin-content" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/https:/fernandafperes.com.br/static/sobre_files/author.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Fernanda Peres</figcaption><p></p>
+</figure>
+</div>
+<center>
+<a href="https://fernandafperes.com.br/sobre/"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/fernandaperes"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/fernandafielperes/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/estatisticaaplicada/"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/c/FernandaPeres"><i class="fab fa-youtube"></i></a>
+</center>
+</div></div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="os-gráficos-de-barras-com-barras-de-erros" class="level3"><h3 class="anchored" data-anchor-id="os-gráficos-de-barras-com-barras-de-erros">Os gráficos de barras com barras de erros</h3>
+<p>Se você já teve contato com algum artigo científico, é provável que você tenha visto um gráfico como o acima. Trata-se de um gráfico de barras usado para representar <strong>medidas numéricas</strong> em diferentes grupos. Nesses gráficos, a <strong>altura</strong> da barra é determinada pela <strong>média</strong> do grupo e o <strong>T</strong> que se projeta para além da barra representa uma <strong>medida de dispersão baseada na média</strong>, como o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para essa média.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g1.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>No entanto, apesar de muito utilizado - principalmente em contextos acadêmicos - esse tipo de gráfico é alvo de críticas, algumas vezes fervorosas, e tem sido chamado pejorativamente de <strong>gráfico dinamite</strong>. O nome é uma brincadeira com a semelhança desse tipo de gráfico com um detonador de dinamite antigo, aqueles que aparecem em desenhos animados.</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g2.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Uma breve busca pelo termo em inglês, <em>dynamite plots</em>, traz textos com títulos como <a href="https://hausetutorials.netlify.app/posts/2019-02-22-why-we-should-never-use-barplots-use-geomquasirandom-instead/">Por que gráficos dinamite são péssimos</a>, <a href="http://emdbolker.wikidot.com/blog:dynamite">Gráficos dinamite: um mal absoluto?</a> e até uma <em>open letter</em> intitulada <a href="https://simplystatistics.org/posts/2019-02-21-dynamite-plots-must-die/">Gráficos dinamite têm que morrer</a>.</p>
+<p>O que eu sinto é que essa discussão é ainda bem rara aqui no Brasil. E mesmo publicando em revistas internacionais, apenas uma vez, há uns cinco anos, ouvimos da editora: “os gráficos têm que ser refeitos porque eu não publico gráficos de barras”. E nós ficamos perdidas: como representar os dados, então? Curiosamente, pesquisar outros artigos da mesma revista não ajudou muito porque, adivinhem, só tinha gráfico de barras.</p>
+<p>A proposta do post é: explicar quais as críticas aos “gráficos dinamite” e discutir quais as alternativas e esse tipo de gráfico, explicando como fazê-las usando o R - mais especificamente, o pacote <code>ggplot2</code>.</p>
+</section><section id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas">Por que gráficos de barra não são ideais para representar variáveis numéricas?</h3>
+<p>Uma das principais críticas é que esse tipo gráfico resume o conjunto de dados a <strong>apenas duas informações</strong>: a média e a medida de variação. Dada essa simplificação, mesmo conjuntos de dados com <strong>distribuições bem diferentes</strong> podem dar origem ao <strong>mesmo gráfico</strong> de barras – desde que apresentem a mesma média e desvio-padrão, por exemplo.</p>
+<p>O gráfico de barras também <strong>não</strong> permite a visualização dos <strong>dados brutos</strong> – ao olharmos um gráfico de barras, não sabemos o tamanho de cada grupo, se há <em>outliers</em> (valores discrepantes) ou se a distribuição tem mais de uma moda.</p>
+<p>Além disso, é importante lembrar que esses gráficos representam a <strong>média</strong> e medidas de dispersão baseadas nela. Mas, há dados que <strong>não são adequadamente representados</strong> pela média. Isso acontece quando temos distribuições assimétricas, ou conjuntos de dados com <em>outliers</em>. Nesses casos, a <strong>mediana</strong> será uma medida mais apropriada e devemos usar gráficos que se baseiem nela (os quais discutiremos a seguir).</p>
+</section><section id="quais-as-alternativas-ao-gráfico-de-dinamite" class="level3"><h3 class="anchored" data-anchor-id="quais-as-alternativas-ao-gráfico-de-dinamite">Quais as alternativas ao gráfico de dinamite?</h3>
+<p>Fazer gráfico de barras para variáveis numéricas é <strong>errado</strong>? Não. Por mais que você vá encontrar pessoas que digam que sim - mas, isso não é um consenso. O que é um fato é que esse tipo gráfico não será a escolha mais adequada para representar dados numéricos em muitas situações. Então, vejamos as alternativas ao gráfico de barras, com seus prós e contras.</p>
+<p>Para discutir as alternativas, vamos construir diferentes gráficos utilizando um mesmo banco de dados. Abaixo, temos um gráfico de barras com a altura da coluna representando a média e a barra de erros representando o desvio-padrão. Observe como os grupos A e C apresentam barras praticamente idênticas:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="gráficos-dotplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-dotplot">Gráficos dotplot</h4>
+<p>Uma alternativa ao gráfico dinamite é o dotplot. Nesse gráfico, cada sujeito é representado por um ponto – ou seja, estamos visualizando os dados brutos.</p>
+<p>Além disso, é comum sobrepor a esses pontos uma linha horizontal representando a média e uma barra de erros indicando uma medida de dispersão (que, assim como no gráfico de barras, pode ser o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para a média).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Note que o dotplot mostra muito mais informações que o gráfico de barras. Ao analisarmos o dotplot, conseguimos perceber que o grupo B é bem menor que os outros dois, sendo formado por apenas 10 sujeitos. Também notamos que nesse grupo parece haver valores discrepantes, bem superiores aos demais. O grupo C parece ser formado por dois subgrupos: há um grupo de pontos acima da média que está separado dos pontos abaixo da média. Esse padrão não é observado no grupo A (apesar de os grupos A e C terem médias e desvios-padrão praticamente idênticos).</p>
+<p>O que eu vejo como vantagens do dotplot? Além de ser um gráfico que nos permite visualizar os dados brutos, é um gráfico baseado em média. Se usamos um teste paramétrico para comparar os grupos, como o teste-t ou a ANOVA, a análise será baseada na média e em medidas de dispersão baseadas na média. Portanto, eu gosto de poder visualizar essas medidas no gráfico.</p>
+<p>Por outro lado, é um gráfico que não mostra diretamente quais pontos são <em>outliers</em> (ao contrário do boxplot, que discutiremos a seguir). Além disso, se estivermos trabalhando com amostras muito grandes, teremos <strong>muitos pontos</strong> no gráfico e a visualização ficará comprometida.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do dotplot:</strong></p>
+<ul>
+<li>Permite visualizar dos dados brutos<br>
+</li>
+<li>Inclui a média e uma medida de dispersão baseada na média - medidas utilizadas pelos testes paramétricos em seus cálculos</li>
+</ul>
+<p><br><strong>Desvantagens do dotplot:</strong></p>
+<ul>
+<li>Não mostra diretamente os outliers<br>
+</li>
+<li>É de difícil visualização quando os grupos são grandes – deve ser usado preferencialmente em amostras menores</li>
+</ul>
+<section id="como-fazer-um-dot-plot-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-dot-plot-no-r">Como fazer um dot plot no R?</h5>
+<p>Segue o código usado para gerar o dot plot acima, usando o <code>ggplot2</code>.<br>
+Se você não tem o hábito de usar o <code>ggplot2</code>, o código abaixo pode parecer assustador. Mas, ele é razoavelmente simples quando se entende a lógica de funcionamento do <code>ggplot2</code>. Se tiver interesse no pacote, recomendo essa playlist explicando <a href="https://youtube.com/playlist?list=PLOw62cBQ5j9X5eOavzeu9CaHMO6TFsPkY">como construir gráficos no ggplot2 do zero</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op" style="color: #5E5E5E;">(</span>binaxis <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"y"</span>, stackdir <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"center"</span>, alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.3</span>,</span>
+<span>               dotsize <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>, binwidth <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span>, stackratio <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.4</span>,</span>
+<span>               position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span>,</span>
+<span>               fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey70"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"summary"</span>, fun.data <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mean_sd"</span>,</span>
+<span>                position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.15</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_crossbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"summary"</span>, fun <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mean"</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>ymin <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">..y..</span>, ymax <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">..y..</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>                fatten <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.2</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.5</span>, position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>                show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section><section id="gráficos-boxplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-boxplot">Gráficos boxplot</h4>
+<p>Outra alternativa é o boxplot. O boxplot resume, em uma única figura, cinco medidas de posição: limite inferior, quartil 1 (percentil 25%), mediana, quartil 3 (percentil 75%) e limite superior. Além disso, ele é um gráfico excelente para visualizar valores discrepantes (outliers). Caso tenha interesse em entender melhor a estrutura do boxplot, recomendo a leitura <a href="https://fernandafperes.com.br/blog/interpretacao-boxplot/">desse post</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid figure-img" width="450"></p>
+<p></p><figcaption class="figure-caption">Estrutura básica de um gráfico boxplot.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Aplicando aos nossos dados, obtemos o gráfico abaixo. Observe que rapidamente conseguimos detectar que o grupo B apresenta dois valores outliers acima do limite superior:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot para três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Assim como o dot plot, o boxplot mostra muito mais informações que o gráfico de barras: cinco medidas de posição + <em>outliers</em>. Além disso, conseguimos avaliar a dispersão dos dados através da altura da caixa (que representa a amplitude interquartil) e da distância entre o limite inferior e o superior.</p>
+<p>Porém, é importante entender que as medidas representadas em um boxplot <strong>não são aquelas usadas em testes paramétricos</strong> - o que significa que esse pode não ser o gráfico ideal para representar dados analisados por esses testes. Além disso, o boxplot só pode ser usado em <strong>amostras maiores</strong>. O n mínimo para estimar as 5 medidas é n = 5, mas o ideal mesmo é usá-lo em amostras superiores a isso (ainda que não haja na literatura um consenso de qual seria esse n ideal).</p>
+<p>E, assim como o gráfico de barras, o boxplot <strong>não</strong> mostra os <strong>dados brutos</strong>. Ao olharmos para o boxplot não temos como saber o tamanho dos grupos ou se a distribuição tem mais de uma moda.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do boxplot:</strong></p>
+<ul>
+<li>Inclui cinco medidas de posição<br>
+</li>
+<li>Mostra os valores que são <em>outliers</em>
+</li>
+</ul>
+<p><br><strong>Desvantagens do boxplot:</strong></p>
+<ul>
+<li>Não mostra os dados brutos<br>
+</li>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno (n &lt; 5)<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos</li>
+</ul>
+<p>Ah, dada essa limitação do boxplot não mostrar os dados brutos, sugere-se que um dotplot seja sobreposto a ele, como no gráfico abaixo:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r">Como fazer um boxplot com dot plot sobreposto no R?</h5>
+<p>Segue o código usado para gerar o boxplot acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"boxplot"</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.2</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span>, outlier.alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op" style="color: #5E5E5E;">(</span>binaxis <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"y"</span>, stackdir <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"center"</span>, alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.3</span>,</span>
+<span>               dotsize <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>, binwidth <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.6</span>, stackratio <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.4</span>,</span>
+<span>               position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span>,</span>
+<span>               fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey40"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section><section id="gráficos-violino-violin-plot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-violino-violin-plot">Gráficos violino (<em>violin plot</em>)</h4>
+<p>A terceira alternativa é o gráfico violino, em inglês <em>violin plot</em>. O gráfico violino é um gráfico que mostra a distribuição dos dados através de uma curva de densidade. Além disso, esse gráfico pode incluir em seu interior um boxplot. Se quiser entender mais sobre a construção de um gráfico violino, recomendo a leitura <a href="https://www.instagram.com/p/CcF6Nm3lotk/?utm_source=ig_web_copy_link">desse post</a>.</p>
+<p>Aplicando aos nossos dados, obtemos o gráfico a seguir:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>O gráfico nos permite observar que, apesar de terem a mesma média e desvio-padrão, os grupos A e C apresentam distribuições diferentes. Além disso, o grupo C apresenta uma distribuição bimodal (há dois picos).</p>
+<p>Por ter um boxplot em seu interior, o gráfico violino apresentará muitas das mesmas vantagens e desvantagens. Além disso, o n exigido para um gráfico de violino é superior ao n necessário para um boxplot. O gráfico violino <strong>não</strong> deve ser usado quando o tamanho do grupo é <strong>pequeno</strong>, já que nesses casos não será possível determinar corretamente a distribuição.</p>
+<p>Outra desvantagem é: trata-se de um gráfico recente e muito pouco conhecido (poucas pessoas declaram saber interpretá-lo).</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Permite visualizar a distribuição dos dados<br>
+</li>
+<li>Se incluir um boxplot em seu interior, mostra cinco medidas de posição</li>
+</ul>
+<p><br><strong>Desvantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno – nesses casos, não será possível determinar corretamente a distribuição<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos<br>
+</li>
+<li>Não mostra os dados brutos</li>
+</ul>
+<section id="como-fazer-um-gráfico-violino-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-gráfico-violino-no-r">Como fazer um gráfico violino no R?</h5>
+<p>Segue o código usado para gerar o gráfico violino acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey90"</span>, trim <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.1</span>, outlier.shape <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section></section><section id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas">Afinal, usar ou não o gráfico de barras para variáveis numéricas?</h3>
+<p>Uma desvantagem que se aplica a todas as alternativas ao gráfico de barras, na minha opinião, é: são gráficos muito menos difundidos e, por isso, uma audiência não-técnica terá dificuldade em interpretá-los. Acho esses gráficos incríveis para artigos científicos, para uso pelo time de análise de dados em uma empresa? Com certeza. Acho que são gráficos adequados para matérias jornalísticas ou para divulgação científica? Não. Nesses últimos cenários, mesmo com todas as críticas (válidas) ao gráfico de barras, eu tendo a preferi-lo. Afinal, um gráfico só é bom quando ele comunica com a sua audiência.</p>
+<p>O gráfico mais adequado vai depender: do teste estatístico que foi feito, do tamanho dos grupos, do seu público.</p>
+<p>Se gráficos são um assunto que te interessa, recomendo um livro que ganhou meu coração: o livro <a href="https://amzn.to/3qKr4Xf">Storytelling com dados</a>, escrito pela Cole Nussbaumer Knaflic.</p>
+<p>Recomendo também a leitura do artigo de <span class="citation" data-cites="weissgerber2019reveal">Weissgerber et al. (2019)</span>, que resume as informações discutidas aqui.</p>
+<hr></section><section id="referências" class="level3"><h3 class="anchored" data-anchor-id="referências">Referências:</h3>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-weissgerber2019reveal" class="csl-entry">
+Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic, Oscar Garcia-Valencia, Zoran Bukumiric, Marko D Savic, Vesna D Garovic, e Natasa M Milic. 2019. <span>"Reveal, don’t conceal: transforming data visualization to improve transparency"</span>. <em>Circulation</em> 140 (18): 1506–18.
+</div>
+</div></section></div> ]]></description>
+  <category>Gráficos</category>
+  <category>Tutorial</category>
+  <category>Dataviz</category>
+  <guid>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</guid>
+  <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/grafico-dinamite.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Boas vindas ao blog da R-Ladies São Paulo!</title>
   <dc:creator>Equipe R-Ladies SP</dc:creator>

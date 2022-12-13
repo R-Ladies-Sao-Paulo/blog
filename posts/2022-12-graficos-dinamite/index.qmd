@@ -1,6 +1,5 @@
 ---
-title: "Gráficos de barras com barras de erros"
-subtitle: "Críticas e alternativas"
+title: "Gráficos de barras com barras de erros: críticas e alternativas"
 author: 
   - "[Fernanda Peres](https://fernandafperes.com.br)"
 date: "2022-12-13"

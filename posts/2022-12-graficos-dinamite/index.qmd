@@ -22,7 +22,37 @@ bibliography: pacotes.bib
 image: "images/grafico-dinamite.png"
 ---
 
+
+::: {.callout-note collapse="false"}
+
+## Autoria
+
+::: columns
+::: {.column .aside width="70%"}
+
+Este post foi escrito pela **Fernanda Peres**, uma integrante da comunidade R-Ladies São Paulo. Saiba mais sobre ela em sua [página pessoal](https://fernandafperes.com.br/sobre/)!
+
+A Fernanda tem um [Canal no Youtube](https://www.youtube.com/c/FernandaPeres) sobre estatística aplicada à vida real. Confira também a gravação do meetup apresentado pela Fernanda na R-Ladies SP, sobre [como escolher o teste estatístico adequado](https://www.youtube.com/watch?v=EtV3_3aN884)!
+
 *Post publicado originalmente no blog [fernandafperes.com.br](https://fernandafperes.com.br/blog/graficos-dinamite/)*
+:::
+
+::: {.column .aside width="3%"}
+
+:::
+
+::: {.column .aside width="25%"}
+
+![Fernanda Peres](https://fernandafperes.com.br/static/sobre_files/author.png)
+<center>
+[<i class="bi bi-house-fill"></i>](https://fernandafperes.com.br/sobre/) [<i class="fab fa-github"></i>](https://github.com/fernandaperes) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/fernandafielperes/)  [<i class="fab fa-instagram"></i>](https://www.instagram.com/estatisticaaplicada/)   [<i class="fab fa-youtube"></i>](https://www.youtube.com/c/FernandaPeres)
+</center>
+
+:::
+:::
+:::
+
+
 
 ```{r fig.align='center', out.width='400px'}
 library(tidyverse)
@@ -324,3 +354,15 @@ Recomendo também a leitura do artigo de @weissgerber2019reveal, que resume as i
 ***
   
 ### Referências:  
+
+
+
+
+
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->

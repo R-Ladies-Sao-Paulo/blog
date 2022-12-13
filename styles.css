@@ -15,3 +15,13 @@ a {
 div.csl-entry {
   padding-bottom: 1.5em;
 }
+
+
+.column-margin figcaption, .margin-caption, div.aside, aside, .column-margin {
+  color: #1b354c;
+  font-size: 1rem;
+}
+
+.callout.callout-style-default div.callout-body {
+  padding: 1em;
+}

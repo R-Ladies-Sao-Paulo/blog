@@ -19,6 +19,7 @@ execute:
   warning: false
   message: false
 bibliography: pacotes.bib
+image: "images/grafico-dinamite.png"
 ---
 
 *Post publicado originalmente no blog [fernandafperes.com.br](https://fernandafperes.com.br/blog/graficos-dinamite/)*

@@ -9,8 +9,8 @@
 <link>https://rladies-sp.org/index.html</link>
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.2.269</generator>
-<lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.2.280</generator>
+<lastBuildDate>Wed, 14 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Gráficos de barras com barras de erros: críticas e alternativas</title>
   <dc:creator>[Fernanda Peres](https://fernandafperes.com.br)</dc:creator>
@@ -263,7 +263,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
   <category>Tutorial</category>
   <category>Dataviz</category>
   <guid>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</guid>
-  <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/grafico-dinamite.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>

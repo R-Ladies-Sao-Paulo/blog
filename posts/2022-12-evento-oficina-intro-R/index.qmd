@@ -47,29 +47,49 @@ O último conteúdo apresentado foi uma prática feita pela [Beatriz Milz](https
 
 ## Pandemia de COVID-19
 
-**TODO**: COFFE BREAK QUE NÃO ROLOU :(
+Infelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.
 
 Embora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore.
 
 ## Sorteios
 
-**TODO**
+Ao final do evento, sorteamos alguns itens entre as pessoas participantes:
+
+-   Uma [capa de notebook](https://www.redbubble.com/i/laptop-case/R-hex-fabric-small-hexes-by-ameliamn/40622264.2U5KG) com o tecido de logos dos pacotes e comunidades de R, oferecido por [Haydee Svab](https://www.linkedin.com/in/hsvab/) (a fundadora do capítulo da R-Ladies em São Paulo).
+
+-   Dois livros: "Storytelling com Dados" (escrito pela Cole Nussbaumer Knaflic) e "O feminismo é para todo mundo" (escrito pela bell hooks), oferecidos pela [Beatriz Milz](https://beamilz.com/about-pt.html) (uma das co-organizadoras do capítulo).
+
+-   Duas bolsas em cursos da Curso-R (oferecido pela [Curso-R](https://curso-r.com/)).
+
+Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.
+
+![Foto dos itens sorteados no evento.](images/sorteio.jpeg){fig-align="center"}
 
 ## Apoiadores do evento
 
-### Insper
+Agradecemos MUITO as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!
+
+### Insper - Espaço
 
 Insper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o [Programa Avançado em Data Science e Decisão](https://www.insper.edu.br/pos-graduacao/programas-avancados/data-science-e-decisao/), e o [Master em Jornalismo de Dados, Automação e Data Storytelling](https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/). O Insper também mantém um [Centro de Ciência de Dados](https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-ciencia-de-dados/), que realiza pesquisas de ponta em ciência de dados e inteligência artificial.
 
-### Curso-R
+### Curso-R - Bolsas para sorteio
 
-TODO
+A [Curso-R](https://curso-r.com/) é uma empresa de cursos de programação em R e Python, e consultoria em ciência de dados. A missão é descomplicar a ciência de dados para a comunidade. A empresa disponibiliza diversos conteúdos gratuitos, como:
+
+-   Um [blog](https://blog.curso-r.com/) que contém posts sobre o tema desde 2017 (já são mais de 230 posts!).
+
+-   Três livros abertos: [Ciência de dados em R](https://livro.curso-r.com/), [Zen do R](https://curso-r.github.io/zen-do-r/index.html), e [Programando em Shiny](https://programando-em-shiny.curso-r.com/).
+
+-   Um [canal no Youtube](https://www.youtube.com/@CursoR6), com diversos temas! Um interessante é o que fala sobre como [juntar bases de dados usando Joins](https://youtu.be/xnUo25VRH70).
+
+Além dos materiais gratuitos, a Curso-R também oferece [cursos pagos](https://loja.curso-r.com/). Existe um [formulário de bolsas de diversidade](https://forms.gle/RyEvCjo2Ea6orJsc6) de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados.
 
 ## Encerramento e próximos eventos
 
 Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.
 
-Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros!
+Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.
 
 A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.
 

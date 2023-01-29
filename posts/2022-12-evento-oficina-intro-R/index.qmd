@@ -85,6 +85,32 @@ A [Curso-R](https://curso-r.com/) é uma empresa de cursos de programação em R
 
 Além dos materiais gratuitos, a Curso-R também oferece [cursos pagos](https://loja.curso-r.com/). Existe um [formulário de bolsas de diversidade](https://forms.gle/RyEvCjo2Ea6orJsc6) de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados.
 
+## Equipe
+
+Agradecemos o trabalho das diversas pessoas que atuaram voluntariamente na organização evento, como:
+
+-   [Ana Carolina Faleiros Camargo Moreno](https://www.linkedin.com/in/anacarolinamoreno/)
+
+-   [Angelica Cristina Cruz Custódio](https://www.linkedin.com/in/angelicacustodio/)
+
+-   [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+
+-   [Bruna Garbes Gonçalves Pinto](https://www.linkedin.com/in/brunagarbes/)
+
+-   [Cristiane Brandão dos Santos](https://www.linkedin.com/in/cristiane-brand%C3%A3o-6b828532/)
+
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/)
+
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/)
+
+-   [Jean Gabriel Reis do Prado](https://www.linkedin.com/in/jeangprado/)
+
+-   [Nathália Demétrio Vasconcelos Moura](https://www.linkedin.com/in/nathaliademetrio/)
+
+-   [Tatyane Paz Dominguez dos Santos Alves](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)
+
 ## Encerramento e próximos eventos
 
 Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.

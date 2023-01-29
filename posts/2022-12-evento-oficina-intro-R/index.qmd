@@ -21,7 +21,7 @@ Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma oficina de in
 
 O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.
 
-![Foto do grupo ao final do evento](images/logo.jpg){fig-align="center"}
+![Foto do grupo ao final do evento](images/logo.jpg){fig-align="center"  width="80%"}
 
 ## Conteúdo abordado
 
@@ -43,7 +43,16 @@ O último conteúdo apresentado foi uma prática feita pela [Beatriz Milz](https
 
 ## Espaço Gugudadados
 
-**TODO**: comentar, mas dizer que terá um post focado nisso.
+![Foto do David e o Espaço Gugudadados](images/gugudadados1.jpeg){fig-align="center" width="80%"}
+
+O espaço Gugudadados foi um espaço pensado para facilitar a participação de mães e outras pessoas cuidadoras no evento. Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.
+
+O Insper cedeu uma sala para o espaço Gugudadados, próxima à sala onde as apresentações estavam acontecendo.
+
+As crianças se divertiram muito! Esperamos contar com mais detalhes sobre essa experiência em outro post com mais detalhes.
+
+![Foto do Espaço Gugudadados](images/gugudadados2.jpeg){fig-align="center"  width="80%"}
+
 
 ## Pandemia de COVID-19
 
@@ -63,7 +72,7 @@ Ao final do evento, sorteamos alguns itens entre as pessoas participantes:
 
 Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.
 
-![Foto dos itens sorteados no evento.](images/sorteio.jpeg){fig-align="center"}
+![Foto dos itens sorteados no evento.](images/sorteio.jpeg){fig-align="center"  width="80%"}
 
 ## Apoiadores do evento
 

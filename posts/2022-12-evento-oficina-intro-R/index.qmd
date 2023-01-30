@@ -35,14 +35,13 @@ rladies_theme <- theme_minimal(base_size = 15) +
   
 ```
 
-
 Olá, pessoal!
 
 Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma [oficina de introdução ao R](https://www.meetup.com/rladies-sao-paulo/events/289755187/). O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.
 
 O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.
 
-![Foto do grupo ao final do evento](images/logo.jpg){fig-align="center"  width="80%"}
+![Foto do grupo ao final do evento](images/logo.jpg){fig-align="center" width="80%"}
 
 ## Conteúdo abordado
 
@@ -94,7 +93,7 @@ inscricoes <- readr::read_csv2("participantes.csv") |>
 participantes <- inscricoes |> dplyr::filter(participou == "sim")
 ```
 
-Neste evento, `r nrow(inscricoes)` pessoas se inscreveram, e dessas, `r nrow(participantes)` participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes. 
+Neste evento, `r nrow(inscricoes)` pessoas se inscreveram, e dessas, `r nrow(participantes)` participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.
 
 ```{r grafico-genero}
 participantes |>
@@ -173,7 +172,7 @@ Ao final do evento, sorteamos alguns itens entre as pessoas participantes:
 
 Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.
 
-![Foto dos itens sorteados no evento.](images/sorteio.jpeg){fig-align="center"  width="80%"}
+![Foto dos itens sorteados no evento.](images/sorteio.jpeg){fig-align="center" width="80%"}
 
 ## Apoiadores do evento
 

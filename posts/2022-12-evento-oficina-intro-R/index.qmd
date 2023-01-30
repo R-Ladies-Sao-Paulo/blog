@@ -2,7 +2,9 @@
 title: "Evento: Oficina de Introdução ao R"
 subtitle: "Primeiro evento desde o início da pandemia"
 author: 
-  - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+  - "[Beatriz Milz](https://beamilz.com)"
+  - "[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)"  
+# Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
 date: "2022-12-10" # Data do post, no formato ano-mes-dia (ex: "2022-11-24"). alterar quando o post ficar pronto para publicar.
 categories: 
 # exemplo de categorias:

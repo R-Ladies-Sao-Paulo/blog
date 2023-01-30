@@ -56,6 +56,8 @@ Após o almoço, o conteúdo foi focado nos pacotes `{tidyverse}` e `{dplyr}`! A
 
 O último conteúdo apresentado foi uma prática feita pela [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/) utilizando o pacote `{esquisse}`, uma forma interativa para começar a criar gráficos usando o pacote `{ggplot2}`.
 
+Durante cada tópico apresentado na oficina os demais apresentadores ficavam espalhados pela sala, atuando como monitores tirando dúvidas dos participantes e apoiando conforme a necessidade de cada um. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Esse código interno ajuda bastante e cria um bom dinamismo entre os participantes e apresentadores. 
+
 ## Diversidade
 
 Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:
@@ -147,7 +149,7 @@ Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças 
 
 O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.
 
-As crianças se divertiram muito! Esperamos contar com mais detalhes sobre essa experiência em outro post com mais detalhes.
+As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com varios tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!
 
 ![Foto do Espaço GuGuDaDados](images/gugudadados2.jpeg){fig-align="center"  width="80%"}
 

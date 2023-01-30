@@ -1,0 +1,101 @@
+rowid;cor_raca;genero;outros_grupos;participou
+1;Parda;Feminino;Pessoa com deficiência;NA
+2;Parda;Feminino;LGBTQIA+;NA
+3;Parda;Feminino;Moradora de periferia;NA
+4;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+5;Parda;Feminino;Moradora de periferia;NA
+6;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+7;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+8;Branca;Feminino;Moradora de periferia;NA
+9;Amarela;Feminino;Não informado;sim
+10;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+11;Branca;Feminino;Moradora de periferia;NA
+12;Preta;Feminino;Migrante;sim
+13;Parda;Feminino;Mãe, Moradora de periferia;NA
+14;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+15;Branca;Feminino;LGBTQIA+, Pessoa com deficiência;sim
+16;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+17;Branca;Feminino;Mãe, Moradora de periferia;sim
+18;Preta;Feminino;Não faço parte de nenhum dos grupos acima;sim
+19;Amarela;Feminino;LGBTQIA+;NA
+20;Branca;Feminino;LGBTQIA+;sim
+21;Branca;Feminino;Moradora de periferia;sim
+22;Branca;Feminino;LGBTQIA+;sim
+23;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+24;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+25;Preta;Feminino;Pessoa com deficiência, Moradora de periferia;sim
+26;Parda;Feminino;Não faço parte de nenhum dos grupos acima;sim
+27;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+28;Preta;Feminino;Mãe, Idade acima de 40 anos;sim
+29;Preta;Feminino;Não informado;sim
+30;Branca;Masculino;LGBTQIA+, Pessoa com deficiência;NA
+31;Branca;Feminino;Moradora de periferia;sim
+32;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+33;Branca;Feminino;LGBTQIA+;sim
+34;Branca;Feminino;LGBTQIA+;sim
+35;Branca;Masculino;Não faço parte de nenhum dos grupos acima;sim
+36;Parda;Feminino;LGBTQIA+, Moradora de periferia;NA
+37;Parda;Feminino;Moradora de periferia, Negras;NA
+38;Branca;Feminino;Idade acima de 40 anos, Moradora de periferia;NA
+39;Indígena;Feminino;Migrante, Idade acima de 40 anos, Moradora de periferia, Comunidade nativa dos Andes;NA
+40;Preta;Masculino;Não faço parte de nenhum dos grupos acima;NA
+41;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+42;Branca;Feminino;LGBTQIA+;NA
+43;Parda;Feminino;Não informado;sim
+44;Preta;Feminino;LGBTQIA+, Moradora de periferia;sim
+45;Branca;Feminino;Mãe, Idade acima de 40 anos;sim
+46;Preta;Feminino;Moradora de periferia;NA
+47;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+48;Branca;Não binário;LGBTQIA+;sim
+49;Parda;Feminino;Não faço parte de nenhum dos grupos acima;sim
+50;Branca;Feminino;Mãe;NA
+51;Branca;Feminino;LGBTQIA+;NA
+52;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+53;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+54;Preta;Feminino;Idade acima de 40 anos;sim
+55;Preta;Masculino;LGBTQIA+;NA
+56;Branca;Não binário;LGBTQIA+;sim
+57;Parda;Feminino;LGBTQIA+;sim
+58;Branca;Feminino;LGBTQIA+;NA
+59;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+60;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+61;Branca;Feminino;LGBTQIA+;sim
+62;Preta;Feminino;Não faço parte de nenhum dos grupos acima;NA
+63;Branca;Feminino;LGBTQIA+;NA
+64;Amarela;Feminino;Não faço parte de nenhum dos grupos acima;NA
+65;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+66;Preta;Feminino;Moradora de periferia;sim
+67;Preta;Feminino;Não faço parte de nenhum dos grupos acima;sim
+68;Branca;Feminino;LGBTQIA+;NA
+69;Branca;Feminino;LGBTQIA+;NA
+70;Preta;Não binário;LGBTQIA+, Moradora de periferia;sim
+71;Branca;Feminino;LGBTQIA+;sim
+72;Branca;Feminino;LGBTQIA+;NA
+73;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+74;Branca;Feminino;Mãe;NA
+75;Branca;Não binário;LGBTQIA+, Idade acima de 40 anos, Moradora de periferia;NA
+76;Parda;Feminino;Pessoa com deficiência;sim
+77;Não informado;Não informado;Não informado;sim
+78;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+79;Multiétnico;Feminino;Não faço parte de nenhum dos grupos acima;sim
+80;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+81;Preta;Feminino;Moradora de periferia;sim
+82;Branca;Feminino;Não informado;sim
+83;Branca;Feminino;Mãe, Idade acima de 40 anos;sim
+84;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+85;Branca;Feminino;Mãe, Idade acima de 40 anos;NA
+86;Parda;Feminino;Mãe;sim
+87;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+88;Branca;Feminino;LGBTQIA+;sim
+89;Branca;Feminino;Não faço parte de nenhum dos grupos acima;NA
+90;Branca;Feminino;Não faço parte de nenhum dos grupos acima;sim
+91;Preta;Feminino;Não informado;NA
+92;Parda;Masculino;Não faço parte de nenhum dos grupos acima, Moradora de periferia;sim
+93;Parda;Feminino;LGBTQIA+;sim
+94;Parda;Masculino;Não faço parte de nenhum dos grupos acima, Morador de periferia;NA
+95;Parda;Feminino;Não faço parte de nenhum dos grupos acima;sim
+96;Preta;Feminino;Moradora de periferia;NA
+97;Parda;Feminino;Mãe;sim
+98;Parda;Feminino;LGBTQIA+, Moradora de periferia;NA
+99;Parda;Feminino;Migrante, Moradora de periferia;NA
+100;Amarela;Feminino;Não faço parte de nenhum dos grupos acima;NA

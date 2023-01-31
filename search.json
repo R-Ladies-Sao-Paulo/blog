@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Gráficos de barras com barras de erros: críticas e alternativas\n\n\n\n\n\n\n\nGráficos\n\n\nTutorial\n\n\nDataviz\n\n\n \n\n\n\n\n14 de dez. de 2022\n\n\nFernanda Peres\n\n\n\n\n\n\n  \n\n\n\n\nBoas vindas ao blog da R-Ladies São Paulo!\n\n\n\n\n\n\n\nNovidades\n\n\n \n\n\n\n\n5 de dez. de 2022\n\n\nEquipe R-Ladies SP, Beatriz Milz\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Evento: Oficina de Introdução ao R\n\n\nPrimeiro evento presencial desde o início da pandemia\n\n\n\n\nEventos\n\n\nComunidade\n\n\nDiversidade\n\n\n \n\n\n\n\n31 de jan. de 2023\n\n\nBeatriz Milz, Tatyane Paz Dominguez\n\n\n\n\n\n\n  \n\n\n\n\nGráficos de barras com barras de erros: críticas e alternativas\n\n\n\n\n\n\n\nGráficos\n\n\nTutorial\n\n\nDataviz\n\n\n \n\n\n\n\n14 de dez. de 2022\n\n\nFernanda Peres\n\n\n\n\n\n\n  \n\n\n\n\nBoas vindas ao blog da R-Ladies São Paulo!\n\n\n\n\n\n\n\nNovidades\n\n\n \n\n\n\n\n5 de dez. de 2022\n\n\nEquipe R-Ladies SP, Beatriz Milz\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "sobre.html",
@@ -131,6 +131,69 @@
     "title": "Boas vindas ao blog da R-Ladies São Paulo!",
     "section": "O que esperar?",
     "text": "O que esperar?\nA ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.\n\n\n\nArte por Allison Horst.\n\n\nEsperamos que seja um lugar rico de troca e compartilhamento! Até logo!"
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "",
+    "text": "Olá, pessoal!\nRecentemente, a R-Ladies São Paulo teve o prazer de organizar uma oficina de introdução ao R. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.\nO evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#conteúdo-abordado",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#conteúdo-abordado",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Conteúdo abordado",
+    "text": "Conteúdo abordado\nOs materiais utilizados no evento estão disponíveis online e gratuitamente, na página que criamos para a atividade.\nA oficina começou com uma rápida apresentação do coordenador do Programa Avançado em Comunicação e Jornalismo do Insper, Pedro Burgos sobre o Insper.\nEntão, a Tatyane Paz fez uma apresentação sobre o comunidade R-Ladies (slides disponíveis aqui).\nNo restante da manhã, o conteúdo foi focado em R básico, apresentado por Bruna Garbes e Beatriz Milz (slides disponíveis aqui e aqui).\nApós o almoço, o conteúdo foi focado nos pacotes tidyverse e dplyr! Apresentado por Ana Carolina Moreno e Jean Prado, o período da tarde foi muito dinâmico, apresentando conceitos utilizando bases de dados reais e recentes: quem são as pessoas eleitas como deputadas e que farão parte da Assembleia Legislativa do Estado de S. Paulo (ALESP) a partir de 2023 (slide disponível aqui, e material aqui).\nO último conteúdo apresentado foi uma prática feita pela Beatriz Milz utilizando o pacote esquisse, uma forma interativa para começar a criar gráficos usando o pacote ggplot2.\nDurante cada tópico apresentado na oficina, as outras pessoas apresentadoras ficavam espalhadas pela sala, atuando como monitoras tirando dúvidas das participantes e apoiando conforme a necessidade de cada uma. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Essa prática ajuda bastante e cria um bom dinamismo entre participantes e apresentadores1."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#diversidade",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#diversidade",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Diversidade",
+    "text": "Diversidade\nPara buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:\n\npessoas negras e indígenas (30 vagas);\nmães (30 vagas);\nmulheres e outras minorias de gênero (30 vagas).\n\n\n\n\n\n\n\nNeste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAinda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.\nAlém disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#espaço-gugudadados",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#espaço-gugudadados",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Espaço GuGuDaDados",
+    "text": "Espaço GuGuDaDados\n\n\nFoto do David e o Espaço GuGuDaDados\n\n\nO GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.\nEssa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.\nO Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.\nAs crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!\n\n\nFoto do Espaço GuGuDaDados"
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#pandemia-de-covid-19",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#pandemia-de-covid-19",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Pandemia de COVID-19",
+    "text": "Pandemia de COVID-19\nInfelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.\nEmbora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#sorteios",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#sorteios",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Sorteios",
+    "text": "Sorteios\nAo final do evento, sorteamos alguns itens entre as pessoas participantes:\n\nUma capa de notebook com o tecido de logos dos pacotes e comunidades de R, oferecido por Haydee Svab (a fundadora do capítulo da R-Ladies em São Paulo).\nDois livros: “Storytelling com Dados” (escrito pela Cole Nussbaumer Knaflic) e “O feminismo é para todo mundo” (escrito pela bell hooks), oferecidos pela Beatriz Milz (uma das co-organizadoras do capítulo).\nDuas bolsas em cursos da Curso-R (oferecido pela Curso-R).\n\nOs stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.\n\n\nFoto dos itens sorteados no evento."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#apoiadores-do-evento",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#apoiadores-do-evento",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Apoiadores do evento",
+    "text": "Apoiadores do evento\nAgradecemos as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!\nInsper - Espaço\nInsper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o Programa Avançado em Data Science e Decisão, e o Master em Jornalismo de Dados, Automação e Data Storytelling. O Insper também mantém um Centro de Ciência de Dados, que realiza pesquisas de ponta em ciência de dados e inteligência artificial.\nCurso-R - Bolsas para sorteio\nA Curso-R é uma empresa de cursos de programação em R e Python, e consultoria em ciência de dados. A missão é descomplicar a ciência de dados para a comunidade. A empresa disponibiliza diversos conteúdos gratuitos, como:\n\nUm blog que contém posts sobre o tema desde 2017 (já são mais de 230 posts!).\nTrês livros abertos: Ciência de dados em R, Zen do R, e Programando em Shiny.\nUm canal no Youtube, com diversos temas! Um interessante é o que fala sobre como juntar bases de dados usando Joins.\n\nAlém dos materiais gratuitos, a Curso-R também oferece cursos pagos. Existe um formulário de bolsas de diversidade de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados."
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#equipe",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#equipe",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Equipe",
+    "text": "Equipe\nAgradecemos o trabalho das diversas pessoas que atuaram voluntariamente na organização evento, como:\n\nAna Carolina Faleiros Camargo Moreno\nAngelica Cristina Cruz Custódio\nBeatriz Milz\nBruna Garbes Gonçalves Pinto\nCristiane Brandão dos Santos\nGeovana Lopes Batista\nHaydee Svab\nIanní Muliterno\nJean Gabriel Reis do Prado\nNathália Demétrio Vasconcelos Moura\nTatyane Paz Dominguez dos Santos Alves"
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#encerramento-e-próximos-eventos",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#encerramento-e-próximos-eventos",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Encerramento e próximos eventos",
+    "text": "Encerramento e próximos eventos\nFoi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.\nAgradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.\nA R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.\nAté a próxima!"
   },
   {
     "objectID": "contribuir-com-o-blog.html",

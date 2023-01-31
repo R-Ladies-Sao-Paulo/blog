@@ -10,7 +10,149 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Wed, 14 Dec 2022 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 31 Jan 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Evento: Oficina de Introdução ao R</title>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</link>
+  <description><![CDATA[ <div class="cell" data-layout-align="center">
+
+</div>
+<p>Olá, pessoal!</p>
+<p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
+<p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do grupo ao final do evento</figcaption><p></p>
+</figure>
+</div>
+<section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
+<p>Os materiais utilizados no evento estão disponíveis online e gratuitamente, <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html">na página que criamos para a atividade</a>.</p>
+<p>A oficina começou com uma rápida apresentação do coordenador do Programa Avançado em Comunicação e Jornalismo do Insper, <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/docentes-pesquisadores/pedro-burgos/">Pedro Burgos</a> sobre o Insper.</p>
+<p>Então, a <a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz</a> fez uma apresentação sobre o comunidade R-Ladies (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-rladies.html">slides disponíveis aqui</a>).</p>
+<p>No restante da manhã, o conteúdo foi focado em R básico, apresentado por <a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes</a> e <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> (slides disponíveis <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-i.html">aqui</a> e <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-ii.html">aqui</a>).</p>
+<p>Após o almoço, o conteúdo foi focado nos pacotes <a href="https://tidyverse.tidyverse.org">tidyverse</a> e <a href="https://dplyr.tidyverse.org">dplyr</a>! Apresentado por <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a> e <a href="https://www.linkedin.com/in/jeangprado/">Jean Prado</a>, o período da tarde foi muito dinâmico, apresentando conceitos utilizando bases de dados reais e recentes: quem são as pessoas eleitas como deputadas e que farão parte da Assembleia Legislativa do Estado de S. Paulo (ALESP) a partir de 2023 (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-tidyverse.html">slide disponível aqui</a>, e <a href="https://github.com/R-Ladies-Sao-Paulo/2022-11-oficina-introducao-R/raw/main/materiais-oficina.zip">material aqui</a>).</p>
+<p>O último conteúdo apresentado foi uma prática feita pela <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> utilizando o pacote <a href="https://dreamrs.github.io/esquisse/">esquisse</a>, uma forma interativa para começar a criar gráficos usando o pacote <a href="https://ggplot2.tidyverse.org">ggplot2</a>.</p>
+<p>Durante cada tópico apresentado na oficina, as outras pessoas apresentadoras ficavam espalhadas pela sala, atuando como monitoras tirando dúvidas das participantes e apoiando conforme a necessidade de cada uma. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Essa prática ajuda bastante e cria um bom dinamismo entre participantes e apresentadores<sup>1</sup>.</p>
+</section><section id="diversidade" class="level2"><h2 class="anchored" data-anchor-id="diversidade">Diversidade</h2>
+<p>Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:</p>
+<ul>
+<li><p>pessoas negras e indígenas (30 vagas);</p></li>
+<li><p>mães (30 vagas);</p></li>
+<li><p>mulheres e outras minorias de gênero (30 vagas).</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+<p>Neste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ainda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.</p>
+<p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
+</section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do David e o Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+<p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
+<p>Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.</p>
+<p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
+<p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+</section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
+<p>Infelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.</p>
+<p>Embora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore.</p>
+</section><section id="sorteios" class="level2"><h2 class="anchored" data-anchor-id="sorteios">Sorteios</h2>
+<p>Ao final do evento, sorteamos alguns itens entre as pessoas participantes:</p>
+<ul>
+<li><p>Uma <a href="https://www.redbubble.com/i/laptop-case/R-hex-fabric-small-hexes-by-ameliamn/40622264.2U5KG">capa de notebook</a> com o tecido de logos dos pacotes e comunidades de R, oferecido por <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (a fundadora do capítulo da R-Ladies em São Paulo).</p></li>
+<li><p>Dois livros: “Storytelling com Dados” (escrito pela Cole Nussbaumer Knaflic) e “O feminismo é para todo mundo” (escrito pela bell hooks), oferecidos pela <a href="https://beamilz.com/about-pt.html">Beatriz Milz</a> (uma das co-organizadoras do capítulo).</p></li>
+<li><p>Duas bolsas em cursos da Curso-R (oferecido pela <a href="https://curso-r.com/">Curso-R</a>).</p></li>
+</ul>
+<p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto dos itens sorteados no evento.</figcaption><p></p>
+</figure>
+</div>
+</section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
+<p>Agradecemos as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!</p>
+<section id="insper---espaço" class="level3"><h3 class="anchored" data-anchor-id="insper---espaço">Insper - Espaço</h3>
+<p>Insper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o <a href="https://www.insper.edu.br/pos-graduacao/programas-avancados/data-science-e-decisao/">Programa Avançado em Data Science e Decisão</a>, e o <a href="https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/">Master em Jornalismo de Dados, Automação e Data Storytelling</a>. O Insper também mantém um <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-ciencia-de-dados/">Centro de Ciência de Dados</a>, que realiza pesquisas de ponta em ciência de dados e inteligência artificial.</p>
+</section><section id="curso-r---bolsas-para-sorteio" class="level3"><h3 class="anchored" data-anchor-id="curso-r---bolsas-para-sorteio">Curso-R - Bolsas para sorteio</h3>
+<p>A <a href="https://curso-r.com/">Curso-R</a> é uma empresa de cursos de programação em R e Python, e consultoria em ciência de dados. A missão é descomplicar a ciência de dados para a comunidade. A empresa disponibiliza diversos conteúdos gratuitos, como:</p>
+<ul>
+<li><p>Um <a href="https://blog.curso-r.com/">blog</a> que contém posts sobre o tema desde 2017 (já são mais de 230 posts!).</p></li>
+<li><p>Três livros abertos: <a href="https://livro.curso-r.com/">Ciência de dados em R</a>, <a href="https://curso-r.github.io/zen-do-r/index.html">Zen do R</a>, e <a href="https://programando-em-shiny.curso-r.com/">Programando em Shiny</a>.</p></li>
+<li><p>Um <a href="https://www.youtube.com/@CursoR6">canal no Youtube</a>, com diversos temas! Um interessante é o que fala sobre como <a href="https://youtu.be/xnUo25VRH70">juntar bases de dados usando Joins</a>.</p></li>
+</ul>
+<p>Além dos materiais gratuitos, a Curso-R também oferece <a href="https://loja.curso-r.com/">cursos pagos</a>. Existe um <a href="https://forms.gle/RyEvCjo2Ea6orJsc6">formulário de bolsas de diversidade</a> de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados.</p>
+</section></section><section id="equipe" class="level2"><h2 class="anchored" data-anchor-id="equipe">Equipe</h2>
+<p>Agradecemos o trabalho das diversas pessoas que atuaram voluntariamente na organização evento, como:</p>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Faleiros Camargo Moreno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/angelicacustodio/">Angelica Cristina Cruz Custódio</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes Gonçalves Pinto</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/cristiane-brand%C3%A3o-6b828532/">Cristiane Brandão dos Santos</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/jeangprado/">Jean Gabriel Reis do Prado</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/nathaliademetrio/">Nathália Demétrio Vasconcelos Moura</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez dos Santos Alves</a></p></li>
+</ul></section><section id="encerramento-e-próximos-eventos" class="level2"><h2 class="anchored" data-anchor-id="encerramento-e-próximos-eventos">Encerramento e próximos eventos</h2>
+<p>Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.</p>
+<p>Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.</p>
+<p>A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.</p>
+<p>Até a próxima!</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<ol>
+<li id="fn1"><p>Usar post-its (<em>sticky notes</em>) para ajudar a organizar o tipo de ajuda necessária é uma recomendação feita no <a href="https://swcarpentry.github.io/swc-releases/2017.02/instructor-training/15-practices/">treinamento de instrutores</a> da <a href="https://carpentries.org/">The Carpentries</a>.↩︎</p></li>
+</ol></section></div> ]]></description>
+  <category>Eventos</category>
+  <category>Comunidade</category>
+  <category>Diversidade</category>
+  <guid>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</guid>
+  <pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Gráficos de barras com barras de erros: críticas e alternativas</title>
   <dc:creator>[Fernanda Peres](https://fernandafperes.com.br)</dc:creator>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="author" content="Tatyane Paz Dominguez">
+<title>R-Ladies São Paulo - Evento: Oficina de Introdução ao R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Evento: Oficina de Introdução ao R">
+<meta name="twitter:description" content="Primeiro evento desde o início da pandemia">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/"><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org"><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+<div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Evento: Oficina de Introdução ao R</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">Evento: Oficina de Introdução ao R</h1>
+            <p class="subtitle lead">Primeiro evento desde o início da pandemia</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Eventos</div>
+                <div class="quarto-category">Comunidade</div>
+                <div class="quarto-category">Diversidade</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoras</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://beamilz.com">Beatriz Milz</a> </p>
+               <p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">31 de janeiro de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../img/logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../" class="sidebar-item-text sidebar-link">Página inicial</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sobre.html" class="sidebar-item-text sidebar-link">Sobre a R-Ladies SP</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../como-participar.html" class="sidebar-item-text sidebar-link">Como participar?</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contribuir-com-o-blog.html" class="sidebar-item-text sidebar-link">Como contribuir com o blog?</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sugestoes.html" class="sidebar-item-text sidebar-link">Sugestão de conteúdos</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:12px Helvetica,Arial,sans-serif;  width:200px; margin: 0px !important;}
+    
+    #mc_embed_signup h2 {margin: 0px !important;}
+    
+    
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://rladies-sp.us21.list-manage.com/subscribe/post?u=7f53effc85201b5269f6e0991&amp;id=3bd5bc80fe&amp;f_id=000cc3e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <h2>Inscreva-se para receber novidades!</h2>
+<div class="mc-field-group">
+    <label for="mce-EMAIL">Email <span class="asterisk">*</span>
+</label>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+    <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f53effc85201b5269f6e0991_3bd5bc80fe" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <center><input type="submit" value="Inscreva-se" name="subscribe" id="mc-embedded-subscribe" class="button"></center>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#conte%C3%BAdo-abordado" id="toc-conteúdo-abordado" class="nav-link active" data-scroll-target="#conte%C3%BAdo-abordado">Conteúdo abordado</a></li>
+  <li><a href="#diversidade" id="toc-diversidade" class="nav-link" data-scroll-target="#diversidade">Diversidade</a></li>
+  <li><a href="#espa%C3%A7o-gugudadados" id="toc-espaço-gugudadados" class="nav-link" data-scroll-target="#espa%C3%A7o-gugudadados">Espaço GuGuDaDados</a></li>
+  <li><a href="#pandemia-de-covid-19" id="toc-pandemia-de-covid-19" class="nav-link" data-scroll-target="#pandemia-de-covid-19">Pandemia de COVID-19</a></li>
+  <li><a href="#sorteios" id="toc-sorteios" class="nav-link" data-scroll-target="#sorteios">Sorteios</a></li>
+  <li>
+<a href="#apoiadores-do-evento" id="toc-apoiadores-do-evento" class="nav-link" data-scroll-target="#apoiadores-do-evento">Apoiadores do evento</a>
+  <ul class="collapse">
+<li><a href="#insper---espa%C3%A7o" id="toc-insper---espaço" class="nav-link" data-scroll-target="#insper---espa%C3%A7o">Insper - Espaço</a></li>
+  <li><a href="#curso-r---bolsas-para-sorteio" id="toc-curso-r---bolsas-para-sorteio" class="nav-link" data-scroll-target="#curso-r---bolsas-para-sorteio">Curso-R - Bolsas para sorteio</a></li>
+  </ul>
+</li>
+  <li><a href="#equipe" id="toc-equipe" class="nav-link" data-scroll-target="#equipe">Equipe</a></li>
+  <li><a href="#encerramento-e-pr%C3%B3ximos-eventos" id="toc-encerramento-e-próximos-eventos" class="nav-link" data-scroll-target="#encerramento-e-pr%C3%B3ximos-eventos">Encerramento e próximos eventos</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-01-evento-oficina-intro-R/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="cell" data-layout-align="center">
+
+</div>
+<p>Olá, pessoal!</p>
+<p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
+<p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do grupo ao final do evento</figcaption><p></p>
+</figure>
+</div>
+<section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
+<p>Os materiais utilizados no evento estão disponíveis online e gratuitamente, <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html">na página que criamos para a atividade</a>.</p>
+<p>A oficina começou com uma rápida apresentação do coordenador do Programa Avançado em Comunicação e Jornalismo do Insper, <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/docentes-pesquisadores/pedro-burgos/">Pedro Burgos</a> sobre o Insper.</p>
+<p>Então, a <a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz</a> fez uma apresentação sobre o comunidade R-Ladies (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-rladies.html">slides disponíveis aqui</a>).</p>
+<p>No restante da manhã, o conteúdo foi focado em R básico, apresentado por <a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes</a> e <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> (slides disponíveis <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-i.html">aqui</a> e <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-ii.html">aqui</a>).</p>
+<p>Após o almoço, o conteúdo foi focado nos pacotes <a href="https://tidyverse.tidyverse.org">tidyverse</a> e <a href="https://dplyr.tidyverse.org">dplyr</a>! Apresentado por <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a> e <a href="https://www.linkedin.com/in/jeangprado/">Jean Prado</a>, o período da tarde foi muito dinâmico, apresentando conceitos utilizando bases de dados reais e recentes: quem são as pessoas eleitas como deputadas e que farão parte da Assembleia Legislativa do Estado de S. Paulo (ALESP) a partir de 2023 (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-tidyverse.html">slide disponível aqui</a>, e <a href="https://github.com/R-Ladies-Sao-Paulo/2022-11-oficina-introducao-R/raw/main/materiais-oficina.zip">material aqui</a>).</p>
+<p>O último conteúdo apresentado foi uma prática feita pela <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> utilizando o pacote <a href="https://dreamrs.github.io/esquisse/">esquisse</a>, uma forma interativa para começar a criar gráficos usando o pacote <a href="https://ggplot2.tidyverse.org">ggplot2</a>.</p>
+<p>Durante cada tópico apresentado na oficina, as outras pessoas apresentadoras ficavam espalhadas pela sala, atuando como monitoras tirando dúvidas das participantes e apoiando conforme a necessidade de cada uma. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Essa prática ajuda bastante e cria um bom dinamismo entre participantes e apresentadores<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<!-- TODO: PROCURAR ALGUMA FOTO QUE APARECA A SALA E OS STICKERS -->
+</section><section id="diversidade" class="level2"><h2 class="anchored" data-anchor-id="diversidade">Diversidade</h2>
+<p>Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:</p>
+<ul>
+<li><p>pessoas negras e indígenas (30 vagas);</p></li>
+<li><p>mães (30 vagas);</p></li>
+<li><p>mulheres e outras minorias de gênero (30 vagas).</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+<p>Neste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ainda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.</p>
+<p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
+</section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do David e o Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+<p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
+<p>Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.</p>
+<p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
+<p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+</section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
+<p>Infelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.</p>
+<p>Embora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore.</p>
+</section><section id="sorteios" class="level2"><h2 class="anchored" data-anchor-id="sorteios">Sorteios</h2>
+<p>Ao final do evento, sorteamos alguns itens entre as pessoas participantes:</p>
+<ul>
+<li><p>Uma <a href="https://www.redbubble.com/i/laptop-case/R-hex-fabric-small-hexes-by-ameliamn/40622264.2U5KG">capa de notebook</a> com o tecido de logos dos pacotes e comunidades de R, oferecido por <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (a fundadora do capítulo da R-Ladies em São Paulo).</p></li>
+<li><p>Dois livros: “Storytelling com Dados” (escrito pela Cole Nussbaumer Knaflic) e “O feminismo é para todo mundo” (escrito pela bell hooks), oferecidos pela <a href="https://beamilz.com/about-pt.html">Beatriz Milz</a> (uma das co-organizadoras do capítulo).</p></li>
+<li><p>Duas bolsas em cursos da Curso-R (oferecido pela <a href="https://curso-r.com/">Curso-R</a>).</p></li>
+</ul>
+<p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto dos itens sorteados no evento.</figcaption><p></p>
+</figure>
+</div>
+</section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
+<p>Agradecemos as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!</p>
+<section id="insper---espaço" class="level3"><h3 class="anchored" data-anchor-id="insper---espaço">Insper - Espaço</h3>
+<p>Insper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o <a href="https://www.insper.edu.br/pos-graduacao/programas-avancados/data-science-e-decisao/">Programa Avançado em Data Science e Decisão</a>, e o <a href="https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/">Master em Jornalismo de Dados, Automação e Data Storytelling</a>. O Insper também mantém um <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-ciencia-de-dados/">Centro de Ciência de Dados</a>, que realiza pesquisas de ponta em ciência de dados e inteligência artificial.</p>
+</section><section id="curso-r---bolsas-para-sorteio" class="level3"><h3 class="anchored" data-anchor-id="curso-r---bolsas-para-sorteio">Curso-R - Bolsas para sorteio</h3>
+<p>A <a href="https://curso-r.com/">Curso-R</a> é uma empresa de cursos de programação em R e Python, e consultoria em ciência de dados. A missão é descomplicar a ciência de dados para a comunidade. A empresa disponibiliza diversos conteúdos gratuitos, como:</p>
+<ul>
+<li><p>Um <a href="https://blog.curso-r.com/">blog</a> que contém posts sobre o tema desde 2017 (já são mais de 230 posts!).</p></li>
+<li><p>Três livros abertos: <a href="https://livro.curso-r.com/">Ciência de dados em R</a>, <a href="https://curso-r.github.io/zen-do-r/index.html">Zen do R</a>, e <a href="https://programando-em-shiny.curso-r.com/">Programando em Shiny</a>.</p></li>
+<li><p>Um <a href="https://www.youtube.com/@CursoR6">canal no Youtube</a>, com diversos temas! Um interessante é o que fala sobre como <a href="https://youtu.be/xnUo25VRH70">juntar bases de dados usando Joins</a>.</p></li>
+</ul>
+<p>Além dos materiais gratuitos, a Curso-R também oferece <a href="https://loja.curso-r.com/">cursos pagos</a>. Existe um <a href="https://forms.gle/RyEvCjo2Ea6orJsc6">formulário de bolsas de diversidade</a> de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados.</p>
+</section></section><section id="equipe" class="level2"><h2 class="anchored" data-anchor-id="equipe">Equipe</h2>
+<p>Agradecemos o trabalho das diversas pessoas que atuaram voluntariamente na organização evento, como:</p>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Faleiros Camargo Moreno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/angelicacustodio/">Angelica Cristina Cruz Custódio</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes Gonçalves Pinto</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/cristiane-brand%C3%A3o-6b828532/">Cristiane Brandão dos Santos</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/jeangprado/">Jean Gabriel Reis do Prado</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/nathaliademetrio/">Nathália Demétrio Vasconcelos Moura</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez dos Santos Alves</a></p></li>
+</ul></section><section id="encerramento-e-próximos-eventos" class="level2"><h2 class="anchored" data-anchor-id="encerramento-e-próximos-eventos">Encerramento e próximos eventos</h2>
+<p>Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.</p>
+<p>Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.</p>
+<p>A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.</p>
+<p>Até a próxima!</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<ol>
+<li id="fn1"><p>Usar post-its (<em>sticky notes</em>) para ajudar a organizar o tipo de ajuda necessária é uma recomendação feita no <a href="https://swcarpentry.github.io/swc-releases/2017.02/instructor-training/15-practices/">treinamento de instrutores</a> da <a href="https://carpentries.org/">The Carpentries</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.rladies-sp\.org\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

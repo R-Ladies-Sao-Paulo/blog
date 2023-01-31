@@ -1,8 +1,8 @@
 ---
 title: "Evento: Oficina de Introdução ao R"
-subtitle: "Primeiro evento desde o início da pandemia"
+subtitle: "Primeiro evento presencial desde o início da pandemia"
 author: 
-  - "[Beatriz Milz](https://beamilz.com)"
+  - "Beatriz Milz"
   - "[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)"  
 # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
 date: "2023-01-31" # Data do post, no formato ano-mes-dia (ex: "2022-11-24"). alterar quando o post ficar pronto para publicar.
@@ -14,7 +14,7 @@ categories:
 toc: true # isso habilita o sumário ao lado do post
 image: "images/logo.jpg" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
-draft: true # enquanto estiver draft: true, o post é um rascunho
+draft: false # enquanto estiver draft: true, o post é um rascunho
 knitr:
   opts_chunk: 
     fig.align: "center"
@@ -60,8 +60,6 @@ O último conteúdo apresentado foi uma prática feita pela [Beatriz Milz](https
 Durante cada tópico apresentado na oficina, as outras pessoas apresentadoras ficavam espalhadas pela sala, atuando como monitoras tirando dúvidas das participantes e apoiando conforme a necessidade de cada uma. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Essa prática ajuda bastante e cria um bom dinamismo entre participantes e apresentadores[^1].
 
 [^1]: Usar post-its (*sticky notes*) para ajudar a organizar o tipo de ajuda necessária é uma recomendação feita no [treinamento de instrutores](https://swcarpentry.github.io/swc-releases/2017.02/instructor-training/15-practices/) da [The Carpentries](https://carpentries.org/).
-
-<!-- TODO: PROCURAR ALGUMA FOTO QUE APARECA A SALA E OS STICKERS -->
 
 ## Diversidade
 

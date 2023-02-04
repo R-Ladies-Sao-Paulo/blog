@@ -1,0 +1,17 @@
+---
+title: "Título do post"
+subtitle: "Subtítulo do post"
+author: 
+  - "[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+date: "2023-02-03" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+categories: 
+# exemplo de categorias:
+  - "Quarto"
+  - "Tutorial"
+  - "Relatórios"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: true # enquanto estiver draft: true, o post é um rascunho
+---
+

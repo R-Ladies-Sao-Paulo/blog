@@ -44,3 +44,5 @@ vignettes/*.pdf
 # arquivos gerados pelo MAC
 .DS_Store
 */.DS_Store
+.Rproj.user
+.Rdata

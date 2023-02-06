@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Ariane Hayana">
-
-<title>R-Ladies São Paulo - Título do post</title>
+<title>R-Ladies São Paulo - E aí, vamos falar de Quarto?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +18,89 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
-
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -59,33 +136,26 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
-</script>
-
-
-<link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="R-Ladies São Paulo - Título do post">
-<meta name="twitter:description" content="Subtítulo do post">
-<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-02-XX-tutorial-quarto/images/logo.jpg">
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - E aí, vamos falar de Quarto?">
+<meta name="twitter:description" content="Tutorial: Relatório em Quarto">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-02-XX-tutorial-quarto/images/img-0.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="649">
+<meta name="twitter:image-width" content="1201">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">R-Ladies São Paulo</span>
@@ -96,7 +166,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/rladiessaopaulo"><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -132,8 +202,8 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </i> 
  <span class="menu-text"></span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
     <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
  <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
   </li>  
@@ -142,9 +212,9 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
  <span class="dropdown-text">Código fonte deste site</span></a>
   </li>  
     </ul>
-  </li>
+</li>
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -154,22 +224,16 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Título do post</h1>
+    </nav><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">E aí, vamos falar de Quarto?</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+  </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Título do post</h1>
-            <p class="subtitle lead">Subtítulo do post</p>
+      <h1 class="title d-none d-lg-block">E aí, vamos falar de Quarto?</h1>
+            <p class="subtitle lead">Tutorial: Relatório em Quarto</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Quarto</div>
                 <div class="quarto-category">Tutorial</div>
@@ -191,7 +255,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">3 de fevereiro de 2023</p>
+        <p class="date">4 de fevereiro de 2023</p>
       </div>
     </div>
     
@@ -201,11 +265,9 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../img/logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../../img/logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -214,7 +276,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../" class="sidebar-item-text sidebar-link">Página inicial</a>
   </div>
@@ -240,10 +302,8 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -262,8 +322,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <div class="mc-field-group">
     <label for="mce-EMAIL">Email <span class="asterisk">*</span>
 </label>
-    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
-    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 </div>
     <div id="mce-responses" class="clear foot">
         <div class="response" id="mce-error-response" style="display:none"></div>
@@ -278,22 +337,282 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#e-a%C3%AD-vamos-falar-de-quarto" id="toc-e-aí-vamos-falar-de-quarto" class="nav-link active" data-scroll-target="#e-a%C3%AD-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</a></li>
+  <li><a href="#o-primeiro-passo" id="toc-o-primeiro-passo" class="nav-link" data-scroll-target="#o-primeiro-passo">O primeiro passo</a></li>
+  <li><a href="#subindo-um-degrau" id="toc-subindo-um-degrau" class="nav-link" data-scroll-target="#subindo-um-degrau">Subindo um degrau</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-02-XX-tutorial-quarto/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="e-aí-vamos-falar-de-quarto" class="level2"><h2 class="anchored" data-anchor-id="e-aí-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</h2>
+<p><img src="images/img-0.png" class="img-fluid"></p>
+<p>Hello, world!</p>
+<p>Você que gosta da nossa querida linguagem R provavelmente já deve ter ouvido falar sobre Quarto. Por definição, segundo <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto.org</a>,</p>
+<blockquote class="blockquote">
+<p><em>“Quarto é uma versão multilíngue da próxima geração do R Markdown (do RStudio) e inclui dezenas de novos recursos, ao mesmo tempo em que é capaz de renderizar a maioria dos arquivos <code>.Rmd</code> existentes sem modificação.”</em></p>
+</blockquote>
+<p>Existem diversas possibilidades de criação com Quarto, especialmente pelo fato de que ele é independente de <code>R</code>, portanto, é possível criar diferentes conteúdos dinâmicos com Python, R, Julia e Observable, por exemplo.</p>
+<p>A base para edição em textos é a <a href="https://pt.wikipedia.org/wiki/Linguagem_de_marca%C3%A7%C3%A3o">linguagem de marcação</a> <em>Markdown</em> e ao trabalharmos com códigos, os <em>chunks</em> continuam sendo o nosso melhor amigo. Quanto às publicações, temos a possibilidade de criar relatórios em diversos formatos (HTML, PDF, por exemplo), apresentações, sites, blogs, livros e outros.</p>
+<p>Assim, hoje apresento a vocês um mini tutorial de como criar o nosso primeiro relatório em HTML com Quarto no RStudio. Para tanto, como o Quarto é independente de R, você precisa configurar o ambiente para explorar da melhor forma possível as infinitas possibilidades que o Quarto oferece.</p>
+<p>Aqui vão alguns pontos são importantes:</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pré-requisitos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Baixar e instalar a <a href="https://quarto.org/docs/get-started/">versão mais recente do Quarto</a>;</p></li>
+<li><p>Baixar e instalar a <a href="https://cran.r-project.org/">versão mais recente do R</a>. Caso já tenha, verifique se o seu R está atualizado para R 4.1 ou R 4.2;</p></li>
+<li><p>Baixar e instalar a <a href="https://posit.co/download/rstudio-desktop/">versão mais recente do RStudio.</a></p></li>
+</ul>
+<p>Para mais detalhes, <a href="https://quarto.org/docs/get-started/hello/rstudio.html">clique aqui</a>.</p>
+<p>Outra opção bem bacana é utilizar o <a href="https://posit.cloud">Posit Cloud</a>, que permite você explorar as ferramentas do RStudio na nuvem de maneira simples e sem grandes dificuldades para configurar. Caso você nunca tenha explorado o Posit Cloud, acesse o <em>link</em> <a href="https://posit.cloud">aqui</a> e crie uma conta através dos seguintes passos:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-2.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Para saber sobre como criar um projeto no Posit Cloud, acesse a demonstração <a href="https://raw.githubusercontent.com/a-hayana/quarto_report_post/master/img/gif-0.gif">aqui</a>.</p>
+</div>
+</div>
+<p><br></p>
+</section><section id="o-primeiro-passo" class="level2"><h2 class="anchored" data-anchor-id="o-primeiro-passo">O primeiro passo</h2>
+<p>Agora, considerando que você já está com o ambiente preparado, vamos colocar a mão na massa!</p>
+<p>Supondo que você está começando do <em>zero</em> no Quarto, o primeiro passo é criar o documento (<code>.qmd</code>) no RStudio. Sugiro fortemente que você crie um projeto antes de tudo. São apenas seis passos simples:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><em>Voilà!</em> Temos o nosso projeto e primeiro documento criados. Este é o modelo básico para publicação em Quarto e o formato de saída será, por padrão, em HTML. Para verificarmos o resultado final precisamos renderizar o nosso arquivo <code>.qmd</code>. Para isso, clique em <code>Render</code> ou utilize o atalho do teclado <code>CTRL + SHIFT + K</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>E temos como resultado final:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Perceba que na tela acima eu estou trabalhando com o <em>Visual</em> selecionado (botão localizado na barra de ferramentas), o que permite a visualização das alterações em tempo real e é uma ótima opção para quem ainda não está tão familiarizado(a) com <em>Markdown</em>. Vale a pena conferir as diversas possibilidades de utilização do <em>Visual Editor</em> em um post da Posit intitulado <a href="https://posit.co/blog/exploring-rstudio-visual-markdown-editor/"><em>Exploring RStudio’s Visual Markdown Editor</em></a>, cuja autoria é de Isabella Velásquez.</p>
+<p>Caso você prefira, ao clicar em <em>Source</em> (botão à esquerda do <em>Visual</em> na barra de ferramentas), é possível escrever seu documento no modo de origem ou mesmo ir alternando entre o <em>Source</em> e <em>Visual</em>.</p>
+<p>E aí, o que achou? Chegamos até aqui e você deu os seus primeiros passos com Quarto (uhuul!! 😍)! Agora se liga nessas dicas:</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Dicas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Seja <em>curioso(a)</em>: aqui eu apresentei uma das diversas formas para criar documentos, projetos, usar o RStudio na nuvem, etc, entretanto, existem outras possibilidades que você pode aprender <em>explorando a documentação</em>;</p></li>
+<li><p>Se você já trabalha com <em>R Markdown</em>, possivelmente vai achar muitas semelhanças nas aplicações com o Quarto. Assim, sugiro também <em>explorar a documentação</em>;</p></li>
+<li><p>Por fim, uma dica final: <em>explore a documentação</em> 😂😂 e acompanhe as novidades em <a href="https://quarto.org">Quarto.org</a>.</p></li>
+</ul>
+</div>
+</div>
+<p><br></p>
+</section><section id="subindo-um-degrau" class="level2"><h2 class="anchored" data-anchor-id="subindo-um-degrau">Subindo um degrau</h2>
+<p>Agora que você já sabe criar um documento com Quarto, vamos explorar algumas ferramentas para incrementar as nossas criações.</p>
+<p>Criei um modelo de relatório <code>.qmd</code> cuja saída é em <code>HTML</code> e está disponível <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">aqui</a>. Assim, vamos desvendar cada etapa de criação juntos.</p>
+<p>Primeiramente, é importante compreender a estrutura de um documento em Quarto. Veja a representação básica apresentada abaixo:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-6.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Essas três partes são:</p>
+<ul>
+<li><p><strong>YAML (<em>Yet Another Markup Language</em>):</strong> cabeçalho onde são inseridas as configurações do documento (formatação, data, título, autor, entre outros). É sempre inserido no início do documento e delimitado por <code>---</code>;</p></li>
+<li><p><strong>Texto:</strong> usa <em>markdown</em> como sua sintaxe de documento principal;</p></li>
+<li><p><strong>Códigos:</strong> versão multilíngue, portanto, nos <em>chunks</em> (blocos de códigos) podemos inserir códigos em R, Python, Julia e outros.</p></li>
+</ul>
+<p>Assim, no exemplo que vamos explorar, veja que temos alguns elementos interessantes que foram inseridos.</p>
+<p>Note que no canto superior direito é possível identificar uma chave, em que o(a) leitor(a) pode selecionar o tema desejado, conforme a figura a seguir:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/img-7.png" class="img-fluid figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Observe na figura acima que o documento possui um título, subtítulo, nome da autora e a data de publicação. Tais informações são configuradas no YAML, onde também foram definidas outras configurações do documento, conforme o código a seguir:</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<em>YAML</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Meu primeiro relatório"</span><span class="co"> # -----&gt; Título</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Exemplo: Relatório em Quarto"</span><span class="co"> # -----&gt; Subtítulo</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ariane Hayana"</span><span class="co"> # -----&gt; Autoria</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2023-02-06"</span><span class="co"> # -----&gt; Data de publicação</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">date-format</span><span class="kw">:</span><span class="at"> short</span><span class="co"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> pt</span><span class="co"> # -----&gt; Linguagem: português</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # -----&gt; code-fold: `true` para "ocultar" o bloco de códigos</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">pulse</span><span class="kw">,</span><span class="at">custom.scss</span><span class="kw">]</span><span class="co"> # Tema modo claro</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cyborg</span><span class="kw">,</span><span class="at">custom.scss</span><span class="kw">]</span><span class="co"> # Tema modo escuro</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # -----&gt; Estilo de banner no topo do documento</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span><span class="co"> # -----&gt; Referências do documento</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Deixei alguns comentários sobre as configurações no código, mas alguns pontos cabem atenção especial:</p>
+<ul>
+<li><p><code>date-format</code>: neste exemplo, apresentei o formato curto de data, entretanto, existem diversos formatos possíveis que podem ser consultados em <a href="https://quarto.org/docs/reference/dates.html#date-formatting">Quarto.org</a>;</p></li>
+<li><p><code>lang</code>: esta opção é usada para identificar o idioma principal do documento. Outras idiomas podem ser considerados, como o espanhol (<code>lang: es</code>) e francês (<code>lang: fr</code>), por exemplo;</p></li>
+<li><p><code>code-fold</code>: quando esta opção é igual a <code>true</code>, o bloco de códigos é ocultado, podendo ser consultado ao clicar na palavra “<em>Código</em>”;</p></li>
+<li><p><code>theme: light: [pulse,custom.scss] ou dark: [cyborg,custom.scss]</code>: é nesta configuração que definimos qual tema utilizar em nosso documento e quais outras características podemos customizar utilizando um arquivo <code>.scss</code> (veja mais em <a href="https://quarto.org/docs/output-formats/html-themes.html#custom-themes">Quarto.pub</a>);</p></li>
+<li><p><code>title-block-banner: true</code>: se igual a <code>true</code>, esta configuração insere um bloco de título no estilo de banner no topo do documento;</p></li>
+<li><p><code>bibliography</code>: aqui estão as referências utilizadas no documento gerado. Trata-se de um arquivo <code>.bib</code>.</p></li>
+</ul>
+<p>Após as configurações do cabeçalho estarem definidas, então vamos para o <em>texto</em>. No <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">modelo</a>, temos uma arte feita pela <a href="https://github.com/allisonhorst/stats-illustrations/blob/main/julie-mine-quarto-keynote/quarto_thankyou.png">Allison Horst</a>, que foi inserida no documento com o <code>include_graphics</code> do <code>knitr</code>. Se você é familiarizado(a) com R Markdown, provavelmente vai achar um pouco estranho a configuração dos <em>chunks</em>. Perceba que cada linha é precedida por um <code>#|</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| out.width: "100%"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Arte por [Allison Horst.](https://github.com/allisonhorst/stats-illustrations/blob/main/julie-mine-quarto-keynote/quarto_thankyou.png)"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/img-1.png"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Já na margem <em>direita</em> podemos verificar algumas informações sobre a R-Ladies, que são inseridas no documento Quarto utilizando <code>column-margin</code>. Veja um trecho exemplificativo:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> column<span class="sc">-</span>margin</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">#### O que é a R-Ladies?</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>[R<span class="sc">-</span>Ladies](https<span class="sc">:</span><span class="er">//</span>rladies.org<span class="sc">/</span>) é uma organização mundial cuja missão é promover </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>a diversidade de gênero na comunidade da linguagem R.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="sc">**</span>R<span class="sc">-</span>Ladies São Paulo<span class="sc">**</span> integra, orgulhosamente, a organização R<span class="sc">-</span>Ladies Global,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>em São Paulo.</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para exemplificar a utilização de <em>chunks</em>, no <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">modelo</a> temos o conjunto de dados de <code>Gapminder</code> sobre expectativa de vida, PIB <em>per capita</em> e população por país. Neste exemplo foram explorados os pacotes <a href="https://github.com/cienciadedatos/dados">dados</a> <span class="citation" data-cites="dados">(<a href="#ref-dados" role="doc-biblioref">Quiroga et al. 2022</a>)</span>, <a href="https://glin.github.io/reactable/">reactable</a> <span class="citation" data-cites="reactable">(<a href="#ref-reactable" role="doc-biblioref">Lin 2022</a>)</span> e <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="dplyr">(<a href="#ref-dplyr" role="doc-biblioref">Wickham et al. 2022</a>)</span>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dados)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>dados_gapminder <span class="sc">|&gt;</span> <span class="co"># Base do pacote {dados}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(continente, pais, ano, pib_per_capita) <span class="sc">|&gt;</span> <span class="co"># Selecionando algumas colunas</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reactable</span>(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupBy =</span> <span class="st">"continente"</span>, <span class="co"># Agrupando pela coluna 'continente'</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">searchable =</span> <span class="cn">TRUE</span>, <span class="co"># Inserindo uma busca na tabela</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlined =</span> <span class="cn">TRUE</span>, <span class="co"># Linhas na tabela</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">list</span>(<span class="at">ano =</span> <span class="fu">colDef</span>(<span class="at">sortable =</span> <span class="cn">TRUE</span>)) <span class="co"># Ordem crescente na coluna 'ano'</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Como resultado, temos:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/gif-1.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>Particularmente, gosto bastante do visual elegante que resultam as tabelas com <a href="https://glin.github.io/reactable/">reactable</a>. Na estrutura acima é possível pesquisar informações dentro da própria tabela com o “<em>Search</em>” e ao clicar em cada um dos continentes é possível explorar outras informações.</p>
+<p>Já nas visualizações gráficas, trouxe um exemplo que utiliza dados sobre nomes de bebês do pacote <a href="https://github.com/cienciadedatos/dados">dados</a> <span class="citation" data-cites="dados">(<a href="#ref-dados" role="doc-biblioref">Quiroga et al. 2022</a>)</span>, <a href="https://gganimate.com">gganimate</a> <span class="citation" data-cites="gganimate">(<a href="#ref-gganimate" role="doc-biblioref">Pedersen e Robinson 2020</a>)</span> e <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="ggplot2">(<a href="#ref-ggplot2" role="doc-biblioref">Wickham 2016</a>)</span>. Para tanto, utilizei apenas dois nomes para elaborar o gráfico animado com o <a href="https://gganimate.com">gganimate</a>. Mais detalhes sobre o pacote podem ser encontrados em um <a href="https://blog.curso-r.com/posts/2021-06-09-gganimate/">post da Curso-R</a>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>bebes <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(nome <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Patricia"</span>, <span class="st">"Helen"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> ano, <span class="at">y =</span> n, <span class="at">group =</span> nome, <span class="at">color =</span> nome)) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Ano"</span>) <span class="sc">+</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Número de bebês nascidos"</span>) <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_reveal</span>(ano) <span class="sc">+</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O resultado final será:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/gif-2.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>E assim passamos por todas as etapas:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/gif-3.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>E aí, gostaram? Espero que sim!</p>
+<p>E lembre-se:</p>
+<blockquote class="blockquote">
+<p>“<em>O primeiro passo não te leva onde você quer ir, mas te tira de onde você está.</em>”</p>
+</blockquote>
+<p>Dê o primeiro passo, explore a documentação do <a href="https://quarto.org">Quarto.org</a> e pratique! 😉</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Materiais do tutorial:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Modelo em <code>HTML</code>: <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html" class="uri">https://a-hayana.github.io/quarto_report_post/quarto_report_post.html</a>
+</li>
+<li>Códigos: <a href="https://github.com/a-hayana/quarto_report_post/blob/master/quarto_report_post.qmd" class="uri">https://github.com/a-hayana/quarto_report_post/blob/master/quarto_report_post.qmd</a>
+</li>
+<li>Repositório: <a href="https://github.com/a-hayana/quarto_report_post" class="uri">https://github.com/a-hayana/quarto_report_post</a>
+</li>
+</ul>
+</div>
+</div>
+<p>Até breve!</p>
+<p><a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"> Ariane Hayana </a></p>
 
 
 
-
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-reactable" class="csl-entry" role="doc-biblioentry">
+Lin, Greg. 2022. <span>"reactable: Interactive Data Tables Based on ’React Table’"</span>. <a href="https://CRAN.R-project.org/package=reactable">https://CRAN.R-project.org/package=reactable</a>.
+</div>
+<div id="ref-gganimate" class="csl-entry" role="doc-biblioentry">
+Pedersen, Thomas Lin, e David Robinson. 2020. <span>"gganimate: A Grammar of Animated Graphics"</span>. <a href="https://CRAN.R-project.org/package=gganimate">https://CRAN.R-project.org/package=gganimate</a>.
+</div>
+<div id="ref-dados" class="csl-entry" role="doc-biblioentry">
+Quiroga, Riva, Sara Mortara, Beatriz Milz, Andrea Sánchez-Tapia, Alejandra Andrea Tapia Silva, Beatriz Maurer Costa, Jean Prado, Renata Hirota, William Amorim, e Emmanuelle Rodrigues Nunes. 2022. <span>"dados: Translate Datasets to Portuguese"</span>. <a href="https://CRAN.R-project.org/package=dados">https://CRAN.R-project.org/package=dados</a>.
+</div>
+<div id="ref-ggplot2" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. 2016. <span>"ggplot2: Elegant Graphics for Data Analysis"</span>. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-dplyr" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"dplyr: A Grammar of Data Manipulation"</span>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+</div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -441,17 +760,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
     <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
 
 
 </body></html>

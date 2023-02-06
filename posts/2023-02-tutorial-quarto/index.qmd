@@ -3,7 +3,7 @@ title: "E aí, vamos falar de Quarto?"
 subtitle: "Tutorial: Relatório em Quarto"
 author: 
   - "[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)" 
-date: "2023-02-04"
+date: "2023-02-06"
 categories: 
   - "Quarto"
   - "Tutorial"
@@ -11,7 +11,7 @@ categories:
 toc: true 
 image: "images/img-0.png" 
 bibliography: "pacotes.bib" 
-draft: true
+draft: false
 ---
 
 ## E aí, vamos falar de Quarto?

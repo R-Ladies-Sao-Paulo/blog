@@ -16,7 +16,9 @@ draft: false
 
 ## E aí, vamos falar de Quarto?
 
-![](images/img-0.png)
+![Arte de pinguins abraçados feita por Allison Horst: Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. [Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](images/img-0.png)
+
+
 
 Hello, world!
 

@@ -10,7 +10,7 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Mon, 06 Feb 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 07 Feb 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>E aí, vamos falar de Quarto?</title>
   <dc:creator>[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)</dc:creator>
@@ -128,7 +128,7 @@ Dicas
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Meu primeiro relatório"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Título</span></span>
 <span id="cb1-3"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Exemplo: Relatório em Quarto"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Subtítulo</span></span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Ariane Hayana"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Autoria</span></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-06"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-07"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
 <span id="cb1-6"><span class="fu" style="color: #4758AB;">date-format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> short</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></span>
 <span id="cb1-7"><span class="fu" style="color: #4758AB;">lang</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> pt</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Linguagem: português</span></span>
 <span id="cb1-8"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
@@ -285,7 +285,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"
   <category>Tutorial</category>
   <category>Relatórios</category>
   <guid>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</guid>
-  <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 07 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
 <item>

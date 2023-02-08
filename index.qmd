@@ -13,3 +13,55 @@ page-layout: full
 title-block-banner: true
 comments: false
 ---
+
+
+## Textos escritos por...
+
+
+```{r}
+#| echo: false
+## código reaproveitado do repo: 
+## https://github.com/beatrizmilz/materiais_estudo_R
+gerar_lista_contrib <- function() {
+  library(magrittr, include.only = "%>%")
+  pessoas_contribuidoras <-
+    allcontributors::get_contributors(org = "R-Ladies-Sao-Paulo",
+                                      repo = "blog",
+                                      type = c("code", "issues"),
+                                      quiet = TRUE) %>%
+    tibble::as_tibble() %>%
+    dplyr::mutate(
+      url = glue::glue("https://github.com/{logins}"),
+      link = glue::glue("[{logins}]({url})")
+    ) %>%
+    dplyr::filter(!logins %in% c("actions-user"))  %>%
+    dplyr::arrange(logins)
+  
+  cat("<center>")
+  
+  for (i in 1:nrow(pessoas_contribuidoras)) {
+    pessoa <- pessoas_contribuidoras[i,]
+    cat(
+      glue::glue(
+        '
+     <a href={pessoa$url}>
+    <img src="{pessoa$avatar}" width="100" style="vertical-align: middle; border-radius: 50%;">
+    </a>
+    '
+      )
+    )
+  }
+  
+    cat("</center>")
+}
+```
+
+```{r}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+gerar_lista_contrib()
+```
+
+## Textos

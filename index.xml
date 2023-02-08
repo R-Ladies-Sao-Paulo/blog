@@ -15,7 +15,32 @@
   <title>E aí, vamos falar de Quarto?</title>
   <dc:creator>[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)</dc:creator>
   <link>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</link>
-  <description><![CDATA[ <section id="e-aí-vamos-falar-de-quarto" class="level2"><h2 class="anchored" data-anchor-id="e-aí-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</h2>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/avatars.githubusercontent.com/u/44451990?v=4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Ariane Hayana</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://www.instagram.com/_estatistica"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/a-hayana"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/arianehayana/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/ariane_hayana/"><i class="fab fa-instagram"></i></a></p>
+</center>
+<p>Este post foi escrito pela <strong>Ariane Hayana</strong>, uma integrante da comunidade R-Ladies São Paulo! Criadora da página <a href="https://www.instagram.com/_estatistica">@ _estatistica</a>, é graduada em Economia e finalista em sua segunda graduação no curso de Bacharelado em Estatística na Universidade Federal do Amazonas (UFAM), atuando como estagiária no Supremo Tribunal Federal (STF).</p>
+<p>Saiba mais sobre ela em seu <a href="https://www.linkedin.com/in/arianehayana/">LinkedIn</a>.</p>
+</div>
+</div>
+</div>
+<section id="e-aí-vamos-falar-de-quarto" class="level2"><h2 class="anchored" data-anchor-id="e-aí-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Arte de pinguins abraçados feita por Allison Horst: Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Illustrated by Allison Horst.</a></figcaption><p></p>
@@ -132,7 +157,7 @@ Dicas
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Meu primeiro relatório"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Título</span></span>
 <span id="cb1-3"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Exemplo: Relatório em Quarto"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Subtítulo</span></span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Ariane Hayana"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Autoria</span></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-07"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-08"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
 <span id="cb1-6"><span class="fu" style="color: #4758AB;">date-format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> short</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></span>
 <span id="cb1-7"><span class="fu" style="color: #4758AB;">lang</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> pt</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Linguagem: português</span></span>
 <span id="cb1-8"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
@@ -265,7 +290,8 @@ Materiais do tutorial:
 </div>
 <p>Até breve!</p>
 <p><a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"> Ariane Hayana </a></p>
-
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
 
 
 </section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">

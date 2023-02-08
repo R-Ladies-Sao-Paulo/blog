@@ -14,6 +14,26 @@ bibliography: "pacotes.bib"
 draft: false
 ---
 
+::: {.callout-note collapse="false"}
+## Autoria
+
+<center>
+
+![Ariane Hayana](https://avatars.githubusercontent.com/u/44451990?v=4){style="width: 30%; border-radius: 50%;"}
+
+[<i class="bi bi-house-fill"></i>](https://www.instagram.com/_estatistica) [<i class="fab fa-github"></i>](https://github.com/a-hayana) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/arianehayana/) [<i class="fab fa-instagram"></i>](https://www.instagram.com/ariane_hayana/)
+
+</center>
+
+Este post foi escrito pela **Ariane Hayana**, uma integrante da comunidade R-Ladies São Paulo! Criadora da página [@ _estatistica](https://www.instagram.com/_estatistica), é graduada em Economia e finalista em sua segunda graduação no curso de Bacharelado em Estatística na Universidade Federal do Amazonas (UFAM), atuando como estagiária no Supremo Tribunal Federal (STF).
+
+Saiba mais sobre ela em seu [LinkedIn](https://www.linkedin.com/in/arianehayana/).
+:::
+
+
+
+
+
 ## E aí, vamos falar de Quarto?
 
 ![Arte de pinguins abraçados feita por Allison Horst: Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. [Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](images/img-0.png)
@@ -271,3 +291,10 @@ Dê o primeiro passo, explore a documentação do [Quarto.org](https://quarto.or
 Até breve!
 
 <a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"/> Ariane Hayana </a>
+
+
+<!-- inicio font awesome -->
+
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+
+<!-- final font awesome -->

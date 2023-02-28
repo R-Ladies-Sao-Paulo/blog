@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rladies-sp.org/index.html</loc>
-    <lastmod>2023-02-28T23:17:02.048Z</lastmod>
+    <lastmod>2023-02-28T23:20:34.623Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</loc>
@@ -39,5 +39,9 @@
   <url>
     <loc>https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index.html</loc>
     <lastmod>2023-02-28T23:15:59.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</loc>
+    <lastmod>2023-02-28T23:20:39.106Z</lastmod>
   </url>
 </urlset>

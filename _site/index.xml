@@ -14,7 +14,7 @@
 <item>
   <title>#TidyTuesday: Explorando dados sobre as Paraolimpíadas</title>
   <dc:creator>Ianní Muliterno</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</link>
   <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -29,7 +29,7 @@ Autoria
 <div class="callout-body-container callout-body">
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/images/ianni.jpg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/ianni.jpg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Ianní Muliterno</figcaption><p></p>
 </figure>
 </div>
@@ -86,7 +86,7 @@ dbl (2): grp_id, year
 <span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -187,7 +187,7 @@ $ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 
 <span>  <span class="va" style="color: #111111;">tema_olimpiadas</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -242,7 +242,7 @@ $ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 
 <span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -268,7 +268,7 @@ $ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 
 <span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op" style="color: #5E5E5E;">(</span>type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"qual"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -405,7 +405,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -450,9 +450,9 @@ Number of Fisher Scoring iterations: 4</code></pre>
   <category>Análise exploratória</category>
   <category>Visualização de dados</category>
   <category>Modelagem</category>
-  <guid>https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</guid>
   <pubDate>Wed, 01 Mar 2023 03:00:00 GMT</pubDate>
-  <media:content url="https://rladies-sp.org/posts/2023-02-tidytuesday-paraolimpiadas/images/logo.png" medium="image" type="image/png" height="103" width="144"/>
+  <media:content url="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/logo.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 <item>
   <title>E aí, vamos falar de Quarto?</title>

@@ -1,1 +1,32 @@
 /* css styles */
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+
+    border-left: 1px solid #562457;
+    color: #562457 !important;
+
+}
+
+a {
+  color: #2780e3
+  text-decoration: underline;
+}
+
+div.csl-entry {
+  padding-bottom: 1.5em;
+}
+
+
+.column-margin figcaption, .margin-caption, div.aside, aside, .column-margin {
+  color: #1b354c;
+  font-size: 1rem;
+}
+
+.callout.callout-style-default div.callout-body {
+  padding: 1em;
+}
+
+
+pre > code {
+  background-color: #f0f2f4;
+}

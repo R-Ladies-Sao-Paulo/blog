@@ -2,7 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/em-breve/index.html"
+      "/posts/2023-03-tidytuesday-paraolimpiadas/index.html",
+      "/posts/2023-02-tutorial-quarto/index.html",
+      "/posts/2023-01-evento-oficina-intro-R/index.html",
+      "/posts/2022-12-graficos-dinamite/index.html",
+      "/posts/2022-12-boas-vindas-ao-blog/index.html"
     ]
   }
 ]

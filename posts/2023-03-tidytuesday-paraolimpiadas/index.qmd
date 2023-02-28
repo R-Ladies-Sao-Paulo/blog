@@ -319,7 +319,7 @@ base <- dados_olimpiadas %>%
 
 base_final <- base %>% 
   # unir novamente com a base de resposta
-     inner_join(resposta, by = 'athlete') %>% 
+  inner_join(resposta, by = 'athlete') %>% 
   # renomear coluna n para y
   rename(y = n) %>% 
   # desagrupar

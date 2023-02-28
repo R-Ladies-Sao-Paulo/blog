@@ -16,6 +16,22 @@ bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arqui
 draft: true # enquanto estiver draft: true, o post é um rascunho
 ---
 
+::: {.callout-note collapse="false"}
+## Autoria
+
+<center>
+
+![Foto](https://url_para_sua_foto.jpg){style="width: 30%; border-radius: 50%;"}
+
+[<i class="bi bi-house-fill"></i>](https://) [<i class="fab fa-github"></i>](https://github.com/USER) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/USER/) [<i class="fab fa-instagram"></i>](https://www.instagram.com/USER/)
+
+</center>
+
+Este post foi escrito por ....
+
+:::
+
+
 Aqui podemos adicionar o conteúdo do post! Segue abaixo alguns exemplos que podem facilitar a criação do post:
 
 ## Exemplo de texto com marcações

@@ -10,7 +10,449 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Tue, 07 Feb 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 01 Mar 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>#TidyTuesday: Explorando dados sobre as Paraolimpíadas</title>
+  <dc:creator>Ianní Muliterno</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</link>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/ianni.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Ianní Muliterno</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://github.com/IanniMuliterno"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/iannimuliterno/?originalSubdomain=br"><i class="fab fa-linkedin"></i></a></p>
+</center>
+<p>Este post foi escrito por Ianní Muliterno, um integrante da comunidade R-Ladies São Paulo! É graduado em Estatística pela Universidade Federal de Pernambuco (UFPE) e atua como cientista de dados na Unilever.</p>
+</div>
+</div>
+</div>
+<p>Olá, pessoal!</p>
+<p>Se você já é um entusiasta de ciência de dados, provavelmente já ouviu falar do TidyTuesday. Se está iniciando, este é um ótimo lugar para conseguir dados reais para praticar e criar um portfolio. O tidytuesday é um projeto semanal do R for Data Science Community, que tem como objetivo ajudar as pessoas a aprender e praticar a análise de dados em R usando o pacote Tidyverse, conheça aqui: <a href="https://github.com/rfordatascience/tidytuesday" class="uri">https://github.com/rfordatascience/tidytuesday</a>.</p>
+<p>Cada semana, é lançado um novo conjunto de dados, geralmente em formato de planilha, que pode ser baixado gratuitamente. A comunidade é então convidada a explorar, visualizar e analisar esses dados usando as ferramentas do <a href="https://tidyverse.tidyverse.org">tidyverse</a>, como o <a href="https://ggplot2.tidyverse.org">ggplot2</a> para gráficos e o <a href="https://dplyr.tidyverse.org">dplyr</a> para manipulação de dados.</p>
+<section id="base-de-dados" class="level2"><h2 class="anchored" data-anchor-id="base-de-dados">Base de dados</h2>
+<p>Hoje vamos dar uma olhada na base do início de agosto de 2021, quando o TidyTuesday lançou um conjunto de dados fascinante sobre as <strong>paraolimpíadas dos anos 1980 até 2016</strong>. O conjunto de dados inclui informações sobre características dos atletas, o país de origem, o tipo de prova, entre outras variáveis.</p>
+</section><section id="importação" class="level2"><h2 class="anchored" data-anchor-id="importação">Importação</h2>
+<p>Para começar vamos carregar os dados! Lembrando de manter a boa prática de iniciar o script carregando as bibliotecas necessárias.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://readr.tidyverse.org">readr</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-03/athletes.csv"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 19547 Columns: 10
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (8): gender, event, medal, athlete, abb, country, type, guide
+dbl (2): grp_id, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>O bacana da função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo <code>chr</code> ou <code>character</code> (textos) e 2 tipo <code>dbl</code> ou <code>double</code> (numéricos).</p>
+<p>Antes de começar, outra boa prática é conhecer os dados. Quais colunas possui? Como está o preenchimento das variáveis? Existem dados faltantes (NAs)?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Quantos NAs temos em cada coluna?</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/colSums.html">colSums</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_olimpiadas</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> gender   event   medal athlete     abb country  grp_id    type    year   guide 
+    144       0       0     435      49   14428   14428       0       0   19494 </code></pre>
+</div>
+</div>
+<p>No tidytuesday os dados costumam vir mais arrumados, porém no mundo real é comum encontrarmos erros no preenchimento, sejam eles sistemáticos (por exemplo: a ferramenta que mede velocidade dos competidores falha e traz valores muito grandes ou negativos), ou também erros de preenchimento (exemplo: alguém que preencheu errado o campo de medalha e colocou por exemplo “metal” ao invés de “prata”).</p>
+<p>No repositório desta base, está descrito o que cada coluna representa. Te convido para escrever como lição de casa o código que checa as variáveis categóricas em busca de nomes estranhos que não condizem com o que deveria estar naquela variável. Como incentivo, deixo aqui o check de variáveis <strong>numéricas</strong>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">is.numeric</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fl" style="color: #AD0000;">2</span>, names_to <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'variaveis'</span>, values_to <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'valor'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">valor</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">~</span><span class="va" style="color: #111111;">variaveis</span>,scales <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'free'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="explorando-e-visualizando-dados-para-natação" class="level2"><h2 class="anchored" data-anchor-id="explorando-e-visualizando-dados-para-natação">Explorando e visualizando dados para Natação!</h2>
+<p>Para não ficar um post massivo, vamos focar em <strong>natação</strong>.</p>
+<p>Ao analisar esses dados, podemos responder várias perguntas interessantes. Por exemplo, qual país obteve mais medalhas na natação nos Jogos Olímpicos de 2021? Há alguma diferença significativa na quantidade de medalhas conquistadas entre os atletas homens e mulheres?</p>
+<section id="países-com-mais-metalhas" class="level3"><h3 class="anchored" data-anchor-id="países-com-mais-metalhas">Países com mais metalhas</h3>
+<p>Para criar um gráfico mostrando os países com mais medalhas, primeiro é necessário trabalhar os dados para criar uma base onde tenha a contagem de medalhas por país e por tipo de medalha!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Fazendo uma contagem de medalhas de natação por país:</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">paralympic_total</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrando medalhas de natação (Swimming)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contando quantas medalhas tem por país (abb),</span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># ordenando pelos maiores números!</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, sort <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Fazendo uma contagem de medalhas de natação por país e tipo de medalha:</span></span>
+<span><span class="va" style="color: #111111;">paralympic_byMedal</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrando medalhas de natação (Swimming)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contando quantas medalhas tem por país (abb) e tipo de medalha,</span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># ordenando pelos maiores números!</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span> </span>
+<span></span>
+<span><span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_byMedal</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># unindo as duas bases criadas acima, </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># usando a coluna "abb" como chave</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">paralympic_total</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"abb"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># renomeando as colunas</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op" style="color: #5E5E5E;">(</span>number <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n.x</span>, total_medals <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n.y</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Uma "olhada" na base criada!</span></span>
+<span><span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 174
+Columns: 4
+$ abb          &lt;chr&gt; "ARG", "ARG", "ARG", "AUS", "AUS", "AUS", "AUT", "AUT", "…
+$ medal        &lt;chr&gt; "Bronze", "Gold", "Silver", "Bronze", "Gold", "Silver", "…
+$ number       &lt;int&gt; 9, 5, 10, 160, 147, 158, 2, 2, 4, 1, 7, 1, 13, 6, 12, 9, …
+$ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 31, …</code></pre>
+</div>
+</div>
+<p>Utilizando essa base com a contagem de medalhas, podemos filtrar os 5 países com mais medalhas:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">top5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_total</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># fatiar: apenas as primeiras 5 linhas</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fl" style="color: #AD0000;">5</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># retornar como um vetor a coluna abb</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">table_top5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># filtrar os países do top 5</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span> <span class="op" style="color: #5E5E5E;"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va" style="color: #111111;">top5</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># transformar a coluna abb em fator, </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># para facilitar a ordenação no gráfico</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>abb <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">top5</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>         medal <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Bronze"</span>, <span class="st" style="color: #20794D;">"Silver"</span>, <span class="st" style="color: #20794D;">"Gold"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>Com os dados preparados, podemos fazer o gráfico! Mas antes disso, vamos salvar as configurações de tema do gráfico em um objeto, para utilizarmos depois e deixar o código do gráfico mais fácil para ler!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">tema_olimpiadas</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> </span>
+<span>    <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    legend.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"none"</span>,</span>
+<span>    plot.title.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"plot"</span>,</span>
+<span>    plot.title <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mono"</span>,</span>
+<span>      face <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bold"</span>,</span>
+<span>      size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">10</span></span>
+<span>    <span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.major.x <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.minor.x <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.major.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.minor.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    axis.text <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mono"</span>,</span>
+<span>      face <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bold"</span>,</span>
+<span>      size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">8</span></span>
+<span>    <span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>Agora sim, vamos ao gráfico!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">table_top5</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">abb</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">number</span>, fill <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op" style="color: #5E5E5E;">(</span>values <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"#D89581"</span>,  <span class="st" style="color: #20794D;">"#C0C0C0"</span>, <span class="st" style="color: #20794D;">"#D4AF37"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html">scale_x_discrete</a></span><span class="op" style="color: #5E5E5E;">(</span>expand <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">0</span>, <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">""</span>,</span>
+<span>       y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">""</span>, </span>
+<span>       title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Medalhas de ouro, prata e bronze conquistada pelos países de melhor desempenho"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="va" style="color: #111111;">tema_olimpiadas</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A Grã-Bretanha é o país com mais medalhas no total, porém os Estados Unidos é o país com mais medalhas de ouro!</p>
+<p>Apesar de algumas alterações que fiz, os créditos deste gráfico de barras são da <code>Erin</code>, professora que vocês podem encontrar aqui: <a href="https://github.com/efranke22" class="uri">https://github.com/efranke22</a>.</p>
+</section><section id="diferença-de-medalhas-por-gênero" class="level3"><h3 class="anchored" data-anchor-id="diferença-de-medalhas-por-gênero">Diferença de medalhas por gênero</h3>
+<p>Continuando, podemos ver a diferença entre a quantidade de medalhas conquistadas entre os atletas homens e mulheres. Para isso, veremos primeiro o histograma do percentual de mulheres que os países levam em cada olimpíada, em seguida o box plot das medalhas conquistadas por cada um, agrupado também pelo tipo de medalha.</p>
+<p>Uma observação: o gênero misto foi removido, porque ele está na base devido a algumas provas serem mistas e não porque os participantes são não-binários. Com isso, perdemos 21 linhas.</p>
+<p>Vamos então preparar a base de dados, calculando o percentual de mulheres por país:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dt_perc_gender</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar para Natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar: remover linhas onde o gênero seja "misto" (ex: duplas de homens e mulheres)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Deixar apenas uma linha para a combinação atleta/ano/país/gênero</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">year</span>, <span class="va" style="color: #111111;">gender</span>, <span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas pessoas participaram por país e gênero</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">gender</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Alterar a base para formato longo</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op" style="color: #5E5E5E;">(</span>names_from  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">gender</span>, values_from <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Substituir NA por 0 nas colunas Woman e Men</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Women"</span>, <span class="st" style="color: #20794D;">"Men"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="op" style="color: #5E5E5E;">~</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">.</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="fl" style="color: #AD0000;">0</span>, <span class="va" style="color: #111111;">.</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Agrupar por país</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Calcular o porcentual de mulheres</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op" style="color: #5E5E5E;">(</span>perc_mulheres <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">Women</span> <span class="op" style="color: #5E5E5E;">/</span> <span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">Women</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">Men</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Ordenar de forma decrescente por perc_mulheres</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">linha_mediana</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dt_perc_gender</span><span class="op" style="color: #5E5E5E;">$</span><span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>Agora podemos criar o histograma:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dt_perc_gender</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    mapping <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>xintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">linha_mediana</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    linetype <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span>,</span>
+<span>    color <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'red'</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    <span class="st" style="color: #20794D;">"text"</span>,</span>
+<span>    x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">linha_mediana</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="fl" style="color: #AD0000;">0.06</span>,</span>
+<span>    y <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">15</span>,</span>
+<span>    label <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Mediana"</span>,</span>
+<span>    color <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'red'</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Histograma do percentual de mulheres que os países levam em cada olimpíada"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Como vimos no histograma, muitos países nem enviam mulheres para as olimpíadas e os que enviam, tem em média 34% de mulheres na composição do time. Sendo assim, essa diferença impacta na diferença que vemos na quantidade de medalhas conquistadas por gênero.</p>
+<p>Vamos explorar estes dados em um boxplot:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>medal <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Bronze"</span>, <span class="st" style="color: #20794D;">"Silver"</span>, <span class="st" style="color: #20794D;">"Gold"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>    <span class="co" style="color: #5E5E5E;"># Filtrar para Natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar: remover linhas onde o gênero seja "misto"</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas pessoas participaram por país, gênero e tipo de medalha</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">gender</span>, <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span>, fill <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">gender</span>, x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;">(</span>title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Box-plot das medalhas conquistadas por tipo de medalha e gênero em cada país"</span>, </span>
+<span>       y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Quantidade de medalhas"</span>,</span>
+<span>       x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Tipo de medalha"</span>,</span>
+<span>       fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Gênero"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op" style="color: #5E5E5E;">(</span>type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"qual"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="vamos-para-a-modelagem" class="level2"><h2 class="anchored" data-anchor-id="vamos-para-a-modelagem">Vamos para a modelagem!</h2>
+<p>Agora, pensando em usar modelos, podemos brincar de criar métricas, pensando em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e uma métrica de quantidade de medalhas por olimpíada (chamarei de medal_olympics_kpi - kpi vem do inglês <em>Key Performance Indicators</em> e é uma sigla bem conhecida no meio da análise de dados para se referir a indicadores de performance), por fim, teremos a variável de gênero.</p>
+<p>Um exercício bom de fazer aqui é observar correlação entre as variáveis resposta. As contagens de medalhas são correlacionadas entre si, pois por exemplo, quanto mais medalhas ganhas no total, maior serão os valores nas contagens de medalha por tipo, por isso que decidi utilizar proporção. A quantidade de olimpíadas que o atleta já participou também tem certa relação com sua idade, o que é bom, porque não temos a informação da idade na base.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># variável resposta : última olimpíada de cada atleta</span></span>
+<span><span class="va" style="color: #111111;">resposta</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Remover linhas onde não temos o nome do atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'-'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar para natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar por ano</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="fl" style="color: #AD0000;">2016</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas medalhas cada atleta teve</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span>, sort <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>A variável resposta é a quantidade de medalhas conquistadas por atleta nas olimpíadas de natação de 2016. A base vai contar com informações dos atletas e das suas participações anteriores.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">base</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Unindo a tabela resposta a base total para manter apenas </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># os atletas dos quais conseguimos montar variável resposta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">resposta</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'athlete'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Removendo dados de 2016 (pois deste ano tiramos a variável resposta)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="fl" style="color: #AD0000;">2016</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Remove a coluna n (que veio ao juntar as bases)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># agrupando por atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># montando variáveis independentes para cada atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op" style="color: #5E5E5E;">(</span>total_medalhas <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            ouro <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Gold'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            prata <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Silver'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            bronze <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Bronze'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            total_olympics <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            medal_olympics_kpi <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">/</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            gender <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span><span class="op" style="color: #5E5E5E;">[</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">]</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            n_eventos <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">event</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>ouro <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">ouro</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span>,</span>
+<span>         prata <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">prata</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span>,</span>
+<span>         bronze <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">bronze</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">base_final</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">base</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># unir novamente com a base de resposta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">resposta</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'athlete'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># renomear coluna n para y</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op" style="color: #5E5E5E;">(</span>y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># desagrupar</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># remover a coluna com nome</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>Com isto estamos prontos para checar o quanto essas variáveis podem prever quantas medalhas um atleta conquistará em 2016. Por se tratar de uma variável resposta de contagem, não é adequado usar uma regressão linear simples, duas alternativas são modelos de poisson e binomial negativa. Aqui utilizaremos um modelo de poisson.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">modelo</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">.</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">base_final</span>, family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'poisson'</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ ., family = "poisson", data = base_final)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.03793  -0.59747  -0.07415   0.46524   1.76581  
+
+Coefficients: (1 not defined because of singularities)
+                   Estimate Std. Error z value Pr(&gt;|z|)  
+(Intercept)         0.31605    0.36604   0.863   0.3879  
+total_medalhas     -0.01995    0.05408  -0.369   0.7122  
+ouro                0.19491    0.22641   0.861   0.3893  
+prata               0.14087    0.26165   0.538   0.5903  
+bronze                   NA         NA      NA       NA  
+total_olympics     -0.21896    0.18431  -1.188   0.2348  
+medal_olympics_kpi  0.28235    0.13744   2.054   0.0399 *
+genderWomen         0.19268    0.12956   1.487   0.1370  
+n_eventos           0.01706    0.12647   0.135   0.8927  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 111.157  on 106  degrees of freedom
+Residual deviance:  59.115  on  99  degrees of freedom
+AIC: 355.94
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<p>Aqui observamos pela coluna <code>Pr(&gt;|z|)</code> o p-valor de cada variável. Por padrão, quando este valor é <code>&lt;= 0.10</code> aparece um símbolo chamado <em>Signif. codes</em> a direita. Quanto menor o p-valor, maior esse símbolo, ou seja, quanto maior a importância da variável, maior o símbolo.</p>
+<p>Pelo <code>summary(modelo)</code> descobrimos que a proporção de medalhas de bronze não está gerando nenhum resultado para predição do modelo, por isso os campos em <code>NA</code> aparecem para ela.</p>
+<p>Daqui para frente, por se tratar de um modelo com poucas variáveis e um exemplo simples, fui criando novos modelos, onde em cada um deles removia uma variável. Primeiro <code>bronze</code>, depois <code>n_eventos</code> e assim por diante. A cada novo modelo eu chequei qual a variável de menor importância, ou seja, maior p-valor e removo-a, isto é importante porque cada remoção vai impactar na importância de todas as outras. No fim, quando cheguei num modelo onde todas as variáveis eram relevantes, obtive o seguinte modelo:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">modelo5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">medal_olympics_kpi</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">total_olympics</span>,</span>
+<span>      data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">base_final</span>,</span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'poisson'</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ medal_olympics_kpi + total_olympics, family = "poisson", 
+    data = base_final)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.84737  -0.69446  -0.09312   0.45457   1.68875  
+
+Coefficients:
+                   Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)         0.64174    0.15547   4.128 3.66e-05 ***
+medal_olympics_kpi  0.26467    0.03805   6.956 3.49e-12 ***
+total_olympics     -0.28385    0.08063  -3.521 0.000431 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 111.157  on 106  degrees of freedom
+Residual deviance:  61.791  on 104  degrees of freedom
+AIC: 348.61
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<p>Observe que temos o kpi com influência positiva, ou seja, quanto mais medalhas por olimpíada um atleta tem em olimpíadas anteriores, mais medalhas ele pode conseguir em 2016. Do contrário temos a variável <code>total_olympics</code> que tem influência negativa, ou seja, quanto mais olimpíadas o atleta tiver participado, menos medalhas ele pode ganhar em 2016. Essa interpretação pode parecer estranha, mas lembre-se da sua relação com a idade, quanto mais olimpíadas nas costas, mais velho o atleta é.</p>
+<p>Agora vamos buscar evidências do poder de predição do modelo, no próprio <code>summary(model)</code> temos o <code>AIC</code>, uma métrica que fica menor a medida que o poder de predição melhora. Se compararmos o AIC do primeiro e do último modelo, vemos uma diminuição, mas precisamos verificar os resíduos por exemplo.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.fitted</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.resid</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op" style="color: #5E5E5E;">(</span>yintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Gráfico de resíduos versus valor predito"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Quando plotamos o gráfico de resíduos versus os valores preditos, a distribuição deveria ser aleatória em torno de 0, mas vemos que existe certa tendência, o que demonstra que o modelo precisa de melhorias. No nosso caso, mais observações e variáveis, provavelmente matariam a charada.</p>
+<p><strong>ALERTAAAA: A partir daqui, a leitura é recomendada para quem já tem conhecimento de regressão linear simples. </strong></p>
+<p><em>Conhecedores de LM e dispostos a ler, venham comigo!</em></p>
+<p>Um outro meio de checar a bondade do ajuste de <em>um modelo poisson</em>, é usar o desvio residual. Ele é similar a soma de quadrado dos resíduos que vemos na regressão linear, é calculada como a diferença entre o desvio dos valores preditos do modelo e o desvio do modelo nulo, que é o modelo que contém apenas o intercepto: <code>residual deviance = deviance(fitted_model) - deviance(null_model)</code>.</p>
+<p>O desvio residual mede quanto de variabilidade dos dados não pode ser explicada depois de considerar o efeito dos preditores. Um desvio residual mais baixo, indica um melhor ajuste. Em geral, um desvio residual que é muito menor que os graus de liberdade do modelo, sugerem um bom ajuste. Os graus de liberdade de uma regressão poisson são iguais ao número de observações menos o número de coeficientes estimados.</p>
+<p>Podemos usar o desvio residual para rodar um teste de ajuste para regressão poisson. A hipótese nula diz que o modelo se ajusta bem aos dados, a alternativa diz o contrário. O teste estatístico de desvio residual e o p-valor, são calculados com base na distribuição qui-quadrado com graus de liberdade iguais a diferença entre os graus de liberdade do modelo ajustado e o modelo nulo.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">expected</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/fitted.values.html">fitted</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Calculate the Pearson's chi-squared statistic and p-value</span></span>
+<span><span class="va" style="color: #111111;">pearson_chisq</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">base_final</span><span class="op" style="color: #5E5E5E;">$</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">-</span> <span class="va" style="color: #111111;">expected</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">^</span><span class="fl" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">/</span> <span class="va" style="color: #111111;">expected</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="va" style="color: #111111;">p_value</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fl" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/Chisquare.html">pchisq</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">pearson_chisq</span>, df <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/df.residual.html">df.residual</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Display the results</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Pearson's chi-squared test:\n"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pearson's chi-squared test:</code></pre>
+</div>
+<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"X-squared = "</span>, <span class="va" style="color: #111111;">pearson_chisq</span>, <span class="st" style="color: #20794D;">", df = "</span>, <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/df.residual.html">df.residual</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="st" style="color: #20794D;">", p-value = "</span>, <span class="va" style="color: #111111;">p_value</span>, <span class="st" style="color: #20794D;">"\n"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>X-squared =  62.90335 , df =  104 , p-value =  0.9995126 </code></pre>
+</div>
+</div>
+<p>O p-valor alto indica que <em>não</em> há evidência de falta de ajuste, juntando tudo que vimos sobre precisão do modelo, podemos concluir que “estamos no caminho certo para modelar a nossa variável resposta, mas o modelo carece de melhorias”. Uma base maior, além de melhorar a precisão como já mencionei, nos permitiria separar um grupo de teste onde poderíamos ter uma noção mais clara do quão bem o modelo prevê a partir de entradas inéditas.</p>
+<p>Agora sim, me despeço oficialmente, quem quiser saber mais sobre o modelo de poisson, segue uma ótima referência!</p>
+<p>Regressão Poisson: <a href="https://online.stat.psu.edu/stat462/node/209/" class="uri">https://online.stat.psu.edu/stat462/node/209/</a></p>
+</section><section id="concluindo" class="level2"><h2 class="anchored" data-anchor-id="concluindo">Concluindo</h2>
+<p>Essa foi uma breve demonstração do quanto o Tidytuesday é interessante e como podemos praticar nossas habilidades em tratamento de dados e análise. Esperamos que este artigo tenha inspirado você a explorar o mundo do TidyTuesday, e colocar a mão na massa no R, usando essa fonte de dados incrível para aprimorar suas habilidades em ciência de dados. Lembre-se que a comunidade tá aqui para te ajudar a alcançar seu objetivo em ciência de dados!</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+</section> ]]></description>
+  <category>Tidytuesday</category>
+  <category>Análise exploratória</category>
+  <category>Visualização de dados</category>
+  <category>Modelagem</category>
+  <guid>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</guid>
+  <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/logo.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
 <item>
   <title>E aí, vamos falar de Quarto?</title>
   <dc:creator>[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)</dc:creator>
@@ -157,7 +599,7 @@ Dicas
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Meu primeiro relatório"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Título</span></span>
 <span id="cb1-3"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Exemplo: Relatório em Quarto"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Subtítulo</span></span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Ariane Hayana"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Autoria</span></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-28"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-03-01"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
 <span id="cb1-6"><span class="fu" style="color: #4758AB;">date-format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> short</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></span>
 <span id="cb1-7"><span class="fu" style="color: #4758AB;">lang</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> pt</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Linguagem: português</span></span>
 <span id="cb1-8"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>

@@ -333,7 +333,6 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   </ul>
 </li>
   <li><a href="#vamos-para-a-modelagem" id="toc-vamos-para-a-modelagem" class="nav-link" data-scroll-target="#vamos-para-a-modelagem">Vamos para a modelagem!</a></li>
-  <li><a href="#regress%C3%A3o-linear" id="toc-regressão-linear" class="nav-link" data-scroll-target="#regress%C3%A3o-linear">Regressão linear</a></li>
   <li><a href="#concluindo" id="toc-concluindo" class="nav-link" data-scroll-target="#concluindo">Concluindo</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-tidytuesday-paraolimpiadas/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
@@ -387,7 +386,7 @@ dbl (2): grp_id, year
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<p>O bacana da função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo <code>chr</code> ou <code>character</code> (texots) e 2 tipo <code>dbl</code> ou <code>double</code> (numéricos).</p>
+<p>O bacana da função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo <code>chr</code> ou <code>character</code> (textos) e 2 tipo <code>dbl</code> ou <code>double</code> (numéricos).</p>
 <p>Antes de começar, outra boa prática é conhecer os dados. Quais colunas possui? Como está o preenchimento das variáveis? Existem dados faltantes (NAs)?</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Quantos NAs temos em cada coluna?</span></span>
@@ -446,7 +445,7 @@ dbl (2): grp_id, year
 <span></span>
 <span><span class="co"># Uma "olhada" na base criada!</span></span>
 <span><span class="va">paralympic_swimming</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 174
 Columns: 4
@@ -597,7 +596,7 @@ $ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 
 </div>
 </div>
 </section></section><section id="vamos-para-a-modelagem" class="level2"><h2 class="anchored" data-anchor-id="vamos-para-a-modelagem">Vamos para a modelagem!</h2>
-<p>Agora, pensando em usar modelos, podemos brincar de criar kpis e pensar em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e um kpi de quantidade de medalhas por olimpíada e gênero.</p>
+<p>Agora, pensando em usar modelos, podemos brincar de criar métricas, pensando em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e uma métrica de quantidade de medalhas por olimpíada (chamarei de medal_olympics_kpi - kpi vem do inglês <em>Key Performance Indicators</em> e é uma sigla bem conhecida no meio da análise de dados para se referir a indicadores de performance), por fim, teremos a variável de gênero.</p>
 <p>Um exercício bom de fazer aqui é observar correlação entre as variáveis resposta. As contagens de medalhas são correlacionadas entre si, pois por exemplo, quanto mais medalhas ganhas no total, maior serão os valores nas contagens de medalha por tipo, por isso que decidi utilizar proporção. A quantidade de olimpíadas que o atleta já participou também tem certa relação com sua idade, o que é bom, porque não temos a informação da idade na base.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># variável resposta : última olimpíada de cada atleta</span></span>
@@ -638,7 +637,7 @@ $ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 
 <span></span>
 <span><span class="va">base_final</span> <span class="op">&lt;-</span> <span class="va">base</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="co"># unir novamente com a base de resposta</span></span>
-<span>     <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">resposta</span>, by <span class="op">=</span> <span class="st">'athlete'</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">resposta</span>, by <span class="op">=</span> <span class="st">'athlete'</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="co"># renomear coluna n para y</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">n</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="co"># desagrupar</span></span>
@@ -735,7 +734,6 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 <p>Quando plotamos o gráfico de resíduos versus os valores preditos, a distribuição deveria ser aleatória em torno de 0, mas vemos que existe certa tendência, o que demonstra que o modelo precisa de melhorias. No nosso caso, mais observações e variáveis, provavelmente matariam a charada.</p>
 <p><strong>ALERTAAAA: A partir daqui, a leitura é recomendada para quem já tem conhecimento de regressão linear simples. </strong></p>
-</section><section id="regressão-linear" class="level2"><h2 class="anchored" data-anchor-id="regressão-linear">Regressão linear</h2>
 <p><em>Conhecedores de LM e dispostos a ler, venham comigo!</em></p>
 <p>Um outro meio de checar a bondade do ajuste de <em>um modelo poisson</em>, é usar o desvio residual. Ele é similar a soma de quadrado dos resíduos que vemos na regressão linear, é calculada como a diferença entre o desvio dos valores preditos do modelo e o desvio do modelo nulo, que é o modelo que contém apenas o intercepto: <code>residual deviance = deviance(fitted_model) - deviance(null_model)</code>.</p>
 <p>O desvio residual mede quanto de variabilidade dos dados não pode ser explicada depois de considerar o efeito dos preditores. Um desvio residual mais baixo, indica um melhor ajuste. Em geral, um desvio residual que é muito menor que os graus de liberdade do modelo, sugerem um bom ajuste. Os graus de liberdade de uma regressão poisson são iguais ao número de observações menos o número de coeficientes estimados.</p>

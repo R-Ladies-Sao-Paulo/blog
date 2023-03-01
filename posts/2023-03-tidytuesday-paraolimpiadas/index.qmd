@@ -63,7 +63,7 @@ library(ggplot2)
 dados_olimpiadas <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-03/athletes.csv")
 ```
 
-O bacana da função `read_csv()` é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo `chr` ou `character` (texots) e 2 tipo `dbl` ou `double` (numéricos). 
+O bacana da função `read_csv()` é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo `chr` ou `character` (textos) e 2 tipo `dbl` ou `double` (numéricos). 
 
 Antes de começar, outra boa prática é conhecer os dados. Quais colunas possui? Como está o preenchimento das variáveis? Existem dados faltantes (NAs)?
 
@@ -274,7 +274,7 @@ dados_olimpiadas %>%
 
 ## Vamos para a modelagem!
 
-Agora, pensando em usar modelos, podemos brincar de criar kpis e pensar em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e um kpi de quantidade de medalhas por olimpíada e gênero.
+Agora, pensando em usar modelos, podemos brincar de criar métricas, pensando em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e uma métrica de quantidade de medalhas por olimpíada (chammarei de medal_olympics_kpi, kpi vem do inglês  Key Performance Indicators e é uma sigla bem conhecida no meio da análise de dados para se referir a indicadores de performance), por fim, teremos a variável de gênero.
 
 Um exercício bom de fazer aqui é observar correlação entre as variáveis resposta. As contagens de medalhas são correlacionadas entre si, pois por exemplo, quanto mais medalhas ganhas no total, maior serão os valores nas contagens de medalha por tipo, por isso que decidi utilizar proporção. A quantidade de olimpíadas que o atleta já participou também tem certa relação com sua idade, o que é bom, porque não temos a informação da idade na base.
 
@@ -365,9 +365,6 @@ ggplot(modelo5, aes(x = .fitted, y = .resid)) +
 Quando plotamos o gráfico de resíduos versus os valores preditos, a distribuição deveria ser aleatória em torno de 0, mas vemos que existe certa tendência, o que demonstra que o modelo precisa de melhorias. No nosso caso, mais observações e variáveis, provavelmente matariam a charada. 
 
 **ALERTAAAA: A partir daqui, a leitura é recomendada para quem já tem conhecimento de regressão linear simples. **
-
-
-## Regressão linear
 
 *Conhecedores de LM e dispostos a ler, venham comigo!* 
 

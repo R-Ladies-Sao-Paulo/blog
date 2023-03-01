@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>R-Ladies São Paulo</title>
+<link>https://rladies-sp.org/index.html</link>
+<atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
+<description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
+<generator>quarto-1.2.313</generator>
+<lastBuildDate>Wed, 01 Mar 2023 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>#TidyTuesday: Explorando dados sobre as Paraolimpíadas</title>
+  <dc:creator>Ianní Muliterno</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</link>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/ianni.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Ianní Muliterno</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://github.com/IanniMuliterno"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/iannimuliterno/?originalSubdomain=br"><i class="fab fa-linkedin"></i></a></p>
+</center>
+<p>Este post foi escrito por Ianní Muliterno, um integrante da comunidade R-Ladies São Paulo! É graduado em Estatística pela Universidade Federal de Pernambuco (UFPE) e atua como cientista de dados na Unilever.</p>
+</div>
+</div>
+</div>
+<p>Olá, pessoal!</p>
+<p>Se você já é um entusiasta de ciência de dados, provavelmente já ouviu falar do TidyTuesday. Se está iniciando, este é um ótimo lugar para conseguir dados reais para praticar e criar um portfolio. O tidytuesday é um projeto semanal do R for Data Science Community, que tem como objetivo ajudar as pessoas a aprender e praticar a análise de dados em R usando o pacote Tidyverse, conheça aqui: <a href="https://github.com/rfordatascience/tidytuesday" class="uri">https://github.com/rfordatascience/tidytuesday</a>.</p>
+<p>Cada semana, é lançado um novo conjunto de dados, geralmente em formato de planilha, que pode ser baixado gratuitamente. A comunidade é então convidada a explorar, visualizar e analisar esses dados usando as ferramentas do <a href="https://tidyverse.tidyverse.org">tidyverse</a>, como o <a href="https://ggplot2.tidyverse.org">ggplot2</a> para gráficos e o <a href="https://dplyr.tidyverse.org">dplyr</a> para manipulação de dados.</p>
+<section id="base-de-dados" class="level2"><h2 class="anchored" data-anchor-id="base-de-dados">Base de dados</h2>
+<p>Hoje vamos dar uma olhada na base do início de agosto de 2021, quando o TidyTuesday lançou um conjunto de dados fascinante sobre as <strong>paraolimpíadas dos anos 1980 até 2016</strong>. O conjunto de dados inclui informações sobre características dos atletas, o país de origem, o tipo de prova, entre outras variáveis.</p>
+</section><section id="importação" class="level2"><h2 class="anchored" data-anchor-id="importação">Importação</h2>
+<p>Para começar vamos carregar os dados! Lembrando de manter a boa prática de iniciar o script carregando as bibliotecas necessárias.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://readr.tidyverse.org">readr</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-08-03/athletes.csv"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 19547 Columns: 10
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (8): gender, event, medal, athlete, abb, country, type, guide
+dbl (2): grp_id, year
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>O bacana da função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> é que ela já dá uma descrição geral com nome das variáveis e tipo. No caso, temos 8 variáveis tipo <code>chr</code> ou <code>character</code> (textos) e 2 tipo <code>dbl</code> ou <code>double</code> (numéricos).</p>
+<p>Antes de começar, outra boa prática é conhecer os dados. Quais colunas possui? Como está o preenchimento das variáveis? Existem dados faltantes (NAs)?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Quantos NAs temos em cada coluna?</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/colSums.html">colSums</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_olimpiadas</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> gender   event   medal athlete     abb country  grp_id    type    year   guide 
+    144       0       0     435      49   14428   14428       0       0   19494 </code></pre>
+</div>
+</div>
+<p>No tidytuesday os dados costumam vir mais arrumados, porém no mundo real é comum encontrarmos erros no preenchimento, sejam eles sistemáticos (por exemplo: a ferramenta que mede velocidade dos competidores falha e traz valores muito grandes ou negativos), ou também erros de preenchimento (exemplo: alguém que preencheu errado o campo de medalha e colocou por exemplo “metal” ao invés de “prata”).</p>
+<p>No repositório desta base, está descrito o que cada coluna representa. Te convido para escrever como lição de casa o código que checa as variáveis categóricas em busca de nomes estranhos que não condizem com o que deveria estar naquela variável. Como incentivo, deixo aqui o check de variáveis <strong>numéricas</strong>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">is.numeric</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fl" style="color: #AD0000;">2</span>, names_to <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'variaveis'</span>, values_to <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'valor'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">valor</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">~</span><span class="va" style="color: #111111;">variaveis</span>,scales <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'free'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="explorando-e-visualizando-dados-para-natação" class="level2"><h2 class="anchored" data-anchor-id="explorando-e-visualizando-dados-para-natação">Explorando e visualizando dados para Natação!</h2>
+<p>Para não ficar um post massivo, vamos focar em <strong>natação</strong>.</p>
+<p>Ao analisar esses dados, podemos responder várias perguntas interessantes. Por exemplo, qual país obteve mais medalhas na natação nos Jogos Olímpicos de 2021? Há alguma diferença significativa na quantidade de medalhas conquistadas entre os atletas homens e mulheres?</p>
+<section id="países-com-mais-metalhas" class="level3"><h3 class="anchored" data-anchor-id="países-com-mais-metalhas">Países com mais metalhas</h3>
+<p>Para criar um gráfico mostrando os países com mais medalhas, primeiro é necessário trabalhar os dados para criar uma base onde tenha a contagem de medalhas por país e por tipo de medalha!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Fazendo uma contagem de medalhas de natação por país:</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">paralympic_total</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrando medalhas de natação (Swimming)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contando quantas medalhas tem por país (abb),</span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># ordenando pelos maiores números!</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, sort <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Fazendo uma contagem de medalhas de natação por país e tipo de medalha:</span></span>
+<span><span class="va" style="color: #111111;">paralympic_byMedal</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrando medalhas de natação (Swimming)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contando quantas medalhas tem por país (abb) e tipo de medalha,</span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># ordenando pelos maiores números!</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span> </span>
+<span></span>
+<span><span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_byMedal</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># unindo as duas bases criadas acima, </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># usando a coluna "abb" como chave</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">paralympic_total</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"abb"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># renomeando as colunas</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op" style="color: #5E5E5E;">(</span>number <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n.x</span>, total_medals <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n.y</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Uma "olhada" na base criada!</span></span>
+<span><span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 174
+Columns: 4
+$ abb          &lt;chr&gt; "ARG", "ARG", "ARG", "AUS", "AUS", "AUS", "AUT", "AUT", "…
+$ medal        &lt;chr&gt; "Bronze", "Gold", "Silver", "Bronze", "Gold", "Silver", "…
+$ number       &lt;int&gt; 9, 5, 10, 160, 147, 158, 2, 2, 4, 1, 7, 1, 13, 6, 12, 9, …
+$ total_medals &lt;int&gt; 24, 24, 24, 465, 465, 465, 8, 8, 8, 8, 8, 1, 31, 31, 31, …</code></pre>
+</div>
+</div>
+<p>Utilizando essa base com a contagem de medalhas, podemos filtrar os 5 países com mais medalhas:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">top5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_total</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># fatiar: apenas as primeiras 5 linhas</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fl" style="color: #AD0000;">5</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># retornar como um vetor a coluna abb</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">table_top5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">paralympic_swimming</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># filtrar os países do top 5</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span> <span class="op" style="color: #5E5E5E;"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va" style="color: #111111;">top5</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># transformar a coluna abb em fator, </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># para facilitar a ordenação no gráfico</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>abb <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">top5</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>         medal <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Bronze"</span>, <span class="st" style="color: #20794D;">"Silver"</span>, <span class="st" style="color: #20794D;">"Gold"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>Com os dados preparados, podemos fazer o gráfico! Mas antes disso, vamos salvar as configurações de tema do gráfico em um objeto, para utilizarmos depois e deixar o código do gráfico mais fácil para ler!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">tema_olimpiadas</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> </span>
+<span>    <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    legend.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"none"</span>,</span>
+<span>    plot.title.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"plot"</span>,</span>
+<span>    plot.title <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mono"</span>,</span>
+<span>      face <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bold"</span>,</span>
+<span>      size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">10</span></span>
+<span>    <span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.major.x <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.minor.x <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.major.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.grid.minor.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    axis.text <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mono"</span>,</span>
+<span>      face <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bold"</span>,</span>
+<span>      size <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">8</span></span>
+<span>    <span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>Agora sim, vamos ao gráfico!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">table_top5</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">abb</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">number</span>, fill <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op" style="color: #5E5E5E;">(</span>values <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"#D89581"</span>,  <span class="st" style="color: #20794D;">"#C0C0C0"</span>, <span class="st" style="color: #20794D;">"#D4AF37"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html">scale_x_discrete</a></span><span class="op" style="color: #5E5E5E;">(</span>expand <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">0</span>, <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">""</span>,</span>
+<span>       y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">""</span>, </span>
+<span>       title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Medalhas de ouro, prata e bronze conquistada pelos países de melhor desempenho"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="va" style="color: #111111;">tema_olimpiadas</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A Grã-Bretanha é o país com mais medalhas no total, porém os Estados Unidos é o país com mais medalhas de ouro!</p>
+<p>Apesar de algumas alterações que fiz, os créditos deste gráfico de barras são da <code>Erin</code>, professora que vocês podem encontrar aqui: <a href="https://github.com/efranke22" class="uri">https://github.com/efranke22</a>.</p>
+</section><section id="diferença-de-medalhas-por-gênero" class="level3"><h3 class="anchored" data-anchor-id="diferença-de-medalhas-por-gênero">Diferença de medalhas por gênero</h3>
+<p>Continuando, podemos ver a diferença entre a quantidade de medalhas conquistadas entre os atletas homens e mulheres. Para isso, veremos primeiro o histograma do percentual de mulheres que os países levam em cada olimpíada, em seguida o box plot das medalhas conquistadas por cada um, agrupado também pelo tipo de medalha.</p>
+<p>Uma observação: o gênero misto foi removido, porque ele está na base devido a algumas provas serem mistas e não porque os participantes são não-binários. Com isso, perdemos 21 linhas.</p>
+<p>Vamos então preparar a base de dados, calculando o percentual de mulheres por país:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dt_perc_gender</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar para Natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar: remover linhas onde o gênero seja "misto" (ex: duplas de homens e mulheres)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Deixar apenas uma linha para a combinação atleta/ano/país/gênero</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">year</span>, <span class="va" style="color: #111111;">gender</span>, <span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas pessoas participaram por país e gênero</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">gender</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Alterar a base para formato longo</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op" style="color: #5E5E5E;">(</span>names_from  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">gender</span>, values_from <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Substituir NA por 0 nas colunas Woman e Men</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Women"</span>, <span class="st" style="color: #20794D;">"Men"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="op" style="color: #5E5E5E;">~</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">.</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="fl" style="color: #AD0000;">0</span>, <span class="va" style="color: #111111;">.</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Agrupar por país</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Calcular o porcentual de mulheres</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op" style="color: #5E5E5E;">(</span>perc_mulheres <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">Women</span> <span class="op" style="color: #5E5E5E;">/</span> <span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">Women</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">Men</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Ordenar de forma decrescente por perc_mulheres</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">linha_mediana</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dt_perc_gender</span><span class="op" style="color: #5E5E5E;">$</span><span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>Agora podemos criar o histograma:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dt_perc_gender</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">perc_mulheres</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    mapping <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>xintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">linha_mediana</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>    linetype <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span>,</span>
+<span>    color <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'red'</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>    <span class="st" style="color: #20794D;">"text"</span>,</span>
+<span>    x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">linha_mediana</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="fl" style="color: #AD0000;">0.06</span>,</span>
+<span>    y <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">15</span>,</span>
+<span>    label <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Mediana"</span>,</span>
+<span>    color <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'red'</span></span>
+<span>  <span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Histograma do percentual de mulheres que os países levam em cada olimpíada"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Como vimos no histograma, muitos países nem enviam mulheres para as olimpíadas e os que enviam, tem em média 34% de mulheres na composição do time. Sendo assim, essa diferença impacta na diferença que vemos na quantidade de medalhas conquistadas por gênero.</p>
+<p>Vamos explorar estes dados em um boxplot:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>medal <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span>, levels <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Bronze"</span>, <span class="st" style="color: #20794D;">"Silver"</span>, <span class="st" style="color: #20794D;">"Gold"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">|&gt;</span> </span>
+<span>    <span class="co" style="color: #5E5E5E;"># Filtrar para Natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar: remover linhas onde o gênero seja "misto"</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas pessoas participaram por país, gênero e tipo de medalha</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">abb</span>, <span class="va" style="color: #111111;">gender</span>, <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span>, fill <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">gender</span>, x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">medal</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;">(</span>title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Box-plot das medalhas conquistadas por tipo de medalha e gênero em cada país"</span>, </span>
+<span>       y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Quantidade de medalhas"</span>,</span>
+<span>       x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Tipo de medalha"</span>,</span>
+<span>       fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Gênero"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op" style="color: #5E5E5E;">(</span>type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"qual"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="vamos-para-a-modelagem" class="level2"><h2 class="anchored" data-anchor-id="vamos-para-a-modelagem">Vamos para a modelagem!</h2>
+<p>Agora, pensando em usar modelos, podemos brincar de criar métricas, pensando em como prever se um atleta conquistará medalhas na olimpíada seguinte. Opções diretas de variáveis são: quantas medalhas já ganhou, de quantas olimpíadas já participou, proporção de medalhas por tipo, e uma métrica de quantidade de medalhas por olimpíada (chamarei de medal_olympics_kpi - kpi vem do inglês <em>Key Performance Indicators</em> e é uma sigla bem conhecida no meio da análise de dados para se referir a indicadores de performance), por fim, teremos a variável de gênero.</p>
+<p>Um exercício bom de fazer aqui é observar correlação entre as variáveis resposta. As contagens de medalhas são correlacionadas entre si, pois por exemplo, quanto mais medalhas ganhas no total, maior serão os valores nas contagens de medalha por tipo, por isso que decidi utilizar proporção. A quantidade de olimpíadas que o atleta já participou também tem certa relação com sua idade, o que é bom, porque não temos a informação da idade na base.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># variável resposta : última olimpíada de cada atleta</span></span>
+<span><span class="va" style="color: #111111;">resposta</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Remover linhas onde não temos o nome do atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'-'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar para natação</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">type</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Swimming"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Filtrar por ano</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="fl" style="color: #AD0000;">2016</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Contar quantas medalhas cada atleta teve</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span>, sort <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span> </span></code></pre></div>
+</div>
+<p>A variável resposta é a quantidade de medalhas conquistadas por atleta nas olimpíadas de natação de 2016. A base vai contar com informações dos atletas e das suas participações anteriores.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">base</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_olimpiadas</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Unindo a tabela resposta a base total para manter apenas </span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># os atletas dos quais conseguimos montar variável resposta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">resposta</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'athlete'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Removendo dados de 2016 (pois deste ano tiramos a variável resposta)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="fl" style="color: #AD0000;">2016</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co" style="color: #5E5E5E;"># Remove a coluna n (que veio ao juntar as bases)</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># agrupando por atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># montando variáveis independentes para cada atleta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op" style="color: #5E5E5E;">(</span>total_medalhas <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            ouro <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Gold'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            prata <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Silver'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            bronze <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">medal</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">'Bronze'</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            total_olympics <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            medal_olympics_kpi <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">/</span><span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">year</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            gender <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">gender</span><span class="op" style="color: #5E5E5E;">[</span><span class="va" style="color: #111111;">gender</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">'Mixed'</span><span class="op" style="color: #5E5E5E;">]</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>            n_eventos <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">event</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>ouro <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">ouro</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span>,</span>
+<span>         prata <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">prata</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span>,</span>
+<span>         bronze <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">bronze</span><span class="op" style="color: #5E5E5E;">/</span><span class="va" style="color: #111111;">total_medalhas</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;">base_final</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">base</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># unir novamente com a base de resposta</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">resposta</span>, by <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'athlete'</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># renomear coluna n para y</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op" style="color: #5E5E5E;">(</span>y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># desagrupar</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co" style="color: #5E5E5E;"># remover a coluna com nome</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="va" style="color: #111111;">athlete</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+<p>Com isto estamos prontos para checar o quanto essas variáveis podem prever quantas medalhas um atleta conquistará em 2016. Por se tratar de uma variável resposta de contagem, não é adequado usar uma regressão linear simples, duas alternativas são modelos de poisson e binomial negativa. Aqui utilizaremos um modelo de poisson.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">modelo</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">.</span>, data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">base_final</span>, family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'poisson'</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ ., family = "poisson", data = base_final)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.03793  -0.59747  -0.07415   0.46524   1.76581  
+
+Coefficients: (1 not defined because of singularities)
+                   Estimate Std. Error z value Pr(&gt;|z|)  
+(Intercept)         0.31605    0.36604   0.863   0.3879  
+total_medalhas     -0.01995    0.05408  -0.369   0.7122  
+ouro                0.19491    0.22641   0.861   0.3893  
+prata               0.14087    0.26165   0.538   0.5903  
+bronze                   NA         NA      NA       NA  
+total_olympics     -0.21896    0.18431  -1.188   0.2348  
+medal_olympics_kpi  0.28235    0.13744   2.054   0.0399 *
+genderWomen         0.19268    0.12956   1.487   0.1370  
+n_eventos           0.01706    0.12647   0.135   0.8927  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 111.157  on 106  degrees of freedom
+Residual deviance:  59.115  on  99  degrees of freedom
+AIC: 355.94
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<p>Aqui observamos pela coluna <code>Pr(&gt;|z|)</code> o p-valor de cada variável. Por padrão, quando este valor é <code>&lt;= 0.10</code> aparece um símbolo chamado <em>Signif. codes</em> a direita. Quanto menor o p-valor, maior esse símbolo, ou seja, quanto maior a importância da variável, maior o símbolo.</p>
+<p>Pelo <code>summary(modelo)</code> descobrimos que a proporção de medalhas de bronze não está gerando nenhum resultado para predição do modelo, por isso os campos em <code>NA</code> aparecem para ela.</p>
+<p>Daqui para frente, por se tratar de um modelo com poucas variáveis e um exemplo simples, fui criando novos modelos, onde em cada um deles removia uma variável. Primeiro <code>bronze</code>, depois <code>n_eventos</code> e assim por diante. A cada novo modelo eu chequei qual a variável de menor importância, ou seja, maior p-valor e removo-a, isto é importante porque cada remoção vai impactar na importância de todas as outras. No fim, quando cheguei num modelo onde todas as variáveis eram relevantes, obtive o seguinte modelo:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">modelo5</span> <span class="op" style="color: #5E5E5E;">&lt;-</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">medal_olympics_kpi</span> <span class="op" style="color: #5E5E5E;">+</span> <span class="va" style="color: #111111;">total_olympics</span>,</span>
+<span>      data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">base_final</span>,</span>
+<span>      family <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'poisson'</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ medal_olympics_kpi + total_olympics, family = "poisson", 
+    data = base_final)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.84737  -0.69446  -0.09312   0.45457   1.68875  
+
+Coefficients:
+                   Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)         0.64174    0.15547   4.128 3.66e-05 ***
+medal_olympics_kpi  0.26467    0.03805   6.956 3.49e-12 ***
+total_olympics     -0.28385    0.08063  -3.521 0.000431 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 111.157  on 106  degrees of freedom
+Residual deviance:  61.791  on 104  degrees of freedom
+AIC: 348.61
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<p>Observe que temos o kpi com influência positiva, ou seja, quanto mais medalhas por olimpíada um atleta tem em olimpíadas anteriores, mais medalhas ele pode conseguir em 2016. Do contrário temos a variável <code>total_olympics</code> que tem influência negativa, ou seja, quanto mais olimpíadas o atleta tiver participado, menos medalhas ele pode ganhar em 2016. Essa interpretação pode parecer estranha, mas lembre-se da sua relação com a idade, quanto mais olimpíadas nas costas, mais velho o atleta é.</p>
+<p>Agora vamos buscar evidências do poder de predição do modelo, no próprio <code>summary(model)</code> temos o <code>AIC</code>, uma métrica que fica menor a medida que o poder de predição melhora. Se compararmos o AIC do primeiro e do último modelo, vemos uma diminuição, mas precisamos verificar os resíduos por exemplo.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.fitted</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.resid</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op" style="color: #5E5E5E;">(</span>yintercept <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Gráfico de resíduos versus valor predito"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Quando plotamos o gráfico de resíduos versus os valores preditos, a distribuição deveria ser aleatória em torno de 0, mas vemos que existe certa tendência, o que demonstra que o modelo precisa de melhorias. No nosso caso, mais observações e variáveis, provavelmente matariam a charada.</p>
+<p><strong>ALERTAAAA: A partir daqui, a leitura é recomendada para quem já tem conhecimento de regressão linear simples. </strong></p>
+<p><em>Conhecedores de LM e dispostos a ler, venham comigo!</em></p>
+<p>Um outro meio de checar a bondade do ajuste de <em>um modelo poisson</em>, é usar o desvio residual. Ele é similar a soma de quadrado dos resíduos que vemos na regressão linear, é calculada como a diferença entre o desvio dos valores preditos do modelo e o desvio do modelo nulo, que é o modelo que contém apenas o intercepto: <code>residual deviance = deviance(fitted_model) - deviance(null_model)</code>.</p>
+<p>O desvio residual mede quanto de variabilidade dos dados não pode ser explicada depois de considerar o efeito dos preditores. Um desvio residual mais baixo, indica um melhor ajuste. Em geral, um desvio residual que é muito menor que os graus de liberdade do modelo, sugerem um bom ajuste. Os graus de liberdade de uma regressão poisson são iguais ao número de observações menos o número de coeficientes estimados.</p>
+<p>Podemos usar o desvio residual para rodar um teste de ajuste para regressão poisson. A hipótese nula diz que o modelo se ajusta bem aos dados, a alternativa diz o contrário. O teste estatístico de desvio residual e o p-valor, são calculados com base na distribuição qui-quadrado com graus de liberdade iguais a diferença entre os graus de liberdade do modelo ajustado e o modelo nulo.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">expected</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/fitted.values.html">fitted</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Calculate the Pearson's chi-squared statistic and p-value</span></span>
+<span><span class="va" style="color: #111111;">pearson_chisq</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">base_final</span><span class="op" style="color: #5E5E5E;">$</span><span class="va" style="color: #111111;">y</span> <span class="op" style="color: #5E5E5E;">-</span> <span class="va" style="color: #111111;">expected</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">^</span><span class="fl" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">/</span> <span class="va" style="color: #111111;">expected</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="va" style="color: #111111;">p_value</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fl" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/Chisquare.html">pchisq</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">pearson_chisq</span>, df <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/df.residual.html">df.residual</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Display the results</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Pearson's chi-squared test:\n"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pearson's chi-squared test:</code></pre>
+</div>
+<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"X-squared = "</span>, <span class="va" style="color: #111111;">pearson_chisq</span>, <span class="st" style="color: #20794D;">", df = "</span>, <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/df.residual.html">df.residual</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">modelo5</span><span class="op" style="color: #5E5E5E;">)</span>, <span class="st" style="color: #20794D;">", p-value = "</span>, <span class="va" style="color: #111111;">p_value</span>, <span class="st" style="color: #20794D;">"\n"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>X-squared =  62.90335 , df =  104 , p-value =  0.9995126 </code></pre>
+</div>
+</div>
+<p>O p-valor alto indica que <em>não</em> há evidência de falta de ajuste, juntando tudo que vimos sobre precisão do modelo, podemos concluir que “estamos no caminho certo para modelar a nossa variável resposta, mas o modelo carece de melhorias”. Uma base maior, além de melhorar a precisão como já mencionei, nos permitiria separar um grupo de teste onde poderíamos ter uma noção mais clara do quão bem o modelo prevê a partir de entradas inéditas.</p>
+<p>Agora sim, me despeço oficialmente, quem quiser saber mais sobre o modelo de poisson, segue uma ótima referência!</p>
+<p>Regressão Poisson: <a href="https://online.stat.psu.edu/stat462/node/209/" class="uri">https://online.stat.psu.edu/stat462/node/209/</a></p>
+</section><section id="concluindo" class="level2"><h2 class="anchored" data-anchor-id="concluindo">Concluindo</h2>
+<p>Essa foi uma breve demonstração do quanto o Tidytuesday é interessante e como podemos praticar nossas habilidades em tratamento de dados e análise. Esperamos que este artigo tenha inspirado você a explorar o mundo do TidyTuesday, e colocar a mão na massa no R, usando essa fonte de dados incrível para aprimorar suas habilidades em ciência de dados. Lembre-se que a comunidade tá aqui para te ajudar a alcançar seu objetivo em ciência de dados!</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+</section> ]]></description>
+  <category>Tidytuesday</category>
+  <category>Análise exploratória</category>
+  <category>Visualização de dados</category>
+  <category>Modelagem</category>
+  <guid>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</guid>
+  <pubDate>Wed, 01 Mar 2023 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/logo.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
+<item>
+  <title>E aí, vamos falar de Quarto?</title>
+  <dc:creator>[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</link>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/avatars.githubusercontent.com/u/44451990?v=4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Ariane Hayana</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://www.instagram.com/_estatistica"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/a-hayana"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/arianehayana/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/ariane_hayana/"><i class="fab fa-instagram"></i></a></p>
+</center>
+<p>Este post foi escrito pela <strong>Ariane Hayana</strong>, uma integrante da comunidade R-Ladies São Paulo! Criadora da página <a href="https://www.instagram.com/_estatistica">@ _estatistica</a>, é graduada em Economia e finalista em sua segunda graduação no curso de Bacharelado em Estatística na Universidade Federal do Amazonas (UFAM), atuando como estagiária no Supremo Tribunal Federal (STF).</p>
+<p>Saiba mais sobre ela em seu <a href="https://www.linkedin.com/in/arianehayana/">LinkedIn</a>.</p>
+</div>
+</div>
+</div>
+<section id="e-aí-vamos-falar-de-quarto" class="level2"><h2 class="anchored" data-anchor-id="e-aí-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Arte de pinguins abraçados feita por Allison Horst: Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Illustrated by Allison Horst.</a></figcaption><p></p>
+</figure>
+</div>
+<p>Hello, world!</p>
+<p>Você que gosta da nossa querida linguagem R provavelmente já deve ter ouvido falar sobre Quarto. Por definição, segundo <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto.org</a>,</p>
+<blockquote class="blockquote">
+<p><em>“Quarto é uma versão multilíngue da próxima geração do R Markdown (do RStudio) e inclui dezenas de novos recursos, ao mesmo tempo em que é capaz de renderizar a maioria dos arquivos <code>.Rmd</code> existentes sem modificação.”</em></p>
+</blockquote>
+<p>Existem diversas possibilidades de criação com Quarto, especialmente pelo fato de que ele é independente de <code>R</code>, portanto, é possível criar diferentes conteúdos dinâmicos com Python, R, Julia e Observable, por exemplo.</p>
+<p>A base para edição em textos é a <a href="https://pt.wikipedia.org/wiki/Linguagem_de_marca%C3%A7%C3%A3o">linguagem de marcação</a> <em>Markdown</em> e ao trabalharmos com códigos, os <em>chunks</em> continuam sendo o nosso melhor amigo. Quanto às publicações, temos a possibilidade de criar relatórios em diversos formatos (HTML, PDF, por exemplo), apresentações, sites, blogs, livros e outros.</p>
+<p>Assim, hoje apresento a vocês um mini tutorial de como criar o nosso primeiro relatório em HTML com Quarto no RStudio. Para tanto, como o Quarto é independente de R, você precisa configurar o ambiente para explorar da melhor forma possível as infinitas possibilidades que o Quarto oferece.</p>
+<p>Aqui vão alguns pontos são importantes:</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pré-requisitos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Baixar e instalar a <a href="https://quarto.org/docs/get-started/">versão mais recente do Quarto</a>;</p></li>
+<li><p>Baixar e instalar a <a href="https://cran.r-project.org/">versão mais recente do R</a>. Caso já tenha, verifique se o seu R está atualizado para R 4.1 ou R 4.2;</p></li>
+<li><p>Baixar e instalar a <a href="https://posit.co/download/rstudio-desktop/">versão mais recente do RStudio.</a></p></li>
+</ul>
+<p>Para mais detalhes, <a href="https://quarto.org/docs/get-started/hello/rstudio.html">clique aqui</a>.</p>
+<p>Outra opção bem bacana é utilizar o <a href="https://posit.cloud">Posit Cloud</a>, que permite você explorar as ferramentas do RStudio na nuvem de maneira simples e sem grandes dificuldades para configurar. Caso você nunca tenha explorado o Posit Cloud, acesse o <em>link</em> <a href="https://posit.cloud">aqui</a> e crie uma conta através dos seguintes passos:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-2.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Para saber sobre como criar um projeto no Posit Cloud, acesse a demonstração <a href="https://raw.githubusercontent.com/a-hayana/quarto_report_post/master/img/gif-0.gif">aqui</a>.</p>
+</div>
+</div>
+<p><br></p>
+</section><section id="o-primeiro-passo" class="level2"><h2 class="anchored" data-anchor-id="o-primeiro-passo">O primeiro passo</h2>
+<p>Agora, considerando que você já está com o ambiente preparado, vamos colocar a mão na massa!</p>
+<p>Supondo que você está começando do <em>zero</em> no Quarto, o primeiro passo é criar o documento (<code>.qmd</code>) no RStudio. Sugiro fortemente que você crie um projeto antes de tudo. São apenas seis passos simples:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><em>Voilà!</em> Temos o nosso projeto e primeiro documento criados. Este é o modelo básico para publicação em Quarto e o formato de saída será, por padrão, em HTML. Para verificarmos o resultado final precisamos renderizar o nosso arquivo <code>.qmd</code>. Para isso, clique em <code>Render</code> ou utilize o atalho do teclado <code>CTRL + SHIFT + K</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>E temos como resultado final:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Perceba que na tela acima eu estou trabalhando com o <em>Visual</em> selecionado (botão localizado na barra de ferramentas), o que permite a visualização das alterações em tempo real e é uma ótima opção para quem ainda não está tão familiarizado(a) com <em>Markdown</em>. Vale a pena conferir as diversas possibilidades de utilização do <em>Visual Editor</em> em um post da Posit intitulado <a href="https://posit.co/blog/exploring-rstudio-visual-markdown-editor/"><em>Exploring RStudio’s Visual Markdown Editor</em></a>, cuja autoria é de Isabella Velásquez.</p>
+<p>Caso você prefira, ao clicar em <em>Source</em> (botão à esquerda do <em>Visual</em> na barra de ferramentas), é possível escrever seu documento no modo de origem ou mesmo ir alternando entre o <em>Source</em> e <em>Visual</em>.</p>
+<p>E aí, o que achou? Chegamos até aqui e você deu os seus primeiros passos com Quarto (uhuul!! 😍)! Agora se liga nessas dicas:</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Dicas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Seja <em>curioso(a)</em>: aqui eu apresentei uma das diversas formas para criar documentos, projetos, usar o RStudio na nuvem, etc, entretanto, existem outras possibilidades que você pode aprender <em>explorando a documentação</em>;</p></li>
+<li><p>Se você já trabalha com <em>R Markdown</em>, possivelmente vai achar muitas semelhanças nas aplicações com o Quarto. Assim, sugiro também <em>explorar a documentação</em>;</p></li>
+<li><p>Por fim, uma dica final: <em>explore a documentação</em> 😂😂 e acompanhe as novidades em <a href="https://quarto.org">Quarto.org</a>.</p></li>
+</ul>
+</div>
+</div>
+<p><br></p>
+</section><section id="subindo-um-degrau" class="level2"><h2 class="anchored" data-anchor-id="subindo-um-degrau">Subindo um degrau</h2>
+<p>Agora que você já sabe criar um documento com Quarto, vamos explorar algumas ferramentas para incrementar as nossas criações.</p>
+<p>Criei um modelo de relatório <code>.qmd</code> cuja saída é em <code>HTML</code> e está disponível <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">aqui</a>. Assim, vamos desvendar cada etapa de criação juntos.</p>
+<p>Primeiramente, é importante compreender a estrutura de um documento em Quarto. Veja a representação básica apresentada abaixo:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-6.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Essas três partes são:</p>
+<ul>
+<li><p><strong>YAML (<em>Yet Another Markup Language</em>):</strong> cabeçalho onde são inseridas as configurações do documento (formatação, data, título, autor, entre outros). É sempre inserido no início do documento e delimitado por <code>---</code>;</p></li>
+<li><p><strong>Texto:</strong> usa <em>markdown</em> como sua sintaxe de documento principal;</p></li>
+<li><p><strong>Códigos:</strong> versão multilíngue, portanto, nos <em>chunks</em> (blocos de códigos) podemos inserir códigos em R, Python, Julia e outros.</p></li>
+</ul>
+<p>Assim, no exemplo que vamos explorar, veja que temos alguns elementos interessantes que foram inseridos.</p>
+<p>Note que no canto superior direito é possível identificar uma chave, em que o(a) leitor(a) pode selecionar o tema desejado, conforme a figura a seguir:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-7.png" class="img-fluid figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Observe na figura acima que o documento possui um título, subtítulo, nome da autora e a data de publicação. Tais informações são configuradas no YAML, onde também foram definidas outras configurações do documento, conforme o código a seguir:</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<em>YAML</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="pp" style="color: #AD0000;">---</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Meu primeiro relatório"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Título</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Exemplo: Relatório em Quarto"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Subtítulo</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Ariane Hayana"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Autoria</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2023-02-08"</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Data de publicação</span></span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;">date-format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> short</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;">lang</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> pt</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Linguagem: português</span></span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;">  </span><span class="fu" style="color: #4758AB;">html</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">code-fold</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span><span class="co" style="color: #5E5E5E;"> # -----&gt; code-fold: `true` para "ocultar" o bloco de códigos</span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">theme</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">light</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="kw" style="color: #003B4F;">[</span><span class="at" style="color: #657422;">pulse</span><span class="kw" style="color: #003B4F;">,</span><span class="at" style="color: #657422;">custom.scss</span><span class="kw" style="color: #003B4F;">]</span><span class="co" style="color: #5E5E5E;"> # Tema modo claro</span></span>
+<span id="cb1-13"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">dark</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="kw" style="color: #003B4F;">[</span><span class="at" style="color: #657422;">cyborg</span><span class="kw" style="color: #003B4F;">,</span><span class="at" style="color: #657422;">custom.scss</span><span class="kw" style="color: #003B4F;">]</span><span class="co" style="color: #5E5E5E;"> # Tema modo escuro</span></span>
+<span id="cb1-14"><span class="fu" style="color: #4758AB;">title-block-banner</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Estilo de banner no topo do documento</span></span>
+<span id="cb1-15"><span class="fu" style="color: #4758AB;">bibliography</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> references.bib</span><span class="co" style="color: #5E5E5E;"> # -----&gt; Referências do documento</span></span>
+<span id="cb1-16"><span class="pp" style="color: #AD0000;">---</span></span></code></pre></div>
+</div>
+</div>
+<p>Deixei alguns comentários sobre as configurações no código, mas alguns pontos cabem atenção especial:</p>
+<ul>
+<li><p><code>date-format</code>: neste exemplo, apresentei o formato curto de data, entretanto, existem diversos formatos possíveis que podem ser consultados em <a href="https://quarto.org/docs/reference/dates.html#date-formatting">Quarto.org</a>;</p></li>
+<li><p><code>lang</code>: esta opção é usada para identificar o idioma principal do documento. Outras idiomas podem ser considerados, como o espanhol (<code>lang: es</code>) e francês (<code>lang: fr</code>), por exemplo;</p></li>
+<li><p><code>code-fold</code>: quando esta opção é igual a <code>true</code>, o bloco de códigos é ocultado, podendo ser consultado ao clicar na palavra “<em>Código</em>”;</p></li>
+<li><p><code>theme: light: [pulse,custom.scss] ou dark: [cyborg,custom.scss]</code>: é nesta configuração que definimos qual tema utilizar em nosso documento e quais outras características podemos customizar utilizando um arquivo <code>.scss</code> (veja mais em <a href="https://quarto.org/docs/output-formats/html-themes.html#custom-themes">Quarto.pub</a>);</p></li>
+<li><p><code>title-block-banner: true</code>: se igual a <code>true</code>, esta configuração insere um bloco de título no estilo de banner no topo do documento;</p></li>
+<li><p><code>bibliography</code>: aqui estão as referências utilizadas no documento gerado. Trata-se de um arquivo <code>.bib</code>.</p></li>
+</ul>
+<p>Após as configurações do cabeçalho estarem definidas, então vamos para o <em>texto</em>. No <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">modelo</a>, temos uma arte feita pela <a href="https://github.com/allisonhorst/stats-illustrations/blob/main/julie-mine-quarto-keynote/quarto_thankyou.png">Allison Horst</a>, que foi inserida no documento com o <code>include_graphics</code> do <code>knitr</code>. Se você é familiarizado(a) com R Markdown, provavelmente vai achar um pouco estranho a configuração dos <em>chunks</em>. Perceba que cada linha é precedida por um <code>#|</code>:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;">```{r}</span></span>
+<span id="cb2-2"><span class="co" style="color: #5E5E5E;">#| echo: false</span></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;">#| out.width: "100%"</span></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;">#| fig-cap: "Arte por [Allison Horst.](https://github.com/allisonhorst/stats-illustrations/blob/main/julie-mine-quarto-keynote/quarto_thankyou.png)"</span></span>
+<span id="cb2-5"></span>
+<span id="cb2-6">knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">include_graphics</span>(<span class="st" style="color: #20794D;">"images/img-1.png"</span>)</span>
+<span id="cb2-7"><span class="in" style="color: #5E5E5E;">```</span></span></code></pre></div>
+<p>Já na margem <em>direita</em> podemos verificar algumas informações sobre a R-Ladies, que são inseridas no documento Quarto utilizando <code>column-margin</code>. Veja um trecho exemplificativo:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="in" style="color: #5E5E5E;">```{r}</span></span>
+<span id="cb3-2"><span class="sc" style="color: #5E5E5E;">:::</span> column<span class="sc" style="color: #5E5E5E;">-</span>margin</span>
+<span id="cb3-3"></span>
+<span id="cb3-4"><span class="do" style="color: #5E5E5E;
+font-style: italic;">#### O que é a R-Ladies?</span></span>
+<span id="cb3-5"></span>
+<span id="cb3-6">[R<span class="sc" style="color: #5E5E5E;">-</span>Ladies](https<span class="sc" style="color: #5E5E5E;">:</span><span class="er" style="color: #AD0000;">//</span>rladies.org<span class="sc" style="color: #5E5E5E;">/</span>) é uma organização mundial cuja missão é promover </span>
+<span id="cb3-7">a diversidade de gênero na comunidade da linguagem R.</span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="sc" style="color: #5E5E5E;">**</span>R<span class="sc" style="color: #5E5E5E;">-</span>Ladies São Paulo<span class="sc" style="color: #5E5E5E;">**</span> integra, orgulhosamente, a organização R<span class="sc" style="color: #5E5E5E;">-</span>Ladies Global,</span>
+<span id="cb3-10">em São Paulo.</span>
+<span id="cb3-11"></span>
+<span id="cb3-12">As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</span>
+<span id="cb3-13"></span>
+<span id="cb3-14"><span class="sc" style="color: #5E5E5E;">:::</span></span>
+<span id="cb3-15"><span class="in" style="color: #5E5E5E;">```</span></span></code></pre></div>
+<p>Para exemplificar a utilização de <em>chunks</em>, no <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">modelo</a> temos o conjunto de dados de <code>Gapminder</code> sobre expectativa de vida, PIB <em>per capita</em> e população por país. Neste exemplo foram explorados os pacotes <a href="https://github.com/cienciadedatos/dados">dados</a> <span class="citation" data-cites="dados">(Quiroga et al. 2022)</span>, <a href="https://glin.github.io/reactable/">reactable</a> <span class="citation" data-cites="reactable">(Lin 2022)</span> e <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="dplyr">(Wickham et al. 2022)</span>:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><span class="in" style="color: #5E5E5E;">```{r}</span></span>
+<span id="cb4-2"><span class="co" style="color: #5E5E5E;">#| warning: false</span></span>
+<span id="cb4-3"><span class="co" style="color: #5E5E5E;">#| message: false</span></span>
+<span id="cb4-4"></span>
+<span id="cb4-5"><span class="fu" style="color: #4758AB;">library</span>(dados)</span>
+<span id="cb4-6"><span class="fu" style="color: #4758AB;">library</span>(reactable)</span>
+<span id="cb4-7"><span class="fu" style="color: #4758AB;">library</span>(dplyr)</span>
+<span id="cb4-8"></span>
+<span id="cb4-9">dados_gapminder <span class="sc" style="color: #5E5E5E;">|&gt;</span> <span class="co" style="color: #5E5E5E;"># Base do pacote {dados}</span></span>
+<span id="cb4-10">  <span class="fu" style="color: #4758AB;">select</span>(continente, pais, ano, pib_per_capita) <span class="sc" style="color: #5E5E5E;">|&gt;</span> <span class="co" style="color: #5E5E5E;"># Selecionando algumas colunas</span></span>
+<span id="cb4-11">  <span class="fu" style="color: #4758AB;">reactable</span>(</span>
+<span id="cb4-12">    <span class="at" style="color: #657422;">groupBy =</span> <span class="st" style="color: #20794D;">"continente"</span>, <span class="co" style="color: #5E5E5E;"># Agrupando pela coluna 'continente'</span></span>
+<span id="cb4-13">    <span class="at" style="color: #657422;">searchable =</span> <span class="cn" style="color: #8f5902;">TRUE</span>, <span class="co" style="color: #5E5E5E;"># Inserindo uma busca na tabela</span></span>
+<span id="cb4-14">    <span class="at" style="color: #657422;">outlined =</span> <span class="cn" style="color: #8f5902;">TRUE</span>, <span class="co" style="color: #5E5E5E;"># Linhas na tabela</span></span>
+<span id="cb4-15">    <span class="at" style="color: #657422;">columns =</span> <span class="fu" style="color: #4758AB;">list</span>(<span class="at" style="color: #657422;">ano =</span> <span class="fu" style="color: #4758AB;">colDef</span>(<span class="at" style="color: #657422;">sortable =</span> <span class="cn" style="color: #8f5902;">TRUE</span>)) <span class="co" style="color: #5E5E5E;"># Ordem crescente na coluna 'ano'</span></span>
+<span id="cb4-16">  )</span>
+<span id="cb4-17"><span class="in" style="color: #5E5E5E;">```</span></span></code></pre></div>
+<p>Como resultado, temos:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-1.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>Particularmente, gosto bastante do visual elegante que resultam as tabelas com <a href="https://glin.github.io/reactable/">reactable</a>. Na estrutura acima é possível pesquisar informações dentro da própria tabela com o “<em>Search</em>” e ao clicar em cada um dos continentes é possível explorar outras informações.</p>
+<p>Já nas visualizações gráficas, trouxe um exemplo que utiliza dados sobre nomes de bebês do pacote <a href="https://github.com/cienciadedatos/dados">dados</a> <span class="citation" data-cites="dados">(Quiroga et al. 2022)</span>, <a href="https://gganimate.com">gganimate</a> <span class="citation" data-cites="gganimate">(Pedersen e Robinson 2020)</span> e <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="ggplot2">(Wickham 2016)</span>. Para tanto, utilizei apenas dois nomes para elaborar o gráfico animado com o <a href="https://gganimate.com">gganimate</a>. Mais detalhes sobre o pacote podem ser encontrados em um <a href="https://blog.curso-r.com/posts/2021-06-09-gganimate/">post da Curso-R</a>.</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><span class="in" style="color: #5E5E5E;">```{r}</span></span>
+<span id="cb5-2"><span class="co" style="color: #5E5E5E;">#| fig-width: 8</span></span>
+<span id="cb5-3"><span class="co" style="color: #5E5E5E;">#| fig-height: 5</span></span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;">#| warning: false</span></span>
+<span id="cb5-5"><span class="co" style="color: #5E5E5E;">#| message: false</span></span>
+<span id="cb5-6"></span>
+<span id="cb5-7"><span class="fu" style="color: #4758AB;">library</span>(gganimate)</span>
+<span id="cb5-8"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
+<span id="cb5-9"></span>
+<span id="cb5-10">bebes <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
+<span id="cb5-11">  <span class="fu" style="color: #4758AB;">filter</span>(nome <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Patricia"</span>, <span class="st" style="color: #20794D;">"Helen"</span>)) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
+<span id="cb5-12">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> ano, <span class="at" style="color: #657422;">y =</span> n, <span class="at" style="color: #657422;">group =</span> nome, <span class="at" style="color: #657422;">color =</span> nome)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb5-13">  <span class="fu" style="color: #4758AB;">geom_line</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb5-14">  <span class="fu" style="color: #4758AB;">geom_point</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb5-15">  <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">"Ano"</span>) <span class="sc" style="color: #5E5E5E;">+</span> </span>
+<span id="cb5-16">  <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"Número de bebês nascidos"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb5-17">  <span class="fu" style="color: #4758AB;">transition_reveal</span>(ano) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb5-18">  <span class="fu" style="color: #4758AB;">theme_classic</span>()</span>
+<span id="cb5-19"><span class="in" style="color: #5E5E5E;">```</span></span></code></pre></div>
+<p>O resultado final será:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-2.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>E assim passamos por todas as etapas:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-3.gif" class="img-fluid"></p>
+</div>
+</div>
+<p>E aí, gostaram? Espero que sim!</p>
+<p>E lembre-se:</p>
+<blockquote class="blockquote">
+<p>“<em>O primeiro passo não te leva onde você quer ir, mas te tira de onde você está.</em>”</p>
+</blockquote>
+<p>Dê o primeiro passo, explore a documentação do <a href="https://quarto.org">Quarto.org</a> e pratique! 😉</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Materiais do tutorial:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Modelo em <code>HTML</code>: <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html" class="uri">https://a-hayana.github.io/quarto_report_post/quarto_report_post.html</a>
+</li>
+<li>Códigos: <a href="https://github.com/a-hayana/quarto_report_post/blob/master/quarto_report_post.qmd" class="uri">https://github.com/a-hayana/quarto_report_post/blob/master/quarto_report_post.qmd</a>
+</li>
+<li>Repositório: <a href="https://github.com/a-hayana/quarto_report_post" class="uri">https://github.com/a-hayana/quarto_report_post</a>
+</li>
+</ul>
+</div>
+</div>
+<p>Até breve!</p>
+<p><a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"> Ariane Hayana </a></p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-reactable" class="csl-entry">
+Lin, Greg. 2022. <span>"reactable: Interactive Data Tables Based on ’React Table’"</span>. <a href="https://CRAN.R-project.org/package=reactable">https://CRAN.R-project.org/package=reactable</a>.
+</div>
+<div id="ref-gganimate" class="csl-entry">
+Pedersen, Thomas Lin, e David Robinson. 2020. <span>"gganimate: A Grammar of Animated Graphics"</span>. <a href="https://CRAN.R-project.org/package=gganimate">https://CRAN.R-project.org/package=gganimate</a>.
+</div>
+<div id="ref-dados" class="csl-entry">
+Quiroga, Riva, Sara Mortara, Beatriz Milz, Andrea Sánchez-Tapia, Alejandra Andrea Tapia Silva, Beatriz Maurer Costa, Jean Prado, Renata Hirota, William Amorim, e Emmanuelle Rodrigues Nunes. 2022. <span>"dados: Translate Datasets to Portuguese"</span>. <a href="https://CRAN.R-project.org/package=dados">https://CRAN.R-project.org/package=dados</a>.
+</div>
+<div id="ref-ggplot2" class="csl-entry">
+Wickham, Hadley. 2016. <span>"ggplot2: Elegant Graphics for Data Analysis"</span>. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-dplyr" class="csl-entry">
+Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"dplyr: A Grammar of Data Manipulation"</span>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>Quarto</category>
+  <category>Tutorial</category>
+  <category>Relatórios</category>
+  <guid>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</guid>
+  <pubDate>Tue, 07 Feb 2023 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" medium="image" type="image/png" height="78" width="144"/>
+</item>
+<item>
+  <title>Evento: Oficina de Introdução ao R</title>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</link>
+  <description><![CDATA[ <div class="cell" data-layout-align="center">
+
+</div>
+<p>Olá, pessoal!</p>
+<p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
+<p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do grupo ao final do evento</figcaption><p></p>
+</figure>
+</div>
+<section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
+<p>Os materiais utilizados no evento estão disponíveis online e gratuitamente, <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html">na página que criamos para a atividade</a>.</p>
+<p>A oficina começou com uma rápida apresentação do coordenador do Programa Avançado em Comunicação e Jornalismo do Insper, <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/docentes-pesquisadores/pedro-burgos/">Pedro Burgos</a> sobre o Insper.</p>
+<p>Então, a <a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz</a> fez uma apresentação sobre o comunidade R-Ladies (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-rladies.html">slides disponíveis aqui</a>).</p>
+<p>No restante da manhã, o conteúdo foi focado em R básico, apresentado por <a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes</a> e <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> (slides disponíveis <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-i.html">aqui</a> e <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-ii.html">aqui</a>).</p>
+<p>Após o almoço, o conteúdo foi focado nos pacotes <a href="https://tidyverse.tidyverse.org">tidyverse</a> e <a href="https://dplyr.tidyverse.org">dplyr</a>! Apresentado por <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a> e <a href="https://www.linkedin.com/in/jeangprado/">Jean Prado</a>, o período da tarde foi muito dinâmico, apresentando conceitos utilizando bases de dados reais e recentes: quem são as pessoas eleitas como deputadas e que farão parte da Assembleia Legislativa do Estado de S. Paulo (ALESP) a partir de 2023 (<a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-tidyverse.html">slide disponível aqui</a>, e <a href="https://github.com/R-Ladies-Sao-Paulo/2022-11-oficina-introducao-R/raw/main/materiais-oficina.zip">material aqui</a>).</p>
+<p>O último conteúdo apresentado foi uma prática feita pela <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> utilizando o pacote <a href="https://dreamrs.github.io/esquisse/">esquisse</a>, uma forma interativa para começar a criar gráficos usando o pacote <a href="https://ggplot2.tidyverse.org">ggplot2</a>.</p>
+<p>Durante cada tópico apresentado na oficina, as outras pessoas apresentadoras ficavam espalhadas pela sala, atuando como monitoras tirando dúvidas das participantes e apoiando conforme a necessidade de cada uma. Também usamos um esqueminha de colar post it colorido no notebook para sinalizar o tipo de ajuda requisitada. Essa prática ajuda bastante e cria um bom dinamismo entre participantes e apresentadores<sup>1</sup>.</p>
+</section><section id="diversidade" class="level2"><h2 class="anchored" data-anchor-id="diversidade">Diversidade</h2>
+<p>Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:</p>
+<ul>
+<li><p>pessoas negras e indígenas (30 vagas);</p></li>
+<li><p>mães (30 vagas);</p></li>
+<li><p>mulheres e outras minorias de gênero (30 vagas).</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+<p>Neste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ainda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.</p>
+<p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
+</section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do David e o Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+<p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
+<p>Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.</p>
+<p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
+<p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto do Espaço GuGuDaDados</figcaption><p></p>
+</figure>
+</div>
+</section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
+<p>Infelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.</p>
+<p>Embora ainda seja necessário tomar medidas de precaução, como o uso de máscara e o distanciamento social, foi emocionante ver o grupo reunido pessoalmente novamente. A R-Ladies São Paulo espera continuar a organizar eventos presenciais no futuro, a medida que a situação com a COVID-19 melhore.</p>
+</section><section id="sorteios" class="level2"><h2 class="anchored" data-anchor-id="sorteios">Sorteios</h2>
+<p>Ao final do evento, sorteamos alguns itens entre as pessoas participantes:</p>
+<ul>
+<li><p>Uma <a href="https://www.redbubble.com/i/laptop-case/R-hex-fabric-small-hexes-by-ameliamn/40622264.2U5KG">capa de notebook</a> com o tecido de logos dos pacotes e comunidades de R, oferecido por <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (a fundadora do capítulo da R-Ladies em São Paulo).</p></li>
+<li><p>Dois livros: “Storytelling com Dados” (escrito pela Cole Nussbaumer Knaflic) e “O feminismo é para todo mundo” (escrito pela bell hooks), oferecidos pela <a href="https://beamilz.com/about-pt.html">Beatriz Milz</a> (uma das co-organizadoras do capítulo).</p></li>
+<li><p>Duas bolsas em cursos da Curso-R (oferecido pela <a href="https://curso-r.com/">Curso-R</a>).</p></li>
+</ul>
+<p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Foto dos itens sorteados no evento.</figcaption><p></p>
+</figure>
+</div>
+</section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
+<p>Agradecemos as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!</p>
+<section id="insper---espaço" class="level3"><h3 class="anchored" data-anchor-id="insper---espaço">Insper - Espaço</h3>
+<p>Insper é um instituto de ensino e pesquisa localizado em São Paulo, Brasil. É uma instituição sem fins lucrativos que oferece programas de graduação e pós-graduação em áreas como administração de empresas, economia, engenharia e ciências sociais. Além disso, o instituto também tem uma sólida oferta de cursos e atividades relacionadas à ciência de dados, como o <a href="https://www.insper.edu.br/pos-graduacao/programas-avancados/data-science-e-decisao/">Programa Avançado em Data Science e Decisão</a>, e o <a href="https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/">Master em Jornalismo de Dados, Automação e Data Storytelling</a>. O Insper também mantém um <a href="https://www.insper.edu.br/pesquisa-e-conhecimento/centro-de-ciencia-de-dados/">Centro de Ciência de Dados</a>, que realiza pesquisas de ponta em ciência de dados e inteligência artificial.</p>
+</section><section id="curso-r---bolsas-para-sorteio" class="level3"><h3 class="anchored" data-anchor-id="curso-r---bolsas-para-sorteio">Curso-R - Bolsas para sorteio</h3>
+<p>A <a href="https://curso-r.com/">Curso-R</a> é uma empresa de cursos de programação em R e Python, e consultoria em ciência de dados. A missão é descomplicar a ciência de dados para a comunidade. A empresa disponibiliza diversos conteúdos gratuitos, como:</p>
+<ul>
+<li><p>Um <a href="https://blog.curso-r.com/">blog</a> que contém posts sobre o tema desde 2017 (já são mais de 230 posts!).</p></li>
+<li><p>Três livros abertos: <a href="https://livro.curso-r.com/">Ciência de dados em R</a>, <a href="https://curso-r.github.io/zen-do-r/index.html">Zen do R</a>, e <a href="https://programando-em-shiny.curso-r.com/">Programando em Shiny</a>.</p></li>
+<li><p>Um <a href="https://www.youtube.com/@CursoR6">canal no Youtube</a>, com diversos temas! Um interessante é o que fala sobre como <a href="https://youtu.be/xnUo25VRH70">juntar bases de dados usando Joins</a>.</p></li>
+</ul>
+<p>Além dos materiais gratuitos, a Curso-R também oferece <a href="https://loja.curso-r.com/">cursos pagos</a>. Existe um <a href="https://forms.gle/RyEvCjo2Ea6orJsc6">formulário de bolsas de diversidade</a> de 100%, para pessoas que fazem parte de grupos menos representados na ciência de dados.</p>
+</section></section><section id="equipe" class="level2"><h2 class="anchored" data-anchor-id="equipe">Equipe</h2>
+<p>Agradecemos o trabalho das diversas pessoas que atuaram voluntariamente na organização evento, como:</p>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Faleiros Camargo Moreno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/angelicacustodio/">Angelica Cristina Cruz Custódio</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/brunagarbes/">Bruna Garbes Gonçalves Pinto</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/cristiane-brand%C3%A3o-6b828532/">Cristiane Brandão dos Santos</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/jeangprado/">Jean Gabriel Reis do Prado</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/nathaliademetrio/">Nathália Demétrio Vasconcelos Moura</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez dos Santos Alves</a></p></li>
+</ul></section><section id="encerramento-e-próximos-eventos" class="level2"><h2 class="anchored" data-anchor-id="encerramento-e-próximos-eventos">Encerramento e próximos eventos</h2>
+<p>Foi uma oportunidade incrível para aprender, trocar ideias e conhecer novas pessoas. Além disso, após o evento as pessoas participantes receberam certificados de participação.</p>
+<p>Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.</p>
+<p>A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.</p>
+<p>Até a próxima!</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<ol>
+<li id="fn1"><p>Usar post-its (<em>sticky notes</em>) para ajudar a organizar o tipo de ajuda necessária é uma recomendação feita no <a href="https://swcarpentry.github.io/swc-releases/2017.02/instructor-training/15-practices/">treinamento de instrutores</a> da <a href="https://carpentries.org/">The Carpentries</a>.↩︎</p></li>
+</ol></section></div> ]]></description>
+  <category>Eventos</category>
+  <category>Comunidade</category>
+  <category>Diversidade</category>
+  <guid>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</guid>
+  <pubDate>Tue, 31 Jan 2023 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Gráficos de barras com barras de erros: críticas e alternativas</title>
+  <dc:creator>[Fernanda Peres](https://fernandafperes.com.br)</dc:creator>
+  <link>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</link>
+  <description><![CDATA[ <div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 5%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/https:/fernandafperes.com.br/static/sobre_files/author.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Fernanda Peres</figcaption><p></p>
+</figure>
+</div>
+<a href="https://fernandafperes.com.br/sobre/"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/fernandaperes"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/fernandafielperes/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/estatisticaaplicada/"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/c/FernandaPeres"><i class="fab fa-youtube"></i></a>
+</center>
+<p>Este post foi escrito pela <strong>Fernanda Peres</strong>, uma integrante da comunidade R-Ladies São Paulo. Saiba mais sobre ela em sua <a href="https://fernandafperes.com.br/sobre/">página pessoal</a>!</p>
+<p>A Fernanda tem um <a href="https://www.youtube.com/c/FernandaPeres">Canal no Youtube</a> sobre estatística aplicada à vida real. Confira também a gravação do meetup apresentado pela Fernanda na R-Ladies SP, sobre <a href="https://www.youtube.com/watch?v=EtV3_3aN884">como escolher o teste estatístico adequado</a>!</p>
+<p><em>Post publicado originalmente no blog <a href="https://fernandafperes.com.br/blog/graficos-dinamite/">fernandafperes.com.br</a></em></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="os-gráficos-de-barras-com-barras-de-erros" class="level3"><h3 class="anchored" data-anchor-id="os-gráficos-de-barras-com-barras-de-erros">Os gráficos de barras com barras de erros</h3>
+<p>Se você já teve contato com algum artigo científico, é provável que você tenha visto um gráfico como o acima. Trata-se de um gráfico de barras usado para representar <strong>medidas numéricas</strong> em diferentes grupos. Nesses gráficos, a <strong>altura</strong> da barra é determinada pela <strong>média</strong> do grupo e o <strong>T</strong> que se projeta para além da barra representa uma <strong>medida de dispersão baseada na média</strong>, como o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para essa média.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g1.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>No entanto, apesar de muito utilizado - principalmente em contextos acadêmicos - esse tipo de gráfico é alvo de críticas, algumas vezes fervorosas, e tem sido chamado pejorativamente de <strong>gráfico dinamite</strong>. O nome é uma brincadeira com a semelhança desse tipo de gráfico com um detonador de dinamite antigo, aqueles que aparecem em desenhos animados.</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g2.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Uma breve busca pelo termo em inglês, <em>dynamite plots</em>, traz textos com títulos como <a href="https://hausetutorials.netlify.app/posts/2019-02-22-why-we-should-never-use-barplots-use-geomquasirandom-instead/">Por que gráficos dinamite são péssimos</a>, <a href="http://emdbolker.wikidot.com/blog:dynamite">Gráficos dinamite: um mal absoluto?</a> e até uma <em>open letter</em> intitulada <a href="https://simplystatistics.org/posts/2019-02-21-dynamite-plots-must-die/">Gráficos dinamite têm que morrer</a>.</p>
+<p>O que eu sinto é que essa discussão é ainda bem rara aqui no Brasil. E mesmo publicando em revistas internacionais, apenas uma vez, há uns cinco anos, ouvimos da editora: “os gráficos têm que ser refeitos porque eu não publico gráficos de barras”. E nós ficamos perdidas: como representar os dados, então? Curiosamente, pesquisar outros artigos da mesma revista não ajudou muito porque, adivinhem, só tinha gráfico de barras.</p>
+<p>A proposta do post é: explicar quais as críticas aos “gráficos dinamite” e discutir quais as alternativas e esse tipo de gráfico, explicando como fazê-las usando o R - mais especificamente, o pacote <code>ggplot2</code>.</p>
+</section><section id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas">Por que gráficos de barra não são ideais para representar variáveis numéricas?</h3>
+<p>Uma das principais críticas é que esse tipo gráfico resume o conjunto de dados a <strong>apenas duas informações</strong>: a média e a medida de variação. Dada essa simplificação, mesmo conjuntos de dados com <strong>distribuições bem diferentes</strong> podem dar origem ao <strong>mesmo gráfico</strong> de barras – desde que apresentem a mesma média e desvio-padrão, por exemplo.</p>
+<p>O gráfico de barras também <strong>não</strong> permite a visualização dos <strong>dados brutos</strong> – ao olharmos um gráfico de barras, não sabemos o tamanho de cada grupo, se há <em>outliers</em> (valores discrepantes) ou se a distribuição tem mais de uma moda.</p>
+<p>Além disso, é importante lembrar que esses gráficos representam a <strong>média</strong> e medidas de dispersão baseadas nela. Mas, há dados que <strong>não são adequadamente representados</strong> pela média. Isso acontece quando temos distribuições assimétricas, ou conjuntos de dados com <em>outliers</em>. Nesses casos, a <strong>mediana</strong> será uma medida mais apropriada e devemos usar gráficos que se baseiem nela (os quais discutiremos a seguir).</p>
+</section><section id="quais-as-alternativas-ao-gráfico-de-dinamite" class="level3"><h3 class="anchored" data-anchor-id="quais-as-alternativas-ao-gráfico-de-dinamite">Quais as alternativas ao gráfico de dinamite?</h3>
+<p>Fazer gráfico de barras para variáveis numéricas é <strong>errado</strong>? Não. Por mais que você vá encontrar pessoas que digam que sim - mas, isso não é um consenso. O que é um fato é que esse tipo gráfico não será a escolha mais adequada para representar dados numéricos em muitas situações. Então, vejamos as alternativas ao gráfico de barras, com seus prós e contras.</p>
+<p>Para discutir as alternativas, vamos construir diferentes gráficos utilizando um mesmo banco de dados. Abaixo, temos um gráfico de barras com a altura da coluna representando a média e a barra de erros representando o desvio-padrão. Observe como os grupos A e C apresentam barras praticamente idênticas:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="gráficos-dotplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-dotplot">Gráficos dotplot</h4>
+<p>Uma alternativa ao gráfico dinamite é o dotplot. Nesse gráfico, cada sujeito é representado por um ponto – ou seja, estamos visualizando os dados brutos.</p>
+<p>Além disso, é comum sobrepor a esses pontos uma linha horizontal representando a média e uma barra de erros indicando uma medida de dispersão (que, assim como no gráfico de barras, pode ser o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para a média).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Note que o dotplot mostra muito mais informações que o gráfico de barras. Ao analisarmos o dotplot, conseguimos perceber que o grupo B é bem menor que os outros dois, sendo formado por apenas 10 sujeitos. Também notamos que nesse grupo parece haver valores discrepantes, bem superiores aos demais. O grupo C parece ser formado por dois subgrupos: há um grupo de pontos acima da média que está separado dos pontos abaixo da média. Esse padrão não é observado no grupo A (apesar de os grupos A e C terem médias e desvios-padrão praticamente idênticos).</p>
+<p>O que eu vejo como vantagens do dotplot? Além de ser um gráfico que nos permite visualizar os dados brutos, é um gráfico baseado em média. Se usamos um teste paramétrico para comparar os grupos, como o teste-t ou a ANOVA, a análise será baseada na média e em medidas de dispersão baseadas na média. Portanto, eu gosto de poder visualizar essas medidas no gráfico.</p>
+<p>Por outro lado, é um gráfico que não mostra diretamente quais pontos são <em>outliers</em> (ao contrário do boxplot, que discutiremos a seguir). Além disso, se estivermos trabalhando com amostras muito grandes, teremos <strong>muitos pontos</strong> no gráfico e a visualização ficará comprometida.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do dotplot:</strong></p>
+<ul>
+<li>Permite visualizar dos dados brutos<br>
+</li>
+<li>Inclui a média e uma medida de dispersão baseada na média - medidas utilizadas pelos testes paramétricos em seus cálculos</li>
+</ul>
+<p><br><strong>Desvantagens do dotplot:</strong></p>
+<ul>
+<li>Não mostra diretamente os outliers<br>
+</li>
+<li>É de difícil visualização quando os grupos são grandes – deve ser usado preferencialmente em amostras menores</li>
+</ul>
+<section id="como-fazer-um-dot-plot-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-dot-plot-no-r">Como fazer um dot plot no R?</h5>
+<p>Segue o código usado para gerar o dot plot acima, usando o <code>ggplot2</code>.<br>
+Se você não tem o hábito de usar o <code>ggplot2</code>, o código abaixo pode parecer assustador. Mas, ele é razoavelmente simples quando se entende a lógica de funcionamento do <code>ggplot2</code>. Se tiver interesse no pacote, recomendo essa playlist explicando <a href="https://youtube.com/playlist?list=PLOw62cBQ5j9X5eOavzeu9CaHMO6TFsPkY">como construir gráficos no ggplot2 do zero</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op" style="color: #5E5E5E;">(</span>binaxis <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"y"</span>, stackdir <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"center"</span>, alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.3</span>,</span>
+<span>               dotsize <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>, binwidth <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span>, stackratio <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.4</span>,</span>
+<span>               position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span>,</span>
+<span>               fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey70"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"summary"</span>, fun.data <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mean_sd"</span>,</span>
+<span>                position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.15</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_crossbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"summary"</span>, fun <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mean"</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>ymin <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">..y..</span>, ymax <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">..y..</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>                fatten <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.2</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.5</span>, position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>                show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section><section id="gráficos-boxplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-boxplot">Gráficos boxplot</h4>
+<p>Outra alternativa é o boxplot. O boxplot resume, em uma única figura, cinco medidas de posição: limite inferior, quartil 1 (percentil 25%), mediana, quartil 3 (percentil 75%) e limite superior. Além disso, ele é um gráfico excelente para visualizar valores discrepantes (outliers). Caso tenha interesse em entender melhor a estrutura do boxplot, recomendo a leitura <a href="https://fernandafperes.com.br/blog/interpretacao-boxplot/">desse post</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid figure-img" width="450"></p>
+<p></p><figcaption class="figure-caption">Estrutura básica de um gráfico boxplot.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Aplicando aos nossos dados, obtemos o gráfico abaixo. Observe que rapidamente conseguimos detectar que o grupo B apresenta dois valores outliers acima do limite superior:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot para três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Assim como o dot plot, o boxplot mostra muito mais informações que o gráfico de barras: cinco medidas de posição + <em>outliers</em>. Além disso, conseguimos avaliar a dispersão dos dados através da altura da caixa (que representa a amplitude interquartil) e da distância entre o limite inferior e o superior.</p>
+<p>Porém, é importante entender que as medidas representadas em um boxplot <strong>não são aquelas usadas em testes paramétricos</strong> - o que significa que esse pode não ser o gráfico ideal para representar dados analisados por esses testes. Além disso, o boxplot só pode ser usado em <strong>amostras maiores</strong>. O n mínimo para estimar as 5 medidas é n = 5, mas o ideal mesmo é usá-lo em amostras superiores a isso (ainda que não haja na literatura um consenso de qual seria esse n ideal).</p>
+<p>E, assim como o gráfico de barras, o boxplot <strong>não</strong> mostra os <strong>dados brutos</strong>. Ao olharmos para o boxplot não temos como saber o tamanho dos grupos ou se a distribuição tem mais de uma moda.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do boxplot:</strong></p>
+<ul>
+<li>Inclui cinco medidas de posição<br>
+</li>
+<li>Mostra os valores que são <em>outliers</em>
+</li>
+</ul>
+<p><br><strong>Desvantagens do boxplot:</strong></p>
+<ul>
+<li>Não mostra os dados brutos<br>
+</li>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno (n &lt; 5)<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos</li>
+</ul>
+<p>Ah, dada essa limitação do boxplot não mostrar os dados brutos, sugere-se que um dotplot seja sobreposto a ele, como no gráfico abaixo:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r">Como fazer um boxplot com dot plot sobreposto no R?</h5>
+<p>Segue o código usado para gerar o boxplot acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"boxplot"</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.2</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"white"</span>, outlier.alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op" style="color: #5E5E5E;">(</span>binaxis <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"y"</span>, stackdir <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"center"</span>, alpha <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.3</span>,</span>
+<span>               dotsize <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>, binwidth <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.6</span>, stackratio <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1.4</span>,</span>
+<span>               position <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.9</span><span class="op" style="color: #5E5E5E;">)</span>, show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span>,</span>
+<span>               fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey40"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section><section id="gráficos-violino-violin-plot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-violino-violin-plot">Gráficos violino (<em>violin plot</em>)</h4>
+<p>A terceira alternativa é o gráfico violino, em inglês <em>violin plot</em>. O gráfico violino é um gráfico que mostra a distribuição dos dados através de uma curva de densidade. Além disso, esse gráfico pode incluir em seu interior um boxplot. Se quiser entender mais sobre a construção de um gráfico violino, recomendo a leitura <a href="https://www.instagram.com/p/CcF6Nm3lotk/?utm_source=ig_web_copy_link">desse post</a>.</p>
+<p>Aplicando aos nossos dados, obtemos o gráfico a seguir:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>O gráfico nos permite observar que, apesar de terem a mesma média e desvio-padrão, os grupos A e C apresentam distribuições diferentes. Além disso, o grupo C apresenta uma distribuição bimodal (há dois picos).</p>
+<p>Por ter um boxplot em seu interior, o gráfico violino apresentará muitas das mesmas vantagens e desvantagens. Além disso, o n exigido para um gráfico de violino é superior ao n necessário para um boxplot. O gráfico violino <strong>não</strong> deve ser usado quando o tamanho do grupo é <strong>pequeno</strong>, já que nesses casos não será possível determinar corretamente a distribuição.</p>
+<p>Outra desvantagem é: trata-se de um gráfico recente e muito pouco conhecido (poucas pessoas declaram saber interpretá-lo).</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Permite visualizar a distribuição dos dados<br>
+</li>
+<li>Se incluir um boxplot em seu interior, mostra cinco medidas de posição</li>
+</ul>
+<p><br><strong>Desvantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno – nesses casos, não será possível determinar corretamente a distribuição<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos<br>
+</li>
+<li>Não mostra os dados brutos</li>
+</ul>
+<section id="como-fazer-um-gráfico-violino-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-gráfico-violino-no-r">Como fazer um gráfico violino no R?</h5>
+<p>Segue o código usado para gerar o gráfico violino acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados</span>, <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Grupo</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">Escores</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"grey90"</span>, trim <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">F</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op" style="color: #5E5E5E;">(</span>width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.1</span>, outlier.shape <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+</div>
+</section></section></section><section id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas">Afinal, usar ou não o gráfico de barras para variáveis numéricas?</h3>
+<p>Uma desvantagem que se aplica a todas as alternativas ao gráfico de barras, na minha opinião, é: são gráficos muito menos difundidos e, por isso, uma audiência não-técnica terá dificuldade em interpretá-los. Acho esses gráficos incríveis para artigos científicos, para uso pelo time de análise de dados em uma empresa? Com certeza. Acho que são gráficos adequados para matérias jornalísticas ou para divulgação científica? Não. Nesses últimos cenários, mesmo com todas as críticas (válidas) ao gráfico de barras, eu tendo a preferi-lo. Afinal, um gráfico só é bom quando ele comunica com a sua audiência.</p>
+<p>O gráfico mais adequado vai depender: do teste estatístico que foi feito, do tamanho dos grupos, do seu público.</p>
+<p>Se gráficos são um assunto que te interessa, recomendo um livro que ganhou meu coração: o livro <a href="https://amzn.to/3qKr4Xf">Storytelling com dados</a>, escrito pela Cole Nussbaumer Knaflic.</p>
+<p>Recomendo também a leitura do artigo de <span class="citation" data-cites="weissgerber2019reveal">Weissgerber et al. (2019)</span>, que resume as informações discutidas aqui.</p>
+<hr></section><section id="referências" class="level3"><h3 class="anchored" data-anchor-id="referências">Referências:</h3>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-weissgerber2019reveal" class="csl-entry">
+Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic, Oscar Garcia-Valencia, Zoran Bukumiric, Marko D Savic, Vesna D Garovic, e Natasa M Milic. 2019. <span>"Reveal, don’t conceal: transforming data visualization to improve transparency"</span>. <em>Circulation</em> 140 (18): 1506–18.
+</div>
+</div></section></div> ]]></description>
+  <category>Gráficos</category>
+  <category>Tutorial</category>
+  <category>Dataviz</category>
+  <guid>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</guid>
+  <pubDate>Wed, 14 Dec 2022 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/grafico-dinamite.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Boas vindas ao blog da R-Ladies São Paulo!</title>
+  <dc:creator>Equipe R-Ladies SP</dc:creator>
+  <dc:creator>[Beatriz Milz](https://beamilz.com)</dc:creator>
+  <link>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="o-que-é-a-r-ladies-são-paulo" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-a-r-ladies-são-paulo">O que é a R-Ladies São Paulo?</h2>
+<p>A R-Ladies São Paulo é uma comunidade que iniciou em 2018, e desde então buscamos promover a diversidade de gênero na comunidade da linguagem R: organizando eventos presenciais e online, tirando dúvidas no nosso grupo do telegram, disponibilizando os materiais utilizados nos eventos, entre outros.</p>
+<p>Caso queira saber mais, consulte a página <a href="https://rladies-sp.org/sobre.html">Sobre a R-Ladies São Paulo</a>.</p>
+<center>
+<img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-conre-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2020.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-loggi-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2022.jpg" class="img-fluid" style="width:40.0%" data-fig-align="center">
+</center>
+</section>
+<section id="por-que-um-blog" class="level2">
+<h2 class="anchored" data-anchor-id="por-que-um-blog">Por que um blog?</h2>
+<p>Ter um site/blog é uma forma de facilitar a divulgar o conteúdo que produzimos, além de ser uma forma de incentivar as pessoas da comunidade a compartilharem seus conhecimentos por aqui também! Essa é uma vontade que as pessoas da comunidade expressaram algumas vezes no passado: já discutimos anteriormente sobre criar um <a href="https://github.com/rladies/blog-rladies-latam">blog das R-Ladies na América Latina (R-Ladies LATAM)</a> e a ideia foi liderada pela <a href="https://github.com/brunaw">Bruna Wundervald</a>, uma das co-organizadoras da R-Ladies São Paulo na época (em janeiro de 2019); em junho de 2021 a ideia voltou para criar um <a href="https://github.com/R-Ladies-Sao-Paulo/blog-old">blog para a comunidade em São Paulo</a>, mas infelizmente nenhuma dessas versões chegou a ser utilizada e divulgada.</p>
+<p>A volta dos eventos presenciais (em novembro de 2022) foi um impulso para voltar a trabalhar na criação de um blog para a comunidade!</p>
+</section>
+<section id="posso-contribuir-com-o-blog" class="level2">
+<h2 class="anchored" data-anchor-id="posso-contribuir-com-o-blog">Posso contribuir com o blog?</h2>
+<p>Sim! Começamos a preparar uma página com informações para pessoas que queiram enviar seus textos por aqui: <a href="https://rladies-sp.org/contribuir-com-o-blog.html">Como contribuir com o blog?</a>. Também é possível contribuir sugerindo novos conteúdos, avisando caso tenha alguma informação desatualizada, entre outros.</p>
+</section>
+<section id="inscreva-se-para-receber-novidades" class="level2">
+<h2 class="anchored" data-anchor-id="inscreva-se-para-receber-novidades">Inscreva-se para receber novidades</h2>
+<p>Neste blog, existe um formulário simples para inscrição do seu email, caso queira receber as novidades! O formulário se encontra na coluna à direita do texto principal, e se parece com a imagem a seguir:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/paste-83C384D7.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</section>
+<section id="o-que-esperar" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-esperar">O que esperar?</h2>
+<p>A ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p></p><figcaption class="figure-caption">Arte por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption><p></p>
+</figure>
+</div>
+<p>Esperamos que seja um lugar rico de troca e compartilhamento! Até logo!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Novidades</category>
+  <guid>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</guid>
+  <pubDate>Mon, 05 Dec 2022 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

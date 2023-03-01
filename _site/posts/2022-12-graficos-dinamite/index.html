@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Fernanda Peres">
+<title>R-Ladies São Paulo - Gráficos de barras com barras de erros: críticas e alternativas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Gráficos de barras com barras de erros: críticas e alternativas">
+<meta name="twitter:description" content="Se você já teve contato com algum artigo científico, é provável que você tenha visto um gráfico como o acima.">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/grafico-dinamite.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="2100">
+<meta name="twitter:image-width" content="2100">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/"><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org"><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+<div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Gráficos de barras com barras de erros: críticas e alternativas</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">Gráficos de barras com barras de erros: críticas e alternativas</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Gráficos</div>
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Dataviz</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://fernandafperes.com.br">Fernanda Peres</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">14 de dezembro de 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../img/logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../" class="sidebar-item-text sidebar-link">Página inicial</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sobre.html" class="sidebar-item-text sidebar-link">Sobre a R-Ladies SP</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../como-participar.html" class="sidebar-item-text sidebar-link">Como participar?</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contribuir-com-o-blog.html" class="sidebar-item-text sidebar-link">Como contribuir com o blog?</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sugestoes.html" class="sidebar-item-text sidebar-link">Sugestão de conteúdos</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:12px Helvetica,Arial,sans-serif;  width:200px; margin: 0px !important;}
+    
+    #mc_embed_signup h2 {margin: 0px !important;}
+    
+    
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://rladies-sp.us21.list-manage.com/subscribe/post?u=7f53effc85201b5269f6e0991&amp;id=3bd5bc80fe&amp;f_id=000cc3e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <h2>Inscreva-se para receber novidades!</h2>
+<div class="mc-field-group">
+    <label for="mce-EMAIL">Email <span class="asterisk">*</span>
+</label>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+    <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f53effc85201b5269f6e0991_3bd5bc80fe" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <center><input type="submit" value="Inscreva-se" name="subscribe" id="mc-embedded-subscribe" class="button"></center>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#os-gr%C3%A1ficos-de-barras-com-barras-de-erros" id="toc-os-gráficos-de-barras-com-barras-de-erros" class="nav-link active" data-scroll-target="#os-gr%C3%A1ficos-de-barras-com-barras-de-erros">Os gráficos de barras com barras de erros</a></li>
+  <li><a href="#por-que-gr%C3%A1ficos-de-barra-n%C3%A3o-s%C3%A3o-ideais-para-representar-vari%C3%A1veis-num%C3%A9ricas" id="toc-por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas" class="nav-link" data-scroll-target="#por-que-gr%C3%A1ficos-de-barra-n%C3%A3o-s%C3%A3o-ideais-para-representar-vari%C3%A1veis-num%C3%A9ricas">Por que gráficos de barra não são ideais para representar variáveis numéricas?</a></li>
+  <li><a href="#quais-as-alternativas-ao-gr%C3%A1fico-de-dinamite" id="toc-quais-as-alternativas-ao-gráfico-de-dinamite" class="nav-link" data-scroll-target="#quais-as-alternativas-ao-gr%C3%A1fico-de-dinamite">Quais as alternativas ao gráfico de dinamite?</a></li>
+  <li><a href="#afinal-usar-ou-n%C3%A3o-o-gr%C3%A1fico-de-barras-para-vari%C3%A1veis-num%C3%A9ricas" id="toc-afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas" class="nav-link" data-scroll-target="#afinal-usar-ou-n%C3%A3o-o-gr%C3%A1fico-de-barras-para-vari%C3%A1veis-num%C3%A9ricas">Afinal, usar ou não o gráfico de barras para variáveis numéricas?</a></li>
+  <li><a href="#refer%C3%AAncias" id="toc-referências" class="nav-link" data-scroll-target="#refer%C3%AAncias">Referências:</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2022-12-graficos-dinamite/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 5%;">
+<figure class="figure"><p><img src="https://fernandafperes.com.br/static/sobre_files/author.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Fernanda Peres</figcaption><p></p>
+</figure>
+</div>
+<a href="https://fernandafperes.com.br/sobre/"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/fernandaperes"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/fernandafielperes/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/estatisticaaplicada/"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/c/FernandaPeres"><i class="fab fa-youtube"></i></a>
+</center>
+<p>Este post foi escrito pela <strong>Fernanda Peres</strong>, uma integrante da comunidade R-Ladies São Paulo. Saiba mais sobre ela em sua <a href="https://fernandafperes.com.br/sobre/">página pessoal</a>!</p>
+<p>A Fernanda tem um <a href="https://www.youtube.com/c/FernandaPeres">Canal no Youtube</a> sobre estatística aplicada à vida real. Confira também a gravação do meetup apresentado pela Fernanda na R-Ladies SP, sobre <a href="https://www.youtube.com/watch?v=EtV3_3aN884">como escolher o teste estatístico adequado</a>!</p>
+<p><em>Post publicado originalmente no blog <a href="https://fernandafperes.com.br/blog/graficos-dinamite/">fernandafperes.com.br</a></em></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="os-gráficos-de-barras-com-barras-de-erros" class="level3"><h3 class="anchored" data-anchor-id="os-gráficos-de-barras-com-barras-de-erros">Os gráficos de barras com barras de erros</h3>
+<p>Se você já teve contato com algum artigo científico, é provável que você tenha visto um gráfico como o acima. Trata-se de um gráfico de barras usado para representar <strong>medidas numéricas</strong> em diferentes grupos. Nesses gráficos, a <strong>altura</strong> da barra é determinada pela <strong>média</strong> do grupo e o <strong>T</strong> que se projeta para além da barra representa uma <strong>medida de dispersão baseada na média</strong>, como o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para essa média.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/g1.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>No entanto, apesar de muito utilizado - principalmente em contextos acadêmicos - esse tipo de gráfico é alvo de críticas, algumas vezes fervorosas, e tem sido chamado pejorativamente de <strong>gráfico dinamite</strong>. O nome é uma brincadeira com a semelhança desse tipo de gráfico com um detonador de dinamite antigo, aqueles que aparecem em desenhos animados.</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/g2.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Uma breve busca pelo termo em inglês, <em>dynamite plots</em>, traz textos com títulos como <a href="https://hausetutorials.netlify.app/posts/2019-02-22-why-we-should-never-use-barplots-use-geomquasirandom-instead/">Por que gráficos dinamite são péssimos</a>, <a href="http://emdbolker.wikidot.com/blog:dynamite">Gráficos dinamite: um mal absoluto?</a> e até uma <em>open letter</em> intitulada <a href="https://simplystatistics.org/posts/2019-02-21-dynamite-plots-must-die/">Gráficos dinamite têm que morrer</a>.</p>
+<p>O que eu sinto é que essa discussão é ainda bem rara aqui no Brasil. E mesmo publicando em revistas internacionais, apenas uma vez, há uns cinco anos, ouvimos da editora: “os gráficos têm que ser refeitos porque eu não publico gráficos de barras”. E nós ficamos perdidas: como representar os dados, então? Curiosamente, pesquisar outros artigos da mesma revista não ajudou muito porque, adivinhem, só tinha gráfico de barras.</p>
+<p>A proposta do post é: explicar quais as críticas aos “gráficos dinamite” e discutir quais as alternativas e esse tipo de gráfico, explicando como fazê-las usando o R - mais especificamente, o pacote <code>ggplot2</code>.</p>
+</section><section id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="por-que-gráficos-de-barra-não-são-ideais-para-representar-variáveis-numéricas">Por que gráficos de barra não são ideais para representar variáveis numéricas?</h3>
+<p>Uma das principais críticas é que esse tipo gráfico resume o conjunto de dados a <strong>apenas duas informações</strong>: a média e a medida de variação. Dada essa simplificação, mesmo conjuntos de dados com <strong>distribuições bem diferentes</strong> podem dar origem ao <strong>mesmo gráfico</strong> de barras – desde que apresentem a mesma média e desvio-padrão, por exemplo.</p>
+<p>O gráfico de barras também <strong>não</strong> permite a visualização dos <strong>dados brutos</strong> – ao olharmos um gráfico de barras, não sabemos o tamanho de cada grupo, se há <em>outliers</em> (valores discrepantes) ou se a distribuição tem mais de uma moda.</p>
+<p>Além disso, é importante lembrar que esses gráficos representam a <strong>média</strong> e medidas de dispersão baseadas nela. Mas, há dados que <strong>não são adequadamente representados</strong> pela média. Isso acontece quando temos distribuições assimétricas, ou conjuntos de dados com <em>outliers</em>. Nesses casos, a <strong>mediana</strong> será uma medida mais apropriada e devemos usar gráficos que se baseiem nela (os quais discutiremos a seguir).</p>
+</section><section id="quais-as-alternativas-ao-gráfico-de-dinamite" class="level3"><h3 class="anchored" data-anchor-id="quais-as-alternativas-ao-gráfico-de-dinamite">Quais as alternativas ao gráfico de dinamite?</h3>
+<p>Fazer gráfico de barras para variáveis numéricas é <strong>errado</strong>? Não. Por mais que você vá encontrar pessoas que digam que sim - mas, isso não é um consenso. O que é um fato é que esse tipo gráfico não será a escolha mais adequada para representar dados numéricos em muitas situações. Então, vejamos as alternativas ao gráfico de barras, com seus prós e contras.</p>
+<p>Para discutir as alternativas, vamos construir diferentes gráficos utilizando um mesmo banco de dados. Abaixo, temos um gráfico de barras com a altura da coluna representando a média e a barra de erros representando o desvio-padrão. Observe como os grupos A e C apresentam barras praticamente idênticas:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="gráficos-dotplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-dotplot">Gráficos dotplot</h4>
+<p>Uma alternativa ao gráfico dinamite é o dotplot. Nesse gráfico, cada sujeito é representado por um ponto – ou seja, estamos visualizando os dados brutos.</p>
+<p>Além disso, é comum sobrepor a esses pontos uma linha horizontal representando a média e uma barra de erros indicando uma medida de dispersão (que, assim como no gráfico de barras, pode ser o desvio-padrão, o erro-padrão da média ou o intervalo de confiança para a média).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Note que o dotplot mostra muito mais informações que o gráfico de barras. Ao analisarmos o dotplot, conseguimos perceber que o grupo B é bem menor que os outros dois, sendo formado por apenas 10 sujeitos. Também notamos que nesse grupo parece haver valores discrepantes, bem superiores aos demais. O grupo C parece ser formado por dois subgrupos: há um grupo de pontos acima da média que está separado dos pontos abaixo da média. Esse padrão não é observado no grupo A (apesar de os grupos A e C terem médias e desvios-padrão praticamente idênticos).</p>
+<p>O que eu vejo como vantagens do dotplot? Além de ser um gráfico que nos permite visualizar os dados brutos, é um gráfico baseado em média. Se usamos um teste paramétrico para comparar os grupos, como o teste-t ou a ANOVA, a análise será baseada na média e em medidas de dispersão baseadas na média. Portanto, eu gosto de poder visualizar essas medidas no gráfico.</p>
+<p>Por outro lado, é um gráfico que não mostra diretamente quais pontos são <em>outliers</em> (ao contrário do boxplot, que discutiremos a seguir). Além disso, se estivermos trabalhando com amostras muito grandes, teremos <strong>muitos pontos</strong> no gráfico e a visualização ficará comprometida.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do dotplot:</strong></p>
+<ul>
+<li>Permite visualizar dos dados brutos<br>
+</li>
+<li>Inclui a média e uma medida de dispersão baseada na média - medidas utilizadas pelos testes paramétricos em seus cálculos</li>
+</ul>
+<p><br><strong>Desvantagens do dotplot:</strong></p>
+<ul>
+<li>Não mostra diretamente os outliers<br>
+</li>
+<li>É de difícil visualização quando os grupos são grandes – deve ser usado preferencialmente em amostras menores</li>
+</ul>
+<section id="como-fazer-um-dot-plot-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-dot-plot-no-r">Como fazer um dot plot no R?</h5>
+<p>Segue o código usado para gerar o dot plot acima, usando o <code>ggplot2</code>.<br>
+Se você não tem o hábito de usar o <code>ggplot2</code>, o código abaixo pode parecer assustador. Mas, ele é razoavelmente simples quando se entende a lógica de funcionamento do <code>ggplot2</code>. Se tiver interesse no pacote, recomendo essa playlist explicando <a href="https://youtube.com/playlist?list=PLOw62cBQ5j9X5eOavzeu9CaHMO6TFsPkY">como construir gráficos no ggplot2 do zero</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dados</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Grupo</span>, y <span class="op">=</span> <span class="va">Escores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>,</span>
+<span>               dotsize <span class="op">=</span> <span class="fl">1</span>, binwidth <span class="op">=</span> <span class="fl">2</span>, stackratio <span class="op">=</span> <span class="fl">1.4</span>,</span>
+<span>               position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span>, show.legend <span class="op">=</span> <span class="cn">F</span>,</span>
+<span>               fill <span class="op">=</span> <span class="st">"grey70"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"summary"</span>, fun.data <span class="op">=</span> <span class="st">"mean_sd"</span>,</span>
+<span>                position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span>, width <span class="op">=</span> <span class="fl">0.15</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_crossbar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"summary"</span>, fun <span class="op">=</span> <span class="st">"mean"</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">..y..</span>, ymax <span class="op">=</span> <span class="va">..y..</span><span class="op">)</span>,</span>
+<span>                fatten <span class="op">=</span> <span class="fl">0.2</span>, width <span class="op">=</span> <span class="fl">0.5</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span>,</span>
+<span>                show.legend <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="gráficos-boxplot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-boxplot">Gráficos boxplot</h4>
+<p>Outra alternativa é o boxplot. O boxplot resume, em uma única figura, cinco medidas de posição: limite inferior, quartil 1 (percentil 25%), mediana, quartil 3 (percentil 75%) e limite superior. Além disso, ele é um gráfico excelente para visualizar valores discrepantes (outliers). Caso tenha interesse em entender melhor a estrutura do boxplot, recomendo a leitura <a href="https://fernandafperes.com.br/blog/interpretacao-boxplot/">desse post</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/g5.png" class="img-fluid figure-img" width="450"></p>
+<p></p><figcaption class="figure-caption">Estrutura básica de um gráfico boxplot.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Aplicando aos nossos dados, obtemos o gráfico abaixo. Observe que rapidamente conseguimos detectar que o grupo B apresenta dois valores outliers acima do limite superior:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot para três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>Assim como o dot plot, o boxplot mostra muito mais informações que o gráfico de barras: cinco medidas de posição + <em>outliers</em>. Além disso, conseguimos avaliar a dispersão dos dados através da altura da caixa (que representa a amplitude interquartil) e da distância entre o limite inferior e o superior.</p>
+<p>Porém, é importante entender que as medidas representadas em um boxplot <strong>não são aquelas usadas em testes paramétricos</strong> - o que significa que esse pode não ser o gráfico ideal para representar dados analisados por esses testes. Além disso, o boxplot só pode ser usado em <strong>amostras maiores</strong>. O n mínimo para estimar as 5 medidas é n = 5, mas o ideal mesmo é usá-lo em amostras superiores a isso (ainda que não haja na literatura um consenso de qual seria esse n ideal).</p>
+<p>E, assim como o gráfico de barras, o boxplot <strong>não</strong> mostra os <strong>dados brutos</strong>. Ao olharmos para o boxplot não temos como saber o tamanho dos grupos ou se a distribuição tem mais de uma moda.</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do boxplot:</strong></p>
+<ul>
+<li>Inclui cinco medidas de posição<br>
+</li>
+<li>Mostra os valores que são <em>outliers</em>
+</li>
+</ul>
+<p><br><strong>Desvantagens do boxplot:</strong></p>
+<ul>
+<li>Não mostra os dados brutos<br>
+</li>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno (n &lt; 5)<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos</li>
+</ul>
+<p>Ah, dada essa limitação do boxplot não mostrar os dados brutos, sugere-se que um dotplot seja sobreposto a ele, como no gráfico abaixo:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<section id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-boxplot-com-dot-plot-sobreposto-no-r">Como fazer um boxplot com dot plot sobreposto no R?</h5>
+<p>Segue o código usado para gerar o boxplot acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dados</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Grupo</span>, y <span class="op">=</span> <span class="va">Escores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"boxplot"</span>, width <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"white"</span>, outlier.alpha <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html">geom_dotplot</a></span><span class="op">(</span>binaxis <span class="op">=</span> <span class="st">"y"</span>, stackdir <span class="op">=</span> <span class="st">"center"</span>, alpha <span class="op">=</span> <span class="fl">0.3</span>,</span>
+<span>               dotsize <span class="op">=</span> <span class="fl">1</span>, binwidth <span class="op">=</span> <span class="fl">1.6</span>, stackratio <span class="op">=</span> <span class="fl">1.4</span>,</span>
+<span>               position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span>, show.legend <span class="op">=</span> <span class="cn">F</span>,</span>
+<span>               fill <span class="op">=</span> <span class="st">"grey40"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="gráficos-violino-violin-plot" class="level4"><h4 class="anchored" data-anchor-id="gráficos-violino-violin-plot">Gráficos violino (<em>violin plot</em>)</h4>
+<p>A terceira alternativa é o gráfico violino, em inglês <em>violin plot</em>. O gráfico violino é um gráfico que mostra a distribuição dos dados através de uma curva de densidade. Além disso, esse gráfico pode incluir em seu interior um boxplot. Se quiser entender mais sobre a construção de um gráfico violino, recomendo a leitura <a href="https://www.instagram.com/p/CcF6Nm3lotk/?utm_source=ig_web_copy_link">desse post</a>.</p>
+<p>Aplicando aos nossos dados, obtemos o gráfico a seguir:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>O gráfico nos permite observar que, apesar de terem a mesma média e desvio-padrão, os grupos A e C apresentam distribuições diferentes. Além disso, o grupo C apresenta uma distribuição bimodal (há dois picos).</p>
+<p>Por ter um boxplot em seu interior, o gráfico violino apresentará muitas das mesmas vantagens e desvantagens. Além disso, o n exigido para um gráfico de violino é superior ao n necessário para um boxplot. O gráfico violino <strong>não</strong> deve ser usado quando o tamanho do grupo é <strong>pequeno</strong>, já que nesses casos não será possível determinar corretamente a distribuição.</p>
+<p>Outra desvantagem é: trata-se de um gráfico recente e muito pouco conhecido (poucas pessoas declaram saber interpretá-lo).</p>
+<p>Em resumo:</p>
+<p><strong>Vantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Permite visualizar a distribuição dos dados<br>
+</li>
+<li>Se incluir um boxplot em seu interior, mostra cinco medidas de posição</li>
+</ul>
+<p><br><strong>Desvantagens do gráfico de violino:</strong></p>
+<ul>
+<li>Não deve ser usado quando o tamanho do grupo é pequeno – nesses casos, não será possível determinar corretamente a distribuição<br>
+</li>
+<li>Não mostra as medidas avaliadas por testes paramétricos<br>
+</li>
+<li>Não mostra os dados brutos</li>
+</ul>
+<section id="como-fazer-um-gráfico-violino-no-r" class="level5"><h5 class="anchored" data-anchor-id="como-fazer-um-gráfico-violino-no-r">Como fazer um gráfico violino no R?</h5>
+<p>Segue o código usado para gerar o gráfico violino acima, usando o <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dados</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Grupo</span>, y <span class="op">=</span> <span class="va">Escores</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"grey90"</span>, trim <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.1</span>, outlier.shape <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section></section><section id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas" class="level3"><h3 class="anchored" data-anchor-id="afinal-usar-ou-não-o-gráfico-de-barras-para-variáveis-numéricas">Afinal, usar ou não o gráfico de barras para variáveis numéricas?</h3>
+<p>Uma desvantagem que se aplica a todas as alternativas ao gráfico de barras, na minha opinião, é: são gráficos muito menos difundidos e, por isso, uma audiência não-técnica terá dificuldade em interpretá-los. Acho esses gráficos incríveis para artigos científicos, para uso pelo time de análise de dados em uma empresa? Com certeza. Acho que são gráficos adequados para matérias jornalísticas ou para divulgação científica? Não. Nesses últimos cenários, mesmo com todas as críticas (válidas) ao gráfico de barras, eu tendo a preferi-lo. Afinal, um gráfico só é bom quando ele comunica com a sua audiência.</p>
+<p>O gráfico mais adequado vai depender: do teste estatístico que foi feito, do tamanho dos grupos, do seu público.</p>
+<p>Se gráficos são um assunto que te interessa, recomendo um livro que ganhou meu coração: o livro <a href="https://amzn.to/3qKr4Xf">Storytelling com dados</a>, escrito pela Cole Nussbaumer Knaflic.</p>
+<p>Recomendo também a leitura do artigo de <span class="citation" data-cites="weissgerber2019reveal">Weissgerber et al. (<a href="#ref-weissgerber2019reveal" role="doc-biblioref">2019</a>)</span>, que resume as informações discutidas aqui.</p>
+<hr></section><section id="referências" class="level3"><h3 class="anchored" data-anchor-id="referências">Referências:</h3>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-weissgerber2019reveal" class="csl-entry" role="doc-biblioentry">
+Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic, Oscar Garcia-Valencia, Zoran Bukumiric, Marko D Savic, Vesna D Garovic, e Natasa M Milic. 2019. <span>"Reveal, don’t conceal: transforming data visualization to improve transparency"</span>. <em>Circulation</em> 140 (18): 1506–18.
+</div>
+</div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.rladies-sp\.org\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

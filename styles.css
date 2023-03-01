@@ -25,3 +25,8 @@ div.csl-entry {
 .callout.callout-style-default div.callout-body {
   padding: 1em;
 }
+
+
+pre > code {
+  background-color: #f0f2f4;
+}

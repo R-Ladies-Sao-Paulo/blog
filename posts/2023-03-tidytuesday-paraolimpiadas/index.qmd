@@ -127,7 +127,7 @@ paralympic_swimming <- paralympic_byMedal %>%
 
 # Uma "olhada" na base criada!
 paralympic_swimming |> 
-  dplyr::glimpse()
+  glimpse()
 ```
 
 Utilizando essa base com a contagem de medalhas, podemos filtrar os 5 países com mais medalhas:
@@ -396,6 +396,7 @@ Regressão Poisson: <https://online.stat.psu.edu/stat462/node/209/>
 ## Concluindo
 
 Essa foi uma breve demonstração do quanto o Tidytuesday é interessante e como podemos praticar nossas habilidades em tratamento de dados e análise. Esperamos que este artigo tenha inspirado você a explorar o mundo do TidyTuesday, e colocar a mão na massa no R, usando essa fonte de dados incrível para aprimorar suas habilidades em ciência de dados. Lembre-se que a comunidade tá aqui para te ajudar a alcançar seu objetivo em ciência de dados!
+
 
 ```{r}
 #| echo: false

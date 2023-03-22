@@ -9,8 +9,61 @@
 <link>https://rladies-sp.org/index.html</link>
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.2.313</generator>
-<lastBuildDate>Wed, 01 Mar 2023 03:00:00 GMT</lastBuildDate>
+<generator>quarto-1.2.335</generator>
+<lastBuildDate>Wed, 22 Mar 2023 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Evento: Oficina de Introdução ao R</title>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</link>
+  <description><![CDATA[ <div class="cell" data-layout-align="center">
+
+</div>
+<section id="diversidade" class="level2"><h2 class="anchored" data-anchor-id="diversidade">Diversidade</h2>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+<p>Neste evento, 54 pessoas se inscreveram, e dessas, 37 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+</section> ]]></description>
+  <category>Eventos</category>
+  <category>Comunidade</category>
+  <category>Diversidade</category>
+  <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</guid>
+  <pubDate>Wed, 22 Mar 2023 03:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>#TidyTuesday: Explorando dados sobre as Paraolimpíadas</title>
   <dc:creator>Ianní Muliterno</dc:creator>

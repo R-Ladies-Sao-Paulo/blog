@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-03-evento-open-data-day/index.html",
       "/posts/2023-03-tidytuesday-paraolimpiadas/index.html",
       "/posts/2023-02-tutorial-quarto/index.html",
       "/posts/2023-01-evento-oficina-intro-R/index.html",

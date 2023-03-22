@@ -1,0 +1,118 @@
+---
+title: "Evento: Análise de Dados Abertos com R"
+subtitle: "Um evento Open Data Day"
+author: 
+  - "Beatriz Milz"
+  - "[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)"  
+# Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+date: "2023-03-22" # Data do post, no formato ano-mes-dia (ex: "2022-11-24"). alterar quando o post ficar pronto para publicar.
+categories: 
+# exemplo de categorias:
+  - "Eventos"
+  - "Comunidade"
+  - "Diversidade"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: false # enquanto estiver draft: true, o post é um rascunho
+knitr:
+  opts_chunk: 
+    fig.align: "center"
+    echo: false
+---
+
+```{r}
+library(ggplot2)
+
+rladies_theme <- theme_minimal(base_size = 15) +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title.position = "plot",
+        plot.title = element_text(color = "#562357"),
+        text = element_text(color = "#80868b"),
+        axis.text.x = element_blank()) 
+  
+```
+
+## Diversidade
+
+```{r}
+#| echo: false
+# url <- "https://docs.google.com/spreadsheets/d/1lVGqmrc6x9I6FtNW6siDzE_8xvUOYQKm8JtEho4mHBA/edit?resourcekey#gid=359877523"
+# # 
+# sheet <- googlesheets4::read_sheet(url)
+# 
+# sheet_clean <- sheet |>
+#   tibble::rowid_to_column() |>
+#   janitor::clean_names()
+# 
+# sheet_clean |> 
+#   dplyr::select(rowid, cor_raca = 7, genero = 8,
+#                 outros_grupos = 10, participou = 16) |> 
+#   readr::write_csv2("participantes.csv")
+```
+
+```{r}
+#| message: false
+inscricoes <- readr::read_csv2("participantes.csv") |> 
+  dplyr::mutate(participou = tidyr::replace_na(participou, "não"))
+
+participantes <- inscricoes |> dplyr::filter(participou %in% c("sim", "Sim"))
+```
+
+Neste evento, `r nrow(inscricoes)` pessoas se inscreveram, e dessas, `r nrow(participantes)` participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.
+
+```{r grafico-genero}
+participantes |>
+  dplyr::count(genero) |>
+  dplyr::mutate(genero = forcats::fct_reorder(genero, n)) |>
+  ggplot() +
+  geom_col(aes(y = genero, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = genero, label = n)) +
+  labs(y = "Gênero", x = "Quantidade de participantes",
+       title = "Gênero") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+```{r grafico-cor-raca}
+participantes |>
+  dplyr::count(cor_raca) |>
+  dplyr::mutate(cor_raca = forcats::fct_reorder(cor_raca, n)) |>
+  ggplot() +
+  geom_col(aes(y = cor_raca, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = cor_raca, label = n)) +
+  labs(y = "Cor ou raça", x = "Quantidade de participantes",
+       title = "Autodeclaração de cor ou raça") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+```{r grafico-outros-grupos}
+participantes |>
+  tidyr::separate_rows(outros_grupos, sep = ", ") |>
+  dplyr::filter(!outros_grupos %in% c("Não informado", "Não faço parte de nenhum dos grupos acima")) |>
+  dplyr::count(outros_grupos) |>
+  dplyr::mutate(outros_grupos = forcats::fct_reorder(outros_grupos, n)) |>
+  ggplot() +
+  geom_col(aes(y = outros_grupos, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = outros_grupos, label = n)) +
+  labs(y = "Grupos", x = "Quantidade de participantes",
+       title = "Outros grupos menos representados na Ciência de Dados") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+
+
+
+
+
+```{r}
+#| echo: false
+# codigo para gerar as referencias dos pacotes!
+knitr::write_bib(
+  x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
+  file = "pacotes.bib"
+  )
+```

@@ -28,6 +28,11 @@ gerar_lista_contrib <- function() {
                                       type = c("code", "issues"),
                                       quiet = TRUE) %>%
     tibble::as_tibble() %>%
+    # adicionar pessoas que contribuiram via google docs
+    tibble::add_row(logins = "hsvab", 
+                    avatar = "https://avatars.githubusercontent.com/u/2137923?v=4") |> 
+        tibble::add_row(logins = "anacarolinamoreno", 
+                    avatar = "https://avatars.githubusercontent.com/u/13514467?v=4") |> 
     dplyr::mutate(
       url = glue::glue("https://github.com/{logins}"),
       link = glue::glue("[{logins}]({url})")

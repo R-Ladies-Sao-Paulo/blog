@@ -242,7 +242,7 @@
     "href": "contribuir-com-o-blog.html#contribuindo-com-alguma-página-que-já-existe",
     "title": "Como contribuir com o blog?",
     "section": "Contribuindo com alguma página que já existe",
-    "text": "Contribuindo com alguma página que já existe\nCaso queira sugerir uma alteração em uma página já existente, siga os passos abaixo:\n1 - Primeiro confira se na barra do lado direito aparece o link chamado “Edite essa página”:\n\n\n\n\nEsse link te encaminhará para o arquivo que deve ser alterado no GitHub.\n2 - Caso não encontre o link “Editar essa página”, procure o arquivo referente à página que deseja alterar no repositório no GitHub. Os arquivos de texto que devem ser alterados são apenas os que tem extensão .qmd.\n3 - Fazendo a alteração no GitHub: EM BREVE!"
+    "text": "Contribuindo com alguma página que já existe\nCaso queira sugerir uma alteração em uma página já existente, siga os passos abaixo:\n1 - Primeiro confira se na barra do lado direito aparece o link chamado “Edite essa página”:\n\n\n\n\n\nEsse link te encaminhará para o arquivo que deve ser alterado no GitHub.\n2 - Caso não encontre o link “Editar essa página”, procure o arquivo referente à página que deseja alterar no repositório no GitHub. Os arquivos de texto que devem ser alterados são apenas os que tem extensão .qmd.\n3 - Fazendo a alteração no GitHub: EM BREVE!"
   },
   {
     "objectID": "contribuir-com-o-blog.html#contribuindo-com-um-textopost-para-o-blog",
@@ -453,5 +453,19 @@
     "title": "Evento: Análise de dados abertos com R",
     "section": "Próximos eventos",
     "text": "Próximos eventos\nEssa foi a primeira vez que realizamos evento com a ideia de trabalhar em “grupos”, e com certeza é um formato que funcionou (as participantes apontaram que preferiam assim do que palestras expositivas). Pretendemos organizar outros eventos nesse formato!\nO próximo evento da R-Ladies São Paulo está previsto para acontecer em maio, com tema ainda a ser definido. Caso tenha interesse em participar, recomendamos acompanhar nossas redes sociais!\n\n\n\n\nAté o próximo encontro!"
+  },
+  {
+    "objectID": "sobre.html#o-que-é-a-r-ladies",
+    "href": "sobre.html#o-que-é-a-r-ladies",
+    "title": "Sobre a R-Ladies São Paulo",
+    "section": "",
+    "text": "R-Ladies é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.\nR-Ladies São Paulo integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.\nAs atividades incluem meetups e mentorias em um ambiente seguro e amigável.\n\n\n\n\nFoto do primeiro encontro da R-Ladies São Paulo, em agosto de 2018!"
+  },
+  {
+    "objectID": "como-participar.html#participe-dos-eventos",
+    "href": "como-participar.html#participe-dos-eventos",
+    "title": "Como fazer parte da R-Ladies São Paulo?",
+    "section": "",
+    "text": "Os eventos realizados pela R-Ladies São Paulo são gratuitos e são divulgados na plataforma Meetup. Se quiser acompanhar os próximos eventos, recomendamos inscrever-se na plataforma  Meetup e seguir as nossas redes sociais, principalmente o  Instagram."
   }
 ]

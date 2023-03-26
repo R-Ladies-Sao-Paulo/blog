@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.3.287">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>R-Ladies São Paulo - Como contribuir com o blog?</title>
 <style>
 code{white-space: pre-wrap;}
@@ -14,10 +17,11 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -26,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sugestoes.html" rel="next">
-<link href="./como-participar.html" rel="prev">
 <link href="./img/logo.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -37,7 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -55,138 +58,135 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar"
   }
-}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
-</script><link rel="stylesheet" href="styles.css">
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="R-Ladies São Paulo - Como contribuir com o blog?">
-<meta name="twitter:description" content="Se você faz parte da comunidade R-Ladies São Paulo ou outros capítulos do Brasil, e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://rladies-sp.org/img/como-contribuir-edite-essa-pagina.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="1714">
+<meta name="twitter:image-width" content="3022">
+<meta name="twitter:card" content="summary_large_image">
 </head>
-<body class="nav-sidebar docked nav-fixed">
+
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo.jpg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">R-Ladies São Paulo</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./" rel="" target="">
+ <span class="menu-text">Página inicial</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sobre.html" rel="" target="">
+ <span class="menu-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./como-participar.html" rel="" target="">
+ <span class="menu-text">Como participar?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./contribuir-com-o-blog.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Como contribuir com o blog?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sugestoes.html" rel="" target="">
+ <span class="menu-text">Sugestão de conteúdos</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/rladiessaopaulo"><i class="bi bi-twitter" role="img">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://instagram.com/rladiessaopaulo"><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/"><i class="bi bi-person-plus" role="img">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:saopaulo@rladies.org"><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org" rel="" target=""><i class="bi bi-envelope" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
-<li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
  <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog">
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
  <span class="dropdown-text">Código fonte deste site</span></a>
   </li>  
     </ul>
-</li>
+  </li>
 </ul>
-<div class="quarto-toggle-container">
-                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Como contribuir com o blog?</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/logo.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
-      </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./" class="sidebar-item-text sidebar-link">Página inicial</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sobre.html" class="sidebar-item-text sidebar-link">Sobre a R-Ladies SP</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./como-participar.html" class="sidebar-item-text sidebar-link">Como participar?</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./contribuir-com-o-blog.html" class="sidebar-item-text sidebar-link active">Como contribuir com o blog?</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sugestoes.html" class="sidebar-item-text sidebar-link">Sugestão de conteúdos</a>
-  </div>
-</li>
-    </ul>
-</div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -205,7 +205,8 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <div class="mc-field-group">
     <label for="mce-EMAIL">Email <span class="asterisk">*</span>
 </label>
-    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 </div>
     <div id="mce-responses" class="clear foot">
         <div class="response" id="mce-error-response" style="display:none"></div>
@@ -220,21 +221,26 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#tipos-de-contribui%C3%A7%C3%A3o" id="toc-tipos-de-contribuição" class="nav-link active" data-scroll-target="#tipos-de-contribui%C3%A7%C3%A3o">Tipos de contribuição</a></li>
+  <li><a href="#tipos-de-contribuição" id="toc-tipos-de-contribuição" class="nav-link active" data-scroll-target="#tipos-de-contribuição">Tipos de contribuição</a></li>
   <li><a href="#como-contribuir" id="toc-como-contribuir" class="nav-link" data-scroll-target="#como-contribuir">Como contribuir?</a></li>
-  <li><a href="#contribuindo-com-alguma-p%C3%A1gina-que-j%C3%A1-existe" id="toc-contribuindo-com-alguma-página-que-já-existe" class="nav-link" data-scroll-target="#contribuindo-com-alguma-p%C3%A1gina-que-j%C3%A1-existe">Contribuindo com alguma página que já existe</a></li>
+  <li><a href="#contribuindo-com-alguma-página-que-já-existe" id="toc-contribuindo-com-alguma-página-que-já-existe" class="nav-link" data-scroll-target="#contribuindo-com-alguma-página-que-já-existe">Contribuindo com alguma página que já existe</a></li>
   <li><a href="#contribuindo-com-um-textopost-para-o-blog" id="toc-contribuindo-com-um-textopost-para-o-blog" class="nav-link" data-scroll-target="#contribuindo-com-um-textopost-para-o-blog">Contribuindo com um texto/post para o blog</a></li>
-  <li><a href="#lista-de-pessoas-que-j%C3%A1-contribuiram-com-esse-site" id="toc-lista-de-pessoas-que-já-contribuiram-com-esse-site" class="nav-link" data-scroll-target="#lista-de-pessoas-que-j%C3%A1-contribuiram-com-esse-site">Lista de pessoas que já contribuiram com esse site</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/contribuir-com-o-blog.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/contribuir-com-o-blog.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title d-none d-lg-block">Como contribuir com o blog?</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Como contribuir com o blog?</h1>
 </div>
 
 
@@ -247,8 +253,11 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   </div>
   
 
-</header><p>Se você faz parte da comunidade R-Ladies São Paulo ou outros capítulos do Brasil, e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!</p>
-<section id="tipos-de-contribuição" class="level2"><h2 class="anchored" data-anchor-id="tipos-de-contribuição">Tipos de contribuição</h2>
+</header>
+
+<p>Se você faz parte da comunidade R-Ladies São Paulo ou outros capítulos do Brasil, e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!</p>
+<section id="tipos-de-contribuição" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-contribuição">Tipos de contribuição</h2>
 <p>Existem várias formas de contribuir, como:</p>
 <ul>
 <li><p>caso encontre alguma informação desatualizada e/ou que precise de correção, pode fazer a atualização/correção;</p></li>
@@ -257,14 +266,17 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li><p>escrever algum tutorial sobre uso de algum pacote para o blog;</p></li>
 <li><p>enviar algum texto técnico já escrito no seu blog pessoal, que possa ser re-compartilhado aqui;</p></li>
 <li><p>entre outros!</p></li>
-</ul></section><section id="como-contribuir" class="level2"><h2 class="anchored" data-anchor-id="como-contribuir">Como contribuir?</h2>
+</ul>
+</section>
+<section id="como-contribuir" class="level2">
+<h2 class="anchored" data-anchor-id="como-contribuir">Como contribuir?</h2>
 <p>As alterações no código costumam ser feitas através do <a href="https://github.com/R-Ladies-Sao-Paulo/blog">GitHub</a>. Você pode criar uma conta gratuita e seguir o passo-a-passo indicado abaixo.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Nota
 </div>
 </div>
@@ -272,17 +284,22 @@ Nota
 <p>Caso você não use GitHub, pode enviar a contribuição escrevendo em um arquivo Google Documentos, word/<code>.docx</code> ou RMarkdown/Quarto, por exemplo, e enviando para a gente através de uma <a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new?assignees=beatrizmilz&amp;labels=textos&amp;template=novo-post.md&amp;title=%5BPOST%5D+Nome+do+post">issue no GitHub</a>.</p>
 </div>
 </div>
-</section><section id="contribuindo-com-alguma-página-que-já-existe" class="level2"><h2 class="anchored" data-anchor-id="contribuindo-com-alguma-página-que-já-existe">Contribuindo com alguma página que já existe</h2>
+</section>
+<section id="contribuindo-com-alguma-página-que-já-existe" class="level2">
+<h2 class="anchored" data-anchor-id="contribuindo-com-alguma-página-que-já-existe">Contribuindo com alguma página que já existe</h2>
 <p>Caso queira sugerir uma alteração em uma página já existente, siga os passos abaixo:</p>
 <p>1 - Primeiro confira se na barra do lado direito aparece o link chamado “Edite essa página”:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/como-contribuir-edite-essa-pagina.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figure class="figure">
+<p><img src="img/como-contribuir-edite-essa-pagina.png" class="quarto-discovered-preview-image img-fluid figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p>Esse link te encaminhará para o arquivo que deve ser alterado no GitHub.</p>
 <p>2 - Caso não encontre o link “Editar essa página”, procure o arquivo referente à página que deseja alterar no <a href="https://github.com/R-Ladies-Sao-Paulo/blog">repositório no GitHub</a>. Os arquivos de texto que devem ser alterados são apenas os que tem extensão <code>.qmd</code>.</p>
 <p>3 - Fazendo a alteração no GitHub: <strong>EM BREVE!</strong></p>
-</section><section id="contribuindo-com-um-textopost-para-o-blog" class="level2"><h2 class="anchored" data-anchor-id="contribuindo-com-um-textopost-para-o-blog">Contribuindo com um texto/post para o blog</h2>
+</section>
+<section id="contribuindo-com-um-textopost-para-o-blog" class="level2">
+<h2 class="anchored" data-anchor-id="contribuindo-com-um-textopost-para-o-blog">Contribuindo com um texto/post para o blog</h2>
 <p>Os arquivos que geram os posts do blog estão na pasta <a href="https://github.com/R-Ladies-Sao-Paulo/blog/tree/main/posts/"><code>posts/</code></a>.</p>
 <p>1 - Faça uma cópia da pasta <a href="https://github.com/R-Ladies-Sao-Paulo/blog/tree/main/posts/template-post"><code>template-post/</code></a>. Nomeie a pasta iniciando com o ano e mês, e algumas palavras que indicam o conteúdo do texto de uma forma “limpa”, sem usar acentos, espaços, e outros caracteres especiais. Ex: <code>2022-12-tutorial-tidyverse</code>.</p>
 <p>Nessa pasta, tem arquivos para gerar um post:</p>
@@ -293,17 +310,12 @@ Nota
 </ul>
 <p>2 - Edite os conteúdos na pasta copiada!</p>
 <p>3 - Envie suas mudanças como um Pull request no GitHub: <strong>EM BREVE!</strong>.</p>
-</section><section id="lista-de-pessoas-que-já-contribuiram-com-esse-site" class="level2"><h2 class="anchored" data-anchor-id="lista-de-pessoas-que-já-contribuiram-com-esse-site">Lista de pessoas que já contribuiram com esse site</h2>
-<p>A lista a seguir é gerada automaticamente a partir da busca de pessoas que contribuiram com código e Issues no repositório do GitHub do blog, utilizando o pacote <a href="https://github.com/ropenscilabs/allcontributors">allcontributors</a>.</p>
-<div class="cell">
-
-</div>
-<center>
-<a href="https://github.com/beatrizmilz"> <img src="https://avatars.githubusercontent.com/u/42153618?v=4" width="200" style="vertical-align: middle; border-radius: 50%;"></a> <a href="https://github.com/fernandaperes"> <img src="https://avatars.githubusercontent.com/u/54192325?v=4" width="200" style="vertical-align: middle; border-radius: 50%;"></a>
-</center>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -330,9 +342,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -397,6 +423,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -435,12 +547,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.rladies-sp\.org\/**/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -451,23 +563,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./como-participar.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Como participar?</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./sugestoes.html" class="pagination-link">
-        <span class="nav-page-text">Sugestão de conteúdos</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
+</script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
+
 
 
 </body></html>

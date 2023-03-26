@@ -33,8 +33,14 @@ gerar_lista_contrib <- function() {
                     avatar = "https://avatars.githubusercontent.com/u/2137923?v=4") |> 
         tibble::add_row(logins = "anacarolinamoreno", 
                     avatar = "https://avatars.githubusercontent.com/u/13514467?v=4") |> 
+            tibble::add_row(logins = "https://www.linkedin.com/in/aprocha/", 
+                    avatar = "https://media.licdn.com/dms/image/C4E03AQGhfoSMVl7VlA/profile-displayphoto-shrink_200_200/0/1646225931683?e=1685577600&v=beta&t=PUAc7fX1W_urrolHaiBkEXxBmmcx8MlLi-ti_71CKks") |> 
     dplyr::mutate(
-      url = glue::glue("https://github.com/{logins}"),
+      url = dplyr::if_else(
+        stringr::str_starts(logins, "http"),
+        logins,
+        glue::glue("https://github.com/{logins}")
+      ) , 
       link = glue::glue("[{logins}]({url})")
     ) %>%
     dplyr::filter(!logins %in% c("actions-user"))  %>%

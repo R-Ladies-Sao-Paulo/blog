@@ -22,6 +22,9 @@ knitr:
     echo: false
     message: false
     warning: false
+filters:
+  - lightbox    
+lightbox: auto  
 ---
 
 ```{r}
@@ -56,7 +59,7 @@ Contando com cerca de 40 pessoas, o dia foi estruturado em quatro blocos. O prim
 
 ![](images/atividade-principal.png){fig-align="center" width="100%"}
 
-Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu: 
+Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu:
 
 -   da explicação de como aconteceria essa dinâmica;
 
@@ -66,31 +69,31 @@ Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de
 
 Os temas e respectivas monitoras foram:
 
--   Dados sobre violência - Fernanda Peres, biomédica
+-   Dados sobre violência - [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/), biomédica
 
--   Dados ambientais sobre queimadas - Bianca Muniz, jornalista
+-   Dados ambientais sobre queimadas - [Bianca Muniz](https://www.linkedin.com/in/bmuniz/), jornalista
 
--   Dados educacionais - Ana Carolina Moreno, jornalista
+-   Dados educacionais - [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/), jornalista
 
--   Dados sobre emprego - Ana Paula Rocha, economista
+-   Dados sobre emprego - [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/), economista
 
--   Dados eleitorais - Cecília do Lago, jornalista
+-   Dados eleitorais - [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/), jornalista
 
--   Dados prisionais - Thandara Santos, socióloga
+-   Dados prisionais - [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/), socióloga
 
 Além disso, havia pessoas monitoras disponíveis para ajudar em dúvidas sobre R: 
 
--   Beatriz Milz (Organização R-Ladies SP)
+-   [Beatriz Milz](https://beamilz.com/) (Organização R-Ladies SP)
 
--   Ianní Muliterno (Organização R-Ladies SP)
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) (Organização R-Ladies SP)
 
--   Geovana Lopes (Organização R-Ladies SP)
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) (Organização R-Ladies SP)
 
--   Haydee Svab (Organização R-Ladies SP)
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/) (Organização R-Ladies SP)
 
--   Julio Trecenti (Curso-R)
+-   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) ([Curso-R](https://curso-r.com/))
 
--   William Amorim (Curso-R)
+-   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) ([Curso-R](https://curso-r.com/))
 
 Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.
 
@@ -113,9 +116,13 @@ Dois pontos interessantes a destacar são o café colaborativo e o Espaço Gugud
 
 ### **Café Colaborativo**
 
+```{r}
+#| column: margin
+knitr::include_graphics("images/coffe.png")
+```
+
 O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela OKBR, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!
 
-![](images/coffe.png){fig-align="center" width="30%"}
 
 ### **Espaço Gugudadados**
 
@@ -311,7 +318,10 @@ Além do relato oferecido pela equipe da organização, gostaríamos de comparti
 
 ## **Apoios**
 
-![](images/escorregador.jpg){fig-align="center" width="30%"}
+```{r}
+#| column: margin
+knitr::include_graphics("images/escorregador.jpg")
+```
 
 É importante ressaltar a importância do apoio financeiro da OKBR, que possibilitou a compra de itens para o coffee break, adesivos e também a contratação de uma recreadora. 
 
@@ -323,35 +333,35 @@ A Curso-R também apoiou o evento, cedendo dois monitores para auxiliar na monit
 
 Este evento não teria sido possível se não fosse a colaboração de várias pessoas. Portanto, aqui listamos pessoas que participaram das diversas etapas de organização do evento:
 
--   Ana Paula Rocha - organização, monitoria temática
+-   [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/) - organização, monitoria temática
 
--   Ana Carolina Moreno - organização, monitoria temática
+-   [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/) - organização, monitoria temática
 
--   Beatriz Milz - organização, monitoria em R
+-   [Beatriz Milz](https://beamilz.com/) - organização, monitoria em R
 
--   Bianca Muniz - monitoria temática
+-   [Bianca Muniz](https://www.linkedin.com/in/bmuniz/) - monitoria temática
 
--   Cecília do Lago - monitoria temática
+-   [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/) - monitoria temática
 
 -   Célia Oliveira - recreadora do espaço Gugudadados
 
--   Diego Rabatone - espaço Gugudadados
+-   [Diego Rabatone Oliveira](https://www.linkedin.com/in/diraol/) - espaço Gugudadados
 
--   Fernanda Peres - organização, monitoria temática
+-   [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/) - organização, monitoria temática
 
--   Geovana Lopes - monitoria em R
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) - monitoria em R
 
--   Haydee Svab - organização, monitoria em R, espaço Gugudadados
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/) - organização, monitoria em R, espaço Gugudadados
 
--   Ianní Muliterno - monitoria em R
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) - monitoria em R
 
--   Julio Trecenti - monitoria em R
+-   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) - monitoria em R
 
--   Tatyane Paz Dominguez - organização, espaço Gugudadados
+-   [Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/) - organização, espaço Gugudadados
 
--   Thandara Santos - monitoria temática
+-   [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/) - monitoria temática
 
--   William Amorim - monitoria em R
+-   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) - monitoria em R
 
 O evento não seria o mesmo sem a colaboração de vocês - agradecemos e valorizamos muito a sua participação!
 
@@ -363,7 +373,11 @@ Essa foi a primeira vez que realizamos evento com a ideia de trabalhar em "grupo
 
 O próximo evento da R-Ladies São Paulo está previsto para acontecer em maio, com tema ainda a ser definido. Caso tenha interesse em participar, recomendamos acompanhar nossas redes sociais!
 
-![](images/stickers.png){fig-align="center" width="30%"}
+```{r}
+#| column: margin
+knitr::include_graphics("images/stickers.png")
+```
+
 
 Até o próximo encontro!
 

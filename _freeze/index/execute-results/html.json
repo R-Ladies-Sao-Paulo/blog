@@ -1,0 +1,14 @@
+{
+  "hash": "3c7f667223efe5134d47db1d427fb9f3",
+  "result": {
+    "markdown": "---\ntitle: \"Blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\n  feed: true\n  fields: [image, date, title, author, categories]  \npage-layout: full\ntitle-block-banner: true\ncomments: false\n---\n\n\n## Textos escritos por...\n\n\n::: {.cell}\n\n:::\n\n<center> <a href=https://github.com/IanniMuliterno>\n<img src=\"https://avatars.githubusercontent.com/u/21000314?u=58a5cf51f45ca8657f0581cffbedbb534b5b2d45&v=4\" width=\"100\" style=\"vertical-align: middle; border-radius: 50%;\">\n</a> <a href=https://github.com/a-hayana>\n<img src=\"https://avatars.githubusercontent.com/u/44451990?v=4\" width=\"100\" style=\"vertical-align: middle; border-radius: 50%;\">\n</a> <a href=https://github.com/beatrizmilz>\n<img src=\"https://avatars.githubusercontent.com/u/42153618?v=4\" width=\"100\" style=\"vertical-align: middle; border-radius: 50%;\">\n</a> <a href=https://github.com/fernandaperes>\n<img src=\"https://avatars.githubusercontent.com/u/54192325?v=4\" width=\"100\" style=\"vertical-align: middle; border-radius: 50%;\">\n</a> <a href=https://github.com/peixemtogrande>\n<img src=\"https://avatars.githubusercontent.com/u/33573872?v=4\" width=\"100\" style=\"vertical-align: middle; border-radius: 50%;\">\n</a></center>\n\n\n## Textos\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

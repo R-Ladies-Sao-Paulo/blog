@@ -14,9 +14,7 @@ title-block-banner: true
 comments: false
 ---
 
-
 ## Textos escritos por...
-
 
 ```{r}
 #| echo: false

@@ -51,7 +51,7 @@ O [Insper](https://www.insper.edu.br/), uma instituição sem fins lucrativos de
 
 ## **O que é o Open Data Day?**
 
-O Open Data Day, ou "Dia dos Dados Abertos", é uma celebração anual dos dados abertos em todo o mundo, organizado e apoiado pela Open Knowledge Foundation. Caso queira saber mais, consulte o [site oficial do Open Data Day](https://opendataday.org/pt_br/) e a página do projeto no site da [Open Knowledge Brasil.](https://ok.org.br/projetos/open-data-day/)
+O Open Data Day, ou "Dia dos Dados Abertos", é uma celebração anual dos dados abertos em todo o mundo, organizado e apoiado pela Open Knowledge Foundation. Caso queira saber mais, consulte o [site oficial do Open Data Day](https://opendataday.org/pt_br/) e a página do projeto no site da [Open Knowledge Brasil](https://ok.org.br/projetos/open-data-day/).
 
 ## **Atividade principal**
 
@@ -121,12 +121,12 @@ Dois pontos interessantes a destacar são o café colaborativo e o Espaço Gugud
 knitr::include_graphics("images/coffe.png")
 ```
 
-O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela OKBR, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!
+O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/), e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!
 
 
 ### **Espaço Gugudadados**
 
-O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela OKBR foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.
+O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/) foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.
 
 |                                |                                           |
 |------------------------------------|------------------------------------|
@@ -323,7 +323,7 @@ Além do relato oferecido pela equipe da organização, gostaríamos de comparti
 knitr::include_graphics("images/escorregador.jpg")
 ```
 
-É importante ressaltar a importância do apoio financeiro da OKBR, que possibilitou a compra de itens para o coffee break, adesivos e também a contratação de uma recreadora. 
+É importante ressaltar a importância do apoio financeiro da [OKBR](https://ok.org.br/), que possibilitou a compra de itens para o coffee break, adesivos e também a contratação de uma recreadora. 
 
 As salas oferecidas pelo Insper foram cruciais para a realização do evento. O prédio é de fácil acesso por transporte público. O encontro aconteceu em um espaço amplo, que conta com acesso à internet, mesas, cadeiras confortáveis e facilidade de acesso a restaurante para o almoço. O tobogã que faz parte das instalações do prédio também é um sucesso e compõe uma das experiências mais alegres para as crianças que ficaram no Gugudadados.
 

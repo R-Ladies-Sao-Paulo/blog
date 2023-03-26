@@ -1,0 +1,395 @@
+---
+title: "Evento: Análise de dados abertos com R"
+subtitle: "Um evento parte da iniciativa Open Data Day"
+author: 
+  - "Beatriz Milz"
+  - "Tatyane Paz Dominguez"  
+  - "Haydée Svab"
+  - "Ana Carolina Moreno"
+  - "Ana Paula Rocha"
+date: "2023-03-27" 
+categories: 
+  - "Eventos"
+  - "Comunidade"
+  - "Diversidade"
+toc: true
+image: "images/logo.png" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: false # enquanto estiver draft: true, o post é um rascunho
+knitr:
+  opts_chunk: 
+    fig.align: "center"
+    echo: false
+    message: false
+    warning: false
+filters:
+  - lightbox    
+lightbox: auto  
+---
+
+```{r}
+options(scipen = 999)
+library(ggplot2)
+
+rladies_theme <- theme_minimal(base_size = 15) +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title.position = "plot",
+        plot.title = element_text(color = "#562357"),
+        text = element_text(color = "#80868b"),
+        axis.text.x = element_blank()) 
+  
+```
+
+## **Introdução**
+
+A R-Ladies São Paulo organizou, em 18 de março de 2023, o evento "Análise de Dados Abertos com R - Open Data Day". A atividade aconteceu em um sábado, durante os períodos da manhã e da tarde, totalizando 6 horas efetivas de atividade.
+
+O [Insper](https://www.insper.edu.br/), uma instituição sem fins lucrativos dedicada ao ensino e à pesquisa, mais uma vez apoiou o grupo cedendo o espaço para a realização do evento. Outro apoio recebido foi da [Curso-R](https://curso-r.com/), que cedeu dois monitores para auxiliar na monitoria, ajudando nas dúvidas. O principal objetivo deste encontro foi oferecer informações a respeito do que são e da importância dos dados abertos e promover oportunidade de pôr a "mão-na-massa" manipulando dados abertos, além de traçar o cenário atual de acesso a esses dados em vários níveis governamentais e áreas do conhecimento.
+
+![](images/logo.png){fig-align="center" width="100%"}
+
+## **O que é o Open Data Day?**
+
+O Open Data Day, ou "Dia dos Dados Abertos", é uma celebração anual dos dados abertos em todo o mundo, organizado e apoiado pela Open Knowledge Foundation. Caso queira saber mais, consulte o [site oficial do Open Data Day](https://opendataday.org/pt_br/) e a página do projeto no site da [Open Knowledge Brasil](https://ok.org.br/projetos/open-data-day/).
+
+## **Atividade principal**
+
+Contando com cerca de 40 pessoas, o dia foi estruturado em quatro blocos. O primeiro bloco teve caráter informativo e contou com uma sequência de breves [apresentações](https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html) como: o que é a comunidade R-Ladies São Paulo, o que é Open Data Day e o que são Dados Abertos.
+
+![](images/atividade-principal.png){fig-align="center" width="100%"}
+
+Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu:
+
+-   da explicação de como aconteceria essa dinâmica;
+
+-   de uma fala breve (cerca de 5 minutos) de cada monitora sobre o tema de sua expertise e sobre a base de dados abertos que seria trabalhada, para facilitar a identificação das participantes com o tema;
+
+-   e da separação das participantes nos grupos segundo afinidade de interesses - a adesão foi livre e não houve necessidade de redimensionar ou redistribuir os grupos.
+
+Os temas e respectivas monitoras foram:
+
+-   Dados sobre violência - [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/), biomédica
+
+-   Dados ambientais sobre queimadas - [Bianca Muniz](https://www.linkedin.com/in/bmuniz/), jornalista
+
+-   Dados educacionais - [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/), jornalista
+
+-   Dados sobre emprego - [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/), economista
+
+-   Dados eleitorais - [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/), jornalista
+
+-   Dados prisionais - [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/), socióloga
+
+Além disso, havia pessoas monitoras disponíveis para ajudar em dúvidas sobre R: 
+
+-   [Beatriz Milz](https://beamilz.com/) (Organização R-Ladies SP)
+
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) (Organização R-Ladies SP)
+
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) (Organização R-Ladies SP)
+
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/) (Organização R-Ladies SP)
+
+-   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) ([Curso-R](https://curso-r.com/))
+
+-   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) ([Curso-R](https://curso-r.com/))
+
+Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.
+
+|                         |                         |
+|-------------------------|-------------------------|
+| ![](images/grupos1.jpg) | ![](images/grupos2.jpg) |
+| ![](images/grupos3.jpg) | ![](images/grupos4.jpg) |
+
+Então, no terceiro bloco, os grupos trabalharam em importar, entender e começar a explorar os dados abertos de seus respectivos temas. Como muitas pessoas apontaram que não tinham experiência para criar visualizações de dados e tinham interesse em começar, a co-organizadora Beatriz Milz fez uma apresentação curta, em formato live coding, sobre o uso do [pacote esquisse para gerar visualizações de dados com ggplot2](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html).
+
+![](images/bea-esquisse.png){fig-align="center" width="60%"}
+
+No quarto e último bloco, os grupos apresentaram um pouco de suas dificuldades, aprendizados e resultados (alguns inclusive apresentaram visualizações feitas!). Foram apresentações interessantes que refletiram os tópicos abordados nas apresentações iniciais sobre dados abertos - por exemplo, alguns grupos indicaram lidar com base desatualizada, outros apontaram que dados estavam agregados e poderiam ser disponibilizados em forma de microdados, entre outros.
+
+A experiência foi muito boa, e as pessoas organizadoras e participantes demonstraram ter gostado bastante da atividade (principalmente as crianças!). Cada grupo teve entre duas e seis pessoas além das monitorias, o que permitiu um acompanhamento mais individualizado para sanar dúvidas e garantir o aproveitamento da atividade.
+
+## **Fortalecendo a comunidade**
+
+Dois pontos interessantes a destacar são o café colaborativo e o Espaço Gugudadados.
+
+### **Café Colaborativo**
+
+```{r}
+#| column: margin
+knitr::include_graphics("images/coffe.png")
+```
+
+O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/), e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!
+
+
+### **Espaço Gugudadados**
+
+O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/) foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.
+
+|                                |                                           |
+|------------------------------------|------------------------------------|
+| ![](images/gugudadados1.jpeg) | ![](images/gugudadados2.jpg){width="74%"} |
+| ![](images/gugudadados3.jpg)   | ![](images/gugudadados4.jpg)              |
+
+## **Resultados dos grupos**
+
+### **Grupo de dados educacionais (Monitora Ana Carolina Moreno)**
+
+A monitora apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma [série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022](https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml). A monitora também preparou uma [apresentação sobre dados educacionais](https://bit.ly/rladies_odd_2023), para auxiliar no entendimento das diferentes fontes e bases de dados disponíveis sobre educação.
+
+Os dados utilizados podem ser obtidos [no site do INEP](https://dadosabertos.tse.jus.br/dataset/candidatos-2022). 
+
+### **Grupo de dados eleitorais (Monitora Cecília do Lago):**
+
+Este grupo explorou dados eleitorais referentes às eleições de 2022, disponibilizados pelo TSE. Uma curiosidade do grupo era descobrir quantos candidatos não receberam um ou nenhum voto na eleição de 2022.
+
+Os dados utilizados podem ser obtidos [no Portal de Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528).
+
+### **Grupo de dados ambientais (Bianca Muniz):**
+
+Este grupo explorou dados sobre focos de queimadas, no sistema BDQueimadas do INPE. Esse sistema permite fazer downloads de dados num período de até um ano. A monitora preparou uma [apresentação sobre os dados utilizados](https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf). O grupo exportou os dados referentes à 2020 até 2022, e o gráfico a seguir permite ver a quantidade de focos de queimada por mês, segundo o bioma onde o foco de queimada acontece. É possível perceber no gráfico que os biomas com maiores focos de incêndio são a Amazônia e o Cerrado, e apresentam padrões sazonais. O maior pico de focos de queimadas na Amazônia no período pesquisado aconteceu no segundo semestre de 2022.
+
+![](images/resultado-queimadas.png){fig-align="center"}
+
+Os dados utilizados podem ser obtidos [no site do INPE - BD QUEIMADAS](https://queimadas.dgi.inpe.br/queimadas/bdqueimadas).
+
+### **Grupo de dados prisionais (Monitora Thandara Santos):**
+
+Este grupo explorou dados do [SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.](https://www.gov.br/depen/pt-br/servicos/sisdepen) Esses dados são provenientes do[Formulário de Informações Prisionais](https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf), respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal \[Fonte: https://www.gov.br/depen/pt-br/servicos/sisdepen\].
+
+Uma das dificuldades apresentadas pelo grupo é a disponibilização dos dados serem agregadas por unidade prisional, e não indivíduos, o que inviabiliza diversas análises importantes sobre a população carcerária do Brasil. Outra dificuldade apresentada é a falta de padronização às respostas apresentadas na base, o que implica em uma baixa confiabilidade dos dados. 
+
+Os dados utilizados podem ser obtidos no site da [Secretaria Nacional de Políticas Penais](https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados).
+
+### **Grupo de dados de violência (Monitora Fernanda Peres):**
+
+Este grupo explorou dados públicos sobre violência usando os dados do SINAN - Sistema de Informações de Agravo de Notificações, filtrando ocorrências envolvendo apenas adultos e removendo cacos de violência auto-provocada (por exemplo, suicídio). **O grupo constatou que os dados públicos de Violência no DataSUS estavam desatualizados**. A base referente à 2020 estava incompleta, portanto o grupo explorou dados referentes a 2019. O grupo gerou uma série de gráficos, como o apresentado a seguir, que mostra que a maior quantidade de vítimas é do sexo feminino. Além disso, destaca-se que o autor da agressão na maioria das vezes é do sexo masculino (seja a vítima mulher ou homem).
+
+![](images/resultado-violencia-2.png){fig-align="center"}
+
+Outra ponto percebido é que quando as vítimas são mulheres, o agressor tende a ser alguém conhecido, como cônjuge, ex-cônjuge, namorado ou ex-namorado. Entre os homens, o agressor mais comum é um desconhecido.
+
+![](images/resultado-violencia.png){fig-align="center"}
+
+Os dados podem ser obtidos no [DATASUS](https://datasus.saude.gov.br/transferencia-de-arquivos). A monitora fez uma [apresentação](https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html) sobre como obter esses dados.
+
+### **Grupo de dados de emprego (Monitora Ana Paula):**
+
+A monitora fez uma [apresentação](https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/RLadies_Opendata_mar23.pdf) sobre como obter esses dados. O grupo explorou duas bases de dados provenientes do Caged (Cadastro Geral de Empregados e Desempregados) a partir do Banco Central, sendo elas: número de empregos totais de 2000 a 2023; e número de empregos pela indústria de transformação (qualquer matéria prima que é transformada) de 2000 a 2023.  Os dados podem ser obtidos com o pacote [**GetBCBData**](https://cran.r-project.org/web/packages/GetBCBData/index.html)**,** sendo possível buscar dados atualizados, porém agregados por mês/ano e ID da série temporal.
+
+```{r}
+#| cache: true
+#| echo: true
+# Carregando pacotes
+library(tidyverse)
+library(GetBCBData)
+
+# importando os dados
+dados_sgs <-  GetBCBData::gbcbd_get_series(
+  id = c('NCaged' = 28763, 'NCaged_IndTransf'= 28766),
+  first.date = '2020-01-01',
+  last.date = Sys.Date(),
+  format.data = 'wide'
+)
+
+# espiar dados importados
+glimpse(dados_sgs)
+
+# comparando a tendência de 2 séries
+dados_sgs_longo <- dados_sgs %>% 
+  pivot_longer(cols = c(NCaged, NCaged_IndTransf))
+
+# criando uma visualização
+ggplot(dados_sgs_longo) +
+ aes(x = ref.date, y = value, colour = name) +
+ geom_line(show.legend = FALSE) +
+ scale_color_hue(direction = 1) +
+ theme_minimal() +
+ facet_wrap(vars(name), scales = "free_y")
+
+
+```
+
+Para saber mais sobre essa base de dados, consulte também a [página do Sistema Gerenciador de Séries Temporais do Banco Central do Brasil](https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries).
+
+## **Perfil das pessoas participantes**
+
+Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:
+
+\-   pessoas negras, pardas e indígenas;
+
+\-   mães;
+
+\-   mulheres e outras minorias de gênero.
+
+Neste evento, 54 pessoas se inscreveram, e dessas, 37 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.
+
+```{r}
+#| echo: false
+# url <- "https://docs.google.com/spreadsheets/d/1lVGqmrc6x9I6FtNW6siDzE_8xvUOYQKm8JtEho4mHBA/edit?resourcekey#gid=359877523"
+# # 
+# sheet <- googlesheets4::read_sheet(url)
+# 
+# sheet_clean <- sheet |>
+#   tibble::rowid_to_column() |>
+#   janitor::clean_names()
+# 
+# sheet_clean |> 
+#   dplyr::select(rowid, cor_raca = 7, genero = 8,
+#                 outros_grupos = 10, participou = 16) |> 
+#   readr::write_csv2("participantes.csv")
+```
+
+```{r}
+#| message: false
+inscricoes <- readr::read_csv2("participantes.csv") |> 
+  dplyr::mutate(participou = tidyr::replace_na(participou, "não"))
+
+participantes <- inscricoes |> dplyr::filter(participou %in% c("sim", "Sim"))
+```
+
+```{r grafico-genero}
+participantes |>
+  dplyr::count(genero) |>
+  dplyr::mutate(genero = forcats::fct_reorder(genero, n)) |>
+  ggplot() +
+  geom_col(aes(y = genero, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = genero, label = n)) +
+  labs(y = "Gênero", x = "Quantidade de participantes",
+       title = "Gênero") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+```{r grafico-cor-raca}
+participantes |>
+  dplyr::count(cor_raca) |>
+  dplyr::mutate(cor_raca = forcats::fct_reorder(cor_raca, n)) |>
+  ggplot() +
+  geom_col(aes(y = cor_raca, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = cor_raca, label = n)) +
+  labs(y = "Cor ou raça", x = "Quantidade de participantes",
+       title = "Autodeclaração de cor ou raça") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+```{r grafico-outros-grupos}
+participantes |>
+  tidyr::separate_rows(outros_grupos, sep = ", ") |>
+  dplyr::filter(!outros_grupos %in% c("Não informado", "Não faço parte de nenhum dos grupos acima")) |>
+  dplyr::count(outros_grupos) |>
+  dplyr::mutate(outros_grupos = forcats::fct_reorder(outros_grupos, n)) |>
+  ggplot() +
+  geom_col(aes(y = outros_grupos, x = n), fill = "#562457") +
+  geom_label(aes(x = n, y = outros_grupos, label = n)) +
+  labs(y = "Grupos", x = "Quantidade de participantes",
+       title = "Outros grupos menos representados na Ciência de Dados") +
+  rladies_theme +
+  scale_x_continuous(position = "top") 
+```
+
+Ainda há muito trabalho a fazer para incluir grupos menos representados nos eventos, mas acreditamos que, em comparação aos eventos anteriores à pandemia, estamos avançando. Para os próximos eventos, é importante ampliar a divulgação dos eventos para os grupos de pessoas pretas, pardas e indígenas; para mães, e para pessoas trans e não binárias, além de estarmos em busca de parcerias para realizar esse tipo de atividade na periferia.
+
+## **Dificuldades**
+
+A principal dificuldade na organização do evento foi o pouco tempo disponível para divulgação da atividade, já a definição da data e local foram feitas com apenas seis dias de antecedência. Apesar de a sala disponível ter capacidade para 100 pessoas, apenas 40 tiveram tempo hábil para se organizar e se inscrever como participantes. 
+
+No entanto, a presença final de mais de 40 pessoas, incluindo as pessoas das monitorias e organização, foi o suficiente para realizar a atividade, tendo a presença de pessoas muito interessadas!
+
+## **Relatos**
+
+Além do relato oferecido pela equipe da organização, gostaríamos de compartilhar também dois relatos compartilhados por pessoas que participaram do evento:
+
+**Tatiana Peixoto:**
+
+> Olá, eu sou a Tatiana, uma mulher de 42 anos, cis, negra, engenheira ambiental e apaixonada por estudar.
+> Eu me inscrevi no evento, não só pela capacitação, mas também pela busca de otimismo e assim criar forças para me inserir novamente no mercado profissional, pois fiquei muito tempo no meio acadêmico.
+> No dia 18.03.23, compreendi que a R-ladies é muito mais que um evento introdutório de programação. Essa equipe traz um novo olhar sobre a programação, tirando os bloqueios e os obstáculos para todes aqueles que querem seguir uma bela trajetória na ciência de dados. O evento é de ótima qualidade. Eu me senti acolhida, cuidada e muito bem tratada. Eu com certeza participaria de outros eventos da R-ladies.
+> Além de toda a gentileza da equipe do Insper em nos receber.
+> Espero que a R-ladies SP, siga com novos eventos e novos projetos, pois assim como eu, vocês farão muitas pessoas felizes.
+
+
+**Juliana Soprani:**
+
+> Aproveito para reforçar minhas parabenizações pelo evento! Foi realmente muito relevante!!! Não só tecnicamente, no aprendizado de análise de dados e do uso do R, mas também sobre a questão do acolhimento, desencadeando uma sensação de pertencimento a um grupo ou propósito. Para quem está iniciando na área de dados, ou em transição de carreira, como no meu caso, foi muito importante ver tantas mulheres de diferentes áreas, idades e cenários trabalhando com dados e R e engajadas em ampliar o acesso à ferramenta para as minorias. Agradeço a oportunidade e espero futuramente poder contribuir com análise de dados em saúde. Ansiosa pelos próximos encontros.
+
+## **Apoios**
+
+```{r}
+#| column: margin
+knitr::include_graphics("images/escorregador.jpg")
+```
+
+É importante ressaltar a importância do apoio financeiro da [OKBR](https://ok.org.br/), que possibilitou a compra de itens para o coffee break, adesivos e também a contratação de uma recreadora. 
+
+As salas oferecidas pelo Insper foram cruciais para a realização do evento. O prédio é de fácil acesso por transporte público. O encontro aconteceu em um espaço amplo, que conta com acesso à internet, mesas, cadeiras confortáveis e facilidade de acesso a restaurante para o almoço. O tobogã que faz parte das instalações do prédio também é um sucesso e compõe uma das experiências mais alegres para as crianças que ficaram no Gugudadados.
+
+A Curso-R também apoiou o evento, cedendo dois monitores para auxiliar na monitoria, ficando à disposição para ajudar nas dúvidas das pessoas participantes.
+
+## **Equipe**
+
+Este evento não teria sido possível se não fosse a colaboração de várias pessoas. Portanto, aqui listamos pessoas que participaram das diversas etapas de organização do evento:
+
+-   [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/) - organização, monitoria temática
+
+-   [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/) - organização, monitoria temática
+
+-   [Beatriz Milz](https://beamilz.com/) - organização, monitoria em R
+
+-   [Bianca Muniz](https://www.linkedin.com/in/bmuniz/) - monitoria temática
+
+-   [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/) - monitoria temática
+
+-   Célia Oliveira - recreadora do espaço Gugudadados
+
+-   [Diego Rabatone Oliveira](https://www.linkedin.com/in/diraol/) - espaço Gugudadados
+
+-   [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/) - organização, monitoria temática
+
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) - monitoria em R
+
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/) - organização, monitoria em R, espaço Gugudadados
+
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) - monitoria em R
+
+-   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) - monitoria em R
+
+-   [Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/) - organização, espaço Gugudadados
+
+-   [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/) - monitoria temática
+
+-   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) - monitoria em R
+
+O evento não seria o mesmo sem a colaboração de vocês - agradecemos e valorizamos muito a sua participação!
+
+Além disso, agradecemos também todas as pessoas que participaram!
+
+## **Próximos eventos**
+
+Essa foi a primeira vez que realizamos evento com a ideia de trabalhar em "grupos", e com certeza é um formato que funcionou (as participantes apontaram que preferiam assim do que palestras expositivas). Pretendemos organizar outros eventos nesse formato!
+
+O próximo evento da R-Ladies São Paulo está previsto para acontecer em maio, com tema ainda a ser definido. Caso tenha interesse em participar, recomendamos acompanhar nossas redes sociais!
+
+```{r}
+#| column: margin
+knitr::include_graphics("images/stickers.png")
+```
+
+
+Até o próximo encontro!
+
+```{r}
+#| echo: false
+# codigo para gerar as referencias dos pacotes!
+knitr::write_bib(
+  x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
+  file = "pacotes.bib"
+  )
+
+
+
+
+```

@@ -1,5 +1,7 @@
 project:
   type: website
+  preview: 
+    port: 4200
 
 
 language: "custom-pt-br.yml"
@@ -23,14 +25,20 @@ website:
   repo-url: https://github.com/R-Ladies-Sao-Paulo/blog/
   repo-actions: [edit, issue]  
   margin-header: "subscribe.html"  
-  sidebar: 
+  # sidebar: 
+  # 
+  #   style: "docked"
+  #   search: true
+  #   border: true
+  #   foreground: "#562457" 
+  #   alignment: "center"
+        
+    
+      
+  navbar:
     logo: "img/logo.jpg"
-    style: "docked"
-    search: true
-    border: true
-    foreground: "#562457" 
-    alignment: "center"
-    contents:
+    background: "#562457" 
+    left:
       - text: "Página inicial"
         href: /         
       - text: "Sobre a R-Ladies SP"
@@ -40,11 +48,7 @@ website:
       - text: "Como contribuir com o blog?"
         href: contribuir-com-o-blog.qmd       
       - text: "Sugestão de conteúdos"
-        href: sugestoes.qmd               
-    
-      
-  navbar:
-    background: "#562457"  
+        href: sugestoes.qmd           
     right:
       - icon: twitter
         href: https://twitter.com/rladiessaopaulo

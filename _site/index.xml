@@ -13,9 +13,9 @@
 <lastBuildDate>Mon, 27 Mar 2023 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Evento: Análise de dados abertos com R</title>
-  <dc:creator>Beatriz Milz</dc:creator>
   <dc:creator>Tatyane Paz Dominguez</dc:creator>
   <dc:creator>Haydée Svab</dc:creator>
+  <dc:creator>Beatriz Milz</dc:creator>
   <dc:creator>Ana Carolina Moreno</dc:creator>
   <dc:creator>Ana Paula Rocha</dc:creator>
   <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</link>
@@ -114,7 +114,7 @@
 </div>
 <p>Os dados utilizados podem ser obtidos <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">no site do INPE - BD QUEIMADAS</a>.</p>
 </section><section id="grupo-de-dados-prisionais-monitora-thandara-santos" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-prisionais-monitora-thandara-santos"><strong>Grupo de dados prisionais (Monitora Thandara Santos):</strong></h3>
-<p>Este grupo explorou dados do <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.</a> Esses dados são provenientes do<a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Formulário de Informações Prisionais</a>, respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal [Fonte: https://www.gov.br/depen/pt-br/servicos/sisdepen].</p>
+<p>Este grupo explorou dados do <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.</a> Esses dados são provenientes do <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Formulário de Informações Prisionais</a>, respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal<sup>1</sup>.</p>
 <p>Uma das dificuldades apresentadas pelo grupo é a disponibilização dos dados serem agregadas por unidade prisional, e não indivíduos, o que inviabiliza diversas análises importantes sobre a população carcerária do Brasil. Outra dificuldade apresentada é a falta de padronização às respostas apresentadas na base, o que implica em uma baixa confiabilidade dos dados.&nbsp;</p>
 <p>Os dados utilizados podem ser obtidos no site da <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados">Secretaria Nacional de Políticas Penais</a>.</p>
 </section><section id="grupo-de-dados-de-violência-monitora-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-de-violência-monitora-fernanda-peres"><strong>Grupo de dados de violência (Monitora Fernanda Peres):</strong></h3>
@@ -453,7 +453,10 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>Até o próximo encontro!</p>
 
 
-</section> ]]></description>
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<ol>
+<li id="fn1"><p>Fonte: <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN</a>.↩︎</p></li>
+</ol></section></div> ]]></description>
   <category>Eventos</category>
   <category>Comunidade</category>
   <category>Diversidade</category>

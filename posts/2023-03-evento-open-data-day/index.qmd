@@ -2,9 +2,9 @@
 title: "Evento: Análise de dados abertos com R"
 subtitle: "Um evento parte da iniciativa Open Data Day"
 author: 
-  - "Beatriz Milz"
   - "Tatyane Paz Dominguez"  
   - "Haydée Svab"
+  - "Beatriz Milz"  
   - "Ana Carolina Moreno"
   - "Ana Paula Rocha"
 date: "2023-03-27" 
@@ -123,15 +123,14 @@ knitr::include_graphics("images/coffe.png")
 
 O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/), e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!
 
-
 ### **Espaço Gugudadados**
 
 O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela [OKBR](https://ok.org.br/) foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.
 
-|                                |                                           |
+|                               |                                           |
 |------------------------------------|------------------------------------|
 | ![](images/gugudadados1.jpeg) | ![](images/gugudadados2.jpg){width="74%"} |
-| ![](images/gugudadados3.jpg)   | ![](images/gugudadados4.jpg)              |
+| ![](images/gugudadados3.jpg)  | ![](images/gugudadados4.jpg)              |
 
 ## **Resultados dos grupos**
 
@@ -157,7 +156,9 @@ Os dados utilizados podem ser obtidos [no site do INPE - BD QUEIMADAS](https://q
 
 ### **Grupo de dados prisionais (Monitora Thandara Santos):**
 
-Este grupo explorou dados do [SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.](https://www.gov.br/depen/pt-br/servicos/sisdepen) Esses dados são provenientes do[Formulário de Informações Prisionais](https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf), respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal \[Fonte: https://www.gov.br/depen/pt-br/servicos/sisdepen\].
+Este grupo explorou dados do [SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.](https://www.gov.br/depen/pt-br/servicos/sisdepen) Esses dados são provenientes do [Formulário de Informações Prisionais](https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf), respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal[^1].
+
+[^1]: Fonte: [SISDEPEN](https://www.gov.br/depen/pt-br/servicos/sisdepen).
 
 Uma das dificuldades apresentadas pelo grupo é a disponibilização dos dados serem agregadas por unidade prisional, e não indivíduos, o que inviabiliza diversas análises importantes sobre a população carcerária do Brasil. Outra dificuldade apresentada é a falta de padronização às respostas apresentadas na base, o que implica em uma baixa confiabilidade dos dados. 
 
@@ -305,12 +306,7 @@ Além do relato oferecido pela equipe da organização, gostaríamos de comparti
 
 **Tatiana Peixoto:**
 
-> Olá, eu sou a Tatiana, uma mulher de 42 anos, cis, negra, engenheira ambiental e apaixonada por estudar.
-> Eu me inscrevi no evento, não só pela capacitação, mas também pela busca de otimismo e assim criar forças para me inserir novamente no mercado profissional, pois fiquei muito tempo no meio acadêmico.
-> No dia 18.03.23, compreendi que a R-ladies é muito mais que um evento introdutório de programação. Essa equipe traz um novo olhar sobre a programação, tirando os bloqueios e os obstáculos para todes aqueles que querem seguir uma bela trajetória na ciência de dados. O evento é de ótima qualidade. Eu me senti acolhida, cuidada e muito bem tratada. Eu com certeza participaria de outros eventos da R-ladies.
-> Além de toda a gentileza da equipe do Insper em nos receber.
-> Espero que a R-ladies SP, siga com novos eventos e novos projetos, pois assim como eu, vocês farão muitas pessoas felizes.
-
+> Olá, eu sou a Tatiana, uma mulher de 42 anos, cis, negra, engenheira ambiental e apaixonada por estudar. Eu me inscrevi no evento, não só pela capacitação, mas também pela busca de otimismo e assim criar forças para me inserir novamente no mercado profissional, pois fiquei muito tempo no meio acadêmico. No dia 18.03.23, compreendi que a R-ladies é muito mais que um evento introdutório de programação. Essa equipe traz um novo olhar sobre a programação, tirando os bloqueios e os obstáculos para todes aqueles que querem seguir uma bela trajetória na ciência de dados. O evento é de ótima qualidade. Eu me senti acolhida, cuidada e muito bem tratada. Eu com certeza participaria de outros eventos da R-ladies. Além de toda a gentileza da equipe do Insper em nos receber. Espero que a R-ladies SP, siga com novos eventos e novos projetos, pois assim como eu, vocês farão muitas pessoas felizes.
 
 **Juliana Soprani:**
 
@@ -377,7 +373,6 @@ O próximo evento da R-Ladies São Paulo está previsto para acontecer em maio, 
 #| column: margin
 knitr::include_graphics("images/stickers.png")
 ```
-
 
 Até o próximo encontro!
 

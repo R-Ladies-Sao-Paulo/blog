@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.475">
@@ -9,7 +9,8 @@
 <meta name="author" content="Beatriz Milz">
 <meta name="author" content="Ana Carolina Moreno">
 <meta name="author" content="Ana Paula Rocha">
-<title>R-Ladies São Paulo - Evento: Análise de dados abertos com R</title>
+<meta name="dcterms.date" content="2023-03-27">
+<title>R-Ladies São Paulo - Event: Open Data Analysis with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,8 +132,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </script><link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="R-Ladies São Paulo - Evento: Análise de dados abertos com R">
-<meta name="twitter:description" content="Um evento parte da iniciativa Open Data Day">
+<meta name="twitter:title" content="R-Ladies São Paulo - Event: Open Data Analysis with R">
+<meta name="twitter:description" content="An event part of the Open Data Day initiative">
 <meta name="twitter:image" content="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
@@ -252,12 +253,13 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Evento: Análise de dados abertos com R</h1>
-            <p class="subtitle lead">Um evento parte da iniciativa Open Data Day</p>
+      <h1 class="title">Event: Open Data Analysis with R</h1>
+            <p class="subtitle lead">An event part of the Open Data Day initiative</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Eventos</div>
-                <div class="quarto-category">Comunidade</div>
-                <div class="quarto-category">Diversidade</div>
+                <div class="quarto-category">Events</div>
+                <div class="quarto-category">Community</div>
+                <div class="quarto-category">Diversity</div>
+                <div class="quarto-category">English</div>
               </div>
                   </div>
   </div>
@@ -279,7 +281,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">27 de março de 2023</p>
+        <p class="date">March 27, 2023</p>
       </div>
     </div>
     
@@ -329,25 +331,25 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o"><strong>Introdução</strong></a></li>
-  <li><a href="#o-que-%C3%A9-o-open-data-day" id="toc-o-que-é-o-open-data-day" class="nav-link" data-scroll-target="#o-que-%C3%A9-o-open-data-day"><strong>O que é o Open Data Day?</strong></a></li>
-  <li><a href="#atividade-principal" id="toc-atividade-principal" class="nav-link" data-scroll-target="#atividade-principal"><strong>Atividade principal</strong></a></li>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#what-is-open-data-day" id="toc-what-is-open-data-day" class="nav-link" data-scroll-target="#what-is-open-data-day"><strong>What is Open Data Day?</strong></a></li>
+  <li><a href="#main-activity" id="toc-main-activity" class="nav-link" data-scroll-target="#main-activity"><strong>Main activity</strong></a></li>
   <li>
-<a href="#fortalecendo-a-comunidade" id="toc-fortalecendo-a-comunidade" class="nav-link" data-scroll-target="#fortalecendo-a-comunidade"><strong>Fortalecendo a comunidade</strong></a>
+<a href="#strengthening-the-community" id="toc-strengthening-the-community" class="nav-link" data-scroll-target="#strengthening-the-community"><strong>Strengthening the community</strong></a>
   <ul class="collapse">
-<li><a href="#caf%C3%A9-colaborativo" id="toc-café-colaborativo" class="nav-link" data-scroll-target="#caf%C3%A9-colaborativo"><strong>Café Colaborativo</strong></a></li>
-  <li><a href="#espa%C3%A7o-gugudadados" id="toc-espaço-gugudadados" class="nav-link" data-scroll-target="#espa%C3%A7o-gugudadados"><strong>Espaço Gugudadados</strong></a></li>
+<li><a href="#collaborative-coffee" id="toc-collaborative-coffee" class="nav-link" data-scroll-target="#collaborative-coffee"><strong>Collaborative coffee</strong></a></li>
+  <li><a href="#gugudadados-space" id="toc-gugudadados-space" class="nav-link" data-scroll-target="#gugudadados-space"><strong>Gugudadados Space</strong></a></li>
   </ul>
 </li>
   <li>
-<a href="#resultados-dos-grupos" id="toc-resultados-dos-grupos" class="nav-link" data-scroll-target="#resultados-dos-grupos"><strong>Resultados dos grupos</strong></a>
+<a href="#results-from-the-groups-during-the-event" id="toc-results-from-the-groups-during-the-event" class="nav-link" data-scroll-target="#results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></a>
   <ul class="collapse">
-<li><a href="#grupo-de-dados-educacionais-monitora-ana-carolina-moreno" id="toc-grupo-de-dados-educacionais-monitora-ana-carolina-moreno" class="nav-link" data-scroll-target="#grupo-de-dados-educacionais-monitora-ana-carolina-moreno"><strong>Grupo de dados educacionais (Monitora Ana Carolina Moreno)</strong></a></li>
-  <li><a href="#grupo-de-dados-eleitorais-monitora-cec%C3%ADlia-do-lago" id="toc-grupo-de-dados-eleitorais-monitora-cecília-do-lago" class="nav-link" data-scroll-target="#grupo-de-dados-eleitorais-monitora-cec%C3%ADlia-do-lago"><strong>Grupo de dados eleitorais (Monitora Cecília do Lago):</strong></a></li>
-  <li><a href="#grupo-de-dados-ambientais-bianca-muniz" id="toc-grupo-de-dados-ambientais-bianca-muniz" class="nav-link" data-scroll-target="#grupo-de-dados-ambientais-bianca-muniz"><strong>Grupo de dados ambientais (Bianca Muniz):</strong></a></li>
-  <li><a href="#grupo-de-dados-prisionais-monitora-thandara-santos" id="toc-grupo-de-dados-prisionais-monitora-thandara-santos" class="nav-link" data-scroll-target="#grupo-de-dados-prisionais-monitora-thandara-santos"><strong>Grupo de dados prisionais (Monitora Thandara Santos):</strong></a></li>
-  <li><a href="#grupo-de-dados-de-viol%C3%AAncia-monitora-fernanda-peres" id="toc-grupo-de-dados-de-violência-monitora-fernanda-peres" class="nav-link" data-scroll-target="#grupo-de-dados-de-viol%C3%AAncia-monitora-fernanda-peres"><strong>Grupo de dados de violência (Monitora Fernanda Peres):</strong></a></li>
-  <li><a href="#grupo-de-dados-de-emprego-monitora-ana-paula" id="toc-grupo-de-dados-de-emprego-monitora-ana-paula" class="nav-link" data-scroll-target="#grupo-de-dados-de-emprego-monitora-ana-paula"><strong>Grupo de dados de emprego (Monitora Ana Paula):</strong></a></li>
+<li><a href="#educational-data-t.a.-ana-carolina-moreno" id="toc-educational-data-t.a.-ana-carolina-moreno" class="nav-link" data-scroll-target="#educational-data-t.a.-ana-carolina-moreno"><strong>Educational data (T.A. Ana Carolina Moreno)</strong></a></li>
+  <li><a href="#electoral-data-t.a.-cec%C3%ADlia-do-lago" id="toc-electoral-data-t.a.-cecília-do-lago" class="nav-link" data-scroll-target="#electoral-data-t.a.-cec%C3%ADlia-do-lago"><strong>Electoral data (T.A. Cecília do Lago):</strong></a></li>
+  <li><a href="#environmental-data-on-fires-t.a.-bianca-muniz" id="toc-environmental-data-on-fires-t.a.-bianca-muniz" class="nav-link" data-scroll-target="#environmental-data-on-fires-t.a.-bianca-muniz"><strong>Environmental data on Fires (T.A. Bianca Muniz):</strong></a></li>
+  <li><a href="#prison-data-t.a.-thandara-santos" id="toc-prison-data-t.a.-thandara-santos" class="nav-link" data-scroll-target="#prison-data-t.a.-thandara-santos"><strong>Prison data (T.A. Thandara Santos):</strong></a></li>
+  <li><a href="#violence-data-t.a.-fernanda-peres" id="toc-violence-data-t.a.-fernanda-peres" class="nav-link" data-scroll-target="#violence-data-t.a.-fernanda-peres"><strong>Violence data (T.A. Fernanda Peres):</strong></a></li>
+  <li><a href="#employment-data-group-t.a.-ana-paula" id="toc-employment-data-group-t.a.-ana-paula" class="nav-link" data-scroll-target="#employment-data-group-t.a.-ana-paula"><strong>Employment data group (T.A. Ana Paula):</strong></a></li>
   </ul>
 </li>
   <li><a href="#perfil-das-pessoas-participantes" id="toc-perfil-das-pessoas-participantes" class="nav-link" data-scroll-target="#perfil-das-pessoas-participantes"><strong>Perfil das pessoas participantes</strong></a></li>
@@ -356,52 +358,52 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   <li><a href="#apoios" id="toc-apoios" class="nav-link" data-scroll-target="#apoios"><strong>Apoios</strong></a></li>
   <li><a href="#equipe" id="toc-equipe" class="nav-link" data-scroll-target="#equipe"><strong>Equipe</strong></a></li>
   <li><a href="#pr%C3%B3ximos-eventos" id="toc-próximos-eventos" class="nav-link" data-scroll-target="#pr%C3%B3ximos-eventos"><strong>Próximos eventos</strong></a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-evento-open-data-day/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-evento-open-data-day/english.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><div class="cell" data-layout-align="center">
 
 </div>
-<section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução"><strong>Introdução</strong></h2>
-<p>A R-Ladies São Paulo organizou, em 18 de março de 2023, o evento “Análise de Dados Abertos com R - Open Data Day”. A atividade aconteceu em um sábado, durante os períodos da manhã e da tarde, totalizando 6 horas efetivas de atividade.</p>
-<p>O <a href="https://www.insper.edu.br/">Insper</a>, uma instituição sem fins lucrativos dedicada ao ensino e à pesquisa, mais uma vez apoiou o grupo cedendo o espaço para a realização do evento. Outro apoio recebido foi da <a href="https://curso-r.com/">Curso-R</a>, que cedeu dois monitores para auxiliar na monitoria, ajudando nas dúvidas. O principal objetivo deste encontro foi oferecer informações a respeito do que são e da importância dos dados abertos e promover oportunidade de pôr a “mão-na-massa” manipulando dados abertos, além de traçar o cenário atual de acesso a esses dados em vários níveis governamentais e áreas do conhecimento.</p>
+<section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>R-Ladies São Paulo organized, on March 18, 2023, the event “Open Data Analysis with R - Open Data Day.” The activity took place on a Saturday, during the morning and afternoon, with 6 hours of activities.</p>
+<p><a href="https://www.insper.edu.br/">Insper</a>, a non-profit institution dedicated to teaching and research, once again supported the group by providing the space for the event. Another support received was from <a href="https://curso-r.com/">Curso-R</a>, which provided two teaching assistants to help out participants. The main objective of this event was to offer information about what open data is and its importance. Also, we aimed to promote the opportunity to do a “hands-on” activity exploring open data and tracking the current scenario of public data access at various levels of government and topics.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
-</section><section id="o-que-é-o-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-o-open-data-day"><strong>O que é o Open Data Day?</strong></h2>
-<p>O Open Data Day, ou “Dia dos Dados Abertos”, é uma celebração anual dos dados abertos em todo o mundo, organizado e apoiado pela Open Knowledge Foundation. Caso queira saber mais, consulte o <a href="https://opendataday.org/pt_br/">site oficial do Open Data Day</a> e a página do projeto no site da <a href="https://ok.org.br/projetos/open-data-day/">Open Knowledge Brasil</a>.</p>
-</section><section id="atividade-principal" class="level2"><h2 class="anchored" data-anchor-id="atividade-principal"><strong>Atividade principal</strong></h2>
-<p>Contando com cerca de 40 pessoas, o dia foi estruturado em quatro blocos. O primeiro bloco teve caráter informativo e contou com uma sequência de breves <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">apresentações</a> como: o que é a comunidade R-Ladies São Paulo, o que é Open Data Day e o que são Dados Abertos.</p>
+</section><section id="what-is-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="what-is-open-data-day"><strong>What is Open Data Day?</strong></h2>
+<p>Open Data Day is an annual celebration of open data worldwide, organized and supported by the Open Knowledge Foundation. If you want to know more, check the official <a href="https://opendataday.org/">Open Data Day website</a> and the project page on the <a href="https://ok.org.br/projetos/open-data-day/">Open Knowledge Brasil website</a>.</p>
+</section><section id="main-activity" class="level2"><h2 class="anchored" data-anchor-id="main-activity"><strong>Main activity</strong></h2>
+<p>With about 40 people, we structured the event in four blocks. The first block was instructive and featured a sequence of brief <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">presentations</a> such as: what is the R-Ladies São Paulo community, what is Open Data Day and what is Open Data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
-<p>Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu:</p>
+<p>The objective was to make people feel free to work with open data, so we split the class into small working groups. Each group worked on a specific dataset and worked with a Teaching Assistant with experience analyzing that dataset, who guided the group to look into the data and understand them. So, the second block consisted of the following activities:</p>
 <ul>
-<li><p>da explicação de como aconteceria essa dinâmica;</p></li>
-<li><p>de uma fala breve (cerca de 5 minutos) de cada monitora sobre o tema de sua expertise e sobre a base de dados abertos que seria trabalhada, para facilitar a identificação das participantes com o tema;</p></li>
-<li><p>e da separação das participantes nos grupos segundo afinidade de interesses - a adesão foi livre e não houve necessidade de redimensionar ou redistribuir os grupos.</p></li>
+<li><p>The explanation of how this activity would happen;</p></li>
+<li><p>A brief speech (about 5 minutes) by each Teaching Assistant on the topic of their expertise and on the dataset that the group would work on, to facilitate the identification of participants with the subject;</p></li>
+<li><p>And the separation of participants into groups according to the affinity of interests - everyone could choose the topic with more interest, and there was no need to resize or redistribute groups.</p></li>
 </ul>
-<p>Os temas e respectivas monitoras foram:</p>
+<p>The topics and respective teaching assistants were:</p>
 <ul>
-<li><p>Dados sobre violência - <a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a>, biomédica</p></li>
-<li><p>Dados ambientais sobre queimadas - <a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a>, jornalista</p></li>
-<li><p>Dados educacionais - <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, jornalista</p></li>
-<li><p>Dados sobre emprego - <a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a>, economista</p></li>
-<li><p>Dados eleitorais - <a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a>, jornalista</p></li>
-<li><p>Dados prisionais - <a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a>, socióloga</p></li>
+<li><p>Data on violence - <a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a>, biomedical</p></li>
+<li><p>Environmental data on fires - <a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a>, journalist</p></li>
+<li><p>Educational data - <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, journalist</p></li>
+<li><p>Employment data - <a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a>, economist</p></li>
+<li><p>Election data - <a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a>, journalist</p></li>
+<li><p>Prison data - <a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a>, sociologist</p></li>
 </ul>
-<p>Além disso, havia pessoas monitoras disponíveis para ajudar em dúvidas sobre R:&nbsp;</p>
+<p>In addition, teaching assistants were available to help with questions about R:</p>
 <ul>
-<li><p><a href="https://beamilz.com/">Beatriz Milz</a> (Organização R-Ladies SP)</p></li>
-<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> (Organização R-Ladies SP)</p></li>
-<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> (Organização R-Ladies SP)</p></li>
-<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (Organização R-Ladies SP)</p></li>
+<li><p><a href="https://beamilz.com/">Beatriz Milz</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (R-Ladies SP co-organizer)</p></li>
 <li><p><a href="https://www.linkedin.com/in/jtrecenti/">Julio Trecenti</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 <li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 </ul>
-<p>Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.</p>
+<p>We created a Google Document so the groups could take and share notes.</p>
 <table class="table"><tbody>
 <tr class="odd">
 <td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/grupos1.jpg" class="img-fluid"></a></td>
@@ -412,27 +414,27 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/grupos4.jpg" class="img-fluid"></a></td>
 </tr>
 </tbody></table>
-<p>Então, no terceiro bloco, os grupos trabalharam em importar, entender e começar a explorar os dados abertos de seus respectivos temas. Como muitas pessoas apontaram que não tinham experiência para criar visualizações de dados e tinham interesse em começar, a co-organizadora Beatriz Milz fez uma apresentação curta, em formato live coding, sobre o uso do <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">pacote esquisse para gerar visualizações de dados com ggplot2</a>.</p>
+<p>Then, in the third block, the groups worked on importing, understanding, and starting to explore the open data of their respective themes. As many people pointed out that they had no experience creating data visualizations and were interested in getting started, co-organizer Beatriz Milz gave a short live coding presentation on using the <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">Esquisse package to generate data visualizations with ggplot2</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
-<p>No quarto e último bloco, os grupos apresentaram um pouco de suas dificuldades, aprendizados e resultados (alguns inclusive apresentaram visualizações feitas!). Foram apresentações interessantes que refletiram os tópicos abordados nas apresentações iniciais sobre dados abertos - por exemplo, alguns grupos indicaram lidar com base desatualizada, outros apontaram que dados estavam agregados e poderiam ser disponibilizados em forma de microdados, entre outros.</p>
-<p>A experiência foi muito boa, e as pessoas organizadoras e participantes demonstraram ter gostado bastante da atividade (principalmente as crianças!). Cada grupo teve entre duas e seis pessoas além das monitorias, o que permitiu um acompanhamento mais individualizado para sanar dúvidas e garantir o aproveitamento da atividade.</p>
-</section><section id="fortalecendo-a-comunidade" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="fortalecendo-a-comunidade"><strong>Fortalecendo a comunidade</strong></h2>
-<p>Dois pontos interessantes a destacar são o café colaborativo e o Espaço Gugudadados.</p>
-<section id="café-colaborativo" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="café-colaborativo"><strong>Café Colaborativo</strong></h3>
+<p>In the fourth and last block, the groups presented some of their difficulties, lessons learned, and results (some even showed visualizations made!). In addition, interesting presentations reflected the topics addressed in the initial presentations on open data - for example, some groups indicated dealing with an outdated database, others pointed out that data was aggregated and could be made available with a greater level of detail, etc.</p>
+<p>The experience was outstanding, and the organizers and participants demonstrated that they enjoyed the activity a lot (especially the children!). Each group had between two to six people in addition to the teaching assistants, which allowed for a more individualized follow-up to answer questions.</p>
+</section><section id="strengthening-the-community" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="strengthening-the-community"><strong>Strengthening the community</strong></h2>
+<p>Two interesting points to highlight are the collaborative coffee and the Gugudadados Space.</p>
+<section id="collaborative-coffee" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="collaborative-coffee"><strong>Collaborative coffee</strong></h3>
 <div class="cell page-columns page-full" data-layout-align="center">
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
+<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/coffe.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div></div></div>
-<p>O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a>, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!</p>
-</section><section id="espaço-gugudadados" class="level3"><h3 class="anchored" data-anchor-id="espaço-gugudadados"><strong>Espaço Gugudadados</strong></h3>
-<p>O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a> foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.</p>
+<p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
+</section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
+<p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
 <table class="table"><tbody>
 <tr class="odd">
 <td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/gugudadados1.jpeg" class="img-fluid"></a></td>
@@ -442,44 +444,44 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/gugudadados3.jpg" class="img-fluid"></a></td>
 <td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/gugudadados4.jpg" class="img-fluid"></a></td>
 </tr>
-</tbody></table></section></section><section id="resultados-dos-grupos" class="level2"><h2 class="anchored" data-anchor-id="resultados-dos-grupos"><strong>Resultados dos grupos</strong></h2>
-<section id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno"><strong>Grupo de dados educacionais (Monitora Ana Carolina Moreno)</strong></h3>
-<p>A monitora apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>. A monitora também preparou uma <a href="https://bit.ly/rladies_odd_2023">apresentação sobre dados educacionais</a>, para auxiliar no entendimento das diferentes fontes e bases de dados disponíveis sobre educação.</p>
-<p>Os dados utilizados podem ser obtidos <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2022">no site do INEP</a>.&nbsp;</p>
-</section><section id="grupo-de-dados-eleitorais-monitora-cecília-do-lago" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-eleitorais-monitora-cecília-do-lago"><strong>Grupo de dados eleitorais (Monitora Cecília do Lago):</strong></h3>
-<p>Este grupo explorou dados eleitorais referentes às eleições de 2022, disponibilizados pelo TSE. Uma curiosidade do grupo era descobrir quantos candidatos não receberam um ou nenhum voto na eleição de 2022.</p>
-<p>Os dados utilizados podem ser obtidos <a href="https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528">no Portal de Dados Abertos do TSE</a>.</p>
-</section><section id="grupo-de-dados-ambientais-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-ambientais-bianca-muniz"><strong>Grupo de dados ambientais (Bianca Muniz):</strong></h3>
-<p>Este grupo explorou dados sobre focos de queimadas, no sistema BDQueimadas do INPE. Esse sistema permite fazer downloads de dados num período de até um ano. A monitora preparou uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">apresentação sobre os dados utilizados</a>. O grupo exportou os dados referentes à 2020 até 2022, e o gráfico a seguir permite ver a quantidade de focos de queimada por mês, segundo o bioma onde o foco de queimada acontece. É possível perceber no gráfico que os biomas com maiores focos de incêndio são a Amazônia e o Cerrado, e apresentam padrões sazonais. O maior pico de focos de queimadas na Amazônia no período pesquisado aconteceu no segundo semestre de 2022.</p>
+</tbody></table></section></section><section id="results-from-the-groups-during-the-event" class="level2"><h2 class="anchored" data-anchor-id="results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></h2>
+<section id="educational-data-t.a.-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="educational-data-t.a.-ana-carolina-moreno"><strong>Educational data (T.A. Ana Carolina Moreno)</strong></h3>
+<p>The T.A. presented the group with an R code for analyzing data from the Census of Basic Education used to produce a s<a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">eries of special reports on the impact of the pandemic on early childhood education, which aired in November 2022</a>. The monitor also prepared a <a href="https://bit.ly/rladies_odd_2023">presentation on educational data</a> to assist in understanding the different sources and databases available on education.</p>
+<p>The data used can be obtained from the <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2022">INEP website</a>.</p>
+</section><section id="electoral-data-t.a.-cecília-do-lago" class="level3"><h3 class="anchored" data-anchor-id="electoral-data-t.a.-cecília-do-lago"><strong>Electoral data (T.A. Cecília do Lago):</strong></h3>
+<p>This group explored electoral data for the 2022 elections, made available by the TSE. The group wanted to find out how many candidates did not receive one or zero votes in the 2022 election.</p>
+<p>The data used can be obtained from the <a href="https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528">TSE’s Open Data Portal</a>.</p>
+</section><section id="environmental-data-on-fires-t.a.-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="environmental-data-on-fires-t.a.-bianca-muniz"><strong>Environmental data on Fires (T.A. Bianca Muniz):</strong></h3>
+<p>This group explored data on fires in INPE’s BDQueimadas system. This system allows anyone to download data for up to one year. The T.A. prepared a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">presentation about how to download and import this dataset</a>. The group exported data from 2020 to 2022, and the graph below shows the number of fires per month according to the biome where the fires occurred. It is possible to see in the graph that the biomes with the biggest amount of fires are the Amazon and the Cerrado, and they show seasonal patterns. For example, the highest peak of fires in the Amazon, from 2020 to 2022, was the second semester of 2022.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>Os dados utilizados podem ser obtidos <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">no site do INPE - BD QUEIMADAS</a>.</p>
-</section><section id="grupo-de-dados-prisionais-monitora-thandara-santos" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-prisionais-monitora-thandara-santos"><strong>Grupo de dados prisionais (Monitora Thandara Santos):</strong></h3>
-<p>Este grupo explorou dados do <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Dados Estatísticos do Sistema Penitenciário Brasileiro.</a> Esses dados são provenientes do <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Formulário de Informações Prisionais</a>, respondido de forma eletrônica semestralmente, por servidores indicados pelas Secretarias de administrações prisionais dos Estados e Distrito Federal e do Sistema Penitenciário Federal<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>Uma das dificuldades apresentadas pelo grupo é a disponibilização dos dados serem agregadas por unidade prisional, e não indivíduos, o que inviabiliza diversas análises importantes sobre a população carcerária do Brasil. Outra dificuldade apresentada é a falta de padronização às respostas apresentadas na base, o que implica em uma baixa confiabilidade dos dados.&nbsp;</p>
-<p>Os dados utilizados podem ser obtidos no site da <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados">Secretaria Nacional de Políticas Penais</a>.</p>
-</section><section id="grupo-de-dados-de-violência-monitora-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-de-violência-monitora-fernanda-peres"><strong>Grupo de dados de violência (Monitora Fernanda Peres):</strong></h3>
-<p>Este grupo explorou dados públicos sobre violência usando os dados do SINAN - Sistema de Informações de Agravo de Notificações, filtrando ocorrências envolvendo apenas adultos e removendo cacos de violência auto-provocada (por exemplo, suicídio). <strong>O grupo constatou que os dados públicos de Violência no DataSUS estavam desatualizados</strong>. A base referente à 2020 estava incompleta, portanto o grupo explorou dados referentes a 2019. O grupo gerou uma série de gráficos, como o apresentado a seguir, que mostra que a maior quantidade de vítimas é do sexo feminino. Além disso, destaca-se que o autor da agressão na maioria das vezes é do sexo masculino (seja a vítima mulher ou homem).</p>
+<p>The data used can be obtained from the <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">INPE - BD QUEIMADAS website</a>.</p>
+</section><section id="prison-data-t.a.-thandara-santos" class="level3"><h3 class="anchored" data-anchor-id="prison-data-t.a.-thandara-santos"><strong>Prison data (T.A. Thandara Santos):</strong></h3>
+<p>This group explored data from <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Statistical Data of the Brazilian Penitentiary System</a>. These data come from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Prison Information Form</a>, answered electronically every six months by government employees.</p>
+<p>One of the difficulties presented by the group is the availability of data to be aggregated by prison unit rather than by individuals, which makes it impossible to do several fundamental analyses on the prison population in Brazil. Another area for improvement is the lack of standardization of the answers presented in the database, which implies low data reliability.</p>
+<p>The data can be obtained from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados">National Secretariat for Penal Policies website</a>.</p>
+</section><section id="violence-data-t.a.-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="violence-data-t.a.-fernanda-peres"><strong>Violence data (T.A. Fernanda Peres):</strong></h3>
+<p>This group explored public data on violence using data from SINAN - Information System for Aggravation of Notifications, filtering occurrences involving only adults and removing self-inflicted violence (for example, suicide). <strong>The group found that the public data on Violence in DataSUS were outdated.</strong> The dataset for 2020 was incomplete, so the group explored data for 2019. The group generated a series of graphs, such as the one below, showing that the largest number of victims are woman. In addition, it is noteworthy that the author of the aggression is most often male (whether the victim is a woman or a man).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>Outra ponto percebido é que quando as vítimas são mulheres, o agressor tende a ser alguém conhecido, como cônjuge, ex-cônjuge, namorado ou ex-namorado. Entre os homens, o agressor mais comum é um desconhecido.</p>
+<p>Another thing pointed out by the group is that when the victims were women, the aggressor tended to be someone they knew, such as a spouse, ex-spouse, boyfriend, or ex-boyfriend. On the other hand, among men, the most common aggressor is a stranger.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>Os dados podem ser obtidos no <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. A monitora fez uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">apresentação</a> sobre como obter esses dados.</p>
-</section><section id="grupo-de-dados-de-emprego-monitora-ana-paula" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-de-emprego-monitora-ana-paula"><strong>Grupo de dados de emprego (Monitora Ana Paula):</strong></h3>
-<p>A monitora fez uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/RLadies_Opendata_mar23.pdf">apresentação</a> sobre como obter esses dados. O grupo explorou duas bases de dados provenientes do Caged (Cadastro Geral de Empregados e Desempregados) a partir do Banco Central, sendo elas: número de empregos totais de 2000 a 2023; e número de empregos pela indústria de transformação (qualquer matéria prima que é transformada) de 2000 a 2023. &nbsp;Os dados podem ser obtidos com o pacote <a href="https://cran.r-project.org/web/packages/GetBCBData/index.html"><strong>GetBCBData</strong></a><strong>,</strong> sendo possível buscar dados atualizados, porém agregados por mês/ano e ID da série temporal.</p>
-<div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-3_d9238e1e24de4ad2872c78fad143603e">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregando pacotes</span></span>
+<p>This data can be downloaded from <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. The T.A. gave a <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">presentation</a> on how to get this data.</p>
+</section><section id="employment-data-group-t.a.-ana-paula" class="level3"><h3 class="anchored" data-anchor-id="employment-data-group-t.a.-ana-paula"><strong>Employment data group (T.A. Ana Paula):</strong></h3>
+<p>The T.A. gave a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/RLadies_Opendata_mar23.pdf">presentation</a> on how to import this data. First, the group explored two databases from Caged (General Register of Employed and Unemployed) from the Central Bank: the number of total jobs from 2000 to 2023; and the number of jobs in the manufacturing industry (any raw material that is processed) from 2000 to 2023. &nbsp;The data can be obtained with the <a href="https://cran.r-project.org/web/packages/GetBCBData/index.html">GetBCBData package</a>, making it possible to search for updated data aggregated by month/year and time series I.D.</p>
+<div class="cell" data-layout-align="center" data-hash="english_cache/html/unnamed-chunk-3_73e651223e09eff2192c15a61da4c454">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Loading packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/msperlin/GetBCBData/">GetBCBData</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># importando os dados</span></span>
+<span><span class="co"># Importing data</span></span>
 <span><span class="va">dados_sgs</span> <span class="op">&lt;-</span>  <span class="fu">GetBCBData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/GetBCBData/man/gbcbd_get_series.html">gbcbd_get_series</a></span><span class="op">(</span></span>
 <span>  id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'NCaged'</span> <span class="op">=</span> <span class="fl">28763</span>, <span class="st">'NCaged_IndTransf'</span><span class="op">=</span> <span class="fl">28766</span><span class="op">)</span>,</span>
 <span>  first.date <span class="op">=</span> <span class="st">'2020-01-01'</span>,</span>
@@ -487,7 +489,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <span>  format.data <span class="op">=</span> <span class="st">'wide'</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># espiar dados importados</span></span>
+<span><span class="co"># Looking at the content</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_sgs</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 37
@@ -496,11 +498,11 @@ $ ref.date         &lt;date&gt; 2020-01-01, 2020-02-01, 2020-03-01, 2020-04-01, 
 $ NCaged           &lt;dbl&gt; 37938640, 38155900, 37860843, 36879150, 36480704, 364…
 $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593132,…</code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># comparando a tendência de 2 séries</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Pivoting in order to prepare the dataset to ggplot2</span></span>
 <span><span class="va">dados_sgs_longo</span> <span class="op">&lt;-</span> <span class="va">dados_sgs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">NCaged</span>, <span class="va">NCaged_IndTransf</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># criando uma visualização</span></span>
+<span><span class="co"># Creating a graph</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dados_sgs_longo</span><span class="op">)</span> <span class="op">+</span></span>
 <span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ref.date</span>, y <span class="op">=</span> <span class="va">value</span>, colour <span class="op">=</span> <span class="va">name</span><span class="op">)</span> <span class="op">+</span></span>
 <span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
@@ -509,12 +511,12 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, scales <span class="op">=</span> <span class="st">"free_y"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="english_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Para saber mais sobre essa base de dados, consulte também a <a href="https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries">página do Sistema Gerenciador de Séries Temporais do Banco Central do Brasil</a>.</p>
+<p>To learn more about this database, consult the <a href="https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries">Central Bank of Brazil Time Series Management System</a> website.</p>
 </section></section><section id="perfil-das-pessoas-participantes" class="level2"><h2 class="anchored" data-anchor-id="perfil-das-pessoas-participantes"><strong>Perfil das pessoas participantes</strong></h2>
 <p>Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:</p>
 <p>- &nbsp; pessoas negras, pardas e indígenas;</p>
@@ -530,7 +532,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="english_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -538,7 +540,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="english_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -546,7 +548,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="english_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -570,7 +572,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
+<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/escorregador.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -605,7 +607,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
+<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/stickers.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -615,10 +617,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 </div>
 
 
-</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
-<ol>
-<li id="fn1"><p>Fonte: <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -773,7 +772,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
     <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 </body></html>

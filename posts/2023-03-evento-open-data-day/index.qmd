@@ -138,7 +138,7 @@ O Espaço Gugudadados é um espaço feito para facilitar a participação de mã
 
 A monitora apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma [série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022](https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml). A monitora também preparou uma [apresentação sobre dados educacionais](https://bit.ly/rladies_odd_2023), para auxiliar no entendimento das diferentes fontes e bases de dados disponíveis sobre educação.
 
-Os dados utilizados podem ser obtidos [no site do INEP](https://dadosabertos.tse.jus.br/dataset/candidatos-2022). 
+Os dados utilizados podem ser obtidos [no site do INEP](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos). 
 
 ### **Grupo de dados eleitorais (Monitora Cecília do Lago):**
 

@@ -213,17 +213,17 @@ ggplot(dados_sgs_longo) +
 
 To learn more about this database, consult the [Central Bank of Brazil Time Series Management System](https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries) website.
 
-## **Perfil das pessoas participantes**
+## **Information about participants**
 
-Para buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:
+We want to increase the diversity in the events, so, in this edition, we separated a percentage of spots thinking about three groups:
 
-\-   pessoas negras, pardas e indígenas;
+\- BIPOC (Black, Indigenous, and people of color)
 
-\-   mães;
+\- mothers;
 
-\-   mulheres e outras minorias de gênero.
+\- women and other gender minorities.
 
-Neste evento, 54 pessoas se inscreveram, e dessas, 37 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.
+In this event, 54 people signed up, and 37 participated. Below are some graphs showing information about the diversity of the participants.
 
 ```{r}
 #| echo: false
@@ -252,12 +252,20 @@ participantes <- inscricoes |> dplyr::filter(participou %in% c("sim", "Sim"))
 ```{r grafico-genero}
 participantes |>
   dplyr::count(genero) |>
+  dplyr::mutate(
+    genero = dplyr::case_match(
+      genero,
+      "Mulher cis" ~ "Woman - Cisgender",
+      "Homem cis" ~ "Men - Cisgender",
+      "Homen trans" ~ "Men - Transgender",
+    )
+  ) |> 
   dplyr::mutate(genero = forcats::fct_reorder(genero, n)) |>
   ggplot() +
   geom_col(aes(y = genero, x = n), fill = "#562457") +
   geom_label(aes(x = n, y = genero, label = n)) +
-  labs(y = "Gênero", x = "Quantidade de participantes",
-       title = "Gênero") +
+  labs(y = "Gender", x = "Number of participants",
+       title = "Gender") +
   rladies_theme +
   scale_x_continuous(position = "top") 
 ```
@@ -265,12 +273,22 @@ participantes |>
 ```{r grafico-cor-raca}
 participantes |>
   dplyr::count(cor_raca) |>
+    dplyr::mutate(
+    cor_raca = dplyr::case_match(
+      cor_raca,
+      "Branca" ~ "White (Branca)",
+      "Parda" ~ "Black (Parda)",
+      "Preta" ~ "Black (Preta)",
+      "Amarela" ~ "Asian Brazilians (Amarela)",
+      "Indígena" ~ "Indigenous (Indígena)",
+    )
+  ) |> 
   dplyr::mutate(cor_raca = forcats::fct_reorder(cor_raca, n)) |>
   ggplot() +
   geom_col(aes(y = cor_raca, x = n), fill = "#562457") +
   geom_label(aes(x = n, y = cor_raca, label = n)) +
-  labs(y = "Cor ou raça", x = "Quantidade de participantes",
-       title = "Autodeclaração de cor ou raça") +
+  labs(y = "Color or race", x = "Number of participantss",
+       title = "Color or race self-declaration") +
   rladies_theme +
   scale_x_continuous(position = "top") 
 ```
@@ -279,13 +297,22 @@ participantes |>
 participantes |>
   tidyr::separate_rows(outros_grupos, sep = ", ") |>
   dplyr::filter(!outros_grupos %in% c("Não informado", "Não faço parte de nenhum dos grupos acima")) |>
-  dplyr::count(outros_grupos) |>
+  dplyr::mutate(
+    outros_grupos2 = dplyr::case_match(
+      outros_grupos,
+      "Mãe" ~ "Mother",
+      "Idade acima de 40 anos" ~ "Age +40", 
+      "Neurodivergente" ~ "Neurodivergent",
+      .default = outros_grupos
+    )
+  ) |> 
+  dplyr::count(outros_grupos2) |>
   dplyr::mutate(outros_grupos = forcats::fct_reorder(outros_grupos, n)) |>
   ggplot() +
   geom_col(aes(y = outros_grupos, x = n), fill = "#562457") +
   geom_label(aes(x = n, y = outros_grupos, label = n)) +
-  labs(y = "Grupos", x = "Quantidade de participantes",
-       title = "Outros grupos menos representados na Ciência de Dados") +
+  labs(y = "Groups", x = "Number of participants",
+       title = "Other underrepresented groups in data science") +
   rladies_theme +
   scale_x_continuous(position = "top") 
 ```

@@ -7,7 +7,7 @@ author:
   - "Beatriz Milz"  
   - "Ana Carolina Moreno"
   - "Ana Paula Rocha"
-date: "2023-03-27" 
+date: "2023-03-26" 
 categories: 
   - "Events"
   - "Community"

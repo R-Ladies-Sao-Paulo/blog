@@ -912,7 +912,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   <category>Diversity</category>
   <category>English</category>
   <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</guid>
-  <pubDate>Mon, 27 Mar 2023 03:00:00 GMT</pubDate>
+  <pubDate>Sun, 26 Mar 2023 03:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -3702,14 +3702,11 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"
   <dc:creator>Beatriz Milz</dc:creator>
   <dc:creator>[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)</dc:creator>
   <link>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</link>
-  <description><![CDATA[ <div class="cell" data-layout-align="center">
-
-</div>
-<p>Olá, pessoal!</p>
+  <description><![CDATA[ <p>Olá, pessoal!</p>
 <p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
 <p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="quarto-discovered-preview-image img-fluid figure-img" style="width:80.0%"></p>
 <p></p><figcaption class="figure-caption">Foto do grupo ao final do evento</figcaption><p></p>
 </figure>
 </div>
@@ -3728,12 +3725,6 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"
 <li><p>mães (30 vagas);</p></li>
 <li><p>mulheres e outras minorias de gênero (30 vagas).</p></li>
 </ul>
-<div class="cell" data-layout-align="center">
-
-</div>
-<div class="cell" data-layout-align="center">
-
-</div>
 <p>Neste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -3823,9 +3814,6 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>"
 <p>Agradecemos todas as pessoas que participaram e esperamos vê-las em eventos futuros! Estamos planejando realizar um próximo evento focado em visualização de dados.</p>
 <p>A R-Ladies São Paulo tem como objetivo promover a diversidade na comunidade de usuários de R e oferecer oportunidades de aprendizado e networking para pessoas que fazem parte de grupos de gêneros subrepresentados na linguagem R, interessadas em ciência e análise de dados. Se você quiser saber mais sobre o grupo, fique ligada em nossos próximos eventos e nos siga nas redes sociais.</p>
 <p>Até a próxima!</p>
-<div class="cell" data-layout-align="center">
-
-</div>
 
 
 </section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>

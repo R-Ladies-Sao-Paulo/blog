@@ -53,7 +53,7 @@
     "href": "posts/2023-01-evento-oficina-intro-R/index.html#diversidade",
     "title": "Evento: Oficina de Introdução ao R",
     "section": "Diversidade",
-    "text": "Diversidade\nPara buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:\n\npessoas negras e indígenas (30 vagas);\nmães (30 vagas);\nmulheres e outras minorias de gênero (30 vagas).\n\n\n\n\n\n\n\nNeste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAinda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.\nAlém disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos."
+    "text": "Diversidade\nPara buscar ampliar a diversidade na participação do evento, nesta edição reservamos as vagas pensando em três grupos:\n\npessoas negras e indígenas (30 vagas);\nmães (30 vagas);\nmulheres e outras minorias de gênero (30 vagas).\n\nNeste evento, 100 pessoas se inscreveram, e dessas, 53 participaram. A seguir, apresentamos alguns gráficos que mostram informações sobre questões de diversidade coletadas das pessoas participantes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAinda há muito trabalho a fazer para incluir mais mães nos eventos! Acreditamos que o Espaço GuGuDaDados, que falaremos a seguir, possa ajudar a atingir este público.\nAlém disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos."
   },
   {
     "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#espaço-gugudadados",
@@ -677,5 +677,12 @@
     "title": "Event: Open Data Analysis with R",
     "section": "Next events",
     "text": "Next events\nThis was the first time we held an event with the idea of ​​working in “groups”, and it is certainly a format that worked well (the participants indicated that they preferred this way to expository lectures). We intend to organize other events in this format!\nThe next R-Ladies São Paulo event is scheduled for May, with a theme yet to be defined. If you are interested in participating, we recommend following our social media!"
+  },
+  {
+    "objectID": "posts/2023-01-evento-oficina-intro-R/index.html#footnotes",
+    "href": "posts/2023-01-evento-oficina-intro-R/index.html#footnotes",
+    "title": "Evento: Oficina de Introdução ao R",
+    "section": "Notas de rodapé",
+    "text": "Notas de rodapé\n\nUsar post-its (sticky notes) para ajudar a organizar o tipo de ajuda necessária é uma recomendação feita no treinamento de instrutores da The Carpentries.↩︎"
   }
 ]

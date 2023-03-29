@@ -16,7 +16,7 @@ categories:
 toc: true
 image: "images/logo.png" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
-draft: true # enquanto estiver draft: true, o post é um rascunho
+draft: false # enquanto estiver draft: true, o post é um rascunho
 knitr:
   opts_chunk: 
     fig.align: "center"
@@ -77,7 +77,7 @@ The topics and respective teaching assistants were:
 
 -   Educational data - [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/), journalist
 
--   Employment data  - [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/), economist
+-   Employment data - [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/), economist
 
 -   Election data - [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/), journalist
 
@@ -140,7 +140,7 @@ We created the Gugudadados Space to facilitate the participation of people respo
 
 The T.A. presented the group with an R code for analyzing data from the Census of Basic Education used to produce a s[eries of special reports on the impact of the pandemic on early childhood education, which aired in November 2022](https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml). The monitor also prepared a [presentation on educational data](https://bit.ly/rladies_odd_2023) to assist in understanding the different sources and databases available on education.
 
-The data used can be obtained from the [INEP website](https://dadosabertos.tse.jus.br/dataset/candidatos-2022).
+The data used can be obtained from the [INEP website](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos).
 
 ### **Electoral data (T.A. Cecília do Lago):**
 
@@ -156,7 +156,7 @@ This group explored data on fires in INPE's BDQueimadas system. This system allo
 
 The data used can be obtained from the [INPE - BD QUEIMADAS website](https://queimadas.dgi.inpe.br/queimadas/bdqueimadas).
 
-### **Prison data (T.A.  Thandara Santos):**
+### **Prison data (T.A. Thandara Santos):**
 
 This group explored data from [SISDEPEN - Statistical Data of the Brazilian Penitentiary System](https://www.gov.br/depen/pt-br/servicos/sisdepen). These data come from the [Prison Information Form](https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf), answered electronically every six months by government employees.
 
@@ -277,9 +277,9 @@ participantes |>
     cor_raca = dplyr::case_match(
       cor_raca,
       "Branca" ~ "White (Branca)",
-      "Parda" ~ "Black (Parda)",
+      "Parda" ~ "Brown (Parda)",
       "Preta" ~ "Black (Preta)",
-      "Amarela" ~ "Asian Brazilians (Amarela)",
+      "Amarela" ~ "Yellow (Amarela)",
       "Indígena" ~ "Indigenous (Indígena)",
     )
   ) |> 
@@ -288,7 +288,8 @@ participantes |>
   geom_col(aes(y = cor_raca, x = n), fill = "#562457") +
   geom_label(aes(x = n, y = cor_raca, label = n)) +
   labs(y = "Color or race", x = "Number of participantss",
-       title = "Color or race self-declaration") +
+       title = "Color or race self-declaration", 
+       caption = "Classification by IBGE (Brazilian Institute of Geography and Statistics)") +
   rladies_theme +
   scale_x_continuous(position = "top") 
 ```
@@ -298,15 +299,16 @@ participantes |>
   tidyr::separate_rows(outros_grupos, sep = ", ") |>
   dplyr::filter(!outros_grupos %in% c("Não informado", "Não faço parte de nenhum dos grupos acima")) |>
   dplyr::mutate(
-    outros_grupos2 = dplyr::case_match(
+    outros_grupos = dplyr::case_match(
       outros_grupos,
       "Mãe" ~ "Mother",
       "Idade acima de 40 anos" ~ "Age +40", 
       "Neurodivergente" ~ "Neurodivergent",
+      "Moradora de periferia" ~ "Resident of the periphery",
       .default = outros_grupos
     )
   ) |> 
-  dplyr::count(outros_grupos2) |>
+  dplyr::count(outros_grupos) |>
   dplyr::mutate(outros_grupos = forcats::fct_reorder(outros_grupos, n)) |>
   ggplot() +
   geom_col(aes(y = outros_grupos, x = n), fill = "#562457") +
@@ -317,25 +319,27 @@ participantes |>
   scale_x_continuous(position = "top") 
 ```
 
-Ainda há muito trabalho a fazer para incluir grupos menos representados nos eventos, mas acreditamos que, em comparação aos eventos anteriores à pandemia, estamos avançando. Para os próximos eventos, é importante ampliar a divulgação dos eventos para os grupos de pessoas pretas, pardas e indígenas; para mães, e para pessoas trans e não binárias, além de estarmos em busca de parcerias para realizar esse tipo de atividade na periferia.
+There is still a lot of work to do to include unrepresented groups at events, but compared to pre-pandemic events, we are making progress. It is essential to expand the publicity for the following events, especially for BIPOC (Black, Indigenous, and people of color), mothers, and trans and non-binary people. Also, it is important to look for venues to make events in the periphery.
 
-## **Dificuldades**
+## **Difficulties**
 
-A principal dificuldade na organização do evento foi o pouco tempo disponível para divulgação da atividade, já a definição da data e local foram feitas com apenas seis dias de antecedência. Apesar de a sala disponível ter capacidade para 100 pessoas, apenas 40 tiveram tempo hábil para se organizar e se inscrever como participantes. 
+The main difficulty in organizing the event was the short time available for publicizing the activity, since the date and place were defined only six days in advance. Despite the available room having a capacity for 100 people, only 40 had enough time to organize themselves and register as participants.
 
-No entanto, a presença final de mais de 40 pessoas, incluindo as pessoas das monitorias e organização, foi o suficiente para realizar a atividade, tendo a presença de pessoas muito interessadas!
+However, the presence of more than 40 people, including people from the organization, was enough to carry out the activity, with the presence of people really interested in the topic.
 
-## **Relatos**
+## **Commentaries**
 
-Além do relato oferecido pela equipe da organização, gostaríamos de compartilhar também dois relatos compartilhados por pessoas que participaram do evento:
+In addition to the description offered by the organization's team, we would also like to share two commentaries shared by people who participated in the event:
 
 **Tatiana Peixoto:**
 
-> Olá, eu sou a Tatiana, uma mulher de 42 anos, cis, negra, engenheira ambiental e apaixonada por estudar. Eu me inscrevi no evento, não só pela capacitação, mas também pela busca de otimismo e assim criar forças para me inserir novamente no mercado profissional, pois fiquei muito tempo no meio acadêmico. No dia 18.03.23, compreendi que a R-ladies é muito mais que um evento introdutório de programação. Essa equipe traz um novo olhar sobre a programação, tirando os bloqueios e os obstáculos para todes aqueles que querem seguir uma bela trajetória na ciência de dados. O evento é de ótima qualidade. Eu me senti acolhida, cuidada e muito bem tratada. Eu com certeza participaria de outros eventos da R-ladies. Além de toda a gentileza da equipe do Insper em nos receber. Espero que a R-ladies SP, siga com novos eventos e novos projetos, pois assim como eu, vocês farão muitas pessoas felizes.
+> Hello, I'm Tatiana, a 42-year-old cis woman, black, environmental engineer, and passionate about studying. I signed up for the event, not only for the training but also for the search for optimism, thus creating strength to enter the professional market again, as I spent a long time in the academic environment. On 18.03.23th, I understood that R-ladies is much more than an introductory programming event. This team brings a new look at programming, removing blockages and obstacles for all those who want to follow a beautiful path in data science. The event is of excellent quality. I felt welcomed, cared for, and very well treated. I would definitely attend other R-ladies events. In addition to all the kindness of the Insper team in receiving us. I hope that R-ladies SP will continue with new events and new projects because, like me, they will make a lot of people happy.
 
 **Juliana Soprani:**
 
-> Aproveito para reforçar minhas parabenizações pelo evento! Foi realmente muito relevante!!! Não só tecnicamente, no aprendizado de análise de dados e do uso do R, mas também sobre a questão do acolhimento, desencadeando uma sensação de pertencimento a um grupo ou propósito. Para quem está iniciando na área de dados, ou em transição de carreira, como no meu caso, foi muito importante ver tantas mulheres de diferentes áreas, idades e cenários trabalhando com dados e R e engajadas em ampliar o acesso à ferramenta para as minorias. Agradeço a oportunidade e espero futuramente poder contribuir com análise de dados em saúde. Ansiosa pelos próximos encontros.
+> I take this opportunity to reinforce my congratulations on the event! It was really relevant!!! Not only technically, in learning data analysis and the use of R, but also on the issue of welcoming, triggering a sense of belonging to a group or purpose. For someone starting in the data area, or in a career transition, as in my case, it was very important to see so many women from different areas, ages, and backgrounds working with data and R and engaged in expanding access to the tool for minorities. I am grateful for the opportunity and hope to contribute to health data analysis in the future.
+>
+> Looking forward to upcoming meetings.
 
 ## **Apoios**
 
@@ -344,62 +348,60 @@ Além do relato oferecido pela equipe da organização, gostaríamos de comparti
 knitr::include_graphics("images/escorregador.jpg")
 ```
 
-É importante ressaltar a importância do apoio financeiro da [OKBR](https://ok.org.br/), que possibilitou a compra de itens para o coffee break, adesivos e também a contratação de uma recreadora. 
+It is important to emphasize the importance of [OKBR](https://ok.org.br/) 's financial support, which enabled the purchase of items for the coffee break, stickers, and hiring a recreator. 
 
-As salas oferecidas pelo Insper foram cruciais para a realização do evento. O prédio é de fácil acesso por transporte público. O encontro aconteceu em um espaço amplo, que conta com acesso à internet, mesas, cadeiras confortáveis e facilidade de acesso a restaurante para o almoço. O tobogã que faz parte das instalações do prédio também é um sucesso e compõe uma das experiências mais alegres para as crianças que ficaram no Gugudadados.
+The rooms offered by Insper were crucial for the event to take place. The building is easily accessible by public transport. The meeting took place in a large space with internet access, tables, comfortable chairs, and easy access to a restaurant for lunch. The toboggan that is part of the building's facilities is also a success and makes up one of the most joyful experiences for children who stay at Gugudadados.
 
-A Curso-R também apoiou o evento, cedendo dois monitores para auxiliar na monitoria, ficando à disposição para ajudar nas dúvidas das pessoas participantes.
+Curso-R also supported the event, providing two R teachers to assist in the activity and being available to help with questions from the participants.
 
 ## **Equipe**
 
-Este evento não teria sido possível se não fosse a colaboração de várias pessoas. Portanto, aqui listamos pessoas que participaram das diversas etapas de organização do evento:
+This event was only possible with the collaboration of several people. Therefore, here is a list of people who participated in the various stages of organizing the event:
 
--   [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/) - organização, monitoria temática
+-   [Ana Paula Rocha](https://www.linkedin.com/in/aprocha/) - organization, teaching assistant
 
--   [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/) - organização, monitoria temática
+-   [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/) - organization, teaching assistant
 
--   [Beatriz Milz](https://beamilz.com/) - organização, monitoria em R
+-   [Beatriz Milz](https://beamilz.com/) - organization, teaching assistant
 
--   [Bianca Muniz](https://www.linkedin.com/in/bmuniz/) - monitoria temática
+-   [Bianca Muniz](https://www.linkedin.com/in/bmuniz/) - teaching assistant
 
--   [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/) - monitoria temática
+-   [Cecília do Lago](https://www.linkedin.com/in/ceciliadolago/) - teaching assistant
 
--   Célia Oliveira - recreadora do espaço Gugudadados
+-   Célia Oliveira - Gugudadados space
 
--   [Diego Rabatone Oliveira](https://www.linkedin.com/in/diraol/) - espaço Gugudadados
+-   [Diego Rabatone Oliveira](https://www.linkedin.com/in/diraol/) - Gugudadados space
 
--   [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/) - organização, monitoria temática
+-   [Fernanda Peres](https://www.linkedin.com/in/fernandafielperes/) - organization, teaching assistant
 
--   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) - monitoria em R
+-   [Geovana Lopes Batista](https://www.linkedin.com/in/geovanalopes/) - teaching assistant
 
--   [Haydee Svab](https://www.linkedin.com/in/hsvab/) - organização, monitoria em R, espaço Gugudadados
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/) - organization, teaching assistant, Gugudadados space
 
--   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) - monitoria em R
+-   [Ianní Muliterno](https://www.linkedin.com/in/iannimuliterno/) - teaching assistant
 
--   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) - monitoria em R
+-   [Julio Trecenti](https://www.linkedin.com/in/jtrecenti/) - teaching assistant
 
--   [Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/) - organização, espaço Gugudadados
+-   [Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/) - organization, Gugudadados space
 
--   [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/) - monitoria temática
+-   [Thandara Santos](https://www.linkedin.com/in/thandara-santos-348b18122/) - teaching assistant
 
--   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) - monitoria em R
+-   [William Amorim](https://www.linkedin.com/in/william-amorim-796798210/) - teaching assistant
 
-O evento não seria o mesmo sem a colaboração de vocês - agradecemos e valorizamos muito a sua participação!
+The event would not be the same without your collaboration - we appreciate and greatly appreciate your participation!
 
-Além disso, agradecemos também todas as pessoas que participaram!
+In addition, we also thank everyone who participated!
 
-## **Próximos eventos**
+## **Next events**
 
-Essa foi a primeira vez que realizamos evento com a ideia de trabalhar em "grupos", e com certeza é um formato que funcionou (as participantes apontaram que preferiam assim do que palestras expositivas). Pretendemos organizar outros eventos nesse formato!
+This was the first time we held an event with the idea of ​​working in "groups", and it is certainly a format that worked well (the participants indicated that they preferred this way to expository lectures). We intend to organize other events in this format!
 
-O próximo evento da R-Ladies São Paulo está previsto para acontecer em maio, com tema ainda a ser definido. Caso tenha interesse em participar, recomendamos acompanhar nossas redes sociais!
+The next R-Ladies São Paulo event is scheduled for May, with a theme yet to be defined. If you are interested in participating, we recommend following our social media!
 
 ```{r}
 #| column: margin
 knitr::include_graphics("images/stickers.png")
 ```
-
-Até o próximo encontro!
 
 ```{r}
 #| echo: false
@@ -408,8 +410,5 @@ knitr::write_bib(
   x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
   file = "pacotes.bib"
   )
-
-
-
 
 ```

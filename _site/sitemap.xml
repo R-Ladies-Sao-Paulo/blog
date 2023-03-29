@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rladies-sp.org/index.html</loc>
-    <lastmod>2023-03-28T14:03:21.486Z</lastmod>
+    <lastmod>2023-03-29T00:27:00.494Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</loc>
-    <lastmod>2023-03-28T14:03:20.407Z</lastmod>
+    <lastmod>2023-03-29T00:13:22.210Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2020-06-rladies-global-blm/index.html</loc>
@@ -55,5 +55,9 @@
   <url>
     <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index-en.html</loc>
     <lastmod>2023-03-27T23:03:29.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</loc>
+    <lastmod>2023-03-29T00:26:59.353Z</lastmod>
   </url>
 </urlset>

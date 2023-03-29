@@ -341,7 +341,7 @@ In addition to the description offered by the organization's team, we would also
 >
 > Looking forward to upcoming meetings.
 
-## **Apoios**
+## **Support**
 
 ```{r}
 #| column: margin
@@ -354,7 +354,7 @@ The rooms offered by Insper were crucial for the event to take place. The buildi
 
 Curso-R also supported the event, providing two R teachers to assist in the activity and being available to help with questions from the participants.
 
-## **Equipe**
+## **Team**
 
 This event was only possible with the collaboration of several people. Therefore, here is a list of people who participated in the various stages of organizing the event:
 

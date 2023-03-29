@@ -12,279 +12,6 @@
 <generator>quarto-1.2.475</generator>
 <lastBuildDate>Mon, 27 Mar 2023 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Event: Open Data Analysis with R</title>
-  <dc:creator>Tatyane Paz Dominguez</dc:creator>
-  <dc:creator>Haydée Svab</dc:creator>
-  <dc:creator>Beatriz Milz</dc:creator>
-  <dc:creator>Ana Carolina Moreno</dc:creator>
-  <dc:creator>Ana Paula Rocha</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</link>
-  <description><![CDATA[ <div class="cell" data-layout-align="center">
-
-</div>
-<section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
-<p>R-Ladies São Paulo organized, on March 18, 2023, the event “Open Data Analysis with R - Open Data Day.” The activity took place on a Saturday, during the morning and afternoon, with 6 hours of activities.</p>
-<p><a href="https://www.insper.edu.br/">Insper</a>, a non-profit institution dedicated to teaching and research, once again supported the group by providing the space for the event. Another support received was from <a href="https://curso-r.com/">Curso-R</a>, which provided two teaching assistants to help out participants. The main objective of this event was to offer information about what open data is and its importance. Also, we aimed to promote the opportunity to do a “hands-on” activity exploring open data and tracking the current scenario of public data access at various levels of government and topics.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-</figure>
-</div>
-</section><section id="what-is-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="what-is-open-data-day"><strong>What is Open Data Day?</strong></h2>
-<p>Open Data Day is an annual celebration of open data worldwide, organized and supported by the Open Knowledge Foundation. If you want to know more, check the official <a href="https://opendataday.org/">Open Data Day website</a> and the project page on the <a href="https://ok.org.br/projetos/open-data-day/">Open Knowledge Brasil website</a>.</p>
-</section><section id="main-activity" class="level2"><h2 class="anchored" data-anchor-id="main-activity"><strong>Main activity</strong></h2>
-<p>With about 40 people, we structured the event in four blocks. The first block was instructive and featured a sequence of brief <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">presentations</a> such as: what is the R-Ladies São Paulo community, what is Open Data Day and what is Open Data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-</figure>
-</div>
-<p>The objective was to make people feel free to work with open data, so we split the class into small working groups. Each group worked on a specific dataset and worked with a Teaching Assistant with experience analyzing that dataset, who guided the group to look into the data and understand them. So, the second block consisted of the following activities:</p>
-<ul>
-<li><p>The explanation of how this activity would happen;</p></li>
-<li><p>A brief speech (about 5 minutes) by each Teaching Assistant on the topic of their expertise and on the dataset that the group would work on, to facilitate the identification of participants with the subject;</p></li>
-<li><p>And the separation of participants into groups according to the affinity of interests - everyone could choose the topic with more interest, and there was no need to resize or redistribute groups.</p></li>
-</ul>
-<p>The topics and respective teaching assistants were:</p>
-<ul>
-<li><p>Data on violence - <a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a>, biomedical</p></li>
-<li><p>Environmental data on fires - <a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a>, journalist</p></li>
-<li><p>Educational data - <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, journalist</p></li>
-<li><p>Employment data - <a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a>, economist</p></li>
-<li><p>Election data - <a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a>, journalist</p></li>
-<li><p>Prison data - <a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a>, sociologist</p></li>
-</ul>
-<p>In addition, teaching assistants were available to help with questions about R:</p>
-<ul>
-<li><p><a href="https://beamilz.com/">Beatriz Milz</a> (R-Ladies SP co-organizer)</p></li>
-<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> (R-Ladies SP co-organizer)</p></li>
-<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> (R-Ladies SP co-organizer)</p></li>
-<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (R-Ladies SP co-organizer)</p></li>
-<li><p><a href="https://www.linkedin.com/in/jtrecenti/">Julio Trecenti</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
-<li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
-</ul>
-<p>We created a Google Document so the groups could take and share notes.</p>
-<table class="table"><tbody>
-<tr class="odd">
-<td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></a></td>
-</tr>
-<tr class="even">
-<td><a href="images/grupos3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></a></td>
-</tr>
-</tbody></table>
-<p>Then, in the third block, the groups worked on importing, understanding, and starting to explore the open data of their respective themes. As many people pointed out that they had no experience creating data visualizations and were interested in getting started, co-organizer Beatriz Milz gave a short live coding presentation on using the <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">Esquisse package to generate data visualizations with ggplot2</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
-</figure>
-</div>
-<p>In the fourth and last block, the groups presented some of their difficulties, lessons learned, and results (some even showed visualizations made!). In addition, interesting presentations reflected the topics addressed in the initial presentations on open data - for example, some groups indicated dealing with an outdated database, others pointed out that data was aggregated and could be made available with a greater level of detail, etc.</p>
-<p>The experience was outstanding, and the organizers and participants demonstrated that they enjoyed the activity a lot (especially the children!). Each group had between two to six people in addition to the teaching assistants, which allowed for a more individualized follow-up to answer questions.</p>
-</section><section id="strengthening-the-community" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="strengthening-the-community"><strong>Strengthening the community</strong></h2>
-<p>Two interesting points to highlight are the collaborative coffee and the Gugudadados Space.</p>
-<section id="collaborative-coffee" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="collaborative-coffee"><strong>Collaborative coffee</strong></h3>
-<div class="cell page-columns page-full" data-layout-align="center">
-
-<div class="no-row-height column-margin column-container"><div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
-</figure>
-</div>
-</div></div></div>
-<p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
-</section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
-<p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
-<table class="table"><tbody>
-<tr class="odd">
-<td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></a></td>
-</tr>
-<tr class="even">
-<td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></a></td>
-</tr>
-</tbody></table></section></section><section id="results-from-the-groups-during-the-event" class="level2"><h2 class="anchored" data-anchor-id="results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></h2>
-<section id="educational-data-t.a.-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="educational-data-t.a.-ana-carolina-moreno"><strong>Educational data (T.A. Ana Carolina Moreno)</strong></h3>
-<p>The T.A. presented the group with an R code for analyzing data from the Census of Basic Education used to produce a s<a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">eries of special reports on the impact of the pandemic on early childhood education, which aired in November 2022</a>. The monitor also prepared a <a href="https://bit.ly/rladies_odd_2023">presentation on educational data</a> to assist in understanding the different sources and databases available on education.</p>
-<p>The data used can be obtained from the <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">INEP website</a>.</p>
-</section><section id="electoral-data-t.a.-cecília-do-lago" class="level3"><h3 class="anchored" data-anchor-id="electoral-data-t.a.-cecília-do-lago"><strong>Electoral data (T.A. Cecília do Lago):</strong></h3>
-<p>This group explored electoral data for the 2022 elections, made available by the TSE. The group wanted to find out how many candidates did not receive one or zero votes in the 2022 election.</p>
-<p>The data used can be obtained from the <a href="https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528">TSE’s Open Data Portal</a>.</p>
-</section><section id="environmental-data-on-fires-t.a.-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="environmental-data-on-fires-t.a.-bianca-muniz"><strong>Environmental data on Fires (T.A. Bianca Muniz):</strong></h3>
-<p>This group explored data on fires in INPE’s BDQueimadas system. This system allows anyone to download data for up to one year. The T.A. prepared a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">presentation about how to download and import this dataset</a>. The group exported data from 2020 to 2022, and the graph below shows the number of fires per month according to the biome where the fires occurred. It is possible to see in the graph that the biomes with the biggest amount of fires are the Amazon and the Cerrado, and they show seasonal patterns. For example, the highest peak of fires in the Amazon, from 2020 to 2022, was the second semester of 2022.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<p>The data used can be obtained from the <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">INPE - BD QUEIMADAS website</a>.</p>
-</section><section id="prison-data-t.a.-thandara-santos" class="level3"><h3 class="anchored" data-anchor-id="prison-data-t.a.-thandara-santos"><strong>Prison data (T.A. Thandara Santos):</strong></h3>
-<p>This group explored data from <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Statistical Data of the Brazilian Penitentiary System</a>. These data come from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Prison Information Form</a>, answered electronically every six months by government employees.</p>
-<p>One of the difficulties presented by the group is the availability of data to be aggregated by prison unit rather than by individuals, which makes it impossible to do several fundamental analyses on the prison population in Brazil. Another area for improvement is the lack of standardization of the answers presented in the database, which implies low data reliability.</p>
-<p>The data can be obtained from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados">National Secretariat for Penal Policies website</a>.</p>
-</section><section id="violence-data-t.a.-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="violence-data-t.a.-fernanda-peres"><strong>Violence data (T.A. Fernanda Peres):</strong></h3>
-<p>This group explored public data on violence using data from SINAN - Information System for Aggravation of Notifications, filtering occurrences involving only adults and removing self-inflicted violence (for example, suicide). <strong>The group found that the public data on Violence in DataSUS were outdated.</strong> The dataset for 2020 was incomplete, so the group explored data for 2019. The group generated a series of graphs, such as the one below, showing that the largest number of victims are woman. In addition, it is noteworthy that the author of the aggression is most often male (whether the victim is a woman or a man).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<p>Another thing pointed out by the group is that when the victims were women, the aggressor tended to be someone they knew, such as a spouse, ex-spouse, boyfriend, or ex-boyfriend. On the other hand, among men, the most common aggressor is a stranger.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<p>This data can be downloaded from <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. The T.A. gave a <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">presentation</a> on how to get this data.</p>
-</section><section id="employment-data-group-t.a.-ana-paula" class="level3"><h3 class="anchored" data-anchor-id="employment-data-group-t.a.-ana-paula"><strong>Employment data group (T.A. Ana Paula):</strong></h3>
-<p>The T.A. gave a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/RLadies_Opendata_mar23.pdf">presentation</a> on how to import this data. First, the group explored two databases from Caged (General Register of Employed and Unemployed) from the Central Bank: the number of total jobs from 2000 to 2023; and the number of jobs in the manufacturing industry (any raw material that is processed) from 2000 to 2023. &nbsp;The data can be obtained with the <a href="https://cran.r-project.org/web/packages/GetBCBData/index.html">GetBCBData package</a>, making it possible to search for updated data aggregated by month/year and time series I.D.</p>
-<div class="cell" data-layout-align="center" data-hash="english_cache/html/unnamed-chunk-3_73e651223e09eff2192c15a61da4c454">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Loading packages</span></span>
-<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/msperlin/GetBCBData/">GetBCBData</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span></span>
-<span><span class="co" style="color: #5E5E5E;"># Importing data</span></span>
-<span><span class="va" style="color: #111111;">dados_sgs</span> <span class="op" style="color: #5E5E5E;">&lt;-</span>  <span class="fu" style="color: #4758AB;">GetBCBData</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/GetBCBData/man/gbcbd_get_series.html">gbcbd_get_series</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
-<span>  id <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">'NCaged'</span> <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">28763</span>, <span class="st" style="color: #20794D;">'NCaged_IndTransf'</span><span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">28766</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>  first.date <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'2020-01-01'</span>,</span>
-<span>  last.date <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>  format.data <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'wide'</span></span>
-<span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span></span>
-<span><span class="co" style="color: #5E5E5E;"># Looking at the content</span></span>
-<span><span class="fu" style="color: #4758AB;"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_sgs</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 37
-Columns: 3
-$ ref.date         &lt;date&gt; 2020-01-01, 2020-02-01, 2020-03-01, 2020-04-01, 2020…
-$ NCaged           &lt;dbl&gt; 37938640, 38155900, 37860843, 36879150, 36480704, 364…
-$ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593132,…</code></pre>
-</div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Pivoting in order to prepare the dataset to ggplot2</span></span>
-<span><span class="va" style="color: #111111;">dados_sgs_longo</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_sgs</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op" style="color: #5E5E5E;">(</span>cols <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">NCaged</span>, <span class="va" style="color: #111111;">NCaged_IndTransf</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span></span>
-<span><span class="co" style="color: #5E5E5E;"># Creating a graph</span></span>
-<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_sgs_longo</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">ref.date</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">value</span>, colour <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">name</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op" style="color: #5E5E5E;">(</span>show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">FALSE</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_hue.html">scale_color_hue</a></span><span class="op" style="color: #5E5E5E;">(</span>direction <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">name</span><span class="op" style="color: #5E5E5E;">)</span>, scales <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"free_y"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<p>To learn more about this database, consult the <a href="https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries">Central Bank of Brazil Time Series Management System</a> website.</p>
-</section></section><section id="information-about-participants" class="level2"><h2 class="anchored" data-anchor-id="information-about-participants"><strong>Information about participants</strong></h2>
-<p>We want to increase the diversity in the events, so, in this edition, we separated a percentage of spots thinking about three groups:</p>
-<p>- BIPOC (Black, Indigenous, and people of color)</p>
-<p>- mothers;</p>
-<p>- women and other gender minorities.</p>
-<p>In this event, 54 people signed up, and 37 participated. Below are some graphs showing information about the diversity of the participants.</p>
-<div class="cell" data-layout-align="center">
-
-</div>
-<div class="cell" data-layout-align="center">
-
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<p>There is still a lot of work to do to include unrepresented groups at events, but compared to pre-pandemic events, we are making progress. It is essential to expand the publicity for the following events, especially for BIPOC (Black, Indigenous, and people of color), mothers, and trans and non-binary people. Also, it is important to look for venues to make events in the periphery.</p>
-</section><section id="difficulties" class="level2"><h2 class="anchored" data-anchor-id="difficulties"><strong>Difficulties</strong></h2>
-<p>The main difficulty in organizing the event was the short time available for publicizing the activity, since the date and place were defined only six days in advance. Despite the available room having a capacity for 100 people, only 40 had enough time to organize themselves and register as participants.</p>
-<p>However, the presence of more than 40 people, including people from the organization, was enough to carry out the activity, with the presence of people really interested in the topic.</p>
-</section><section id="commentaries" class="level2"><h2 class="anchored" data-anchor-id="commentaries"><strong>Commentaries</strong></h2>
-<p>In addition to the description offered by the organization’s team, we would also like to share two commentaries shared by people who participated in the event:</p>
-<p><strong>Tatiana Peixoto:</strong></p>
-<blockquote class="blockquote">
-<p>Hello, I’m Tatiana, a 42-year-old cis woman, black, environmental engineer, and passionate about studying. I signed up for the event, not only for the training but also for the search for optimism, thus creating strength to enter the professional market again, as I spent a long time in the academic environment. On 18.03.23th, I understood that R-ladies is much more than an introductory programming event. This team brings a new look at programming, removing blockages and obstacles for all those who want to follow a beautiful path in data science. The event is of excellent quality. I felt welcomed, cared for, and very well treated. I would definitely attend other R-ladies events. In addition to all the kindness of the Insper team in receiving us. I hope that R-ladies SP will continue with new events and new projects because, like me, they will make a lot of people happy.</p>
-</blockquote>
-<p><strong>Juliana Soprani:</strong></p>
-<blockquote class="blockquote">
-<p>I take this opportunity to reinforce my congratulations on the event! It was really relevant!!! Not only technically, in learning data analysis and the use of R, but also on the issue of welcoming, triggering a sense of belonging to a group or purpose. For someone starting in the data area, or in a career transition, as in my case, it was very important to see so many women from different areas, ages, and backgrounds working with data and R and engaged in expanding access to the tool for minorities. I am grateful for the opportunity and hope to contribute to health data analysis in the future.</p>
-<p>Looking forward to upcoming meetings.</p>
-</blockquote>
-</section><section id="apoios" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="apoios"><strong>Apoios</strong></h2>
-<div class="cell page-columns page-full" data-layout-align="center">
-
-<div class="no-row-height column-margin column-container"><div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
-</figure>
-</div>
-</div></div></div>
-<p>It is important to emphasize the importance of&nbsp;<a href="https://ok.org.br/">OKBR</a>&nbsp;’s financial support, which enabled the purchase of items for the coffee break, stickers, and hiring a recreator.&nbsp;</p>
-<p>The rooms offered by Insper were crucial for the event to take place. The building is easily accessible by public transport. The meeting took place in a large space with internet access, tables, comfortable chairs, and easy access to a restaurant for lunch. The toboggan that is part of the building’s facilities is also a success and makes up one of the most joyful experiences for children who stay at Gugudadados.</p>
-<p>Curso-R also supported the event, providing two R teachers to assist in the activity and being available to help with questions from the participants.</p>
-</section><section id="equipe" class="level2"><h2 class="anchored" data-anchor-id="equipe"><strong>Equipe</strong></h2>
-<p>This event was only possible with the collaboration of several people. Therefore, here is a list of people who participated in the various stages of organizing the event:</p>
-<ul>
-<li><p><a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a> - organization, teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a> - organization, teaching assistant</p></li>
-<li><p><a href="https://beamilz.com/">Beatriz Milz</a> - organization, teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a> - teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a> - teaching assistant</p></li>
-<li><p>Célia Oliveira - Gugudadados space</p></li>
-<li><p><a href="https://www.linkedin.com/in/diraol/">Diego Rabatone Oliveira</a> - Gugudadados space</p></li>
-<li><p><a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a> - organization, teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> - teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> - organization, teaching assistant, Gugudadados space</p></li>
-<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> - teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/jtrecenti/">Julio Trecenti</a> - teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez</a> - organization, Gugudadados space</p></li>
-<li><p><a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a> - teaching assistant</p></li>
-<li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> - teaching assistant</p></li>
-</ul>
-<p>The event would not be the same without your collaboration - we appreciate and greatly appreciate your participation!</p>
-<p>In addition, we also thank everyone who participated!</p>
-</section><section id="next-events" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="next-events"><strong>Next events</strong></h2>
-<p>This was the first time we held an event with the idea of ​​working in “groups”, and it is certainly a format that worked well (the participants indicated that they preferred this way to expository lectures). We intend to organize other events in this format!</p>
-<p>The next R-Ladies São Paulo event is scheduled for May, with a theme yet to be defined. If you are interested in participating, we recommend following our social media!</p>
-<div class="cell page-columns page-full" data-layout-align="center">
-
-<div class="no-row-height column-margin column-container"><div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
-</figure>
-</div>
-</div></div></div>
-<div class="cell" data-layout-align="center">
-
-</div>
-
-
-</section> ]]></description>
-  <category>Events</category>
-  <category>Community</category>
-  <category>Diversity</category>
-  <category>English</category>
-  <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</guid>
-  <pubDate>Mon, 27 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" medium="image" type="image/png" height="81" width="144"/>
-</item>
-<item>
   <title>Evento: Análise de dados abertos com R</title>
   <dc:creator>Tatyane Paz Dominguez</dc:creator>
   <dc:creator>Haydée Svab</dc:creator>
@@ -557,6 +284,279 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
   <category>Diversidade</category>
   <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</guid>
   <pubDate>Mon, 27 Mar 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Event: Open Data Analysis with R</title>
+  <dc:creator>Tatyane Paz Dominguez</dc:creator>
+  <dc:creator>Haydée Svab</dc:creator>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>Ana Carolina Moreno</dc:creator>
+  <dc:creator>Ana Paula Rocha</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</link>
+  <description><![CDATA[ <div class="cell" data-layout-align="center">
+
+</div>
+<section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>R-Ladies São Paulo organized, on March 18, 2023, the event “Open Data Analysis with R - Open Data Day.” The activity took place on a Saturday, during the morning and afternoon, with 6 hours of activities.</p>
+<p><a href="https://www.insper.edu.br/">Insper</a>, a non-profit institution dedicated to teaching and research, once again supported the group by providing the space for the event. Another support received was from <a href="https://curso-r.com/">Curso-R</a>, which provided two teaching assistants to help out participants. The main objective of this event was to offer information about what open data is and its importance. Also, we aimed to promote the opportunity to do a “hands-on” activity exploring open data and tracking the current scenario of public data access at various levels of government and topics.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</section><section id="what-is-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="what-is-open-data-day"><strong>What is Open Data Day?</strong></h2>
+<p>Open Data Day is an annual celebration of open data worldwide, organized and supported by the Open Knowledge Foundation. If you want to know more, check the official <a href="https://opendataday.org/">Open Data Day website</a> and the project page on the <a href="https://ok.org.br/projetos/open-data-day/">Open Knowledge Brasil website</a>.</p>
+</section><section id="main-activity" class="level2"><h2 class="anchored" data-anchor-id="main-activity"><strong>Main activity</strong></h2>
+<p>With about 40 people, we structured the event in four blocks. The first block was instructive and featured a sequence of brief <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">presentations</a> such as: what is the R-Ladies São Paulo community, what is Open Data Day and what is Open Data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+<p>The objective was to make people feel free to work with open data, so we split the class into small working groups. Each group worked on a specific dataset and worked with a Teaching Assistant with experience analyzing that dataset, who guided the group to look into the data and understand them. So, the second block consisted of the following activities:</p>
+<ul>
+<li><p>The explanation of how this activity would happen;</p></li>
+<li><p>A brief speech (about 5 minutes) by each Teaching Assistant on the topic of their expertise and on the dataset that the group would work on, to facilitate the identification of participants with the subject;</p></li>
+<li><p>And the separation of participants into groups according to the affinity of interests - everyone could choose the topic with more interest, and there was no need to resize or redistribute groups.</p></li>
+</ul>
+<p>The topics and respective teaching assistants were:</p>
+<ul>
+<li><p>Data on violence - <a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a>, biomedical</p></li>
+<li><p>Environmental data on fires - <a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a>, journalist</p></li>
+<li><p>Educational data - <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, journalist</p></li>
+<li><p>Employment data - <a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a>, economist</p></li>
+<li><p>Election data - <a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a>, journalist</p></li>
+<li><p>Prison data - <a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a>, sociologist</p></li>
+</ul>
+<p>In addition, teaching assistants were available to help with questions about R:</p>
+<ul>
+<li><p><a href="https://beamilz.com/">Beatriz Milz</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> (R-Ladies SP co-organizer)</p></li>
+<li><p><a href="https://www.linkedin.com/in/jtrecenti/">Julio Trecenti</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
+<li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
+</ul>
+<p>We created a Google Document so the groups could take and share notes.</p>
+<table class="table"><tbody>
+<tr class="odd">
+<td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></a></td>
+<td><a href="images/grupos2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></a></td>
+</tr>
+<tr class="even">
+<td><a href="images/grupos3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></a></td>
+<td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></a></td>
+</tr>
+</tbody></table>
+<p>Then, in the third block, the groups worked on importing, understanding, and starting to explore the open data of their respective themes. As many people pointed out that they had no experience creating data visualizations and were interested in getting started, co-organizer Beatriz Milz gave a short live coding presentation on using the <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">Esquisse package to generate data visualizations with ggplot2</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
+<p>In the fourth and last block, the groups presented some of their difficulties, lessons learned, and results (some even showed visualizations made!). In addition, interesting presentations reflected the topics addressed in the initial presentations on open data - for example, some groups indicated dealing with an outdated database, others pointed out that data was aggregated and could be made available with a greater level of detail, etc.</p>
+<p>The experience was outstanding, and the organizers and participants demonstrated that they enjoyed the activity a lot (especially the children!). Each group had between two to six people in addition to the teaching assistants, which allowed for a more individualized follow-up to answer questions.</p>
+</section><section id="strengthening-the-community" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="strengthening-the-community"><strong>Strengthening the community</strong></h2>
+<p>Two interesting points to highlight are the collaborative coffee and the Gugudadados Space.</p>
+<section id="collaborative-coffee" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="collaborative-coffee"><strong>Collaborative coffee</strong></h3>
+<div class="cell page-columns page-full" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
+</figure>
+</div>
+</div></div></div>
+<p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
+</section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
+<p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
+<table class="table"><tbody>
+<tr class="odd">
+<td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></a></td>
+<td><a href="images/gugudadados2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></a></td>
+</tr>
+<tr class="even">
+<td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></a></td>
+<td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></a></td>
+</tr>
+</tbody></table></section></section><section id="results-from-the-groups-during-the-event" class="level2"><h2 class="anchored" data-anchor-id="results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></h2>
+<section id="educational-data-t.a.-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="educational-data-t.a.-ana-carolina-moreno"><strong>Educational data (T.A. Ana Carolina Moreno)</strong></h3>
+<p>The T.A. presented the group with an R code for analyzing data from the Census of Basic Education used to produce a s<a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">eries of special reports on the impact of the pandemic on early childhood education, which aired in November 2022</a>. The monitor also prepared a <a href="https://bit.ly/rladies_odd_2023">presentation on educational data</a> to assist in understanding the different sources and databases available on education.</p>
+<p>The data used can be obtained from the <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">INEP website</a>.</p>
+</section><section id="electoral-data-t.a.-cecília-do-lago" class="level3"><h3 class="anchored" data-anchor-id="electoral-data-t.a.-cecília-do-lago"><strong>Electoral data (T.A. Cecília do Lago):</strong></h3>
+<p>This group explored electoral data for the 2022 elections, made available by the TSE. The group wanted to find out how many candidates did not receive one or zero votes in the 2022 election.</p>
+<p>The data used can be obtained from the <a href="https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528">TSE’s Open Data Portal</a>.</p>
+</section><section id="environmental-data-on-fires-t.a.-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="environmental-data-on-fires-t.a.-bianca-muniz"><strong>Environmental data on Fires (T.A. Bianca Muniz):</strong></h3>
+<p>This group explored data on fires in INPE’s BDQueimadas system. This system allows anyone to download data for up to one year. The T.A. prepared a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">presentation about how to download and import this dataset</a>. The group exported data from 2020 to 2022, and the graph below shows the number of fires per month according to the biome where the fires occurred. It is possible to see in the graph that the biomes with the biggest amount of fires are the Amazon and the Cerrado, and they show seasonal patterns. For example, the highest peak of fires in the Amazon, from 2020 to 2022, was the second semester of 2022.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The data used can be obtained from the <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">INPE - BD QUEIMADAS website</a>.</p>
+</section><section id="prison-data-t.a.-thandara-santos" class="level3"><h3 class="anchored" data-anchor-id="prison-data-t.a.-thandara-santos"><strong>Prison data (T.A. Thandara Santos):</strong></h3>
+<p>This group explored data from <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen">SISDEPEN - Statistical Data of the Brazilian Penitentiary System</a>. These data come from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados/arquivos/formulario-sobre-informacoes-prisionais.pdf">Prison Information Form</a>, answered electronically every six months by government employees.</p>
+<p>One of the difficulties presented by the group is the availability of data to be aggregated by prison unit rather than by individuals, which makes it impossible to do several fundamental analyses on the prison population in Brazil. Another area for improvement is the lack of standardization of the answers presented in the database, which implies low data reliability.</p>
+<p>The data can be obtained from the <a href="https://www.gov.br/depen/pt-br/servicos/sisdepen/relatorios-e-manuais/bases-de-dados">National Secretariat for Penal Policies website</a>.</p>
+</section><section id="violence-data-t.a.-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="violence-data-t.a.-fernanda-peres"><strong>Violence data (T.A. Fernanda Peres):</strong></h3>
+<p>This group explored public data on violence using data from SINAN - Information System for Aggravation of Notifications, filtering occurrences involving only adults and removing self-inflicted violence (for example, suicide). <strong>The group found that the public data on Violence in DataSUS were outdated.</strong> The dataset for 2020 was incomplete, so the group explored data for 2019. The group generated a series of graphs, such as the one below, showing that the largest number of victims are woman. In addition, it is noteworthy that the author of the aggression is most often male (whether the victim is a woman or a man).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Another thing pointed out by the group is that when the victims were women, the aggressor tended to be someone they knew, such as a spouse, ex-spouse, boyfriend, or ex-boyfriend. On the other hand, among men, the most common aggressor is a stranger.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>This data can be downloaded from <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. The T.A. gave a <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">presentation</a> on how to get this data.</p>
+</section><section id="employment-data-group-t.a.-ana-paula" class="level3"><h3 class="anchored" data-anchor-id="employment-data-group-t.a.-ana-paula"><strong>Employment data group (T.A. Ana Paula):</strong></h3>
+<p>The T.A. gave a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/RLadies_Opendata_mar23.pdf">presentation</a> on how to import this data. First, the group explored two databases from Caged (General Register of Employed and Unemployed) from the Central Bank: the number of total jobs from 2000 to 2023; and the number of jobs in the manufacturing industry (any raw material that is processed) from 2000 to 2023. &nbsp;The data can be obtained with the <a href="https://cran.r-project.org/web/packages/GetBCBData/index.html">GetBCBData package</a>, making it possible to search for updated data aggregated by month/year and time series I.D.</p>
+<div class="cell" data-layout-align="center" data-hash="english_cache/html/unnamed-chunk-3_73e651223e09eff2192c15a61da4c454">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Loading packages</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/msperlin/GetBCBData/">GetBCBData</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Importing data</span></span>
+<span><span class="va" style="color: #111111;">dados_sgs</span> <span class="op" style="color: #5E5E5E;">&lt;-</span>  <span class="fu" style="color: #4758AB;">GetBCBData</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/GetBCBData/man/gbcbd_get_series.html">gbcbd_get_series</a></span><span class="op" style="color: #5E5E5E;">(</span></span>
+<span>  id <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">'NCaged'</span> <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">28763</span>, <span class="st" style="color: #20794D;">'NCaged_IndTransf'</span><span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">28766</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>  first.date <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'2020-01-01'</span>,</span>
+<span>  last.date <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
+<span>  format.data <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'wide'</span></span>
+<span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Looking at the content</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_sgs</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 37
+Columns: 3
+$ ref.date         &lt;date&gt; 2020-01-01, 2020-02-01, 2020-03-01, 2020-04-01, 2020…
+$ NCaged           &lt;dbl&gt; 37938640, 38155900, 37860843, 36879150, 36480704, 364…
+$ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593132,…</code></pre>
+</div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Pivoting in order to prepare the dataset to ggplot2</span></span>
+<span><span class="va" style="color: #111111;">dados_sgs_longo</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">dados_sgs</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op" style="color: #5E5E5E;">(</span>cols <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">NCaged</span>, <span class="va" style="color: #111111;">NCaged_IndTransf</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;"># Creating a graph</span></span>
+<span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">dados_sgs_longo</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">ref.date</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">value</span>, colour <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">name</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op" style="color: #5E5E5E;">(</span>show.legend <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">FALSE</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/scale_hue.html">scale_color_hue</a></span><span class="op" style="color: #5E5E5E;">(</span>direction <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
+<span> <span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">name</span><span class="op" style="color: #5E5E5E;">)</span>, scales <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"free_y"</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="english_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>To learn more about this database, consult the <a href="https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries">Central Bank of Brazil Time Series Management System</a> website.</p>
+</section></section><section id="information-about-participants" class="level2"><h2 class="anchored" data-anchor-id="information-about-participants"><strong>Information about participants</strong></h2>
+<p>We want to increase the diversity in the events, so, in this edition, we separated a percentage of spots thinking about three groups:</p>
+<p>- BIPOC (Black, Indigenous, and people of color)</p>
+<p>- mothers;</p>
+<p>- women and other gender minorities.</p>
+<p>In this event, 54 people signed up, and 37 participated. Below are some graphs showing information about the diversity of the participants.</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="english_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="english_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="english_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There is still a lot of work to do to include unrepresented groups at events, but compared to pre-pandemic events, we are making progress. It is essential to expand the publicity for the following events, especially for BIPOC (Black, Indigenous, and people of color), mothers, and trans and non-binary people. Also, it is important to look for venues to make events in the periphery.</p>
+</section><section id="difficulties" class="level2"><h2 class="anchored" data-anchor-id="difficulties"><strong>Difficulties</strong></h2>
+<p>The main difficulty in organizing the event was the short time available for publicizing the activity, since the date and place were defined only six days in advance. Despite the available room having a capacity for 100 people, only 40 had enough time to organize themselves and register as participants.</p>
+<p>However, the presence of more than 40 people, including people from the organization, was enough to carry out the activity, with the presence of people really interested in the topic.</p>
+</section><section id="commentaries" class="level2"><h2 class="anchored" data-anchor-id="commentaries"><strong>Commentaries</strong></h2>
+<p>In addition to the description offered by the organization’s team, we would also like to share two commentaries shared by people who participated in the event:</p>
+<p><strong>Tatiana Peixoto:</strong></p>
+<blockquote class="blockquote">
+<p>Hello, I’m Tatiana, a 42-year-old cis woman, black, environmental engineer, and passionate about studying. I signed up for the event, not only for the training but also for the search for optimism, thus creating strength to enter the professional market again, as I spent a long time in the academic environment. On 18.03.23th, I understood that R-ladies is much more than an introductory programming event. This team brings a new look at programming, removing blockages and obstacles for all those who want to follow a beautiful path in data science. The event is of excellent quality. I felt welcomed, cared for, and very well treated. I would definitely attend other R-ladies events. In addition to all the kindness of the Insper team in receiving us. I hope that R-ladies SP will continue with new events and new projects because, like me, they will make a lot of people happy.</p>
+</blockquote>
+<p><strong>Juliana Soprani:</strong></p>
+<blockquote class="blockquote">
+<p>I take this opportunity to reinforce my congratulations on the event! It was really relevant!!! Not only technically, in learning data analysis and the use of R, but also on the issue of welcoming, triggering a sense of belonging to a group or purpose. For someone starting in the data area, or in a career transition, as in my case, it was very important to see so many women from different areas, ages, and backgrounds working with data and R and engaged in expanding access to the tool for minorities. I am grateful for the opportunity and hope to contribute to health data analysis in the future.</p>
+<p>Looking forward to upcoming meetings.</p>
+</blockquote>
+</section><section id="apoios" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="apoios"><strong>Apoios</strong></h2>
+<div class="cell page-columns page-full" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
+</figure>
+</div>
+</div></div></div>
+<p>It is important to emphasize the importance of&nbsp;<a href="https://ok.org.br/">OKBR</a>&nbsp;’s financial support, which enabled the purchase of items for the coffee break, stickers, and hiring a recreator.&nbsp;</p>
+<p>The rooms offered by Insper were crucial for the event to take place. The building is easily accessible by public transport. The meeting took place in a large space with internet access, tables, comfortable chairs, and easy access to a restaurant for lunch. The toboggan that is part of the building’s facilities is also a success and makes up one of the most joyful experiences for children who stay at Gugudadados.</p>
+<p>Curso-R also supported the event, providing two R teachers to assist in the activity and being available to help with questions from the participants.</p>
+</section><section id="equipe" class="level2"><h2 class="anchored" data-anchor-id="equipe"><strong>Equipe</strong></h2>
+<p>This event was only possible with the collaboration of several people. Therefore, here is a list of people who participated in the various stages of organizing the event:</p>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a> - organization, teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a> - organization, teaching assistant</p></li>
+<li><p><a href="https://beamilz.com/">Beatriz Milz</a> - organization, teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a> - teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/ceciliadolago/">Cecília do Lago</a> - teaching assistant</p></li>
+<li><p>Célia Oliveira - Gugudadados space</p></li>
+<li><p><a href="https://www.linkedin.com/in/diraol/">Diego Rabatone Oliveira</a> - Gugudadados space</p></li>
+<li><p><a href="https://www.linkedin.com/in/fernandafielperes/">Fernanda Peres</a> - organization, teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes Batista</a> - teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> - organization, teaching assistant, Gugudadados space</p></li>
+<li><p><a href="https://www.linkedin.com/in/iannimuliterno/">Ianní Muliterno</a> - teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/jtrecenti/">Julio Trecenti</a> - teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/">Tatyane Paz Dominguez</a> - organization, Gugudadados space</p></li>
+<li><p><a href="https://www.linkedin.com/in/thandara-santos-348b18122/">Thandara Santos</a> - teaching assistant</p></li>
+<li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> - teaching assistant</p></li>
+</ul>
+<p>The event would not be the same without your collaboration - we appreciate and greatly appreciate your participation!</p>
+<p>In addition, we also thank everyone who participated!</p>
+</section><section id="next-events" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="next-events"><strong>Next events</strong></h2>
+<p>This was the first time we held an event with the idea of ​​working in “groups”, and it is certainly a format that worked well (the participants indicated that they preferred this way to expository lectures). We intend to organize other events in this format!</p>
+<p>The next R-Ladies São Paulo event is scheduled for May, with a theme yet to be defined. If you are interested in participating, we recommend following our social media!</p>
+<div class="cell page-columns page-full" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
+</figure>
+</div>
+</div></div></div>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+</section> ]]></description>
+  <category>Events</category>
+  <category>Community</category>
+  <category>Diversity</category>
+  <category>English</category>
+  <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</guid>
+  <pubDate>Sun, 26 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>

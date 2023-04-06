@@ -59,7 +59,6 @@ grafico_colunas <- function(dados, col, y_label){
 }
 ```
 
-
 ```{r}
 censo_2020_url <- "https://docs.google.com/spreadsheets/d/1ht53wO-qiWsrF3zLIn6DaENNLLjQGqleZL6E6g0lMTc/edit?resourcekey#gid=861397353"
 
@@ -83,29 +82,27 @@ censo_2020 <- censo_2020_raw |>
     genero = dplyr::if_else(genero == "Feminino", "Mulher (cis ou trans)", genero)
   )
 
+readr::write_rds(censo_2020, file = "data/censo_2020.rds")
 
 ```
 
+-   Resultados do Censo 2020
 
-- Resultados do Censo 2020
+-   gênero
 
-
-- gênero
-- Problemas: não perguntamos coisaas que possam definir quantas pessoas trans temos nos eventos
+-   Problemas: não perguntamos coisaas que possam definir quantas pessoas trans temos nos eventos
 
 ```{r}
 censo_2020 |>
   grafico_colunas(col = genero, y_label = "Gênero")
 ```
 
-- Raca
+-   Raca
 
 ```{r}
 censo_2020 |>
   grafico_colunas(col = raca, y_label = "Cor/Raça")
 ```
-
-
 
 ```{r}
 censo_2020_raw$considerando_questoes_relacionadas_a_raca_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
@@ -113,19 +110,9 @@ censo_2020_raw$considerando_questoes_relacionadas_a_raca_voce_teria_alguma_suges
   tidyr::drop_na() |> View()
 ```
 
-Sugestões relacionadas à raça:
-- Divulgar R-Ladies em grupos que abordam a questão racial
-- Cotas
-- Bolsas
-- Convidar pessoas negras para palestrar
-- Divulgar estatísticas do grupo sobre esse gap de representatividade
-- Eventos focados com a temática de raça
-- Eventos em regiões periféricas
-- Cursos focados em mulheres negras
-- mulheres negras na organização
+Sugestões relacionadas à raça: - Divulgar R-Ladies em grupos que abordam a questão racial - Cotas - Bolsas - Convidar pessoas negras para palestrar - Divulgar estatísticas do grupo sobre esse gap de representatividade - Eventos focados com a temática de raça - Eventos em regiões periféricas - Cursos focados em mulheres negras - mulheres negras na organização
 
-
-- mães/pais
+-   mães/pais
 
 ```{r}
 censo_2020 |>
@@ -135,7 +122,6 @@ censo_2020 |>
 #     dplyr::filter(filhos == "Sim") |> 
 #   grafico_colunas(col = deixou_ir_evento_filhos, y_label = "")
 ```
-
 
 ```{r}
 censo_2020 |> 
@@ -148,10 +134,9 @@ censo_2020 |>
 
 Sugestões maternidade:
 
-- Espaço Kids
-- Gravar eventos
-- Transmissão online
-
+-   Espaço Kids
+-   Gravar eventos
+-   Transmissão online
 
 ```{r}
 censo_2020_raw$considerando_questoes_relacionadas_a_maternidade_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
@@ -159,20 +144,16 @@ censo_2020_raw$considerando_questoes_relacionadas_a_maternidade_voce_teria_algum
   tidyr::drop_na() |> View()
 ```
 
+-   LGBT
 
-- LGBT
 ```{r}
 censo_2020 |> 
   grafico_colunas(col = lgbt, y_label = "É LGBTQIA+?")
 ```
 
-Sugestões:
-- O nome dá a entender que o grupo é para mulheres apenas
-- Maior participação de pessoas trans/não binárias
-- Divulgação
+Sugestões: - O nome dá a entender que o grupo é para mulheres apenas - Maior participação de pessoas trans/não binárias - Divulgação
 
-
-- Alimentação
+-   Alimentação
 
 ```{r}
 censo_2020 |> 
@@ -181,22 +162,14 @@ censo_2020 |>
   grafico_colunas(col = restricao_alimentar, y_label = "É LGBTQIA+?")
 ```
 
+Sugestões: - Incentivar o grupo a cada uma levar seu copo - Ter comidas veganas e vegetarianas - Ter indicação de que a comida é vegetariana/vegana
 
-Sugestões:
-- Incentivar o grupo a cada uma levar seu copo
-- Ter comidas veganas e vegetarianas
-- Ter indicação de que a comida é vegetariana/vegana
-
-
-- Região 
+-   Região
 
 ```{r}
 censo_2020 |> 
   dplyr::count(onde_mora, sort = TRUE) 
 ```
-
-
-
 
 ```{r}
 #| echo: false

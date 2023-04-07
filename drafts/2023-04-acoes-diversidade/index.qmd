@@ -60,29 +60,31 @@ grafico_colunas <- function(dados, col, y_label){
 ```
 
 ```{r}
-censo_2020_url <- "https://docs.google.com/spreadsheets/d/1ht53wO-qiWsrF3zLIn6DaENNLLjQGqleZL6E6g0lMTc/edit?resourcekey#gid=861397353"
+# censo_2020_url <- "https://docs.google.com/spreadsheets/d/1ht53wO-qiWsrF3zLIn6DaENNLLjQGqleZL6E6g0lMTc/edit?resourcekey#gid=861397353"
+# 
+# censo_2020_raw <- googlesheets4::read_sheet(censo_2020_url) |>
+#   janitor::clean_names()
+# 
+# 
+# censo_2020 <- censo_2020_raw |> 
+#   dplyr::select(
+#     de_acordo = 2,
+#     genero = 4,
+#     raca = 9,
+#     filhos = 11,
+#     deixou_ir_evento_filhos = 14,
+#     lgbt = 20,
+#     restricao_alimentar = 26,
+#     onde_mora = 32
+#   ) |> 
+#   dplyr::filter(de_acordo == "Sim") |> 
+#   dplyr::mutate(
+#     genero = dplyr::if_else(genero == "Feminino", "Mulher (cis ou trans)", genero)
+#   )
+# 
+# readr::write_rds(censo_2020, file = "data/censo_2020.rds")
 
-censo_2020_raw <- googlesheets4::read_sheet(censo_2020_url) |>
-  janitor::clean_names()
-
-
-censo_2020 <- censo_2020_raw |> 
-  dplyr::select(
-    de_acordo = 2,
-    genero = 4,
-    raca = 9,
-    filhos = 11,
-    deixou_ir_evento_filhos = 14,
-    lgbt = 20,
-    restricao_alimentar = 26,
-    onde_mora = 32
-  ) |> 
-  dplyr::filter(de_acordo == "Sim") |> 
-  dplyr::mutate(
-    genero = dplyr::if_else(genero == "Feminino", "Mulher (cis ou trans)", genero)
-  )
-
-readr::write_rds(censo_2020, file = "data/censo_2020.rds")
+censo_2020 <- readr::read_rds("data/censo_2020.rds")
 
 ```
 

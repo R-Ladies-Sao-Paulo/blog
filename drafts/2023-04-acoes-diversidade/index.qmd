@@ -1,0 +1,188 @@
+---
+title: "Título do post"
+subtitle: "Subtítulo do post"
+author: 
+  - "Equipe R-Ladies SP" # Exemplo
+  - "[Beatriz Milz](https://beamilz.com)" # Exemplo. Podemos adicionar o nome e um link com Markdown, usando o formato: "[NOME](https://link.com)"
+date: "2022-12-03" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+categories: 
+# exemplo de categorias:
+  - "Novidades"
+  - "Tutorial"
+  - "Eventos"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: true # enquanto estiver draft: true, o post é um rascunho
+---
+
+::: {.callout-note collapse="false"}
+## Autoria
+
+<center>
+
+![Foto](https://url_para_sua_foto.jpg){style="width: 30%; border-radius: 50%;"}
+
+[<i class="bi bi-house-fill"></i>](https://) [<i class="fab fa-github"></i>](https://github.com/USER) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/USER/) [<i class="fab fa-instagram"></i>](https://www.instagram.com/USER/)
+
+</center>
+
+Este post foi escrito por ....
+:::
+
+```{r}
+
+library(ggplot2)
+
+rladies_theme <- theme_minimal(base_size = 15) +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title.position = "plot",
+        plot.title = element_text(color = "#562357"),
+        text = element_text(color = "#80868b"),
+        axis.text.x = element_blank()) 
+  
+
+grafico_colunas <- function(dados, col, y_label){
+  dados |> 
+    dplyr::rename(coluna = {{col}}) |> 
+  dplyr::count(coluna) |> 
+  dplyr::mutate(
+    porc = scales::percent(n/sum(n)) ,
+    coluna = forcats::fct_reorder(coluna, n)) |>
+  ggplot() +
+  aes(y = coluna, x = n) +
+  geom_col(fill = "#562457") +
+  labs(x = "Porcentagem de respondentes", y = y_label) +
+  geom_label(aes(x = n+7, y = coluna, label = porc)) +
+  rladies_theme
+}
+```
+
+```{r}
+censo_2020_url <- "https://docs.google.com/spreadsheets/d/1ht53wO-qiWsrF3zLIn6DaENNLLjQGqleZL6E6g0lMTc/edit?resourcekey#gid=861397353"
+
+censo_2020_raw <- googlesheets4::read_sheet(censo_2020_url) |>
+  janitor::clean_names()
+
+
+censo_2020 <- censo_2020_raw |> 
+  dplyr::select(
+    de_acordo = 2,
+    genero = 4,
+    raca = 9,
+    filhos = 11,
+    deixou_ir_evento_filhos = 14,
+    lgbt = 20,
+    restricao_alimentar = 26,
+    onde_mora = 32
+  ) |> 
+  dplyr::filter(de_acordo == "Sim") |> 
+  dplyr::mutate(
+    genero = dplyr::if_else(genero == "Feminino", "Mulher (cis ou trans)", genero)
+  )
+
+readr::write_rds(censo_2020, file = "data/censo_2020.rds")
+
+```
+
+-   Resultados do Censo 2020
+
+-   gênero
+
+-   Problemas: não perguntamos coisaas que possam definir quantas pessoas trans temos nos eventos
+
+```{r}
+censo_2020 |>
+  grafico_colunas(col = genero, y_label = "Gênero")
+```
+
+-   Raca
+
+```{r}
+censo_2020 |>
+  grafico_colunas(col = raca, y_label = "Cor/Raça")
+```
+
+```{r}
+censo_2020_raw$considerando_questoes_relacionadas_a_raca_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
+  tibble::as_tibble() |>
+  tidyr::drop_na() |> View()
+```
+
+Sugestões relacionadas à raça: - Divulgar R-Ladies em grupos que abordam a questão racial - Cotas - Bolsas - Convidar pessoas negras para palestrar - Divulgar estatísticas do grupo sobre esse gap de representatividade - Eventos focados com a temática de raça - Eventos em regiões periféricas - Cursos focados em mulheres negras - mulheres negras na organização
+
+-   mães/pais
+
+```{r}
+censo_2020 |>
+  grafico_colunas(col = filhos, y_label = "Tem filhos?")
+
+# censo_2020 |>
+#     dplyr::filter(filhos == "Sim") |> 
+#   grafico_colunas(col = deixou_ir_evento_filhos, y_label = "")
+```
+
+```{r}
+censo_2020 |> 
+  dplyr::count(filhos)
+
+censo_2020 |> 
+  dplyr::filter(filhos == "Sim") |> 
+  dplyr::count(deixou_ir_evento_filhos)
+```
+
+Sugestões maternidade:
+
+-   Espaço Kids
+-   Gravar eventos
+-   Transmissão online
+
+```{r}
+censo_2020_raw$considerando_questoes_relacionadas_a_maternidade_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
+  tibble::as_tibble() |>
+  tidyr::drop_na() |> View()
+```
+
+-   LGBT
+
+```{r}
+censo_2020 |> 
+  grafico_colunas(col = lgbt, y_label = "É LGBTQIA+?")
+```
+
+Sugestões: - O nome dá a entender que o grupo é para mulheres apenas - Maior participação de pessoas trans/não binárias - Divulgação
+
+-   Alimentação
+
+```{r}
+censo_2020 |> 
+  tidyr::separate_longer_delim(cols = restricao_alimentar, delim = ", ") |> 
+  tidyr::drop_na(restricao_alimentar) |> 
+  grafico_colunas(col = restricao_alimentar, y_label = "É LGBTQIA+?")
+```
+
+Sugestões: - Incentivar o grupo a cada uma levar seu copo - Ter comidas veganas e vegetarianas - Ter indicação de que a comida é vegetariana/vegana
+
+-   Região
+
+```{r}
+censo_2020 |> 
+  dplyr::count(onde_mora, sort = TRUE) 
+```
+
+```{r}
+#| echo: false
+# codigo para gerar as referencias dos pacotes!
+knitr::write_bib(
+  x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
+  file = "pacotes.bib"
+  )
+```
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->

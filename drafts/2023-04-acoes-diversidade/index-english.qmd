@@ -1,0 +1,19 @@
+---
+title: "Ações para ampliar a diversidade na comunidade R-Ladies São Paulo"
+author: 
+  - "Tatyane Paz Dominguez"
+  - "Beatriz Milz" 
+  - "Haydée Svab"
+  - "Ianní Muliterno"
+date: "2023-04-07" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+categories: 
+# exemplo de categorias:
+  - "Community"
+  - "Diversity"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: false # enquanto estiver draft: true, o post é um rascunho
+---
+
+...

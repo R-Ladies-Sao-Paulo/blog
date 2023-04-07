@@ -83,8 +83,10 @@ grafico_colunas <- function(dados, col, y_label){
 #   )
 # 
 # readr::write_rds(censo_2020, file = "data/censo_2020.rds")
+#readr::write_rds(censo_2020_raw, file = "data/censo_2020_raw.rds")
 
 censo_2020 <- readr::read_rds("data/censo_2020.rds")
+censo_2020_raw <- readr::read_rds("data/censo_2020_raw.rds")
 
 ```
 

@@ -111,7 +111,7 @@ censo_2020 |>
 ```{r}
 censo_2020_raw$considerando_questoes_relacionadas_a_raca_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
   tibble::as_tibble() |>
-  tidyr::drop_na() |> View()
+  tidyr::drop_na() 
 ```
 
 Sugestões relacionadas à raça: - Divulgar R-Ladies em grupos que abordam a questão racial - Cotas - Bolsas - Convidar pessoas negras para palestrar - Divulgar estatísticas do grupo sobre esse gap de representatividade - Eventos focados com a temática de raça - Eventos em regiões periféricas - Cursos focados em mulheres negras - mulheres negras na organização
@@ -145,7 +145,7 @@ Sugestões maternidade:
 ```{r}
 censo_2020_raw$considerando_questoes_relacionadas_a_maternidade_voce_teria_alguma_sugestao_para_que_as_r_ladies_sejam_mais_inclusivas |>
   tibble::as_tibble() |>
-  tidyr::drop_na() |> View()
+  tidyr::drop_na() 
 ```
 
 -   LGBT

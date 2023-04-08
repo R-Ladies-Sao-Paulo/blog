@@ -16,13 +16,13 @@ bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arqui
 draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
 
-## **Introdução**
+## **Introduction**
 
-A R-Ladies é uma organização global cuja missão é promover diversidade de gênero na comunidade R. A R-Ladies São Paulo, orgulhosamente, é um capítulo da R-Ladies Global, promovendo a diversidade de gênero na comunidade de R em São Paulo, no Brasil.
+The R-Ladies is a global organization whose mission is to promote gender diversity in the R community. R-Ladies São Paulo proudly is a chapter of R-Ladies Global, promoting gender diversity in the R community in São Paulo, Brazil.
 
-Neste post, o nosso objetivo é discutir questões de diversidade atualmente na comunidade R-Ladies São Paulo, e as ações que têm sido feitas para ampliar a diversidade. Para isso, dois pontos são importantes de serem discutidos: o conceito de interseccionalidade e questões relacionadas ao contexto brasileiro.
+In this post, our goal is to discuss diversity issues currently in the R-Ladies São Paulo community and the actions that are being taken to increase diversity.
 
-\
+To do so, two points are important to be discussed: the concept of intersectionality and issues related to the Brazilian context.
 
 ## **O que é Interseccionalidade?**
 
@@ -262,16 +262,10 @@ Baseado no questionário e na experiência da comunidade ao longo do tempo, perc
 
 \
 
-## **Equipe de organização atual** 
+## **Current organizing team** 
 
 \
-
-Existem várias pessoas envolvidas na organização atualmente nos eventos da R-Ladies São Paulo. É importante citar que estão envolvidas pessoas pertencentes a diferentes grupos minoritários (como mulheres negras, mães, pessoas trans, pessoas não-binárias, pessoas LGBTQIA+ e pessoas com mais de 40 anos), e isso é importante para oferecer diferentes visões e experiências. 
-
-Além disso, é importante destacar que a participação da organização é feita de forma voluntária.Portanto, aqui listamos e agradecemos as pessoas que atualmente participaram das diversas etapas de organização da comunidade:
-
-\
-\
+There are several people currently involved in the organization of the R-Ladies São Paulo community. It is important to mention that the community organizers belong to different minority groups (such as Black women, mothers, trans people, non-binary people, LGBTQIA+, and people over 40 years), and this is important to offer different perspectives and experiences. Furthermore, it is important to highlight that the participation in the organization is voluntary. Therefore, we list and thank the people who are involved in the various stages of organizing the community:
 
 -   Ana Paula Rocha
 

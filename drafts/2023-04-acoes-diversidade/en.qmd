@@ -112,7 +112,7 @@ censo_2020 |>
 
 Regarding gender diversity, the responses obtained in the questionnaire point to a scenario of the predominance of women (cis or trans) in the community. A problem identified later in the questionnaire structure is that the questions did not allow us to identify how many trans people were part of the community. Therefore, we do not have data on how many trans people participated in the community, and this question should be incorporated into a future questionnaire.
 
-### **Racial Diversity** - 2020
+### Racial Diversity - 2020
 
 ```{r}
 censo_2020 |>
@@ -143,35 +143,32 @@ At the questionnaire, we left an open-ended question so that people could offer 
 
 -   Have black people in the organization of the community.
 
-### Inclusão de mães/pais/pessoas cuidadoras - 2020
+### Inclusion of mothers/fathers/caregivers - 2020
 
 ```{r}
 censo_2020 |>
   grafico_colunas(col = filhos, y_label = "Have kids")
 ```
 
-::: callout-note
-TO BE TRANSLATED
-:::
+In 2020, 13% of the respondents had children. To include more people with children, some of  the suggestions were: the existence of a space to leave children during events, recording events so that mothers/fathers/caregivers can watch when it is more convenient, and conducting online broadcasts of events to promote the participation of people who cannot attend in person.
 
-### Inclusão de pessoas LGBTQIA+ - 2020
+### Inclusion of LGBTQIA+ - 2020
 
 ```{r}
 censo_2020 |> 
   grafico_colunas(col = lgbt, y_label = "Is LGBTQIA+?")
 ```
 
-::: callout-note
-TO BE TRANSLATED
-:::
+In 2020, 30% of respondents was part of the LGBTQIA+ community. Although there are no data on the percentage of the Brazilian population that is part of the LGBTQIA+ community, the results of this survey indicate that the community is on the right path regarding LGBTQIA+ population inclusion.
 
-### Acesso geográfico
+Among the suggestions offered by the community to increase the participation of LGBTQIA+, the issue of the community's name stands out. Some respondents pointed out that the name "R-Ladies" suggests that the group is only for women and discourages people from other groups from participating because it is not clear that they are welcome.
+
+
+### Geographic Regions
 
 ![](images/mapa.png)
 
-::: callout-note
-TO BE TRANSLATED
-:::
+The following map shows the Metropolitan Region of São Paulo (the largest polygon), and the City of São Paulo (divided by regions). Most of the people who participate in the event are from the West and South regions of the city. To increase the participation of people from the East and North regions of the city, it is interesting to seek to hold events there.
 
 ## Actions taken to increase diversity
 

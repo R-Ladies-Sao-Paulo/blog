@@ -1,10 +1,10 @@
 ---
 title: "Actions to increase diversity in the R-Ladies São Paulo community"
 author: 
-  - "Tatyane Paz Dominguez"
   - "Beatriz Milz" 
   - "Haydée Svab"
   - "Ianní Muliterno"
+  - "Tatyane Paz Dominguez"
 date: "2023-04-07" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
 categories: 
 # exemplo de categorias:
@@ -77,9 +77,9 @@ Therefore, it is important to consider the issue of gender diversity, but not li
 
 ## Brazilian context
 
-Brazil is a country that, for historical reasons, presents a different racial composition depending on the region of the country. The city of São Paulo is located in the Southeast region, where 50.7% of the population declare themselves as White, 38.7% as "pardo" in free translation "brown", which in Brazil is equivalent to black people of light skin, and 9.6% as "Black" what in Brazil is equivalent to black people of dark skin ([based on IBGE data, referent to 2021](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18319-cor-ou-raca.html))[^1]. Considering that black population is composed of "browns" and "blacks", almost a half of the population in the Southeast region is black.
+Brazil is a country that, for historical reasons, presents a different racial composition depending on the region of the country. The city of São Paulo is located in the Southeast region, where 50.7% of the population declare themselves as White, 38.7% as "pardo" in free translation "brown", which in Brazil is equivalent to black people of light skin, and 9.6% as "Black" what in Brazil is equivalent to black people of dark skin ([based on IBGE data, referent to 2021](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18319-cor-ou-raca.html))[^1]. Considering that the black population is composed of "browns" and "blacks", almost a half of the population in the Southeast region is black.
 
-[^1]: IBGE: Brazilian Institute of Geography and Statistics. This Institute has a national scope and is responsible for the responsible for the collection, storage and dissemination of socioeconomic and educational data on the Brazilian population, as well as the regulation of the Brazilian territory, including its biomes and physical and geographic aspects, and the relationship of society in its occupation.
+[^1]: IBGE: Brazilian Institute of Geography and Statistics. This Institute has a national scope and is responsible for the collection, storage and dissemination of socioeconomic and educational data on the Brazilian population, as well as the regulation of the Brazilian territory, including its biomes and physical and geographic aspects, and the relationship of society in its occupation.
 
 Despite representing about half of the region's population, the black population has been marginalized, and they are still underrepresented in spaces of power, such as politics, higher education, etc.
 
@@ -196,7 +196,7 @@ The quotas are also advertised on the community's social networks (mainly Instag
 
 ### Space for children and babies
 
-GuGuDaDados (free translation GuguDadata) is a collaborative and experimental space that RLadies São Paulo proposes with the aim of keeping children entertained and cared for while their mothers/fathers/caretakes can participate in community activities.
+GuGuDaDados (free translation GuguDadata) is a collaborative and experimental space that RLadies São Paulo proposes with the aim of keeping children entertained and cared for their mothers/fathers/caretakes can participate in community activities.
 
 With financial support from other organizations, we hired a recreational teacher to accompany the children in the Gugudadados space (a room next to the R-Ladies activities room, on the same floor) throughout the activity. The organizers of R-Ladies also take toys, drawings, markers, games and temporary tattoos to entertain and amuse the children.\
 
@@ -233,11 +233,11 @@ Based on the answers in the questionnaire and the community experience over time
 
 There are several people currently involved in the organization of the R-Ladies São Paulo community. It is important to mention that the community organizers belong to different minority groups (such as Black women, mothers, trans people, non-binary people, LGBTQIA+, and people over 40 years), and this is important to offer different perspectives and experiences. Furthermore, it is important to highlight that the participation in the organization is voluntary. Therefore, we list and thank the people who are involved in the various stages of organizing the community:
 
+-   Ana Carolina Moreno
+
 -   Ana Paula Rocha
 
 -   Angélica Custódio
-
--   Ana Carolina Moreno
 
 -   Beatriz Milz
 

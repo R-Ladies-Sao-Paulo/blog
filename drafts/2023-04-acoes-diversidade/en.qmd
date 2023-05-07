@@ -41,13 +41,14 @@ grafico_colunas <- function(dados, col, y_label){
     dplyr::rename(coluna = {{col}}) |> 
   dplyr::count(coluna) |> 
   dplyr::mutate(
-    porc = scales::percent(n/sum(n)) ,
+    porc_raw = round(n/sum(n), 2),
+    porc = scales::percent(porc_raw) ,
     coluna = forcats::fct_reorder(coluna, n)) |>
   ggplot() +
   aes(y = coluna, x = n) +
   geom_col(fill = "#562457") +
   labs(x = "% of responses", y = y_label) +
-  geom_label(aes(x = n+7, y = coluna, label = porc)) +
+  geom_label(aes(x = n+8, y = coluna, label = porc)) +
   rladies_theme
 }
 
@@ -107,6 +108,14 @@ Below, we will highlight some points raised by analyzing the questionnaire respo
 
 ```{r}
 censo_2020 |>
+    dplyr::mutate(
+    genero = dplyr::case_match(
+      genero,
+      "Mulher (cis ou trans)" ~ "Woman - Cis or Transgender",
+      "Homem (cis ou trans)" ~ "Men - Cis or Transgender",
+      "Não-binário" ~ "Non-binary",
+    )
+  ) |> 
   grafico_colunas(col = genero, y_label = "Gender")
 ```
 
@@ -115,7 +124,17 @@ Regarding gender diversity, the responses obtained in the questionnaire point to
 ### Racial Diversity - 2020
 
 ```{r}
-censo_2020 |>
+censo_2020 |>  
+  dplyr::mutate(
+    raca = dplyr::case_match(
+      raca,
+      "Branca" ~ "White (Branca)",
+      "Parda" ~ "Brown (Parda)",
+      "Preta" ~ "Black (Preta)",
+      "Amarela" ~ "Yellow (Amarela)",
+      "Indígena" ~ "Indigenous (Indígena)",
+    )
+  ) |> 
   grafico_colunas(col = raca, y_label = "Color/Race")
 ```
 
@@ -147,15 +166,29 @@ At the questionnaire, we left an open-ended question so that people could offer 
 
 ```{r}
 censo_2020 |>
+  dplyr::mutate(
+    filhos = dplyr::case_match(
+      filhos,
+      "Sim" ~ "Yes",
+      "Não" ~ "No"
+    )
+  ) |> 
   grafico_colunas(col = filhos, y_label = "Have kids")
 ```
 
-In 2020, 13% of the respondents had children. To include more people with children, some of  the suggestions were: the existence of a space to leave children during events, recording events so that mothers/fathers/caregivers can watch when it is more convenient, and conducting online broadcasts of events to promote the participation of people who cannot attend in person.
+In 2020, 13% of the respondents had children. To include more people with children, some of the suggestions were: the existence of a space to leave children during events, recording events so that mothers/fathers/caregivers can watch when it is more convenient, and conducting online broadcasts of events to promote the participation of people who cannot attend in person.
 
 ### Inclusion of LGBTQIA+ - 2020
 
 ```{r}
 censo_2020 |> 
+    dplyr::mutate(
+    lgbt = dplyr::case_match(
+      lgbt,
+      "Sim" ~ "Yes",
+      "Não" ~ "No"
+    )
+  ) |> 
   grafico_colunas(col = lgbt, y_label = "Is LGBTQIA+?")
 ```
 
@@ -163,14 +196,11 @@ In 2020, 30% of respondents was part of the LGBTQIA+ community. Although there a
 
 Among the suggestions offered by the community to increase the participation of LGBTQIA+, the issue of the community's name stands out. Some respondents pointed out that the name "R-Ladies" suggests that the group is only for women and discourages people from other groups from participating because it is not clear that they are welcome.
 
-
 ### Geographic Regions
 
 The following map shows the Metropolitan Region of São Paulo (the largest polygon), and the City of São Paulo (divided by regions). Most of the people who participate in the event are from the West and South regions of the city. To increase the participation of people from the East and North regions of the city, it is interesting to seek to hold events there.
 
-
 ![](images/mapa.png)
-
 
 ## Actions taken to increase diversity
 

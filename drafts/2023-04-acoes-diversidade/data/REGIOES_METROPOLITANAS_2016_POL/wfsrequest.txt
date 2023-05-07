@@ -1,0 +1,1 @@
+https://datageo.ambiente.sp.gov.br/geoserver/datageo/REGIOES_METROPOLITANAS_2016_POL/wfs?version=1.0.0&request=GetFeature&outputFormat=SHAPE-ZIP&typeName=REGIOES_METROPOLITANAS_2016_POL

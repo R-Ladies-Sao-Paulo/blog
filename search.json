@@ -525,6 +525,13 @@
     "text": "Código de conduta\nA R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.\nO nosso Código de conduta aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline."
   },
   {
+    "objectID": "sobre.html#apoio-financeirosponsor",
+    "href": "sobre.html#apoio-financeirosponsor",
+    "title": "Sobre a R-Ladies São Paulo",
+    "section": "Apoio financeiro/Sponsor",
+    "text": "Apoio financeiro/Sponsor\n\n\nR Consortium"
+  },
+  {
     "objectID": "sobre.html#r-ladies-no-brasil",
     "href": "sobre.html#r-ladies-no-brasil",
     "title": "Sobre a R-Ladies São Paulo",
@@ -581,11 +588,25 @@
     "text": "Contribuindo com um texto/post para o blog\nOs arquivos que geram os posts do blog estão na pasta posts/.\n1 - Faça uma cópia da pasta template-post/. Nomeie a pasta iniciando com o ano e mês, e algumas palavras que indicam o conteúdo do texto de uma forma “limpa”, sem usar acentos, espaços, e outros caracteres especiais. Ex: 2022-12-tutorial-tidyverse.\nNessa pasta, tem arquivos para gerar um post:\n\nindex.qmd: esse é o arquivo principal! Neste arquivo, estão descritos os metadados do arquivo (quem escreveu o post, data, categorias, entre outros), e o texto do post. Tem vários exemplos e comentários neste arquivo para ajudar quem ainda não tem muita familiaridade com Quarto!\nimages/: é uma pasta onde pode guardar as imagens que você queira usar no post.\npacotes.bib: é um arquivo opcional e gerado automaticamente, contém as referências dos pacotes utilizados no post.\n\n2 - Edite os conteúdos na pasta copiada!\n3 - Envie suas mudanças como um Pull request no GitHub: EM BREVE!."
   },
   {
-    "objectID": "index.html#textos",
-    "href": "index.html#textos",
+    "objectID": "index.html#textos-em-português",
+    "href": "index.html#textos-em-português",
     "title": "Blog",
-    "section": "Textos",
-    "text": "Textos"
+    "section": "Textos em Português",
+    "text": "Textos em Português\n\n\n    \n      \n      \n\n\n\n\n\n \n\n\n\n\nEvento: Análise de dados abertos com R\n\n\nUm evento parte da iniciativa Open Data Day\n\n\n\n\nEventos\n\n\nComunidade\n\n\nDiversidade\n\n\n \n\n\n\n\n27 de mar. de 2023\n\n\nTatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha\n\n\n\n\n\n\n \n\n\n\n\nTidyTuesday: Explorando dados sobre as Paraolimpíadas\n\n\n\n\n\n\n\nTidytuesday\n\n\nAnálise exploratória\n\n\nVisualização de dados\n\n\nModelagem\n\n\n \n\n\n\n\n1 de mar. de 2023\n\n\nIanní Muliterno\n\n\n\n\n\n\n \n\n\n\n\nE aí, vamos falar de Quarto?\n\n\nTutorial: Relatório em Quarto\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nRelatórios\n\n\n \n\n\n\n\n7 de fev. de 2023\n\n\nAriane Hayana\n\n\n\n\n\n\n \n\n\n\n\nEvento: Oficina de Introdução ao R\n\n\nPrimeiro evento presencial desde o início da pandemia\n\n\n\n\nEventos\n\n\nComunidade\n\n\nDiversidade\n\n\n \n\n\n\n\n31 de jan. de 2023\n\n\nBeatriz Milz, Tatyane Paz Dominguez\n\n\n\n\n\n\n \n\n\n\n\nGráficos de barras com barras de erros: críticas e alternativas\n\n\n\n\n\n\n\nGráficos\n\n\nTutorial\n\n\nDataviz\n\n\n \n\n\n\n\n14 de dez. de 2022\n\n\nFernanda Peres\n\n\n\n\n\n\n \n\n\n\n\nBoas vindas ao blog da R-Ladies São Paulo!\n\n\n\n\n\n\n\nNovidades\n\n\n \n\n\n\n\n5 de dez. de 2022\n\n\nEquipe R-Ladies SP, Beatriz Milz\n\n\n\n\n\n\n \n\n\n\n\nVidasNegrasImportam: Uma declaração conjunta de Forwards e R-Ladies\n\n\n#VidasNegrasImportam: Uma declaração conjunta de Forwards e R-Ladies\n\n\n\n\nDiversidade\n\n\nJustiça Social\n\n\n \n\n\n\n\n6 de jun. de 2020\n\n\nR-Ladies Global Leadership Team, R Forwards\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "index.html#textos-traduzidos-para-o-inglês",
+    "href": "index.html#textos-traduzidos-para-o-inglês",
+    "title": "Blog",
+    "section": "Textos traduzidos para o Inglês",
+    "text": "Textos traduzidos para o Inglês\n\n\n    \n      \n      \n\n\n\n\n\n \n\n\n\n\nEvent: Open Data Analysis with R\n\n\nAn event part of the Open Data Day initiative\n\n\n\n\nEvents\n\n\nCommunity\n\n\nDiversity\n\n\nEnglish\n\n\n \n\n\n\n\n26 de mar. de 2023\n\n\nTatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "index.html#apoio-financeirosponsor",
+    "href": "index.html#apoio-financeirosponsor",
+    "title": "Blog",
+    "section": "Apoio financeiro/Sponsor",
+    "text": "Apoio financeiro/Sponsor\n\n\nR Consortium"
   },
   {
     "objectID": "sugestoes.html",

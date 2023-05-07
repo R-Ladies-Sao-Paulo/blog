@@ -1,18 +1,31 @@
 ---
 title: "Blog"
 listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  feed: true
-  fields: [image, date, title, author, categories]  
+  - id: posts-pt
+    contents: posts/**/index.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: true
+    feed: true
+    page-size: 3
+    fields: [image, date, title, author, categories]  
+  - id: posts-en
+    contents: posts/**/english.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: true
+    feed: true
+    page-size: 3
+    fields: [image, date, title, author, categories]      
 page-layout: full
 title-block-banner: true
 comments: false
 toc: false
+lang: pt
 ---
 
 ## Textos escritos por...
@@ -74,4 +87,18 @@ gerar_lista_contrib <- function() {
 gerar_lista_contrib()
 ```
 
-## Textos
+## Textos em Português
+
+::: {#posts-pt}
+:::
+
+
+## Textos traduzidos para o Inglês
+
+::: {#posts-en}
+:::
+
+
+## Apoio financeiro/Sponsor
+
+[![R Consortium](https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png){fig-alt="R Consortium Logo" fig-align="center" width="50%"}](https://www.r-consortium.org/all-projects/r-user-group-support-program)

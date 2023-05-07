@@ -1,0 +1,50 @@
+---
+title: "Videos"
+editor: visual
+toc: true
+comments: false
+---
+
+Todos os vídeos podem ser encontrados no [canal da R-Ladies São Paulo no Youtube](https://www.youtube.com/@RLadiesSaoPaulo/streams).
+
+## Como escolher o teste estatístico adequado? 
+
+-   Apresentado por [Fernanda Peres](https://www.youtube.com/c/FernandaPeres/featured)
+
+-   [Slides](https://github.com/rladies/meetup-presentations_sao-paulo/blob/master/pdf_presentations/2021-03-24-Meetup-Fernanda-Peres.pdf)
+
+[![](img/videos/teste-estatistico-fe-peres.png){fig-align="center" width="70%"}](https://www.youtube.com/watch?v=EtV3_3aN884)
+
+
+## Conhecendo o ggplot2: criando gráficos com R
+
+-   Apresentado por Letícia Thomaz
+
+-   [Slides](https://lodthomaz.github.io/ggplot2_RLadiesSP/)
+
+[![](img/videos/ggplot2-leticia.png){fig-align="center" width="70%"}](https://www.youtube.com/watch?v=lkX9ms1eX10&t)
+
+## Visualização Interativa de Dados – uma aplicação usando Shiny
+
+-   Apresentado por Marina Muradian
+
+[![](img/videos/shiny-marina.png){fig-align="center" width="70%"}](https://www.youtube.com/watch?v=tk0nUD2Qdd4&t)
+
+
+## People Analytics a Ciência de Dados no RH
+
+-   Apresentado por Sabrina Vasconcellos
+
+[![](img/videos/sabrina-people-analytics.png){fig-align="center" width="70%"}](https://www.youtube.com/watch?v=T_GWrFYMMOk&t=1s)
+
+
+## Tidymodels: Estruturando o processo de Machine Learning
+
+-   Apresentado por Viviane Sanchez e Bruna Wundervald
+
+- Slides: 
+  - [Apresentação da Bruna Wundervald](http://brunaw.com/tidymodels-webinar/slides/slides.html#1)
+  - [Apresentação da Viviane Sanchez](https://sanchezvivi.shinyapps.io/tidymodels-shiny/)
+
+
+[![](img/videos/tidymodels-viviane.png){fig-align="center" width="70%"}](https://www.youtube.com/watch?v=szi7zfNEMXo&t)

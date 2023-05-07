@@ -52,7 +52,9 @@ website:
           - text: "Como contribuir com o blog?"
             href: contribuir-com-o-blog.qmd       
           - text: "Sugestão de conteúdos"
-            href: sugestoes.qmd           
+            href: sugestoes.qmd   
+      - text: "Videos"
+        href: videos.qmd
     right:
       - icon: twitter
         href: https://twitter.com/rladiessaopaulo

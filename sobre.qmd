@@ -64,6 +64,10 @@ A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para toda
 
 O nosso [Código de conduta](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese) aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.
 
+## Apoio financeiro/Sponsor
+
+[![R Consortium](https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png){fig-alt="R Consortium Logo" fig-align="center" width="50%"}](https://www.r-consortium.org/all-projects/r-user-group-support-program)
+
 ## R-Ladies no Brasil
 
 Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista:

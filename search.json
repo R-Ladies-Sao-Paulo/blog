@@ -553,6 +553,48 @@
     "text": "Fonte / Saiba mais\n\nAbout us - R-Ladies\nMeetup - São Paulo\nR Community Explorer"
   },
   {
+    "objectID": "videos.html",
+    "href": "videos.html",
+    "title": "Videos",
+    "section": "",
+    "text": "Todos os vídeos podem ser encontrados no canal da R-Ladies São Paulo no Youtube."
+  },
+  {
+    "objectID": "videos.html#como-escolher-o-teste-estatístico-adequado",
+    "href": "videos.html#como-escolher-o-teste-estatístico-adequado",
+    "title": "Videos",
+    "section": "Como escolher o teste estatístico adequado?",
+    "text": "Como escolher o teste estatístico adequado?\n\nApresentado por Fernanda Peres\nSlides"
+  },
+  {
+    "objectID": "videos.html#conhecendo-o-ggplot2-criando-gráficos-com-r",
+    "href": "videos.html#conhecendo-o-ggplot2-criando-gráficos-com-r",
+    "title": "Videos",
+    "section": "Conhecendo o ggplot2: criando gráficos com R",
+    "text": "Conhecendo o ggplot2: criando gráficos com R\n\nApresentado por Letícia Thomaz\nSlides"
+  },
+  {
+    "objectID": "videos.html#visualização-interativa-de-dados-uma-aplicação-usando-shiny",
+    "href": "videos.html#visualização-interativa-de-dados-uma-aplicação-usando-shiny",
+    "title": "Videos",
+    "section": "Visualização Interativa de Dados – uma aplicação usando Shiny",
+    "text": "Visualização Interativa de Dados – uma aplicação usando Shiny\n\nApresentado por Marina Muradian"
+  },
+  {
+    "objectID": "videos.html#people-analytics-a-ciência-de-dados-no-rh",
+    "href": "videos.html#people-analytics-a-ciência-de-dados-no-rh",
+    "title": "Videos",
+    "section": "People Analytics a Ciência de Dados no RH",
+    "text": "People Analytics a Ciência de Dados no RH\n\nApresentado por Sabrina Vasconcellos"
+  },
+  {
+    "objectID": "videos.html#tidymodels-estruturando-o-processo-de-machine-learning",
+    "href": "videos.html#tidymodels-estruturando-o-processo-de-machine-learning",
+    "title": "Videos",
+    "section": "Tidymodels: Estruturando o processo de Machine Learning",
+    "text": "Tidymodels: Estruturando o processo de Machine Learning\n\nApresentado por Viviane Sanchez e Bruna Wundervald\nSlides:\n\nApresentação da Bruna Wundervald\nApresentação da Viviane Sanchez"
+  },
+  {
     "objectID": "contribuir-com-o-blog.html",
     "href": "contribuir-com-o-blog.html",
     "title": "Como contribuir com o blog?",

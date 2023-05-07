@@ -4,7 +4,7 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
   feed: true
@@ -12,6 +12,7 @@ listing:
 page-layout: full
 title-block-banner: true
 comments: false
+toc: false
 ---
 
 ## Textos escritos por...

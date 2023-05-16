@@ -10,7 +10,85 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.3.353</generator>
-<lastBuildDate>Mon, 27 Mar 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 10 May 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Aprendendo a programar em quatro capítulos</title>
+  <dc:creator>Ana Carolina Moreno</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</link>
+  <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/images/logo.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Carol Moreno</figcaption></figure>
+</div>
+<p><a href="https://www.linkedin.com/in/anacarolinamoreno/"><i class="fab fa-linkedin"></i></a></p>
+</center>
+<p>Este post foi escrito por Ana Carolina Moreno e publicado no <a href="https://www.linkedin.com/pulse/aprendendo-programar-em-quatro-cap%C3%ADtulos-ana-carolina-moreno">Linkedin</a>.</p>
+<p>A Carol é uma integrante da comunidade R-Ladies São Paulo, e atua como Jornalista de Dados Senior na TV Globo.</p>
+</div>
+</div>
+</div>
+<p>Desde que comecei a dar cursos de programação, sempre vejo nos rostos de grande parte das pessoas participantes aquele “medo” de não conseguir. Faz um pouquinho de sentido, afinal, porque só dou cursos introdutórios, pra quem nunca programou, e boa parte deles têm como público minorias de gênero, porque são organizados pelo capítulo de São Paulo R-Ladies Global, do qual faço parte. Sabemos que, infelizmente, muitos grupos da população são ensinados desde cedo que “não servem” para a área de tecnologia…</p>
+<p>Mas eu sempre começo essas aulas com um resuminho da minha trajetória, justamente pra derrubar vários mitos, e mostrar que é possível aprender novas habilidades, especialmente se você:</p>
+<ul>
+<li><p>tiver apoio adequado no aprendizado;</p></li>
+<li><p>atrelar o aprendizado à sua realidade;</p></li>
+<li><p>identificar os contextos em que você aprende melhor;</p></li>
+<li><p>investir na prática o que aprendeu;</p></li>
+<li><p>tiver incentivos pra aprender;</p></li>
+<li><p>conseguir compartilhar teus aprendizados.</p></li>
+</ul>
+<p>Inspirada nessa <a href="https://g1.globo.com/tecnologia/noticia/2023/05/10/ja-incentivo-meus-filhos-comeco-pode-ser-frustrante-profissionais-contam-como-e-trabalhar-com-programacao.ghtml">reportagem excelente</a> do <a href="https://www.linkedin.com/in/darlanhelder8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAmz3rcBQsPDkUpYhrSWEKPqZpl1KmQmoas">Darlan Helder</a>, compartilho abaixo um pouco dessa história.</p>
+<p>(Prólogo: eu sempre fiquei de recuperação em matemática, física, química, biologia… Minha mãe, que quase fez faculdade de matemática de tanto que gosta da área, até hoje acha estranho que eu seja referência no assunto pra qualquer pessoa que seja, quanto mais uma redação enorme.)</p>
+<section id="capítulo-1---carol-excel" class="level3"><h3 class="anchored" data-anchor-id="capítulo-1---carol-excel">Capítulo 1 - Carol Excel</h3>
+<p>Nos idos de 2012 tentei aprender R, mas o RStudio ainda estava nascendo… Eu tentei fuçar naquele site r-project.com, mas fracassei de forma retumbante. Achei que “aquilo não era pra mim”.</p>
+<p>Um pesquisador me sugeriu ir pro Stata, mas nunca encontrei muito sentido em softwares proprietários.</p>
+<p>Nos cinco anos seguintes, continuei interessada nos dados educacionais, mas só conseguia fazer reportanges com base em análises feitas por outras pessoas. Algumas delas por sugestão minha, como essa <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/dia-das-professoras-nove-em-cada-dez-estudantes-de-pedagogia-sao-mulheres-e-maioria-faz-curso-a-distancia.ghtml">comparando o perfil de quem estuda pedagogia com as demais carreiras de graduação</a>.</p>
+</section><section id="capítulo-2---carol-query" class="level3"><h3 class="anchored" data-anchor-id="capítulo-2---carol-query">Capítulo 2 - Carol Query</h3>
+<p>Em 2017, <strong>o incrível</strong> <a href="https://www.linkedin.com/in/leandro-bispo-oliveira?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAALW_lIBK2jplevqU4iEWkmh3bkp81MM3Q4">Leandro Bispo Oliveira</a> <strong>apareceu na redação do g1 com uma apostilinha de SQL básico encadernada, e me ensinou em duas horas a acessar o datalake e fazer queries com a base do Bolsa Família</strong>. Graças a ele consegui fazer uma análise que ninguém tinha feito até então no jornalismo: “testar” as notas de cortes do Sisu (a USP, por exemplo, tinha umas notas altíssimas) para saber se elas eram <a href="https://g1.globo.com/educacao/noticia/com-notas-minimas-de-ate-800-pontos-cursos-da-usp-no-sisu-ficam-fora-do-acesso-de-estudantes-cotistas.ghtml">compatíveis com a realidade do desempenho dos candidatos no Enem</a>.</p>
+<p><strong>Não tem nada como atrelar um conhecimento à aplicação prática na nossa realidade.</strong> E a minha realidade era: trabalho cobrindo educação, os dados abertos educacionais são muitos, ótimos, mas não tenho as técnicas pra fazer todas as reportagens que quero. E não quero depender de pesquisadores fazerem essa parte da produção de notícias.</p>
+<p>Foi por isso que decidi continuar aprendendo. Entrei num curso online de python para jornalistas. Fracassei, larguei pela metade.</p>
+<p>Daí entrei em outro curso online, de R para jornalistas. Tive problemas até pra instalar os programas. Larguei no comecinho.</p>
+<p>Mas continuava de olho nas oportunidades pra aprender. Até que, no começo de 2019, o capítulo de São Paulo das <a href="https://www.linkedin.com/company/rladies/">R-Ladies Global</a> anunciou um curso presencial, num sábado em que eu não estava de plantão, e <strong>passei o dia todo aprendendo com uma didática incrível, num ambiente acolhedor e inspirador</strong>. Resultado: comecei a finalmente conseguir responder a perguntas que sempre me pareceram relevantes e que ainda não tinham lido no jornalismo, como a <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/2018/11/20/negros-representam-apenas-16-dos-professores-universitarios.ghtml">desigualdade racial entre professores universitários</a> e a evolução ao longo dos anos de <a href="https://g1.globo.com/educacao/noticia/2019/03/31/numero-de-escolas-com-nome-de-presidentes-da-ditadura-militar-cai-26percent-em-uma-decada.ghtml">escolas batizadas com nomes de generais da ditatura militar</a>.</p>
+<p>Até então, penava bastante pra conseguir virar reportagens dirigidas porque meu trabalho envolvia muitas pautas que não usavam dados. Então <strong>nem sempre conseguia praticar o que aprendi (outro ponto fundamental pra avançar no aprendizado de qualquer coisa)</strong>.</p>
+<p>Entendi também que, <strong>quando eu preciso aprender sobre um assunto desde o início, meu negócio é curso presencial (pode ser diferente pra outras pessoas)</strong>. Quando já estou mais avançada, tudo bem fazer virtualmente algum curso pontual, para aprender melhor alguma habilidade que ainda acho que preciso praticar mais (nessa quinta, começo um curso de raspagem de dados, mal posso esperar!)</p>
+</section><section id="capítulo-3---carol-dados" class="level3"><h3 class="anchored" data-anchor-id="capítulo-3---carol-dados">Capítulo 3 - Carol Dados</h3>
+<p>Em janeiro de 2020, passei de “repórter de Educação” para “produtora de dados” na redação de São Paulo da Globo (ganhei apelidos como “Carol Dados” e “Balcão da Média Móvel”). <strong>A partir de então, minha função principal era fuçar em dados, então a prática virou rotina.</strong> E não só os educacionais, de ciência, saúde e meio ambiente aos quais eu estava acostumada. Dados do Waze, do TSE, da Câmara Municipal de São Paulo, das reclamações do Disque 156…</p>
+<p>Dois meses depois, veio a pandemia, que obrigou o poder público a criar novos indicadores baseados em dados e o jornalismo a explicar todos esses novos conceitos para uma sociedade confusa e aterrorizada.</p>
+<p>Aí veio a necessidade de escrever códigos pra otimizar análises que eram feitas diariamente ou mesmo escrever códigos para permitir análises que, da forma como vinham do poder público, eram impossíveis de fazer de outras formas. <strong>Aqui entra o tal do incentivo pra aprender novas funções e formas de automatizar scripts pra não perder tempo com eles.</strong></p>
+<p>(Pausa para agredecer todas as pessoas que manjam de R, SQL e Datasus e que eu atazanei durante meses a fio, em qualquer dia da semana e até de madrugada.)</p>
+<p>Alguns códigos saíam em menos de duas horas, outros viraram dashboard pra todas as equipes consultarem, um levou uns três meses pra ficar azeitadinho.</p>
+<p>Todo esse esforço valeu a pena, e me deu muito mais autonomia.</p>
+<p>O mais legal é que, ao contrário da maioria das pessoas no chamado “jornalismo de dados”, eu não fico em uma equipe “de dados”: sou parte de uma grande equipe de produção, mas sou a única com foco maior na missão de escarafunchar dados. Por isso, não fico longe da produção diária, nem me debruço meses produzindo uma única reportagem especial. Sigo cobrindo o chamado “hardnews”, mas consigo fazer isso aplicando o que aprendi sobre análise estatística e técnicas de ciências de dados pra qualificar a cobertura. Acredito que o impacto das reportagens acaba sendo muito mais abrangente.</p>
+</section><section id="capítulo-4---teacher-carol" class="level3"><h3 class="anchored" data-anchor-id="capítulo-4---teacher-carol">Capítulo 4 - Teacher Carol</h3>
+<p>Ainda sigo atazando muita gente com meus códigos, dependendo do que aparece (obrigada de novo!). Também tenho sempre buscado aprender coisas novas, quando o tempo permite, pra facilitar análises futuras.</p>
+<p>Mas a principal mudança, desde 2020, é poder compartilhar o que aprendi com outras pessoas, principalmente jornalistas, e principalmente mulheres e minorias de gênero, que tenha interesse nessas habilidades. Nos últimos anos já dei vários cursos introdutórios de R, de SQL, de dados educacionais, de Lei de Acesso à Informação, de tudo isso junto e misturado.</p>
+<p>Toda vez que elaboro um novo curso, consigo revisar o que já sei, aprender coisas novas, aprofundar alguns conhecimentos. Ensinar é uma das melhores formas de aprender.</p>
+<p>Sempre é desafiador, mas pra mim sempre esteve claro que só aprendi o que sei hoje porque muitas pessoas investiram o tempo delas em me ajudar. Não acho que seria possível fazer de outra forma. <strong>Por isso, enxergo o ensino como uma forma de manter acesa essa corrente colaborativa.</strong></p>
+<p><em>PS: Se você é jornalista ou estudante de jornalismo, a</em> <a href="https://www.linkedin.com/company/jeducaeduca/">Jeduca: Associação de Jornalistas de Educação</a><em>, em parceria com a</em> <a href="https://www.linkedin.com/company/abraji/">Abraji - Associação Brasileira de Jornalismo Investigativo</a><em>, vai dar mais uma vez o curso Jornalismo de educação: bases para a cobertura. <strong>É gratuito e, na minha opinião, é o curso mais completo de jornalismo educacional que existe hoje.</strong> São 12 aulas, e eu vou ministrar as duas sobre reportar com dados =)</em></p>
+<p><a href="https://jeduca.org.br/noticia/inscricoes-abertas-para-o-curso-jornalismo-de-educacao-bases-para-a-cobertura"><em>Clique aqui para saber mais!</em></a></p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+</section> ]]></description>
+  <category>Comunidade</category>
+  <category>Ensino</category>
+  <category>Jornalismo de dados</category>
+  <guid>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</guid>
+  <pubDate>Wed, 10 May 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/images/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Evento: Análise de dados abertos com R</title>
   <dc:creator>Tatyane Paz Dominguez</dc:creator>

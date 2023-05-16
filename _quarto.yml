@@ -55,6 +55,8 @@ website:
             href: sugestoes.qmd   
       - text: "Videos"
         href: videos.qmd
+      - text: "Próximos eventos"
+        href: eventos.qmd        
     right:
       - icon: twitter
         href: https://twitter.com/rladiessaopaulo

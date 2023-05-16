@@ -28,12 +28,6 @@ toc: false
 lang: pt
 ---
 
-## Próximos eventos
-
--   [20/05/2023 - Meetup ONLINE - Ciência de Dados, Gênero e Raça nas Políticas Públicas](https://www.meetup.com/rladies-sao-paulo/events/293554879/)
-
-[![](https://secure.meetupstatic.com/photos/event/4/1/c/1/600_512896833.webp?w=750){fig-align="center"}](https://www.meetup.com/rladies-sao-paulo/events/293554879/)
-
 ## Textos escritos por...
 
 ```{r}

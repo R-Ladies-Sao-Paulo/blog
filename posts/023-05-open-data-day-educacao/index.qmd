@@ -1,0 +1,81 @@
+---
+title: "Dados abertos de Educação: um exemplo aplicado ao jornalismo"
+subtitle: "Resultados do evento Open Data Day"
+author: 
+  - "Ana Carolina Moreno" 
+  - "Beatriz Milz"
+  - "Geovana Lopes"
+  - "Katia Mine"
+  - "Natasha Meneguelli"
+  - "Cristiane Souza de Lacerda"
+date: "2023-05-24" 
+categories: 
+# exemplo de categorias:
+  - "Comunidade"
+  - "Ensino"
+  - "Jornalismo de dados"
+  - "Open data day"
+  - "Educação"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/slide.png" # imagem usada na página inicial junto ao post
+draft: false # enquanto estiver draft: true, o post é um rascunho
+bibliography: packages.bib
+knitr: 
+  opts_chunk: 
+    message: false
+    warning: false
+    echo: true
+    eval: true
+    fig.align: 'center'
+---
+
+
+
+Este post é um relato realizado a partir da atividade de um dos grupos participantes do evento "[Análise de dados abertos com R](https://rladies-sp.org/posts/2023-03-evento-open-data-day/)", vinculado ao [Open Data Day](https://opendataday.org/pt_br/). Este grupo trabalhou com dados abertos educacionais.
+
+A monitora do grupo foi [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/), jornalista e produtora de dados da TV Globo. Especializada há mais de dez anos na cobertura de dados educacionais, ela apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma [série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022](https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml).  Os dados utilizados podem ser obtidos[no site do Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos).
+
+Seis pessoas se interessaram por explorar dados abertos educacionais: Aline Durans, Cristiane Lacerda, Hayane Sena De Jesus, Katia Mine, Larissa Souza, e Natasha Meneguelli. Além disso, [Geovana Lopes](https://www.linkedin.com/in/geovanalopes/), do R-Ladies São Paulo, participou como monitora.
+
+Primeiramente, foi feita uma introdução mostrando quais são e onde encontrar os dados abertos educacionais, além das mudanças recentes, com a retirada de bases de dados que antes eram públicas, com a justificativa de adequação à Lei Geral de Proteção de Dados (LGPD). A apresentação utilizada está disponível [neste link](https://bit.ly/rladies_odd_2023).
+
+[![](images/slide.png){fig-align="center"}](https://bit.ly/rladies_odd_2023)
+
+Antes de partirmos para a análise de fato dos dados, o código que gerou as tabelas foi apresentado ao grupo. Como parte das pessoas ainda tinha um contato inicial com o R e o RStudio, e como houve interesse em entender o código apresentado, acabamos priorizando uma explicação introdutória da linguagem de programação R.
+
+Acompanhamos as participantes desde a instalação das aplicações e o primeiro olhar geral sobre o que é a linguagem e como ela é bastante adequada para pessoas que querem fazer análise estatística em cima de bases de dados já existentes.
+
+
+```{r}
+#| echo: true
+# As funções descritas abaixo fazem parte do 
+# pacote tidyverse!
+# Clique no nome da função para ler a sua documentação.
+library(tidyverse)
+```
+
+
+O código já escrito ([link](https://github.com/anacarolinamoreno/educacao_infantil_pandemia)) serviu de base para mostrar às participantes algumas funções (`read_csv()`, `write_csv()`, `select()`, `filter()`, `rename()`, `mutate()`, `left_join()`, `reduce()` e `case_when()`), além de explicações sobre a sintaxe básica do R, como quando usar os parênteses, e os diferentes operadores: o de atribuição, o pipe e os operações lógicos para fazer filtros ou manipular valores nas colunas.
+
+Dada a escassez de tempo, esse grupo não chegou a ver todo o código, até a geração de gráficos e a análise de fato dos dados. Mas as participantes consideraram que as explicações introdutórias sobre R foram mais produtivas para ajudá-las a dar o primeiro passo no aprendizado da linguagem.
+
+Finalmente, destaca-se que, apesar de os dados do Inep serem bem organizados, eles não estão isentos de obstáculos e dificuldades de análises. Para evitar incorrer em conclusões equivocadas, a dica é consultar técnicos e especialistas dos bancos de dados para checar possíveis erros de interpretação e até direcionamentos, no caso de obstáculos do processo analítico. Essas pessoas também conseguem explicar até que ponto as bases de dados disponíveis conseguem responder às perguntas que temos.
+
+Para finalizar este post, deixamos um relato de uma das pessoas participantes sobre a experiência da atividade:
+
+
+> Participar deste grupo foi uma experiência de aprendizagem incrível. Carol é uma excelente tradutora da linguagem R. Nos fez entender, acompanhar a lógica e ver que sim: é possível aprender R! Para além disto, é necessário e importante termos contato e analisar os dados abertos. Desde então duas reflexões rodeiam meus pensamentos: primeira, não é só desenvolver uma habilidade, trabalhar com dados exige responsabilidade com a transparência das informações. Segunda: Mais pessoas precisam ter contato com o R. A comunidade R Ladies é acolhedora, respeitadora e muito responsável com o processo de transferência de conhecimento. Foi um dia de muita aprendizagem, acolhida e entusiasmo!
+
+
+Para pessoas que tem interesse em saber mais sobre dados abertos educacionais, indicamos este vídeo: 
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yuwt3Kqzd0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+
+Até a próxima!
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->

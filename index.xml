@@ -10,7 +10,73 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.3.353</generator>
-<lastBuildDate>Wed, 10 May 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 24 May 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Dados abertos de Educação: um exemplo aplicado ao jornalismo</title>
+  <dc:creator>Ana Carolina Moreno</dc:creator>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>Geovana Lopes</dc:creator>
+  <dc:creator>Katia Mine</dc:creator>
+  <dc:creator>Natasha Meneguelli</dc:creator>
+  <dc:creator>Cristiane Souza de Lacerda</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/index.html</link>
+  <description><![CDATA[ <p>Este post é um relato realizado a partir da atividade de um dos grupos participantes do evento “<a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/">Análise de dados abertos com R</a>”, vinculado ao <a href="https://opendataday.org/pt_br/">Open Data Day</a>. Este grupo trabalhou com dados abertos educacionais.</p>
+<p>A monitora do grupo foi <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, jornalista e produtora de dados da TV Globo. Especializada há mais de dez anos na cobertura de dados educacionais, ela apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>.&nbsp; Os dados utilizados podem ser obtidos<a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">no site do Inep</a>.</p>
+<p>Seis pessoas se interessaram por explorar dados abertos educacionais: Aline Durans, Cristiane Lacerda, Hayane Sena De Jesus, Katia Mine, Larissa Souza, e Natasha Meneguelli. Além disso, <a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes</a>, do R-Ladies São Paulo, participou como monitora.</p>
+<p>Primeiramente, foi feita uma introdução mostrando quais são e onde encontrar os dados abertos educacionais, além das mudanças recentes, com a retirada de bases de dados que antes eram públicas, com a justificativa de adequação à Lei Geral de Proteção de Dados (LGPD). A apresentação utilizada está disponível <a href="https://bit.ly/rladies_odd_2023">neste link</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://bit.ly/rladies_odd_2023"><img src="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Antes de partirmos para a análise de fato dos dados, o código que gerou as tabelas foi apresentado ao grupo. Como parte das pessoas ainda tinha um contato inicial com o R e o RStudio, e como houve interesse em entender o código apresentado, acabamos priorizando uma explicação introdutória da linguagem de programação R.</p>
+<p>Acompanhamos as participantes desde a instalação das aplicações e o primeiro olhar geral sobre o que é a linguagem e como ela é bastante adequada para pessoas que querem fazer análise estatística em cima de bases de dados já existentes.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># As funções descritas abaixo fazem parte do </span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># pacote tidyverse!</span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Clique no nome da função para ler a sua documentação.</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
+</div>
+<p>O código já escrito (<a href="https://github.com/anacarolinamoreno/educacao_infantil_pandemia">link</a>) serviu de base para mostrar às participantes algumas funções (<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>, <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code>, <code><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce()</a></code> e <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code>), além de explicações sobre a sintaxe básica do R, como quando usar os parênteses, e os diferentes operadores: o de atribuição, o pipe e os operações lógicos para fazer filtros ou manipular valores nas colunas.</p>
+<p>Dada a escassez de tempo, esse grupo não chegou a ver todo o código, até a geração de gráficos e a análise de fato dos dados. Mas as participantes consideraram que as explicações introdutórias sobre R foram mais produtivas para ajudá-las a dar o primeiro passo no aprendizado da linguagem.</p>
+<p>Finalmente, destaca-se que, apesar de os dados do Inep serem bem organizados, eles não estão isentos de obstáculos e dificuldades de análises. Para evitar incorrer em conclusões equivocadas, a dica é consultar técnicos e especialistas dos bancos de dados para checar possíveis erros de interpretação e até direcionamentos, no caso de obstáculos do processo analítico. Essas pessoas também conseguem explicar até que ponto as bases de dados disponíveis conseguem responder às perguntas que temos.</p>
+<p>Para finalizar este post, deixamos um relato de uma das pessoas participantes sobre a experiência da atividade:</p>
+<blockquote class="blockquote">
+<p>Participar deste grupo foi uma experiência de aprendizagem incrível. Carol é uma excelente tradutora da linguagem R. Nos fez entender, acompanhar a lógica e ver que sim: é possível aprender R! Para além disto, é necessário e importante termos contato e analisar os dados abertos. Desde então duas reflexões rodeiam meus pensamentos: primeira, não é só desenvolver uma habilidade, trabalhar com dados exige responsabilidade com a transparência das informações. Segunda: Mais pessoas precisam ter contato com o R. A comunidade R Ladies é acolhedora, respeitadora e muito responsável com o processo de transferência de conhecimento. Foi um dia de muita aprendizagem, acolhida e entusiasmo!</p>
+</blockquote>
+Para pessoas que tem interesse em saber mais sobre dados abertos educacionais, indicamos este vídeo:
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yuwt3Kqzd0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</center>
+<p>Até a próxima!</p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+
+ ]]></description>
+  <category>Comunidade</category>
+  <category>Ensino</category>
+  <category>Jornalismo de dados</category>
+  <category>Open data day</category>
+  <category>Educação</category>
+  <guid>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/index.html</guid>
+  <pubDate>Wed, 24 May 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
 <item>
   <title>Aprendendo a programar em quatro capítulos</title>
   <dc:creator>Ana Carolina Moreno</dc:creator>

@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>R-Ladies São Paulo - Sobre a R-Ladies São Paulo</title>
+<meta name="author" content="Ana Carolina Moreno">
+<meta name="author" content="Beatriz Milz">
+<meta name="author" content="Geovana Lopes">
+<meta name="author" content="Katia Mine">
+<meta name="author" content="Natasha Meneguelli">
+<meta name="author" content="Cristiane Souza de Lacerda">
+<title>R-Ladies São Paulo - Dados abertos de Educação: um exemplo aplicado ao jornalismo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,25 +23,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/logo.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -59,13 +99,14 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
-</script><script src="site_libs/core-js-2.5.3/shim.min.js"></script><script src="site_libs/react-17.0.0/react.min.js"></script><script src="site_libs/react-17.0.0/react-dom.min.js"></script><script src="site_libs/reactwidget-1.0.0/react-tools.js"></script><script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
-<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script><link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="R-Ladies São Paulo - Sobre a R-Ladies São Paulo">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg">
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Dados abertos de Educação: um exemplo aplicado ao jornalismo">
+<meta name="twitter:description" content="Resultados do evento Open Data Day">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="1718">
+<meta name="twitter:image-width" content="3024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed">
@@ -73,9 +114,9 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo.jpg" alt="" class="navbar-logo"></a>
-    <a class="navbar-brand" href="./index.html">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">R-Ladies São Paulo</span>
     </a>
   </div>
@@ -86,7 +127,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link" href="./" rel="" target="">
+    <a class="nav-link" href="../../" rel="" target="">
  <span class="menu-text">Página inicial</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -95,11 +136,11 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
 <li>
-    <a class="dropdown-item" href="./sobre.html" rel="" target="">
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./como-participar.html" rel="" target="">
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
  <span class="dropdown-text">Como participar?</span></a>
   </li>  
     </ul>
@@ -110,21 +151,21 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
 <li>
-    <a class="dropdown-item" href="./contribuir-com-o-blog.html" rel="" target="">
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
  <span class="dropdown-text">Como contribuir com o blog?</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sugestoes.html" rel="" target="">
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
  <span class="dropdown-text">Sugestão de conteúdos</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="./videos.html" rel="" target="">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
  <span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./eventos.html" rel="" target="">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
  <span class="menu-text">Próximos eventos</span></a>
   </li>  
 </ul>
@@ -160,7 +201,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -191,7 +232,47 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Dados abertos de Educação: um exemplo aplicado ao jornalismo</h1>
+            <p class="subtitle lead">Resultados do evento Open Data Day</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Comunidade</div>
+                <div class="quarto-category">Ensino</div>
+                <div class="quarto-category">Jornalismo de dados</div>
+                <div class="quarto-category">Open data day</div>
+                <div class="quarto-category">Educação</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoras</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ana Carolina Moreno </p>
+               <p>Beatriz Milz </p>
+               <p>Geovana Lopes </p>
+               <p>Katia Mine </p>
+               <p>Natasha Meneguelli </p>
+               <p>Cristiane Souza de Lacerda </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">24 de maio de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
@@ -230,99 +311,43 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </div>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
 </div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
-   
-  <ul>
-<li><a href="#o-que-%C3%A9-a-r-ladies" id="toc-o-que-é-a-r-ladies" class="nav-link active" data-scroll-target="#o-que-%C3%A9-a-r-ladies">O que é a R-Ladies?</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
-  <li><a href="#p%C3%BAblico-alvo" id="toc-público-alvo" class="nav-link" data-scroll-target="#p%C3%BAblico-alvo">Público-alvo</a></li>
-  <li><a href="#miss%C3%A3o" id="toc-missão" class="nav-link" data-scroll-target="#miss%C3%A3o">Missão</a></li>
-  <li><a href="#c%C3%B3digo-de-conduta" id="toc-código-de-conduta" class="nav-link" data-scroll-target="#c%C3%B3digo-de-conduta">Código de conduta</a></li>
-  <li><a href="#apoio-financeirosponsor" id="toc-apoio-financeirosponsor" class="nav-link" data-scroll-target="#apoio-financeirosponsor">Apoio financeiro/Sponsor</a></li>
-  <li><a href="#r-ladies-no-brasil" id="toc-r-ladies-no-brasil" class="nav-link" data-scroll-target="#r-ladies-no-brasil">R-Ladies no Brasil</a></li>
-  <li><a href="#saiba-mais-sobre-a-r-ladies" id="toc-saiba-mais-sobre-a-r-ladies" class="nav-link" data-scroll-target="#saiba-mais-sobre-a-r-ladies">Saiba mais sobre a R-Ladies</a></li>
-  <li><a href="#fonte-saiba-mais" id="toc-fonte-saiba-mais" class="nav-link" data-scroll-target="#fonte-saiba-mais">Fonte / Saiba mais</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/sobre.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Sobre a R-Ladies São Paulo</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Este post é um relato realizado a partir da atividade de um dos grupos participantes do evento “<a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/">Análise de dados abertos com R</a>”, vinculado ao <a href="https://opendataday.org/pt_br/">Open Data Day</a>. Este grupo trabalhou com dados abertos educacionais.</p>
+<p>A monitora do grupo foi <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, jornalista e produtora de dados da TV Globo. Especializada há mais de dez anos na cobertura de dados educacionais, ela apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>.&nbsp; Os dados utilizados podem ser obtidos<a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">no site do Inep</a>.</p>
+<p>Seis pessoas se interessaram por explorar dados abertos educacionais: Aline Durans, Cristiane Lacerda, Hayane Sena De Jesus, Katia Mine, Larissa Souza, e Natasha Meneguelli. Além disso, <a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes</a>, do R-Ladies São Paulo, participou como monitora.</p>
+<p>Primeiramente, foi feita uma introdução mostrando quais são e onde encontrar os dados abertos educacionais, além das mudanças recentes, com a retirada de bases de dados que antes eram públicas, com a justificativa de adequação à Lei Geral de Proteção de Dados (LGPD). A apresentação utilizada está disponível <a href="https://bit.ly/rladies_odd_2023">neste link</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://bit.ly/rladies_odd_2023"><img src="images/slide.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header><section id="o-que-é-a-r-ladies" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-a-r-ladies">O que é a R-Ladies?</h2>
-<p><a href="https://rladies.org/">R-Ladies</a> é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.</p>
-<p><strong>R-Ladies São Paulo</strong> integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.</p>
-<p>As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</p>
+<p>Antes de partirmos para a análise de fato dos dados, o código que gerou as tabelas foi apresentado ao grupo. Como parte das pessoas ainda tinha um contato inicial com o R e o RStudio, e como houve interesse em entender o código apresentado, acabamos priorizando uma explicação introdutória da linguagem de programação R.</p>
+<p>Acompanhamos as participantes desde a instalação das aplicações e o primeiro olhar geral sobre o que é a linguagem e como ela é bastante adequada para pessoas que querem fazer análise estatística em cima de bases de dados já existentes.</p>
 <div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg" class="img-fluid figure-img" style="width:65.0%"></p>
-<figcaption class="figure-caption">Foto do primeiro encontro da R-Ladies São Paulo, em agosto de 2018!</figcaption></figure>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># As funções descritas abaixo fazem parte do </span></span>
+<span><span class="co"># pacote tidyverse!</span></span>
+<span><span class="co"># Clique no nome da função para ler a sua documentação.</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-</section><section id="objetivo" class="level2"><h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.</p>
-</section><section id="público-alvo" class="level2"><h2 class="anchored" data-anchor-id="público-alvo">Público-alvo</h2>
-<p>Nosso principal público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.</p>
-</section><section id="missão" class="level2"><h2 class="anchored" data-anchor-id="missão">Missão</h2>
-<p>Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e capacitando-as.</p>
-</section><section id="código-de-conduta" class="level2"><h2 class="anchored" data-anchor-id="código-de-conduta">Código de conduta</h2>
-<p>A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.</p>
-<p>O nosso <a href="https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese">Código de conduta</a> aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.</p>
-</section><section id="apoio-financeirosponsor" class="level2"><h2 class="anchored" data-anchor-id="apoio-financeirosponsor">Apoio financeiro/Sponsor</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" class="img-fluid figure-img" style="width:50.0%" alt="R Consortium Logo"></a></p>
-<figcaption class="figure-caption">R Consortium</figcaption></figure>
-</div>
-</section><section id="r-ladies-no-brasil" class="level2"><h2 class="anchored" data-anchor-id="r-ladies-no-brasil">R-Ladies no Brasil</h2>
-<p>Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista:</p>
-<div class="cell">
-<div class="cell-output-display">
-
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a44f51896d9a7f9430cb" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a44f51896d9a7f9430cb">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["<a href='https://www.meetup.com/rladies-sao-paulo/' target='_blank'>R-Ladies São Paulo<\/a>","<a href='https://www.meetup.com/rladies-belo-horizonte/' target='_blank'>R-Ladies Belo Horizonte<\/a>","<a href='https://www.meetup.com/rladies-niteroi/' target='_blank'>R-Ladies Niterói<\/a>","<a href='https://www.meetup.com/rladies-rio/' target='_blank'>R-Ladies Rio de Janeiro<\/a>","<a href='https://www.meetup.com/rladies-natal/' target='_blank'>R-Ladies Natal<\/a>","<a href='https://www.meetup.com/rladies-florianopolis/' target='_blank'>R-Ladies Floripa<\/a>","<a href='https://www.meetup.com/rladies-goiania/' target='_blank'>R-Ladies Goiânia<\/a>","<a href='https://www.meetup.com/rladies-porto-alegre/' target='_blank'>R-Ladies Porto Alegre<\/a>","<a href='https://www.meetup.com/rladies-salvador/' target='_blank'>R-Ladies Salvador<\/a>","<a href='https://www.meetup.com/rladies-vitoria/' target='_blank'>R-Ladies Vitória<\/a>","<a href='https://www.meetup.com/rladies-recife/' target='_blank'>R-Ladies Recife<\/a>","<a href='https://www.meetup.com/rladies-fortaleza/' target='_blank'>R-Ladies Fortaleza<\/a>","<a href='https://www.meetup.com/rladies-lavras/' target='_blank'>R-Ladies Lavras<\/a>","<a href='https://www.meetup.com/rladies-curitiba/' target='_blank'>R-Ladies Curitiba<\/a>","<a href='https://www.meetup.com/rladies-brasilia/' target='_blank'>R-Ladies Brasília<\/a>","<a href='https://www.meetup.com/rladies-sao-mateus/' target='_blank'>R-Ladies São Mateus<\/a>"]},"columns":[{"id":"name","name":"Cidade","type":"character","html":true}],"searchable":true,"dataKey":"ed1792be4d6e1e23a292cacbb1c7beb6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<p><br></p>
-<p>Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: <a href="https://rladies.org/about-us/help/">R-Ladies - How do get involved</a>.</p>
-</section><section id="saiba-mais-sobre-a-r-ladies" class="level2"><h2 class="anchored" data-anchor-id="saiba-mais-sobre-a-r-ladies">Saiba mais sobre a R-Ladies</h2>
-<ul>
-<li><p>R-Ladies Global: <a href="https://rladies.org/">Website</a>, <a href="https://twitter.com/rladiesglobal"><i class="fab fa-twitter"></i> Twitter</a></p></li>
-<li>
-<p>R-Ladies São Paulo:</p>
-<ul>
-<li><a href="https://twitter.com/RLadiesSaoPaulo"><i class="fab fa-twitter"></i> Twitter</a></li>
-<li><a href="https://instagram.com/RLadiesSaoPaulo"><i class="fab fa-instagram"></i> Instagram</a></li>
-<li>
-<a href="https://www.linkedin.com/company/r-ladies-sao-paulo/"><i class="fab fa-linkedin"></i> Linkedin</a><br>
-</li>
-<li><a href="https://facebook.com/RLadiesSaoPaulo"><i class="fab fa-facebook"></i> Facebook</a></li>
-<li><a href="https://www.meetup.com/rladies-sao-paulo/"><i class="fab fa-meetup"></i> Meetup</a></li>
-<li><a href="https://github.com/R-Ladies-Sao-Paulo"><i class="fab fa-github"></i> GitHub</a></li>
-<li><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"><i class="fab fa-youtube"></i> Youtube</a></li>
-</ul>
-</li>
-</ul>
-<!-- inicio font awesome --><script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome --></section><section id="fonte-saiba-mais" class="level2"><h2 class="anchored" data-anchor-id="fonte-saiba-mais">Fonte / Saiba mais</h2>
-<ul>
-<li><p><a href="https://rladies.org/about-us/">About us - R-Ladies</a></p></li>
-<li><p><a href="https://www.meetup.com/rladies-sao-paulo/">Meetup - São Paulo</a></p></li>
-<li><p><a href="https://benubah.github.io/r-community-explorer/rladies.html">R Community Explorer</a></p></li>
-</ul>
+<p>O código já escrito (<a href="https://github.com/anacarolinamoreno/educacao_infantil_pandemia">link</a>) serviu de base para mostrar às participantes algumas funções (<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>, <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code>, <code><a href="https://purrr.tidyverse.org/reference/reduce.html">reduce()</a></code> e <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code>), além de explicações sobre a sintaxe básica do R, como quando usar os parênteses, e os diferentes operadores: o de atribuição, o pipe e os operações lógicos para fazer filtros ou manipular valores nas colunas.</p>
+<p>Dada a escassez de tempo, esse grupo não chegou a ver todo o código, até a geração de gráficos e a análise de fato dos dados. Mas as participantes consideraram que as explicações introdutórias sobre R foram mais produtivas para ajudá-las a dar o primeiro passo no aprendizado da linguagem.</p>
+<p>Finalmente, destaca-se que, apesar de os dados do Inep serem bem organizados, eles não estão isentos de obstáculos e dificuldades de análises. Para evitar incorrer em conclusões equivocadas, a dica é consultar técnicos e especialistas dos bancos de dados para checar possíveis erros de interpretação e até direcionamentos, no caso de obstáculos do processo analítico. Essas pessoas também conseguem explicar até que ponto as bases de dados disponíveis conseguem responder às perguntas que temos.</p>
+<p>Para finalizar este post, deixamos um relato de uma das pessoas participantes sobre a experiência da atividade:</p>
+<blockquote class="blockquote">
+<p>Participar deste grupo foi uma experiência de aprendizagem incrível. Carol é uma excelente tradutora da linguagem R. Nos fez entender, acompanhar a lógica e ver que sim: é possível aprender R! Para além disto, é necessário e importante termos contato e analisar os dados abertos. Desde então duas reflexões rodeiam meus pensamentos: primeira, não é só desenvolver uma habilidade, trabalhar com dados exige responsabilidade com a transparência das informações. Segunda: Mais pessoas precisam ter contato com o R. A comunidade R Ladies é acolhedora, respeitadora e muito responsável com o processo de transferência de conhecimento. Foi um dia de muita aprendizagem, acolhida e entusiasmo!</p>
+</blockquote>
+Para pessoas que tem interesse em saber mais sobre dados abertos educacionais, indicamos este vídeo:
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yuwt3Kqzd0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</center>
+<p>Até a próxima!</p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -570,13 +595,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-05-open-data-day-educacao/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></div>
     <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

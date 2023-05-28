@@ -3,7 +3,7 @@ project:
   preview: 
     port: 4200
   resources: 
-    - "eventos/*"  
+    - "eventos/*/*.pdf"  
 
 
 language: "custom-pt-br.yml"

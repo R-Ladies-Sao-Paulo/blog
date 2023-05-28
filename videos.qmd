@@ -9,6 +9,7 @@ Todos os vídeos podem ser encontrados no [canal da R-Ladies São Paulo no Youtu
 
 ## Ciência de Dados, Gênero e Raça nas Políticas Públicas
 
+- [Material completo](https://rladies-sp.org/eventos/2023-05-20/index.html)
 
 [![](https://secure.meetupstatic.com/photos/event/4/1/c/1/600_512896833.webp?w=750){fig-align="center" width="70%"}](https://www.youtube.com/live/ORChtB77_EY?feature=share)
 

@@ -14,6 +14,10 @@ toc: true
 draft: false 
 image: "images/toda.png"
 bibliography: packages.bib
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
 ---
 
 No dia 8 de maio o mundo da música ficou mais careta: Rita Lee, a rainha do rock brasileiro, padroeira da liberdade, a santa rita de sampa, nos deixou, mas não sem antes deixar um grande legado de obras, letras, frases.
@@ -79,8 +83,6 @@ Quantas faixas cada álbum tem? Há algumas maneiras de fazer isso, mas vou util
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Quantidade de faixas por álbum"
-
 rita_features |>
   group_by(album_name, album_release_year) |>
   summarise(faixas = n()) |>
@@ -94,7 +96,8 @@ rita_features |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = "Quantidade de faixas por álbum"
   )
 ```
 
@@ -112,7 +115,6 @@ Será que isso significa que o "Em Bossa 'N Roll (Edição Comemorativa - 25 Ano
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Duração de cada álbum da Rita Lee, em milissegundos"
 rita_features |>
   group_by(album_name, album_release_year) |>
   summarise("duracao" = sum(duration_ms)) |>
@@ -120,9 +122,14 @@ rita_features |>
   datatable(
     extensions = c("FixedColumns", "FixedHeader"),
     options = list(
-      scrollX = FALSE, paging = TRUE, fixedHeader = TRUE,
-      class = (c("compact", "row-border", "hover", "nowrap"))
-    )
+      scrollX = FALSE,
+      paging = TRUE,
+      fixedHeader = TRUE,
+      class = (c(
+        "compact", "row-border", "hover", "nowrap"
+      ))
+    ),
+    caption =  "Duração de cada álbum da Rita Lee, em milissegundos"
   )
 ```
 
@@ -175,7 +182,6 @@ Quero ver qual é o álbum mais positivo. Para isso, escolhi a mediana da valên
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Mediana da valência de cada álbum da Rita Lee"
 rita_filtrado |>
   group_by(album) |>
   summarise_at(vars(valence), list(mediana = median)) |>
@@ -183,9 +189,14 @@ rita_filtrado |>
   datatable(
     extensions = c("FixedColumns", "FixedHeader"),
     options = list(
-      scrollX = FALSE, paging = TRUE, fixedHeader = TRUE,
-      class = (c("compact", "row-border", "hover", "nowrap"))
-    )
+      scrollX = FALSE,
+      paging = TRUE,
+      fixedHeader = TRUE,
+      class = (c(
+        "compact", "row-border", "hover", "nowrap"
+      ))
+    ),
+    caption = "Mediana da valência de cada álbum da Rita Lee"
   )
 ```
 
@@ -315,7 +326,6 @@ Aprofundando na análise, o próximo passo é ver quais as músicas com mais ene
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Músicas mais energéticas"
 rita_filtrado |>
   select(track_name, album_name, energy) |>
   top_n(5) |>
@@ -329,7 +339,8 @@ rita_filtrado |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = "Músicas mais energéticas"
   )
 ```
 
@@ -368,7 +379,6 @@ Veja como a dançabilidade se mostra nos álbuns de Rita: primeiro, com a median
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Mediana da dançabilidade de cada álbum da Rita Lee"
 rita_filtrado |>
   group_by(album) |>
   summarise_at(vars(danceability), list(danceabilidade = median)) |>
@@ -382,7 +392,8 @@ rita_filtrado |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    cap = "Mediana da dançabilidade de cada álbum da Rita Lee"
   )
 ```
 
@@ -543,7 +554,6 @@ glimpse(letras)
 O dataframe tem três colunas e mais de 7 mil linhas! Vamos olhar qual a música com mais versos:
 
 ```{r}
-#| tbl-cap: "Quantidade de versos por música na página da Rita Lee no site letras.mus.br"
 letras |>
   group_by(nome) |>
   summarise(qtd_de_versos = n()) |>
@@ -557,7 +567,8 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = "Quantidade de versos por música na página da Rita Lee no site letras.mus.br"
   )
 ```
 
@@ -603,7 +614,8 @@ A tokenização é um processo de dividir um texto em unidades menores, chamadas
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Músicas de Rita Lee, tokenizadas por palavra"
+
+
 tidy_letras <- letras
 tidy_letras <- tidy_letras |>
   unnest_tokens(palavra, verso)
@@ -618,7 +630,8 @@ tidy_letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = "Músicas de Rita Lee, tokenizadas por palavra"
   )
 ```
 
@@ -681,7 +694,6 @@ As palavras mais frequentes, no formato de tabela:
 ```{r}
 #| warning: false
 #| message: false
-#| tbl-cap: "Quantidade de palavras nas música da página da Rita Lee"
 wordcloud |> 
   datatable(
   extensions = c("FixedColumns", "FixedHeader"),
@@ -692,7 +704,8 @@ wordcloud |>
     class = (c(
       "compact", "row-border", "hover", "nowrap"
     ))
-  )
+  ),
+  caption = "Quantidade de palavras nas música da página da Rita Lee"
 )
 ```
 
@@ -789,7 +802,6 @@ letras$verso_limpo <- gsub("[[:punct:]]", "", letras$verso)
 Olhando como o bigrama mais frequente, "pra mim", se insere nas frases:
 
 ```{r}
-#| tbl-cap: 'Bigrama "pra mim" inserido em versos'
 letras |>
   filter(str_detect(verso_limpo, "pra mim")) |>
   select(X, nome, verso) |>
@@ -802,7 +814,8 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ), 
+    caption = 'Bigrama "pra mim" inserido em versos'
   )
 ```
 
@@ -811,7 +824,6 @@ letras |>
 As palavras "tão", "tudo" e "todo" têm em comum o fato de serem palavras relacionadas à quantidade ou extensão de algo. Podemos inferir um sentido de intensidade e/ou generalização. Será isso mesmo?
 
 ```{r}
-#| tbl-cap:  'Bigrama "é tão" inserido em versos'
 letras |>
   filter(str_detect(verso_limpo, "é tão")) |>
   select(X, nome, verso) |>
@@ -824,14 +836,14 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = 'Bigrama "é tão" inserido em versos'
   )
 ```
 
 #### 
 
 ```{r}
-#| tbl-cap: 'Bigrama "todo mundo" inserido em versos'
 letras |>
   filter(str_detect(verso_limpo, "todo mundo")) |>
   select(X, nome, verso) |>
@@ -844,14 +856,14 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = 'Bigrama "todo mundo" inserido em versos'
   )
 ```
 
 #### 
 
 ```{r}
-#| tbl-cap: 'Bigrama "tudo é" inserido em versos'
 letras |>
   filter(str_detect(verso_limpo, "tudo é")) |>
   select(X, nome, verso) |>
@@ -864,7 +876,8 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption =  'Bigrama "tudo é" inserido em versos'
   )
 ```
 
@@ -877,7 +890,6 @@ Tomados em conjunto, penso num reflexo da "porralouquice" de Rita, de seu compor
 "Ser feliz" é o segundo bigrama mais frequente. Nos versos, ele aparece assim:
 
 ```{r}
-#| tbl-cap: 'Bigrama "ser feliz" inserido em versos'
 letras |>
   filter(str_detect(verso_limpo, "ser feliz")) |>
   select(X, nome, verso) |>
@@ -890,7 +902,8 @@ letras |>
       class = (c(
         "compact", "row-border", "hover", "nowrap"
       ))
-    )
+    ),
+    caption = 'Bigrama "ser feliz" inserido em versos'
   )
 ```
 

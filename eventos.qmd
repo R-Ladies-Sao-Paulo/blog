@@ -2,10 +2,23 @@
 title: "Próximos eventos"  
 ---
 
-## Introdução ao R
+Acompanhe as novidades nas nossas redes sociais!
 
-- 24/06/2023 
+## Tema: Oficina de introdução ao R e tidyverse
+
+- Data: 24/06/2023
+
+- Horário: 08h00 às 16h30
+
+- Evento presencial, no Insper
+
+
+
+## Tema: Carreira 
+
+- Data: 30/06/2023
+
+- Horário: 18h30 às 21h30
 
 - Evento presencial
 
-- Acompanhe novidade nas nossas redes sociais

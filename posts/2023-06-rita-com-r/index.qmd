@@ -910,7 +910,7 @@ letras |>
 ```{r}
 #| echo: false
 # codigo para gerar as referencias dos pacotes!
-knitr::write_bib(file = "pacotes.bib")
+knitr::write_bib(file = "packages.bib")
 ```
 
 <!-- inicio font awesome -->

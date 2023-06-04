@@ -474,6 +474,8 @@ rita_filtrado$track_name[which.min(rita_filtrado$instrumentalness)]
 Antes de passar para o R, vamos fazer a raspagem do site letras.mus.br com Python (aquela linguagem do logo de cobrinha). Para isso, é preciso importar algumas bibliotecas:
 
 ```{python}
+#| eval: false
+#| echo: true
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -482,6 +484,8 @@ import pandas as pd
 A url utilizada será a da página da Rita no site:
 
 ```{python}
+#| eval: false
+#| echo: true
 url = 'https://www.letras.mus.br/rita-lee/'
 ```
 

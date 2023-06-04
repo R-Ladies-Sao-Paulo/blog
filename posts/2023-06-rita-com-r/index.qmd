@@ -490,6 +490,8 @@ O bloco de código abaixo explica a raspagem da página: quero que encontre o li
 No final, salva o resultado em um arquivo CSV pra analisarmos com R!
 
 ```{python}
+#| eval: false
+#| echo: true
 # Realiza a requisição HTTP para obter o HTML da página
 response = requests.get(url)
 

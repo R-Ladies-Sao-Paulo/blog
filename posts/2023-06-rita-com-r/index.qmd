@@ -7,7 +7,8 @@ date: "2023-06-02"
 categories: 
 # exemplo de categorias:
   - "Análise exploratória"
-  - "Comunidade"
+  - "Análise de texto"
+  - "Música"
 lang: pt
 toc: true 
 draft: false 
@@ -474,8 +475,6 @@ rita_filtrado$track_name[which.min(rita_filtrado$instrumentalness)]
 Antes de passar para o R, vamos fazer a raspagem do site letras.mus.br com Python (aquela linguagem do logo de cobrinha). Para isso, é preciso importar algumas bibliotecas:
 
 ```python
-#| eval: false
-#| echo: true
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -484,8 +483,6 @@ import pandas as pd
 A url utilizada será a da página da Rita no site:
 
 ```python
-#| eval: false
-#| echo: true
 url = 'https://www.letras.mus.br/rita-lee/'
 ```
 
@@ -494,8 +491,6 @@ O bloco de código abaixo explica a raspagem da página: quero que encontre o li
 No final, salva o resultado em um arquivo CSV pra analisarmos com R!
 
 ```python
-#| eval: false
-#| echo: true
 # Realiza a requisição HTTP para obter o HTML da página
 response = requests.get(url)
 

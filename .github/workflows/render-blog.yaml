@@ -50,7 +50,6 @@ jobs:
             any::tm
             any::tidytext
             any::wordcloud2
-            any::reticulate
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2

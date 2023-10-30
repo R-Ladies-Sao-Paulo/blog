@@ -47,6 +47,8 @@ gerar_lista_contrib <- function() {
                     avatar = "https://avatars.githubusercontent.com/u/13514467?v=4") |> 
             tibble::add_row(logins = "biamuniz", 
                     avatar = "https://avatars.githubusercontent.com/u/41485608?v=4") |> 
+                tibble::add_row(logins = "ornscar", 
+                    avatar = "https://avatars.githubusercontent.com/u/62913147?v=4") |> 
     
             tibble::add_row(logins = "https://www.linkedin.com/in/aprocha/", 
                     avatar = "img/aprocha.jpg") |> 

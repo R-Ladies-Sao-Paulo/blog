@@ -60,8 +60,6 @@ website:
       - text: "Próximos eventos"
         href: eventos.qmd        
     right:
-      - icon: twitter
-        href: https://twitter.com/rladiessaopaulo
       - icon: linkedin
         href: https://www.linkedin.com/company/r-ladies-sao-paulo/      
       - icon: instagram
@@ -71,9 +69,7 @@ website:
       - icon: person-plus
         href: https://www.meetup.com/rladies-sao-paulo/
       - icon: envelope
-        href: mailto:saopaulo@rladies.org
-      - icon: rss
-        href: index.xml        
+        href: mailto:certificados.rladiessp@gmail.com
       - icon: github
         menu:
           - text: "GitHub da R-Ladies São Paulo"

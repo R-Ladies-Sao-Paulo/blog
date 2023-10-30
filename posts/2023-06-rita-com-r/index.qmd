@@ -31,7 +31,6 @@ Esse post contém alguns trocadilhos e referências musicais. Dá o play na play
 ```{=html}
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZFzKJSyLCAa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 ```
-
 # 1. Análise das músicas com spotifyR
 
 ## 1.1. Esse tal de R
@@ -59,8 +58,6 @@ Nessa análise, vamos coletar os atributos das faixas da Rita Lee e analisar alg
 ```{=html}
 <script src="https://gist.github.com/biamuniz/46574fb8489f4c910264dc131e3e0082.js"></script>
 ```
-
-
 ```{r}
 #| warning: false
 #| message: false
@@ -351,8 +348,6 @@ Aqui temos um empate entre "Erva Venenosa" e "Tratos À Bola". Vou trapacear na 
 ```{=html}
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WKxX0jswMBKepsHF1n1c5?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 ```
-
-
 ## 1.4. "Baila comigo"
 
 O atributo **dançabilidade** ("danceability" em inglês - confesso não saber de uma palavra em português pra isso) descreve o quão adequada uma faixa é para dançar, baseado em uma combinação de elementos musicais incluindo tempo, estabilidade rítmica, força do beat e regularidade geral. Um valor de 0 é o menos dançável e 1 é o mais dançável.
@@ -485,7 +480,7 @@ rita_filtrado$track_name[which.min(rita_filtrado$instrumentalness)]
 
 Antes de passar para o R, vamos fazer a raspagem do site letras.mus.br com Python (aquela linguagem do logo de cobrinha). Para isso, é preciso importar algumas bibliotecas:
 
-```python
+``` python
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -493,7 +488,7 @@ import pandas as pd
 
 A url utilizada será a da página da Rita no site:
 
-```python
+``` python
 url = 'https://www.letras.mus.br/rita-lee/'
 ```
 
@@ -501,7 +496,7 @@ O bloco de código abaixo explica a raspagem da página: quero que encontre o li
 
 No final, salva o resultado em um arquivo CSV pra analisarmos com R!
 
-```python
+``` python
 # Realiza a requisição HTTP para obter o HTML da página
 response = requests.get(url)
 
@@ -918,7 +913,16 @@ letras |>
 ```{r}
 #| echo: false
 # codigo para gerar as referencias dos pacotes!
-knitr::write_bib(file = "packages.bib")
+knitr::write_bib(x = c("tidyverse",
+                       "spotifyr",
+                       "highcharter",
+                       "ggridges",
+                       "DT",
+                       "stopwords",
+                       "tm",
+                       "tidytext",
+                       "wordcloud2"),
+                 file = "packages.bib")
 ```
 
 <!-- inicio font awesome -->

@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Bianca Muniz">
+<title>R-Ladies São Paulo - Rita com R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Rita com R">
+<meta name="twitter:description" content="Analisando a padroeira da liberdade com código">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-06-rita-com-r/images/toda.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="612">
+<meta name="twitter:image-width" content="1027">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../" rel="" target="">
+ <span class="menu-text">Página inicial</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">R-Ladies SP</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
+<li>
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
+ <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
+ <span class="dropdown-text">Como participar?</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Blog</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
+<li>
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
+ <span class="dropdown-text">Como contribuir com o blog?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
+ <span class="dropdown-text">Sugestão de conteúdos</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
+ <span class="menu-text">Videos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
+ <span class="menu-text">Próximos eventos</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+<div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Rita com R</h1>
+            <p class="subtitle lead">Analisando a padroeira da liberdade com código</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Análise exploratória</div>
+                <div class="quarto-category">Comunidade</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-contents">
+               <p>Bianca Muniz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2 de junho de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li>
+<a href="#an%C3%A1lise-das-m%C3%BAsicas-com-spotifyr" id="toc-análise-das-músicas-com-spotifyr" class="nav-link active" data-scroll-target="#an%C3%A1lise-das-m%C3%BAsicas-com-spotifyr">1. Análise das músicas com spotifyR</a>
+  <ul class="collapse">
+<li>
+<a href="#esse-tal-de-r" id="toc-esse-tal-de-r" class="nav-link" data-scroll-target="#esse-tal-de-r">1.1. Esse tal de R</a>
+  <ul class="collapse">
+<li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-06-rita-com-r/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>No dia 8 de maio o mundo da música ficou mais careta: Rita Lee, a rainha do rock brasileiro, padroeira da liberdade, a santa rita de sampa, nos deixou, mas não sem antes deixar um grande legado de obras, letras, frases.</p>
+<p>O intuito desse artigo é homenagear Rita Lee a partir de uma análise de sua obra usando R. Das R-Ladies de São Paulo para a mais icônica “Mina de Sampa”.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esse post contém alguns trocadilhos e referências musicais. Dá o play na playlist abaixo e <a href="https://open.spotify.com/track/4DIabg0zSDn6xoq810Spqn">chega mais, chega mais</a></p>
+</div>
+</div>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZFzKJSyLCAa?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<section id="análise-das-músicas-com-spotifyr" class="level1"><h1>1. Análise das músicas com spotifyR</h1>
+<section id="esse-tal-de-r" class="level2"><h2 class="anchored" data-anchor-id="esse-tal-de-r">1.1. Esse tal de R</h2>
+<p>Para começar, é preciso carregar alguns pacotes:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/charlie86/spotifyr">spotifyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jkunst.com/highcharter/">highcharter</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/DT">DT</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerar_tabela</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># knitr::kable(</span></span>
+<span>  <span class="co">#   tbl</span></span>
+<span>  <span class="co"># )</span></span>
+<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="section" class="level4"><h4 class="anchored" data-anchor-id="section"></h4>
+<p>Primeiro, devemos configurar os dados da API do Spotify. <a href="https://www.youtube.com/watch?v=Mey3ZGNsnMY">Aqui tem um tutorialzinho</a> explicando como obter seu Client ID e o token de acesso. No <a href="https://blog.curso-r.com/posts/2022-06-28-rspotify/">blog da Curso-R</a> também mostra como criar seus tokens de acesso na API do Spotify (com o pacote Rspotify, que é diferente do que vamos usar aqui, mas o início é o mesmo!).</p>
+<p>Com o ambiente configurado, podemos requisitar as características de áudio das faixas qualquer artista presente na plataforma! Isso é feito com a função <code>get_artist_audio_features</code> do pacote <code>spotifyR</code>.</p>
+<p>Nessa análise, vamos coletar os atributos das faixas da Rita Lee e analisar alguns deles.</p>
+<script src="https://gist.github.com/biamuniz/46574fb8489f4c910264dc131e3e0082.js"></script><div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rita_features</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/rita_features.csv"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">rita_features</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 411
+Columns: 39
+$ artist_name                  &lt;chr&gt; "Rita Lee", "Rita Lee", "Rita Lee", "Rita…
+$ artist_id                    &lt;chr&gt; "7dnT2FUXhjirperXaH22IJ", "7dnT2FUXhjirpe…
+$ album_id                     &lt;chr&gt; "0rZu9DYrrdzdOUQ7Nm2QB8", "0rZu9DYrrdzdOU…
+$ album_type                   &lt;chr&gt; "album", "album", "album", "album", "albu…
+$ album_images                 &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ album_release_date           &lt;chr&gt; "2021-06-25", "2021-06-25", "2021-06-25",…
+$ album_release_year           &lt;dbl&gt; 2021, 2021, 2021, 2021, 2021, 2021, 2021,…
+$ album_release_date_precision &lt;chr&gt; "day", "day", "day", "day", "day", "day",…
+$ danceability                 &lt;dbl&gt; 0.735, 0.802, 0.755, 0.821, 0.852, 0.656,…
+$ energy                       &lt;dbl&gt; 0.513, 0.638, 0.712, 0.769, 0.715, 0.734,…
+$ key                          &lt;dbl&gt; 2, 2, 5, 9, 0, 4, 2, 2, 5, 0, 0, 2, 6, 11…
+$ loudness                     &lt;dbl&gt; -9.369, -7.968, -7.696, -9.791, -8.402, -…
+$ mode                         &lt;dbl&gt; 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0,…
+$ speechiness                  &lt;dbl&gt; 0.0299, 0.0319, 0.0397, 0.0707, 0.0427, 0…
+$ acousticness                 &lt;dbl&gt; 0.031100, 0.005490, 0.000466, 0.001490, 0…
+$ instrumentalness             &lt;dbl&gt; 0.414000, 0.023400, 0.258000, 0.726000, 0…
+$ liveness                     &lt;dbl&gt; 0.1160, 0.2160, 0.2210, 0.0469, 0.0426, 0…
+$ valence                      &lt;dbl&gt; 0.5470, 0.6850, 0.8350, 0.4380, 0.6770, 0…
+$ tempo                        &lt;dbl&gt; 119.978, 127.982, 127.986, 125.000, 123.0…
+$ track_id                     &lt;chr&gt; "4CFOKrbwh1FuR5xBvOWG2R", "1VM1W9cMkrHmrX…
+$ analysis_url                 &lt;chr&gt; "https://api.spotify.com/v1/audio-analysi…
+$ time_signature               &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+$ artists                      &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ available_markets            &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ disc_number                  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ duration_ms                  &lt;dbl&gt; 356886, 216585, 369843, 524638, 320488, 2…
+$ explicit                     &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,…
+$ track_href                   &lt;chr&gt; "https://api.spotify.com/v1/tracks/4CFOKr…
+$ is_local                     &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,…
+$ track_name                   &lt;chr&gt; "Só De Você - Coppola Remix", "Pega Rapaz…
+$ track_preview_url            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ track_number                 &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13…
+$ type                         &lt;chr&gt; "track", "track", "track", "track", "trac…
+$ track_uri                    &lt;chr&gt; "spotify:track:4CFOKrbwh1FuR5xBvOWG2R", "…
+$ external_urls.spotify        &lt;chr&gt; "https://open.spotify.com/track/4CFOKrbwh…
+$ album_name                   &lt;chr&gt; "Rita Lee &amp; Roberto - Classix Remix Vol. …
+$ key_name                     &lt;chr&gt; "D", "D", "F", "A", "C", "E", "D", "D", "…
+$ mode_name                    &lt;chr&gt; "major", "major", "major", "major", "majo…
+$ key_mode                     &lt;chr&gt; "D major", "D major", "F major", "A major…</code></pre>
+</div>
+</div>
+</section><section id="section-1" class="level3"><h3 class="anchored" data-anchor-id="section-1"></h3>
+<p>Aqui já conseguimos ver que o dataframe resultante dessa requisição tem 39 colunas e 411 linhas, que correspondem a cada faixa da cantora. Há uma coluna com o formato errado, a <code>album_release_date</code>, que é a data de lançamento do álbum (não usaremos esse atributo na análise, mas é bom saber :D)</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Alguns álbuns são homônimos (ou seja, têm o mesmo nome), são coletâneas e/ou remixes. Tem que considerar isso na análise!</p>
+</div>
+</div>
+<section id="section-2" class="level4"><h4 class="anchored" data-anchor-id="section-2"></h4>
+<p>Quantas faixas cada álbum tem? Há algumas maneiras de fazer isso, mas vou utilizar o “<strong>GSA</strong>” (as funções <code>group_by</code>,<code>summarise</code> e <code>arrange</code> do pacote <code>dplyr</code>):</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rita_features</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">album_name</span>, <span class="va">album_release_year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>faixas <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">faixas</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">gerar_tabela</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="svtnvhuxnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#svtnvhuxnk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#svtnvhuxnk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#svtnvhuxnk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#svtnvhuxnk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#svtnvhuxnk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#svtnvhuxnk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#svtnvhuxnk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#svtnvhuxnk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#svtnvhuxnk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#svtnvhuxnk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#svtnvhuxnk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#svtnvhuxnk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#svtnvhuxnk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#svtnvhuxnk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svtnvhuxnk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#svtnvhuxnk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#svtnvhuxnk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svtnvhuxnk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#svtnvhuxnk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svtnvhuxnk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#svtnvhuxnk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svtnvhuxnk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#svtnvhuxnk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svtnvhuxnk .gt_left {
+  text-align: left;
+}
+
+#svtnvhuxnk .gt_center {
+  text-align: center;
+}
+
+#svtnvhuxnk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#svtnvhuxnk .gt_font_normal {
+  font-weight: normal;
+}
+
+#svtnvhuxnk .gt_font_bold {
+  font-weight: bold;
+}
+
+#svtnvhuxnk .gt_font_italic {
+  font-style: italic;
+}
+
+#svtnvhuxnk .gt_super {
+  font-size: 65%;
+}
+
+#svtnvhuxnk .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#svtnvhuxnk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#svtnvhuxnk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#svtnvhuxnk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#svtnvhuxnk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#svtnvhuxnk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#svtnvhuxnk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Quantidade de faixas por álbum </caption>
+<thead class="gt_col_headings"><tr class="header">
+<th id="album_release_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">album_release_year</th>
+<th id="faixas" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">faixas</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Em Bossa 'N Roll (Edição Comemorativa - 25 Anos) - Ao Vivo" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Em Bossa 'N Roll (Edição Comemorativa - 25 Anos) - Ao Vivo</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Em Bossa 'N Roll (Edição Comemorativa - 25 Anos) - Ao Vivo  album_release_year">1991</td>
+<td class="gt_row gt_right" headers="Em Bossa 'N Roll (Edição Comemorativa - 25 Anos) - Ao Vivo  faixas">21</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Acustico (Live)" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Acustico (Live)</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Acustico (Live)  album_release_year">1998</td>
+<td class="gt_row gt_right" headers="Acustico (Live)  faixas">18</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Lanca Perfume E Outras Manias" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Lanca Perfume E Outras Manias</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Lanca Perfume E Outras Manias  album_release_year">1998</td>
+<td class="gt_row gt_right" headers="Lanca Perfume E Outras Manias  faixas">18</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee Em Bossa 'N Roll (Ao Vivo)" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee Em Bossa 'N Roll (Ao Vivo)</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee Em Bossa 'N Roll (Ao Vivo)  album_release_year">1991</td>
+<td class="gt_row gt_right" headers="Rita Lee Em Bossa 'N Roll (Ao Vivo)  faixas">18</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee &amp;amp; Roberto - Classix Remix Vol. III" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee &amp; Roberto - Classix Remix Vol. III</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto - Classix Remix Vol. III  album_release_year">2021</td>
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto - Classix Remix Vol. III  faixas">17</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee  album_release_year">1979</td>
+<td class="gt_row gt_right" headers="Rita Lee  faixas">16</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rita Lee  album_release_year">1993</td>
+<td class="gt_row gt_right" headers="Rita Lee  faixas">13</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rita Lee  album_release_year">1980</td>
+<td class="gt_row gt_right" headers="Rita Lee  faixas">8</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Releeda" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Releeda</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Releeda  album_release_year">2000</td>
+<td class="gt_row gt_right" headers="Rita Releeda  faixas">16</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Ao Vivo" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Ao Vivo</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Ao Vivo  album_release_year">2004</td>
+<td class="gt_row gt_right" headers="Ao Vivo  faixas">14</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Aqui, Ali, Em Qualquer Lugar" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Aqui, Ali, Em Qualquer Lugar</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Aqui, Ali, Em Qualquer Lugar  album_release_year">2006</td>
+<td class="gt_row gt_right" headers="Aqui, Ali, Em Qualquer Lugar  faixas">14</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Multishow Ao Vivo" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Multishow Ao Vivo</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Multishow Ao Vivo  album_release_year">2009</td>
+<td class="gt_row gt_right" headers="Multishow Ao Vivo  faixas">14</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Reza" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Reza</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Reza  album_release_year">2012</td>
+<td class="gt_row gt_right" headers="Reza  faixas">14</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Bombom" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Bombom</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Bombom  album_release_year">1983</td>
+<td class="gt_row gt_right" headers="Bombom  faixas">13</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Pérolas" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Pérolas</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Pérolas  album_release_year">2016</td>
+<td class="gt_row gt_right" headers="Pérolas  faixas">13</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee &amp;amp; Roberto - Classix Remix Vol. II" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee &amp; Roberto - Classix Remix Vol. II</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto - Classix Remix Vol. II  album_release_year">2021</td>
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto - Classix Remix Vol. II  faixas">13</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Balacobaco" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Balacobaco</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Balacobaco  album_release_year">2003</td>
+<td class="gt_row gt_right" headers="Balacobaco  faixas">12</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee &amp;amp; Roberto – Classix Remix Vol. l" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee &amp; Roberto – Classix Remix Vol. l</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto – Classix Remix Vol. l  album_release_year">2021</td>
+<td class="gt_row gt_right" headers="Rita Lee &amp; Roberto – Classix Remix Vol. l  faixas">12</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee 3001" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee 3001</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee 3001  album_release_year">2000</td>
+<td class="gt_row gt_right" headers="Rita Lee 3001  faixas">12</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Santa Rita De Sampa" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Santa Rita De Sampa</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Santa Rita De Sampa  album_release_year">1997</td>
+<td class="gt_row gt_right" headers="Santa Rita De Sampa  faixas">12</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Build Up" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Build Up</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Build Up  album_release_year">1970</td>
+<td class="gt_row gt_right" headers="Build Up  faixas">11</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Refestança (Ao Vivo)" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Refestança (Ao Vivo)</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Refestança (Ao Vivo)  album_release_year">1977</td>
+<td class="gt_row gt_right" headers="Refestança (Ao Vivo)  faixas">11</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Atrás Do Porto Tem Uma Cidade" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Atrás Do Porto Tem Uma Cidade</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Atrás Do Porto Tem Uma Cidade  album_release_year">1974</td>
+<td class="gt_row gt_right" headers="Atrás Do Porto Tem Uma Cidade  faixas">10</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Flerte Fatal" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Flerte Fatal</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Flerte Fatal  album_release_year">1987</td>
+<td class="gt_row gt_right" headers="Flerte Fatal  faixas">10</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Hoje É O Primeiro Dia Do Resto Da Sua Vida" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Hoje É O Primeiro Dia Do Resto Da Sua Vida</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Hoje É O Primeiro Dia Do Resto Da Sua Vida  album_release_year">1972</td>
+<td class="gt_row gt_right" headers="Hoje É O Primeiro Dia Do Resto Da Sua Vida  faixas">10</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita Lee E Roberto De Carvalho" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita Lee E Roberto De Carvalho</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita Lee E Roberto De Carvalho  album_release_year">1990</td>
+<td class="gt_row gt_right" headers="Rita Lee E Roberto De Carvalho  faixas">10</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Babilônia" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Babilônia</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Babilônia  album_release_year">1978</td>
+<td class="gt_row gt_right" headers="Babilônia  faixas">9</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Entradas E Bandeiras" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Entradas E Bandeiras</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Entradas E Bandeiras  album_release_year">1976</td>
+<td class="gt_row gt_right" headers="Entradas E Bandeiras  faixas">9</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Flagra" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Flagra</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Flagra  album_release_year">1982</td>
+<td class="gt_row gt_right" headers="Flagra  faixas">9</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Fruto Proibido" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Fruto Proibido</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Fruto Proibido  album_release_year">1975</td>
+<td class="gt_row gt_right" headers="Fruto Proibido  faixas">9</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Rita E Roberto" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Rita E Roberto</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Rita E Roberto  album_release_year">1985</td>
+<td class="gt_row gt_right" headers="Rita E Roberto  faixas">9</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Saúde" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Saúde</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Saúde  album_release_year">1981</td>
+<td class="gt_row gt_right" headers="Saúde  faixas">8</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="Zona Zen" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Zona Zen</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Zona Zen  album_release_year">1988</td>
+<td class="gt_row gt_right" headers="Zona Zen  faixas">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section></section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

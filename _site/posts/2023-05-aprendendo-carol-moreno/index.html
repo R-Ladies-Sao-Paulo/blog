@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.287">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ana Carolina Moreno">
+<title>R-Ladies São Paulo - Aprendendo a programar em quatro capítulos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Aprendendo a programar em quatro capítulos">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/images/logo.jpg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../" rel="" target="">
+ <span class="menu-text">Página inicial</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">R-Ladies SP</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
+<li>
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
+ <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
+ <span class="dropdown-text">Como participar?</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Blog</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
+<li>
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
+ <span class="dropdown-text">Como contribuir com o blog?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
+ <span class="dropdown-text">Sugestão de conteúdos</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
+ <span class="menu-text">Videos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
+ <span class="menu-text">Próximos eventos</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+<div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Aprendendo a programar em quatro capítulos</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Comunidade</div>
+                <div class="quarto-category">Ensino</div>
+                <div class="quarto-category">Jornalismo de dados</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ana Carolina Moreno </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">10 de maio de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:12px Helvetica,Arial,sans-serif;  width:200px; margin: 0px !important;}
+    
+    #mc_embed_signup h2 {margin: 0px !important;}
+    
+    
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://rladies-sp.us21.list-manage.com/subscribe/post?u=7f53effc85201b5269f6e0991&amp;id=3bd5bc80fe&amp;f_id=000cc3e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <h2>Inscreva-se para receber novidades!</h2>
+<div class="mc-field-group">
+    <label for="mce-EMAIL">Email <span class="asterisk">*</span>
+</label>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+    <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f53effc85201b5269f6e0991_3bd5bc80fe" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <center><input type="submit" value="Inscreva-se" name="subscribe" id="mc-embedded-subscribe" class="button"></center>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#cap%C3%ADtulo-1---carol-excel" id="toc-capítulo-1---carol-excel" class="nav-link active" data-scroll-target="#cap%C3%ADtulo-1---carol-excel">Capítulo 1 - Carol Excel</a></li>
+  <li><a href="#cap%C3%ADtulo-2---carol-query" id="toc-capítulo-2---carol-query" class="nav-link" data-scroll-target="#cap%C3%ADtulo-2---carol-query">Capítulo 2 - Carol Query</a></li>
+  <li><a href="#cap%C3%ADtulo-3---carol-dados" id="toc-capítulo-3---carol-dados" class="nav-link" data-scroll-target="#cap%C3%ADtulo-3---carol-dados">Capítulo 3 - Carol Dados</a></li>
+  <li><a href="#cap%C3%ADtulo-4---teacher-carol" id="toc-capítulo-4---teacher-carol" class="nav-link" data-scroll-target="#cap%C3%ADtulo-4---teacher-carol">Capítulo 4 - Teacher Carol</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-05-aprendendo-carol-moreno/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="images/logo.jpg" class="quarto-discovered-preview-image img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Carol Moreno</figcaption><p></p>
+</figure>
+</div>
+<p><a href="https://www.linkedin.com/in/anacarolinamoreno/"><i class="fab fa-linkedin"></i></a></p>
+</center>
+<p>Este post foi escrito por Ana Carolina Moreno e publicado no <a href="https://www.linkedin.com/pulse/aprendendo-programar-em-quatro-cap%C3%ADtulos-ana-carolina-moreno">Linkedin</a>.</p>
+<p>A Carol é uma integrante da comunidade R-Ladies São Paulo, e atua como Jornalista de Dados Senior na TV Globo.</p>
+</div>
+</div>
+</div>
+<p>Desde que comecei a dar cursos de programação, sempre vejo nos rostos de grande parte das pessoas participantes aquele “medo” de não conseguir. Faz um pouquinho de sentido, afinal, porque só dou cursos introdutórios, pra quem nunca programou, e boa parte deles têm como público minorias de gênero, porque são organizados pelo capítulo de São Paulo R-Ladies Global, do qual faço parte. Sabemos que, infelizmente, muitos grupos da população são ensinados desde cedo que “não servem” para a área de tecnologia…</p>
+<p>Mas eu sempre começo essas aulas com um resuminho da minha trajetória, justamente pra derrubar vários mitos, e mostrar que é possível aprender novas habilidades, especialmente se você:</p>
+<ul>
+<li><p>tiver apoio adequado no aprendizado;</p></li>
+<li><p>atrelar o aprendizado à sua realidade;</p></li>
+<li><p>identificar os contextos em que você aprende melhor;</p></li>
+<li><p>investir na prática o que aprendeu;</p></li>
+<li><p>tiver incentivos pra aprender;</p></li>
+<li><p>conseguir compartilhar teus aprendizados.</p></li>
+</ul>
+<p>Inspirada nessa <a href="https://g1.globo.com/tecnologia/noticia/2023/05/10/ja-incentivo-meus-filhos-comeco-pode-ser-frustrante-profissionais-contam-como-e-trabalhar-com-programacao.ghtml">reportagem excelente</a> do <a href="https://www.linkedin.com/in/darlanhelder8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAmz3rcBQsPDkUpYhrSWEKPqZpl1KmQmoas">Darlan Helder</a>, compartilho abaixo um pouco dessa história.</p>
+<p>(Prólogo: eu sempre fiquei de recuperação em matemática, física, química, biologia… Minha mãe, que quase fez faculdade de matemática de tanto que gosta da área, até hoje acha estranho que eu seja referência no assunto pra qualquer pessoa que seja, quanto mais uma redação enorme.)</p>
+<section id="capítulo-1---carol-excel" class="level3"><h3 class="anchored" data-anchor-id="capítulo-1---carol-excel">Capítulo 1 - Carol Excel</h3>
+<p>Nos idos de 2012 tentei aprender R, mas o RStudio ainda estava nascendo… Eu tentei fuçar naquele site r-project.com, mas fracassei de forma retumbante. Achei que “aquilo não era pra mim”.</p>
+<p>Um pesquisador me sugeriu ir pro Stata, mas nunca encontrei muito sentido em softwares proprietários.</p>
+<p>Nos cinco anos seguintes, continuei interessada nos dados educacionais, mas só conseguia fazer reportanges com base em análises feitas por outras pessoas. Algumas delas por sugestão minha, como essa <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/dia-das-professoras-nove-em-cada-dez-estudantes-de-pedagogia-sao-mulheres-e-maioria-faz-curso-a-distancia.ghtml">comparando o perfil de quem estuda pedagogia com as demais carreiras de graduação</a>.</p>
+</section><section id="capítulo-2---carol-query" class="level3"><h3 class="anchored" data-anchor-id="capítulo-2---carol-query">Capítulo 2 - Carol Query</h3>
+<p>Em 2017, <strong>o incrível</strong> <a href="https://www.linkedin.com/in/leandro-bispo-oliveira?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAALW_lIBK2jplevqU4iEWkmh3bkp81MM3Q4">Leandro Bispo Oliveira</a> <strong>apareceu na redação do g1 com uma apostilinha de SQL básico encadernada, e me ensinou em duas horas a acessar o datalake e fazer queries com a base do Bolsa Família</strong>. Graças a ele consegui fazer uma análise que ninguém tinha feito até então no jornalismo: “testar” as notas de cortes do Sisu (a USP, por exemplo, tinha umas notas altíssimas) para saber se elas eram <a href="https://g1.globo.com/educacao/noticia/com-notas-minimas-de-ate-800-pontos-cursos-da-usp-no-sisu-ficam-fora-do-acesso-de-estudantes-cotistas.ghtml">compatíveis com a realidade do desempenho dos candidatos no Enem</a>.</p>
+<p><strong>Não tem nada como atrelar um conhecimento à aplicação prática na nossa realidade.</strong> E a minha realidade era: trabalho cobrindo educação, os dados abertos educacionais são muitos, ótimos, mas não tenho as técnicas pra fazer todas as reportagens que quero. E não quero depender de pesquisadores fazerem essa parte da produção de notícias.</p>
+<p>Foi por isso que decidi continuar aprendendo. Entrei num curso online de python para jornalistas. Fracassei, larguei pela metade.</p>
+<p>Daí entrei em outro curso online, de R para jornalistas. Tive problemas até pra instalar os programas. Larguei no comecinho.</p>
+<p>Mas continuava de olho nas oportunidades pra aprender. Até que, no começo de 2019, o capítulo de São Paulo das <a href="https://www.linkedin.com/company/rladies/">R-Ladies Global</a> anunciou um curso presencial, num sábado em que eu não estava de plantão, e <strong>passei o dia todo aprendendo com uma didática incrível, num ambiente acolhedor e inspirador</strong>. Resultado: comecei a finalmente conseguir responder a perguntas que sempre me pareceram relevantes e que ainda não tinham lido no jornalismo, como a <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/2018/11/20/negros-representam-apenas-16-dos-professores-universitarios.ghtml">desigualdade racial entre professores universitários</a> e a evolução ao longo dos anos de <a href="https://g1.globo.com/educacao/noticia/2019/03/31/numero-de-escolas-com-nome-de-presidentes-da-ditadura-militar-cai-26percent-em-uma-decada.ghtml">escolas batizadas com nomes de generais da ditatura militar</a>.</p>
+<p>Até então, penava bastante pra conseguir virar reportagens dirigidas porque meu trabalho envolvia muitas pautas que não usavam dados. Então <strong>nem sempre conseguia praticar o que aprendi (outro ponto fundamental pra avançar no aprendizado de qualquer coisa)</strong>.</p>
+<p>Entendi também que, <strong>quando eu preciso aprender sobre um assunto desde o início, meu negócio é curso presencial (pode ser diferente pra outras pessoas)</strong>. Quando já estou mais avançada, tudo bem fazer virtualmente algum curso pontual, para aprender melhor alguma habilidade que ainda acho que preciso praticar mais (nessa quinta, começo um curso de raspagem de dados, mal posso esperar!)</p>
+</section><section id="capítulo-3---carol-dados" class="level3"><h3 class="anchored" data-anchor-id="capítulo-3---carol-dados">Capítulo 3 - Carol Dados</h3>
+<p>Em janeiro de 2020, passei de “repórter de Educação” para “produtora de dados” na redação de São Paulo da Globo (ganhei apelidos como “Carol Dados” e “Balcão da Média Móvel”). <strong>A partir de então, minha função principal era fuçar em dados, então a prática virou rotina.</strong> E não só os educacionais, de ciência, saúde e meio ambiente aos quais eu estava acostumada. Dados do Waze, do TSE, da Câmara Municipal de São Paulo, das reclamações do Disque 156…</p>
+<p>Dois meses depois, veio a pandemia, que obrigou o poder público a criar novos indicadores baseados em dados e o jornalismo a explicar todos esses novos conceitos para uma sociedade confusa e aterrorizada.</p>
+<p>Aí veio a necessidade de escrever códigos pra otimizar análises que eram feitas diariamente ou mesmo escrever códigos para permitir análises que, da forma como vinham do poder público, eram impossíveis de fazer de outras formas. <strong>Aqui entra o tal do incentivo pra aprender novas funções e formas de automatizar scripts pra não perder tempo com eles.</strong></p>
+<p>(Pausa para agredecer todas as pessoas que manjam de R, SQL e Datasus e que eu atazanei durante meses a fio, em qualquer dia da semana e até de madrugada.)</p>
+<p>Alguns códigos saíam em menos de duas horas, outros viraram dashboard pra todas as equipes consultarem, um levou uns três meses pra ficar azeitadinho.</p>
+<p>Todo esse esforço valeu a pena, e me deu muito mais autonomia.</p>
+<p>O mais legal é que, ao contrário da maioria das pessoas no chamado “jornalismo de dados”, eu não fico em uma equipe “de dados”: sou parte de uma grande equipe de produção, mas sou a única com foco maior na missão de escarafunchar dados. Por isso, não fico longe da produção diária, nem me debruço meses produzindo uma única reportagem especial. Sigo cobrindo o chamado “hardnews”, mas consigo fazer isso aplicando o que aprendi sobre análise estatística e técnicas de ciências de dados pra qualificar a cobertura. Acredito que o impacto das reportagens acaba sendo muito mais abrangente.</p>
+</section><section id="capítulo-4---teacher-carol" class="level3"><h3 class="anchored" data-anchor-id="capítulo-4---teacher-carol">Capítulo 4 - Teacher Carol</h3>
+<p>Ainda sigo atazando muita gente com meus códigos, dependendo do que aparece (obrigada de novo!). Também tenho sempre buscado aprender coisas novas, quando o tempo permite, pra facilitar análises futuras.</p>
+<p>Mas a principal mudança, desde 2020, é poder compartilhar o que aprendi com outras pessoas, principalmente jornalistas, e principalmente mulheres e minorias de gênero, que tenha interesse nessas habilidades. Nos últimos anos já dei vários cursos introdutórios de R, de SQL, de dados educacionais, de Lei de Acesso à Informação, de tudo isso junto e misturado.</p>
+<p>Toda vez que elaboro um novo curso, consigo revisar o que já sei, aprender coisas novas, aprofundar alguns conhecimentos. Ensinar é uma das melhores formas de aprender.</p>
+<p>Sempre é desafiador, mas pra mim sempre esteve claro que só aprendi o que sei hoje porque muitas pessoas investiram o tempo delas em me ajudar. Não acho que seria possível fazer de outra forma. <strong>Por isso, enxergo o ensino como uma forma de manter acesa essa corrente colaborativa.</strong></p>
+<p><em>PS: Se você é jornalista ou estudante de jornalismo, a</em> <a href="https://www.linkedin.com/company/jeducaeduca/">Jeduca: Associação de Jornalistas de Educação</a><em>, em parceria com a</em> <a href="https://www.linkedin.com/company/abraji/">Abraji - Associação Brasileira de Jornalismo Investigativo</a><em>, vai dar mais uma vez o curso Jornalismo de educação: bases para a cobertura. <strong>É gratuito e, na minha opinião, é o curso mais completo de jornalismo educacional que existe hoje.</strong> São 12 aulas, e eu vou ministrar as duas sobre reportar com dados =)</em></p>
+<p><a href="https://jeduca.org.br/noticia/inscricoes-abertas-para-o-curso-jornalismo-de-educacao-bases-para-a-cobertura"><em>Clique aqui para saber mais!</em></a></p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

@@ -46,3 +46,6 @@ vignettes/*.pdf
 */.DS_Store
 .Rproj.user
 .Rdata
+
+_site/
+_freeze/

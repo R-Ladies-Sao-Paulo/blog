@@ -50,6 +50,12 @@ jobs:
             any::tm
             any::tidytext
             any::wordcloud2
+            any::httr
+            any::rvest
+            any::progressr
+            any::ghibli
+            any::ggimage
+            any::gt
 
 
       - name: Publish to GitHub Pages (and render)

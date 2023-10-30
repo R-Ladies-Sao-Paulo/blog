@@ -51,7 +51,7 @@ gerar_lista_contrib <- function() {
                     avatar = "https://avatars.githubusercontent.com/u/41485608?v=4") |> 
     
             tibble::add_row(logins = "https://www.linkedin.com/in/aprocha/", 
-                    avatar = "https://media.licdn.com/dms/image/C4E03AQGhfoSMVl7VlA/profile-displayphoto-shrink_400_400/0/1646225931683?e=1691625600&v=beta&t=fbNcnNmOdG7P1oGInAL6bhn1rUhM06h1AREBUeymcOk") |> 
+                    avatar = "img/aprocha.jpg") |> 
     dplyr::mutate(
       url = dplyr::if_else(
         stringr::str_starts(logins, "http"),

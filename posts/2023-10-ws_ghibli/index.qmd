@@ -1,16 +1,15 @@
 ---
 title: "Raspando a página do Studio Ghibli, na Wikipédia"
 author: 
-  - "Ornella Scardua Ferreira" # Exemplo
-date: "2022-12-03" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+  - "Ornella Scardua Ferreira" 
+date: "2023-10-31" 
 categories: 
-# exemplo de categorias:
   - "Web Scraping"
   - "Tutorial"
-toc: true # isso habilita o sumário ao lado do post
+toc: true 
 image: "ghibli.png" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
-draft: true # enquanto estiver draft: true, o post é um rascunho
+draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
 
 ::: {.callout-note collapse="false"}
@@ -18,26 +17,45 @@ draft: true # enquanto estiver draft: true, o post é um rascunho
 
 <center>
 
-![Foto](https://url_para_sua_foto.jpg){style="width: 30%; border-radius: 50%;"}
+![Foto](https://avatars.githubusercontent.com/u/62913147?v=4){style="width: 30%; border-radius: 50%;"}
 
-[<i class="bi bi-house-fill"></i>](https://) [<i class="fab fa-github"></i>](https://github.com/USER) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/USER/) [<i class="fab fa-instagram"></i>](https://www.instagram.com/USER/)
-
+[<i class="fab fa-github"></i>](https://github.com/ornscar)
 </center>
 
-Este post foi escrito por ....
+Este post foi escrito por **Ornella Scardua Ferreira**. ADICIONAR MINI BIO :)
 :::
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = " #>", collapse = TRUE, fig.align = 'center')
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = " #>",
+  collapse = TRUE,
+  fig.align = 'center'
+)
 ```
 
-Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo. Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós. Por isso tudo, que tal "scrapear" (ou raspar) a página do Studio Ghibli, na Wikipédia, a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!
+Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo. 
 
-```{r fig1, echo = FALSE, fig.cap = 'Imagem da página do Studio Ghibli, no Wikipédia.'}
+Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.
+
+[![Imagem obtida no site Plano Crítico](img/studio_ghibli.jpg){fig-align="center" width="80%"}](https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/)
+
+Por isso tudo, que tal "scrapear" (ou raspar) a [página do Studio Ghibli, na Wikipédia](https://pt.wikipedia.org/wiki/Studio_Ghibli) a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!
+
+```{r}
+#| fig.cap: 'Imagem da página do Studio Ghibli, no Wikipédia.'
+#| echo: false
+#| label: fig-1
 knitr::include_graphics("img/fig1.png")
 ```
 
-# Etapas do _scraping_
+Para quem não conhece os filmes, muitos estão disponíveis na Netflix!
+
+[![Página da Netflix com filmes do Studio Ghibli](img/netflix.png){fig-align="center" width="80%"}](https://www.netflix.com/br/browse/genre/81227213)
+
+# Etapas do *scraping*
 
 Nesta seção, vamos apresentar cada uma das etapas necessárias para raspar os dados sobre os filmes do Studio Ghibli, no site da Wikipédia. Os processos vão envolver imitar a requisição de busca do navegador e "parsear" os arquivos obtidos, iterando-os com elementos para o tratamento dos erros e de barras de progresso. É importante mencionar, ainda, que a Wikipédia é um site estático escrito em HTML.
 
@@ -48,7 +66,7 @@ library(httr)
 library(xml2)
 library(rvest)
 library(progressr)
-library(tidyverse) #o {purrr} faz parte do {tidyverse}
+library(tidyverse) # o {purrr} faz parte do {tidyverse}
 library(ghibli)
 ```
 
@@ -56,48 +74,54 @@ Mas não se preocupe porque ao longo da apresentação dos códigos vamos sempre
 
 ## Requisição
 
-Inicialmente, inspecionamos a página do Studio Ghibli na Wikipédia para encontrar os elementos em HTML que estão associados exclusivamente às informações dos filmes (como título, ano de lançamento, duração, diretor, elenco etc). Felizmente, esses dados estão todos resumidos em uma única tabela dentre a única tabela que existe na página (na Seção Filmografia, para ser mais exata) - o que deixou a tarefa de raspagem muito mais fácil, por sinal. 
+Inicialmente, inspecionamos a página do Studio Ghibli na Wikipédia para encontrar os elementos em HTML que estão associados exclusivamente às informações dos filmes (como título, ano de lançamento, duração, diretor, elenco etc). Felizmente, esses dados estão todos resumidos em uma única tabela dentre a única tabela que existe na página (na Seção Filmografia, para ser mais exata) - o que deixou a tarefa de raspagem muito mais fácil, por sinal.
 
-```{r fig2, echo = FALSE, fig.cap = 'Imagem da inspeção na página do Studio Ghibli, no Wikipédia.'}
+```{r}
+#| fig.cap: 'Imagem da inspeção na página do Studio Ghibli, no Wikipédia.'
+#| echo: false
+#| label: fig-2
 knitr::include_graphics("img/fig2.png")
 ```
 
-Em primeiro lugar, vamos coletar somente os dados apresentados nessa tabela. Assim, simulamos a requisição apenas com a URL do site, sem deixar de salvar (com o nome 'filmes_ghibli.html') a página requerida no diretório `output/`. Como coletar essa tabela se trata de um _scraping_ muito simples, já no próximo passo é possível ler o elemento HTML cujo parâmetro XPath é igual a `//*[@id='mw-content-text']/div[1]/table[3]`, obtido conforme mostra a Figura \@ref(fig:fig2).
+Em primeiro lugar, vamos coletar somente os dados apresentados nessa tabela. Assim, simulamos a requisição apenas com a URL do site, sem deixar de salvar (com o nome `filmes_ghibli.html`) a página requerida no diretório `output/`. Como coletar essa tabela se trata de um *scraping* muito simples, já no próximo passo é possível ler o elemento HTML cujo parâmetro XPath é igual a `//*[@id='mw-content-text']/div[1]/table[3]`, obtido conforme mostra a @fig-2.
 
-O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. _Obs.: usamos a função `xml_find_first( )` pois, neste caso, existia uma única tabela._
+O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. *Obs.: usamos a função `xml_find_first()` pois, neste caso, existia uma única tabela.*
 
 ```{r}
-# URL
+# URL da página do Wikipédia
 
 u_ghibli <- "https://pt.wikipedia.org/wiki/Studio_Ghibli"
 
-# requisicao
+# requisicao GET
 
 r_ghibli <- httr::GET(
   u_ghibli, 
-  httr::write_disk("output/filmes_ghibli.html", overwrite = TRUE) #salvar pagina no disco
+  httr::write_disk("output/filmes_ghibli.html", overwrite = TRUE) # salvar pagina no disco
 )
 
 # coletando a tabela
 
 tabela_ghibli <- r_ghibli |> 
-  xml2::read_html() |>  #ler arquivo HTML
-  xml2::xml_find_first("//*[@id='mw-content-text']/div[1]/table[3]") #parametro XPath
+  xml2::read_html() |>  # ler arquivo HTML
+  xml2::xml_find_first("//*[@id='mw-content-text']/div[1]/table[3]") # parametro XPath
 ```
 
-A tabela (ainda em HTML, lembrando) que acabamos de obter só contém as informações mais gerais dos filmes do Studio Ghibli. Mas... e se quisermos montar uma base de dados em que seja possível, por exemplo, analisar sobre a duração, gênero e elenco dos filmes? Bem, para esse fim, vamos continuar utilizando a tabela anterior, que, como podemos observar na Figura \@ref(fig:fig2), está sob a _tag_ `<table>` e o atributo `class='wikitable unsortable'`. Percebam, ainda, agora na Figura \@ref(fig:fig3), que os títulos são links (identificados com a _tag_ `<a>`) que direcionam para as páginas individuais de cada um dos filmes, locais onde estão as informações pelas quais estamos interessados.
+A tabela (ainda em HTML, lembrando) que acabamos de obter só contém as informações mais gerais dos filmes do Studio Ghibli. Mas... e se quisermos montar uma base de dados em que seja possível, por exemplo, analisar sobre a duração, gênero e elenco dos filmes? Bem, para esse fim, vamos continuar utilizando a tabela anterior, que, como podemos observar na @fig-2, está sob a *tag* `<table>` e o atributo `class='wikitable unsortable'`. Percebam, ainda, agora na @fig-3, que os títulos são links (identificados com a *tag* `<a>`) que direcionam para as páginas individuais de cada um dos filmes, locais onde estão as informações pelas quais estamos interessados.
 
-```{r fig3, echo = FALSE, fig.cap = 'Imagem da inspeção dos títulos na tabela da página do Studio Ghibli, no Wikipédia.'}
+```{r}
+#| fig.cap: 'Imagem da inspeção dos títulos na tabela da página do Studio Ghibli, no Wikipédia.'
+#| echo: false
+#| label: fig-3
 knitr::include_graphics("img/fig3.png")
 ```
 
-Para extrair esses links, precisamos encontrar todos os links disponíveis na tabela cuja classe é do tipo `'wikitable unsortable'`. Logo, lemos a página HTML e coletamos todos os elementos (ou nós) que fazem parte das _tags_ `<a>` e os atrbiutos do tipo `href`. Para tal tarefa, construímos o seguinte código:
+Para extrair esses links, precisamos encontrar todos os links disponíveis na tabela cuja classe é do tipo `'wikitable unsortable'`. Logo, lemos a página HTML e coletamos todos os elementos (ou nós) que fazem parte das *tags* `<a>` e os atrbiutos do tipo `href`. Para tal tarefa, construímos o seguinte código:
 
 ```{r}
 links_filmes <- r_ghibli |> 
-  xml2::read_html() |> #ler arquivo HTML
-  xml2::xml_find_all("//table[@class='wikitable unsortable']//a") |> #coletar todos os nos da tabela dentro das tags <a>
-  xml2::xml_attr("href") #coletar atributos href
+  xml2::read_html() |> # ler arquivo HTML
+  xml2::xml_find_all("//table[@class='wikitable unsortable']//a") |> # coletar todos os nos da tabela dentro das tags <a>
+  xml2::xml_attr("href") # coletar atributos href
 
 links_filmes
 ```
@@ -112,7 +136,7 @@ head(links_filmes)
 
 Uma vez corrigidos, podemos fazer a requisição de todas as páginas dos filmes de uma só vez, iterando o processo de tal maneira que algum erro que aconteça em alguma requisição seja identificado.
 
-A primeira função que vamos criar é a `get_links( )`, cujo papel é simplesmente obter uma requisição da mesma forma que havíamos feito inicialmente. 
+A primeira função que vamos criar é a `get_links()`, cujo papel é simplesmente obter uma requisição da mesma forma que havíamos feito inicialmente.
 
 ```{r}
 get_links <- function(links, ids) {
@@ -123,7 +147,9 @@ get_links <- function(links, ids) {
 }
 ```
 
-A segunda função que vamos constuir, a `get_progresso( )`, vai obter as requisições por meio da função `get_links( )` adicionada da informação de erro com o auxílio da função `purrr::possibly( )`. Vejam que, caso aconteça algum problema durante a requisição feita pela `get_links( )`, a seguinte mensagem de erro aparecerá: "ERRO NA REQUISIÇÃO". A mensagem pode ser escrita de acordo com o gosto do leitor, vale frisar. Bom, já ao utilizar a função `progressr::with_progress( )`, incluímos uma barra de progresso à iteração. Dois comentários importantes a serem feitos: (1) a função `purrr::possibly( )` permite o andamento da iteração mesmo se houver algum erro no meio do caminho, e se ocorrer algum erro, ela identifica exatamente em qual momento o erro aconteceu; e (2) a barra de progresso serve para o acompanhamento de cada passo da iteração (Figura TAL). 
+A segunda função que vamos constuir, a `get_progresso()`, vai obter as requisições por meio da função `get_links()` adicionada da informação de erro com o auxílio da função `purrr::possibly()`. Vejam que, caso aconteça algum problema durante a requisição feita pela `get_links()`, a seguinte mensagem de erro aparecerá: "ERRO NA REQUISIÇÃO". A mensagem pode ser escrita de acordo com o gosto do leitor, vale frisar. 
+
+Bom, já ao utilizar a função `progressr::with_progress()`, incluímos uma barra de progresso à iteração. Dois comentários importantes a serem feitos: (1) a função `purrr::possibly()` permite o andamento da iteração mesmo se houver algum erro no meio do caminho, e se ocorrer algum erro, ela identifica exatamente em qual momento o erro aconteceu; e (2) a barra de progresso serve para o acompanhamento de cada passo da iteração (@fig-5).
 
 ```{r}
 # funcao para obter as requisicoes com erro
@@ -150,29 +176,36 @@ progressr::with_progress({
 
 Nenhum "ERRO NA REQUISIÇÃO", yes!
 
-Ah, na Figura \@ref(fig:fig5) é possível ter uma ideia de como é uma barra de progresso.
+Ah, na @fig-5 é possível ter uma ideia de como é uma barra de progresso.
 
-```{r fig5, echo = FALSE, fig.cap = 'Barra de progresso na prática.'}
+```{r}
+#| fig.cap: 'Barra de progresso na prática.'
+#| echo: false
+#| label: fig-5
 knitr::include_graphics("img/fig5.png")
 ```
 
-## _Parsing_ 
+## *Parsing*
 
-Ao realizar raspagem de dados, a etapa de _parsing_ nada mais é do que processar os dados brutos, que geralmente estão nos formatos .html ou .json, e posteriormente organizá-los de modo que consigamos realizar análises. Em nosso caso, coletamos dados .html tanto no cenário em que queríamos as informações expostas na tabelona da página do Studio Ghibli quanto no cenário em que buscamos as informações dos filmes em cada um dos links direcionáveis dispostos nessa mesma tabela. Em ambas as situações, transformamos os dados para um _data frame_ (ou um _tibble_) ao fazer uma aplicação simples com a função `rvest::html_table( )`. 
+Ao realizar raspagem de dados, a etapa de *parsing* nada mais é do que processar os dados brutos, que geralmente estão nos formatos `.html` ou `.json`, e posteriormente organizá-los de modo que consigamos realizar análises. Em nosso caso, coletamos dados `.html` tanto no cenário em que queríamos as informações expostas na tabelona da página do Studio Ghibli quanto no cenário em que buscamos as informações dos filmes em cada um dos links direcionáveis dispostos nessa mesma tabela. Em ambas as situações, transformamos os dados para um *data frame* (ou um *tibble*) ao fazer uma aplicação simples com a função `rvest::html_table()`.
 
-Notem que, no segundo cenário, optamos pelo arquivo '5.html'. Ele se refere ao filme "O Túmulo de Vagalumes", o filme do Studio Ghibli preferido desta que vos escreve - mas o processo de _parsing_ para qualquer um dos 31 arquivos gerados é o mesmo, caso seu filme favorito seja outro. Nesse caso, quando aplicamos a função mágica `rvest::html_table( )`, o R retorna uma lista com 8 elementos, pois lembre-se que foram coletados todos os nós das _tags_ `<a>` e todos os atributos da forma `href`. 
+Notem que, no segundo cenário, optamos pelo arquivo `5.html`. Ele se refere ao filme "O Túmulo de Vagalumes", o filme do Studio Ghibli preferido desta que vos escreve - mas o processo de *parsing* para qualquer um dos 31 arquivos gerados é o mesmo, caso seu filme favorito seja outro. Nesse caso, quando aplicamos a função mágica `rvest::html_table()`, o R retorna uma lista com 8 elementos, pois lembre-se que foram coletados todos os nós das *tags* `<a>` e todos os atributos da forma `href`.
 
-```{r fig4, echo = FALSE, fig.cap = 'Box da página do Studio Ghibli, no Wikipédia, referente ao elemento [[1]].'}
+```{r}
+#| fig.cap: 'Box da página do Studio Ghibli, no Wikipédia, referente ao elemento [[1]].'
+#| echo: false
+#| label: fig-4
 knitr::include_graphics("img/fig4.png")
+
 ```
 
-Para esse post, vamos nos limitar ao primeiro elemento (`[[1]]`), que corresponde ao box à direita na página [https://pt.wikipedia.org/wiki/Hotaru_no_Haka]() (Figura \@ref(fig:fig4)), o qual contém informações bastante interessantes para uma análise sucinta do filme.
+Para esse post, vamos nos limitar ao primeiro elemento (`[[1]]`), que corresponde ao box à direita na página <https://pt.wikipedia.org/wiki/Hotaru_no_Haka> (@fig-4), o qual contém informações bastante interessantes para uma análise sucinta do filme.
 
 ```{r}
 # primeiro cenario
 
 tabela_ghibli <- tabela_ghibli |>   
-  rvest::html_table(header = TRUE) #transformar dados HTML em tibble
+  rvest::html_table(header = TRUE) # transformar dados HTML em tibble
 
 tabela_ghibli
 ```
@@ -181,20 +214,20 @@ tabela_ghibli
 # segundo cenario
 
 tumulo_vagalumes <- xml2::read_html("output/5.html") |>  
-  rvest::html_table() #transformar dados HTML em tibble
+  rvest::html_table() # transformar dados HTML em tibble
 
 tumulo_vagalumes
 ```
 
 # Manipulação e visualização dos dados
 
-É verdade que a função `rvest::html_table( )` nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Mas esses "ajustes" são facilmente manipuláveis com as ferramentas da poderosa família `{tidyverse}`, como a `{dply}`, `{janitor}`, `{ggplot2}`... Porém, como o foco deste post é o _web scraping_ e muito provavelmente você já é um _expert_ em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.
+É verdade que a função `rvest::html_table()` nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Mas esses "ajustes" são facilmente manipuláveis com as ferramentas da poderosa família `{tidyverse}`, como a `{dply}`, `{janitor}`, `{ggplot2}`... Porém, como o foco deste post é o *web scraping* e muito provavelmente você já é um *expert* em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.
 
 ```{r}
 # manipulacao dos dados
 
 tabela_ghibli <- tabela_ghibli |>
-  # organiza os nomes das variaveis
+  # limpa os nomes das variaveis
   janitor::clean_names() |> 
   # renomeia variaveis
   dplyr::rename(roteirista = roteirista_s, produtor = produtor_es) |> 
@@ -225,7 +258,7 @@ Na primeira aplicação, construímos um gráfico para visualizar de forma mais 
 ```{r graf1, fig.cap = 'Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.'}
 # grafico animado
   
-ghibli <- "ghibli.png" #carrega imagem
+ghibli <- "ghibli.png" # carrega imagem
 
 tabela_ghibli |> 
   dplyr::filter(ano != "ASA") |> 
@@ -247,7 +280,7 @@ tabela_ghibli |>
   )
 ```
 
-Além de mostrarmos de maneira mais elegante o número de filmes dirigidos pelos seus cineastas. A propósito, oportunidade única para utilizar o pacote `{ghibli}`, que contém paletas de cores de vários filmes do Studio Ghibli, como "A Princesa Mononoke" (a escolhida), "Ponyo - Uma Amizade que Veio do Mar" e "A Viagem de Chihiro".
+Além de mostrarmos de maneira mais elegante o número de filmes dirigidos pelos seus cineastas. A propósito, oportunidade única para utilizar o pacote `{ghibli}`, que contém paletas de cores de vários filmes do Studio Ghibli, como "[A Princesa Mononoke](https://www.netflix.com/br/title/28630857)" (a escolhida), "[Ponyo - Uma Amizade que Veio do Mar](https://www.netflix.com/br/title/70106454)" e "[A Viagem de Chihiro](https://www.netflix.com/br/title/60023642)".
 
 ```{r graf2, fig.cap = 'Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.'}
 # grafico de barras
@@ -278,14 +311,18 @@ tabela_ghibli |>
     x = "", y = "", color = "diretor"
   ) +
   ggplot2::theme(
-    legend.title = element_blank(), #remove titulo da legenda
-    legend.position = "bottom",     #posiciona legenda embaixo do grafico
-    axis.text.x = element_blank(),  #remove valores do eixo x
-    axis.ticks.x = element_blank()  #remove ticks do eixo x
+    legend.title = element_blank(), # remove titulo da legenda
+    legend.position = "bottom",     # posiciona legenda embaixo do grafico
+    axis.text.x = element_blank(),  # remove valores do eixo x
+    axis.ticks.x = element_blank()  # remove ticks do eixo x
   )
 ```
 
-Por último, como resultado da segunda aplicação, vamos construir uma tabela, uma espécia de ficha técnica, com as informações que foram coletadas do filme "O Túmulo de Vagalumes". _Obs.: optamos por uma análise simples nesse caso. Uma sugestão seria concatenar os dados dos boxs de todos os filmes em uma única base e calcular a média de duração dos filmes ou verificar qual o gênero mais comum entre eles, por exemplo_.
+
+
+
+
+Por último, como resultado da segunda aplicação, vamos construir uma tabela, uma espécia de ficha técnica, com as informações que foram coletadas do filme "O Túmulo de Vagalumes". *Obs.: optamos por uma análise simples nesse caso. Uma sugestão seria concatenar os dados dos boxs de todos os filmes em uma única base e calcular a média de duração dos filmes ou verificar qual o gênero mais comum entre eles, por exemplo*.
 
 ```{r fig.align = 'center'}
 # manipulando os dados
@@ -296,7 +333,7 @@ tumulo_vagalumes <- tumulo_vagalumes |>
   # remove linhas 1 e 2
   .[c(-1, -2), ]
 
-colnames(tumulo_vagalumes) <- c("categoria", "descricao") #renomeia os nomes das variaveis
+colnames(tumulo_vagalumes) <- c("categoria", "descricao") # renomeia os nomes das variaveis
 
 tumulo_vagalumes <- tumulo_vagalumes |> 
   # transforma base em formato wide (o que e linha vira coluna)
@@ -348,7 +385,7 @@ Legal, né?
 
 Para finalizar, deixo uma das definições de amor mais legais que já ouvi, que não poderia ter vindo se não pela mente brilhante de Hayao Miyazaki:
 
-> _"Tornei-me cético em relação à regra não escrita de que só porque um menino e uma menina aparecem no mesmo filme, um romance deve acontecer. Em vez disso, quero retratar um relacionamento um pouco diferente, onde os dois se inspiram mutuamente para viver – se eu puder, então talvez eu esteja mais perto de retratar uma verdadeira expressão de amor."_
+> *"Tornei-me cético em relação à regra não escrita de que só porque um menino e uma menina aparecem no mesmo filme, um romance deve acontecer. Em vez disso, quero retratar um relacionamento um pouco diferente, onde os dois se inspiram mutuamente para viver -- se eu puder, então talvez eu esteja mais perto de retratar uma verdadeira expressão de amor."*
 
 Hasta!
 

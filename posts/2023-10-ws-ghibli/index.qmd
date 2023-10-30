@@ -7,7 +7,7 @@ categories:
   - "Web Scraping"
   - "Tutorial"
 toc: true 
-image: "ghibli.png" # imagem usada na página inicial junto ao post
+image: "img/studio_ghibli.jpg" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
 draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
@@ -20,6 +20,7 @@ draft: false # enquanto estiver draft: true, o post é um rascunho
 ![Foto](https://avatars.githubusercontent.com/u/62913147?v=4){style="width: 30%; border-radius: 50%;"}
 
 [<i class="fab fa-github"></i>](https://github.com/ornscar)
+
 </center>
 
 Este post foi escrito por **Ornella Scardua Ferreira**. ADICIONAR MINI BIO :)
@@ -36,7 +37,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo. 
+Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo.
 
 Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.
 
@@ -147,7 +148,7 @@ get_links <- function(links, ids) {
 }
 ```
 
-A segunda função que vamos constuir, a `get_progresso()`, vai obter as requisições por meio da função `get_links()` adicionada da informação de erro com o auxílio da função `purrr::possibly()`. Vejam que, caso aconteça algum problema durante a requisição feita pela `get_links()`, a seguinte mensagem de erro aparecerá: "ERRO NA REQUISIÇÃO". A mensagem pode ser escrita de acordo com o gosto do leitor, vale frisar. 
+A segunda função que vamos constuir, a `get_progresso()`, vai obter as requisições por meio da função `get_links()` adicionada da informação de erro com o auxílio da função `purrr::possibly()`. Vejam que, caso aconteça algum problema durante a requisição feita pela `get_links()`, a seguinte mensagem de erro aparecerá: "ERRO NA REQUISIÇÃO". A mensagem pode ser escrita de acordo com o gosto do leitor, vale frisar.
 
 Bom, já ao utilizar a função `progressr::with_progress()`, incluímos uma barra de progresso à iteração. Dois comentários importantes a serem feitos: (1) a função `purrr::possibly()` permite o andamento da iteração mesmo se houver algum erro no meio do caminho, e se ocorrer algum erro, ela identifica exatamente em qual momento o erro aconteceu; e (2) a barra de progresso serve para o acompanhamento de cada passo da iteração (@fig-5).
 
@@ -318,10 +319,6 @@ tabela_ghibli |>
   )
 ```
 
-
-
-
-
 Por último, como resultado da segunda aplicação, vamos construir uma tabela, uma espécia de ficha técnica, com as informações que foram coletadas do filme "O Túmulo de Vagalumes". *Obs.: optamos por uma análise simples nesse caso. Uma sugestão seria concatenar os dados dos boxs de todos os filmes em uma única base e calcular a média de duração dos filmes ou verificar qual o gênero mais comum entre eles, por exemplo*.
 
 ```{r fig.align = 'center'}
@@ -388,7 +385,6 @@ Para finalizar, deixo uma das definições de amor mais legais que já ouvi, que
 > *"Tornei-me cético em relação à regra não escrita de que só porque um menino e uma menina aparecem no mesmo filme, um romance deve acontecer. Em vez disso, quero retratar um relacionamento um pouco diferente, onde os dois se inspiram mutuamente para viver -- se eu puder, então talvez eu esteja mais perto de retratar uma verdadeira expressão de amor."*
 
 Hasta!
-
 
 ```{r}
 #| echo: false

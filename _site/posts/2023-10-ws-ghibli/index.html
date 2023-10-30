@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ornella Scardua Ferreira">
+<title>R-Ladies São Paulo - Raspando a página do Studio Ghibli, na Wikipédia</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Raspando a página do Studio Ghibli, na Wikipédia">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-10-ws-ghibli/ghibli.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="254">
+<meta name="twitter:image-width" content="198">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../" rel="" target="">
+ <span class="menu-text">Página inicial</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">R-Ladies SP</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
+<li>
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
+ <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
+ <span class="dropdown-text">Como participar?</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Blog</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
+<li>
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
+ <span class="dropdown-text">Como contribuir com o blog?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
+ <span class="dropdown-text">Sugestão de conteúdos</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
+ <span class="menu-text">Videos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
+ <span class="menu-text">Próximos eventos</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/rladiessaopaulo" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:saopaulo@rladies.org" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+<div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Raspando a página do Studio Ghibli, na Wikipédia</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Web Scraping</div>
+                <div class="quarto-category">Tutorial</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ornella Scardua Ferreira </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">31 de outubro de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li>
+<a href="#etapas-do-scraping" id="toc-etapas-do-scraping" class="nav-link active" data-scroll-target="#etapas-do-scraping">Etapas do <em>scraping</em></a>
+  <ul class="collapse">
+<li><a href="#requisi%C3%A7%C3%A3o" id="toc-requisição" class="nav-link" data-scroll-target="#requisi%C3%A7%C3%A3o">Requisição</a></li>
+  <li><a href="#parsing" id="toc-parsing" class="nav-link" data-scroll-target="#parsing"><em>Parsing</em></a></li>
+  </ul>
+</li>
+  <li><a href="#manipula%C3%A7%C3%A3o-e-visualiza%C3%A7%C3%A3o-dos-dados" id="toc-manipulação-e-visualização-dos-dados" class="nav-link" data-scroll-target="#manipula%C3%A7%C3%A3o-e-visualiza%C3%A7%C3%A3o-dos-dados">Manipulação e visualização dos dados</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-10-ws-ghibli/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure"><p><img src="https://avatars.githubusercontent.com/u/62913147?v=4.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Foto</figcaption></figure>
+</div>
+<a href="https://github.com/ornscar"><i class="fab fa-github"></i></a>
+</center>
+<p>Este post foi escrito por <strong>Ornella Scardua Ferreira</strong>. ADICIONAR MINI BIO :)</p>
+</div>
+</div>
+</div>
+<p>Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo.</p>
+<p>Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/"><img src="img/studio_ghibli.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figcaption class="figure-caption">Imagem obtida no site Plano Crítico</figcaption></figure>
+</div>
+<p>Por isso tudo, que tal “scrapear” (ou raspar) a <a href="https://pt.wikipedia.org/wiki/Studio_Ghibli">página do Studio Ghibli, na Wikipédia</a> a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/fig1.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Para quem não conhece os filmes, muitos estão disponíveis na Netflix!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.netflix.com/br/browse/genre/81227213"><img src="img/netflix.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figcaption class="figure-caption">Página da Netflix com filmes do Studio Ghibli</figcaption></figure>
+</div>
+<section id="etapas-do-scraping" class="level1"><h1>Etapas do <em>scraping</em>
+</h1>
+<p>Nesta seção, vamos apresentar cada uma das etapas necessárias para raspar os dados sobre os filmes do Studio Ghibli, no site da Wikipédia. Os processos vão envolver imitar a requisição de busca do navegador e “parsear” os arquivos obtidos, iterando-os com elementos para o tratamento dos erros e de barras de progresso. É importante mencionar, ainda, que a Wikipédia é um site estático escrito em HTML.</p>
+<p>Para tanto, vamos utilizar os pacotes R <a href="https://httr.r-lib.org/">httr</a> para acessar a web; <a href="https://xml2.r-lib.org/">xml2</a> e <a href="https://rvest.tidyverse.org/">rvest</a> para extrair dados de arquivos HTML; <a href="https://purrr.tidyverse.org/">purrr</a> para iterar e identificar erros; <a href="https://progressr.futureverse.org">progressr</a> para incluir barras de progresso; o queridinho <a href="https://tidyverse.tidyverse.org">tidyverse</a> para a manipulação e visualização dos dados extraídos; e, já que estamos falando de Studio Ghibli, <a href="https://ewenme.github.io/ghibli/">ghibli</a> para colorir nossos gráficos como um filme criado pelo próprio Miyazaki e cia.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://httr.r-lib.org/">httr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://xml2.r-lib.org/">xml2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rvest.tidyverse.org/">rvest</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://progressr.futureverse.org">progressr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span> <span class="co"># o {purrr} faz parte do {tidyverse}</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ewenme.github.io/ghibli/">ghibli</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Mas não se preocupe porque ao longo da apresentação dos códigos vamos sempre corresponder às funções ao seus respectivos pacotes (por meio do <code>::</code>) para você saber exatamente com o que está lidando.</p>
+<section id="requisição" class="level2"><h2 class="anchored" data-anchor-id="requisição">Requisição</h2>
+<p>Inicialmente, inspecionamos a página do Studio Ghibli na Wikipédia para encontrar os elementos em HTML que estão associados exclusivamente às informações dos filmes (como título, ano de lançamento, duração, diretor, elenco etc). Felizmente, esses dados estão todos resumidos em uma única tabela dentre a única tabela que existe na página (na Seção Filmografia, para ser mais exata) - o que deixou a tarefa de raspagem muito mais fácil, por sinal.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/fig2.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption class="figure-caption">Figura&nbsp;2: Imagem da inspeção na página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Em primeiro lugar, vamos coletar somente os dados apresentados nessa tabela. Assim, simulamos a requisição apenas com a URL do site, sem deixar de salvar (com o nome <code>filmes_ghibli.html</code>) a página requerida no diretório <code>output/</code>. Como coletar essa tabela se trata de um <em>scraping</em> muito simples, já no próximo passo é possível ler o elemento HTML cujo parâmetro XPath é igual a <code>//*[@id='mw-content-text']/div[1]/table[3]</code>, obtido conforme mostra a <a href="#fig-2">Figura&nbsp;2</a>.</p>
+<p>O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. <em>Obs.: usamos a função <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml_find_first()</a></code> pois, neste caso, existia uma única tabela.</em></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># URL da página do Wikipédia</span></span>
+<span></span>
+<span><span class="va">u_ghibli</span> <span class="op">&lt;-</span> <span class="st">"https://pt.wikipedia.org/wiki/Studio_Ghibli"</span></span>
+<span></span>
+<span><span class="co"># requisicao GET</span></span>
+<span></span>
+<span><span class="va">r_ghibli</span> <span class="op">&lt;-</span> <span class="fu">httr</span><span class="fu">::</span><span class="fu"><a href="https://httr.r-lib.org/reference/GET.html">GET</a></span><span class="op">(</span></span>
+<span>  <span class="va">u_ghibli</span>, </span>
+<span>  <span class="fu">httr</span><span class="fu">::</span><span class="fu"><a href="https://httr.r-lib.org/reference/write_disk.html">write_disk</a></span><span class="op">(</span><span class="st">"output/filmes_ghibli.html"</span>, overwrite <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># salvar pagina no disco</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># coletando a tabela</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span> <span class="op">&lt;-</span> <span class="va">r_ghibli</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="co"># ler arquivo HTML</span></span>
+<span>  <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml_find_first</a></span><span class="op">(</span><span class="st">"//*[@id='mw-content-text']/div[1]/table[3]"</span><span class="op">)</span> <span class="co"># parametro XPath</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A tabela (ainda em HTML, lembrando) que acabamos de obter só contém as informações mais gerais dos filmes do Studio Ghibli. Mas… e se quisermos montar uma base de dados em que seja possível, por exemplo, analisar sobre a duração, gênero e elenco dos filmes? Bem, para esse fim, vamos continuar utilizando a tabela anterior, que, como podemos observar na <a href="#fig-2">Figura&nbsp;2</a>, está sob a <em>tag</em> <code>&lt;table&gt;</code> e o atributo <code>class='wikitable unsortable'</code>. Percebam, ainda, agora na <a href="#fig-3">Figura&nbsp;3</a>, que os títulos são links (identificados com a <em>tag</em> <code>&lt;a&gt;</code>) que direcionam para as páginas individuais de cada um dos filmes, locais onde estão as informações pelas quais estamos interessados.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/fig3.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption class="figure-caption">Figura&nbsp;3: Imagem da inspeção dos títulos na tabela da página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Para extrair esses links, precisamos encontrar todos os links disponíveis na tabela cuja classe é do tipo <code>'wikitable unsortable'</code>. Logo, lemos a página HTML e coletamos todos os elementos (ou nós) que fazem parte das <em>tags</em> <code>&lt;a&gt;</code> e os atrbiutos do tipo <code>href</code>. Para tal tarefa, construímos o seguinte código:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">links_filmes</span> <span class="op">&lt;-</span> <span class="va">r_ghibli</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># ler arquivo HTML</span></span>
+<span>  <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml_find_all</a></span><span class="op">(</span><span class="st">"//table[@class='wikitable unsortable']//a"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># coletar todos os nos da tabela dentro das tags &lt;a&gt;</span></span>
+<span>  <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/xml_attr.html">xml_attr</a></span><span class="op">(</span><span class="st">"href"</span><span class="op">)</span> <span class="co"># coletar atributos href</span></span>
+<span></span>
+<span><span class="va">links_filmes</span></span>
+<span> <span class="co">#&gt;  [1] "/wiki/Tenk%C5%AB_no_Shiro_Rapyuta"        </span></span>
+<span> <span class="co">#&gt;  [2] "/wiki/Hayao_Miyazaki"                     </span></span>
+<span> <span class="co">#&gt;  [3] "/wiki/Isao_Takahata"                      </span></span>
+<span> <span class="co">#&gt;  [4] "/wiki/Joe_Hisaishi"                       </span></span>
+<span> <span class="co">#&gt;  [5] "/wiki/Hotaru_no_Haka"                     </span></span>
+<span> <span class="co">#&gt;  [6] "/wiki/Isao_Takahata"                      </span></span>
+<span> <span class="co">#&gt;  [7] "/wiki/Tonari_no_Totoro"                   </span></span>
+<span> <span class="co">#&gt;  [8] "/wiki/Majo_no_Takky%C5%ABbin"             </span></span>
+<span> <span class="co">#&gt;  [9] "/wiki/Omoide_Poro_Poro"                   </span></span>
+<span> <span class="co">#&gt; [10] "/wiki/Kurenai_no_Buta"                    </span></span>
+<span> <span class="co">#&gt; [11] "/wiki/Umi_ga_Kikoeru"                     </span></span>
+<span> <span class="co">#&gt; [12] "/wiki/Heisei_Tanuki_Gassen_Ponpoko"       </span></span>
+<span> <span class="co">#&gt; [13] "/wiki/Mimi_wo_Sumaseba"                   </span></span>
+<span> <span class="co">#&gt; [14] "/wiki/Mononoke_Hime"                      </span></span>
+<span> <span class="co">#&gt; [15] "/wiki/H%C5%8Dhokekyo_Tonari_no_Yamada-kun"</span></span>
+<span> <span class="co">#&gt; [16] "/wiki/A_Viagem_de_Chihiro"                </span></span>
+<span> <span class="co">#&gt; [17] "/wiki/O_Reino_dos_Gatos"                  </span></span>
+<span> <span class="co">#&gt; [18] "/wiki/Hiroyuki_Morita"                    </span></span>
+<span> <span class="co">#&gt; [19] "/wiki/Hauru_no_Ugoku_Shiro"               </span></span>
+<span> <span class="co">#&gt; [20] "/wiki/Contos_de_Terramar"                 </span></span>
+<span> <span class="co">#&gt; [21] "/wiki/Goro_Miyazaki"                      </span></span>
+<span> <span class="co">#&gt; [22] "/wiki/Gake_no_ue_no_Ponyo"                </span></span>
+<span> <span class="co">#&gt; [23] "/wiki/Kari-gurashi_no_Arietti"            </span></span>
+<span> <span class="co">#&gt; [24] "/wiki/Hiromasa_Yonebayashi"               </span></span>
+<span> <span class="co">#&gt; [25] "/wiki/Kokuriko-zaka_Kara"                 </span></span>
+<span> <span class="co">#&gt; [26] "/wiki/Kaze_Tachinu"                       </span></span>
+<span> <span class="co">#&gt; [27] "/wiki/O_Conto_da_Princesa_Kaguya"         </span></span>
+<span> <span class="co">#&gt; [28] "/wiki/Yoshiaki_Nishimura"                 </span></span>
+<span> <span class="co">#&gt; [29] "/wiki/Omoide_no_Marnie"                   </span></span>
+<span> <span class="co">#&gt; [30] "/wiki/%C4%80ya_to_Majo"                   </span></span>
+<span> <span class="co">#&gt; [31] "/wiki/Kimitachi_wa_Dou_Ikiru_ka"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>No entanto, os 31 links gerados são da forma <code>/wiki/nome_do_filme</code>, ou seja, inválidos. Validamo-os com o próximo código:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">links_filmes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://pt.wikipedia.org"</span>, <span class="va">links_filmes</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">links_filmes</span><span class="op">)</span></span>
+<span> <span class="co">#&gt; [1] "https://pt.wikipedia.org/wiki/Tenk%C5%AB_no_Shiro_Rapyuta"</span></span>
+<span> <span class="co">#&gt; [2] "https://pt.wikipedia.org/wiki/Hayao_Miyazaki"             </span></span>
+<span> <span class="co">#&gt; [3] "https://pt.wikipedia.org/wiki/Isao_Takahata"              </span></span>
+<span> <span class="co">#&gt; [4] "https://pt.wikipedia.org/wiki/Joe_Hisaishi"               </span></span>
+<span> <span class="co">#&gt; [5] "https://pt.wikipedia.org/wiki/Hotaru_no_Haka"             </span></span>
+<span> <span class="co">#&gt; [6] "https://pt.wikipedia.org/wiki/Isao_Takahata"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Uma vez corrigidos, podemos fazer a requisição de todas as páginas dos filmes de uma só vez, iterando o processo de tal maneira que algum erro que aconteça em alguma requisição seja identificado.</p>
+<p>A primeira função que vamos criar é a <code>get_links()</code>, cujo papel é simplesmente obter uma requisição da mesma forma que havíamos feito inicialmente.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_links</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">links</span>, <span class="va">ids</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">arquivo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"output/"</span>, <span class="va">ids</span>, <span class="st">".html"</span><span class="op">)</span></span>
+<span>  <span class="va">r</span> <span class="op">&lt;-</span> <span class="fu">httr</span><span class="fu">::</span><span class="fu"><a href="https://httr.r-lib.org/reference/GET.html">GET</a></span><span class="op">(</span><span class="va">links</span>, <span class="fu"><a href="https://httr.r-lib.org/reference/write_disk.html">write_disk</a></span><span class="op">(</span><span class="va">arquivo</span>, overwrite <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">arquivo</span></span>
+<span><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A segunda função que vamos constuir, a <code>get_progresso()</code>, vai obter as requisições por meio da função <code>get_links()</code> adicionada da informação de erro com o auxílio da função <code><a href="https://purrr.tidyverse.org/reference/possibly.html">purrr::possibly()</a></code>. Vejam que, caso aconteça algum problema durante a requisição feita pela <code>get_links()</code>, a seguinte mensagem de erro aparecerá: “ERRO NA REQUISIÇÃO”. A mensagem pode ser escrita de acordo com o gosto do leitor, vale frisar.</p>
+<p>Bom, já ao utilizar a função <code><a href="https://progressr.futureverse.org/reference/with_progress.html">progressr::with_progress()</a></code>, incluímos uma barra de progresso à iteração. Dois comentários importantes a serem feitos: (1) a função <code><a href="https://purrr.tidyverse.org/reference/possibly.html">purrr::possibly()</a></code> permite o andamento da iteração mesmo se houver algum erro no meio do caminho, e se ocorrer algum erro, ela identifica exatamente em qual momento o erro aconteceu; e (2) a barra de progresso serve para o acompanhamento de cada passo da iteração (<a href="#fig-5">Figura&nbsp;4</a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># funcao para obter as requisicoes com erro</span></span>
+<span></span>
+<span><span class="va">get_progresso</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">links</span>, <span class="va">ids</span>, <span class="va">progresso</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># progresso</span></span>
+<span>  <span class="fu">progresso</span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="co"># mapear erros nas requisicoes</span></span>
+<span>  <span class="va">get_erro</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/possibly.html">possibly</a></span><span class="op">(</span><span class="va">get_links</span>, otherwise <span class="op">=</span> <span class="st">"ERRO NA REQUISIÇÃO"</span><span class="op">)</span></span>
+<span>  <span class="fu">get_erro</span><span class="op">(</span><span class="va">links</span>, <span class="va">ids</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># obtendo as requisicoes com erro e barra de progresso</span></span>
+<span></span>
+<span><span class="fu">progressr</span><span class="fu">::</span><span class="fu"><a href="https://progressr.futureverse.org/reference/with_progress.html">with_progress</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>  <span class="co"># barra de progresso</span></span>
+<span>  <span class="va">progresso</span> <span class="op">&lt;-</span> <span class="fu">progressr</span><span class="fu">::</span><span class="fu"><a href="https://progressr.futureverse.org/reference/progressor.html">progressor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">links_filmes</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">map2</a></span><span class="op">(</span></span>
+<span>    <span class="va">links_filmes</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_along</a></span><span class="op">(</span><span class="va">links_filmes</span><span class="op">)</span>, </span>
+<span>    <span class="va">get_progresso</span>, p <span class="op">=</span> <span class="va">progresso</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">}</span><span class="op">)</span></span>
+<span> <span class="co">#&gt; [[1]]</span></span>
+<span> <span class="co">#&gt; [1] "output/1.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[2]]</span></span>
+<span> <span class="co">#&gt; [1] "output/2.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[3]]</span></span>
+<span> <span class="co">#&gt; [1] "output/3.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[4]]</span></span>
+<span> <span class="co">#&gt; [1] "output/4.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[5]]</span></span>
+<span> <span class="co">#&gt; [1] "output/5.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[6]]</span></span>
+<span> <span class="co">#&gt; [1] "output/6.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[7]]</span></span>
+<span> <span class="co">#&gt; [1] "output/7.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[8]]</span></span>
+<span> <span class="co">#&gt; [1] "output/8.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[9]]</span></span>
+<span> <span class="co">#&gt; [1] "output/9.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[10]]</span></span>
+<span> <span class="co">#&gt; [1] "output/10.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[11]]</span></span>
+<span> <span class="co">#&gt; [1] "output/11.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[12]]</span></span>
+<span> <span class="co">#&gt; [1] "output/12.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[13]]</span></span>
+<span> <span class="co">#&gt; [1] "output/13.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[14]]</span></span>
+<span> <span class="co">#&gt; [1] "output/14.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[15]]</span></span>
+<span> <span class="co">#&gt; [1] "output/15.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[16]]</span></span>
+<span> <span class="co">#&gt; [1] "output/16.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[17]]</span></span>
+<span> <span class="co">#&gt; [1] "output/17.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[18]]</span></span>
+<span> <span class="co">#&gt; [1] "output/18.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[19]]</span></span>
+<span> <span class="co">#&gt; [1] "output/19.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[20]]</span></span>
+<span> <span class="co">#&gt; [1] "output/20.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[21]]</span></span>
+<span> <span class="co">#&gt; [1] "output/21.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[22]]</span></span>
+<span> <span class="co">#&gt; [1] "output/22.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[23]]</span></span>
+<span> <span class="co">#&gt; [1] "output/23.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[24]]</span></span>
+<span> <span class="co">#&gt; [1] "output/24.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[25]]</span></span>
+<span> <span class="co">#&gt; [1] "output/25.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[26]]</span></span>
+<span> <span class="co">#&gt; [1] "output/26.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[27]]</span></span>
+<span> <span class="co">#&gt; [1] "output/27.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[28]]</span></span>
+<span> <span class="co">#&gt; [1] "output/28.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[29]]</span></span>
+<span> <span class="co">#&gt; [1] "output/29.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[30]]</span></span>
+<span> <span class="co">#&gt; [1] "output/30.html"</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[31]]</span></span>
+<span> <span class="co">#&gt; [1] "output/31.html"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Nenhum “ERRO NA REQUISIÇÃO”, yes!</p>
+<p>Ah, na <a href="#fig-5">Figura&nbsp;4</a> é possível ter uma ideia de como é uma barra de progresso.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/fig5.png" class="img-fluid figure-img" width="586"></p>
+<figcaption class="figure-caption">Figura&nbsp;4: Barra de progresso na prática.</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="parsing" class="level2"><h2 class="anchored" data-anchor-id="parsing"><em>Parsing</em></h2>
+<p>Ao realizar raspagem de dados, a etapa de <em>parsing</em> nada mais é do que processar os dados brutos, que geralmente estão nos formatos <code>.html</code> ou <code>.json</code>, e posteriormente organizá-los de modo que consigamos realizar análises. Em nosso caso, coletamos dados <code>.html</code> tanto no cenário em que queríamos as informações expostas na tabelona da página do Studio Ghibli quanto no cenário em que buscamos as informações dos filmes em cada um dos links direcionáveis dispostos nessa mesma tabela. Em ambas as situações, transformamos os dados para um <em>data frame</em> (ou um <em>tibble</em>) ao fazer uma aplicação simples com a função <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code>.</p>
+<p>Notem que, no segundo cenário, optamos pelo arquivo <code>5.html</code>. Ele se refere ao filme “O Túmulo de Vagalumes”, o filme do Studio Ghibli preferido desta que vos escreve - mas o processo de <em>parsing</em> para qualquer um dos 31 arquivos gerados é o mesmo, caso seu filme favorito seja outro. Nesse caso, quando aplicamos a função mágica <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code>, o R retorna uma lista com 8 elementos, pois lembre-se que foram coletados todos os nós das <em>tags</em> <code>&lt;a&gt;</code> e todos os atributos da forma <code>href</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/fig4.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption class="figure-caption">Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elemento [[1]].</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Para esse post, vamos nos limitar ao primeiro elemento (<code>[[1]]</code>), que corresponde ao box à direita na página <a href="https://pt.wikipedia.org/wiki/Hotaru_no_Haka" class="uri">https://pt.wikipedia.org/wiki/Hotaru_no_Haka</a> (<a href="#fig-4">Figura&nbsp;5</a>), o qual contém informações bastante interessantes para uma análise sucinta do filme.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># primeiro cenario</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span> <span class="op">&lt;-</span> <span class="va">tabela_ghibli</span> <span class="op">|&gt;</span>   </span>
+<span>  <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="https://rvest.tidyverse.org/reference/html_table.html">html_table</a></span><span class="op">(</span>header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># transformar dados HTML em tibble</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span></span>
+<span> <span class="co">#&gt; # A tibble: 23 × 6</span></span>
+<span> <span class="co">#&gt;    Ano   Título                    Diretor `Roteirista(s)` `Produtor(es)` Música</span></span>
+<span> <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;                     &lt;chr&gt;   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt; </span></span>
+<span> <span class="co">#&gt;  1 1986  Tenkū no Shiro Rapyuta    Hayao … Hayao Miyazaki  Isao Takahata  Joe H…</span></span>
+<span> <span class="co">#&gt;  2 1988  Hotaru no Haka            Isao T… Isao Takahata   Toru Hara      Michi…</span></span>
+<span> <span class="co">#&gt;  3 1988  Tonari no Totoro          Hayao … Hayao Miyazaki  Toru Hara      Joe H…</span></span>
+<span> <span class="co">#&gt;  4 1989  Majo no Takkyūbin         Hayao … Hayao Miyazaki  Hayao Miyazaki Joe H…</span></span>
+<span> <span class="co">#&gt;  5 1991  Omoide Poro Poro          Isao T… Isao Takahata   Toshio Suzuki  Katsu…</span></span>
+<span> <span class="co">#&gt;  6 1992  Kurenai no Buta           Hayao … Hayao Miyazaki  Toshio Suzuki  Joe H…</span></span>
+<span> <span class="co">#&gt;  7 1993  Umi ga Kikoeru            Tomomi… Keiko Niwa      Toshio Suzuki  Shige…</span></span>
+<span> <span class="co">#&gt;  8 1994  Heisei Tanuki Gassen Pon… Isao T… Isao Takahata   Toshio Suzuki  Shang…</span></span>
+<span> <span class="co">#&gt;  9 1995  Mimi wo Sumaseba          Yoshif… Hayao Miyazaki  Toshio Suzuki  Yuji …</span></span>
+<span> <span class="co">#&gt; 10 1997  Mononoke Hime             Hayao … Hayao Miyazaki  Toshio Suzuki  Joe H…</span></span>
+<span> <span class="co">#&gt; # ℹ 13 more rows</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># segundo cenario</span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span> <span class="op">&lt;-</span> <span class="fu">xml2</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="st">"output/5.html"</span><span class="op">)</span> <span class="op">|&gt;</span>  </span>
+<span>  <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="https://rvest.tidyverse.org/reference/html_table.html">html_table</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># transformar dados HTML em tibble</span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span></span>
+<span> <span class="co">#&gt; [[1]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 19 × 2</span></span>
+<span> <span class="co">#&gt;    `Hotaru no Haka`                                         `Hotaru no Haka`    </span></span>
+<span> <span class="co">#&gt;    &lt;chr&gt;                                                    &lt;chr&gt;               </span></span>
+<span> <span class="co">#&gt;  1 .mw-parser-output .noitalic{font-style:normal}火垂るの墓 ".mw-parser-output …</span></span>
+<span> <span class="co">#&gt;  2 Hotaru no Haka                                           "Hotaru no Haka"    </span></span>
+<span> <span class="co">#&gt;  3 No Brasil                                                "O Túmulo dos Vagal…</span></span>
+<span> <span class="co">#&gt;  4 Em Portugal                                              "O Túmulo dos Piril…</span></span>
+<span> <span class="co">#&gt;  5 Japão1988 • &nbsp;cor • &nbsp;89 min                               "Japão1988 • &nbsp;cor •…</span></span>
+<span> <span class="co">#&gt;  6 Gênero                                                   "drama[4]guerra[5]" </span></span>
+<span> <span class="co">#&gt;  7 Direção                                                  "Isao Takahata"     </span></span>
+<span> <span class="co">#&gt;  8 Produção                                                 "Toru Hara"         </span></span>
+<span> <span class="co">#&gt;  9 Roteiro                                                  "Isao Takahata"     </span></span>
+<span> <span class="co">#&gt; 10 Baseado em                                               "\"Hotaru no Haka\"…</span></span>
+<span> <span class="co">#&gt; 11 Elenco                                                   "Tsutomu TatsumiAya…</span></span>
+<span> <span class="co">#&gt; 12 Música                                                   "Michio Mamiya"     </span></span>
+<span> <span class="co">#&gt; 13 Cinematografia                                           "Nobuo Koyama"      </span></span>
+<span> <span class="co">#&gt; 14 Edição                                                   "Takeshi Seyama"    </span></span>
+<span> <span class="co">#&gt; 15 Companhia(s) produtora(s)                                "Studio Ghibli"     </span></span>
+<span> <span class="co">#&gt; 16 Distribuição                                             "Toho"              </span></span>
+<span> <span class="co">#&gt; 17 Lançamento                                               "16 de abril de 198…</span></span>
+<span> <span class="co">#&gt; 18 Idioma                                                   "japonês"           </span></span>
+<span> <span class="co">#&gt; 19 Receita                                                  "¥ 590 milhões[6]"  </span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[2]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 20 × 4</span></span>
+<span> <span class="co">#&gt;    X1             X2                                                 X3    X4   </span></span>
+<span> <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;                                              &lt;chr&gt; &lt;lgl&gt;</span></span>
+<span> <span class="co">#&gt;  1 N.º            "Título"                                           Dura… NA   </span></span>
+<span> <span class="co">#&gt;  2 1.             "\"Setsuko to Seita ~ Main Title (節子と清太～メ…  2:57  NA   </span></span>
+<span> <span class="co">#&gt;  3 2.             "\"Yake Nohara (焼野原, Yake Nohara?)\""           6:51  NA   </span></span>
+<span> <span class="co">#&gt;  4 3.             "\"Haha no Shi (母の死, Haha no Shi?)\""           6:34  NA   </span></span>
+<span> <span class="co">#&gt;  5 4.             "\"Shoka (初夏, Shoka?)\""                         3:14  NA   </span></span>
+<span> <span class="co">#&gt;  6 5.             "\"Ike no Hotori (池のほとり, Ike no Hotori?)\""   2:21  NA   </span></span>
+<span> <span class="co">#&gt;  7 6.             "\"Umi he (海へ, Umi he?)\""                       1:37  NA   </span></span>
+<span> <span class="co">#&gt;  8 7.             "\"Namiuchigiwa (波打際, Namiuchigiwa?)\""         1:37  NA   </span></span>
+<span> <span class="co">#&gt;  9 8.             "\"Higasa (日傘, Higasa?)\""                       2:26  NA   </span></span>
+<span> <span class="co">#&gt; 10 9.             "\"Sakura no Shita (桜の下, Sakura no Shita?)\""   1:31  NA   </span></span>
+<span> <span class="co">#&gt; 11 10.            "\"Dorobbusu (ドロップス, Dorobbusu?)\""           2:13  NA   </span></span>
+<span> <span class="co">#&gt; 12 11.            "\"Hikkoshi (引越し, Hikkoshi?)\""                 2:17  NA   </span></span>
+<span> <span class="co">#&gt; 13 12.            "\"Keimai (兄弟, Keimai?)\""                       2:15  NA   </span></span>
+<span> <span class="co">#&gt; 14 13.            "\"Hotaru (ほたる, Hotaru?)\""                     4:12  NA   </span></span>
+<span> <span class="co">#&gt; 15 14.            "\"Hotaru no Haka (ほたるの墓, Hotaru no Haka?)\"" 1:46  NA   </span></span>
+<span> <span class="co">#&gt; 16 15.            "\"Yuuyake (夕焼け, Yuuyake?)\""                   0:53  NA   </span></span>
+<span> <span class="co">#&gt; 17 16.            "\"Shura (修羅, Shura?)\""                         3:08  NA   </span></span>
+<span> <span class="co">#&gt; 18 17.            "\"Hika (悲劇, Hika?)\""                           3:12  NA   </span></span>
+<span> <span class="co">#&gt; 19 18.            "\"Futari ~ End Title (ふたり～エンドタイトル, Fu… 8:52  NA   </span></span>
+<span> <span class="co">#&gt; 20 Duração total: "Duração total:"                                   58:13 NA   </span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[3]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 3 × 2</span></span>
+<span> <span class="co">#&gt;   Classificação Classificação   </span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;         &lt;chr&gt;           </span></span>
+<span> <span class="co">#&gt; 1 Brasil:       L[40]/12[34][35]</span></span>
+<span> <span class="co">#&gt; 2 Japão:        G[41]           </span></span>
+<span> <span class="co">#&gt; 3 Portugal:     M/12[37]        </span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[4]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 3 × 6</span></span>
+<span> <span class="co">#&gt;     Ano Premiação                    Categoria `Destinatário(s)` Resultado Ref. </span></span>
+<span> <span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;                        &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;     &lt;chr&gt;</span></span>
+<span> <span class="co">#&gt; 1  1988 Blue Ribbon Awards           Prêmio E… Isao Takahata     Venceu    [30] </span></span>
+<span> <span class="co">#&gt; 2  1994 Chicago International Child… Prêmio d… Isao Takahata     Venceu    [30] </span></span>
+<span> <span class="co">#&gt; 3  1994 Chicago International Child… Prêmio d… Isao Takahata     Venceu    [30] </span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[5]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 4 × 2</span></span>
+<span> <span class="co">#&gt;   X1                                                                       X2   </span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;                                                                    &lt;chr&gt;</span></span>
+<span> <span class="co">#&gt; 1 "Outros projetos Wikimedia também contêm material sobre Hotaru no Haka:" Outr…</span></span>
+<span> <span class="co">#&gt; 2 ""                                                                       Cita…</span></span>
+<span> <span class="co">#&gt; 3 ""                                                                       Cate…</span></span>
+<span> <span class="co">#&gt; 4 ""                                                                       Base…</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[6]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 8 × 9</span></span>
+<span> <span class="co">#&gt;   `vdeStudio Ghibli`     `vdeStudio Ghibli` `vdeStudio Ghibli` ``    ``    ``   </span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;                  &lt;chr&gt;              &lt;chr&gt;              &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;</span></span>
+<span> <span class="co">#&gt; 1 "Hayao Miyazaki\nIsao… "Hayao Miyazaki\n… "Hayao Miyazaki\n…  &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 2 "Filmografia"          "Longas-metragens… "Longas-metragens" "Ten… Curt… "On …</span></span>
+<span> <span class="co">#&gt; 3 "Longas-metragens"     "Tenkū no Shiro R…  &lt;NA&gt;               &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 4 "Curtas-metragens"     "On Your Mark (19…  &lt;NA&gt;               &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 5 "Coproduções"          "Shiki-Jitsu (200…  &lt;NA&gt;               &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 6 "Jogos eletrônicos"    "Jade Cocoon 2 (2…  &lt;NA&gt;               &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 7 "Ver também"           "Ghibli Museum Li…  &lt;NA&gt;               &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; 8 ".mw-parser-output .s… ".mw-parser-outpu… ".mw-parser-outpu…  &lt;NA&gt; &lt;NA&gt;   &lt;NA&gt;</span></span>
+<span> <span class="co">#&gt; # ℹ 3 more variables: `` &lt;chr&gt;, `` &lt;chr&gt;, `` &lt;chr&gt;</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[7]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 3 × 2</span></span>
+<span> <span class="co">#&gt;   X1               X2                                                           </span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;            &lt;chr&gt;                                                        </span></span>
+<span> <span class="co">#&gt; 1 Longas-metragens "Tenkū no Shiro Rapyuta (1986)\nHotaru no Haka (1988)\nTonar…</span></span>
+<span> <span class="co">#&gt; 2 Curtas-metragens "On Your Mark (1995)\nGiburīzu (2000)\nFirumu Guru Guru (200…</span></span>
+<span> <span class="co">#&gt; 3 Coproduções      "Shiki-Jitsu (2000)\nInosensu: Kôkaku kidôtai (2004)\nLa Tor…</span></span>
+<span> <span class="co">#&gt; </span></span>
+<span> <span class="co">#&gt; [[8]]</span></span>
+<span> <span class="co">#&gt; # A tibble: 1 × 2</span></span>
+<span> <span class="co">#&gt;   X1                     X2                                                     </span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;                  &lt;chr&gt;                                                  </span></span>
+<span> <span class="co">#&gt; 1 Controle de autoridade ": Q274520\n WorldCat\nVIAF: 316752206\nANN (animé): 1…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="manipulação-e-visualização-dos-dados" class="level1"><h1>Manipulação e visualização dos dados</h1>
+<p>É verdade que a função <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code> nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Mas esses “ajustes” são facilmente manipuláveis com as ferramentas da poderosa família <a href="https://tidyverse.tidyverse.org">tidyverse</a>, como a <code>{dply}</code>, <a href="https://github.com/sfirke/janitor">janitor</a>, <a href="https://ggplot2.tidyverse.org">ggplot2</a>… Porém, como o foco deste post é o <em>web scraping</em> e muito provavelmente você já é um <em>expert</em> em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># manipulacao dos dados</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span> <span class="op">&lt;-</span> <span class="va">tabela_ghibli</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># limpa os nomes das variaveis</span></span>
+<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># renomeia variaveis</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>roteirista <span class="op">=</span> <span class="va">roteirista_s</span>, produtor <span class="op">=</span> <span class="va">produtor_es</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># recodificando variaveis</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    roteirista <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span></span>
+<span>      <span class="va">roteirista</span>, </span>
+<span>      `Goro MiyazakiKeiko Niwa` <span class="op">=</span> <span class="st">"Goro Miyazaki, Keiko Niwa"</span>,</span>
+<span>      `Hayao MiyazakiKeiko Niwa` <span class="op">=</span> <span class="st">"Hayao Miyazaki, Keiko Niwa"</span>,</span>
+<span>      `Masashi AndoKeiko NiwaHiromasa Yonebayashi` <span class="op">=</span> <span class="st">"Masashi Ando, Keiko Niwa, Hiromasa Yonebayashi"</span>,</span>
+<span>      `Keiko NiwaEmi Gunji` <span class="op">=</span> <span class="st">"Keiko Niwa, Emi Gunji"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    produtor <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span></span>
+<span>      <span class="va">produtor</span>, </span>
+<span>      `Takashi ShojiSeiichiro Ujiie` <span class="op">=</span> <span class="st">"Takashi Shoji, Seiichiro Ujiie"</span>,</span>
+<span>      `Toshio SuzukiNozomu Takahashi` <span class="op">=</span> <span class="st">"Toshio Suzuki, Nozomu Takahashi"</span>,</span>
+<span>      `Toshio SuzukiTomohiko Ishii` <span class="op">=</span> <span class="st">"Toshio Suzuki, Tomohiko Ishii"</span>,</span>
+<span>      `Yoshiaki NishimuraSeiichiro Ujiie` <span class="op">=</span> <span class="st">"Yoshiaki Nishimura, Seiichiro Ujiie"</span>,</span>
+<span>      `Hayao MiyazakiToshio Suzuki` <span class="op">=</span> <span class="st">"Hayao Miyazaki, Toshio Suzuki"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span></span>
+<span> <span class="co">#&gt; # A tibble: 23 × 6</span></span>
+<span> <span class="co">#&gt;    ano   titulo                       diretor         roteirista produtor musica</span></span>
+<span> <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;                        &lt;chr&gt;           &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; </span></span>
+<span> <span class="co">#&gt;  1 1986  Tenkū no Shiro Rapyuta       Hayao Miyazaki  Hayao Miy… Isao Ta… Joe H…</span></span>
+<span> <span class="co">#&gt;  2 1988  Hotaru no Haka               Isao Takahata   Isao Taka… Toru Ha… Michi…</span></span>
+<span> <span class="co">#&gt;  3 1988  Tonari no Totoro             Hayao Miyazaki  Hayao Miy… Toru Ha… Joe H…</span></span>
+<span> <span class="co">#&gt;  4 1989  Majo no Takkyūbin            Hayao Miyazaki  Hayao Miy… Hayao M… Joe H…</span></span>
+<span> <span class="co">#&gt;  5 1991  Omoide Poro Poro             Isao Takahata   Isao Taka… Toshio … Katsu…</span></span>
+<span> <span class="co">#&gt;  6 1992  Kurenai no Buta              Hayao Miyazaki  Hayao Miy… Toshio … Joe H…</span></span>
+<span> <span class="co">#&gt;  7 1993  Umi ga Kikoeru               Tomomi Mochizu… Keiko Niwa Toshio … Shige…</span></span>
+<span> <span class="co">#&gt;  8 1994  Heisei Tanuki Gassen Ponpoko Isao Takahata   Isao Taka… Toshio … Shang…</span></span>
+<span> <span class="co">#&gt;  9 1995  Mimi wo Sumaseba             Yoshifumi Kondo Hayao Miy… Toshio … Yuji …</span></span>
+<span> <span class="co">#&gt; 10 1997  Mononoke Hime                Hayao Miyazaki  Hayao Miy… Toshio … Joe H…</span></span>
+<span> <span class="co">#&gt; # ℹ 13 more rows</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Na primeira aplicação, construímos um gráfico para visualizar de forma mais “fofinha” o ano de lançamento dos filmes do estúdio. E nada mais fofinho do que um gráfico cheio de Totorinhos, não é mesmo?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># grafico animado</span></span>
+<span>  </span>
+<span><span class="va">ghibli</span> <span class="op">&lt;-</span> <span class="st">"ghibli.png"</span> <span class="co"># carrega imagem</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ano</span> <span class="op">!=</span> <span class="st">"ASA"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># reordena os filmes por ano de lancamento</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    ano <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">ano</span><span class="op">)</span>,</span>
+<span>    titulo <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">titulo</span>, <span class="va">ano</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ano</span>, y <span class="op">=</span> <span class="va">titulo</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adiciona imagem do totoro</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_image.html">geom_image</a></span><span class="op">(</span>image <span class="op">=</span> <span class="va">ghibli</span>, size <span class="op">=</span> <span class="fl">.04</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adiciona temas ao grafico</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adicona rotulos ao grafico</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Ano de lançamento dos filmes do Studio Ghibli"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">"Filme"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/graf1-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Além de mostrarmos de maneira mais elegante o número de filmes dirigidos pelos seus cineastas. A propósito, oportunidade única para utilizar o pacote <a href="https://ewenme.github.io/ghibli/">ghibli</a>, que contém paletas de cores de vários filmes do Studio Ghibli, como “<a href="https://www.netflix.com/br/title/28630857">A Princesa Mononoke</a>” (a escolhida), “<a href="https://www.netflix.com/br/title/70106454">Ponyo - Uma Amizade que Veio do Mar</a>” e “<a href="https://www.netflix.com/br/title/60023642">A Viagem de Chihiro</a>”.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># grafico de barras</span></span>
+<span></span>
+<span><span class="va">tabela_ghibli</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># agrupa filmes por diretor</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">diretor</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># conta a quantidade de filmes que cada diretor lancou</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># reordena em ordem decrescente os diretores por quantidade de filme</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>diretor <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">diretor</span>, <span class="op">-</span><span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">diretor</span>, y <span class="op">=</span> <span class="va">n</span>, fill <span class="op">=</span> <span class="va">diretor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, by <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adiciona temas ao grafico</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># paleta de cores do filme 'princesa mononoke'</span></span>
+<span>  <span class="fu">ghibli</span><span class="fu">::</span><span class="fu"><a href="https://ewenme.github.io/ghibli/reference/ggplot2-scales-discrete.html">scale_fill_ghibli_d</a></span><span class="op">(</span><span class="st">"MononokeMedium"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adiciona rotulos nas barras do grafico</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">n</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, </span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span>, color <span class="op">=</span> <span class="st">"white"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># adiciona rotulo aos graficos</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Número de filmes do Studio Ghibli, por diretor"</span>, </span>
+<span>    x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>, color <span class="op">=</span> <span class="st">"diretor"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, <span class="co"># remove titulo da legenda</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span>,     <span class="co"># posiciona legenda embaixo do grafico</span></span>
+<span>    axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,  <span class="co"># remove valores do eixo x</span></span>
+<span>    axis.ticks.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>  <span class="co"># remove ticks do eixo x</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="index_files/figure-html/graf2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Por último, como resultado da segunda aplicação, vamos construir uma tabela, uma espécia de ficha técnica, com as informações que foram coletadas do filme “O Túmulo de Vagalumes”. <em>Obs.: optamos por uma análise simples nesse caso. Uma sugestão seria concatenar os dados dos boxs de todos os filmes em uma única base e calcular a média de duração dos filmes ou verificar qual o gênero mais comum entre eles, por exemplo</em>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># manipulando os dados</span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span> <span class="op">&lt;-</span> <span class="va">tumulo_vagalumes</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># seleciona o primeiro elemento da lista</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/pluck.html">pluck</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co"># remove linhas 1 e 2</span></span>
+<span>  <span class="va">.</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="op">-</span><span class="fl">2</span><span class="op">)</span>, <span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">tumulo_vagalumes</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"categoria"</span>, <span class="st">"descricao"</span><span class="op">)</span> <span class="co"># renomeia os nomes das variaveis</span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span> <span class="op">&lt;-</span> <span class="va">tumulo_vagalumes</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># transforma base em formato wide (o que e linha vira coluna)</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="st">"categoria"</span>, values_from <span class="op">=</span> <span class="st">"descricao"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># organiza os nomes das variaveis</span></span>
+<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># renomeia variaveis</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span></span>
+<span>    titulo_br <span class="op">=</span> <span class="va">no_brasil</span>,</span>
+<span>    titulo_pt <span class="op">=</span> <span class="va">em_portugal</span>,</span>
+<span>    duracao_min <span class="op">=</span> <span class="va">japao1988_cor_89_min</span>,</span>
+<span>    produtora <span class="op">=</span> <span class="va">companhia_s_produtora_s</span>,</span>
+<span>    receita_milhoes <span class="op">=</span> <span class="va">receita</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># organiza variaveis</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    titulo_br <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="va">titulo_br</span>, end <span class="op">=</span> <span class="fl">22</span><span class="op">)</span>,</span>
+<span>    titulo_pt <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="va">titulo_pt</span>, end <span class="op">=</span> <span class="fl">23</span><span class="op">)</span>,</span>
+<span>    duracao_min <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="va">duracao_min</span>, start <span class="op">=</span> <span class="fl">21</span>, end <span class="op">=</span> <span class="fl">22</span><span class="op">)</span>,</span>
+<span>    elenco <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">elenco</span>, `Tsutomu TatsumiAyano ShiraishiYoshiko ShinoharaAkemi Yamaguchi` <span class="op">=</span> <span class="st">"Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, Akemi Yamaguchi"</span><span class="op">)</span>,</span>
+<span>    genero <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">genero</span>, `drama[4]guerra[5]` <span class="op">=</span> <span class="st">"drama, guerra"</span><span class="op">)</span>,</span>
+<span>    lancamento <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="va">lancamento</span>, start <span class="op">=</span> <span class="fl">22</span>, end <span class="op">=</span> <span class="fl">31</span><span class="op">)</span>,</span>
+<span>    receita_milhoes <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="va">receita_milhoes</span>, start <span class="op">=</span> <span class="fl">2</span>, end <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span></span>
+<span> <span class="co">#&gt; # A tibble: 1 × 17</span></span>
+<span> <span class="co">#&gt;   titulo_br     titulo_pt duracao_min genero direcao producao roteiro baseado_em</span></span>
+<span> <span class="co">#&gt;   &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;     </span></span>
+<span> <span class="co">#&gt; 1 O Túmulo dos… O Túmulo… 89          drama… Isao T… Toru Ha… Isao T… "\"Hotaru…</span></span>
+<span> <span class="co">#&gt; # ℹ 9 more variables: elenco &lt;chr&gt;, musica &lt;chr&gt;, cinematografia &lt;chr&gt;,</span></span>
+<span> <span class="co">#&gt; #   edicao &lt;chr&gt;, produtora &lt;chr&gt;, distribuicao &lt;chr&gt;, lancamento &lt;chr&gt;,</span></span>
+<span> <span class="co">#&gt; #   idioma &lt;chr&gt;, receita_milhoes &lt;chr&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A tabela:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabela </span></span>
+<span></span>
+<span><span class="va">tumulo_vagalumes</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># retorna base em formato longo (o que e coluna vira linha)</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span></span>
+<span>    cols <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">17</span>, </span>
+<span>    names_to <span class="op">=</span> <span class="st">"categoria"</span>, values_to <span class="op">=</span> <span class="st">"descricao"</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># cria tabela</span></span>
+<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/tab_header.html">tab_header</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Túmulo de Vagalumes"</span>, </span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Ficha do filme"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="mchkvhitsb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mchkvhitsb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mchkvhitsb thead, #mchkvhitsb tbody, #mchkvhitsb tfoot, #mchkvhitsb tr, #mchkvhitsb td, #mchkvhitsb th {
+  border-style: none;
+}
+
+#mchkvhitsb p {
+  margin: 0;
+  padding: 0;
+}
+
+#mchkvhitsb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mchkvhitsb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mchkvhitsb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mchkvhitsb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mchkvhitsb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mchkvhitsb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mchkvhitsb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mchkvhitsb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mchkvhitsb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mchkvhitsb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mchkvhitsb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mchkvhitsb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mchkvhitsb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mchkvhitsb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mchkvhitsb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mchkvhitsb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mchkvhitsb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mchkvhitsb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mchkvhitsb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mchkvhitsb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mchkvhitsb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mchkvhitsb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mchkvhitsb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mchkvhitsb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mchkvhitsb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mchkvhitsb .gt_left {
+  text-align: left;
+}
+
+#mchkvhitsb .gt_center {
+  text-align: center;
+}
+
+#mchkvhitsb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mchkvhitsb .gt_font_normal {
+  font-weight: normal;
+}
+
+#mchkvhitsb .gt_font_bold {
+  font-weight: bold;
+}
+
+#mchkvhitsb .gt_font_italic {
+  font-style: italic;
+}
+
+#mchkvhitsb .gt_super {
+  font-size: 65%;
+}
+
+#mchkvhitsb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mchkvhitsb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mchkvhitsb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mchkvhitsb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mchkvhitsb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mchkvhitsb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mchkvhitsb .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
+<td colspan="2" class="gt_heading gt_title gt_font_normal" style="">Túmulo de Vagalumes</td>
+    </tr>
+<tr class="gt_heading">
+<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Ficha do filme</td>
+    </tr>
+<tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="categoria">categoria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="descricao">descricao</th>
+    </tr>
+</thead>
+<tbody class="gt_table_body">
+<tr>
+<td headers="categoria" class="gt_row gt_left">titulo_br</td>
+<td headers="descricao" class="gt_row gt_left">O Túmulo dos Vagalumes</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">titulo_pt</td>
+<td headers="descricao" class="gt_row gt_left">O Túmulo dos Pirilampos</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">duracao_min</td>
+<td headers="descricao" class="gt_row gt_left">89</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">genero</td>
+<td headers="descricao" class="gt_row gt_left">drama, guerra</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">direcao</td>
+<td headers="descricao" class="gt_row gt_left">Isao Takahata</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">producao</td>
+<td headers="descricao" class="gt_row gt_left">Toru Hara</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">roteiro</td>
+<td headers="descricao" class="gt_row gt_left">Isao Takahata</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">baseado_em</td>
+<td headers="descricao" class="gt_row gt_left">"Hotaru no Haka", de Akiyuki Nosaka</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">elenco</td>
+<td headers="descricao" class="gt_row gt_left">Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, Akemi Yamaguchi</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">musica</td>
+<td headers="descricao" class="gt_row gt_left">Michio Mamiya</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">cinematografia</td>
+<td headers="descricao" class="gt_row gt_left">Nobuo Koyama</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">edicao</td>
+<td headers="descricao" class="gt_row gt_left">Takeshi Seyama</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">produtora</td>
+<td headers="descricao" class="gt_row gt_left">Studio Ghibli</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">distribuicao</td>
+<td headers="descricao" class="gt_row gt_left">Toho</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">lancamento</td>
+<td headers="descricao" class="gt_row gt_left">1988-04-16</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">idioma</td>
+<td headers="descricao" class="gt_row gt_left">japonês</td>
+</tr>
+<tr>
+<td headers="categoria" class="gt_row gt_left">receita_milhoes</td>
+<td headers="descricao" class="gt_row gt_left"> 590</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Legal, né?</p>
+<p>Para finalizar, deixo uma das definições de amor mais legais que já ouvi, que não poderia ter vindo se não pela mente brilhante de Hayao Miyazaki:</p>
+<blockquote class="blockquote">
+<p><em>“Tornei-me cético em relação à regra não escrita de que só porque um menino e uma menina aparecem no mesmo filme, um romance deve acontecer. Em vez disso, quero retratar um relacionamento um pouco diferente, onde os dois se inspiram mutuamente para viver – se eu puder, então talvez eu esteja mais perto de retratar uma verdadeira expressão de amor.”</em></p>
+</blockquote>
+<p>Hasta!</p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+</body></html>

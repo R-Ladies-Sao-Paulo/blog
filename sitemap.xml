@@ -2,86 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rladies-sp.org/contribuir-com-o-blog.html</loc>
-    <lastmod>2023-10-30T21:55:42.055Z</lastmod>
+    <lastmod>2023-10-30T23:25:00.435Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-06-rita-com-r/index.html</loc>
-    <lastmod>2023-10-30T21:55:41.311Z</lastmod>
+    <lastmod>2023-10-30T23:24:59.535Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</loc>
-    <lastmod>2023-10-30T21:55:16.492Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/english.html</loc>
-    <lastmod>2023-10-30T21:55:10.020Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</loc>
-    <lastmod>2023-10-30T21:55:06.756Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</loc>
-    <lastmod>2023-10-30T21:55:00.020Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</loc>
-    <lastmod>2023-10-30T21:54:54.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/sugestoes.html</loc>
-    <lastmod>2023-10-30T21:54:50.960Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/sobre.html</loc>
-    <lastmod>2023-10-30T21:54:49.276Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/eventos/2023-05-20/index.html</loc>
-    <lastmod>2023-10-30T21:54:41.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/videos.html</loc>
-    <lastmod>2023-10-30T21:54:40.700Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/index.html</loc>
-    <lastmod>2023-10-30T21:54:46.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/eventos.html</loc>
-    <lastmod>2023-10-30T21:54:50.056Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</loc>
-    <lastmod>2023-10-30T21:54:53.832Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</loc>
-    <lastmod>2023-10-30T21:54:56.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</loc>
-    <lastmod>2023-10-30T21:55:03.416Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</loc>
-    <lastmod>2023-10-30T21:55:08.804Z</lastmod>
+    <lastmod>2023-10-30T23:24:47.878Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/index.html</loc>
-    <lastmod>2023-10-30T21:55:11.588Z</lastmod>
+    <lastmod>2023-10-30T23:24:34.229Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</loc>
+    <lastmod>2023-10-30T23:24:31.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</loc>
+    <lastmod>2023-10-30T23:24:25.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</loc>
+    <lastmod>2023-10-30T23:24:17.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</loc>
+    <lastmod>2023-10-30T23:24:14.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/eventos.html</loc>
+    <lastmod>2023-10-30T23:24:09.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/index.html</loc>
+    <lastmod>2023-10-30T23:24:05.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/videos.html</loc>
+    <lastmod>2023-10-30T23:24:02.211Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/eventos/2023-05-20/index.html</loc>
+    <lastmod>2023-10-30T23:24:03.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/sobre.html</loc>
+    <lastmod>2023-10-30T23:24:09.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/sugestoes.html</loc>
+    <lastmod>2023-10-30T23:24:10.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</loc>
+    <lastmod>2023-10-30T23:24:15.172Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html</loc>
+    <lastmod>2023-10-30T23:24:21.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</loc>
+    <lastmod>2023-10-30T23:24:29.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/english.html</loc>
+    <lastmod>2023-10-30T23:24:32.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rladies-sp.org/posts/2023-10-ws-ghibli/index.html</loc>
+    <lastmod>2023-10-30T23:24:42.822Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2020-06-rladies-global-blm/index.html</loc>
-    <lastmod>2023-10-30T21:55:17.396Z</lastmod>
+    <lastmod>2023-10-30T23:24:48.918Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/index.html</loc>
-    <lastmod>2023-10-30T21:55:24.216Z</lastmod>
+    <lastmod>2023-10-30T23:24:55.171Z</lastmod>
   </url>
   <url>
     <loc>https://rladies-sp.org/como-participar.html</loc>
-    <lastmod>2023-10-30T21:55:41.643Z</lastmod>
+    <lastmod>2023-10-30T23:24:59.951Z</lastmod>
   </url>
 </urlset>

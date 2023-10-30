@@ -19,11 +19,13 @@ draft: false # enquanto estiver draft: true, o post é um rascunho
 
 ![Foto](https://avatars.githubusercontent.com/u/62913147?v=4){style="width: 30%; border-radius: 50%;"}
 
-[<i class="fab fa-github"></i>](https://github.com/ornscar)
+[<i class="fab fa-github"></i>](https://github.com/ornscar) [<i class="fa fa-envelope"></i>](mailto:ornscar@gmail.com) [<i class="fab fa-twitter"></i>](https://twitter.com/ornscar)
 
 </center>
 
-Este post foi escrito por **Ornella Scardua Ferreira**. ADICIONAR MINI BIO :)
+Este post foi escrito por **Ornella Scardua Ferreira: **.
+
+*"Amo gráficos como amo cavalos. Gosto de música ruim e de cinema (bom). Sou apaixonada pelo Botafogo e pelo Bayern de Munique. Prefiro Vila Velha a qualquer lugar no mundo. Não tenho sonhos, mas um dia espero ver a Palestina livre."* 
 :::
 
 ```{r setup, include=FALSE}
@@ -86,7 +88,7 @@ knitr::include_graphics("img/fig2.png")
 
 Em primeiro lugar, vamos coletar somente os dados apresentados nessa tabela. Assim, simulamos a requisição apenas com a URL do site, sem deixar de salvar (com o nome `filmes_ghibli.html`) a página requerida no diretório `output/`. Como coletar essa tabela se trata de um *scraping* muito simples, já no próximo passo é possível ler o elemento HTML cujo parâmetro XPath é igual a `//*[@id='mw-content-text']/div[1]/table[3]`, obtido conforme mostra a @fig-2.
 
-O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. *Obs.: usamos a função `xml_find_first()` pois, neste caso, existia uma única tabela.*
+O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. *Obs.: usamos a função `xml_find_first()` pois, nesse caso, existia uma única tabela.*
 
 ```{r}
 # URL da página do Wikipédia
@@ -222,7 +224,7 @@ tumulo_vagalumes
 
 # Manipulação e visualização dos dados
 
-É verdade que a função `rvest::html_table()` nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Mas esses "ajustes" são facilmente manipuláveis com as ferramentas da poderosa família `{tidyverse}`, como a `{dply}`, `{janitor}`, `{ggplot2}`... Porém, como o foco deste post é o *web scraping* e muito provavelmente você já é um *expert* em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.
+É verdade que a função `rvest::html_table()` nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá.  Esses "ajustes" são facilmente manipuláveis com as ferramentas da poderosa família `{tidyverse}`, como a `{dplyr}`, `{janitor}`, `{ggplot2}`... Porém, como o foco deste post é o *web scraping* e muito provavelmente você já é um *expert* em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.
 
 ```{r}
 # manipulacao dos dados
@@ -254,7 +256,7 @@ tabela_ghibli <- tabela_ghibli |>
 tabela_ghibli
 ```
 
-Na primeira aplicação, construímos um gráfico para visualizar de forma mais "fofinha" o ano de lançamento dos filmes do estúdio. E nada mais fofinho do que um gráfico cheio de Totorinhos, não é mesmo?
+Na primeira aplicação, construímos um gráfico para visualizar de forma mais "fofinha" o ano de lançamento dos filmes do estúdio - e nada mais fofinho do que um gráfico cheio de Totorinhos, não é mesmo?
 
 ```{r graf1, fig.cap = 'Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.'}
 # grafico animado

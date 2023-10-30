@@ -292,9 +292,10 @@ Autoria
 <figure class="figure"><p><img src="https://avatars.githubusercontent.com/u/62913147?v=4.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Foto</figcaption></figure>
 </div>
-<p><a href="https://github.com/ornscar"><i class="fab fa-github"></i></a></p>
+<p><a href="https://github.com/ornscar"><i class="fab fa-github"></i></a> <a href="mailto:ornscar@gmail.com"><i class="fa fa-envelope"></i></a> <a href="https://twitter.com/ornscar"><i class="fab fa-twitter"></i></a></p>
 </center>
-<p>Este post foi escrito por <strong>Ornella Scardua Ferreira</strong>. ADICIONAR MINI BIO :)</p>
+<p>Este post foi escrito por <strong>Ornella Scardua Ferreira: </strong>.</p>
+<p><em>“Amo gráficos como amo cavalos. Gosto de música ruim e de cinema (bom). Sou apaixonada pelo Botafogo e pelo Bayern de Munique. Prefiro Vila Velha a qualquer lugar no mundo. Não tenho sonhos, mas um dia espero ver a Palestina livre.”</em></p>
 </div>
 </div>
 </div>
@@ -342,7 +343,7 @@ Autoria
 </div>
 </div>
 <p>Em primeiro lugar, vamos coletar somente os dados apresentados nessa tabela. Assim, simulamos a requisição apenas com a URL do site, sem deixar de salvar (com o nome <code>filmes_ghibli.html</code>) a página requerida no diretório <code>output/</code>. Como coletar essa tabela se trata de um <em>scraping</em> muito simples, já no próximo passo é possível ler o elemento HTML cujo parâmetro XPath é igual a <code>//*[@id='mw-content-text']/div[1]/table[3]</code>, obtido conforme mostra a <a href="#fig-2">Figura&nbsp;2</a>.</p>
-<p>O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. <em>Obs.: usamos a função <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml_find_first()</a></code> pois, neste caso, existia uma única tabela.</em></p>
+<p>O código para o processo da requisição e leitura da tabela em HTML pode ser visto a seguir. <em>Obs.: usamos a função <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml_find_first()</a></code> pois, nesse caso, existia uma única tabela.</em></p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># URL da página do Wikipédia</span></span>
 <span></span>
@@ -702,7 +703,7 @@ Autoria
 <span> <span class="co">#&gt; 1 Controle de autoridade ": Q274520\n WorldCat\nVIAF: 316752206\nANN (animé): 1…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="manipulação-e-visualização-dos-dados" class="level1"><h1>Manipulação e visualização dos dados</h1>
-<p>É verdade que a função <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code> nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Mas esses “ajustes” são facilmente manipuláveis com as ferramentas da poderosa família <a href="https://tidyverse.tidyverse.org">tidyverse</a>, como a <code>{dply}</code>, <a href="https://github.com/sfirke/janitor">janitor</a>, <a href="https://ggplot2.tidyverse.org">ggplot2</a>… Porém, como o foco deste post é o <em>web scraping</em> e muito provavelmente você já é um <em>expert</em> em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.</p>
+<p>É verdade que a função <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code> nos presenteia com dados muito próximos dos desejados, precisando apenas de um ajuste aqui e/ou acolá. Esses “ajustes” são facilmente manipuláveis com as ferramentas da poderosa família <a href="https://tidyverse.tidyverse.org">tidyverse</a>, como a <a href="https://dplyr.tidyverse.org">dplyr</a>, <a href="https://github.com/sfirke/janitor">janitor</a>, <a href="https://ggplot2.tidyverse.org">ggplot2</a>… Porém, como o foco deste post é o <em>web scraping</em> e muito provavelmente você já é um <em>expert</em> em organizar (e apresentar) dados, não entraremos em detalhes em como os códigos desta seção foram construídos. Mas segue a premissa de que primeiro manipulamos os dados, e depois apresentamos os dados.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># manipulacao dos dados</span></span>
 <span></span>
@@ -746,7 +747,7 @@ Autoria
 <span> <span class="co">#&gt; 10 1997  Mononoke Hime                Hayao Miyazaki  Hayao Miy… Toshio … Joe H…</span></span>
 <span> <span class="co">#&gt; # ℹ 13 more rows</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Na primeira aplicação, construímos um gráfico para visualizar de forma mais “fofinha” o ano de lançamento dos filmes do estúdio. E nada mais fofinho do que um gráfico cheio de Totorinhos, não é mesmo?</p>
+<p>Na primeira aplicação, construímos um gráfico para visualizar de forma mais “fofinha” o ano de lançamento dos filmes do estúdio - e nada mais fofinho do que um gráfico cheio de Totorinhos, não é mesmo?</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># grafico animado</span></span>
 <span>  </span>
@@ -882,23 +883,23 @@ Autoria
 <span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="ujoshpdhbw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ujoshpdhbw table {
+<div id="cxzfswgnyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cxzfswgnyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ujoshpdhbw thead, #ujoshpdhbw tbody, #ujoshpdhbw tfoot, #ujoshpdhbw tr, #ujoshpdhbw td, #ujoshpdhbw th {
+#cxzfswgnyo thead, #cxzfswgnyo tbody, #cxzfswgnyo tfoot, #cxzfswgnyo tr, #cxzfswgnyo td, #cxzfswgnyo th {
   border-style: none;
 }
 
-#ujoshpdhbw p {
+#cxzfswgnyo p {
   margin: 0;
   padding: 0;
 }
 
-#ujoshpdhbw .gt_table {
+#cxzfswgnyo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -924,12 +925,12 @@ Autoria
   border-left-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_caption {
+#cxzfswgnyo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ujoshpdhbw .gt_title {
+#cxzfswgnyo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -941,7 +942,7 @@ Autoria
   border-bottom-width: 0;
 }
 
-#ujoshpdhbw .gt_subtitle {
+#cxzfswgnyo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -953,7 +954,7 @@ Autoria
   border-top-width: 0;
 }
 
-#ujoshpdhbw .gt_heading {
+#cxzfswgnyo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -965,13 +966,13 @@ Autoria
   border-right-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_bottom_border {
+#cxzfswgnyo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_col_headings {
+#cxzfswgnyo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -986,7 +987,7 @@ Autoria
   border-right-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_col_heading {
+#cxzfswgnyo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1006,7 +1007,7 @@ Autoria
   overflow-x: hidden;
 }
 
-#ujoshpdhbw .gt_column_spanner_outer {
+#cxzfswgnyo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1018,15 +1019,15 @@ Autoria
   padding-right: 4px;
 }
 
-#ujoshpdhbw .gt_column_spanner_outer:first-child {
+#cxzfswgnyo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ujoshpdhbw .gt_column_spanner_outer:last-child {
+#cxzfswgnyo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ujoshpdhbw .gt_column_spanner {
+#cxzfswgnyo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1038,11 +1039,11 @@ Autoria
   width: 100%;
 }
 
-#ujoshpdhbw .gt_spanner_row {
+#cxzfswgnyo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ujoshpdhbw .gt_group_heading {
+#cxzfswgnyo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1068,7 +1069,7 @@ Autoria
   text-align: left;
 }
 
-#ujoshpdhbw .gt_empty_group_heading {
+#cxzfswgnyo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1083,15 +1084,15 @@ Autoria
   vertical-align: middle;
 }
 
-#ujoshpdhbw .gt_from_md > :first-child {
+#cxzfswgnyo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ujoshpdhbw .gt_from_md > :last-child {
+#cxzfswgnyo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ujoshpdhbw .gt_row {
+#cxzfswgnyo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1110,7 +1111,7 @@ Autoria
   overflow-x: hidden;
 }
 
-#ujoshpdhbw .gt_stub {
+#cxzfswgnyo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1123,7 +1124,7 @@ Autoria
   padding-right: 5px;
 }
 
-#ujoshpdhbw .gt_stub_row_group {
+#cxzfswgnyo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1137,15 +1138,15 @@ Autoria
   vertical-align: top;
 }
 
-#ujoshpdhbw .gt_row_group_first td {
+#cxzfswgnyo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ujoshpdhbw .gt_row_group_first th {
+#cxzfswgnyo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ujoshpdhbw .gt_summary_row {
+#cxzfswgnyo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1155,16 +1156,16 @@ Autoria
   padding-right: 5px;
 }
 
-#ujoshpdhbw .gt_first_summary_row {
+#cxzfswgnyo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_first_summary_row.thick {
+#cxzfswgnyo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ujoshpdhbw .gt_last_summary_row {
+#cxzfswgnyo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1174,7 +1175,7 @@ Autoria
   border-bottom-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_grand_summary_row {
+#cxzfswgnyo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1184,7 +1185,7 @@ Autoria
   padding-right: 5px;
 }
 
-#ujoshpdhbw .gt_first_grand_summary_row {
+#cxzfswgnyo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1194,7 +1195,7 @@ Autoria
   border-top-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_last_grand_summary_row_top {
+#cxzfswgnyo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1204,11 +1205,11 @@ Autoria
   border-bottom-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_striped {
+#cxzfswgnyo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ujoshpdhbw .gt_table_body {
+#cxzfswgnyo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1217,7 +1218,7 @@ Autoria
   border-bottom-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_footnotes {
+#cxzfswgnyo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1231,7 +1232,7 @@ Autoria
   border-right-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_footnote {
+#cxzfswgnyo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1240,7 +1241,7 @@ Autoria
   padding-right: 5px;
 }
 
-#ujoshpdhbw .gt_sourcenotes {
+#cxzfswgnyo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1254,7 +1255,7 @@ Autoria
   border-right-color: #D3D3D3;
 }
 
-#ujoshpdhbw .gt_sourcenote {
+#cxzfswgnyo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1262,63 +1263,63 @@ Autoria
   padding-right: 5px;
 }
 
-#ujoshpdhbw .gt_left {
+#cxzfswgnyo .gt_left {
   text-align: left;
 }
 
-#ujoshpdhbw .gt_center {
+#cxzfswgnyo .gt_center {
   text-align: center;
 }
 
-#ujoshpdhbw .gt_right {
+#cxzfswgnyo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ujoshpdhbw .gt_font_normal {
+#cxzfswgnyo .gt_font_normal {
   font-weight: normal;
 }
 
-#ujoshpdhbw .gt_font_bold {
+#cxzfswgnyo .gt_font_bold {
   font-weight: bold;
 }
 
-#ujoshpdhbw .gt_font_italic {
+#cxzfswgnyo .gt_font_italic {
   font-style: italic;
 }
 
-#ujoshpdhbw .gt_super {
+#cxzfswgnyo .gt_super {
   font-size: 65%;
 }
 
-#ujoshpdhbw .gt_footnote_marks {
+#cxzfswgnyo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ujoshpdhbw .gt_asterisk {
+#cxzfswgnyo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ujoshpdhbw .gt_indent_1 {
+#cxzfswgnyo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ujoshpdhbw .gt_indent_2 {
+#cxzfswgnyo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ujoshpdhbw .gt_indent_3 {
+#cxzfswgnyo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ujoshpdhbw .gt_indent_4 {
+#cxzfswgnyo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ujoshpdhbw .gt_indent_5 {
+#cxzfswgnyo .gt_indent_5 {
   text-indent: 25px;
 }
 </style>

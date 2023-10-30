@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-06-05-increasing-diversity-sao-paulo/index.html",
       "/posts/2023-06-rita-com-r/index.html",
       "/posts/2023-05-open-data-day-educacao/index.html",
       "/posts/2023-05-aprendendo-carol-moreno/index.html",
@@ -12,6 +13,7 @@
       "/posts/2022-12-graficos-dinamite/index.html",
       "/posts/2022-12-boas-vindas-ao-blog/index.html",
       "/posts/2020-06-rladies-global-blm/index.html",
+      "/posts/2023-06-05-increasing-diversity-sao-paulo/english.html",
       "/posts/2023-03-evento-open-data-day/english.html"
     ]
   }

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>R-Ladies São Paulo - Sobre a R-Ladies São Paulo</title>
+
+<meta name="author" content="Bianca Muniz">
+<meta name="author" content="Gabriela Morita">
+<meta name="author" content="Karina Ferreira">
+
+<title>R-Ladies São Paulo - Conhecendo o R, o Tidyverse e as R-Ladies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,23 +25,25 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/logo.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -54,29 +62,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script><script type="text/javascript">
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
-</script><script src="site_libs/core-js-2.5.3/shim.min.js"></script><script src="site_libs/react-18.2.0/react.min.js"></script><script src="site_libs/react-18.2.0/react-dom.min.js"></script><script src="site_libs/reactwidget-1.0.0/react-tools.js"></script><script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
-<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script><link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="R-Ladies São Paulo - Sobre a R-Ladies São Paulo">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg">
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - Conhecendo o R, o Tidyverse e as R-Ladies">
+<meta name="twitter:description" content="Relato de evento a partir de membros da comunidade">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/logo.jpg">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
 <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo.jpg" alt="" class="navbar-logo"></a>
-    <a class="navbar-brand" href="./index.html">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">R-Ladies São Paulo</span>
     </a>
   </div>
@@ -86,51 +103,51 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link" href="./" rel="" target="">
+  <li class="nav-item">
+    <a class="nav-link" href="../../" rel="" target="">
  <span class="menu-text">Página inicial</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">R-Ladies SP</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
-<li>
-    <a class="dropdown-item" href="./sobre.html" rel="" target="">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">    
+        <li>
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./como-participar.html" rel="" target="">
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
  <span class="dropdown-text">Como participar?</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Blog</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
-<li>
-    <a class="dropdown-item" href="./contribuir-com-o-blog.html" rel="" target="">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
+        <li>
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
  <span class="dropdown-text">Como contribuir com o blog?</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sugestoes.html" rel="" target="">
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
  <span class="dropdown-text">Sugestão de conteúdos</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./videos.html" rel="" target="">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
  <span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./eventos.html" rel="" target="">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
  <span class="menu-text">Próximos eventos</span></a>
   </li>  
 </ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -161,8 +178,8 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </i> 
  <span class="menu-text"></span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
     <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
  <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
   </li>  
@@ -171,9 +188,9 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
  <span class="dropdown-text">Código fonte deste site</span></a>
   </li>  
     </ul>
-</li>
+  </li>
 </ul>
-<div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -182,103 +199,123 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Conhecendo o R, o Tidyverse e as R-Ladies</h1>
+            <p class="subtitle lead">Relato de evento a partir de membros da comunidade</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Eventos</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoras</div>
+      <div class="quarto-title-meta-contents">
+               <p>Bianca Muniz </p>
+               <p>Gabriela Morita </p>
+               <p>Karina Ferreira </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">21 de novembro de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#o-que-%C3%A9-a-r-ladies" id="toc-o-que-é-a-r-ladies" class="nav-link active" data-scroll-target="#o-que-%C3%A9-a-r-ladies">O que é a R-Ladies?</a></li>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
-  <li><a href="#p%C3%BAblico-alvo" id="toc-público-alvo" class="nav-link" data-scroll-target="#p%C3%BAblico-alvo">Público-alvo</a></li>
-  <li><a href="#miss%C3%A3o" id="toc-missão" class="nav-link" data-scroll-target="#miss%C3%A3o">Missão</a></li>
-  <li><a href="#c%C3%B3digo-de-conduta" id="toc-código-de-conduta" class="nav-link" data-scroll-target="#c%C3%B3digo-de-conduta">Código de conduta</a></li>
-  <li><a href="#apoio-financeirosponsor" id="toc-apoio-financeirosponsor" class="nav-link" data-scroll-target="#apoio-financeirosponsor">Apoio financeiro/Sponsor</a></li>
-  <li><a href="#r-ladies-no-brasil" id="toc-r-ladies-no-brasil" class="nav-link" data-scroll-target="#r-ladies-no-brasil">R-Ladies no Brasil</a></li>
-  <li><a href="#saiba-mais-sobre-a-r-ladies" id="toc-saiba-mais-sobre-a-r-ladies" class="nav-link" data-scroll-target="#saiba-mais-sobre-a-r-ladies">Saiba mais sobre a R-Ladies</a></li>
-  <li><a href="#fonte-saiba-mais" id="toc-fonte-saiba-mais" class="nav-link" data-scroll-target="#fonte-saiba-mais">Fonte / Saiba mais</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/sobre.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+  <li><a href="#acolhe-pessoas-com-vontade-de-aprender-r" id="toc-acolhe-pessoas-com-vontade-de-aprender-r" class="nav-link active" data-scroll-target="#acolhe-pessoas-com-vontade-de-aprender-r">“Acolhe pessoas com vontade de aprender R”</a></li>
+  <li><a href="#divagações-de-uma-iniciante-em-r" id="toc-divagações-de-uma-iniciante-em-r" class="nav-link" data-scroll-target="#divagações-de-uma-iniciante-em-r">Divagações de uma iniciante em R</a>
+  <ul class="collapse">
+  <li><a href="#de-jogadas-de-handebol-às-funções-do-r" id="toc-de-jogadas-de-handebol-às-funções-do-r" class="nav-link" data-scroll-target="#de-jogadas-de-handebol-às-funções-do-r">De jogadas de handebol às funções do R</a></li>
+  <li><a href="#dos-métodos-de-ballet-aos-pacotes-do-r" id="toc-dos-métodos-de-ballet-aos-pacotes-do-r" class="nav-link" data-scroll-target="#dos-métodos-de-ballet-aos-pacotes-do-r">Dos métodos de Ballet aos pacotes do R</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-11-evento-intro-r/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Sobre a R-Ladies São Paulo</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-</header><section id="o-que-é-a-r-ladies" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-a-r-ladies">O que é a R-Ladies?</h2>
-<p><a href="https://rladies.org/">R-Ladies</a> é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.</p>
-<p><strong>R-Ladies São Paulo</strong> integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.</p>
-<p>As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<p>Quando eu, <a href="https://twitter.com/biancamuniz__">Bianca</a>, comecei no “mundinho dos dados”, as comunidades de tecnologia me ofereceram um espaço acolhedor para aprender sem o medo de errar. Falar de “espaço acolhedor”, pode parecer exagero e até contraditório; se errar faz parte do aprendizado, porque seria intimidador fazer isso enquanto se aprende, né? Mas, infelizmente, é muito fácil se sentir desencorajado quando é a primeira vez que você tem contato com uma tecnologia ou setor de atuação. A situação fica ainda mais chata quando se é integrante de um grupo sub-representado nesta área.<br>
+<br>
+Os relatos deste post são de participantes do último <a href="https://r-ladies-sao-paulo.github.io/2023-10-introducao-R/">meetup organizado pela R-Ladies São Paulo</a>. Ambas vivenciaram sua primeira experiência num evento das R-Ladies e ressaltam o sentimento de <strong>acolhimento</strong> para dar um primeiro passo no R. Mesmo sendo facilitadora do workshop, também estava ali fazendo algo pela primeira vez: apresentando a organização! Até pouco tempo, estava acompanhando de longe as atividades da comunidade (deixo aqui o convite para apresentarem também! <em>Vamos hablar hehe</em>)</p>
+<p>Boa leitura!</p>
+<section id="acolhe-pessoas-com-vontade-de-aprender-r" class="level2">
+<h2 class="anchored" data-anchor-id="acolhe-pessoas-com-vontade-de-aprender-r">“Acolhe pessoas com vontade de aprender R”</h2>
+<p><strong>por <a href="https://www.linkedin.com/in/gabrielamorita/">Gabriela Morita</a></strong></p>
+<p>Em 28 de outubro de 2023 participei do meu primeiro curso sobre a linguagem R. O curso “Introdução ao R - um curso para quem quer começar” foi organizado e desenvolvido pela equipe potente da <a href="https://www.linkedin.com/feed/hashtag/?keywords=rladiessp&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7125614142148796417">#RLadiesSP</a>, que faz parte da organização mundial R-Ladies, com o propósito de promover a diversidade de gênero na comunidade da linguagem R.</p>
+<p>O curso acolhe pessoas com vontade de aprender R, mesmo sem ter experiência ou contato prévio. O contato com as ferramentas é incentivado antes do encontro presencial, com tutoriais para a instalação do R e do RStudio, que são utilizados para desenvolver as atividades.</p>
+<p><img src="images/anigif.gif" class="img-fluid" alt="Screenshot dos slides de Introdução ao R"><br>
+<br>
+</p>
+<p>No dia do curso, são estabelecidas duas etapas:</p>
+<ul>
+<li><p>A etapa 1 (pela manhã), com introdução sobre a organização RLadies, e também apresentação sobre vantagens de usar o R</p></li>
+<li><p>E a etapa 2, à tarde, em que é apresentado os pacotes do Tidyverse e suas aplicações.</p></li>
+</ul>
+<p>Agradeço demais às R-Ladies SP - <a href="https://www.linkedin.com/in/bmuniz/">Bianca Muniz</a>, <a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes</a>, <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> e a <a href="https://www.linkedin.com/in/renatahirota/">Renata Hirota</a> - que compartilharam seus conhecimentos e práticas neste encontro, foi um espaço de muito aprendizado, partilhas e num formato muito acolhedor e colaborativo.</p>
+</section>
+<section id="divagações-de-uma-iniciante-em-r" class="level2">
+<h2 class="anchored" data-anchor-id="divagações-de-uma-iniciante-em-r">Divagações de uma iniciante em R</h2>
+<p><strong>por <a href="https://www.linkedin.com/in/karina-ferrara-barros/">Karina Ferrara Barros</a></strong></p>
+<p>No dia 28 de outubro de 2023 ocorreu o Evento R-Ladies São Paulo, do qual participei como iniciante no 'mundo R'. Em uma manhã e tarde de sábado mergulhei em um momento de aprendizagem proporcionado por uma equipe dedicada e disposta a ensinar e compartilhar conhecimento.</p>
+<p>A Oficina de Introdução ao R iniciou com a apresentação da comunidade R-Ladies, esforço global presente em 16 localidades brasileiras, seguindo com motivações para aprender linguagem R. Em preparo para adentrar no tema da Oficina, foi construído um ambiente muito acolhedor a partir da reflexão sobre o sentimento de exclusão compartilhado por diversos indivíduos, que se consideram inaptos a aprender este tipo de conhecimento por razões como "ser de humanas demais" ou "não se dar bem com matemática".</p>
+<p>Da minha parte, durante muito tempo me encaixei nesses rótulos e, após uma longa jornada de autoconhecimento e estudo, descobri que contextualizar conhecimentos que se mostram (a princípio) muito distantes de nossas afinidades torna a aprendizagem mais palpável e leve. Por esse motivo, no assunto seguinte abordado na Oficina, que eram os conceitos iniciais de programação, busquei algumas contextualizações para aproximar os ensinamentos sobre R.</p>
+<p>Em meio à dificuldade de materializar conceitos, passei por algumas divagações que me ajudaram a estabelecer pontes entre o meu "eu" de "antes e depois" do evento. Compartilho aqui estas divagações para explicar os conceitos de <strong>função</strong> e <strong>pacote</strong>, a partir dos aprendizados de um sábado com as R-Ladies.</p>
+<section id="de-jogadas-de-handebol-às-funções-do-r" class="level3">
+<h3 class="anchored" data-anchor-id="de-jogadas-de-handebol-às-funções-do-r">De jogadas de handebol às funções do R</h3>
+<p>No handebol existem jogadas preestabelecidas que auxiliam atletas no momento do ataque. Essas jogadas consistem em um conjunto de movimentações e passes da bola que criam oportunidade para o arremesso ao gol. Praticantes treinam estas jogadas e as conhecem por nomes: "araraquara", "argentina", "circulação", "loose", "roda"... Ou seja, estas jogadas estão armazenadas nas memórias de jogadores e são identificadas por nomes, que significam determinadas movimentações.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://beatrizmilz.github.io/slidesR/rladies/img/1meetupsp.jpeg" class="img-fluid figure-img" style="width:65.0%"></p>
-<figcaption class="figure-caption">Foto do primeiro encontro da R-Ladies São Paulo, em agosto de 2018!</figcaption></figure>
+<figure class="figure">
+<p><img src="images/Seleção_feminina_de_handebol.jpg" class="img-fluid figure-img"></p>
+</figure>
 </div>
-</div>
-</div>
-</section><section id="objetivo" class="level2"><h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento.</p>
-</section><section id="público-alvo" class="level2"><h2 class="anchored" data-anchor-id="público-alvo">Público-alvo</h2>
-<p>Nosso principal público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.</p>
-</section><section id="missão" class="level2"><h2 class="anchored" data-anchor-id="missão">Missão</h2>
-<p>Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e capacitando-as.</p>
-</section><section id="código-de-conduta" class="level2"><h2 class="anchored" data-anchor-id="código-de-conduta">Código de conduta</h2>
-<p>A R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.</p>
-<p>O nosso <a href="https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese">Código de conduta</a> aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.</p>
-</section><section id="apoio-financeirosponsor" class="level2"><h2 class="anchored" data-anchor-id="apoio-financeirosponsor">Apoio financeiro/Sponsor</h2>
+<p>No Evento R-Ladies aprendemos que <strong><code>funções</code></strong> são palavras que dão comandos ao computador. Por exemplo, <strong>mean</strong> é a palavra que dá o comando de obter média. As funções estão gravadas no programa, assim como as jogadas estão registradas nas memórias de atletas de handebol. No handebol, ao utilizar a palavra que expressa a jogada, a movimentação é realizada. No R, ao utilizar a palavra que expressa a função, o comando é realizado.</p>
+</section>
+<section id="dos-métodos-de-ballet-aos-pacotes-do-r" class="level3">
+<h3 class="anchored" data-anchor-id="dos-métodos-de-ballet-aos-pacotes-do-r">Dos métodos de Ballet aos pacotes do R</h3>
+<p>Existem diferentes métodos da prática do Ballet, dos quais os mais famosos são o Vaganova (russo) e o Royal (inglês). Estes métodos abrigam conjuntos de passos de ballet que são executados pelos praticantes. A maioria dos passos tem nomes em comum nos métodos mencionados. Entretanto, apesar de compartilharem o mesmo nome, podem ocorrer diferenças na execução. Por exemplo, ao executar uma sequência de piruetas (aquele rodopio), é necessário conectá-las com um passo denominado fouetté, que se caracteriza como uma movimentação de perna em 90º graus seguido do recolhimento até o joelho. O fouetté em Royal tem o desenho de um quarto de círculo, levando a perna à frente e deslocando até o lado antes de ser recolhida. Já o fouetté em Vaganova a perna é levada diretamente ao lado e depois recolhida.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" class="img-fluid figure-img" style="width:50.0%" alt="R Consortium Logo"></a></p>
-<figcaption class="figure-caption">R Consortium</figcaption></figure>
+<figure class="figure">
+<p><img src="images/ballerina-ballet.gif" class="img-fluid figure-img"></p>
+</figure>
 </div>
-</section><section id="r-ladies-no-brasil" class="level2"><h2 class="anchored" data-anchor-id="r-ladies-no-brasil">R-Ladies no Brasil</h2>
-<p>Caso queira conhecer outros meetups da R-Ladies no Brasil, consulte essa lista:</p>
-<div class="cell">
-<div class="cell-output-display">
-
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a416c72cfdc24d2ebcf2" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a416c72cfdc24d2ebcf2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["<a href='https://www.meetup.com/rladies-sao-paulo/' target='_blank'>R-Ladies São Paulo<\/a>","<a href='https://www.meetup.com/rladies-belo-horizonte/' target='_blank'>R-Ladies Belo Horizonte<\/a>","<a href='https://www.meetup.com/rladies-niteroi/' target='_blank'>R-Ladies Niterói<\/a>","<a href='https://www.meetup.com/rladies-rio/' target='_blank'>R-Ladies Rio de Janeiro<\/a>","<a href='https://www.meetup.com/rladies-natal/' target='_blank'>R-Ladies Natal<\/a>","<a href='https://www.meetup.com/rladies-florianopolis/' target='_blank'>R-Ladies Floripa<\/a>","<a href='https://www.meetup.com/rladies-goiania/' target='_blank'>R-Ladies Goiânia<\/a>","<a href='https://www.meetup.com/rladies-porto-alegre/' target='_blank'>R-Ladies Porto Alegre<\/a>","<a href='https://www.meetup.com/rladies-salvador/' target='_blank'>R-Ladies Salvador<\/a>","<a href='https://www.meetup.com/rladies-vitoria/' target='_blank'>R-Ladies Vitória<\/a>","<a href='https://www.meetup.com/rladies-recife/' target='_blank'>R-Ladies Recife<\/a>","<a href='https://www.meetup.com/rladies-fortaleza/' target='_blank'>R-Ladies Fortaleza<\/a>","<a href='https://www.meetup.com/rladies-lavras/' target='_blank'>R-Ladies Lavras<\/a>","<a href='https://www.meetup.com/rladies-curitiba/' target='_blank'>R-Ladies Curitiba<\/a>","<a href='https://www.meetup.com/rladies-brasilia/' target='_blank'>R-Ladies Brasília<\/a>","<a href='https://www.meetup.com/rladies-sao-mateus/' target='_blank'>R-Ladies São Mateus<\/a>"]},"columns":[{"id":"name","name":"Cidade","type":"character","html":true}],"searchable":true,"dataKey":"ed1792be4d6e1e23a292cacbb1c7beb6"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<p><br></p>
-<p>Caso não tenha um capítulo na sua cidade e queira iniciar um, saiba mais em: <a href="https://rladies.org/about-us/help/">R-Ladies - How do get involved</a>.</p>
-</section><section id="saiba-mais-sobre-a-r-ladies" class="level2"><h2 class="anchored" data-anchor-id="saiba-mais-sobre-a-r-ladies">Saiba mais sobre a R-Ladies</h2>
-<ul>
-<li><p>R-Ladies Global: <a href="https://rladies.org/">Website</a>, <a href="https://twitter.com/rladiesglobal"><i class="fab fa-twitter"></i> Twitter</a></p></li>
-<li>
-<p>R-Ladies São Paulo:</p>
-<ul>
-<li><a href="https://twitter.com/RLadiesSaoPaulo"><i class="fab fa-twitter"></i> Twitter</a></li>
-<li><a href="https://instagram.com/RLadiesSaoPaulo"><i class="fab fa-instagram"></i> Instagram</a></li>
-<li>
-<a href="https://www.linkedin.com/company/r-ladies-sao-paulo/"><i class="fab fa-linkedin"></i> Linkedin</a><br>
-</li>
-<li><a href="https://facebook.com/RLadiesSaoPaulo"><i class="fab fa-facebook"></i> Facebook</a></li>
-<li><a href="https://www.meetup.com/rladies-sao-paulo/"><i class="fab fa-meetup"></i> Meetup</a></li>
-<li><a href="https://github.com/R-Ladies-Sao-Paulo"><i class="fab fa-github"></i> GitHub</a></li>
-<li><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"><i class="fab fa-youtube"></i> Youtube</a></li>
-</ul>
-</li>
-</ul>
-<!-- inicio font awesome --><script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome --></section><section id="fonte-saiba-mais" class="level2"><h2 class="anchored" data-anchor-id="fonte-saiba-mais">Fonte / Saiba mais</h2>
-<ul>
-<li><p><a href="https://rladies.org/about-us/">About us - R-Ladies</a></p></li>
-<li><p><a href="https://www.meetup.com/rladies-sao-paulo/">Meetup - São Paulo</a></p></li>
-<li><p><a href="https://benubah.github.io/r-community-explorer/rladies.html">R Community Explorer</a></p></li>
-</ul>
+<p><br>
+Na Oficina aprendemos que as funções do R estão organizadas em conjuntos denominados <strong><code>pacotes</code></strong>. Ou seja, os pacotes são apanhados de palavras que dão comandos ao computador (funções). São exemplos de pacotes: <code>dplyr</code>, <code>ggplot2</code>, <code>lubridate</code>. Por comparação, da mesma forma que os métodos de ballet reúnem passos, os pacotes do R agrupam funções. Além disso, é possível que estes pacotes tenham nomes de funções em comum, mas que expressam diferenças no comando para o computador, assim como o fouetté em Vaganova e em Royal.</p>
+<p>Finalizando com as divagações, ressalto que o Evento R-Ladies não foi feito só de conceitos, dedicando uma parte considerável de tempo à prática e exercícios assistidos pela equipe. Cumprindo com a proposta de ser uma oficina, o evento se mostrou um excelente ponto de partida para quem deseja iniciar os caminhos na aprendizagem de linguagem R.</p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -527,8 +564,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -536,6 +576,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
+
 
 
 </body></html>

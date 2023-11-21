@@ -16,6 +16,7 @@ website:
   twitter-card:
     creator: "@beamilz"
     site: "@RLadiesSaoPaulo"
+    image: "img/logo.jpg"
   favicon: "img/logo.jpg"
   google-analytics: "G-EB5DDC6HCJ"
   description: "Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes."

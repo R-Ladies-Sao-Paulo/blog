@@ -10,7 +10,169 @@
 <atom:link href="https://rladies-sp.org/en.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 02 Oct 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 02 Dec 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>R Packages for Brazilian Data</title>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>Luana Antunes</dc:creator>
+  <dc:creator>Haydee Svab</dc:creator>
+  <dc:creator>Katia Mine</dc:creator>
+  <dc:creator>Michele Caramigo</dc:creator>
+  <dc:creator>Angela Valle</dc:creator>
+  <link>https://rladies-sp.org/posts/2023-12-evento-pacotes/english.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>On November 22, 2023, R-Ladies São Paulo had the joy of gathering at the Airbnb office in São Paulo for an extraordinary event: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/"><strong>R Packages for Brazilian Data</strong></a>. In this event, we had various presentations on the topic, which will be covered in this text.</p>
+<p>Along with the presentations, we had networking moments, where we met new people from the community, discussed ideas, shared experiences, and strengthened our bonds. And, of course, all this, along with fantastic coffee offered by Airbnb.</p>
+<p>This event is the result of <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a>’s participation in the <a href="https://ropensci.org/champions/">rOpenSci Champions Program</a>, presenting a bit about the program and also the package she developed this year.</p>
+<p>In this post, we will talk about the talks and bring some perspectives from participants.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="img-fluid figure-img" alt="Event photo"></p>
+</figure>
+</div>
+</section>
+<section id="participant-testimonials" class="level2">
+<h2 class="anchored" data-anchor-id="participant-testimonials">Participant Testimonials</h2>
+<blockquote class="blockquote">
+<p>Bea and Haydée brought important issues to this event and for all those present, mainly regarding the different databases we have to work with and the possible solutions for conducting queries and harmonizing the databases. Always in a welcoming environment provided by RLadies and Airbnb, who hosted this meeting, we women (in the vast majority) gained space to exchange knowledge and make connections. It was a very nice, light, and welcoming meeting in a 5-star environment! (<a href="https://www.linkedin.com/in/katia-mine-kem2710/">Katia Mine</a>)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I have been frequently participating in R-ladies São Paulo events. I feel welcomed in a harmonious environment, with opportunities for learning and motivation for new professional challenges. (<a href="https://www.linkedin.com/in/michelecaramigo">Michele Caramigo</a>)</p>
+</blockquote>
+</section>
+<section id="presentations" class="level2">
+<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="welcome-to-airbnb-by-angela-valle" class="level3">
+<h3 class="anchored" data-anchor-id="welcome-to-airbnb-by-angela-valle">Welcome to Airbnb, by <a href="https://www.linkedin.com/in/angelavalle/">Angela Valle</a></h3>
+<p>Angela was our main host at Airbnb! She opened the event by talking about Airbnb and its mission: to help build connections between people and make the world more open and inclusive.</p>
+<blockquote class="blockquote">
+<p>“It was a very rewarding and fruitful experience; I would love to repeat it more times and continue this collaboration. Supporting these meetings and the work that the R-Ladies group does around the world aligns with the mission and values of Airbnb as it contributes to promoting diversity and inclusion, especially in the technological community. At Airbnb, we strive to incorporate these principles in all aspects of the company’s operations.” - <a href="https://www.linkedin.com/in/angelavalle/"><strong>Angela Valle</strong></a>, Airbnb</p>
+</blockquote>
+</section>
+<section id="getting-to-know-r-ladies-são-paulo-by-luana-antunes" class="level3">
+<h3 class="anchored" data-anchor-id="getting-to-know-r-ladies-são-paulo-by-luana-antunes">Getting to Know R-Ladies São Paulo, by <a href="https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/">Luana Antunes</a></h3>
+<p>Luana introduced the R-Ladies São Paulo community for the first time, addressing why we exist, who our target audience is, and, most importantly, extending an invitation to anyone who wants to be part of the community and our future activities.</p>
+<p>Slides available at: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html">
+</iframe>
+</center>
+</section>
+<section id="ropensci-and-the-champions-program-by-haydee-svab" class="level3">
+<h3 class="anchored" data-anchor-id="ropensci-and-the-champions-program-by-haydee-svab">rOpenSci and the Champions Program, by <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></h3>
+<p>Haydee brought an exciting view of the <a href="https://ropensci.org/">rOpenSci</a> organization, explaining how this initiative promotes open, reproducible, and quality science through the use of shared data and open-source/free software, especially with the use of packages and tools in R. She presented the Champions Program, which she participated in throughout 2023, highlighting the participation of people from Latin America, whether as mentors or champions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/ropensci.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Haydée explained the program’s objectives and eligibility criteria and highlighted the importance of <strong>creating social infrastructure</strong>, i.e., strengthening the community. After all, in times of difficulty, having mentorship is crucial for the success of a project (research, package development, etc.).</p>
+<p>Slides available at:</p>
+<p><a href="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci" class="uri">https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci">
+</iframe>
+</center>
+</section>
+<section id="r-packages-for-brazilian-data-by-beatriz-milz" class="level3">
+<h3 class="anchored" data-anchor-id="r-packages-for-brazilian-data-by-beatriz-milz">R Packages for Brazilian Data, by <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></h3>
+<p>This presentation started with some essential concepts: what is a package? How can we install packages? What are package repositories? How can we install packages available in repositories other than CRAN, like GitHub and R-universe? After knowing how to install packages, several packages in R for Brazilian data were mentioned. It was an excellent opportunity to highlight how our community is contributing significantly to making local data more accessible, as well as highlighting the Brazilian community’s involvement in the development of R packages.</p>
+<p>Slides available at: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html">
+</iframe>
+</center>
+</section>
+<section id="introduction-to-the-odbr-package-by-haydée-svab" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-the-odbr-package-by-haydée-svab">Introduction to the <code>odbr</code> package, by <a href="https://www.linkedin.com/in/hsvab/">Haydée Svab</a></h3>
+<p>Haydée is a consultant, researcher, and teacher in Urban Mobility, Smart Cities, Digital Government, and Data Science. In her master’s, she used data from the origin-destination survey conducted in the São Paulo Metropolitan Region (RMSP), conducting an <a href="https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php">analysis of the evolution of travel patterns in the RMSP from a gender perspective</a>.</p>
+<p>Haydée developed the <a href="https://hsvab.github.io/odbr/">odbr</a> package to facilitate the use of these data by others during the rOpenSci Champions Program.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/odbr.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Haydee gave an introduction to the <a href="https://hsvab.github.io/odbr/"><code>odbr</code></a> package <span class="citation" data-cites="R-odbr">(Svab et al. 2023)</span>, a powerful tool that provides data from origin-destination surveys in Brazil. She presented the three main functions of the package: <code>read_od()</code> for obtaining tabular data, <code>read_map()</code> for getting maps, and the <code>read_dictionary()</code> for obtaining data dictionaries, which will be available in three languages: Portuguese, English, and Spanish. Her presentation also showed how it was the process of developing a package for the first time and her difficulties in development and availability on CRAN.</p>
+<p><a href="https://cran.r-project.org/web/packages/odbr/index.html">The odbr package is available on CRAN</a> and can be installed using the following command: <code>install.packages("odbr")</code></p>
+<p>Slides available at: <a href="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/#/title-slide">https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/">
+</iframe>
+</center>
+</section>
+<section id="introduction-to-the-geobr-package-by-beatriz-milz" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-the-geobr-package-by-beatriz-milz">Introduction to the <code>geobr</code> package, by <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></h3>
+<p>The final presentation was a quick introduction to the <a href="https://ipeagit.github.io/geobr/"><code>geobr</code></a> <span class="citation" data-cites="R-geobr">(Pereira et al. 2023)</span>, a package that facilitates access to public geospatial data from Brazil. We focused on understanding how to find out what data are available in geobr and how we can start visualizing these data using the ggplot2 package. We made an incremental example of a map using only data obtained from geobr, aiming to explore how specialized the high schools in the municipality of São Paulo are. All the codes are available on the slide.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/mapa-geobr.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Slides available at: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html">
+</iframe>
+</center>
+</section>
+</section>
+<section id="support" class="level2">
+<h2 class="anchored" data-anchor-id="support">Support</h2>
+<p>We are immensely grateful for the support of <a href="https://www.airbnb.com.br/">Airbnb</a>, the <a href="https://www.r-consortium.org/all-projects/r-user-group-support-program">RConsortium</a>, and <a href="https://ropensci.org/">rOpenSci</a>, which made this event possible:</p>
+<ul>
+<li><p><a href="https://www.airbnb.com.br/">Airbnb</a>: supported the event by providing the space and offering a wonderful coffee break throughout the event. We are immensely grateful to <a href="https://www.linkedin.com/in/angelavalle/"><strong>Angela Valle</strong></a> for bridging the gap between R-Ladies São Paulo and Airbnb and securing space and coffee break support.</p></li>
+<li><p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program">RConsortium</a>: financial support that enabled the coverage of transportation aids for those who requested it, as well as for the t-shirts used by the team and also raffled off!</p></li>
+<li><p><a href="https://ropensci.org/">rOpenSci</a>: as mentioned earlier, this event is the result of Haydée Svab’s participation in the Champions Program. We thank the organization and, particularly, <a href="https://www.linkedin.com/in/yabellini/?originalSubdomain=ar">Yanina Bellini</a> and the program participants!</p></li>
+</ul>
+</section>
+<section id="invitation" class="level2">
+<h2 class="anchored" data-anchor-id="invitation">Invitation</h2>
+<p>Be sure to follow R-Ladies São Paulo on our social networks and join our group on Telegram. Until the next meeting!</p>
+<ul>
+<li><p><a href="https://rladies-sp.org/">Blog</a></p></li>
+<li><p><a href="https://www.linkedin.com/company/r-ladies-sao-paulo/">LinkedIn</a></p></li>
+<li><p><a href="https://www.meetup.com/rladies-sao-paulo/">Meetup</a></p></li>
+<li><p><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo">YouTube</a></p></li>
+<li><p><a href="https://twitter.com/RLadiesSaoPaulo">Twitter</a></p></li>
+<li><p><a href="https://instagram.com/rladiessaopaulo">Instagram</a></p></li>
+</ul>
+</section>
+<section id="authorship" class="level2">
+<h2 class="anchored" data-anchor-id="authorship">Authorship</h2>
+<p>Post collaboratively written by:</p>
+<ul>
+<li><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></li>
+<li><a href="https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/">Luana Antunes</a></li>
+<li><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></li>
+<li><a href="https://www.linkedin.com/in/katia-mine-kem2710/">Katia Mine</a></li>
+<li><a href="https://www.linkedin.com/in/michelecaramigo">Michele Caramigo</a></li>
+<li><a href="https://www.linkedin.com/in/angelavalle/">Angela Valle</a></li>
+</ul>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-geobr" class="csl-entry">
+Pereira, Rafael H. M., Caio Nogueira Goncalves, Paulo Henrique Fernandes de Araujo, Guilherme Duarte Carvalho, Rodrigo Almeida de Arruda, Igor Nascimento, Barbara Santiago Pedreira da Costa, et al. 2023. <em>geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
+</div>
+<div id="ref-R-odbr" class="csl-entry">
+Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 2023. <em>odbr: Download Data from Brazil’s Origin Destination Surveys</em>. <a href="https://hsvab.github.io/odbr/">https://hsvab.github.io/odbr/</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>Packages</category>
+  <category>Community</category>
+  <category>Events</category>
+  <guid>https://rladies-sp.org/posts/2023-12-evento-pacotes/english.html</guid>
+  <pubDate>Sat, 02 Dec 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Actions to increase diversity in the R-Ladies São Paulo community</title>
   <dc:creator>Beatriz Milz</dc:creator>

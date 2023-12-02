@@ -2,8 +2,12 @@
 title: "Pacotes em R de Dados Brasileiros"
 subtitle: "Evento da R-Ladies São Paulo"
 author: 
-  - "Equipe R-Ladies SP" # Exemplo
-  - "[Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)" 
+  - "Beatriz Milz"
+  - "Luana Antunes"
+  - "Haydee Svab"
+  - "Katia Mine"
+  - "Michele Caramigo"
+  - "Angela Valle"
 date: "2023-12-02" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
 categories: 
   - "Pacotes"
@@ -14,7 +18,6 @@ image: "images/foto-evento.jpg" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
 draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
-
 ## Introdução
 
 No dia 22 de novembro de 2023, a comunidade R-Ladies São Paulo teve a alegria de se reunir no escritório do Airbnb em São Paulo para um evento muito especial: [**Pacotes em R de Dados Brasileiros**](https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/). Neste evento, tivemos várias apresentações sobre o tema, que serão abordadas nesse texto.
@@ -146,6 +149,17 @@ Não deixem de seguir a R-Ladies São Paulo em nossas redes sociais e se juntar 
 -   [Twitter](https://twitter.com/RLadiesSaoPaulo)
 
 -   [Instagram](https://instagram.com/rladiessaopaulo)
+
+## Autoria
+
+Post escrito colaborativamente por:
+
+  - [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+  - [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
+  - [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+  - [Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/)
+  - [Michele Caramigo](https://www.linkedin.com/in/michelecaramigo)
+  - [Angela Valle](https://www.linkedin.com/in/angelavalle/)
 
 ```{r}
 #| echo: false

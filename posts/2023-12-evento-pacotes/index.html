@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Ana Carolina Moreno">
-<title>R-Ladies São Paulo - Aprendendo a programar em quatro capítulos</title>
+<meta name="author" content="Equipe R-Ladies SP">
+<meta name="author" content="Beatriz Milz">
+<title>R-Ladies São Paulo - Pacotes em R de Dados Brasileiros</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,7 +19,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -62,9 +82,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </script><link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="R-Ladies São Paulo - Aprendendo a programar em quatro capítulos">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/img/logo.jpg">
+<meta name="twitter:title" content="R-Ladies São Paulo - Pacotes em R de Dados Brasileiros">
+<meta name="twitter:description" content="Evento da R-Ladies São Paulo">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-12-evento-pacotes/img/logo.jpg">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
 <meta name="twitter:card" content="summary_large_image">
@@ -188,11 +208,12 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Aprendendo a programar em quatro capítulos</h1>
+      <h1 class="title">Pacotes em R de Dados Brasileiros</h1>
+            <p class="subtitle lead">Evento da R-Ladies São Paulo</p>
                                 <div class="quarto-categories">
+                <div class="quarto-category">Pacotes</div>
                 <div class="quarto-category">Comunidade</div>
-                <div class="quarto-category">Ensino</div>
-                <div class="quarto-category">Jornalismo de dados</div>
+                <div class="quarto-category">Eventos</div>
               </div>
                   </div>
   </div>
@@ -201,16 +222,17 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-heading">Autoras</div>
       <div class="quarto-title-meta-contents">
-               <p>Ana Carolina Moreno </p>
+               <p>Equipe R-Ladies SP </p>
+               <p><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a> </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">10 de maio de 2023</p>
+        <p class="date">2 de dezembro de 2023</p>
       </div>
     </div>
     
@@ -225,80 +247,125 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#cap%C3%ADtulo-1---carol-excel" id="toc-capítulo-1---carol-excel" class="nav-link active" data-scroll-target="#cap%C3%ADtulo-1---carol-excel">Capítulo 1 - Carol Excel</a></li>
-  <li><a href="#cap%C3%ADtulo-2---carol-query" id="toc-capítulo-2---carol-query" class="nav-link" data-scroll-target="#cap%C3%ADtulo-2---carol-query">Capítulo 2 - Carol Query</a></li>
-  <li><a href="#cap%C3%ADtulo-3---carol-dados" id="toc-capítulo-3---carol-dados" class="nav-link" data-scroll-target="#cap%C3%ADtulo-3---carol-dados">Capítulo 3 - Carol Dados</a></li>
-  <li><a href="#cap%C3%ADtulo-4---teacher-carol" id="toc-capítulo-4---teacher-carol" class="nav-link" data-scroll-target="#cap%C3%ADtulo-4---teacher-carol">Capítulo 4 - Teacher Carol</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-05-aprendendo-carol-moreno/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+<li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+  <li><a href="#relatos-de-participantes" id="toc-relatos-de-participantes" class="nav-link" data-scroll-target="#relatos-de-participantes"><strong>Relatos de participantes</strong></a></li>
+  <li>
+<a href="#apresenta%C3%A7%C3%B5es" id="toc-apresentações" class="nav-link" data-scroll-target="#apresenta%C3%A7%C3%B5es"><strong>Apresentações</strong></a>
+  <ul class="collapse">
+<li><a href="#boas-vindas-ao-airbnb-por-angela-valle" id="toc-boas-vindas-ao-airbnb-por-angela-valle" class="nav-link" data-scroll-target="#boas-vindas-ao-airbnb-por-angela-valle"><strong>Boas vindas ao Airbnb, por Angela Valle</strong></a></li>
+  <li><a href="#conhecendo-as-r-ladies-s%C3%A3o-paulo-por-luana-antunes" id="toc-conhecendo-as-r-ladies-são-paulo-por-luana-antunes" class="nav-link" data-scroll-target="#conhecendo-as-r-ladies-s%C3%A3o-paulo-por-luana-antunes"><strong>Conhecendo as R-Ladies São Paulo, por Luana Antunes</strong></a></li>
+  <li><a href="#ropensci-e-o-programa-de-campe%C3%B5escampe%C3%A3s-por-haydee-svab" id="toc-ropensci-e-o-programa-de-campeõescampeãs-por-haydee-svab" class="nav-link" data-scroll-target="#ropensci-e-o-programa-de-campe%C3%B5escampe%C3%A3s-por-haydee-svab"><strong>rOpenSci e o Programa de Campeões/Campeãs, por Haydee Svab</strong></a></li>
+  <li><a href="#pacotes-em-r-de-dados-brasileiros-por-beatriz-milz" id="toc-pacotes-em-r-de-dados-brasileiros-por-beatriz-milz" class="nav-link" data-scroll-target="#pacotes-em-r-de-dados-brasileiros-por-beatriz-milz"><strong>Pacotes em R de Dados Brasileiros, por Beatriz Milz</strong></a></li>
+  <li><a href="#introdu%C3%A7%C3%A3o-ao-pacote-odbr-por-hayd%C3%A9e-svab" id="toc-introdução-ao-pacote-odbr-por-haydée-svab" class="nav-link" data-scroll-target="#introdu%C3%A7%C3%A3o-ao-pacote-odbr-por-hayd%C3%A9e-svab"><strong>Introdução ao pacote <code>odbr</code>, por Haydée Svab</strong></a></li>
+  <li><a href="#introdu%C3%A7%C3%A3o-ao-pacote-geobr-por-beatriz-milz" id="toc-introdução-ao-pacote-geobr-por-beatriz-milz" class="nav-link" data-scroll-target="#introdu%C3%A7%C3%A3o-ao-pacote-geobr-por-beatriz-milz"><strong>Introdução ao pacote <code>geobr</code>, por Beatriz Milz</strong></a></li>
+  </ul>
+</li>
+  <li><a href="#apoio" id="toc-apoio" class="nav-link" data-scroll-target="#apoio"><strong>Apoio</strong></a></li>
+  <li><a href="#convite" id="toc-convite" class="nav-link" data-scroll-target="#convite"><strong>Convite</strong></a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-12-evento-pacotes/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>No dia 22 de novembro de 2023, a comunidade R-Ladies São Paulo teve a alegria de se reunir no escritório do Airbnb em São Paulo para um evento muito especial: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/"><strong>Pacotes em R de Dados Brasileiros</strong></a>. Neste evento, tivemos várias apresentações sobre o tema, que serão abordadas nesse texto.</p>
+<p>Além das apresentações, tivemos momentos para networking, onde pudemos conhecer novas pessoas da comunidade, discutir ideias, compartilhar experiências e fortalecer nossos laços. E claro, tudo isso junto a um café maravilhoso, oferecido pelo Airbnb.</p>
+<p>Este evento é o resultado da participação da <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> no <a href="https://ropensci.org/champions/">programa de Campeãs e Campeões da rOpenSci</a>, apresentando um pouco sobre o programa e também o pacote desenvolvido por ela neste ano.</p>
+<p>Nesse post, falaremos um pouco sobre as apresentações realizadas, e também trazendo alguns relatos de pessoas que participaram do evento.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/foto-evento.jpg" class="img-fluid figure-img" alt="Foto do evento"></p>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Autoria
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
+</section><section id="relatos-de-participantes" class="level2"><h2 class="anchored" data-anchor-id="relatos-de-participantes"><strong>Relatos de participantes</strong></h2>
+<blockquote class="blockquote">
+<p>A Bea e a Haydée trouxeram questões importantes para este evento, e para todas as pessoas presentes, principalmente em relação às diferentes bases de dados que temos que trabalhar e as soluções possíveis para realização de consultas e harmonização das bases. Sempre num ambiente acolhedor proporcionado pelas RLadies e pelo Airbnb que foi o anfitrião deste encontro, nós mulheres (em massiva maioria) ganhamos espaço para trocar conhecimento, fazer conexões. Um encontro muito bacana, leve e acolhedor, num ambiente 5 estrelas! (<a href="https://www.linkedin.com/in/katia-mine-kem2710/">Katia Mine</a>)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Venho participando com frequência dos eventos da R-ladies São Paulo, sinto-me acolhida, em um ambiente harmonioso, com oportunidade para aprendizado e motivação para novos desafios profissionais. (<a href="https://www.linkedin.com/in/michelecaramigo">Michele Caramigo</a>)</p>
+</blockquote>
+</section><section id="apresentações" class="level2"><h2 class="anchored" data-anchor-id="apresentações"><strong>Apresentações</strong></h2>
+<section id="boas-vindas-ao-airbnb-por-angela-valle" class="level3"><h3 class="anchored" data-anchor-id="boas-vindas-ao-airbnb-por-angela-valle"><strong>Boas vindas ao Airbnb, por <a href="https://www.linkedin.com/in/angelavalle/">Angela Valle</a></strong></h3>
+<p>Angela foi nossa principal host no Airbnb! Ela fez a abertura do evento, falando um pouco sobre o Airbnb e sua missão: ajudar a construir conexões entre as pessoas e tornar o mundo mais aberto e inclusivo.</p>
+<blockquote class="blockquote">
+<p>“Foi uma experiência muito gratificante e frutífera, adoraria repetir mais vezes e continuar essa colaboração. Apoiar estes encontros, e o trabalho que o grupo R-Ladies realiza ao redor do mundo, alinha com a missão e os valores do Airbnb pois contribui com a promoção da diversidade e inclusão, principalmente na comunidade tecnológica. Dentro do Airbnb nós nos esforçamos para incorporar esses princípios em todos os aspectos das operações da empresa.” - <a href="https://www.linkedin.com/in/angelavalle/"><strong>Angela Valle</strong></a>, Airbnb</p>
+</blockquote>
+</section><section id="conhecendo-as-r-ladies-são-paulo-por-luana-antunes" class="level3"><h3 class="anchored" data-anchor-id="conhecendo-as-r-ladies-são-paulo-por-luana-antunes"><strong>Conhecendo as R-Ladies São Paulo, por <a href="https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/">Luana Antunes</a></strong></h3>
+<p>A Luana apresentou à comunidade R-Ladies São Paulo pela primeira vez abordando o porquê existimos, qual é o nosso público alvo e, principalmente, deixando o convite para quem quer fazer parte da comunidade e de nossas atividades futuras.</p>
+<p>Slides disponíveis em: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html</a></p>
 <center>
-<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
-<figure class="figure"><p><img src="images/logo.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Carol Moreno</figcaption></figure>
-</div>
-<p><a href="https://www.linkedin.com/in/anacarolinamoreno/"><i class="fab fa-linkedin"></i></a></p>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html">
+</iframe>
 </center>
-<p>Este post foi escrito por Ana Carolina Moreno e publicado no <a href="https://www.linkedin.com/pulse/aprendendo-programar-em-quatro-cap%C3%ADtulos-ana-carolina-moreno">Linkedin</a>.</p>
-<p>A Carol é uma integrante da comunidade R-Ladies São Paulo, e atua como Jornalista de Dados Senior na TV Globo.</p>
+</section><section id="ropensci-e-o-programa-de-campeõescampeãs-por-haydee-svab" class="level3"><h3 class="anchored" data-anchor-id="ropensci-e-o-programa-de-campeõescampeãs-por-haydee-svab"><strong>rOpenSci e o Programa de Campeões/Campeãs, por <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></strong></h3>
+<p>A Haydee trouxe uma visão empolgante sobre a organização <a href="https://ropensci.org/">rOpenSci</a>, explicando como essa iniciativa promove a ciência aberta, reprodutível e de qualidade através do uso de dados compartilhados e softwares open-source/livres, em especial com uso de pacotes e ferramentas em R. Ela apresentou o Programa de Campeões/ãs, de que participou ao longo de 2023, com destaque para a atuação de pessoas da América Latina, seja como menores/as ou campões/ãs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/ropensci.jpg" class="img-fluid figure-img"></p>
+</figure>
 </div>
+<p>Haydée explicou os objetivos e os critérios de elegibilidade do programa e também destacou a importância da <strong>criação da infraestrutura social</strong>. ou seja, o fortalecimento da comunidade. Afinal, nos momentos de dificuldade poder contar com mentoria é crucial para o sucesso de um projeto (de pesquisa, do desenvolvimento de pacote, etc).</p>
+<p>Slides disponíveis em:</p>
+<p><a href="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci" class="uri">https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci">
+</iframe>
+</center>
+</section><section id="pacotes-em-r-de-dados-brasileiros-por-beatriz-milz" class="level3"><h3 class="anchored" data-anchor-id="pacotes-em-r-de-dados-brasileiros-por-beatriz-milz"><strong>Pacotes em R de Dados Brasileiros, por <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></strong></h3>
+<p>Nesta apresentação, iniciamos com alguns conceitos importantes: o que é um pacote? Como conseguimos instalar pacotes? O que são repositórios de pacotes? Como conseguimos instalar pacotes disponíveis em outros repositórios além do CRAN, como o GitHub, e o R-universe. Depois de saber como instalar pacotes, foram citados vários pacotes em R voltados para dados brasileiros. Foi uma ótima oportunidade para destacar como a nossa comunidade está contribuindo de forma significativa para tornar dados locais mais acessíveis, além de destacar a atuação da comunidade brasileira no desenvolvimento de pacotes em R.</p>
+<p>Slides disponíveis em: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html">
+</iframe>
+</center>
+</section><section id="introdução-ao-pacote-odbr-por-haydée-svab" class="level3"><h3 class="anchored" data-anchor-id="introdução-ao-pacote-odbr-por-haydée-svab"><strong>Introdução ao pacote <code>odbr</code>, por <a href="https://www.linkedin.com/in/hsvab/">Haydée Svab</a></strong></h3>
+<p>A Haydée é consultora, pesquisadora e professora nos temas Mobilidade Urbana, Cidades Inteligentes, Governo Digital e Ciência de Dados. No mestrado, ela utilizou os dados da pesquisa origem-destino realizadas na Região Metropolitana de São Paulo (RMSP), realizando uma <a href="https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php">análise da evolução dos padrões de deslocamento na RMSP sob uma perspectiva de gênero</a>.</p>
+<p>Para facilitar a utilização destes dados por outras pessoas, a Haydée desenvolveu o pacote <a href="https://hsvab.github.io/odbr/">odbr</a>, durante o programa de Campeãs e Campeões da rOpenSci.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/odbr.jpg" class="img-fluid figure-img"></p>
+</figure>
 </div>
+<p>Haydee fez uma introdução ao pacote <a href="https://hsvab.github.io/odbr/"><code>odbr</code></a> <span class="citation" data-cites="R-odbr">(<a href="#ref-R-odbr" role="doc-biblioref">Svab et al. 2023</a>)</span>, uma ferramenta poderosa que disponibiliza dados de pesquisas origem-destino no Brasil. Ela apresentou as 3 principais funções do pacote: <code>read_od()</code> para obtenção dos dados tabulares, <code>read_map()</code> para obtenção dos mapas e o <code>read_dictionary()</code> para obtenção dos dicionários de dados, que estarão disponíveis em 3 línguas: português, inglês e espanhol. Sua apresentação também mostrou como foi o processo de desenvolver um pacote pela primeira vez, quais foram suas dificuldades no desenvolvimento e disponibilização no CRAN.</p>
+<p><a href="https://cran.r-project.org/web/packages/odbr/index.html">O pacote odbr está disponível no CRAN</a>, podendo ser instalado utilizando o seguinte comando: <code>install.packages("odbr")</code></p>
+<p>Slides disponíveis em: <a href="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/#/title-slide">https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/">
+</iframe>
+</center>
+</section><section id="introdução-ao-pacote-geobr-por-beatriz-milz" class="level3"><h3 class="anchored" data-anchor-id="introdução-ao-pacote-geobr-por-beatriz-milz"><strong>Introdução ao pacote <code>geobr</code>, por <a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></strong></h3>
+<p>A última apresentação foi uma introdução super rápida ao <a href="https://ipeagit.github.io/geobr/"><code>geobr</code></a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira et al. 2023</a>)</span>, um pacote que facilita o acesso a dados públicos geoespaciais do Brasil. Focamos em entender como descobrir quais são os dados disponíveis no geobr, e como podemos começar a visualizar esses dados usando o pacote ggplot2. Fizemos um exemplo incremental de um mapa usando apenas dados obtidos no geobr, buscando explorar como estão especializadas as escolas que oferecem o ensino médio no município de São Paulo. Todos os códigos estão disponíveis no slide.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/mapa-geobr.jpg" class="img-fluid figure-img"></p>
+</figure>
 </div>
-<p>Desde que comecei a dar cursos de programação, sempre vejo nos rostos de grande parte das pessoas participantes aquele “medo” de não conseguir. Faz um pouquinho de sentido, afinal, porque só dou cursos introdutórios, pra quem nunca programou, e boa parte deles têm como público minorias de gênero, porque são organizados pelo capítulo de São Paulo R-Ladies Global, do qual faço parte. Sabemos que, infelizmente, muitos grupos da população são ensinados desde cedo que “não servem” para a área de tecnologia…</p>
-<p>Mas eu sempre começo essas aulas com um resuminho da minha trajetória, justamente pra derrubar vários mitos, e mostrar que é possível aprender novas habilidades, especialmente se você:</p>
+<p>Slides disponíveis em: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html</a></p>
+<center>
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html">
+</iframe>
+</center>
+</section></section><section id="apoio" class="level2"><h2 class="anchored" data-anchor-id="apoio"><strong>Apoio</strong></h2>
+<p>Agradecemos imensamente ao apoio do <a href="https://www.airbnb.com.br/">Airbnb</a>, a <a href="https://www.r-consortium.org/all-projects/r-user-group-support-program">RConsortium</a>, e a <a href="https://ropensci.org/">rOpenSci</a>, que tornaram este evento possível:</p>
 <ul>
-<li><p>tiver apoio adequado no aprendizado;</p></li>
-<li><p>atrelar o aprendizado à sua realidade;</p></li>
-<li><p>identificar os contextos em que você aprende melhor;</p></li>
-<li><p>investir na prática o que aprendeu;</p></li>
-<li><p>tiver incentivos pra aprender;</p></li>
-<li><p>conseguir compartilhar teus aprendizados.</p></li>
+<li><p><a href="https://www.airbnb.com.br/">Airbnb</a>: apoio ao evento cedendo o espaço e oferecendo um maravilhoso coffee, durante todo o evento. Agradecemos imensamente a <a href="https://www.linkedin.com/in/angelavalle/"><strong>Angela Valle</strong></a>, por realizar a ponte entre a R-Ladies São Paulo e o Airbnb, e conseguindo o apoio do espaço e do coffee break.</p></li>
+<li><p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program">RConsortium</a>: apoio financeiro que viabilizou custear os auxílios de transporte para as pessoas que solicitaram, além das camisetas usadas pela equipe e que também foram sorteadas!</p></li>
+<li><p><a href="https://ropensci.org/">rOpenSci</a>: como citado anteriormente, este evento é resultado da participação da Haydée Svab no programa de Campeãs e Campeões. Agradecemos a organização e, em especial, <a href="https://www.linkedin.com/in/yabellini/?originalSubdomain=ar">Yanina Bellini</a> e às pessoas participantes do programa!</p></li>
+</ul></section><section id="convite" class="level2"><h2 class="anchored" data-anchor-id="convite"><strong>Convite</strong></h2>
+<p>Não deixem de seguir a R-Ladies São Paulo em nossas redes sociais e se juntar ao nosso grupo no Telegram. Até o próximo encontro!</p>
+<ul>
+<li><p><a href="https://rladies-sp.org/">Blog</a></p></li>
+<li><p><a href="https://www.linkedin.com/company/r-ladies-sao-paulo/">Linkedin</a></p></li>
+<li><p><a href="https://www.meetup.com/rladies-sao-paulo/">Meetup</a></p></li>
+<li><p><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo">Youtube</a></p></li>
+<li><p><a href="https://twitter.com/RLadiesSaoPaulo">Twitter</a></p></li>
+<li><p><a href="https://instagram.com/rladiessaopaulo">Instagram</a></p></li>
 </ul>
-<p>Inspirada nessa <a href="https://g1.globo.com/tecnologia/noticia/2023/05/10/ja-incentivo-meus-filhos-comeco-pode-ser-frustrante-profissionais-contam-como-e-trabalhar-com-programacao.ghtml">reportagem excelente</a> do <a href="https://www.linkedin.com/in/darlanhelder8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAmz3rcBQsPDkUpYhrSWEKPqZpl1KmQmoas">Darlan Helder</a>, compartilho abaixo um pouco dessa história.</p>
-<p>(Prólogo: eu sempre fiquei de recuperação em matemática, física, química, biologia… Minha mãe, que quase fez faculdade de matemática de tanto que gosta da área, até hoje acha estranho que eu seja referência no assunto pra qualquer pessoa que seja, quanto mais uma redação enorme.)</p>
-<section id="capítulo-1---carol-excel" class="level3"><h3 class="anchored" data-anchor-id="capítulo-1---carol-excel">Capítulo 1 - Carol Excel</h3>
-<p>Nos idos de 2012 tentei aprender R, mas o RStudio ainda estava nascendo… Eu tentei fuçar naquele site r-project.com, mas fracassei de forma retumbante. Achei que “aquilo não era pra mim”.</p>
-<p>Um pesquisador me sugeriu ir pro Stata, mas nunca encontrei muito sentido em softwares proprietários.</p>
-<p>Nos cinco anos seguintes, continuei interessada nos dados educacionais, mas só conseguia fazer reportanges com base em análises feitas por outras pessoas. Algumas delas por sugestão minha, como essa <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/dia-das-professoras-nove-em-cada-dez-estudantes-de-pedagogia-sao-mulheres-e-maioria-faz-curso-a-distancia.ghtml">comparando o perfil de quem estuda pedagogia com as demais carreiras de graduação</a>.</p>
-</section><section id="capítulo-2---carol-query" class="level3"><h3 class="anchored" data-anchor-id="capítulo-2---carol-query">Capítulo 2 - Carol Query</h3>
-<p>Em 2017, <strong>o incrível</strong> <a href="https://www.linkedin.com/in/leandro-bispo-oliveira?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAALW_lIBK2jplevqU4iEWkmh3bkp81MM3Q4">Leandro Bispo Oliveira</a> <strong>apareceu na redação do g1 com uma apostilinha de SQL básico encadernada, e me ensinou em duas horas a acessar o datalake e fazer queries com a base do Bolsa Família</strong>. Graças a ele consegui fazer uma análise que ninguém tinha feito até então no jornalismo: “testar” as notas de cortes do Sisu (a USP, por exemplo, tinha umas notas altíssimas) para saber se elas eram <a href="https://g1.globo.com/educacao/noticia/com-notas-minimas-de-ate-800-pontos-cursos-da-usp-no-sisu-ficam-fora-do-acesso-de-estudantes-cotistas.ghtml">compatíveis com a realidade do desempenho dos candidatos no Enem</a>.</p>
-<p><strong>Não tem nada como atrelar um conhecimento à aplicação prática na nossa realidade.</strong> E a minha realidade era: trabalho cobrindo educação, os dados abertos educacionais são muitos, ótimos, mas não tenho as técnicas pra fazer todas as reportagens que quero. E não quero depender de pesquisadores fazerem essa parte da produção de notícias.</p>
-<p>Foi por isso que decidi continuar aprendendo. Entrei num curso online de python para jornalistas. Fracassei, larguei pela metade.</p>
-<p>Daí entrei em outro curso online, de R para jornalistas. Tive problemas até pra instalar os programas. Larguei no comecinho.</p>
-<p>Mas continuava de olho nas oportunidades pra aprender. Até que, no começo de 2019, o capítulo de São Paulo das <a href="https://www.linkedin.com/company/rladies/">R-Ladies Global</a> anunciou um curso presencial, num sábado em que eu não estava de plantão, e <strong>passei o dia todo aprendendo com uma didática incrível, num ambiente acolhedor e inspirador</strong>. Resultado: comecei a finalmente conseguir responder a perguntas que sempre me pareceram relevantes e que ainda não tinham lido no jornalismo, como a <a href="https://g1.globo.com/educacao/guia-de-carreiras/noticia/2018/11/20/negros-representam-apenas-16-dos-professores-universitarios.ghtml">desigualdade racial entre professores universitários</a> e a evolução ao longo dos anos de <a href="https://g1.globo.com/educacao/noticia/2019/03/31/numero-de-escolas-com-nome-de-presidentes-da-ditadura-militar-cai-26percent-em-uma-decada.ghtml">escolas batizadas com nomes de generais da ditatura militar</a>.</p>
-<p>Até então, penava bastante pra conseguir virar reportagens dirigidas porque meu trabalho envolvia muitas pautas que não usavam dados. Então <strong>nem sempre conseguia praticar o que aprendi (outro ponto fundamental pra avançar no aprendizado de qualquer coisa)</strong>.</p>
-<p>Entendi também que, <strong>quando eu preciso aprender sobre um assunto desde o início, meu negócio é curso presencial (pode ser diferente pra outras pessoas)</strong>. Quando já estou mais avançada, tudo bem fazer virtualmente algum curso pontual, para aprender melhor alguma habilidade que ainda acho que preciso praticar mais (nessa quinta, começo um curso de raspagem de dados, mal posso esperar!)</p>
-</section><section id="capítulo-3---carol-dados" class="level3"><h3 class="anchored" data-anchor-id="capítulo-3---carol-dados">Capítulo 3 - Carol Dados</h3>
-<p>Em janeiro de 2020, passei de “repórter de Educação” para “produtora de dados” na redação de São Paulo da Globo (ganhei apelidos como “Carol Dados” e “Balcão da Média Móvel”). <strong>A partir de então, minha função principal era fuçar em dados, então a prática virou rotina.</strong> E não só os educacionais, de ciência, saúde e meio ambiente aos quais eu estava acostumada. Dados do Waze, do TSE, da Câmara Municipal de São Paulo, das reclamações do Disque 156…</p>
-<p>Dois meses depois, veio a pandemia, que obrigou o poder público a criar novos indicadores baseados em dados e o jornalismo a explicar todos esses novos conceitos para uma sociedade confusa e aterrorizada.</p>
-<p>Aí veio a necessidade de escrever códigos pra otimizar análises que eram feitas diariamente ou mesmo escrever códigos para permitir análises que, da forma como vinham do poder público, eram impossíveis de fazer de outras formas. <strong>Aqui entra o tal do incentivo pra aprender novas funções e formas de automatizar scripts pra não perder tempo com eles.</strong></p>
-<p>(Pausa para agredecer todas as pessoas que manjam de R, SQL e Datasus e que eu atazanei durante meses a fio, em qualquer dia da semana e até de madrugada.)</p>
-<p>Alguns códigos saíam em menos de duas horas, outros viraram dashboard pra todas as equipes consultarem, um levou uns três meses pra ficar azeitadinho.</p>
-<p>Todo esse esforço valeu a pena, e me deu muito mais autonomia.</p>
-<p>O mais legal é que, ao contrário da maioria das pessoas no chamado “jornalismo de dados”, eu não fico em uma equipe “de dados”: sou parte de uma grande equipe de produção, mas sou a única com foco maior na missão de escarafunchar dados. Por isso, não fico longe da produção diária, nem me debruço meses produzindo uma única reportagem especial. Sigo cobrindo o chamado “hardnews”, mas consigo fazer isso aplicando o que aprendi sobre análise estatística e técnicas de ciências de dados pra qualificar a cobertura. Acredito que o impacto das reportagens acaba sendo muito mais abrangente.</p>
-</section><section id="capítulo-4---teacher-carol" class="level3"><h3 class="anchored" data-anchor-id="capítulo-4---teacher-carol">Capítulo 4 - Teacher Carol</h3>
-<p>Ainda sigo atazando muita gente com meus códigos, dependendo do que aparece (obrigada de novo!). Também tenho sempre buscado aprender coisas novas, quando o tempo permite, pra facilitar análises futuras.</p>
-<p>Mas a principal mudança, desde 2020, é poder compartilhar o que aprendi com outras pessoas, principalmente jornalistas, e principalmente mulheres e minorias de gênero, que tenha interesse nessas habilidades. Nos últimos anos já dei vários cursos introdutórios de R, de SQL, de dados educacionais, de Lei de Acesso à Informação, de tudo isso junto e misturado.</p>
-<p>Toda vez que elaboro um novo curso, consigo revisar o que já sei, aprender coisas novas, aprofundar alguns conhecimentos. Ensinar é uma das melhores formas de aprender.</p>
-<p>Sempre é desafiador, mas pra mim sempre esteve claro que só aprendi o que sei hoje porque muitas pessoas investiram o tempo delas em me ajudar. Não acho que seria possível fazer de outra forma. <strong>Por isso, enxergo o ensino como uma forma de manter acesa essa corrente colaborativa.</strong></p>
-<p><em>PS: Se você é jornalista ou estudante de jornalismo, a</em> <a href="https://www.linkedin.com/company/jeducaeduca/">Jeduca: Associação de Jornalistas de Educação</a><em>, em parceria com a</em> <a href="https://www.linkedin.com/company/abraji/">Abraji - Associação Brasileira de Jornalismo Investigativo</a><em>, vai dar mais uma vez o curso Jornalismo de educação: bases para a cobertura. <strong>É gratuito e, na minha opinião, é o curso mais completo de jornalismo educacional que existe hoje.</strong> São 12 aulas, e eu vou ministrar as duas sobre reportar com dados =)</em></p>
-<p><a href="https://jeduca.org.br/noticia/inscricoes-abertas-para-o-curso-jornalismo-de-educacao-bases-para-a-cobertura"><em>Clique aqui para saber mais!</em></a></p>
-<!-- inicio font awesome -->
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-R-geobr" class="csl-entry" role="listitem">
+Pereira, Rafael H. M., Caio Nogueira Goncalves, Paulo Henrique Fernandes de Araujo, Guilherme Duarte Carvalho, Rodrigo Almeida de Arruda, Igor Nascimento, Barbara Santiago Pedreira da Costa, et al. 2023. <em>geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
+</div>
+<div id="ref-R-odbr" class="csl-entry" role="listitem">
+Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 2023. <em>odbr: Download Data from Brazil’s Origin Destination Surveys</em>. <a href="https://hsvab.github.io/odbr/">https://hsvab.github.io/odbr/</a>.
+</div>
+</div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

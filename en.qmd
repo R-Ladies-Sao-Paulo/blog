@@ -1,0 +1,27 @@
+---
+title: "R-Ladies São Paulo"
+subtitle: "Blog posts translated to English"
+listing:
+  - id: posts-en
+    contents: posts/**/english.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: true
+    feed: true
+    page-size: 12
+    fields: [image, date, title, author, categories]      
+page-layout: full
+title-block-banner: true
+comments: false
+toc: true
+lang: pt
+---
+
+::: {#posts-en}
+:::
+
+## Sponsors
+
+[![R Consortium](https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png){fig-alt="R Consortium Logo" fig-align="center" width="50%"}](https://www.r-consortium.org/all-projects/r-user-group-support-program)

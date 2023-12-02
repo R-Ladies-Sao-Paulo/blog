@@ -42,6 +42,8 @@ website:
     logo: "img/logo.jpg"
     background: "#562457" 
     left:
+      - text: "English"
+        href: en.qmd
       - text: "Página inicial"
         href: /         
       - text: "R-Ladies SP"

@@ -9,7 +9,7 @@ listing:
     sort-ui: false
     filter-ui: true
     feed: true
-    page-size: 3
+    page-size: 12
     fields: [image, date, title, author, categories]  
   - id: posts-en
     contents: posts/**/english.qmd
@@ -19,12 +19,12 @@ listing:
     sort-ui: false
     filter-ui: true
     feed: true
-    page-size: 3
+    page-size: 12
     fields: [image, date, title, author, categories]      
 page-layout: full
 title-block-banner: true
 comments: false
-toc: false
+toc: true
 lang: pt
 ---
 

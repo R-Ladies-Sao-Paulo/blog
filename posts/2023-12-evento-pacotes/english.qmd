@@ -1,0 +1,170 @@
+---
+title: "R Packages for Brazilian Data"
+subtitle: "Event of R-Ladies São Paulo"
+author: 
+  - "Beatriz Milz"
+  - "Luana Antunes"
+  - "Haydee Svab"
+  - "Katia Mine"
+  - "Michele Caramigo"
+  - "Angela Valle"
+date: "2023-12-02" # Data do post, no formato ano-mes-dia (ex: "2022-11-24")
+categories: 
+  - "Packages"
+  - "Community"
+  - "Events"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/foto-evento.jpg" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: false # enquanto estiver draft: true, o post é um rascunho
+---
+
+## Introduction
+
+On November 22, 2023, R-Ladies São Paulo had the joy of gathering at the Airbnb office in São Paulo for an extraordinary event: [**R Packages for Brazilian Data**](https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/). In this event, we had various presentations on the topic, which will be covered in this text.
+
+Along with the presentations, we had networking moments, where we met new people from the community, discussed ideas, shared experiences, and strengthened our bonds. And, of course, all this, along with fantastic coffee offered by Airbnb.
+
+This event is the result of [Haydee Svab](https://www.linkedin.com/in/hsvab/)'s participation in the [rOpenSci Champions Program](https://ropensci.org/champions/), presenting a bit about the program and also the package she developed this year.
+
+In this post, we will talk about the talks and bring some perspectives from participants.
+
+![](images/foto-evento.jpg){fig-alt="Event photo" fig-align="center"}
+
+## Participant Testimonials
+
+> Bea and Haydée brought important issues to this event and for all those present, mainly regarding the different databases we have to work with and the possible solutions for conducting queries and harmonizing the databases. Always in a welcoming environment provided by RLadies and Airbnb, who hosted this meeting, we women (in the vast majority) gained space to exchange knowledge and make connections. It was a very nice, light, and welcoming meeting in a 5-star environment! ([Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/))
+
+> I have been frequently participating in R-ladies São Paulo events. I feel welcomed in a harmonious environment, with opportunities for learning and motivation for new professional challenges. ([Michele Caramigo](https://www.linkedin.com/in/michelecaramigo))
+
+## Presentations
+
+### Welcome to Airbnb, by [Angela Valle](https://www.linkedin.com/in/angelavalle/)
+
+Angela was our main host at Airbnb! She opened the event by talking about Airbnb and its mission: to help build connections between people and make the world more open and inclusive.
+
+> "It was a very rewarding and fruitful experience; I would love to repeat it more times and continue this collaboration. Supporting these meetings and the work that the R-Ladies group does around the world aligns with the mission and values of Airbnb as it contributes to promoting diversity and inclusion, especially in the technological community. At Airbnb, we strive to incorporate these principles in all aspects of the company's operations." - [**Angela Valle**](https://www.linkedin.com/in/angelavalle/), Airbnb
+
+### Getting to Know R-Ladies São Paulo, by [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
+
+Luana introduced the R-Ladies São Paulo community for the first time, addressing why we exist, who our target audience is, and, most importantly, extending an invitation to anyone who wants to be part of the community and our future activities.
+
+Slides available at: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html>
+
+<center>
+
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html">
+
+</iframe>
+
+</center>
+
+### rOpenSci and the Champions Program, by [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+
+Haydee brought an exciting view of the [rOpenSci](https://ropensci.org/) organization, explaining how this initiative promotes open, reproducible, and quality science through the use of shared data and open-source/free software, especially with the use of packages and tools in R. She presented the Champions Program, which she participated in throughout 2023, highlighting the participation of people from Latin America, whether as mentors or champions.
+
+![](images/ropensci.jpg){fig-cap="Illustration for rOpenSci by Lydia Hill" fig-align="center"}
+
+Haydée explained the program's objectives and eligibility criteria and highlighted the importance of **creating social infrastructure**, i.e., strengthening the community. After all, in times of difficulty, having mentorship is crucial for the success of a project (research, package development, etc.).
+
+Slides available at:
+
+<https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci>
+
+<center>
+
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci">
+
+</iframe>
+
+</center>
+
+### R Packages for Brazilian Data, by [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+
+This presentation started with some essential concepts: what is a package? How can we install packages? What are package repositories? How can we install packages available in repositories other than CRAN, like GitHub and R-universe? After knowing how to install packages, several packages in R for Brazilian data were mentioned. It was an excellent opportunity to highlight how our community is contributing significantly to making local data more accessible, as well as highlighting the Brazilian community's involvement in the development of R packages.
+
+Slides available at: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html>
+
+<center>
+
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html">
+
+</iframe>
+
+</center>
+
+### Introduction to the `odbr` package, by [Haydée Svab](https://www.linkedin.com/in/hsvab/)
+
+Haydée is a consultant, researcher, and teacher in Urban Mobility, Smart Cities, Digital Government, and Data Science. In her master's, she used data from the origin-destination survey conducted in the São Paulo Metropolitan Region (RMSP), conducting an [analysis of the evolution of travel patterns in the RMSP from a gender perspective](https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php).
+
+Haydée developed the [odbr](https://hsvab.github.io/odbr/) package to facilitate the use of these data by others during the rOpenSci Champions Program.
+
+![](images/odbr.jpg){fig-cap="Illustration for rOpenSci by Lydia Hill" fig-align="center"}
+
+Haydee gave an introduction to the [`odbr`](https://hsvab.github.io/odbr/) package [@R-odbr], a powerful tool that provides data from origin-destination surveys in Brazil. She presented the three main functions of the package: `read_od()` for obtaining tabular data, `read_map()` for getting maps, and the `read_dictionary()` for obtaining data dictionaries, which will be available in three languages: Portuguese, English, and Spanish. Her presentation also showed how it was the process of developing a package for the first time and her difficulties in development and availability on CRAN.
+
+[The odbr package is available on CRAN](https://cran.r-project.org/web/packages/odbr/index.html) and can be installed using the following command: `install.packages("odbr")`
+
+Slides available at: [https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/](https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/#/title-slide)
+
+<center>
+
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/">
+
+</iframe>
+
+</center>
+
+
+### Introduction to the `geobr` package, by [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+
+The final presentation was a quick introduction to the [`geobr`](https://ipeagit.github.io/geobr/) [@R-geobr], a package that facilitates access to public geospatial data from Brazil. We focused on understanding how to find out what data are available in geobr and how we can start visualizing these data using the ggplot2 package. We made an incremental example of a map using only data obtained from geobr, aiming to explore how specialized the high schools in the municipality of São Paulo are. All the codes are available on the slide.
+
+![](images/mapa-geobr.jpg){fig-cap="Illustration for rOpenSci by Lydia Hill" fig-align="center"}
+
+Slides available at: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html>
+
+<center>
+
+<iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html">
+
+</iframe>
+
+</center>
+
+## Support
+
+We are immensely grateful for the support of [Airbnb](https://www.airbnb.com.br/), the [RConsortium](https://www.r-consortium.org/all-projects/r-user-group-support-program), and [rOpenSci](https://ropensci.org/), which made this event possible:
+
+-   [Airbnb](https://www.airbnb.com.br/): supported the event by providing the space and offering a wonderful coffee break throughout the event. We are immensely grateful to [**Angela Valle**](https://www.linkedin.com/in/angelavalle/) for bridging the gap between R-Ladies São Paulo and Airbnb and securing space and coffee break support.
+
+-   [RConsortium](https://www.r-consortium.org/all-projects/r-user-group-support-program): financial support that enabled the coverage of transportation aids for those who requested it, as well as for the t-shirts used by the team and also raffled off!
+
+-   [rOpenSci](https://ropensci.org/): as mentioned earlier, this event is the result of Haydée Svab's participation in the Champions Program. We thank the organization and, particularly, [Yanina Bellini](https://www.linkedin.com/in/yabellini/?originalSubdomain=ar) and the program participants!
+
+## Invitation
+
+Be sure to follow R-Ladies São Paulo on our social networks and join our group on Telegram. Until the next meeting!
+
+-   [Blog](https://rladies-sp.org/)
+
+-   [LinkedIn](https://www.linkedin.com/company/r-ladies-sao-paulo/)
+
+-   [Meetup](https://www.meetup.com/rladies-sao-paulo/)
+
+-   [YouTube](https://www.youtube.com/c/RLadiesS%C3%A3oPaulo)
+
+-   [Twitter](https://twitter.com/RLadiesSaoPaulo)
+
+-   [Instagram](https://instagram.com/rladiessaopaulo)
+
+## Authorship
+
+Post collaboratively written by:
+
+-   [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+-   [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+-   [Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/)
+-   [Michele Caramigo](https://www.linkedin.com/in/michelecaramigo)
+-   [Angela Valle](https://www.linkedin.com/in/angelavalle/)

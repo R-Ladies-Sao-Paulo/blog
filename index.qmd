@@ -36,30 +36,37 @@ lang: pt
 ## https://github.com/beatrizmilz/materiais_estudo_R
 gerar_lista_contrib <- function() {
   pessoas_contribuidoras <-
-    allcontributors::get_contributors(org = "R-Ladies-Sao-Paulo",
-                                      repo = "blog",
-                                      type = c("code", "issues"),
-                                      quiet = TRUE)  |> 
-    tibble::as_tibble()  |> 
+    allcontributors::get_contributors(
+      org = "R-Ladies-Sao-Paulo",
+      repo = "blog",
+      type = c("code", "issues"),
+      quiet = TRUE
+    )  |>
+    tibble::as_tibble()  |>
     # adicionar pessoas que contribuiram via google docs
-        tibble::add_row(logins = "anacarolinamoreno", 
-                    avatar = "https://avatars.githubusercontent.com/u/13514467?v=4") |> 
-                tibble::add_row(logins = "ornscar", 
-                    avatar = "https://avatars.githubusercontent.com/u/62913147?v=4") |> 
+    tibble::add_row(logins = "anacarolinamoreno",
+                    avatar = "https://avatars.githubusercontent.com/u/13514467?v=4") |>
+    tibble::add_row(logins = "ornscar",
+                    avatar = "https://avatars.githubusercontent.com/u/62913147?v=4") |>
     
-            tibble::add_row(logins = "https://www.linkedin.com/in/aprocha/", 
-                    avatar = "img/aprocha.jpg") |> 
-    tibble::add_row(logins = "https://www.linkedin.com/in/gabrielamorita/", avatar = "img/gabriela-morita.jpg") |> 
-        tibble::add_row(logins = "https://www.linkedin.com/in/karina-ferrara-barros/", avatar = "img/karina-ferrara.jpg") |> 
+    tibble::add_row(logins = "https://www.linkedin.com/in/aprocha/",
+                    avatar = "img/aprocha.jpg") |>
+    tibble::add_row(logins = "https://www.linkedin.com/in/gabrielamorita/", avatar = "img/gabriela-morita.jpg") |>
+    tibble::add_row(logins = "https://www.linkedin.com/in/karina-ferrara-barros/", avatar = "img/karina-ferrara.jpg") |>
+        tibble::add_row(logins = "https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/", avatar = "img/luana-antunes.jpg") |>
+       tibble::add_row(logins = "https://www.linkedin.com/in/katia-mine-kem2710/", avatar = "img/katia-mine.jpg") |>
+     tibble::add_row(logins = "https://www.linkedin.com/in/michelecaramigo/", avatar = "img/michele-caramigo.jpg") |>
+      tibble::add_row(logins = "https://www.linkedin.com/in/angelavalle/", avatar = "img/angela-valle.jpg") |>
+    
     dplyr::mutate(
       url = dplyr::if_else(
         stringr::str_starts(logins, "http"),
         logins,
         glue::glue("https://github.com/{logins}")
-      ) , 
+      ) ,
       link = glue::glue("[{logins}]({url})")
-    )  |> 
-    dplyr::filter(!logins %in% c("actions-user"))  |> 
+    )  |>
+    dplyr::filter(!logins %in% c("actions-user"))  |>
     dplyr::arrange(logins)
   
   cat("<center>")

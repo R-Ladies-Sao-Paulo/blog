@@ -18,6 +18,7 @@ image: "images/foto-evento.jpg" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
 draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
+
 ## Introdução
 
 No dia 22 de novembro de 2023, a comunidade R-Ladies São Paulo teve a alegria de se reunir no escritório do Airbnb em São Paulo para um evento muito especial: [**Pacotes em R de Dados Brasileiros**](https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/). Neste evento, tivemos várias apresentações sobre o tema, que serão abordadas nesse texto.
@@ -30,38 +31,39 @@ Nesse post, falaremos um pouco sobre as apresentações realizadas, e também tr
 
 ![](images/foto-evento.jpg){fig-alt="Foto do evento" fig-align="center"}
 
-## **Relatos de participantes**
+## Relatos de participantes
 
 > A Bea e a Haydée trouxeram questões importantes para este evento, e para todas as pessoas presentes, principalmente em relação às diferentes bases de dados que temos que trabalhar e as soluções possíveis para realização de consultas e harmonização das bases. Sempre num ambiente acolhedor proporcionado pelas RLadies e pelo Airbnb que foi o anfitrião deste encontro, nós mulheres (em massiva maioria) ganhamos espaço para trocar conhecimento, fazer conexões. Um encontro muito bacana, leve e acolhedor, num ambiente 5 estrelas! ([Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/))
 
 > Venho participando com frequência dos eventos da R-ladies São Paulo, sinto-me acolhida, em um ambiente harmonioso, com oportunidade para aprendizado e motivação para novos desafios profissionais. ([Michele Caramigo](https://www.linkedin.com/in/michelecaramigo))
 
-## **Apresentações**
+## Apresentações
 
-### **Boas vindas ao Airbnb, por [Angela Valle](https://www.linkedin.com/in/angelavalle/)**
+### Boas vindas ao Airbnb, por [Angela Valle](https://www.linkedin.com/in/angelavalle/)
 
 Angela foi nossa principal host no Airbnb! Ela fez a abertura do evento, falando um pouco sobre o Airbnb e sua missão: ajudar a construir conexões entre as pessoas e tornar o mundo mais aberto e inclusivo.
 
 > "Foi uma experiência muito gratificante e frutífera, adoraria repetir mais vezes e continuar essa colaboração. Apoiar estes encontros, e o trabalho que o grupo R-Ladies realiza ao redor do mundo, alinha com a missão e os valores do Airbnb pois contribui com a promoção da diversidade e inclusão, principalmente na comunidade tecnológica. Dentro do Airbnb nós nos esforçamos para incorporar esses princípios em todos os aspectos das operações da empresa." - [**Angela Valle**](https://www.linkedin.com/in/angelavalle/), Airbnb
 
-### **Conhecendo as R-Ladies São Paulo, por [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)**
+### Conhecendo as R-Ladies São Paulo, por [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
 
 A Luana apresentou à comunidade R-Ladies São Paulo pela primeira vez abordando o porquê existimos, qual é o nosso público alvo e, principalmente, deixando o convite para quem quer fazer parte da comunidade e de nossas atividades futuras.
-
 
 Slides disponíveis em: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html>
 
 <center>
+
 <iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-rladies.html">
+
 </iframe>
+
 </center>
 
-### **rOpenSci e o Programa de Campeões/Campeãs, por [Haydee Svab](https://www.linkedin.com/in/hsvab/)**
+### rOpenSci e o Programa de Campeões/Campeãs, por [Haydee Svab](https://www.linkedin.com/in/hsvab/)
 
 A Haydee trouxe uma visão empolgante sobre a organização [rOpenSci](https://ropensci.org/), explicando como essa iniciativa promove a ciência aberta, reprodutível e de qualidade através do uso de dados compartilhados e softwares open-source/livres, em especial com uso de pacotes e ferramentas em R. Ela apresentou o Programa de Campeões/ãs, de que participou ao longo de 2023, com destaque para a atuação de pessoas da América Latina, seja como menores/as ou campões/ãs.
 
 ![](images/ropensci.jpg){fig-cap="Ilustraçãp para a rOpenSci feito por Lydia Hill" fig-align="center"}
-
 
 Haydée explicou os objetivos e os critérios de elegibilidade do programa e também destacou a importância da **criação da infraestrutura social**. ou seja, o fortalecimento da comunidade. Afinal, nos momentos de dificuldade poder contar com mentoria é crucial para o sucesso de um projeto (de pesquisa, do desenvolvimento de pacote, etc).
 
@@ -70,31 +72,34 @@ Slides disponíveis em:
 <https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci>
 
 <center>
+
 <iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_ropensci">
+
 </iframe>
+
 </center>
 
-### **Pacotes em R de Dados Brasileiros, por [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)**
+### Pacotes em R de Dados Brasileiros, por [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
 
 Nesta apresentação, iniciamos com alguns conceitos importantes: o que é um pacote? Como conseguimos instalar pacotes? O que são repositórios de pacotes? Como conseguimos instalar pacotes disponíveis em outros repositórios além do CRAN, como o GitHub, e o R-universe. Depois de saber como instalar pacotes, foram citados vários pacotes em R voltados para dados brasileiros. Foi uma ótima oportunidade para destacar como a nossa comunidade está contribuindo de forma significativa para tornar dados locais mais acessíveis, além de destacar a atuação da comunidade brasileira no desenvolvimento de pacotes em R.
 
 Slides disponíveis em: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html>
 
 <center>
+
 <iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html">
+
 </iframe>
+
 </center>
 
-
-### **Introdução ao pacote `odbr`, por [Haydée Svab](https://www.linkedin.com/in/hsvab/)**
+### Introdução ao pacote `odbr`, por [Haydée Svab](https://www.linkedin.com/in/hsvab/)
 
 A Haydée é consultora, pesquisadora e professora nos temas Mobilidade Urbana, Cidades Inteligentes, Governo Digital e Ciência de Dados. No mestrado, ela utilizou os dados da pesquisa origem-destino realizadas na Região Metropolitana de São Paulo (RMSP), realizando uma [análise da evolução dos padrões de deslocamento na RMSP sob uma perspectiva de gênero](https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php).
 
 Para facilitar a utilização destes dados por outras pessoas, a Haydée desenvolveu o pacote [odbr](https://hsvab.github.io/odbr/), durante o programa de Campeãs e Campeões da rOpenSci.
 
-
 ![](images/odbr.jpg){fig-cap="Ilustraçãp para a rOpenSci feito por Lydia Hill" fig-align="center"}
-
 
 Haydee fez uma introdução ao pacote [`odbr`](https://hsvab.github.io/odbr/) [@R-odbr], uma ferramenta poderosa que disponibiliza dados de pesquisas origem-destino no Brasil. Ela apresentou as 3 principais funções do pacote: `read_od()` para obtenção dos dados tabulares, `read_map()` para obtenção dos mapas e o `read_dictionary()` para obtenção dos dicionários de dados, que estarão disponíveis em 3 línguas: português, inglês e espanhol. Sua apresentação também mostrou como foi o processo de desenvolver um pacote pela primeira vez, quais foram suas dificuldades no desenvolvimento e disponibilização no CRAN.
 
@@ -102,29 +107,31 @@ Haydee fez uma introdução ao pacote [`odbr`](https://hsvab.github.io/odbr/) [@
 
 Slides disponíveis em: [https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/](https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/#/title-slide)
 
-
 <center>
+
 <iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://hsvab.github.io/2023-11-22-MeetUp-Rladies-SP_odbr/">
+
 </iframe>
+
 </center>
 
-
-### **Introdução ao pacote `geobr`, por [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)**
+### Introdução ao pacote `geobr`, por [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
 
 A última apresentação foi uma introdução super rápida ao [`geobr`](https://ipeagit.github.io/geobr/) [@R-geobr], um pacote que facilita o acesso a dados públicos geoespaciais do Brasil. Focamos em entender como descobrir quais são os dados disponíveis no geobr, e como podemos começar a visualizar esses dados usando o pacote ggplot2. Fizemos um exemplo incremental de um mapa usando apenas dados obtidos no geobr, buscando explorar como estão especializadas as escolas que oferecem o ensino médio no município de São Paulo. Todos os códigos estão disponíveis no slide.
 
-
 ![](images/mapa-geobr.jpg){fig-cap="Ilustração para a rOpenSci feito por Lydia Hill" fig-align="center"}
-
 
 Slides disponíveis em: <https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html>
 
 <center>
+
 <iframe width="100%" height="400" marginheight="0" marginwidth="0" src="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html">
+
 </iframe>
+
 </center>
 
-## **Apoio**
+## Apoio
 
 Agradecemos imensamente ao apoio do [Airbnb](https://www.airbnb.com.br/), a [RConsortium](https://www.r-consortium.org/all-projects/r-user-group-support-program), e a [rOpenSci](https://ropensci.org/), que tornaram este evento possível:
 
@@ -134,7 +141,7 @@ Agradecemos imensamente ao apoio do [Airbnb](https://www.airbnb.com.br/), a [RCo
 
 -   [rOpenSci](https://ropensci.org/): como citado anteriormente, este evento é resultado da participação da Haydée Svab no programa de Campeãs e Campeões. Agradecemos a organização e, em especial, [Yanina Bellini](https://www.linkedin.com/in/yabellini/?originalSubdomain=ar) e às pessoas participantes do programa!
 
-## **Convite**
+## Convite
 
 Não deixem de seguir a R-Ladies São Paulo em nossas redes sociais e se juntar ao nosso grupo no Telegram. Até o próximo encontro!
 
@@ -154,12 +161,12 @@ Não deixem de seguir a R-Ladies São Paulo em nossas redes sociais e se juntar 
 
 Post escrito colaborativamente por:
 
-  - [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
-  - [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
-  - [Haydee Svab](https://www.linkedin.com/in/hsvab/)
-  - [Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/)
-  - [Michele Caramigo](https://www.linkedin.com/in/michelecaramigo)
-  - [Angela Valle](https://www.linkedin.com/in/angelavalle/)
+-   [Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)
+-   [Luana Antunes](https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/)
+-   [Haydee Svab](https://www.linkedin.com/in/hsvab/)
+-   [Katia Mine](https://www.linkedin.com/in/katia-mine-kem2710/)
+-   [Michele Caramigo](https://www.linkedin.com/in/michelecaramigo)
+-   [Angela Valle](https://www.linkedin.com/in/angelavalle/)
 
 ```{r}
 #| echo: false

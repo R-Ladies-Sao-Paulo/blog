@@ -13,8 +13,12 @@
 <lastBuildDate>Sat, 02 Dec 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Pacotes em R de Dados Brasileiros</title>
-  <dc:creator>Equipe R-Ladies SP</dc:creator>
-  <dc:creator>[Beatriz Milz](https://www.linkedin.com/in/beatrizmilz/)</dc:creator>
+  <dc:creator>Beatriz Milz</dc:creator>
+  <dc:creator>Luana Antunes</dc:creator>
+  <dc:creator>Haydee Svab</dc:creator>
+  <dc:creator>Katia Mine</dc:creator>
+  <dc:creator>Michele Caramigo</dc:creator>
+  <dc:creator>Angela Valle</dc:creator>
   <link>https://rladies-sp.org/posts/2023-12-evento-pacotes/index.html</link>
   <description><![CDATA[ <section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>No dia 22 de novembro de 2023, a comunidade R-Ladies São Paulo teve a alegria de se reunir no escritório do Airbnb em São Paulo para um evento muito especial: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/"><strong>Pacotes em R de Dados Brasileiros</strong></a>. Neste evento, tivemos várias apresentações sobre o tema, que serão abordadas nesse texto.</p>
@@ -105,6 +109,15 @@
 <li><p><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo">Youtube</a></p></li>
 <li><p><a href="https://twitter.com/RLadiesSaoPaulo">Twitter</a></p></li>
 <li><p><a href="https://instagram.com/rladiessaopaulo">Instagram</a></p></li>
+</ul></section><section id="autoria" class="level2"><h2 class="anchored" data-anchor-id="autoria">Autoria</h2>
+<p>Post escrito colaborativamente por:</p>
+<ul>
+<li><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></li>
+<li><a href="https://www.linkedin.com/in/luana-antunes-alexandre-aa572b48/">Luana Antunes</a></li>
+<li><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></li>
+<li><a href="https://www.linkedin.com/in/katia-mine-kem2710/">Katia Mine</a></li>
+<li><a href="https://www.linkedin.com/in/michelecaramigo">Michele Caramigo</a></li>
+<li><a href="https://www.linkedin.com/in/angelavalle/">Angela Valle</a></li>
 </ul>
 
 

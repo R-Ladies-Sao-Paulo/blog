@@ -58,7 +58,6 @@ Várias pessoas contribuíram com a escrita dos textos!
 
 -   31/10/2023 - [Raspando a página do Studio Ghibli, na Wikipédia](https://rladies-sp.org/posts/2023-10-ws-ghibli/)
 
-
 ### Traduções
 
 Para ampliar o público leitor, e possível impacto dos textos na comunidade de R em geral, traduzimos alguns dos nossos textos.
@@ -73,14 +72,13 @@ Para ampliar o público leitor, e possível impacto dos textos na comunidade de 
 
 O [post sobre ações para aumentar a diversidade na comunidade R-Ladies São Paulo](https://rladies.org/blog/2023-06-05-increasing-diversity-sao-paulo/) foi escrito por uma sugestão da [Yanina Bellini](https://www.linkedin.com/in/yabellini/?originalSubdomain=ar), que faz parte da [equipe de liderança global da R-Ladies](https://rladies.org). O texto foi inicialmente publicado lá e repostado neste blog. Isso é ótimo, pois permite que um público maior encontre o texto e, no melhor dos cenários, replique algumas das ações que relatamos no texto. Imagina que legal seria ver outros capítulos da R-Ladies pelo mundo tendo um espaço Gugudadados?
 
-
 ## Relatos da comunidade
 
 > Comecei a escrever sobre este 1 ano do blog... mas após escrever e reescrever a mesma frase cheguei à conclusão: queria mesmo é refletir sobre a importância do escrever como forma de compartilhar. Escrever para mim é e sempre foi um desafio, e talvez por isso eu tenha ido para a engenharia e não para ciências sociais ao fim do ensino médio. Porém, na graduação percebi (a obviedade de) que a escrita continua sendo fun-da-men-tal mesmo nas STEM: que delícia não é ler "Uma senhora toma chá" ou ver um código bem documentado?!
 >
-> Aí, durante o mestrado, descobri que o desafiador mesmo para mim era menos a escrita e mais o \"me sentir solitária no processo\". Isso vale para escrever texto ou escrever código. E por isso meu depoimento aqui hoje: este blog vem se configurando como um lugar de encontro. Não falo de encontros perfeitos e instagramáveis, refiro-me à uma tessitura de pensamentos múltiplos que as palavras possibilitam ir alinhando. Assim, agradeço a companhia de todas as pessoas que aqui escreveram, escrevem e escreverão \<3 ***(Haydée Svab)***
+> Aí, durante o mestrado, descobri que o desafiador mesmo para mim era menos a escrita e mais o "me sentir solitária no processo". Isso vale para escrever texto ou escrever código. E por isso meu depoimento aqui hoje: este blog vem se configurando como um lugar de encontro. Não falo de encontros perfeitos e instagramáveis, refiro-me à uma tessitura de pensamentos múltiplos que as palavras possibilitam ir alinhando. Assim, agradeço a companhia de todas as pessoas que aqui escreveram, escrevem e escreverão \<3 ***(Haydée Svab)***
 
-> De antemão: é uma honra poder contribuir no post de aniversário de 1 ano do blog da R-Ladies São Paulo assim como foi uma honra ter um post meu publicado no blog da R-Ladies São Paulo! Muito obrigada, meninas! Bem, dentre tantos outros medos, escrever sempre foi uma tarefa deveras temerosa para mim. A sensação ao escrever é a de uma arma apontada para minha cabeça. Sem exagero. Mas quando escrevo, o coração fala. E quando escrevo, geralmente, é porque sou encorajada. O post do Studio Ghibli aqui do blog, por exemplo, foi porque alguém me disse uma vez que poderia virar justamente um post em um blog (lembra, Bea?) - se não fosse isso, certamente estaria \"engavetado\" na minha nuvem até hoje. Ter esse post publicado no blog da R-Ladies São Paulo foi uma parte do medo da escrita deixado para trás, que, a bem da verdade: vai sem Deus! Acolher, motivar e ensinar é como eu enxergo como sendo as nobres razões da existência deste blog. E por isso tudo, vida longa! **(*Ornella Scardua Ferreira*)**
+> De antemão: é uma honra poder contribuir no post de aniversário de 1 ano do blog da R-Ladies São Paulo assim como foi uma honra ter um post meu publicado no blog da R-Ladies São Paulo! Muito obrigada, meninas! Bem, dentre tantos outros medos, escrever sempre foi uma tarefa deveras temerosa para mim. A sensação ao escrever é a de uma arma apontada para minha cabeça. Sem exagero. Mas quando escrevo, o coração fala. E quando escrevo, geralmente, é porque sou encorajada. O post do Studio Ghibli aqui do blog, por exemplo, foi porque alguém me disse uma vez que poderia virar justamente um post em um blog (lembra, Bea?) - se não fosse isso, certamente estaria "engavetado" na minha nuvem até hoje. Ter esse post publicado no blog da R-Ladies São Paulo foi uma parte do medo da escrita deixado para trás, que, a bem da verdade: vai sem Deus! Acolher, motivar e ensinar é como eu enxergo como sendo as nobres razões da existência deste blog. E por isso tudo, vida longa! **(*Ornella Scardua Ferreira*)**
 
 > Para complementar, acho que posts reflexivos como esse servem também para inspirar mais pessoas a adotarem o hábito de escreverem sobre temas variados. O processo mental de organizar as ideias e texto ajuda e muito em vários outros processos, principalmente o de aprendizado e também o de ensino. Vale a pena tentar =) **(*Carol Moreno*)**
 
@@ -106,6 +104,13 @@ Existem várias formas de contribuir, como:
 
 -   entre outros!
 
+**Para enviar sua contribuição, escolha um dos caminhos abaixo:**
+
+-   Se você faz parte do nosso grupo no telegram, pode falar por lá (de preferência no canal "Blog").
+
+-   Se você já usa o GitHub, pode [criar uma issue](https://github.com/R-Ladies-Sao-Paulo/blog/issues) com a sua ideia.
+
+-   Ou, entre em contato com a Beatriz Milz, que é a mantenedora atual do blog: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com) . Deixe claro no assunto do email o assunto (ex: \[BLOG R-LADIES SÃO PAULO\] ....)
 
 ## Conclusão
 
@@ -137,6 +142,6 @@ Post escrito colaborativamente, com contribuições de:
 
 -   [Haydee Svab](https://www.linkedin.com/in/hsvab/)
 
--  [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/)
+-   [Ana Carolina Moreno](https://www.linkedin.com/in/anacarolinamoreno/)
 
 -   [Ornella Scardua Ferreira](https://www.linkedin.com/in/ornella-scardua-3861542a3/)

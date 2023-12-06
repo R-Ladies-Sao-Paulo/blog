@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Beatriz Milz">
+<meta name="author" content="Haydée Svab">
+<meta name="author" content="Ana Carolina Moreno">
+<meta name="author" content="Ornella Scardua Ferreira">
+
+<title>R-Ladies São Paulo - O blog da R-Ladies São Paulo completa um ano! 🎉</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="R-Ladies São Paulo - O blog da R-Ladies São Paulo completa um ano! 🎉">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-12-um-ano-blog/img/logo.jpg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R-Ladies São Paulo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../en.html" rel="" target="">
+ <span class="menu-text">English</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../" rel="" target="">
+ <span class="menu-text">Página inicial</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">R-Ladies SP</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">    
+        <li>
+    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
+ <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
+ <span class="dropdown-text">Como participar?</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Blog</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
+        <li>
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
+ <span class="dropdown-text">Como contribuir com o blog?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
+ <span class="dropdown-text">Sugestão de conteúdos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../videos.html" rel="" target="">
+ <span class="menu-text">Videos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../eventos.html" rel="" target="">
+ <span class="menu-text">Próximos eventos</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:certificados.rladiessp@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+ <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+ <span class="dropdown-text">Código fonte deste site</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">O blog da R-Ladies São Paulo completa um ano! 🎉</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Comunidade</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autoras</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+               <p>Haydée Svab </p>
+               <p>Ana Carolina Moreno </p>
+               <p>Ornella Scardua Ferreira </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">5 de dezembro de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#retrospectiva" id="toc-retrospectiva" class="nav-link" data-scroll-target="#retrospectiva">Retrospectiva</a>
+  <ul class="collapse">
+  <li><a href="#posts-sobre-a-comunidade-eventos-e-relatos-pessoas" id="toc-posts-sobre-a-comunidade-eventos-e-relatos-pessoas" class="nav-link" data-scroll-target="#posts-sobre-a-comunidade-eventos-e-relatos-pessoas">Posts sobre a comunidade, eventos e relatos pessoas</a></li>
+  <li><a href="#posts-sobre-conceitos-ou-aplicações-com-r" id="toc-posts-sobre-conceitos-ou-aplicações-com-r" class="nav-link" data-scroll-target="#posts-sobre-conceitos-ou-aplicações-com-r">Posts sobre conceitos ou aplicações com R</a></li>
+  <li><a href="#traduções" id="toc-traduções" class="nav-link" data-scroll-target="#traduções">Traduções</a></li>
+  <li><a href="#convite-para-o-blog-da-r-ladies-global" id="toc-convite-para-o-blog-da-r-ladies-global" class="nav-link" data-scroll-target="#convite-para-o-blog-da-r-ladies-global">Convite para o blog da R-Ladies Global</a></li>
+  </ul></li>
+  <li><a href="#relatos-da-comunidade" id="toc-relatos-da-comunidade" class="nav-link" data-scroll-target="#relatos-da-comunidade">Relatos da comunidade</a></li>
+  <li><a href="#como-contribuir" id="toc-como-contribuir" class="nav-link" data-scroll-target="#como-contribuir">Como contribuir?</a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  <li><a href="#siga-a-r-ladies-são-paulo-nas-redes" id="toc-siga-a-r-ladies-são-paulo-nas-redes" class="nav-link" data-scroll-target="#siga-a-r-ladies-são-paulo-nas-redes">Siga a R-Ladies São Paulo nas redes!</a></li>
+  <li><a href="#autoria" id="toc-autoria" class="nav-link" data-scroll-target="#autoria">Autoria</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-12-um-ano-blog/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Há um ano, lançamos o blog da R-Ladies São Paulo!</p>
+<p>Nosso objetivo era criar um espaço onde as pessoas da comunidade R-Ladies São Paulo e no Brasil pudessem compartilhar conhecimento, experiências e celebrar as conquistas da nossa comunidade.</p>
+<p>Hoje, estamos aqui para refletir sobre os momentos marcantes e agradecer a todas as pessoas que contribuíram para o sucesso deste projeto.</p>
+</section>
+<section id="retrospectiva" class="level2">
+<h2 class="anchored" data-anchor-id="retrospectiva">Retrospectiva</h2>
+<p>Ao longo do ano, publicamos uma série de posts abrangendo uma variedade de tópicos, desde tutoriais técnicos e análises de dados até relatos de eventos e histórias inspiradoras de pessoas da nossa comunidade. <strong>Foram 13 posts no total</strong>, com três deles traduzidos para o inglês.</p>
+<p>Várias pessoas contribuíram com a escrita dos textos!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fotos.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Foto das pessoas que colaboraram com os textos do blog neste ano.</figcaption>
+</figure>
+</div>
+<section id="posts-sobre-a-comunidade-eventos-e-relatos-pessoas" class="level3">
+<h3 class="anchored" data-anchor-id="posts-sobre-a-comunidade-eventos-e-relatos-pessoas">Posts sobre a comunidade, eventos e relatos pessoas</h3>
+<ul>
+<li><p>05/12/2022 - <a href="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/">Boas vindas ao blog da R-Ladies São Paulo!</a></p></li>
+<li><p>31/01/2023 - <a href="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/">Evento: Oficina de Introdução ao R</a></p></li>
+<li><p>27/03/2023 - <a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/">Evento: Análise de dados abertos com R</a></p></li>
+<li><p>10/05/2023 - <a href="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/">Aprendendo a programar em quatro capítulos</a></p></li>
+<li><p>24/05/2023 - <a href="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/">Dados abertos de Educação: um exemplo aplicado ao jornalismo</a></p></li>
+<li><p>02/10/2023 - <a href="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/">Ações para ampliar a diversidade na comunidade R-Ladies São Paulo</a></p></li>
+<li><p>21/11/2023 - <a href="https://rladies-sp.org/posts/2023-11-evento-intro-r/">Conhecendo o R, o Tidyverse e as R-Ladies</a></p></li>
+<li><p>02/12/2023 - <a href="https://rladies-sp.org/posts/2023-12-evento-pacotes/">Pacotes em R de Dados Brasileiros</a></p></li>
+</ul>
+</section>
+<section id="posts-sobre-conceitos-ou-aplicações-com-r" class="level3">
+<h3 class="anchored" data-anchor-id="posts-sobre-conceitos-ou-aplicações-com-r">Posts sobre conceitos ou aplicações com R</h3>
+<ul>
+<li><p>14/12/2022 - <a href="https://rladies-sp.org/posts/2022-12-graficos-dinamite/">Gráficos de barras com barras de erros: críticas e alternativas</a></p></li>
+<li><p>07/02/2023 - <a href="https://rladies-sp.org/posts/2023-02-tutorial-quarto/">E aí, vamos falar de Quarto?</a></p></li>
+<li><p>01/03/2023 - <a href="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/">TidyTuesday: Explorando dados sobre as Paraolimpíadas</a></p></li>
+<li><p>02/06/2023 - <a href="https://rladies-sp.org/posts/2023-06-rita-com-r/">Rita com R</a></p></li>
+<li><p>31/10/2023 - <a href="https://rladies-sp.org/posts/2023-10-ws-ghibli/">Raspando a página do Studio Ghibli, na Wikipédia</a></p></li>
+</ul>
+</section>
+<section id="traduções" class="level3">
+<h3 class="anchored" data-anchor-id="traduções">Traduções</h3>
+<p>Para ampliar o público leitor, e possível impacto dos textos na comunidade de R em geral, traduzimos alguns dos nossos textos.</p>
+<ul>
+<li><p>26/03/2023 - <a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html">Event: Open Data Analysis with R</a></p></li>
+<li><p>02/10/2023 - <a href="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/english.html">Actions to increase diversity in the R-Ladies São Paulo community</a></p></li>
+<li><p>02/12/2023 - <a href="https://rladies-sp.org/posts/2023-12-evento-pacotes/english.html">R Packages for Brazilian Data</a></p></li>
+</ul>
+</section>
+<section id="convite-para-o-blog-da-r-ladies-global" class="level3">
+<h3 class="anchored" data-anchor-id="convite-para-o-blog-da-r-ladies-global">Convite para o blog da R-Ladies Global</h3>
+<p>O <a href="https://rladies.org/blog/2023-06-05-increasing-diversity-sao-paulo/">post sobre ações para aumentar a diversidade na comunidade R-Ladies São Paulo</a> foi escrito por uma sugestão da <a href="https://www.linkedin.com/in/yabellini/?originalSubdomain=ar">Yanina Bellini</a>, que faz parte da <a href="https://rladies.org">equipe de liderança global da R-Ladies</a>. O texto foi inicialmente publicado lá e repostado neste blog. Isso é ótimo, pois permite que um público maior encontre o texto e, no melhor dos cenários, replique algumas das ações que relatamos no texto. Imagina que legal seria ver outros capítulos da R-Ladies pelo mundo tendo um espaço Gugudadados?</p>
+</section>
+</section>
+<section id="relatos-da-comunidade" class="level2">
+<h2 class="anchored" data-anchor-id="relatos-da-comunidade">Relatos da comunidade</h2>
+<blockquote class="blockquote">
+<p>Comecei a escrever sobre este 1 ano do blog… mas após escrever e reescrever a mesma frase cheguei à conclusão: queria mesmo é refletir sobre a importância do escrever como forma de compartilhar. Escrever para mim é e sempre foi um desafio, e talvez por isso eu tenha ido para a engenharia e não para ciências sociais ao fim do ensino médio. Porém, na graduação percebi (a obviedade de) que a escrita continua sendo fun-da-men-tal mesmo nas STEM: que delícia não é ler “Uma senhora toma chá” ou ver um código bem documentado?!</p>
+<p>Aí, durante o mestrado, descobri que o desafiador mesmo para mim era menos a escrita e mais o "me sentir solitária no processo". Isso vale para escrever texto ou escrever código. E por isso meu depoimento aqui hoje: este blog vem se configurando como um lugar de encontro. Não falo de encontros perfeitos e instagramáveis, refiro-me à uma tessitura de pensamentos múltiplos que as palavras possibilitam ir alinhando. Assim, agradeço a companhia de todas as pessoas que aqui escreveram, escrevem e escreverão &lt;3 <strong><em>(Haydée Svab)</em></strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>De antemão: é uma honra poder contribuir no post de aniversário de 1 ano do blog da R-Ladies São Paulo assim como foi uma honra ter um post meu publicado no blog da R-Ladies São Paulo! Muito obrigada, meninas! Bem, dentre tantos outros medos, escrever sempre foi uma tarefa deveras temerosa para mim. A sensação ao escrever é a de uma arma apontada para minha cabeça. Sem exagero. Mas quando escrevo, o coração fala. E quando escrevo, geralmente, é porque sou encorajada. O post do Studio Ghibli aqui do blog, por exemplo, foi porque alguém me disse uma vez que poderia virar justamente um post em um blog (lembra, Bea?) - se não fosse isso, certamente estaria "engavetado" na minha nuvem até hoje. Ter esse post publicado no blog da R-Ladies São Paulo foi uma parte do medo da escrita deixado para trás, que, a bem da verdade: vai sem Deus! Acolher, motivar e ensinar é como eu enxergo como sendo as nobres razões da existência deste blog. E por isso tudo, vida longa! <strong>(<em>Ornella Scardua Ferreira</em>)</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Para complementar, acho que posts reflexivos como esse servem também para inspirar mais pessoas a adotarem o hábito de escreverem sobre temas variados. O processo mental de organizar as ideias e texto ajuda e muito em vários outros processos, principalmente o de aprendizado e também o de ensino. Vale a pena tentar =) <strong>(<em>Carol Moreno</em>)</strong></p>
+</blockquote>
+</section>
+<section id="como-contribuir" class="level2">
+<h2 class="anchored" data-anchor-id="como-contribuir">Como contribuir?</h2>
+<p>Esperamos que mais pessoas se sintam inspiradas para compartilhar suas ideias e experiências no blog da R-Ladies São Paulo também!&nbsp;</p>
+<p>Se você faz parte do público alvo da R-Ladies e gostaria contribuir com algum post ou conteúdo para o blog, a contribuição será muito bem vinda!</p>
+<blockquote class="blockquote">
+<p>Nosso principal público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.</p>
+</blockquote>
+<p>Existem várias formas de contribuir, como:</p>
+<ul>
+<li><p>escrever algum texto não-técnico relacionado às atividades do grupo;</p></li>
+<li><p>escrever algum texto técnico para o blog (por exemplo, mostrando alguma análise feita com R por você);</p></li>
+<li><p>escrever algum texto sobre conceitos importantes para estatística, ciência de dados etc;</p></li>
+<li><p>escrever algum tutorial sobre uso de algum pacote;</p></li>
+<li><p>enviar algum texto já publicado em outras plataformas, que possa ser re-compartilhado aqui;</p></li>
+<li><p>entre outros!</p></li>
+</ul>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Agradecemos a todas as pessoas por fazerem parte desta jornada conosco, desde as pessoas que escreveram textos até as pessoas que compartilharam em suas redes.</p>
+<p>E fica o convite para todas as pessoas que quiserem somar na comunidade por mais anos e anos!</p>
+</section>
+<section id="siga-a-r-ladies-são-paulo-nas-redes" class="level2">
+<h2 class="anchored" data-anchor-id="siga-a-r-ladies-são-paulo-nas-redes">Siga a R-Ladies São Paulo nas redes!</h2>
+<p>Não deixem de seguir a R-Ladies São Paulo em nossas redes sociais e se juntar ao nosso grupo no Telegram. Assim você fica por dentro de todas as novidades e eventos que estamos organizando!</p>
+<ul>
+<li><p><a href="https://rladies-sp.org/">Blog</a></p></li>
+<li><p><a href="https://www.linkedin.com/company/r-ladies-sao-paulo/">Linkedin</a></p></li>
+<li><p><a href="https://www.meetup.com/rladies-sao-paulo/">Meetup</a></p></li>
+<li><p><a href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo">Youtube</a></p></li>
+<li><p><a href="https://twitter.com/RLadiesSaoPaulo">Twitter</a></p></li>
+<li><p><a href="https://instagram.com/rladiessaopaulo">Instagram</a></p></li>
+</ul>
+</section>
+<section id="autoria" class="level2">
+<h2 class="anchored" data-anchor-id="autoria">Autoria</h2>
+<p>Post escrito colaborativamente, com contribuições de:</p>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/beatrizmilz/">Beatriz Milz</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a></p></li>
+<li><p><a href="https://www.linkedin.com/in/ornella-scardua-3861542a3/">Ornella Scardua Ferreira</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

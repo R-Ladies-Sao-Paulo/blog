@@ -23,7 +23,7 @@ draft: false # enquanto estiver draft: true, o post é um rascunho
 
 </center>
 
-Este post foi escrito por **Ornella Scardua Ferreira: **.
+Este post foi escrito por **[Ornella Scardua Ferreira](http://lattes.cnpq.br/7897610509758219): **.
 
 *"Amo gráficos como amo cavalos. Gosto de música ruim e de cinema (bom). Sou apaixonada pelo Botafogo e pelo Bayern de Munique. Prefiro Vila Velha a qualquer lugar no mundo. Não tenho sonhos, mas um dia espero ver a Palestina livre."* 
 :::

@@ -57,6 +57,7 @@ gerar_lista_contrib <- function() {
        tibble::add_row(logins = "https://www.linkedin.com/in/katia-mine-kem2710/", avatar = "img/katia-mine.jpg") |>
      tibble::add_row(logins = "https://www.linkedin.com/in/michelecaramigo/", avatar = "img/michele-caramigo.jpg") |>
       tibble::add_row(logins = "https://www.linkedin.com/in/angelavalle/", avatar = "img/angela-valle.jpg") |>
+          tibble::add_row(logins = "https://www.linkedin.com/in/brunagarbes/", avatar = "img/bruna-garbes.jpeg") |>
     
     dplyr::mutate(
       url = dplyr::if_else(

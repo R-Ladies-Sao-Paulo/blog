@@ -10,7 +10,103 @@
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 05 Dec 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>As metas foram atualizadas com sucesso!</title>
+  <dc:creator>[Bruna Garbes](https://brunagarbes.substack.com/)</dc:creator>
+  <link>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Autoria
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/foto_profile2.jpeg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bruna Garbes</figcaption>
+</figure>
+</div>
+<p><a href="https://github.com/brunagarbes"><i class="bi bi-github"></i></a> <a href="https://www.linkedin.com/in/brunagarbes/"><i class="bi bi-linkedin"></i></a> <a href="https://www.instagram.com/mardedados/"><i class="bi bi-instagram"></i></a></p>
+</center>
+<p>Este post foi escrito por Bruna Garbes, integrante da comunidade R-Ladies São Paulo! Bruna é formada em Ciência e Tecnologia pela Universidade Federal do ABC (UFABC) e possui mestrado em Bioinformática pelo Instituto de Matemática e Estatística da USP (IME-USP). Atualmente é <strong>cientista de dados no Hospital Israelita Albert Einstein</strong> onde trabalha como modelos de inteligência artificial baseados em aprendizado profundo para a interpretação de imagens médicas.</p>
+</div>
+</div>
+</div>
+<section id="planejando-o-2024-da-r-ladies-sp" class="level2">
+<h2 class="anchored" data-anchor-id="planejando-o-2024-da-r-ladies-sp">Planejando o 2024 da R-Ladies SP</h2>
+<p>O ano aqui nas R-Ladies São Paulo já começou com tudo! No primeiro fim de semana de janeiro tivemos nossa <strong>reunião de planejamento</strong> das atividades que queremos oferecer agora em 2024. Como já é de praxe nos nossos encontros, fizemos um cafezinho colaborativo e passamos <em>post-its</em> para as pessoas participantes colocarem as suas ideias de temas e assuntos que elas julgassem interessante de trazer para a roda. Montamos um painel de propostas bem bonito que deu um orgulho danado de se ver!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Painel lindíssimo com nossas sugestões para 2024 😍</figcaption>
+</figure>
+</div>
+<p>Tivemos quatro 4 grandes temas comentados na reunião: <strong>tipos e formatos de eventos</strong>, <strong>formas de financiamento da comunidade</strong>, <strong>manutenção do nosso famoso gugudadados</strong> e, por fim, a <strong>organização das nossas mídias e comunicação</strong>.</p>
+<p>As ideias foram bastante numerosas e é difícil trazer todas neste post aqui, mas um dos temas que vale a pena comentar, porque ele define a execução de várias iniciativas que queremos manter e, quem sabe até expandir, é a <strong>criação de estratégias de financiamento do nosso grupo</strong>.</p>
+</section>
+<section id="formas-de-financiamento-da-comunidade" class="level2">
+<h2 class="anchored" data-anchor-id="formas-de-financiamento-da-comunidade">Formas de financiamento da comunidade</h2>
+<p>Ano passado tivemos a alegria de sermos contempladas por um financiamento do <a href="https://www.r-consortium.org/"><em>R Consortium</em></a>, um grupo organizado sob um modelo de governança e fundação de código aberto (<em>open source</em>) para apoiar a comunidade mundial de usuários, mantenedores e desenvolvedores de software R.</p>
+<p>Esse <em>grant</em> nos permitiu o pagamento do domínio do nosso <em>site</em> e o oferecimento de auxílios de transporte e de alimentação para pessoas com menos recursos, a fim de garantir a participação dessas pessoas nos nossos encontros presenciais.</p>
+<p>Além disso, também foi com este recurso que garantimos o pagamento da equipe do espaço <strong>Gugudadados</strong>, uma área reservada às crianças e com a presença de uma cuidadora para auxiliar na monitoria dos pequenos, enquanto as mães participam das atividades com R. É interessante comentar que essa iniciativa atraiu os olhares de outras comunidades que vieram nos perguntar como conseguimos conduzir essa iniciativa. Futuramente teremos post exclusivo sobre o tema, pois como disse a nossa querida <a href="https://www.instagram.com/dadoseambiente/">Beatriz Milz</a> no encontro:</p>
+<blockquote class="blockquote">
+<p><em>“Se você explicar alguma coisa ou ideia para mais de duas pessoas, este tema merece um post nas redes!”</em></p>
+</blockquote>
+<p>Para garantir a continuidade dessas iniciativas pensamos, para além de continuar a nos candidatar a esses pedidos de <em>grants</em>, também iniciar campanhas de financiamento como apoia-se, promover a ideia de filantropia com eventos nas redes com campanhas do tipo <strong>“dia do pix”</strong> e até mesmo com a venda de produtos personalizados, como canecas e camisetas.</p>
+<p>Enfim, vocês irão nos ver e ouvir falar sobre este tema ainda muito mais, pois ele é fundamental para gente alcançar os grupos minorizados que a gente conseguiu e quer continuar alcançando.</p>
+</section>
+<section id="eventos" class="level2">
+<h2 class="anchored" data-anchor-id="eventos">Eventos</h2>
+<p>Falando sobre os eventos que queremos para 2024, discutimos bastante a ideia de propormos cursos e <em>meetups</em> mais sequenciais, com temas mais relacionados entre si para podermos justamente aprofundar os conceitos e ir além da introdução. Junto a isso, também comentamos a ideia de promover eventos tanto nos formatos presenciais quanto online de forma alternada para garantir o melhor dos dois mundos. A gente sabe que essas definições dependem bastante dos espaços e das palestrantes que conseguirmos, mas do nosso lado já começamos a desenhar uma programação e em breve devemos divulgar por aqui. A dica é: fiquem de olho nas nossas redes! 🤣</p>
+</section>
+<section id="redes-sociais" class="level2">
+<h2 class="anchored" data-anchor-id="redes-sociais">Redes sociais</h2>
+<p>Por falar em redes, devemos nos movimentar mais nelas em 2024. Dividimos as pessoas conforme suas afinidades por redes. Eu, Bruna, que vos falo neste momento, ficarei na turma do <em>insta</em>. Ainda temos vagas para as <em>tik tokers</em>, quem topa? 😁</p>
+</section>
+<section id="metas-para-2024" class="level2">
+<h2 class="anchored" data-anchor-id="metas-para-2024">Metas para 2024</h2>
+<p>Para encerrar este post de metas para 2024 e vocês não ficarem se perguntando “ué, mas cadê as metas desta comunidade?”, aqui vai as metas (e resultados-chave, meus amores) das R-Ladies SP para este ano:</p>
+<ul>
+<li><strong>Objetivo 1:</strong> Fazer mais eventos
+<ul>
+<li><strong>Resultados-chave:</strong> Em 2024, queremos fazer 6 encontros presenciais e 6 encontros online.</li>
+</ul></li>
+<li><strong>Objetivo 2:</strong> Movimentar mais as redes sociais
+<ul>
+<li><strong>Resultados-chave:</strong> Em 2024, queremos fazer um post nas redes sociais a cada 15 dias.</li>
+</ul></li>
+<li><strong>Objetivo 3:</strong> Recursos financeiros
+<ul>
+<li><strong>Resultados-chave:</strong> Garantir o valor de R$ 500 reais para cada evento presencial (valor médio que estimamos ser adequado para executar um evento nosso). Garantir o valor para pagamento anual de contas extras de serviço, como domínio de site e serviços como o Canvas para o time de comunicação do grupo.</li>
+</ul></li>
+</ul>
+<p>Fala se essa comunidade não é organizada? Não sou virginiana, mas adorei!</p>
+<p>Feliz 2024!😘</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Novidades</category>
+  <category>Planejamento</category>
+  <category>Eventos</category>
+  <guid>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/index.html</guid>
+  <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>O blog da R-Ladies São Paulo completa um ano! 🎉</title>
   <dc:creator>Beatriz Milz</dc:creator>

@@ -29,7 +29,7 @@ Esse post contém alguns trocadilhos e referências musicais. Dá o play na play
 :::
 
 ```{=html}
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZFzKJSyLCAa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5SrfK1j89eLJKOXRsCIoyR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 ```
 # 1. Análise das músicas com spotifyR
 
@@ -80,22 +80,18 @@ Quantas faixas cada álbum tem? Há algumas maneiras de fazer isso, mas vou util
 ```{r}
 #| warning: false
 #| message: false
-rita_features |>
-  group_by(album_name, album_release_year) |>
-  summarise(faixas = n()) |>
-  arrange(desc(faixas)) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = "Quantidade de faixas por álbum"
-  )
+rita_features |> 
+  group_by(album_name, album_release_year) |> 
+  summarise(faixas=n()) |> 
+  arrange(desc(faixas)) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(
+scrollX = FALSE, 
+paging=TRUE,
+fixedHeader=TRUE,
+class = (c('compact', 'row-border', "hover", "nowrap" ))
+),
+          caption="Tabela 1 - Quantidade de faixas por álbum")
 ```
 
 #### 
@@ -112,22 +108,14 @@ Será que isso significa que o "Em Bossa 'N Roll (Edição Comemorativa - 25 Ano
 ```{r}
 #| warning: false
 #| message: false
-rita_features |>
-  group_by(album_name, album_release_year) |>
-  summarise("duracao" = sum(duration_ms)) |>
-  arrange(desc(duracao)) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption =  "Duração de cada álbum da Rita Lee, em milissegundos"
-  )
+rita_features |> 
+  group_by(album_name, album_release_year) |> 
+  summarise("duracao" = sum(duration_ms)) |> 
+  arrange(desc(duracao)) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 2 - Duração de cada álbum da Rita Lee, em milissegundos")
 ```
 
 #### 
@@ -137,7 +125,7 @@ Quase! É de se imaginar que os álbuns ao vivo, coletâneas e remixes apareçam
 Para evitar problemas com álbuns homônimos, criei uma nova coluna incluindo "nome do álbum - ano de lançamento".
 
 ```{r}
-rita_features <- rita_features |>
+rita_features <- rita_features |> 
   mutate(album = paste(album_name, "-", album_release_year))
 ```
 
@@ -146,7 +134,7 @@ rita_features <- rita_features |>
 Para as próximas análises, vamos considerar apenas os álbuns da discografia em estúdio da Rita Lee, [de acordo com Wikipedia](https://pt.wikipedia.org/wiki/Discografia_de_Rita_Lee). Criei um novo objeto, o `rita_filtrado` só com essa lista.
 
 ```{r}
-rita_filtrado <- subset(rita_features, album_name %in% c("Build Up", "Hoje É O Primeiro Dia Do Resto Da Sua Vida", "Atrás Do Porto Tem Uma Cidade", "Fruto Proibido", "Entradas E Bandeiras", "Babilônia", "Rita Lee", "Rita Lee", "Saúde", "Flagra", "Bombom", "Rita E Roberto", "Flerte Fatal", "Zona Zen", "Rita Lee E Roberto De Carvalho", "Rita Lee", "Santa Rita De Sampa", "Rita Lee 3001", "Aqui, Ali, Em Qualquer Lugar", "Balacobaco", "Reza"))
+rita_filtrado <- subset(rita_features, album_name %in% c('Build Up', 'Hoje É O Primeiro Dia Do Resto Da Sua Vida', 'Atrás Do Porto Tem Uma Cidade', 'Fruto Proibido', 'Entradas E Bandeiras', 'Babilônia', 'Rita Lee', 'Rita Lee', 'Saúde', 'Flagra', 'Bombom', 'Rita E Roberto', 'Flerte Fatal', 'Zona Zen', 'Rita Lee E Roberto De Carvalho', 'Rita Lee', 'Santa Rita De Sampa', 'Rita Lee 3001', 'Aqui, Ali, Em Qualquer Lugar','Balacobaco','Reza'))
 ```
 
 ## 1.2. "Mas louco é quem me diz e não é feliz"
@@ -179,22 +167,14 @@ Quero ver qual é o álbum mais positivo. Para isso, escolhi a mediana da valên
 ```{r}
 #| warning: false
 #| message: false
-rita_filtrado |>
-  group_by(album) |>
-  summarise_at(vars(valence), list(mediana = median)) |>
-  arrange(desc(mediana)) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = "Mediana da valência de cada álbum da Rita Lee"
-  )
+rita_filtrado |> 
+  group_by(album) |>  
+  summarise_at(vars(valence), list(mediana=median)) |> 
+  arrange(desc(mediana)) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 3 - Mediana da valência de cada álbum da Rita Lee")
 ```
 
 #### 
@@ -205,17 +185,10 @@ Podemos representar a distribuição do atributo valência em cada álbum visual
 #| warning: false
 #| message: false
 rita_filtrado |>
-  arrange(album_release_year) |>
-  mutate(album = factor(album, levels = rev(unique(
-    rita_filtrado$album
-  )))) |>
-  ggplot(aes(x = valence, y = album, fill = album)) +
-  geom_density_ridges(
-    from = 0,
-    to = 1,
-    alpha = 1,
-    size = 0.1
-  ) +
+  arrange(album_release_year) |>   
+  mutate(album=factor(album, levels = rev(unique(rita_filtrado$album)))) |>  
+  ggplot(aes(x= valence, y= album, fill= album)) +
+  geom_density_ridges(from = 0, to = 1, alpha = 1, size = 0.1) + 
   labs(
     x = "Escala de valência",
     y = "",
@@ -223,31 +196,17 @@ rita_filtrado |>
     subtitle = "Valência: Faixas com maiores níveis de valência soam mais positivas e vice-versa",
     caption = "por Bianca Muniz (@biancamuniz__) | Fonte: Spotify's Web API"
   ) +
-  scale_fill_cyclical(values = c("#9A373F")) +
+  scale_fill_cyclical(
+    values = c("#9A373F")
+  ) +
   theme_ridges() +
   theme(
-    plot.title = element_text(
-      hjust = 0.5,
-      size = 12,
-      color = "#000000",
-      face = "bold",
-      family = "Bitter"
-    ),
+    plot.title = element_text(hjust = 0.5, size = 12, color = "#000000", face = "bold", family = "Bitter"),
     plot.title.position = "plot",
-    plot.subtitle = element_text(
-      face = "italic",
-      hjust = 0.5,
-      size = 10,
-      family = "Bitter"
-    ),
+    plot.subtitle = element_text(face = "italic", hjust = 0.5, size = 10, family = "Bitter"),
     axis.text.y = element_text(size = 10, family = "Raleway"),
-    axis.title.x = element_text(
-      hjust = 0.5,
-      size = 11,
-      family = "Raleway"
-    ),
-    plot.caption = element_text(size = 9, family = "Bitter")
-  )
+    axis.title.x = element_text(hjust = 0.5, size = 11, family = "Raleway"),
+    plot.caption = element_text(size = 9, family = "Bitter"))
 ```
 
 #### 
@@ -264,49 +223,23 @@ Vamos analisar a **energia** das músicas da rainha do rock. Diferentemente da e
 #| warning: false
 #| message: false
 rita_filtrado |>
-  arrange(album_release_year) |>
-  mutate(album = factor(album, levels = rev(unique(
-    rita_filtrado$album
-  )))) |>
-  ggplot(aes(x = energy, y = album, fill = album)) +
-  geom_density_ridges(
-    from = 0,
-    to = 1,
-    alpha = 1,
-    size = 0.1
-  ) +
-  labs(
-    x = "Escala de energia",
-    y = "",
+  arrange(album_release_year) |>   
+  mutate(album=factor(album, levels = rev(unique(rita_filtrado$album)))) |>  
+  ggplot(aes(x= energy, y= album, fill= album))+
+  geom_density_ridges(from = 0, to = 1, alpha = 1, size = 0.1) +
+  labs(x = "Escala de energia", y = "",
     title = "Distribuição da energia das músicas de Rita Lee por álbum",
     subtitle = "Energia: Faixas com maiores níveis de energia são mais rápidas e altas e vice-versa",
-    caption = "por Bianca Muniz (@biancamuniz__) | Fonte: Spotify's Web API"
-  ) +
+    caption = "por Bianca Muniz (@biancamuniz__) | Fonte: Spotify's Web API") +
   scale_fill_cyclical(values = c("#9A373F")) +
-  theme_ridges() +
+  theme_ridges()+ 
   theme(
-    plot.title = element_text(
-      hjust = 0.5,
-      size = 12,
-      color = "#000000",
-      face = "bold",
-      family = "Bitter"
-    ),
+    plot.title = element_text(hjust = 0.5, size = 12, color = "#000000", face = "bold", family = "Bitter"),
     plot.title.position = "plot",
-    plot.subtitle = element_text(
-      face = "italic",
-      hjust = 0.5,
-      size = 10,
-      family = "Bitter"
-    ),
+    plot.subtitle = element_text(face = "italic", hjust = 0.5, size = 10, family = "Bitter"),
     axis.text.y = element_text(size = 10, family = "Raleway"),
-    axis.title.x = element_text(
-      hjust = 0.5,
-      size = 11,
-      family = "Raleway"
-    ),
-    plot.caption = element_text(size = 9, family = "Bitter")
-  )
+    axis.title.x = element_text(hjust = 0.5, size = 11, family = "Raleway"),
+    plot.caption = element_text(size = 9, family = "Bitter"))
 ```
 
 #### 
@@ -323,22 +256,14 @@ Aprofundando na análise, o próximo passo é ver quais as músicas com mais ene
 ```{r}
 #| warning: false
 #| message: false
-rita_filtrado |>
-  select(track_name, album_name, energy) |>
-  top_n(5) |>
-  arrange(-energy) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = "Músicas mais energéticas"
-  )
+rita_filtrado |> 
+  select(track_name, album_name, energy) |> 
+  top_n(5) |> 
+  arrange(-energy) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 3 - Músicas mais energéticas')
 ```
 
 #### 
@@ -374,22 +299,14 @@ Veja como a dançabilidade se mostra nos álbuns de Rita: primeiro, com a median
 ```{r}
 #| warning: false
 #| message: false
-rita_filtrado |>
-  group_by(album) |>
-  summarise_at(vars(danceability), list(danceabilidade = median)) |>
-  arrange(desc(danceabilidade)) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    cap = "Mediana da dançabilidade de cada álbum da Rita Lee"
-  )
+rita_filtrado |> 
+  group_by(album) |>  
+  summarise_at(vars(danceability), list(danceabilidade=median)) |> 
+  arrange(desc(danceabilidade)) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 4 - Mediana da dançabilidade de cada álbum da Rita Lee")
 ```
 
 #### 
@@ -398,17 +315,11 @@ rita_filtrado |>
 #| warning: false
 #| message: false
 rita_filtrado |>
-  arrange(album_release_year) |>
-  mutate(album = factor(album, levels = rev(unique(
-    rita_filtrado$album
-  )))) |>
-  ggplot(aes(x = danceability, y = album, fill = album)) +
-  geom_density_ridges(
-    from = 0,
-    to = 1,
-    alpha = 1,
-    size = 0.1
-  ) +
+  arrange(album_release_year) |>   
+  mutate(album=factor(album, levels = rev(unique(rita_filtrado$album)))) |>  
+  ggplot(aes(x= danceability, y= album, fill= album)
+  )+
+  geom_density_ridges(from = 0, to = 1, alpha = 1, size = 0.1) +
   labs(
     x = "Escala de dançabilidade",
     y = "",
@@ -417,30 +328,14 @@ rita_filtrado |>
     caption = "por Bianca Muniz (@biancamuniz__) | Fonte: Spotify's Web API"
   ) +
   scale_fill_cyclical(values = c("#9A373F")) +
-  theme_ridges() +
+  theme_ridges()+ 
   theme(
-    plot.title = element_text(
-      hjust = 0.5,
-      size = 12,
-      color = "#000000",
-      face = "bold",
-      family = "Bitter"
-    ),
+    plot.title = element_text(hjust = 0.5, size = 12, color = "#000000", face = "bold", family = "Bitter"),
     plot.title.position = "plot",
-    plot.subtitle = element_text(
-      face = "italic",
-      hjust = 0.5,
-      size = 10,
-      family = "Bitter"
-    ),
+    plot.subtitle = element_text(face = "italic", hjust = 0.5, size = 10, family = "Bitter"),
     axis.text.y = element_text(size = 10, family = "Raleway"),
-    axis.title.x = element_text(
-      hjust = 0.5,
-      size = 11,
-      family = "Raleway"
-    ),
-    plot.caption = element_text(size = 9, family = "Bitter")
-  )
+    axis.title.x = element_text(hjust = 0.5, size = 11, family = "Raleway"),
+    plot.caption = element_text(size = 9, family = "Bitter"))
 ```
 
 #### 
@@ -480,7 +375,7 @@ rita_filtrado$track_name[which.min(rita_filtrado$instrumentalness)]
 
 Antes de passar para o R, vamos fazer a raspagem do site letras.mus.br com Python (aquela linguagem do logo de cobrinha). Para isso, é preciso importar algumas bibliotecas:
 
-``` python
+```{python}
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -488,7 +383,7 @@ import pandas as pd
 
 A url utilizada será a da página da Rita no site:
 
-``` python
+```{python}
 url = 'https://www.letras.mus.br/rita-lee/'
 ```
 
@@ -496,7 +391,7 @@ O bloco de código abaixo explica a raspagem da página: quero que encontre o li
 
 No final, salva o resultado em um arquivo CSV pra analisarmos com R!
 
-``` python
+```{python}
 # Realiza a requisição HTTP para obter o HTML da página
 response = requests.get(url)
 
@@ -549,22 +444,14 @@ glimpse(letras)
 O dataframe tem três colunas e mais de 7 mil linhas! Vamos olhar qual a música com mais versos:
 
 ```{r}
-letras |>
-  group_by(nome) |>
-  summarise(qtd_de_versos = n()) |>
-  arrange(desc(qtd_de_versos)) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = "Quantidade de versos por música na página da Rita Lee no site letras.mus.br"
-  )
+letras |> 
+  group_by(nome) |> 
+  summarise(qtd_de_versos=n()) |> 
+  arrange(desc(qtd_de_versos)) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 5 - Quantidade de versos por música na página da Rita Lee no site letras.mus.br")
 ```
 
 #### 
@@ -586,7 +473,7 @@ Convertendo todo o texto da coluna "verso" para letras minúsculas:
 ```{r}
 #| warning: false
 #| message: false
-letras <- letras |>
+letras <- letras |> 
   mutate(verso = tolower(verso))
 ```
 
@@ -609,25 +496,15 @@ A tokenização é um processo de dividir um texto em unidades menores, chamadas
 ```{r}
 #| warning: false
 #| message: false
-
-
 tidy_letras <- letras
-tidy_letras <- tidy_letras |>
+tidy_letras <- tidy_letras |> 
   unnest_tokens(palavra, verso)
 
-tidy_letras |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = "Músicas de Rita Lee, tokenizadas por palavra"
-  )
+tidy_letras|> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 6 - Músicas de Rita Lee, tokenizadas por palavra")
 ```
 
 #### 
@@ -646,9 +523,9 @@ tidy_letras <- subset(tidy_letras, palavra != "")
 ```{r}
 #| warning: false
 #| message: false
-wordcloud <- tidy_letras |>
-  group_by(palavra) |>
-  summarise(ocorrências = n()) |>
+wordcloud <- tidy_letras |> 
+ group_by(palavra) |> 
+  summarise(ocorrências = n()) |> 
   arrange(desc(ocorrências))
 wordcloud <- na.omit(wordcloud)
 ```
@@ -660,26 +537,15 @@ Agora os dados estão prontos para formar a nuvem de palavras com os termos mais
 ```{r}
 #| warning: false
 #| message: false
-wordcloud |>
-  filter(ocorrências > 10) |>
-  wordcloud2(
-    size = 1,
-    minSize = 0.8,
-    gridSize = 1,
-    fontFamily = "Bitter",
-    fontWeight = "bold",
-    color = "#9A373F",
-    backgroundColor = "white",
-    minRotation = -pi / 4,
-    maxRotation = pi / 4,
-    shuffle = FALSE,
-    rotateRatio = 0,
-    shape = "circle",
-    ellipticity = 1,
-    widgetsize = NULL,
-    figPath = NULL,
-    hoverFunction = NULL
-  )
+wordcloud |> 
+  filter(ocorrências > 10) |> 
+  wordcloud2(size = 1, minSize = 0.8, gridSize = 1,
+           fontFamily = 'Bitter', fontWeight = 'bold',
+           color = "#9A373F",
+           backgroundColor = "white",
+           minRotation = -pi/4, maxRotation = pi/4, shuffle = FALSE,
+           rotateRatio = 0, shape = 'circle', ellipticity = 1,
+           widgetsize = NULL, figPath = NULL, hoverFunction = NULL)
 ```
 
 #### 
@@ -689,19 +555,10 @@ As palavras mais frequentes, no formato de tabela:
 ```{r}
 #| warning: false
 #| message: false
-wordcloud |> 
-  datatable(
-  extensions = c("FixedColumns", "FixedHeader"),
-  options = list(
-    scrollX = FALSE,
-    paging = TRUE,
-    fixedHeader = TRUE,
-    class = (c(
-      "compact", "row-border", "hover", "nowrap"
-    ))
-  ),
-  caption = "Quantidade de palavras nas música da página da Rita Lee"
-)
+wordcloud |> datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption="Tabela 7 - Quantidade de palavras nas música da página da Rita Lee")
 ```
 
 #### 
@@ -719,62 +576,45 @@ bigramas_rita <- bigrama_letras |>
   select(nome, verso) |>
   unnest_tokens(bigram, verso, token = "ngrams", n = 2) |>
   separate(bigram, c("word1", "word2"), sep = " ") |>
-  filter(!word1 %in% my_stopwords) |>
-  filter(!word2 %in% my_stopwords) |>
+  filter(!word1 %in% my_stopwords) |> 
+  filter(!word2 %in% my_stopwords) |> 
   subset(word1 != "") |>
-  subset(word2 != "") |>
-  mutate(bigrama = paste(word1, word2, sep = " "))
+  subset(word2 != "") |> 
+  mutate(bigrama = paste(word1, word2, sep = " ")) 
 
 bigramas_rita <- unique(bigramas_rita)
 
-bigramas_rita2 <- bigramas_rita |>
+bigramas_rita2 <- bigramas_rita |> 
   dplyr::count(bigrama, sort = TRUE)
 
-ggplot(head(bigramas_rita2, 20), aes(reorder(bigrama, n), n)) +
-  geom_bar(stat = "identity", fill = "#9A373F") +
-  coord_flip() +
-  labs(x = "",
-       title = "Bigramas mais frequentes",
-       caption = "por Bianca Muniz (@biancamuniz__) | Fonte: letras.mus.br") +
-  theme_minimal() +
+ggplot(head(bigramas_rita2,20), aes(reorder(bigrama,n), n)) +
+  geom_bar(stat = "identity", fill = "#9A373F") + coord_flip() +
+  labs(
+    x = "",
+    title = "Bigramas mais frequentes",
+    caption = "por Bianca Muniz (@biancamuniz__) | Fonte: letras.mus.br"
+  )+
+  theme_minimal()+
   theme(
     plot.background = element_rect(fill = "white", colour = "white"),
     panel.background = element_rect(fill = "white", colour = "white"),
-    plot.title = element_text(
-      hjust = 0.5,
-      size = 20,
-      color = "#000000",
-      face = "bold",
-      family = "Bitter"
-    ),
+    plot.title=element_text(hjust = 0.5, size = 20, color = "#000000", face="bold", family = "Bitter"),
     plot.title.position = "plot",
-    plot.caption = element_text(size = 10, family = "Bitter"),
-    plot.subtitle = element_text(
-      face = "italic",
-      hjust = 0.5,
-      size = 16,
-      family = "Raleway"
-    ),
-    axis.text.y = element_text(
-      size = 10,
-      face = "bold",
-      family = "Raleway"
-    ),
-    axis.text.x = element_blank(),
-    # Remove os valores do eixo x
-    axis.ticks.x = element_blank(),
-    # Remove as marcações do eixo x
-    axis.title.x = element_blank(),
-    # Remove o título do eixo x
+    plot.caption = element_text(size=10, family = "Bitter"),
+    plot.subtitle=element_text(face="italic", hjust = 0.5, size=16, family = "Raleway"),
+    axis.text.y = element_text(size = 10, face="bold", family = "Raleway"),
+    axis.text.x = element_blank(), # Remove os valores do eixo x
+    axis.ticks.x = element_blank(), # Remove as marcações do eixo x
+    axis.title.x = element_blank(), # Remove o título do eixo x
     panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),
     panel.border = element_blank(),
     axis.line = element_blank()
   ) +
-  geom_text(aes(label = n),
-            hjust = -0.5,
-            size = 4,
-            family = "Bitter")
+  geom_text(aes(label=n), hjust=-0.5, size=4, family = "Bitter") 
+
+
+
 ```
 
 #### 
@@ -798,20 +638,12 @@ Olhando como o bigrama mais frequente, "pra mim", se insere nas frases:
 
 ```{r}
 letras |>
-  filter(str_detect(verso_limpo, "pra mim")) |>
-  select(X, nome, verso) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ), 
-    caption = 'Bigrama "pra mim" inserido em versos'
-  )
+  filter(str_detect(verso_limpo, "pra mim")) |> 
+  select(X, nome, verso) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE, fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 8 - Bigrama "pra mim" inserido em versos')
 ```
 
 #### 
@@ -820,60 +652,36 @@ As palavras "tão", "tudo" e "todo" têm em comum o fato de serem palavras relac
 
 ```{r}
 letras |>
-  filter(str_detect(verso_limpo, "é tão")) |>
-  select(X, nome, verso) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = 'Bigrama "é tão" inserido em versos'
-  )
+  filter(str_detect(verso_limpo, "é tão")) |> 
+  select(X, nome, verso) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 9 - Bigrama "é tão" inserido em versos')
 ```
 
 #### 
 
 ```{r}
 letras |>
-  filter(str_detect(verso_limpo, "todo mundo")) |>
-  select(X, nome, verso) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = 'Bigrama "todo mundo" inserido em versos'
-  )
+  filter(str_detect(verso_limpo, "todo mundo")) |> 
+  select(X, nome, verso) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 10 - Bigrama "todo mundo" inserido em versos')
 ```
 
 #### 
 
 ```{r}
 letras |>
-  filter(str_detect(verso_limpo, "tudo é")) |>
-  select(X, nome, verso) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption =  'Bigrama "tudo é" inserido em versos'
-  )
+  filter(str_detect(verso_limpo, "tudo é")) |> 
+  select(X, nome, verso) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 11 - Bigrama "tudo é" inserido em versos')
 ```
 
 #### 
@@ -886,20 +694,12 @@ Tomados em conjunto, penso num reflexo da "porralouquice" de Rita, de seu compor
 
 ```{r}
 letras |>
-  filter(str_detect(verso_limpo, "ser feliz")) |>
-  select(X, nome, verso) |>
-  datatable(
-    extensions = c("FixedColumns", "FixedHeader"),
-    options = list(
-      scrollX = FALSE,
-      paging = TRUE,
-      fixedHeader = TRUE,
-      class = (c(
-        "compact", "row-border", "hover", "nowrap"
-      ))
-    ),
-    caption = 'Bigrama "ser feliz" inserido em versos'
-  )
+  filter(str_detect(verso_limpo, "ser feliz")) |> 
+  select(X, nome, verso) |> 
+  datatable(extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = FALSE, paging=TRUE,fixedHeader=TRUE,
+                         class = (c('compact', 'row-border', "hover", "nowrap" ))),
+          caption='Tabela 12 - Bigrama "ser feliz" inserido em versos')
 ```
 
 #### 

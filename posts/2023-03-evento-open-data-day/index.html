@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Tatyane Paz Dominguez">
 <meta name="author" content="Haydée Svab">
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -83,7 +83,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -92,6 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -105,16 +112,18 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </script><link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="R-Ladies São Paulo - Evento: Análise de dados abertos com R">
 <meta name="twitter:description" content="Um evento parte da iniciativa Open Data Day">
-<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-03-evento-open-data-day/img/logo.jpg">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1600">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../img/logo.jpg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
@@ -128,104 +137,104 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../en.html" rel="" target="">
- <span class="menu-text">English</span></a>
+    <a class="nav-link" href="../../en.html"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../" rel="" target="">
- <span class="menu-text">Página inicial</span></a>
+    <a class="nav-link" href="../../"> 
+<span class="menu-text">Página inicial</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">R-Ladies SP</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">
 <li>
-    <a class="dropdown-item" href="../../sobre.html" rel="" target="">
+    <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../como-participar.html" rel="" target="">
+    <a class="dropdown-item" href="../../como-participar.html">
  <span class="dropdown-text">Como participar?</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Blog</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
 <li>
-    <a class="dropdown-item" href="../../contribuir-com-o-blog.html" rel="" target="">
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html">
  <span class="dropdown-text">Como contribuir com o blog?</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../sugestoes.html" rel="" target="">
+    <a class="dropdown-item" href="../../sugestoes.html">
  <span class="dropdown-text">Sugestão de conteúdos</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../videos.html" rel="" target="">
- <span class="menu-text">Videos</span></a>
+    <a class="nav-link" href="../../videos.html"> 
+<span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../eventos.html" rel="" target="">
- <span class="menu-text">Próximos eventos</span></a>
+    <a class="nav-link" href="../../eventos.html"> 
+<span class="menu-text">Próximos eventos</span></a>
   </li>  
 </ul>
 <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"> <i class="bi bi-youtube" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/"> <i class="bi bi-person-plus" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:certificados.rladiessp@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:certificados.rladiessp@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
 <li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
  <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog">
  <span class="dropdown-text">Código fonte deste site</span></a>
   </li>  
     </ul>
 </li>
 </ul>
-<div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
@@ -298,14 +307,14 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   <li><a href="#apoios" id="toc-apoios" class="nav-link" data-scroll-target="#apoios"><strong>Apoios</strong></a></li>
   <li><a href="#equipe" id="toc-equipe" class="nav-link" data-scroll-target="#equipe"><strong>Equipe</strong></a></li>
   <li><a href="#pr%C3%B3ximos-eventos" id="toc-próximos-eventos" class="nav-link" data-scroll-target="#pr%C3%B3ximos-eventos"><strong>Próximos eventos</strong></a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-evento-open-data-day/index.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-evento-open-data-day/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução"><strong>Introdução</strong></h2>
 <p>A R-Ladies São Paulo organizou, em 18 de março de 2023, o evento “Análise de Dados Abertos com R - Open Data Day”. A atividade aconteceu em um sábado, durante os períodos da manhã e da tarde, totalizando 6 horas efetivas de atividade.</p>
 <p>O <a href="https://www.insper.edu.br/">Insper</a>, uma instituição sem fins lucrativos dedicada ao ensino e à pesquisa, mais uma vez apoiou o grupo cedendo o espaço para a realização do evento. Outro apoio recebido foi da <a href="https://curso-r.com/">Curso-R</a>, que cedeu dois monitores para auxiliar na monitoria, ajudando nas dúvidas. O principal objetivo deste encontro foi oferecer informações a respeito do que são e da importância dos dados abertos e promover oportunidade de pôr a “mão-na-massa” manipulando dados abertos, além de traçar o cenário atual de acesso a esses dados em vários níveis governamentais e áreas do conhecimento.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </section><section id="o-que-é-o-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-o-open-data-day"><strong>O que é o Open Data Day?</strong></h2>
@@ -313,7 +322,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </section><section id="atividade-principal" class="level2"><h2 class="anchored" data-anchor-id="atividade-principal"><strong>Atividade principal</strong></h2>
 <p>Contando com cerca de 40 pessoas, o dia foi estruturado em quatro blocos. O primeiro bloco teve caráter informativo e contou com uma sequência de breves <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">apresentações</a> como: o que é a comunidade R-Ladies São Paulo, o que é Open Data Day e o que são Dados Abertos.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/atividade-principal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 <p>Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu:</p>
@@ -343,17 +352,17 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <p>Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.</p>
 <table class="table"><tbody>
 <tr class="odd">
-<td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/grupos1.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/grupos2.jpg" class="img-fluid"></a></td>
+<td><img src="images/grupos1.jpg" class="img-fluid"></td>
+<td><img src="images/grupos2.jpg" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td><a href="images/grupos3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/grupos3.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/grupos4.jpg" class="img-fluid"></a></td>
+<td><img src="images/grupos3.jpg" class="img-fluid"></td>
+<td><img src="images/grupos4.jpg" class="img-fluid"></td>
 </tr>
 </tbody></table>
 <p>Então, no terceiro bloco, os grupos trabalharam em importar, entender e começar a explorar os dados abertos de seus respectivos temas. Como muitas pessoas apontaram que não tinham experiência para criar visualizações de dados e tinham interesse em começar, a co-organizadora Beatriz Milz fez uma apresentação curta, em formato live coding, sobre o uso do <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">pacote esquisse para gerar visualizações de dados com ggplot2</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/bea-esquisse.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>No quarto e último bloco, os grupos apresentaram um pouco de suas dificuldades, aprendizados e resultados (alguns inclusive apresentaram visualizações feitas!). Foram apresentações interessantes que refletiram os tópicos abordados nas apresentações iniciais sobre dados abertos - por exemplo, alguns grupos indicaram lidar com base desatualizada, outros apontaram que dados estavam agregados e poderiam ser disponibilizados em forma de microdados, entre outros.</p>
@@ -365,23 +374,29 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
+<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/coffe.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="274"></a></p>
 </figure>
 </div>
 </div></div></div>
 <p>O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a>, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!</p>
 </section><section id="espaço-gugudadados" class="level3"><h3 class="anchored" data-anchor-id="espaço-gugudadados"><strong>Espaço Gugudadados</strong></h3>
 <p>O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a> foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.</p>
-<table class="table"><tbody>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
 <tr class="odd">
-<td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/gugudadados1.jpeg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></a></td>
+<td><img src="images/gugudadados1.jpeg" class="img-fluid"></td>
+<td><img src="images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></td>
 </tr>
 <tr class="even">
-<td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/gugudadados3.jpg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/gugudadados4.jpg" class="img-fluid"></a></td>
+<td><img src="images/gugudadados3.jpg" class="img-fluid"></td>
+<td><img src="images/gugudadados4.jpg" class="img-fluid"></td>
 </tr>
-</tbody></table></section></section><section id="resultados-dos-grupos" class="level2"><h2 class="anchored" data-anchor-id="resultados-dos-grupos"><strong>Resultados dos grupos</strong></h2>
+</tbody>
+</table></section></section><section id="resultados-dos-grupos" class="level2"><h2 class="anchored" data-anchor-id="resultados-dos-grupos"><strong>Resultados dos grupos</strong></h2>
 <section id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno"><strong>Grupo de dados educacionais (Monitora Ana Carolina Moreno)</strong></h3>
 <p>A monitora apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>. A monitora também preparou uma <a href="https://bit.ly/rladies_odd_2023">apresentação sobre dados educacionais</a>, para auxiliar no entendimento das diferentes fontes e bases de dados disponíveis sobre educação.</p>
 <p>Os dados utilizados podem ser obtidos <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">no site do INEP</a>.&nbsp;</p>
@@ -391,7 +406,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </section><section id="grupo-de-dados-ambientais-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-ambientais-bianca-muniz"><strong>Grupo de dados ambientais (Bianca Muniz):</strong></h3>
 <p>Este grupo explorou dados sobre focos de queimadas, no sistema BDQueimadas do INPE. Esse sistema permite fazer downloads de dados num período de até um ano. A monitora preparou uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">apresentação sobre os dados utilizados</a>. O grupo exportou os dados referentes à 2020 até 2022, e o gráfico a seguir permite ver a quantidade de focos de queimada por mês, segundo o bioma onde o foco de queimada acontece. É possível perceber no gráfico que os biomas com maiores focos de incêndio são a Amazônia e o Cerrado, e apresentam padrões sazonais. O maior pico de focos de queimadas na Amazônia no período pesquisado aconteceu no segundo semestre de 2022.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/resultado-queimadas.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Os dados utilizados podem ser obtidos <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">no site do INPE - BD QUEIMADAS</a>.</p>
@@ -402,12 +417,12 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </section><section id="grupo-de-dados-de-violência-monitora-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-de-violência-monitora-fernanda-peres"><strong>Grupo de dados de violência (Monitora Fernanda Peres):</strong></h3>
 <p>Este grupo explorou dados públicos sobre violência usando os dados do SINAN - Sistema de Informações de Agravo de Notificações, filtrando ocorrências envolvendo apenas adultos e removendo cacos de violência auto-provocada (por exemplo, suicídio). <strong>O grupo constatou que os dados públicos de Violência no DataSUS estavam desatualizados</strong>. A base referente à 2020 estava incompleta, portanto o grupo explorou dados referentes a 2019. O grupo gerou uma série de gráficos, como o apresentado a seguir, que mostra que a maior quantidade de vítimas é do sexo feminino. Além disso, destaca-se que o autor da agressão na maioria das vezes é do sexo masculino (seja a vítima mulher ou homem).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/resultado-violencia-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Outra ponto percebido é que quando as vítimas são mulheres, o agressor tende a ser alguém conhecido, como cônjuge, ex-cônjuge, namorado ou ex-namorado. Entre os homens, o agressor mais comum é um desconhecido.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/resultado-violencia.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Os dados podem ser obtidos no <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. A monitora fez uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">apresentação</a> sobre como obter esses dados.</p>
@@ -448,7 +463,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, scales <span class="op">=</span> <span class="st">"free_y"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -463,7 +478,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/grafico-genero-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -471,7 +486,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -479,7 +494,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -503,7 +518,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
+<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/escorregador.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="396"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -538,7 +553,7 @@ $ NCaged_IndTransf &lt;dbl&gt; 6924768, 6961283, 6918309, 6705220, 6600422, 6593
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
+<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/stickers.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="364"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -627,10 +642,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -640,8 +674,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -654,6 +697,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -697,6 +859,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -722,6 +885,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -779,34 +968,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script><script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2022, R-Ladies São Paulo</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2023-03-evento-open-data-day/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Página criada com <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 </body></html>

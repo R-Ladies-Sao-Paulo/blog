@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -104,8 +111,35 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="R-Ladies São Paulo" href="en.xml"><meta name="twitter:title" content="R-Ladies São Paulo">
+<link rel="alternate" type="application/rss+xml" title="R-Ladies São Paulo" href="en.xml" data-external="1"><meta name="twitter:title" content="R-Ladies São Paulo">
 <meta name="twitter:description" content="Blog posts translated to English">
 <meta name="twitter:image" content="https://rladies-sp.org/img/logo.jpg">
 <meta name="twitter:creator" content="@beamilz">
@@ -116,10 +150,10 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./img/logo.jpg" alt="" class="navbar-logo">
     </a>
@@ -134,104 +168,104 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./en.html" rel="" target="" aria-current="page">
- <span class="menu-text">English</span></a>
+    <a class="nav-link active" href="./en.html" aria-current="page"> 
+<span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./" rel="" target="">
- <span class="menu-text">Página inicial</span></a>
+    <a class="nav-link" href="./"> 
+<span class="menu-text">Página inicial</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-ladies-sp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">R-Ladies SP</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">    
         <li>
-    <a class="dropdown-item" href="./sobre.html" rel="" target="">
+    <a class="dropdown-item" href="./sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./como-participar.html" rel="" target="">
+    <a class="dropdown-item" href="./como-participar.html">
  <span class="dropdown-text">Como participar?</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-blog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Blog</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
         <li>
-    <a class="dropdown-item" href="./contribuir-com-o-blog.html" rel="" target="">
+    <a class="dropdown-item" href="./contribuir-com-o-blog.html">
  <span class="dropdown-text">Como contribuir com o blog?</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sugestoes.html" rel="" target="">
+    <a class="dropdown-item" href="./sugestoes.html">
  <span class="dropdown-text">Sugestão de conteúdos</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./videos.html" rel="" target="">
- <span class="menu-text">Videos</span></a>
+    <a class="nav-link" href="./videos.html"> 
+<span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./eventos.html" rel="" target="">
- <span class="menu-text">Próximos eventos</span></a>
+    <a class="nav-link" href="./eventos.html"> 
+<span class="menu-text">Próximos eventos</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/company/r-ladies-sao-paulo/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://instagram.com/rladiessaopaulo" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://instagram.com/rladiessaopaulo"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo" rel="" target=""><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/c/RLadiesS%C3%A3oPaulo"> <i class="bi bi-youtube" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/" rel="" target=""><i class="bi bi-person-plus" role="img">
+    <a class="nav-link" href="https://www.meetup.com/rladies-sao-paulo/"> <i class="bi bi-person-plus" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:certificados.rladiessp@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:certificados.rladiessp@gmail.com"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
         <li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo">
  <span class="dropdown-text">GitHub da R-Ladies São Paulo</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/R-Ladies-Sao-Paulo/blog">
  <span class="dropdown-text">Código fonte deste site</span></a>
   </li>  
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -245,7 +279,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -263,10 +297,11 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
   <ul>
   <li><a href="#sponsors" id="toc-sponsors" class="nav-link active" data-scroll-target="#sponsors">Sponsors</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/en.qmd" class="toc-action">Editar essa página</a></p><p><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/en.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
 
 
 
@@ -279,19 +314,19 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Packages,Community,Events" data-listing-date-sort="1701475200000" data-listing-file-modified-sort="1705413397421" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="0" data-categories="Packages,Community,Events" data-listing-date-sort="1701475200000" data-listing-file-modified-sort="1709283601884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1101">
 <div class="thumbnail">
-<p><a href="./posts/2023-12-evento-pacotes/english.html"> <img src="./posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external"></a></p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">
+<p><img src="./posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-12-evento-pacotes/english.html">
 <h3 class="no-anchor listing-title">
-R Packages for Brazilian Data
+<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">R Packages for Brazilian Data</a>
 </h3>
 <div class="listing-subtitle">
-Event of R-Ladies São Paulo
+<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">Event of R-Ladies São Paulo</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Packages'); return false;">
 Packages
@@ -303,10 +338,9 @@ Community
 Events
 </div>
 </div>
-<a href="./posts/2023-12-evento-pacotes/english.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-12-evento-pacotes/english.html">
+<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">
 <div class="listing-date">
 2 de dez. de 2023
 </div>
@@ -316,19 +350,19 @@ Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela V
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="R-Ladies,community,latin america" data-listing-date-sort="1696204800000" data-listing-file-modified-sort="1705413397333" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14">
+<div class="quarto-post image-right" data-index="1" data-categories="R-Ladies,community,latin america" data-listing-date-sort="1696204800000" data-listing-file-modified-sort="1709283601792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2722">
 <div class="thumbnail">
-<p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html"> <p class="card-img-top"><img src="posts/2023-06-05-increasing-diversity-sao-paulo/logo2.jpeg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a></p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-06-05-increasing-diversity-sao-paulo/logo2.jpeg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html">
 <h3 class="no-anchor listing-title">
-Actions to increase diversity in the R-Ladies São Paulo community
+<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">Actions to increase diversity in the R-Ladies São Paulo community</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
 R-Ladies
@@ -340,10 +374,9 @@ community
 latin america
 </div>
 </div>
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html">
+<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">
 <div class="listing-date">
 2 de out. de 2023
 </div>
@@ -353,19 +386,19 @@ Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Roc
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Events,Community,Diversity,English" data-listing-date-sort="1679788800000" data-listing-file-modified-sort="1705413397277" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
+<div class="quarto-post image-right" data-index="2" data-categories="Events,Community,Diversity,English" data-listing-date-sort="1679788800000" data-listing-file-modified-sort="1709283601740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3245">
 <div class="thumbnail">
-<p><a href="./posts/2023-03-evento-open-data-day/english.html"> <img src="./posts/2023-03-evento-open-data-day/images/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external"></a></p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">
+<p><img src="./posts/2023-03-evento-open-data-day/images/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-03-evento-open-data-day/english.html">
 <h3 class="no-anchor listing-title">
-Event: Open Data Analysis with R
+<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">Event: Open Data Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-An event part of the Open Data Day initiative
+<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">An event part of the Open Data Day initiative</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
 Events
@@ -380,10 +413,9 @@ Diversity
 English
 </div>
 </div>
-<a href="./posts/2023-03-evento-open-data-day/english.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-03-evento-open-data-day/english.html">
+<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">
 <div class="listing-date">
 26 de mar. de 2023
 </div>
@@ -402,8 +434,8 @@ Nenhum item correspondente
 <h2 class="anchored" data-anchor-id="sponsors">Sponsors</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" class="img-fluid figure-img" style="width:50.0%" alt="R Consortium Logo"></a></p>
-<figcaption class="figure-caption">R Consortium</figcaption>
+<p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="R Consortium Logo"></a></p>
+<figcaption>R Consortium</figcaption>
 </figure>
 </div>
 
@@ -491,10 +523,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -504,8 +555,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -518,6 +578,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -561,6 +740,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -586,6 +766,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -643,34 +849,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.rladies-sp\.org\/**");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2022, R-Ladies São Paulo</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2022, R-Ladies São Paulo</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">Página criada com <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/en.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Página criada com <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 

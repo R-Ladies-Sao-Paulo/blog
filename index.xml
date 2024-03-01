@@ -6,16 +6,17 @@
       version="2.0">
 <channel>
 <title>R-Ladies São Paulo</title>
-<link>https://rladies-sp.org/index.html</link>
+<link>https://rladies-sp.org/</link>
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.4.550</generator>
 <lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>As metas foram atualizadas com sucesso!</title>
   <dc:creator>[Bruna Garbes](https://brunagarbes.substack.com/)</dc:creator>
-  <link>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/index.html</link>
+  <link>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -36,7 +37,7 @@ Autoria
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/foto_profile2.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bruna Garbes</figcaption>
+<figcaption>Bruna Garbes</figcaption>
 </figure>
 </div>
 <p><a href="https://github.com/brunagarbes"><i class="bi bi-github"></i></a> <a href="https://www.linkedin.com/in/brunagarbes/"><i class="bi bi-linkedin"></i></a> <a href="https://www.instagram.com/mardedados/"><i class="bi bi-instagram"></i></a></p>
@@ -50,8 +51,8 @@ Autoria
 <p>O ano aqui nas R-Ladies São Paulo já começou com tudo! No primeiro fim de semana de janeiro tivemos nossa <strong>reunião de planejamento</strong> das atividades que queremos oferecer agora em 2024. Como já é de praxe nos nossos encontros, fizemos um cafezinho colaborativo e passamos <em>post-its</em> para as pessoas participantes colocarem as suas ideias de temas e assuntos que elas julgassem interessante de trazer para a roda. Montamos um painel de propostas bem bonito que deu um orgulho danado de se ver!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Painel lindíssimo com nossas sugestões para 2024 😍</figcaption>
+<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>Painel lindíssimo com nossas sugestões para 2024 😍</figcaption>
 </figure>
 </div>
 <p>Tivemos quatro 4 grandes temas comentados na reunião: <strong>tipos e formatos de eventos</strong>, <strong>formas de financiamento da comunidade</strong>, <strong>manutenção do nosso famoso gugudadados</strong> e, por fim, a <strong>organização das nossas mídias e comunicação</strong>.</p>
@@ -103,7 +104,7 @@ Autoria
   <category>Novidades</category>
   <category>Planejamento</category>
   <category>Eventos</category>
-  <guid>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2024-01-planejamento-do-ano/</guid>
   <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -113,8 +114,9 @@ Autoria
   <dc:creator>Haydée Svab</dc:creator>
   <dc:creator>Ana Carolina Moreno</dc:creator>
   <dc:creator>Ornella Scardua Ferreira</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-12-um-ano-blog/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-12-um-ano-blog/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -132,7 +134,7 @@ Autoria
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-12-um-ano-blog/images/fotos.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Foto das pessoas que colaboraram com os textos do blog neste ano.</figcaption>
+<figcaption>Foto das pessoas que colaboraram com os textos do blog neste ano.</figcaption>
 </figure>
 </div>
 <section id="posts-sobre-a-comunidade-eventos-e-relatos-pessoas" class="level3">
@@ -240,7 +242,7 @@ Autoria
 
  ]]></description>
   <category>Comunidade</category>
-  <guid>https://rladies-sp.org/posts/2023-12-um-ano-blog/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-12-um-ano-blog/</guid>
   <pubDate>Tue, 05 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-12-um-ano-blog/images/fotos.png" medium="image" type="image/png" height="44" width="144"/>
 </item>
@@ -252,14 +254,14 @@ Autoria
   <dc:creator>Katia Mine</dc:creator>
   <dc:creator>Michele Caramigo</dc:creator>
   <dc:creator>Angela Valle</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-12-evento-pacotes/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-12-evento-pacotes/</link>
   <description><![CDATA[ <section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>No dia 22 de novembro de 2023, a comunidade R-Ladies São Paulo teve a alegria de se reunir no escritório do Airbnb em São Paulo para um evento muito especial: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/"><strong>Pacotes em R de Dados Brasileiros</strong></a>. Neste evento, tivemos várias apresentações sobre o tema, que serão abordadas nesse texto.</p>
 <p>Além das apresentações, tivemos momentos para networking, onde pudemos conhecer novas pessoas da comunidade, discutir ideias, compartilhar experiências e fortalecer nossos laços. E claro, tudo isso junto a um café maravilhoso, oferecido pelo Airbnb.</p>
 <p>Este evento é o resultado da participação da <a href="https://www.linkedin.com/in/hsvab/">Haydee Svab</a> no <a href="https://ropensci.org/champions/">programa de Campeãs e Campeões da rOpenSci</a>, apresentando um pouco sobre o programa e também o pacote desenvolvido por ela neste ano.</p>
 <p>Nesse post, falaremos um pouco sobre as apresentações realizadas, e também trazendo alguns relatos de pessoas que participaram do evento.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="img-fluid figure-img" alt="Foto do evento"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Foto do evento"></p>
 </figure>
 </div>
 </section><section id="relatos-de-participantes" class="level2"><h2 class="anchored" data-anchor-id="relatos-de-participantes">Relatos de participantes</h2>
@@ -288,7 +290,7 @@ Autoria
 </h3>
 <p>A Haydee trouxe uma visão empolgante sobre a organização <a href="https://ropensci.org/">rOpenSci</a>, explicando como essa iniciativa promove a ciência aberta, reprodutível e de qualidade através do uso de dados compartilhados e softwares open-source/livres, em especial com uso de pacotes e ferramentas em R. Ela apresentou o Programa de Campeões/ãs, de que participou ao longo de 2023, com destaque para a atuação de pessoas da América Latina, seja como menores/as ou campões/ãs.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/ropensci.jpg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/ropensci.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Ilustraçãp para a rOpenSci feito por Lydia Hill"></p>
 </figure>
 </div>
 <p>Haydée explicou os objetivos e os critérios de elegibilidade do programa e também destacou a importância da <strong>criação da infraestrutura social</strong>. ou seja, o fortalecimento da comunidade. Afinal, nos momentos de dificuldade poder contar com mentoria é crucial para o sucesso de um projeto (de pesquisa, do desenvolvimento de pacote, etc).</p>
@@ -311,7 +313,7 @@ Autoria
 <p>A Haydée é consultora, pesquisadora e professora nos temas Mobilidade Urbana, Cidades Inteligentes, Governo Digital e Ciência de Dados. No mestrado, ela utilizou os dados da pesquisa origem-destino realizadas na Região Metropolitana de São Paulo (RMSP), realizando uma <a href="https://www.teses.usp.br/teses/disponiveis/3/3138/tde-30092016-142308/pt-br.php">análise da evolução dos padrões de deslocamento na RMSP sob uma perspectiva de gênero</a>.</p>
 <p>Para facilitar a utilização destes dados por outras pessoas, a Haydée desenvolveu o pacote <a href="https://hsvab.github.io/odbr/">odbr</a>, durante o programa de Campeãs e Campeões da rOpenSci.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/odbr.jpg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/odbr.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Ilustraçãp para a rOpenSci feito por Lydia Hill"></p>
 </figure>
 </div>
 <p>Haydee fez uma introdução ao pacote <a href="https://hsvab.github.io/odbr/"><code>odbr</code></a> <span class="citation" data-cites="R-odbr">(Svab et al. 2023)</span>, uma ferramenta poderosa que disponibiliza dados de pesquisas origem-destino no Brasil. Ela apresentou as 3 principais funções do pacote: <code>read_od()</code> para obtenção dos dados tabulares, <code>read_map()</code> para obtenção dos mapas e o <code>read_dictionary()</code> para obtenção dos dicionários de dados, que estarão disponíveis em 3 línguas: português, inglês e espanhol. Sua apresentação também mostrou como foi o processo de desenvolver um pacote pela primeira vez, quais foram suas dificuldades no desenvolvimento e disponibilização no CRAN.</p>
@@ -325,7 +327,7 @@ Autoria
 </h3>
 <p>A última apresentação foi uma introdução super rápida ao <a href="https://ipeagit.github.io/geobr/"><code>geobr</code></a> <span class="citation" data-cites="R-geobr">(Pereira et al. 2023)</span>, um pacote que facilita o acesso a dados públicos geoespaciais do Brasil. Focamos em entender como descobrir quais são os dados disponíveis no geobr, e como podemos começar a visualizar esses dados usando o pacote ggplot2. Fizemos um exemplo incremental de um mapa usando apenas dados obtidos no geobr, buscando explorar como estão especializadas as escolas que oferecem o ensino médio no município de São Paulo. Todos os códigos estão disponíveis no slide.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/mapa-geobr.jpg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/mapa-geobr.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Ilustração para a rOpenSci feito por Lydia Hill"></p>
 </figure>
 </div>
 <p>Slides disponíveis em: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html</a></p>
@@ -361,7 +363,7 @@ Autoria
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-R-geobr" class="csl-entry">
 Pereira, Rafael H. M., Caio Nogueira Goncalves, Paulo Henrique Fernandes de Araujo, Guilherme Duarte Carvalho, Rodrigo Almeida de Arruda, Igor Nascimento, Barbara Santiago Pedreira da Costa, et al. 2023. <em>geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
 </div>
@@ -372,7 +374,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
   <category>Pacotes</category>
   <category>Comunidade</category>
   <category>Eventos</category>
-  <guid>https://rladies-sp.org/posts/2023-12-evento-pacotes/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-12-evento-pacotes/</guid>
   <pubDate>Sat, 02 Dec 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -390,6 +392,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 
 
 
+
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>On November 22, 2023, R-Ladies São Paulo had the joy of gathering at the Airbnb office in São Paulo for an extraordinary event: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/"><strong>R Packages for Brazilian Data</strong></a>. In this event, we had various presentations on the topic, which will be covered in this text.</p>
@@ -398,7 +401,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <p>In this post, we will talk about the talks and bring some perspectives from participants.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="img-fluid figure-img" alt="Event photo"></p>
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Event photo"></p>
 </figure>
 </div>
 </section>
@@ -434,7 +437,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <p>Haydee brought an exciting view of the <a href="https://ropensci.org/">rOpenSci</a> organization, explaining how this initiative promotes open, reproducible, and quality science through the use of shared data and open-source/free software, especially with the use of packages and tools in R. She presented the Champions Program, which she participated in throughout 2023, highlighting the participation of people from Latin America, whether as mentors or champions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/ropensci.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/ropensci.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Illustration for rOpenSci by Lydia Hill"></p>
 </figure>
 </div>
 <p>Haydée explained the program’s objectives and eligibility criteria and highlighted the importance of <strong>creating social infrastructure</strong>, i.e., strengthening the community. After all, in times of difficulty, having mentorship is crucial for the success of a project (research, package development, etc.).</p>
@@ -460,7 +463,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <p>Haydée developed the <a href="https://hsvab.github.io/odbr/">odbr</a> package to facilitate the use of these data by others during the rOpenSci Champions Program.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/odbr.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/odbr.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Illustration for rOpenSci by Lydia Hill"></p>
 </figure>
 </div>
 <p>Haydee gave an introduction to the <a href="https://hsvab.github.io/odbr/"><code>odbr</code></a> package <span class="citation" data-cites="R-odbr">(Svab et al. 2023)</span>, a powerful tool that provides data from origin-destination surveys in Brazil. She presented the three main functions of the package: <code>read_od()</code> for obtaining tabular data, <code>read_map()</code> for getting maps, and the <code>read_dictionary()</code> for obtaining data dictionaries, which will be available in three languages: Portuguese, English, and Spanish. Her presentation also showed how it was the process of developing a package for the first time and her difficulties in development and availability on CRAN.</p>
@@ -476,7 +479,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <p>The final presentation was a quick introduction to the <a href="https://ipeagit.github.io/geobr/"><code>geobr</code></a> <span class="citation" data-cites="R-geobr">(Pereira et al. 2023)</span>, a package that facilitates access to public geospatial data from Brazil. We focused on understanding how to find out what data are available in geobr and how we can start visualizing these data using the ggplot2 package. We made an incremental example of a map using only data obtained from geobr, aiming to explore how specialized the high schools in the municipality of São Paulo are. All the codes are available on the slide.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/mapa-geobr.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2023-12-evento-pacotes/images/mapa-geobr.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-cap="Illustration for rOpenSci by Lydia Hill"></p>
 </figure>
 </div>
 <p>Slides available at: <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html" class="uri">https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html</a></p>
@@ -523,7 +526,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-R-geobr" class="csl-entry">
 Pereira, Rafael H. M., Caio Nogueira Goncalves, Paulo Henrique Fernandes de Araujo, Guilherme Duarte Carvalho, Rodrigo Almeida de Arruda, Igor Nascimento, Barbara Santiago Pedreira da Costa, et al. 2023. <em>geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
 </div>
@@ -543,8 +546,9 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
   <dc:creator>Bianca Muniz</dc:creator>
   <dc:creator>Gabriela Morita</dc:creator>
   <dc:creator>Karina Ferrara Barros</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-11-evento-intro-r/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-11-evento-intro-r/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -580,7 +584,7 @@ Os relatos deste post são de participantes do último <a href="https://r-ladies
 <p>No handebol existem jogadas preestabelecidas que auxiliam atletas no momento do ataque. Essas jogadas consistem em um conjunto de movimentações e passes da bola que criam oportunidade para o arremesso ao gol. Praticantes treinam estas jogadas e as conhecem por nomes: "araraquara", "argentina", "circulação", "loose", "roda"... Ou seja, estas jogadas estão armazenadas nas memórias de jogadores e são identificadas por nomes, que significam determinadas movimentações.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/Seleção_feminina_de_handebol.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/Seleção_feminina_de_handebol.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>No Evento R-Ladies aprendemos que <strong><code>funções</code></strong> são palavras que dão comandos ao computador. Por exemplo, <strong>mean</strong> é a palavra que dá o comando de obter média. As funções estão gravadas no programa, assim como as jogadas estão registradas nas memórias de atletas de handebol. No handebol, ao utilizar a palavra que expressa a jogada, a movimentação é realizada. No R, ao utilizar a palavra que expressa a função, o comando é realizado.</p>
@@ -590,7 +594,7 @@ Os relatos deste post são de participantes do último <a href="https://r-ladies
 <p>Existem diferentes métodos da prática do Ballet, dos quais os mais famosos são o Vaganova (russo) e o Royal (inglês). Estes métodos abrigam conjuntos de passos de ballet que são executados pelos praticantes. A maioria dos passos tem nomes em comum nos métodos mencionados. Entretanto, apesar de compartilharem o mesmo nome, podem ocorrer diferenças na execução. Por exemplo, ao executar uma sequência de piruetas (aquele rodopio), é necessário conectá-las com um passo denominado fouetté, que se caracteriza como uma movimentação de perna em 90º graus seguido do recolhimento até o joelho. O fouetté em Royal tem o desenho de um quarto de círculo, levando a perna à frente e deslocando até o lado antes de ser recolhida. Já o fouetté em Vaganova a perna é levada diretamente ao lado e depois recolhida.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/ballerina-ballet.gif" class="img-fluid figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/ballerina-ballet.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><br>
@@ -606,14 +610,14 @@ Na Oficina aprendemos que as funções do R estão organizadas em conjuntos deno
 
  ]]></description>
   <category>Eventos</category>
-  <guid>https://rladies-sp.org/posts/2023-11-evento-intro-r/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-11-evento-intro-r/</guid>
   <pubDate>Tue, 21 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-11-evento-intro-r/images/anigif.gif" medium="image" type="image/gif"/>
 </item>
 <item>
   <title>Raspando a página do Studio Ghibli, na Wikipédia</title>
   <dc:creator>Ornella Scardua Ferreira</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-10-ws-ghibli/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-10-ws-ghibli/</link>
   <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -628,8 +632,8 @@ Autoria
 <div class="callout-body-container callout-body">
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/https:/avatars.githubusercontent.com/u/62913147?v=4.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Foto</figcaption></figure>
+<figure class="figure"><p><img src="https://avatars.githubusercontent.com/u/62913147?v=4.png" class="img-fluid figure-img"></p>
+<figcaption>Foto</figcaption></figure>
 </div>
 <p><a href="https://github.com/ornscar"><i class="fab fa-github"></i></a> <a href="mailto:ornscar@gmail.com"><i class="fa fa-envelope"></i></a> <a href="https://twitter.com/ornscar"><i class="fab fa-twitter"></i></a></p>
 </center>
@@ -641,22 +645,26 @@ Autoria
 <p>Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo.</p>
 <p>Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/studio_ghibli.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
-<figcaption class="figure-caption">Imagem obtida no site Plano Crítico</figcaption></figure>
+<figure class="figure"><p><a href="https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/studio_ghibli.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Imagem obtida no site Plano Crítico"></a></p>
+<figcaption>Imagem obtida no site Plano Crítico</figcaption></figure>
 </div>
 <p>Por isso tudo, que tal “scrapear” (ou raspar) a <a href="https://pt.wikipedia.org/wiki/Studio_Ghibli">página do Studio Ghibli, na Wikipédia</a> a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig1.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+<div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Para quem não conhece os filmes, muitos estão disponíveis na Netflix!</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://www.netflix.com/br/browse/genre/81227213"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/netflix.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
-<figcaption class="figure-caption">Página da Netflix com filmes do Studio Ghibli</figcaption></figure>
+<figure class="figure"><p><a href="https://www.netflix.com/br/browse/genre/81227213"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/netflix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Página da Netflix com filmes do Studio Ghibli"></a></p>
+<figcaption>Página da Netflix com filmes do Studio Ghibli</figcaption></figure>
 </div>
 <section id="etapas-do-scraping" class="level1"><h1>Etapas do <em>scraping</em>
 </h1>
@@ -725,9 +733,13 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>Inicialmente, inspecionamos a página do Studio Ghibli na Wikipédia para encontrar os elementos em HTML que estão associados exclusivamente às informações dos filmes (como título, ano de lançamento, duração, diretor, elenco etc). Felizmente, esses dados estão todos resumidos em uma única tabela dentre a única tabela que existe na página (na Seção Filmografia, para ser mais exata) - o que deixou a tarefa de raspagem muito mais fácil, por sinal.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig2.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figura&nbsp;2: Imagem da inspeção na página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Imagem da inspeção na página do Studio Ghibli, no Wikipédia.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -836,9 +848,13 @@ font-style: inherit;"># parametro XPath</span></span></code></pre></div>
 <p>A tabela (ainda em HTML, lembrando) que acabamos de obter só contém as informações mais gerais dos filmes do Studio Ghibli. Mas… e se quisermos montar uma base de dados em que seja possível, por exemplo, analisar sobre a duração, gênero e elenco dos filmes? Bem, para esse fim, vamos continuar utilizando a tabela anterior, que, como podemos observar na Figura&nbsp;2, está sob a <em>tag</em> <code>&lt;table&gt;</code> e o atributo <code>class='wikitable unsortable'</code>. Percebam, ainda, agora na Figura&nbsp;3, que os títulos são links (identificados com a <em>tag</em> <code>&lt;a&gt;</code>) que direcionam para as páginas individuais de cada um dos filmes, locais onde estão as informações pelas quais estamos interessados.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig3.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figura&nbsp;3: Imagem da inspeção dos títulos na tabela da página do Studio Ghibli, no Wikipédia.</figcaption></figure>
+<div id="fig-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Imagem da inspeção dos títulos na tabela da página do Studio Ghibli, no Wikipédia.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1550,9 +1566,13 @@ font-style: inherit;">#&gt; [1] "output/31.html"</span></span></code></pre></div
 <p>Ah, na Figura&nbsp;4 é possível ter uma ideia de como é uma barra de progresso.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig5.png" class="img-fluid figure-img" width="586"></p>
-<figcaption class="figure-caption">Figura&nbsp;4: Barra de progresso na prática.</figcaption></figure>
+<div id="fig-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="586">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Barra de progresso na prática.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1561,9 +1581,13 @@ font-style: inherit;">#&gt; [1] "output/31.html"</span></span></code></pre></div
 <p>Notem que, no segundo cenário, optamos pelo arquivo <code>5.html</code>. Ele se refere ao filme “O Túmulo de Vagalumes”, o filme do Studio Ghibli preferido desta que vos escreve - mas o processo de <em>parsing</em> para qualquer um dos 31 arquivos gerados é o mesmo, caso seu filme favorito seja outro. Nesse caso, quando aplicamos a função mágica <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code>, o R retorna uma lista com 8 elementos, pois lembre-se que foram coletados todos os nós das <em>tags</em> <code>&lt;a&gt;</code> e todos os atributos da forma <code>href</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig4.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elemento [[1]].</figcaption></figure>
+<div id="fig-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elemento [[1]].
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -2376,8 +2400,8 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf1-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figcaption>Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -2730,8 +2754,8 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf2-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figcaption>Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -3171,7 +3195,7 @@ font-style: inherit;">"Ficha do filme"</span></span>
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
-
+<div>
 <div id="cxzfswgnyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#cxzfswgnyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -3612,90 +3636,91 @@ font-style: inherit;">)</span></span></code></pre></div>
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="gt_heading">
-<td colspan="2" class="gt_heading gt_title gt_font_normal" style="">Túmulo de Vagalumes</td>
-    </tr>
-<tr class="gt_heading">
-<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Ficha do filme</td>
-    </tr>
-<tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="categoria">categoria</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="descricao">descricao</th>
-    </tr>
+<tr class="header gt_heading">
+<th colspan="2" class="gt_heading gt_title gt_font_normal">Túmulo de Vagalumes</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Ficha do filme</th>
+</tr>
+<tr class="header gt_col_headings">
+<th id="categoria" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">categoria</th>
+<th id="descricao" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">descricao</th>
+</tr>
 </thead>
 <tbody class="gt_table_body">
-<tr>
-<td headers="categoria" class="gt_row gt_left">titulo_br</td>
-<td headers="descricao" class="gt_row gt_left">O Túmulo dos Vagalumes</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">titulo_br</td>
+<td class="gt_row gt_left" headers="descricao">O Túmulo dos Vagalumes</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">titulo_pt</td>
-<td headers="descricao" class="gt_row gt_left">O Túmulo dos Pirilampos</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">titulo_pt</td>
+<td class="gt_row gt_left" headers="descricao">O Túmulo dos Pirilampos</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">duracao_min</td>
-<td headers="descricao" class="gt_row gt_left">89</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">duracao_min</td>
+<td class="gt_row gt_left" headers="descricao">89</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">genero</td>
-<td headers="descricao" class="gt_row gt_left">drama, guerra</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">genero</td>
+<td class="gt_row gt_left" headers="descricao">drama, guerra</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">direcao</td>
-<td headers="descricao" class="gt_row gt_left">Isao Takahata</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">direcao</td>
+<td class="gt_row gt_left" headers="descricao">Isao Takahata</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">producao</td>
-<td headers="descricao" class="gt_row gt_left">Toru Hara</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">producao</td>
+<td class="gt_row gt_left" headers="descricao">Toru Hara</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">roteiro</td>
-<td headers="descricao" class="gt_row gt_left">Isao Takahata</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">roteiro</td>
+<td class="gt_row gt_left" headers="descricao">Isao Takahata</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">baseado_em</td>
-<td headers="descricao" class="gt_row gt_left">"Hotaru no Haka", de Akiyuki Nosaka</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">baseado_em</td>
+<td class="gt_row gt_left" headers="descricao">"Hotaru no Haka", de Akiyuki Nosaka</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">elenco</td>
-<td headers="descricao" class="gt_row gt_left">Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, Akemi Yamaguchi</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">elenco</td>
+<td class="gt_row gt_left" headers="descricao">Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, Akemi Yamaguchi</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">musica</td>
-<td headers="descricao" class="gt_row gt_left">Michio Mamiya</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">musica</td>
+<td class="gt_row gt_left" headers="descricao">Michio Mamiya</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">cinematografia</td>
-<td headers="descricao" class="gt_row gt_left">Nobuo Koyama</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">cinematografia</td>
+<td class="gt_row gt_left" headers="descricao">Nobuo Koyama</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">edicao</td>
-<td headers="descricao" class="gt_row gt_left">Takeshi Seyama</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">edicao</td>
+<td class="gt_row gt_left" headers="descricao">Takeshi Seyama</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">produtora</td>
-<td headers="descricao" class="gt_row gt_left">Studio Ghibli</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">produtora</td>
+<td class="gt_row gt_left" headers="descricao">Studio Ghibli</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">distribuicao</td>
-<td headers="descricao" class="gt_row gt_left">Toho</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">distribuicao</td>
+<td class="gt_row gt_left" headers="descricao">Toho</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">lancamento</td>
-<td headers="descricao" class="gt_row gt_left">1988-04-16</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">lancamento</td>
+<td class="gt_row gt_left" headers="descricao">1988-04-16</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">idioma</td>
-<td headers="descricao" class="gt_row gt_left">japonês</td>
+<tr class="even">
+<td class="gt_row gt_left" headers="categoria">idioma</td>
+<td class="gt_row gt_left" headers="descricao">japonês</td>
 </tr>
-<tr>
-<td headers="categoria" class="gt_row gt_left">receita_milhoes</td>
-<td headers="descricao" class="gt_row gt_left"> 590</td>
+<tr class="odd">
+<td class="gt_row gt_left" headers="categoria">receita_milhoes</td>
+<td class="gt_row gt_left" headers="descricao">590</td>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>
@@ -3711,7 +3736,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 </section> ]]></description>
   <category>Web Scraping</category>
   <category>Tutorial</category>
-  <guid>https://rladies-sp.org/posts/2023-10-ws-ghibli/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-10-ws-ghibli/</guid>
   <pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/studio_ghibli.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -3722,8 +3747,9 @@ font-style: inherit;">)</span></span></code></pre></div>
   <dc:creator>Tatyane Paz Dominguez</dc:creator>
   <dc:creator>Ianni Muliterno</dc:creator>
   <dc:creator>Ana Paula Rocha</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3738,7 +3764,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/logo2.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Picture of participants in a recent event.</figcaption>
+<figcaption>Picture of participants in a recent event.</figcaption>
 </figure>
 </div>
 <p>Para isso, dois pontos são importantes de serem discutidos: o conceito de interseccionalidade e questões relacionadas ao contexto brasileiro.</p>
@@ -3773,7 +3799,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-gender-pt.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa o gênero. Cerca de 93% das pessoas respondentes disseram que são mulheres cis ou transgênero; cerca de 3% disseram que são homens cis ou transgênero; e cerca de 3% disseram que são pessoas não-binárias.</figcaption>
+<figcaption>Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa o gênero. Cerca de 93% das pessoas respondentes disseram que são mulheres cis ou transgênero; cerca de 3% disseram que são homens cis ou transgênero; e cerca de 3% disseram que são pessoas não-binárias.</figcaption>
 </figure>
 </div>
 <p>Em relação à diversidade de gênero, as respostas obtidas no questionário apontam a predominância de mulheres (cis ou trans). Um problema identificado posteriormente na estruturação do questionário é: as perguntas não permitiam identificar quantas pessoas trans faziam parte da comunidade. Portanto, não temos dados sobre quantas pessoas trans participavam da comunidade. Essa pergunta deverá ser incorporada em um questionário futuro.</p>
@@ -3783,7 +3809,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-race-pt.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa a cor/raça. Cerca de 73% das pessoas respondentes disseram que são brancas; cerca de 14% disseram que são pardas; cerca de 9% disseram que são pretas; e cerca de 4% disseram que são amarelas.</figcaption>
+<figcaption>Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa a cor/raça. Cerca de 73% das pessoas respondentes disseram que são brancas; cerca de 14% disseram que são pardas; cerca de 9% disseram que são pretas; e cerca de 4% disseram que são amarelas.</figcaption>
 </figure>
 </div>
 <p>Em relação à diversidade racial na comunidade em 2020, é importante destacar que 73,3% das pessoas se auto-declaravam brancas, apesar da população branca nessa região do Brasil representar cerca de metade da população. Ou seja, temos uma sub-representação de pessoas negras na comunidade R-Ladies São Paulo e necessitamos agir com seriedade para promover inclusão étnico-racial.</p>
@@ -3808,7 +3834,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-kids-pt.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa se a pessoa é mãe/pai/responsável. Cerca de 87% das pessoas respondentes disseram SIM e 13% disseram NÃO.</figcaption>
+<figcaption>Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa se a pessoa é mãe/pai/responsável. Cerca de 87% das pessoas respondentes disseram SIM e 13% disseram NÃO.</figcaption>
 </figure>
 </div>
 <p>Em 2020, 13% das pessoas respondentes apontaram que possuem filhos. Para incluir mais pessoas com filhos, algumas sugestões oferecidas por meio do questionário foram:</p>
@@ -3823,7 +3849,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-LGBTQIA-pt.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa se a pessoa faz parte da comunidade LGBTQIA+. Cerca de 70% dos respondentes disseram NÃO e 30% disseram SIM.</figcaption>
+<figcaption>Gráfico de barras onde o eixo X mostra a porcentagem de respondentes da pesquisa, e o eixo Y representa se a pessoa faz parte da comunidade LGBTQIA+. Cerca de 70% dos respondentes disseram NÃO e 30% disseram SIM.</figcaption>
 </figure>
 </div>
 <p>Em 2020, 30% das pessoas respondentes apontaram que fazem parte da comunidade LGBTQIA+. Apesar de não existirem dados sobre a porcentagem da população brasileira que faz parte da comunidade LGBTQIA+, os resultados desse questionário apontam que a comunidade está no caminho certo em termos de inclusão da população LGBTQIA+.</p>
@@ -3835,7 +3861,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-map-pt.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Mapa da cidade de São Paulo: a maior parte dos respondentes disse que é das regiões Sul e Oeste da cidade.</figcaption>
+<figcaption>Mapa da cidade de São Paulo: a maior parte dos respondentes disse que é das regiões Sul e Oeste da cidade.</figcaption>
 </figure>
 </div>
 </section>
@@ -3851,7 +3877,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/logo.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Foto de participantes em eventos recentes.</figcaption>
+<figcaption>Foto de participantes em eventos recentes.</figcaption>
 </figure>
 </div>
 <section id="política-de-ações-afirmativas" class="level3">
@@ -3872,7 +3898,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/gugudadados.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Fotos do espaço Gugudadados em eventos recentes.</figcaption>
+<figcaption>Fotos do espaço Gugudadados em eventos recentes.</figcaption>
 </figure>
 </div>
 </section>
@@ -3938,7 +3964,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 </section></div> ]]></description>
   <category>R-Ladies</category>
   <category>Comunidade</category>
-  <guid>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/</guid>
   <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -3954,6 +3980,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 
 
+
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>The <a href="https://www.rladies.org/">R-Ladies</a> is a global organization that promotes gender diversity in the R community. <a href="https://www.rladies-sp.org/">R-Ladies São Paulo</a> is proudly a chapter of R-Ladies Global, promoting gender diversity in the R community in São Paulo, Brazil.</p>
@@ -3964,7 +3991,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/logo2.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Picture of participants in a recent event.</figcaption>
+<figcaption>Picture of participants in a recent event.</figcaption>
 </figure>
 </div>
 <p>To do so, two points are important to be discussed: what is intersectionality, and the Brazilian context.</p>
@@ -3998,7 +4025,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-gender.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents the gender. Around 93% of the respondents said that they are a cis or transgender woman; around 3% said they are a cis or transgender men; and around 3% said that they are non-binary.</figcaption>
+<figcaption>Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents the gender. Around 93% of the respondents said that they are a cis or transgender woman; around 3% said they are a cis or transgender men; and around 3% said that they are non-binary.</figcaption>
 </figure>
 </div>
 <p>Regarding gender diversity, we can see a scenario of the predominance of women (cis or trans) in the community. A problem identified later was that the questions as they were made did not allow us to identify how many trans people were part of the community. Therefore, we do not have disaggregated data on transgender people in the community, and this specific question should be incorporated into future surveys.</p>
@@ -4008,7 +4035,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-race.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents the color/race. Around 73% of the respondents said that they are White; around 14% said they are Brown (black with light skin); around 9% said that they are Black, and around 4% saind they are Yellow (asian descendants).</figcaption>
+<figcaption>Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents the color/race. Around 73% of the respondents said that they are White; around 14% said they are Brown (black with light skin); around 9% said that they are Black, and around 4% saind they are Yellow (asian descendants).</figcaption>
 </figure>
 </div>
 <p>Regarding racial diversity in the community in 2020, it is important to highlight that 73.3% of the respondents identified themselves as White, despite the fact that this group represents about half of the population in this region of Brazil. This means that there is an underrepresentation of Black people in the R-Ladies São Paulo community, and we need to take serious actions for ethnic-racial inclusion.</p>
@@ -4033,7 +4060,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-kids.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents if the person is a mother/father/caregiver. Around 87% of the respondents said YES and 13% said NO.</figcaption>
+<figcaption>Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents if the person is a mother/father/caregiver. Around 87% of the respondents said YES and 13% said NO.</figcaption>
 </figure>
 </div>
 <p>In 2020, 13% of the respondents had children. Similar to what was done with race, an open question was left and some of the suggestions received for including more people with children were:</p>
@@ -4048,7 +4075,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-LGBTQIA.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents if the person is part of the LGBTQIA+ community. Around 70% of the respondents said NO and 30% said YES.</figcaption>
+<figcaption>Bar chart where the X axis shows the percentage of respondents of the survey, and the Y axis represents if the person is part of the LGBTQIA+ community. Around 70% of the respondents said NO and 30% said YES.</figcaption>
 </figure>
 </div>
 <p>In 2020, 30% of respondents were part of the LGBTQIA+ community. Although there are no data on the percentage of the Brazilian population that is part of the LGBTQIA+ community, the results of this survey indicate that the community is on the right path regarding LGBTQIA+ population inclusion.</p>
@@ -4060,7 +4087,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/2020-map.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Map of the City of Sao Paulo: most part of the respondents said they are from the South and West part of the city.</figcaption>
+<figcaption>Map of the City of Sao Paulo: most part of the respondents said they are from the South and West part of the city.</figcaption>
 </figure>
 </div>
 </section>
@@ -4076,7 +4103,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/logo.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Picture of participants in a recent event.</figcaption>
+<figcaption>Picture of participants in a recent event.</figcaption>
 </figure>
 </div>
 <section id="affirmative-actions" class="level3">
@@ -4096,7 +4123,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/gugudadados.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Pictures of the Gugudadados space in recent events.</figcaption>
+<figcaption>Pictures of the Gugudadados space in recent events.</figcaption>
 </figure>
 </div>
 </section>
@@ -4169,7 +4196,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <item>
   <title>Rita com R</title>
   <dc:creator>Bianca Muniz</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-06-rita-com-r/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-06-rita-com-r/</link>
   <description><![CDATA[ <p>No dia 8 de maio o mundo da música ficou mais careta: Rita Lee, a rainha do rock brasileiro, padroeira da liberdade, a santa rita de sampa, nos deixou, mas não sem antes deixar um grande legado de obras, letras, frases.</p>
 <p>O intuito desse artigo é homenagear Rita Lee a partir de uma análise de sua obra usando R. Das R-Ladies de São Paulo para a mais icônica “Mina de Sampa”.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -4427,7 +4454,7 @@ font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
-
+<div>
 <div id="svtnvhuxnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -4840,7 +4867,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 }
 </style>
 <table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Quantidade de faixas por álbum </caption>
+<caption>Quantidade de faixas por álbum</caption>
 <thead class="gt_col_headings"><tr class="header">
 <th id="album_release_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">album_release_year</th>
 <th id="faixas" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">faixas</th>
@@ -5076,13 +5103,14 @@ font-style: inherit;">)</span></span></code></pre></div>
 </div>
 </div>
 </div>
+</div>
 
 
 </section></section></section></section> ]]></description>
   <category>Análise exploratória</category>
   <category>Análise de texto</category>
   <category>Música</category>
-  <guid>https://rladies-sp.org/posts/2023-06-rita-com-r/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-06-rita-com-r/</guid>
   <pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-06-rita-com-r/images/toda.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
@@ -5094,13 +5122,13 @@ font-style: inherit;">)</span></span></code></pre></div>
   <dc:creator>Katia Mine</dc:creator>
   <dc:creator>Natasha Meneguelli</dc:creator>
   <dc:creator>Cristiane Souza de Lacerda</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/</link>
   <description><![CDATA[ <p>Este post é um relato realizado a partir da atividade de um dos grupos participantes do evento “<a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/">Análise de dados abertos com R</a>”, vinculado ao <a href="https://opendataday.org/pt_br/">Open Data Day</a>. Este grupo trabalhou com dados abertos educacionais.</p>
 <p>A monitora do grupo foi <a href="https://www.linkedin.com/in/anacarolinamoreno/">Ana Carolina Moreno</a>, jornalista e produtora de dados da TV Globo. Especializada há mais de dez anos na cobertura de dados educacionais, ela apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>.&nbsp; Os dados utilizados podem ser obtidos<a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">no site do Inep</a>.</p>
 <p>Seis pessoas se interessaram por explorar dados abertos educacionais: Aline Durans, Cristiane Lacerda, Hayane Sena De Jesus, Katia Mine, Larissa Souza, e Natasha Meneguelli. Além disso, <a href="https://www.linkedin.com/in/geovanalopes/">Geovana Lopes</a>, do R-Ladies São Paulo, participou como monitora.</p>
 <p>Primeiramente, foi feita uma introdução mostrando quais são e onde encontrar os dados abertos educacionais, além das mudanças recentes, com a retirada de bases de dados que antes eram públicas, com a justificativa de adequação à Lei Geral de Proteção de Dados (LGPD). A apresentação utilizada está disponível <a href="https://bit.ly/rladies_odd_2023">neste link</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://bit.ly/rladies_odd_2023"><img src="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="https://bit.ly/rladies_odd_2023"><img src="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Antes de partirmos para a análise de fato dos dados, o código que gerou as tabelas foi apresentado ao grupo. Como parte das pessoas ainda tinha um contato inicial com o R e o RStudio, e como houve interesse em entender o código apresentado, acabamos priorizando uma explicação introdutória da linguagem de programação R.</p>
@@ -5148,14 +5176,14 @@ Para pessoas que tem interesse em saber mais sobre dados abertos educacionais, i
   <category>Jornalismo de dados</category>
   <category>Open data day</category>
   <category>Educação</category>
-  <guid>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-05-open-data-day-educacao/</guid>
   <pubDate>Wed, 24 May 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/images/slide.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
   <title>Aprendendo a programar em quatro capítulos</title>
   <dc:creator>Ana Carolina Moreno</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/</link>
   <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -5171,7 +5199,7 @@ Autoria
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
 <figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/images/logo.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Carol Moreno</figcaption></figure>
+<figcaption>Carol Moreno</figcaption></figure>
 </div>
 <p><a href="https://www.linkedin.com/in/anacarolinamoreno/"><i class="fab fa-linkedin"></i></a></p>
 </center>
@@ -5226,7 +5254,7 @@ Autoria
   <category>Comunidade</category>
   <category>Ensino</category>
   <category>Jornalismo de dados</category>
-  <guid>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/</guid>
   <pubDate>Wed, 10 May 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-05-aprendendo-carol-moreno/images/logo.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -5237,12 +5265,12 @@ Autoria
   <dc:creator>Beatriz Milz</dc:creator>
   <dc:creator>Ana Carolina Moreno</dc:creator>
   <dc:creator>Ana Paula Rocha</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-03-evento-open-data-day/</link>
   <description><![CDATA[ <section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução"><strong>Introdução</strong></h2>
 <p>A R-Ladies São Paulo organizou, em 18 de março de 2023, o evento “Análise de Dados Abertos com R - Open Data Day”. A atividade aconteceu em um sábado, durante os períodos da manhã e da tarde, totalizando 6 horas efetivas de atividade.</p>
 <p>O <a href="https://www.insper.edu.br/">Insper</a>, uma instituição sem fins lucrativos dedicada ao ensino e à pesquisa, mais uma vez apoiou o grupo cedendo o espaço para a realização do evento. Outro apoio recebido foi da <a href="https://curso-r.com/">Curso-R</a>, que cedeu dois monitores para auxiliar na monitoria, ajudando nas dúvidas. O principal objetivo deste encontro foi oferecer informações a respeito do que são e da importância dos dados abertos e promover oportunidade de pôr a “mão-na-massa” manipulando dados abertos, além de traçar o cenário atual de acesso a esses dados em vários níveis governamentais e áreas do conhecimento.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </section><section id="o-que-é-o-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-o-open-data-day"><strong>O que é o Open Data Day?</strong></h2>
@@ -5250,7 +5278,7 @@ Autoria
 </section><section id="atividade-principal" class="level2"><h2 class="anchored" data-anchor-id="atividade-principal"><strong>Atividade principal</strong></h2>
 <p>Contando com cerca de 40 pessoas, o dia foi estruturado em quatro blocos. O primeiro bloco teve caráter informativo e contou com uma sequência de breves <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">apresentações</a> como: o que é a comunidade R-Ladies São Paulo, o que é Open Data Day e o que são Dados Abertos.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 <p>Como era objetivo que as pessoas se sentissem à vontade para mexer nas bases de dados abertos, experimentou-se o formato de dividir a turma em pequenos grupos de trabalho. Cada grupo trabalhou uma base específica e foi acompanhado de uma monitora com experiência na análise desses dados, que orientou o grupo a buscar os dados e entendê-los. Assim, o segundo bloco consistiu:</p>
@@ -5280,17 +5308,17 @@ Autoria
 <p>Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.</p>
 <table class="table"><tbody>
 <tr class="odd">
-<td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td><a href="images/grupos3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></td>
 </tr>
 </tbody></table>
 <p>Então, no terceiro bloco, os grupos trabalharam em importar, entender e começar a explorar os dados abertos de seus respectivos temas. Como muitas pessoas apontaram que não tinham experiência para criar visualizações de dados e tinham interesse em começar, a co-organizadora Beatriz Milz fez uma apresentação curta, em formato live coding, sobre o uso do <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">pacote esquisse para gerar visualizações de dados com ggplot2</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>No quarto e último bloco, os grupos apresentaram um pouco de suas dificuldades, aprendizados e resultados (alguns inclusive apresentaram visualizações feitas!). Foram apresentações interessantes que refletiram os tópicos abordados nas apresentações iniciais sobre dados abertos - por exemplo, alguns grupos indicaram lidar com base desatualizada, outros apontaram que dados estavam agregados e poderiam ser disponibilizados em forma de microdados, entre outros.</p>
@@ -5302,23 +5330,29 @@ Autoria
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
+<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="274"></a></p>
 </figure>
 </div>
 </div></div></div>
 <p>O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a>, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!</p>
 </section><section id="espaço-gugudadados" class="level3"><h3 class="anchored" data-anchor-id="espaço-gugudadados"><strong>Espaço Gugudadados</strong></h3>
 <p>O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a> foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.</p>
-<table class="table"><tbody>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
 <tr class="odd">
-<td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></td>
 </tr>
 <tr class="even">
-<td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></td>
 </tr>
-</tbody></table></section></section><section id="resultados-dos-grupos" class="level2"><h2 class="anchored" data-anchor-id="resultados-dos-grupos"><strong>Resultados dos grupos</strong></h2>
+</tbody>
+</table></section></section><section id="resultados-dos-grupos" class="level2"><h2 class="anchored" data-anchor-id="resultados-dos-grupos"><strong>Resultados dos grupos</strong></h2>
 <section id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-educacionais-monitora-ana-carolina-moreno"><strong>Grupo de dados educacionais (Monitora Ana Carolina Moreno)</strong></h3>
 <p>A monitora apresentou ao grupo um código em R de análise de dados do Censo da Educação Básica usado para a produção de uma <a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">série de reportagens especiais sobre o impacto da pandemia na educação infantil, que foi ao ar em novembro de 2022</a>. A monitora também preparou uma <a href="https://bit.ly/rladies_odd_2023">apresentação sobre dados educacionais</a>, para auxiliar no entendimento das diferentes fontes e bases de dados disponíveis sobre educação.</p>
 <p>Os dados utilizados podem ser obtidos <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">no site do INEP</a>.&nbsp;</p>
@@ -5328,7 +5362,7 @@ Autoria
 </section><section id="grupo-de-dados-ambientais-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-ambientais-bianca-muniz"><strong>Grupo de dados ambientais (Bianca Muniz):</strong></h3>
 <p>Este grupo explorou dados sobre focos de queimadas, no sistema BDQueimadas do INPE. Esse sistema permite fazer downloads de dados num período de até um ano. A monitora preparou uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">apresentação sobre os dados utilizados</a>. O grupo exportou os dados referentes à 2020 até 2022, e o gráfico a seguir permite ver a quantidade de focos de queimada por mês, segundo o bioma onde o foco de queimada acontece. É possível perceber no gráfico que os biomas com maiores focos de incêndio são a Amazônia e o Cerrado, e apresentam padrões sazonais. O maior pico de focos de queimadas na Amazônia no período pesquisado aconteceu no segundo semestre de 2022.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Os dados utilizados podem ser obtidos <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">no site do INPE - BD QUEIMADAS</a>.</p>
@@ -5339,12 +5373,12 @@ Autoria
 </section><section id="grupo-de-dados-de-violência-monitora-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="grupo-de-dados-de-violência-monitora-fernanda-peres"><strong>Grupo de dados de violência (Monitora Fernanda Peres):</strong></h3>
 <p>Este grupo explorou dados públicos sobre violência usando os dados do SINAN - Sistema de Informações de Agravo de Notificações, filtrando ocorrências envolvendo apenas adultos e removendo cacos de violência auto-provocada (por exemplo, suicídio). <strong>O grupo constatou que os dados públicos de Violência no DataSUS estavam desatualizados</strong>. A base referente à 2020 estava incompleta, portanto o grupo explorou dados referentes a 2019. O grupo gerou uma série de gráficos, como o apresentado a seguir, que mostra que a maior quantidade de vítimas é do sexo feminino. Além disso, destaca-se que o autor da agressão na maioria das vezes é do sexo masculino (seja a vítima mulher ou homem).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Outra ponto percebido é que quando as vítimas são mulheres, o agressor tende a ser alguém conhecido, como cônjuge, ex-cônjuge, namorado ou ex-namorado. Entre os homens, o agressor mais comum é um desconhecido.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Os dados podem ser obtidos no <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. A monitora fez uma <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">apresentação</a> sobre como obter esses dados.</p>
@@ -5575,7 +5609,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -5590,7 +5624,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-genero-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -5598,7 +5632,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -5606,7 +5640,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -5630,7 +5664,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
+<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="396"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -5665,7 +5699,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
+<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="364"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -5679,7 +5713,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   <category>Eventos</category>
   <category>Comunidade</category>
   <category>Diversidade</category>
-  <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-03-evento-open-data-day/</guid>
   <pubDate>Mon, 27 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
@@ -5695,7 +5729,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>R-Ladies São Paulo organized, on March 18, 2023, the event “Open Data Analysis with R - Open Data Day.” The activity took place on a Saturday, during the morning and afternoon, with 6 hours of activities.</p>
 <p><a href="https://www.insper.edu.br/">Insper</a>, a non-profit institution dedicated to teaching and research, once again supported the group by providing the space for the event. Another support received was from <a href="https://curso-r.com/">Curso-R</a>, which provided two teaching assistants to help out participants. The main objective of this event was to offer information about what open data is and its importance. Also, we aimed to promote the opportunity to do a “hands-on” activity exploring open data and tracking the current scenario of public data access at various levels of government and topics.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </section><section id="what-is-open-data-day" class="level2"><h2 class="anchored" data-anchor-id="what-is-open-data-day"><strong>What is Open Data Day?</strong></h2>
@@ -5703,7 +5737,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 </section><section id="main-activity" class="level2"><h2 class="anchored" data-anchor-id="main-activity"><strong>Main activity</strong></h2>
 <p>With about 40 people, we structured the event in four blocks. The first block was instructive and featured a sequence of brief <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html">presentations</a> such as: what is the R-Ladies São Paulo community, what is Open Data Day and what is Open Data.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="images/atividade-principal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/atividade-principal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 <p>The objective was to make people feel free to work with open data, so we split the class into small working groups. Each group worked on a specific dataset and worked with a Teaching Assistant with experience analyzing that dataset, who guided the group to look into the data and understand them. So, the second block consisted of the following activities:</p>
@@ -5733,17 +5767,17 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>We created a Google Document so the groups could take and share notes.</p>
 <table class="table"><tbody>
 <tr class="odd">
-<td><a href="images/grupos1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td><a href="images/grupos3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></a></td>
-<td><a href="images/grupos4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos3.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos4.jpg" class="img-fluid"></td>
 </tr>
 </tbody></table>
 <p>Then, in the third block, the groups worked on importing, understanding, and starting to explore the open data of their respective themes. As many people pointed out that they had no experience creating data visualizations and were interested in getting started, co-organizer Beatriz Milz gave a short live coding presentation on using the <a href="https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html">Esquisse package to generate data visualizations with ggplot2</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<figure class="figure"><p><a href="images/bea-esquisse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/bea-esquisse.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>In the fourth and last block, the groups presented some of their difficulties, lessons learned, and results (some even showed visualizations made!). In addition, interesting presentations reflected the topics addressed in the initial presentations on open data - for example, some groups indicated dealing with an outdated database, others pointed out that data was aggregated and could be made available with a greater level of detail, etc.</p>
@@ -5755,23 +5789,29 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid figure-img" width="274"></a></p>
+<figure class="figure"><p><a href="images/coffe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/coffe.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="274"></a></p>
 </figure>
 </div>
 </div></div></div>
 <p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
 </section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
 <p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
-<table class="table"><tbody>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
 <tr class="odd">
-<td><a href="images/gugudadados1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados1.jpeg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados2.jpg" class="img-fluid" style="width:74.0%"></td>
 </tr>
 <tr class="even">
-<td><a href="images/gugudadados3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></a></td>
-<td><a href="images/gugudadados4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></a></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados3.jpg" class="img-fluid"></td>
+<td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/gugudadados4.jpg" class="img-fluid"></td>
 </tr>
-</tbody></table></section></section><section id="results-from-the-groups-during-the-event" class="level2"><h2 class="anchored" data-anchor-id="results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></h2>
+</tbody>
+</table></section></section><section id="results-from-the-groups-during-the-event" class="level2"><h2 class="anchored" data-anchor-id="results-from-the-groups-during-the-event"><strong>Results from the groups during the event</strong></h2>
 <section id="educational-data-t.a.-ana-carolina-moreno" class="level3"><h3 class="anchored" data-anchor-id="educational-data-t.a.-ana-carolina-moreno"><strong>Educational data (T.A. Ana Carolina Moreno)</strong></h3>
 <p>The T.A. presented the group with an R code for analyzing data from the Census of Basic Education used to produce a s<a href="https://g1.globo.com/sp/sao-paulo/educacao/noticia/2022/11/16/fuga-de-matriculas-tirou-quase-16-mil-vagas-do-ensino-infantil-so-na-cidade-de-sao-paulo.ghtml">eries of special reports on the impact of the pandemic on early childhood education, which aired in November 2022</a>. The monitor also prepared a <a href="https://bit.ly/rladies_odd_2023">presentation on educational data</a> to assist in understanding the different sources and databases available on education.</p>
 <p>The data used can be obtained from the <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">INEP website</a>.</p>
@@ -5781,7 +5821,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 </section><section id="environmental-data-on-fires-t.a.-bianca-muniz" class="level3"><h3 class="anchored" data-anchor-id="environmental-data-on-fires-t.a.-bianca-muniz"><strong>Environmental data on Fires (T.A. Bianca Muniz):</strong></h3>
 <p>This group explored data on fires in INPE’s BDQueimadas system. This system allows anyone to download data for up to one year. The T.A. prepared a<a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/bdqueimadas_opendataday.pdf">presentation about how to download and import this dataset</a>. The group exported data from 2020 to 2022, and the graph below shows the number of fires per month according to the biome where the fires occurred. It is possible to see in the graph that the biomes with the biggest amount of fires are the Amazon and the Cerrado, and they show seasonal patterns. For example, the highest peak of fires in the Amazon, from 2020 to 2022, was the second semester of 2022.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-queimadas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-queimadas.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>The data used can be obtained from the <a href="https://queimadas.dgi.inpe.br/queimadas/bdqueimadas">INPE - BD QUEIMADAS website</a>.</p>
@@ -5792,12 +5832,12 @@ font-style: inherit;">)</span></span></code></pre></div>
 </section><section id="violence-data-t.a.-fernanda-peres" class="level3"><h3 class="anchored" data-anchor-id="violence-data-t.a.-fernanda-peres"><strong>Violence data (T.A. Fernanda Peres):</strong></h3>
 <p>This group explored public data on violence using data from SINAN - Information System for Aggravation of Notifications, filtering occurrences involving only adults and removing self-inflicted violence (for example, suicide). <strong>The group found that the public data on Violence in DataSUS were outdated.</strong> The dataset for 2020 was incomplete, so the group explored data for 2019. The group generated a series of graphs, such as the one below, showing that the largest number of victims are woman. In addition, it is noteworthy that the author of the aggression is most often male (whether the victim is a woman or a man).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Another thing pointed out by the group is that when the victims were women, the aggressor tended to be someone they knew, such as a spouse, ex-spouse, boyfriend, or ex-boyfriend. On the other hand, among men, the most common aggressor is a stranger.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/resultado-violencia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/resultado-violencia.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>This data can be downloaded from <a href="https://datasus.saude.gov.br/transferencia-de-arquivos">DATASUS</a>. The T.A. gave a <a href="https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/meetup-180323.html">presentation</a> on how to get this data.</p>
@@ -6028,7 +6068,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -6043,7 +6083,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-genero-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-genero-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -6051,7 +6091,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-cor-raca-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-cor-raca-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -6059,7 +6099,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="english_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="english_files/figure-html/grafico-outros-grupos-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -6084,7 +6124,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid figure-img" width="396"></a></p>
+<figure class="figure"><p><a href="images/escorregador.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/escorregador.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="396"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -6119,7 +6159,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid figure-img" width="364"></a></p>
+<figure class="figure"><p><a href="images/stickers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/stickers.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="364"></a></p>
 </figure>
 </div>
 </div></div></div>
@@ -6137,7 +6177,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <item>
   <title>#TidyTuesday: Explorando dados sobre as Paraolimpíadas</title>
   <dc:creator>Ianní Muliterno</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/</link>
   <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -6153,7 +6193,7 @@ Autoria
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
 <figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/ianni.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Ianní Muliterno</figcaption></figure>
+<figcaption>Ianní Muliterno</figcaption></figure>
 </div>
 <p><a href="https://github.com/IanniMuliterno"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/iannimuliterno/?originalSubdomain=br"><i class="fab fa-linkedin"></i></a></p>
 </center>
@@ -6362,7 +6402,7 @@ background-color: null;
 font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/check_numeric-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -6917,7 +6957,7 @@ background-color: null;
 font-style: inherit;">tema_olimpiadas</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/medalhas-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -7306,7 +7346,7 @@ background-color: null;
 font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -7504,7 +7544,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -8129,7 +8169,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -8278,14 +8318,14 @@ font-style: inherit;">)</span></span></code></pre></div>
   <category>Análise exploratória</category>
   <category>Visualização de dados</category>
   <category>Modelagem</category>
-  <guid>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-03-tidytuesday-paraolimpiadas/images/logo.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 <item>
   <title>E aí, vamos falar de Quarto?</title>
   <dc:creator>[Ariane Hayana](https://www.linkedin.com/in/arianehayana/)</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-02-tutorial-quarto/</link>
   <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -8300,8 +8340,8 @@ Autoria
 <div class="callout-body-container callout-body">
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/avatars.githubusercontent.com/u/44451990?v=4.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Ariane Hayana</figcaption></figure>
+<figure class="figure"><p><img src="https://avatars.githubusercontent.com/u/44451990?v=4.png" class="img-fluid figure-img"></p>
+<figcaption>Ariane Hayana</figcaption></figure>
 </div>
 <p><a href="https://www.instagram.com/_estatistica"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/a-hayana"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/arianehayana/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/ariane_hayana/"><i class="fab fa-instagram"></i></a></p>
 </center>
@@ -8313,7 +8353,7 @@ Autoria
 <section id="e-aí-vamos-falar-de-quarto" class="level2"><h2 class="anchored" data-anchor-id="e-aí-vamos-falar-de-quarto">E aí, vamos falar de Quarto?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Arte de pinguins abraçados feita por Allison Horst: Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Illustrated by Allison Horst.</a></figcaption></figure>
+<figcaption>Arte de pinguins abraçados feita por Allison Horst: Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Illustrated by Allison Horst.</a></figcaption></figure>
 </div>
 <p>Hello, world!</p>
 <p>Você que gosta da nossa querida linguagem R provavelmente já deve ter ouvido falar sobre Quarto. Por definição, segundo <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto.org</a>,</p>
@@ -8342,7 +8382,7 @@ Pré-requisitos
 <p>Para mais detalhes, <a href="https://quarto.org/docs/get-started/hello/rstudio.html">clique aqui</a>.</p>
 <p>Outra opção bem bacana é utilizar o <a href="https://posit.cloud">Posit Cloud</a>, que permite você explorar as ferramentas do RStudio na nuvem de maneira simples e sem grandes dificuldades para configurar. Caso você nunca tenha explorado o Posit Cloud, acesse o <em>link</em> <a href="https://posit.cloud">aqui</a> e crie uma conta através dos seguintes passos:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-2.gif" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-2.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Para saber sobre como criar um projeto no Posit Cloud, acesse a demonstração <a href="https://raw.githubusercontent.com/a-hayana/quarto_report_post/master/img/gif-0.gif">aqui</a>.</p>
@@ -8353,17 +8393,17 @@ Pré-requisitos
 <p>Agora, considerando que você já está com o ambiente preparado, vamos colocar a mão na massa!</p>
 <p>Supondo que você está começando do <em>zero</em> no Quarto, o primeiro passo é criar o documento (<code>.qmd</code>) no RStudio. Sugiro fortemente que você crie um projeto antes de tudo. São apenas seis passos simples:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-3.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p><em>Voilà!</em> Temos o nosso projeto e primeiro documento criados. Este é o modelo básico para publicação em Quarto e o formato de saída será, por padrão, em HTML. Para verificarmos o resultado final precisamos renderizar o nosso arquivo <code>.qmd</code>. Para isso, clique em <code>Render</code> ou utilize o atalho do teclado <code>CTRL + SHIFT + K</code>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-4.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>E temos como resultado final:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-5.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Perceba que na tela acima eu estou trabalhando com o <em>Visual</em> selecionado (botão localizado na barra de ferramentas), o que permite a visualização das alterações em tempo real e é uma ótima opção para quem ainda não está tão familiarizado(a) com <em>Markdown</em>. Vale a pena conferir as diversas possibilidades de utilização do <em>Visual Editor</em> em um post da Posit intitulado <a href="https://posit.co/blog/exploring-rstudio-visual-markdown-editor/"><em>Exploring RStudio’s Visual Markdown Editor</em></a>, cuja autoria é de Isabella Velásquez.</p>
@@ -8392,7 +8432,7 @@ Dicas
 <p>Criei um modelo de relatório <code>.qmd</code> cuja saída é em <code>HTML</code> e está disponível <a href="https://a-hayana.github.io/quarto_report_post/quarto_report_post.html">aqui</a>. Assim, vamos desvendar cada etapa de criação juntos.</p>
 <p>Primeiramente, é importante compreender a estrutura de um documento em Quarto. Veja a representação básica apresentada abaixo:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-6.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Essas três partes são:</p>
@@ -8406,7 +8446,7 @@ Dicas
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-7.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 </div>
@@ -8605,23 +8645,19 @@ font-style: inherit;">---</span></span></code></pre></div>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
-<span id="cb2-2"><span class="co" style="color: #5E5E5E;
+<span id="cb2-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
-<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+<span id="cb2-3"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| out.width: "100%"</span></span>
-<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+<span id="cb2-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig-cap: "Arte por [Allison Horst.](https://github.com/allisonhorst/stats-illustrations/blob/main/julie-mine-quarto-keynote/quarto_thankyou.png)"</span></span>
 <span id="cb2-5"></span>
-<span id="cb2-6">knitr<span class="sc" style="color: #5E5E5E;
+<span id="cb2-6"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">include_graphics</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"images/img-1.png"</span>)</span>
+font-style: inherit;">knitr::include_graphics("images/img-1.png")</span></span>
 <span id="cb2-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```</span></span></code></pre></div>
@@ -8629,41 +8665,33 @@ font-style: inherit;">```</span></span></code></pre></div>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
-<span id="cb3-2"><span class="sc" style="color: #5E5E5E;
+<span id="cb3-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:::</span> column<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>margin</span>
+font-style: inherit;">::: column-margin</span></span>
 <span id="cb3-3"></span>
-<span id="cb3-4"><span class="do" style="color: #5E5E5E;
+<span id="cb3-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: italic;">#### O que é a R-Ladies?</span></span>
+font-style: inherit;">#### O que é a R-Ladies?</span></span>
 <span id="cb3-5"></span>
-<span id="cb3-6">[R<span class="sc" style="color: #5E5E5E;
+<span id="cb3-6"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>Ladies](https<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">[R-Ladies](https://rladies.org/) é uma organização mundial cuja missão é promover </span></span>
+<span id="cb3-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:</span><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">//</span>rladies.org<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span>) é uma organização mundial cuja missão é promover </span>
-<span id="cb3-7">a diversidade de gênero na comunidade da linguagem R.</span>
+font-style: inherit;">a diversidade de gênero na comunidade da linguagem R.</span></span>
 <span id="cb3-8"></span>
-<span id="cb3-9"><span class="sc" style="color: #5E5E5E;
+<span id="cb3-9"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">**</span>R<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">**R-Ladies São Paulo** integra, orgulhosamente, a organização R-Ladies Global,</span></span>
+<span id="cb3-10"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>Ladies São Paulo<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span> integra, orgulhosamente, a organização R<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>Ladies Global,</span>
-<span id="cb3-10">em São Paulo.</span>
+font-style: inherit;">em São Paulo.</span></span>
 <span id="cb3-11"></span>
-<span id="cb3-12">As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</span>
+<span id="cb3-12"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">As atividades incluem meetups e mentorias em um ambiente seguro e amigável.</span></span>
 <span id="cb3-13"></span>
-<span id="cb3-14"><span class="sc" style="color: #5E5E5E;
+<span id="cb3-14"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:::</span></span>
 <span id="cb3-15"><span class="in" style="color: #5E5E5E;
@@ -8673,82 +8701,57 @@ font-style: inherit;">```</span></span></code></pre></div>
 <div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
-<span id="cb4-2"><span class="co" style="color: #5E5E5E;
+<span id="cb4-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| warning: false</span></span>
-<span id="cb4-3"><span class="co" style="color: #5E5E5E;
+<span id="cb4-3"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| message: false</span></span>
 <span id="cb4-4"></span>
-<span id="cb4-5"><span class="fu" style="color: #4758AB;
+<span id="cb4-5"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(dados)</span>
-<span id="cb4-6"><span class="fu" style="color: #4758AB;
+font-style: inherit;">library(dados)</span></span>
+<span id="cb4-6"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(reactable)</span>
-<span id="cb4-7"><span class="fu" style="color: #4758AB;
+font-style: inherit;">library(reactable)</span></span>
+<span id="cb4-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
+font-style: inherit;">library(dplyr)</span></span>
 <span id="cb4-8"></span>
-<span id="cb4-9">dados_gapminder <span class="sc" style="color: #5E5E5E;
+<span id="cb4-9"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">|&gt;</span> <span class="co" style="color: #5E5E5E;
+font-style: inherit;">dados_gapminder |&gt; # Base do pacote {dados}</span></span>
+<span id="cb4-10"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Base do pacote {dados}</span></span>
-<span id="cb4-10">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">  select(continente, pais, ano, pib_per_capita) |&gt; # Selecionando algumas colunas</span></span>
+<span id="cb4-11"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">select</span>(continente, pais, ano, pib_per_capita) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  reactable(</span></span>
+<span id="cb4-12"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">|&gt;</span> <span class="co" style="color: #5E5E5E;
+font-style: inherit;">    groupBy = "continente", # Agrupando pela coluna 'continente'</span></span>
+<span id="cb4-13"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Selecionando algumas colunas</span></span>
-<span id="cb4-11">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">    searchable = TRUE, # Inserindo uma busca na tabela</span></span>
+<span id="cb4-14"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">reactable</span>(</span>
-<span id="cb4-12">    <span class="at" style="color: #657422;
+font-style: inherit;">    outlined = TRUE, # Linhas na tabela</span></span>
+<span id="cb4-15"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">groupBy =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">    columns = list(ano = colDef(sortable = TRUE)) # Ordem crescente na coluna 'ano'</span></span>
+<span id="cb4-16"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"continente"</span>, <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Agrupando pela coluna 'continente'</span></span>
-<span id="cb4-13">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">searchable =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>, <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Inserindo uma busca na tabela</span></span>
-<span id="cb4-14">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">outlined =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>, <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Linhas na tabela</span></span>
-<span id="cb4-15">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">columns =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ano =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">colDef</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sortable =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)) <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Ordem crescente na coluna 'ano'</span></span>
-<span id="cb4-16">  )</span>
+font-style: inherit;">  )</span></span>
 <span id="cb4-17"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```</span></span></code></pre></div>
 <p>Como resultado, temos:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-1.gif" class="img-fluid"></p>
+<div>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-1.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Particularmente, gosto bastante do visual elegante que resultam as tabelas com <a href="https://glin.github.io/reactable/">reactable</a>. Na estrutura acima é possível pesquisar informações dentro da própria tabela com o “<em>Search</em>” e ao clicar em cada um dos continentes é possível explorar outras informações.</p>
@@ -8756,102 +8759,72 @@ font-style: inherit;">```</span></span></code></pre></div>
 <div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
-<span id="cb5-2"><span class="co" style="color: #5E5E5E;
+<span id="cb5-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig-width: 8</span></span>
-<span id="cb5-3"><span class="co" style="color: #5E5E5E;
+<span id="cb5-3"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig-height: 5</span></span>
-<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+<span id="cb5-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| warning: false</span></span>
-<span id="cb5-5"><span class="co" style="color: #5E5E5E;
+<span id="cb5-5"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| message: false</span></span>
 <span id="cb5-6"></span>
-<span id="cb5-7"><span class="fu" style="color: #4758AB;
+<span id="cb5-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(gganimate)</span>
-<span id="cb5-8"><span class="fu" style="color: #4758AB;
+font-style: inherit;">library(gganimate)</span></span>
+<span id="cb5-8"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span>
+font-style: inherit;">library(ggplot2)</span></span>
 <span id="cb5-9"></span>
-<span id="cb5-10">bebes <span class="sc" style="color: #5E5E5E;
+<span id="cb5-10"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">|&gt;</span></span>
-<span id="cb5-11">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">bebes |&gt;</span></span>
+<span id="cb5-11"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">filter</span>(nome <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  filter(nome %in% c("Patricia", "Helen")) |&gt; </span></span>
+<span id="cb5-12"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">%in%</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">  ggplot(aes(x = ano, y = n, group = nome, color = nome)) +</span></span>
+<span id="cb5-13"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">  geom_line() +</span></span>
+<span id="cb5-14"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"Patricia"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">  geom_point() +</span></span>
+<span id="cb5-15"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"Helen"</span>)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  xlab("Ano") + </span></span>
+<span id="cb5-16"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb5-12">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">  ylab("Número de bebês nascidos") +</span></span>
+<span id="cb5-17"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">  transition_reveal(ano) +</span></span>
+<span id="cb5-18"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> ano, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> n, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">group =</span> nome, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">color =</span> nome)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-13">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_line</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-14">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-15">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">xlab</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Ano"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> </span>
-<span id="cb5-16">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Número de bebês nascidos"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-17">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">transition_reveal</span>(ano) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb5-18">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme_classic</span>()</span>
+font-style: inherit;">  theme_classic()</span></span>
 <span id="cb5-19"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```</span></span></code></pre></div>
 <p>O resultado final será:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-2.gif" class="img-fluid"></p>
+<div>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-2.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>E assim passamos por todas as etapas:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-3.gif" class="img-fluid"></p>
+<div>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/gif-3.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>E aí, gostaram? Espero que sim!</p>
@@ -8881,12 +8854,12 @@ Materiais do tutorial:
 </div>
 </div>
 <p>Até breve!</p>
-<p><a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://rladies-sp.org/posts/2023-02-tutorial-quarto/https:/cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"> Ariane Hayana </a></p>
+<p><a href="https://www.linkedin.com/in/arianehayana/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="22"> Ariane Hayana </a></p>
 <!-- inicio font awesome -->
 <script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-reactable" class="csl-entry">
 Lin, Greg. 2022. <span>«reactable: Interactive Data Tables Based on ’React Table’»</span>. <a href="https://CRAN.R-project.org/package=reactable">https://CRAN.R-project.org/package=reactable</a>.
 </div>
@@ -8906,7 +8879,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
   <category>Quarto</category>
   <category>Tutorial</category>
   <category>Relatórios</category>
-  <guid>https://rladies-sp.org/posts/2023-02-tutorial-quarto/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-02-tutorial-quarto/</guid>
   <pubDate>Tue, 07 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-02-tutorial-quarto/images/img-0.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
@@ -8914,13 +8887,13 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
   <title>Evento: Oficina de Introdução ao R</title>
   <dc:creator>Beatriz Milz</dc:creator>
   <dc:creator>[Tatyane Paz Dominguez](https://www.linkedin.com/in/tatyane-paz-dominguez-264224213/)</dc:creator>
-  <link>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</link>
+  <link>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/</link>
   <description><![CDATA[ <p>Olá, pessoal!</p>
 <p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
 <p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Foto do grupo ao final do evento</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figcaption>Foto do grupo ao final do evento</figcaption></figure>
 </div>
 <section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
 <p>Os materiais utilizados no evento estão disponíveis online e gratuitamente, <a href="https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html">na página que criamos para a atividade</a>.</p>
@@ -8941,7 +8914,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-genero-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-genero-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -8949,7 +8922,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-cor-raca-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -8957,7 +8930,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index_files/figure-html/grafico-outros-grupos-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -8966,16 +8939,16 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
 </section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Foto do David e o Espaço GuGuDaDados</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figcaption>Foto do David e o Espaço GuGuDaDados</figcaption></figure>
 </div>
 <p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
 <p>Essa foi a primeira vez que conseguimos organizar o espaço, e quatro crianças participaram, com idades entre 1 e 10 anos.</p>
 <p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
 <p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Foto do Espaço GuGuDaDados</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figcaption>Foto do Espaço GuGuDaDados</figcaption></figure>
 </div>
 </section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
 <p>Infelizmente o evento ocorreu em uma época onde os casos de COVID-19 estavam aumentando, e por isso a organização optou em não realizar coffee break colaborativo.</p>
@@ -8989,8 +8962,8 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 </ul>
 <p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Foto dos itens sorteados no evento.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figcaption>Foto dos itens sorteados no evento.</figcaption></figure>
 </div>
 </section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
 <p>Agradecemos as organizações que apoiaram o evento. O Insper ofereceu o espaço (maravilhoso), e a Curso-R ofereceu as bolsas para sorteio. Saiba mais sobre as organizações apoiadoras a seguir!</p>
@@ -9032,14 +9005,14 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
   <category>Eventos</category>
   <category>Comunidade</category>
   <category>Diversidade</category>
-  <guid>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/</guid>
   <pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Gráficos de barras com barras de erros: críticas e alternativas</title>
   <dc:creator>[Fernanda Peres](https://fernandafperes.com.br)</dc:creator>
-  <link>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</link>
+  <link>https://rladies-sp.org/posts/2022-12-graficos-dinamite/</link>
   <description><![CDATA[ <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -9054,8 +9027,8 @@ Autoria
 <div class="callout-body-container callout-body">
 <center>
 <div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 5%;">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/https:/fernandafperes.com.br/static/sobre_files/author.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Fernanda Peres</figcaption></figure>
+<figure class="figure"><p><img src="https://fernandafperes.com.br/static/sobre_files/author.png" class="img-fluid figure-img"></p>
+<figcaption>Fernanda Peres</figcaption></figure>
 </div>
 <a href="https://fernandafperes.com.br/sobre/"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/fernandaperes"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/fernandafielperes/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/estatisticaaplicada/"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/c/FernandaPeres"><i class="fab fa-youtube"></i></a>
 </center>
@@ -9068,7 +9041,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
 </figure>
 </div>
 </div>
@@ -9078,7 +9051,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g1.png" class="img-fluid figure-img" width="450"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></p>
 </figure>
 </div>
 </div>
@@ -9088,7 +9061,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g2.png" class="img-fluid figure-img" width="300"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
 </figure>
 </div>
 </div>
@@ -9106,8 +9079,8 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption>Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9118,8 +9091,8 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption>Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9339,8 +9312,8 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid figure-img" width="450"></p>
-<figcaption class="figure-caption">Estrutura básica de um gráfico boxplot.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></p>
+<figcaption>Estrutura básica de um gráfico boxplot.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9349,8 +9322,8 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Gráfico boxplot para três grupos: A, B e C.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption>Gráfico boxplot para três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9378,8 +9351,8 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption>Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9526,8 +9499,8 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption></figure>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption>Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -9640,7 +9613,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script><!-- final font awesome -->
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-weissgerber2019reveal" class="csl-entry">
 Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic, Oscar Garcia-Valencia, Zoran Bukumiric, Marko D Savic, Vesna D Garovic, e Natasa M Milic. 2019. <span>«Reveal, don’t conceal: transforming data visualization to improve transparency»</span>. <em>Circulation</em> 140 (18): 1506–18.
 </div>
@@ -9648,7 +9621,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
   <category>Gráficos</category>
   <category>Tutorial</category>
   <category>Dataviz</category>
-  <guid>https://rladies-sp.org/posts/2022-12-graficos-dinamite/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2022-12-graficos-dinamite/</guid>
   <pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/grafico-dinamite.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
@@ -9656,8 +9629,9 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
   <title>Boas vindas ao blog da R-Ladies São Paulo!</title>
   <dc:creator>Equipe R-Ladies SP</dc:creator>
   <dc:creator>[Beatriz Milz](https://beamilz.com)</dc:creator>
-  <link>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</link>
+  <link>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -9667,7 +9641,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
 <p>A R-Ladies São Paulo é uma comunidade que iniciou em 2018, e desde então buscamos promover a diversidade de gênero na comunidade da linguagem R: organizando eventos presenciais e online, tirando dúvidas no nosso grupo do telegram, disponibilizando os materiais utilizados nos eventos, entre outros.</p>
 <p>Caso queira saber mais, consulte a página <a href="https://rladies-sp.org/sobre.html">Sobre a R-Ladies São Paulo</a>.</p>
 <center>
-<img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-conre-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2020.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-loggi-2019.png" class="img-fluid" style="width:40.0%" data-fig-align="center"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2022.jpg" class="img-fluid" style="width:40.0%" data-fig-align="center">
+<img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-conre-2019.png" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2020.png" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-loggi-2019.png" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%"> <img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/evento-insper-2022.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:40.0%">
 </center>
 </section>
 <section id="por-que-um-blog" class="level2">
@@ -9684,7 +9658,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
 <p>Neste blog, existe um formulário simples para inscrição do seu email, caso queira receber as novidades! O formulário se encontra na coluna à direita do texto principal, e se parece com a imagem a seguir:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/paste-83C384D7.png" class="img-fluid figure-img" style="width:20.0%"></p>
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/paste-83C384D7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:20.0%"></p>
 </figure>
 </div>
 </section>
@@ -9693,8 +9667,8 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
 <p>A ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid figure-img" style="width:40.0%"></p>
-<figcaption class="figure-caption">Arte por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption>
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<figcaption>Arte por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption>
 </figure>
 </div>
 <p>Esperamos que seja um lugar rico de troca e compartilhamento! Até logo!</p>
@@ -9704,7 +9678,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
 
  ]]></description>
   <category>Novidades</category>
-  <guid>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/</guid>
   <pubDate>Mon, 05 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/logo.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -9712,8 +9686,9 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
   <title>#VidasNegrasImportam: Uma declaração conjunta de Forwards e R-Ladies</title>
   <dc:creator>R-Ladies Global Leadership Team</dc:creator>
   <dc:creator>R Forwards</dc:creator>
-  <link>https://rladies-sp.org/posts/2020-06-rladies-global-blm/index.html</link>
+  <link>https://rladies-sp.org/posts/2020-06-rladies-global-blm/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -9776,7 +9751,7 @@ Autoria
  ]]></description>
   <category>Diversidade</category>
   <category>Justiça Social</category>
-  <guid>https://rladies-sp.org/posts/2020-06-rladies-global-blm/index.html</guid>
+  <guid>https://rladies-sp.org/posts/2020-06-rladies-global-blm/</guid>
   <pubDate>Sat, 06 Jun 2020 00:00:00 GMT</pubDate>
   <media:content url="https://rladies-sp.org/posts/2020-06-rladies-global-blm/images/logo.jpg" medium="image" type="image/jpeg"/>
 </item>

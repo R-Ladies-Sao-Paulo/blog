@@ -9,7 +9,7 @@
 <link>https://rladies-sp.org/</link>
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.4.550</generator>
+<generator>quarto-1.4.555</generator>
 <lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>As metas foram atualizadas com sucesso!</title>
@@ -51,7 +51,7 @@ Autoria
 <p>O ano aqui nas R-Ladies São Paulo já começou com tudo! No primeiro fim de semana de janeiro tivemos nossa <strong>reunião de planejamento</strong> das atividades que queremos oferecer agora em 2024. Como já é de praxe nos nossos encontros, fizemos um cafezinho colaborativo e passamos <em>post-its</em> para as pessoas participantes colocarem as suas ideias de temas e assuntos que elas julgassem interessante de trazer para a roda. Montamos um painel de propostas bem bonito que deu um orgulho danado de se ver!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="https://rladies-sp.org/posts/2024-01-planejamento-do-ano/images/painel-post-its.jpg" class="img-fluid figure-img"></p>
 <figcaption>Painel lindíssimo com nossas sugestões para 2024 😍</figcaption>
 </figure>
 </div>
@@ -645,7 +645,10 @@ Autoria
 <p>Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo.</p>
 <p>Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/studio_ghibli.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Imagem obtida no site Plano Crítico"></a></p>
+</figure>
+</div>
 <figcaption>Imagem obtida no site Plano Crítico</figcaption></figure>
 </div>
 <p>Por isso tudo, que tal “scrapear” (ou raspar) a <a href="https://pt.wikipedia.org/wiki/Studio_Ghibli">página do Studio Ghibli, na Wikipédia</a> a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!</p>
@@ -663,7 +666,10 @@ Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.
 </div>
 <p>Para quem não conhece os filmes, muitos estão disponíveis na Netflix!</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://www.netflix.com/br/browse/genre/81227213"><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/netflix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Página da Netflix com filmes do Studio Ghibli"></a></p>
+</figure>
+</div>
 <figcaption>Página da Netflix com filmes do Studio Ghibli</figcaption></figure>
 </div>
 <section id="etapas-do-scraping" class="level1"><h1>Etapas do <em>scraping</em>
@@ -2400,7 +2406,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf1-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.</figcaption></figure>
 </div>
 </div>
@@ -2754,7 +2760,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/index_files/figure-html/graf2-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.</figcaption></figure>
 </div>
 </div>
@@ -3195,7 +3201,6 @@ font-style: inherit;">"Ficha do filme"</span></span>
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
-<div>
 <div id="cxzfswgnyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#cxzfswgnyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -3636,7 +3641,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   text-indent: 25px;
 }
 </style>
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_heading">
 <th colspan="2" class="gt_heading gt_title gt_font_normal">Túmulo de Vagalumes</th>
@@ -3720,7 +3725,6 @@ font-style: inherit;">)</span></span></code></pre></div>
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </div>
@@ -4454,7 +4458,6 @@ font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
-<div>
 <div id="svtnvhuxnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -4866,7 +4869,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   text-indent: 25px;
 }
 </style>
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Quantidade de faixas por álbum</caption>
 <thead class="gt_col_headings"><tr class="header">
 <th id="album_release_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">album_release_year</th>
@@ -5103,7 +5106,6 @@ font-style: inherit;">)</span></span></code></pre></div>
 </div>
 </div>
 </div>
-</div>
 
 
 </section></section></section></section> ]]></description>
@@ -5306,7 +5308,7 @@ Autoria
 <li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 </ul>
 <p>Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.</p>
-<table class="table"><tbody>
+<table class="caption-top table"><tbody>
 <tr class="odd">
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></td>
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></td>
@@ -5337,7 +5339,7 @@ Autoria
 <p>O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a>, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!</p>
 </section><section id="espaço-gugudadados" class="level3"><h3 class="anchored" data-anchor-id="espaço-gugudadados"><strong>Espaço Gugudadados</strong></h3>
 <p>O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a> foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -5765,7 +5767,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 </ul>
 <p>We created a Google Document so the groups could take and share notes.</p>
-<table class="table"><tbody>
+<table class="caption-top table"><tbody>
 <tr class="odd">
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></td>
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></td>
@@ -5796,7 +5798,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
 </section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
 <p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -8892,7 +8894,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
 <p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do grupo ao final do evento</figcaption></figure>
 </div>
 <section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
@@ -8939,7 +8941,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
 </section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do David e o Espaço GuGuDaDados</figcaption></figure>
 </div>
 <p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
@@ -8947,7 +8949,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 <p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
 <p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do Espaço GuGuDaDados</figcaption></figure>
 </div>
 </section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
@@ -8962,7 +8964,7 @@ Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <span>�
 </ul>
 <p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto dos itens sorteados no evento.</figcaption></figure>
 </div>
 </section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
@@ -9079,7 +9081,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="400"></p>
 <figcaption>Gráfico de barras (“gráfico dinamite”) representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
@@ -9091,7 +9093,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="400"></p>
 <figcaption>Gráfico dot plot representando as médias e os desvios-padrão de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
@@ -9312,7 +9314,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/images/g5.png" class="img-fluid figure-img" width="450"></p>
 <figcaption>Estrutura básica de um gráfico boxplot.</figcaption></figure>
 </div>
 </div>
@@ -9322,7 +9324,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="400"></p>
 <figcaption>Gráfico boxplot para três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
@@ -9351,7 +9353,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="400"></p>
 <figcaption>Gráfico boxplot com dot plot sobreposto representando três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
@@ -9499,7 +9501,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figure class="figure"><p><img src="https://rladies-sp.org/posts/2022-12-graficos-dinamite/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="400"></p>
 <figcaption>Gráfico de violino representando as distribuições de três grupos: A, B e C.</figcaption></figure>
 </div>
 </div>
@@ -9667,7 +9669,7 @@ Weissgerber, Tracey L, Stacey J Winham, Ethan P Heinzen, Jelena S Milin-Lazovic,
 <p>A ideia é que este seja um espaço onde as pessoas da comunidade R-Ladies possam publicar textos relacionados à atuação da comunidade, programação em R, ciência de dados e muito mais.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/images/welcome_to_rstats_twitter.png" class="img-fluid figure-img" style="width:40.0%"></p>
 <figcaption>Arte por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption>
 </figure>
 </div>

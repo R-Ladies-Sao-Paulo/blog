@@ -9,7 +9,7 @@
 <link>https://rladies-sp.org/en.html</link>
 <atom:link href="https://rladies-sp.org/en.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.4.550</generator>
+<generator>quarto-1.4.555</generator>
 <lastBuildDate>Sat, 02 Dec 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>R Packages for Brazilian Data</title>
@@ -448,7 +448,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 </ul>
 <p>We created a Google Document so the groups could take and share notes.</p>
-<table class="table"><tbody>
+<table class="caption-top table"><tbody>
 <tr class="odd">
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos1.jpg" class="img-fluid"></td>
 <td><img src="https://rladies-sp.org/posts/2023-03-evento-open-data-day/images/grupos2.jpg" class="img-fluid"></td>
@@ -479,7 +479,7 @@ Svab, Haydee, Beatriz Milz, Diego Rabatone Oliveira, e Rafael H. M. Pereira. 202
 <p>We made a collaborative coffee with items purchased by the organizing group (with the money received from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>) and food brought by participants. This way, people could get up and get coffee and something to eat at any time during the event. This coffee format (available the entire time of the event) is very good for three reasons: (i) it respects the time of the groups who can take their breaks as the work progresses; (ii) it welcomes participants who, for health reasons, cannot go without eating for many hours and (iii) welcomes participants who, due to socio-economic conditions, are unable to have a meal during their lunch break. Given the nature of the R-Ladies group, it is an important aspect to provide a welcoming environment so that everyone can enjoy the experience of the event regardless of having something to eat throughout the day, in addition to the fact that the collaborative coffee is also a way to encourage integration between people!</p>
 </section><section id="gugudadados-space" class="level3"><h3 class="anchored" data-anchor-id="gugudadados-space"><strong>Gugudadados Space</strong></h3>
 <p>We created the Gugudadados Space to facilitate the participation of people responsible for kids and babies (e.g., mothers, fathers, and caregivers). A baby and four children between 7 and 10 years old participated in this event. With the money from the scholarship offered by <a href="https://ok.org.br/">OKBR</a>, it was possible to hire a recreational teacher in the Gugudadados Space (a room next to the event room, on the same floor) throughout the activity. The R-Ladies organizers also took toys, drawings, markers, games, and temporary tattoos to entertain and amuse the children.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">

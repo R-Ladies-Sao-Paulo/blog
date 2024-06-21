@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Tatyane Paz Dominguez">
 <meta name="author" content="Haydée Svab">
@@ -152,6 +152,10 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li>
     <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../coc.html">
+ <span class="dropdown-text">Código de conduta</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../como-participar.html">
@@ -350,7 +354,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li><p><a href="https://www.linkedin.com/in/william-amorim-796798210/">William Amorim</a> (<a href="https://curso-r.com/">Curso-R</a>)</p></li>
 </ul>
 <p>Foi criado um Google Docs aberto para que os grupos pudessem fazer e compartilhar anotações.</p>
-<table class="table"><tbody>
+<table class="caption-top table"><tbody>
 <tr class="odd">
 <td><img src="images/grupos1.jpg" class="img-fluid"></td>
 <td><img src="images/grupos2.jpg" class="img-fluid"></td>
@@ -381,7 +385,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <p>O café colaborativo foi montado com itens comprados com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a>, e também por itens trazidos por participantes. Assim, as pessoas puderam levantar e buscar café e algo para comer em qualquer momento do evento. Esse formato de café (disponível o tempo todo do evento) é muito bom por 3 motivos: (i) respeita o tempo dos grupos que podem fazer suas pausas conforme o andar dos trabalhos; (ii) acolhe participantes que por questões de saúde não podem permanecer muitas horas sem comer e (iii) acolhe participantes que por condição sócio-econômica não têm como fazer uma refeição no intervalo do almoço. Dada a natureza do grupo R-Ladies, é um quesito importante prover um acolhimento mínimo necessário para que todas as pessoas tenham condição de usufruir da experiência do evento independente de ter o que comer ao longo do dia, além de que o café colaborativo também é uma forma de incentivar a integração entre as pessoas!</p>
 </section><section id="espaço-gugudadados" class="level3"><h3 class="anchored" data-anchor-id="espaço-gugudadados"><strong>Espaço Gugudadados</strong></h3>
 <p>O Espaço Gugudadados é um espaço feito para facilitar a participação de mães e pessoas cuidadoras. Participaram um bebê e quatro crianças na faixa de 7 a 10 anos. Com o valor da bolsa oferecida pela <a href="https://ok.org.br/">OKBR</a> foi possível contratar uma professora recreadora que esteve no espaço Gugudadados (uma sala ao lado da sala das atividades dos adultos, no mesmo andar) durante toda a atividade. As organizadoras da R-Ladies também levaram brinquedos, desenhos, canetinhas, jogos e tatuagens temporárias para entreter e divertir as crianças.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -653,6 +657,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -696,7 +705,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -983,7 +996,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Página criada com <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

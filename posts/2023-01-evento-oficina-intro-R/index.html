@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <meta name="author" content="Tatyane Paz Dominguez">
@@ -110,6 +110,10 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li>
     <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../coc.html">
+ <span class="dropdown-text">Código de conduta</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../como-participar.html">
@@ -256,7 +260,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <p>Recentemente, a R-Ladies São Paulo teve o prazer de organizar uma <a href="https://www.meetup.com/rladies-sao-paulo/events/289755187/">oficina de introdução ao R</a>. O evento foi um marco importante, pois foi o primeiro evento presencial do grupo desde o início da pandemia de COVID-19.</p>
 <p>O evento aconteceu no Insper, foi um sucesso e reuniu pessoas interessadas em aprender mais sobre a linguagem de programação R.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/logo.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="images/logo.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do grupo ao final do evento</figcaption></figure>
 </div>
 <section id="conteúdo-abordado" class="level2"><h2 class="anchored" data-anchor-id="conteúdo-abordado">Conteúdo abordado</h2>
@@ -303,7 +307,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <p>Além disso, ainda é importante trabalhar para garantir o aumento de pessoas pretas, pardas e indígenas na participação dos eventos.</p>
 </section><section id="espaço-gugudadados" class="level2"><h2 class="anchored" data-anchor-id="espaço-gugudadados">Espaço GuGuDaDados</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/gugudadados1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="images/gugudadados1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do David e o Espaço GuGuDaDados</figcaption></figure>
 </div>
 <p>O GuGuDaDados é um espaço colaborativo e experimental que as RLadies São Paulo propõem com o objetivo de deixar as crianças entretidas e cuidadas enquanto as pessoas responsáveis podem se dedicar com tranquilidade à sua formação.</p>
@@ -311,7 +315,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <p>O Insper cedeu uma sala para o espaço GuGuDaDados, próxima à sala onde as apresentações estavam acontecendo.</p>
 <p>As crianças se divertiram muito! Tivemos videogame num telão, o que tornou a experiência bastante imersiva. Para crianças menores havia um tatame com vários tipos de brinquedo, e adultos bem atentos olhando e brincando com elas. Na pausa para o lanche levamos cada criança para perto de seu adulto responsável, e depois todo mundo voltou às atividades. Entre um videogame e outro também jogamos jogos de tabuleiro, e acompanhamos as crianças maiores no famoso escorregador que está instalado no interior do prédio do Insper. Foi um barato!</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/gugudadados2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="images/gugudadados2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto do Espaço GuGuDaDados</figcaption></figure>
 </div>
 </section><section id="pandemia-de-covid-19" class="level2"><h2 class="anchored" data-anchor-id="pandemia-de-covid-19">Pandemia de COVID-19</h2>
@@ -326,7 +330,7 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </ul>
 <p>Os stickers não eram sorteados! Qualquer pessoa poderia passar na mesa e pegar 😃.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/sorteio.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<figure class="figure"><p><img src="images/sorteio.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Foto dos itens sorteados no evento.</figcaption></figure>
 </div>
 </section><section id="apoiadores-do-evento" class="level2"><h2 class="anchored" data-anchor-id="apoiadores-do-evento">Apoiadores do evento</h2>
@@ -455,6 +459,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -498,7 +507,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

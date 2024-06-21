@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Ornella Scardua Ferreira">
 <title>R-Ladies São Paulo - Raspando a página do Studio Ghibli, na Wikipédia</title>
@@ -143,6 +143,10 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li>
     <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../coc.html">
+ <span class="dropdown-text">Código de conduta</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../como-participar.html">
@@ -303,7 +307,10 @@ Autoria
 <p>Fundado em 1985 pelos cineastas japoneses Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, o Studio Ghibli é um dos estúdios de animação japonesa mais famosos ao redor do mundo.</p>
 <p>Além de serem reconhecidos pelos traços e cores muito singulares de seus personagens e cenários, os filmes, curtas e comercias do Studio Ghibli são muito aclamados pela crítica e pelo público devido, principalmente, à sensibilidade dos temas que cerceiam suas histórias e a maneira como elas são contadas para nós.</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://www.planocritico.com/lista-estudio-ghibli-os-longas-ranqueados/"><img src="img/studio_ghibli.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Imagem obtida no site Plano Crítico"></a></p>
+</figure>
+</div>
 <figcaption>Imagem obtida no site Plano Crítico</figcaption></figure>
 </div>
 <p>Por isso tudo, que tal “scrapear” (ou raspar) a <a href="https://pt.wikipedia.org/wiki/Studio_Ghibli">página do Studio Ghibli, na Wikipédia</a> a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!</p>
@@ -321,7 +328,10 @@ Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.
 </div>
 <p>Para quem não conhece os filmes, muitos estão disponíveis na Netflix!</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://www.netflix.com/br/browse/genre/81227213"><img src="img/netflix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Página da Netflix com filmes do Studio Ghibli"></a></p>
+</figure>
+</div>
 <figcaption>Página da Netflix com filmes do Studio Ghibli</figcaption></figure>
 </div>
 <section id="etapas-do-scraping" class="level1"><h1>Etapas do <em>scraping</em>
@@ -794,7 +804,7 @@ Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elem
 <span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="index_files/figure-html/graf1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figure class="figure"><p><img src="index_files/figure-html/graf1-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Gráfico animado sobre o ano de lançamento dos filmes do Studio Ghibli.</figcaption></figure>
 </div>
 </div>
@@ -836,7 +846,7 @@ Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elem
 <span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="index_files/figure-html/graf2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<figure class="figure"><p><img src="index_files/figure-html/graf2-1.png" class="img-fluid figure-img" width="672"></p>
 <figcaption>Gráfico de barras sobre o número de filmes produzidos no Studio Ghibli, por diretor.</figcaption></figure>
 </div>
 </div>
@@ -903,7 +913,6 @@ Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elem
 <span>    subtitle <span class="op">=</span> <span class="st">"Ficha do filme"</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
 <div id="cxzfswgnyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#cxzfswgnyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1344,7 +1353,7 @@ Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elem
   text-indent: 25px;
 }
 </style>
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_heading">
 <th colspan="2" class="gt_heading gt_title gt_font_normal">Túmulo de Vagalumes</th>
@@ -1428,7 +1437,6 @@ Figura&nbsp;5: Box da página do Studio Ghibli, no Wikipédia, referente ao elem
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </div>
@@ -1531,6 +1539,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1574,7 +1587,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Bianca Muniz">
 <title>R-Ladies São Paulo - Rita com R</title>
@@ -145,6 +145,10 @@ gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 <li>
     <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../coc.html">
+ <span class="dropdown-text">Código de conduta</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../como-participar.html">
@@ -391,7 +395,6 @@ Importante
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">faixas</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">gerar_tabela</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
 <div id="svtnvhuxnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
@@ -803,7 +806,7 @@ Importante
   text-indent: 25px;
 }
 </style>
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Quantidade de faixas por álbum</caption>
 <thead class="gt_col_headings"><tr class="header">
 <th id="album_release_year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">album_release_year</th>
@@ -1040,7 +1043,6 @@ Importante
 </div>
 </div>
 </div>
-</div>
 
 
 </section></section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -1133,6 +1135,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1176,7 +1183,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

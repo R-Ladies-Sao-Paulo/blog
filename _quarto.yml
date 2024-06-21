@@ -50,6 +50,8 @@ website:
         menu: 
           - text: "Sobre a R-Ladies SP"
             href: sobre.qmd  
+          - text: "Código de conduta"
+            href: coc.qmd
           - text: "Como participar?"
             href: como-participar.qmd 
       - text: "Blog"

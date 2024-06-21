@@ -1,0 +1,88 @@
+---
+title: "Código de Conduta - R-Ladies São Paulo"
+---
+
+As R-Ladies se dedicam a proporcionar uma experiência livre de assédio para todos, todas e todes. Não toleramos qualquer tipo de assédio a participantes.
+
+
+Este código de conduta se aplica a todos os espaços das R-Ladies, incluindo Meetups, Twitter (X), Slack, listas de discussão, Youtube, Telegram, tanto on-line quanto off-line. Qualquer pessoa que violar este código de conduta poderá ser sancionada ou expulsa desses espaços, a critério das Equipes de Liderança Local e/ou Global.
+
+
+Alguns espaços das R-Ladies podem ter regras adicionais em vigor, que serão claramente disponibilizadas a participantes, que são responsáveis por conhecer e respeitar essas regras.
+
+
+Entende-se como assédio:
+
+
+-   Comentários ofensivos relacionados a gênero, identidade e expressão de gênero, orientação sexual, deficiência, doença mental, neuro(a)tipicidade, aparência física, tamanho corporal, idade, raça ou religião.
+
+-   Comentários indesejados sobre as escolhas e práticas de estilo de vida de uma pessoa, inclusive aquelas relacionadas à alimentação, saúde, parentalidade, drogas e emprego.
+
+-   Erro deliberado de gênero ou uso de nomes "mortos" ou rejeitados.
+
+-   Imagens ou comportamentos sexuais gratuitos ou fora de contexto em espaços inapropriados.
+
+-   Contato físico e contato físico simulado (por exemplo, descrições textuais como "abraço" ou "massagem nas costas") sem consentimento ou após um pedido para parar.
+
+-   Ameaças de violência.
+
+-   Incitação à violência contra qualquer indivíduo, inclusive encorajar uma pessoa a cometer suicídio ou a se automutilar.
+
+-   Intimidação deliberada.
+
+-   Perseguição ou invasão de privacidade.
+
+-   Fotografias ou gravações assediadoras, incluindo o registro de atividades on-line para fins de assédio.
+
+-   Interrupção contínua da fala.
+
+-   Atenção sexual indesejada.
+
+-   Padrão de contato social inadequado, como solicitar/assumir níveis inadequados de intimidade com outras pessoas.
+
+-   Continuação da comunicação individual após pedido de interrupção.
+
+-   Revelação deliberada de qualquer aspecto da identidade de uma pessoa sem o seu consentimento, exceto quando necessário para proteger pessoas vulneráveis de abuso intencional.
+
+-   Publicação de comunicações privadas não-assediantes.
+
+
+As R-Ladies priorizam a segurança das pessoas marginalizadas em detrimento do conforto das pessoas privilegiadas. As Equipes de Liderança Local ou Global não agirão com base em reclamações relacionadas a:
+
+-   "Reversões", incluindo "racismo reverso", "sexismo reverso" e "cisfobia".
+
+-   Comunicação razoável de limites, como "deixe-me em paz", "vá embora" ou "não vou discutir isso com você".
+
+-   Comunicação em um "tom" que você não considera agradável.
+
+-   Críticas a comportamentos ou suposições racistas, sexistas, cissexistas ou opressivas de outra forma.
+
+
+Nos aplicativos de mensageria usados pelo grupo (Telegram, Whatsapp, Slack, etc)
+
+-   Evite usar nomes de usuário ou fotos de perfil abertamente sexuais ou ofensivos que possam prejudicar um ambiente amigável, seguro e acolhedor para todos.
+
+-   Não publique texto/capturas de tela de nada compartilhado sem o consentimento explícito da pessoa autora. Isso inclui capturas de tela de mensagens privadas para canais públicos, bem como conversas em canais públicos para qualquer lugar fora do canal das R-Ladies.
+
+
+**Denúncias**
+
+
+Se estiver sofrendo assédio por parte de um membro/convidado/participante em algum evento das R-Ladies, ou ainda se perceber que outra pessoa está sofrendo assédio ou se tiver qualquer outra preocupação, entre em contato com a Equipe de Liderança Local pelo email certificados.rladiessp\[at\]gmail\[dot\]com ou com a Equipe de Liderança Global por meio do endereço reporting\[at\]rladies\[dot\]org. As incidências locais serão tratadas em conjunto com a organização local. Se a pessoa que estiver assediando você fizer parte da equipe, ela não participará da resolução do incidente. Responderemos o mais prontamente possível.
+
+
+Este código de conduta aplica-se aos espaços das R-Ladies, mas se você estiver sendo assediada por um membro/convidado/participante das R-Ladies fora de nossos espaços, ainda assim queremos saber. Levaremos a sério todas as denúncias de boa-fé de assédio por membros da R-Ladies, especialmente das Equipes de Liderança Local e Global. Isso inclui assédio fora de nossos espaços e assédio ocorrido em qualquer momento. As Equipes de Liderança Local e Global reservam-se o direito de excluir pessoas do grupo R-Ladies com base em seu comportamento anterior, incluindo o comportamento fora dos espaços das R-Ladies e comportamento às pessoas externas às R-Ladies.
+
+
+Para proteger os voluntários contra abusos e esgotamento, reservamo-nos o direito de rejeitar qualquer denúncia que acreditemos ter sido feita de má-fé. As denúncias destinadas a silenciar críticas legítimas podem ser excluídas sem resposta.
+
+Respeitaremos as solicitações de confidencialidade com o objetivo de proteger as vítimas de abuso. A nosso critério, podemos citar publicamente o nome de uma pessoa sobre a qual recebemos reclamações de assédio ou alertar privadamente terceiros sobre ela, se acreditarmos que isso aumentará a segurança dos membros do R-Ladies ou do público em geral. Não citaremos o nome das vítimas de assédio sem o consentimento delas.
+
+
+### **Consequências**
+
+Espera-se que o comportamento assediador seja interrompido imediatamente quando pedido.
+
+Se um(a) participante se comporta como assediador, as Equipes de Liderança Local e/ou Global. podem tomar qualquer ação que julgarem apropriada, inclusive banimento do(a) referido(a) participante de todos os espaços das R-Ladies e identificação do(a) participante para outros membros da comunidade R-Ladies ou para o público em geral.
+
+Esta política está licenciada sob a licença Creative Commons Zero.

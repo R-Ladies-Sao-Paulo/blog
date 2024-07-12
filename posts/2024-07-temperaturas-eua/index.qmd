@@ -1,0 +1,257 @@
+---
+title: "DataBia nos EUA"
+subtitle: "Plotando as diferentes temperaturas em Austin e NYC"
+author: 
+  - "[Bianca Muniz](https://www.linkedin.com/in/bmuniz/)"
+date: "2024-07-11"
+categories: 
+# exemplo de categorias:
+  - "Pessoal"
+  - "Tutorial"
+toc: true # isso habilita o sumário ao lado do post
+image: "images/logo.png" # imagem usada na página inicial junto ao post
+bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
+draft: true # enquanto estiver draft: true, o post é um rascunho
+---
+
+::: {.callout-note collapse="false"}
+## Autoria
+
+<center>
+
+![Foto](images/perfil_bianca.jpeg){style="width: 30%; border-radius: 50%;"}
+
+[<i class="bi bi-house-fill"></i>](https://biamuniz.github.io) [<i class="fab fa-github"></i>](https://github.com/biamuniz) [<i class="fab fa-linkedin"></i>](https://www.linkedin.com/in/bmuniz/)
+
+</center>
+
+Este post foi escrito por Bianca Muniz e publicado originalmente em seu [blog pessoal](https://biamuniz.github.io/blog/posts/eua/).
+:::
+
+
+
+Estive nos EUA durante quatro meses em 2022, entre setembro e dezembro, do final do verão até o começo do inverno. Precisei lidar com o calor texano de 30°C (e muito suor, pressão baixa e protetor solar) e temperaturas negativas no inverno de Nova York (e o hábito de entrar em cafés quentinhos apenas pra reter o calor do meu corpo por uns minutos). Perrengues chiques estadunidenses.
+
+Eu não gosto das altas temperaturas. Até canto *ai que delícia o verão, a gente mostra o ombrinho* etc mas minha ligação com o calor acaba aí. Eu tenho pressão baixa, então a maior parte do tempo me preocupava em não passar mal (o que aconteceu algumas vezes no TX). Por outro lado, eu não tinha ideia do que era viver temperaturas tão baixas a ponto de travar meu celular ou de ver lagos congelados. Quando chegou o inverno, não tinha roupas pra um friozão porque acreditava que meu moletom universitário era suficiente hehe estava BEM enganada. Lá vai eu comprar um casacão nos outlets.
+
+Pensando nessas nuances, fiz um gráfico que mostra as temperaturas diárias que encarei enquanto estive nos EUA. Achei que seria bacana treinar minha fluência no tidyverse e conhecer outros pacotes do R revisitando umas informações do meu período de intercâmbio.
+
+## Mãos à obra
+
+### Setup inicial
+
+```{r}
+#| message: false
+#| warning: false
+#Carregando os pacotes
+library(tidyverse) #para lidar com os dados (ggplot tá aí!)
+library(lubridate) #para lidar com as datas
+library(weathermetrics) #para converter a temperatura
+library(janitor) #clean_names
+library(ggtext) # para suportar texto com HTML
+library(glue) # para criar strings
+
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+Os dados eu peguei pra uma tarefa da disciplina *Reporting With Data*. Exportei do site os registros das estações de Austin e de Nova York, no período entre setembro e dezembro de 2022. Alguns desafios:
+\* Selecionar o período específico em que eu estive em cada cidade; 
+\* Como a temperatura estava em Fahrenheit, tive que converter para Celsius (afinal, aqui é BR). Usei o pacote `weathermetrics` pra essa tarefa 
+\* Acrescentar dados de São Paulo (onde estive na primeira semana de setembro); 
+\* Formatar datas.
+
+```{r}
+#| message: false
+#| warning: false
+#Carregando os dados
+df <- read.csv("data/3643365.csv") |> 
+  clean_names()
+
+#Formatando as datas
+df$date <- as.Date(df$date, format = "%Y-%m-%d")
+
+# Filtrando os dados de acordo com as condições de data e estação metereológica
+filtered_df <- df %>%
+  filter((station == "USW00013958" & date >= as.Date("2022-09-01") & date <= as.Date("2022-12-22")) |
+         (station == "USW00014732" & date >= as.Date("2022-12-23")))
+
+# converte os dados de fahrenheit para celsius
+filtered_df$tmin <- fahrenheit.to.celsius(filtered_df$tmin)
+filtered_df$tmax <- fahrenheit.to.celsius(filtered_df$tmax)
+
+```
+
+Agora tenho um dataframe com registros das temperaturas de Austin e Nova York. Porém, eu fiquei um tempinho de setembro em SP. Achava errado não incluir essa informação, então adicionei as temperaturas entre 1 e 6 de setembro:
+
+```{r}
+# Substituição de dados do começo de setembro pela temperatura registrada em SP
+sp_data <- data.frame(
+  name = c("SAO PAULO", "SAO PAULO", "SAO PAULO", "SAO PAULO", "SAO PAULO", "SAO PAULO"),
+  date = c("2022-09-01", "2022-09-02", "2022-09-03", "2022-09-04", "2022-09-05", "2022-09-06"),
+  tmin = c(10.3, 12.5, 15.5, 10, 11.3, 13.7),
+  tmax = c(26.9, 30.2, 23.7, 15.1, 19.3, 23.9)
+)
+
+# Converter strings de data para tipo Date, se ainda não estiverem
+sp_data$date <- as.Date(sp_data$date, format = "%Y-%m-%d")
+
+# Substituição dos valores de temperatura
+filtered_df <- filtered_df %>%
+  mutate(
+    name = ifelse(date %in% sp_data$date, sp_data$name[match(date, sp_data$date)], name),
+    tmin = ifelse(date %in% sp_data$date, sp_data$tmin[match(date, sp_data$date)], tmin),
+    tmax = ifelse(date %in% sp_data$date, sp_data$tmax[match(date, sp_data$date)], tmax)
+  )
+
+filtered_df<-filtered_df |> select(name, date, tmin, tmax)
+```
+
+### Plotando o gráfico
+
+O processo de criar o gráfico foi ok; sabia que precisava fazer um "lollipop". Mas não contava com o transtorno que é criar anotações e posicioná-las corretamente. Foi bem "tentativa e erro" essa parte, mas gostei do resultado.
+
+Primeiro, eu calculei os dias com maiores e menores valores para temperatura e amplitude térmica:
+
+```{r}
+#| message: false
+#| warning: false
+
+dia_com_menor_temperatura <- filtered_df %>% filter(tmin == min(tmin))
+dia_com_maior_temperatura <- filtered_df %>% filter(tmax == max(tmax))
+dia_com_maior_amplitude <- filtered_df %>% mutate(amplitude = tmax - tmin) %>% filter(amplitude == max(amplitude))
+dia_com_menor_amplitude <- filtered_df %>% mutate(amplitude = tmax - tmin) %>% filter(amplitude == min(amplitude))
+
+```
+
+Também estilizei o título. Vi numa edição da newsletter do Albert Rapp esse jeito de colocar o título e achei uma boa sacada, porque posso retirar a legenda.
+
+```{r}
+#| message: false
+#| warning: false
+
+
+# Use o ggtext para o subtitle que requer HTML
+my_title <- glue(
+  "Temperaturas <b><span style = 'color:blue;'>mínimas</span></b> e <b><span style = 'color:orange;'>máximas</span></b> durante meu período nos EUA"
+)
+
+```
+
+O resultado! Admito que não ficou TÃO do jeito que eu queria, mas gostei de fazer um gráfico inteirinho no R, sem precisar de algum software de design (viva o software livre).
+
+```{r}
+#| message: false
+#| warning: false
+# Use o ggtext para o subtitle que requer HTML
+my_title <- glue(
+  "Temperaturas <b><span style = 'color:blue;'>mínimas</span></b> e <b><span style = 'color:orange;'>máximas</span></b> durante meu período nos EUA"
+)
+
+# Cria o gráfico
+figura <- ggplot(
+  filtered_df, aes(x = date)) +
+  geom_segment(aes(x = date, xend = date, y = tmin, yend = tmax)) +
+  geom_point(aes(y = tmin), color = "blue", size = 1) +
+  geom_point(aes(y = tmax), color = "orange", size = 1) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "black", size = 0.5) +  # Linha na temperatura zero
+  geom_segment(
+    aes(x = as.Date("2022-09-07"), 
+        y = 20, 
+        xend = as.Date("2022-09-07"), 
+        yend = -8), 
+    arrow = arrow(type = "closed", length = unit(0.1, "cm")), color = "red") +
+  annotate("text", x = as.Date("2022-09-07"), y = -12, label = "Chegada em \nAustin: 7/set", size = 3, color = "black", family="Raleway") +
+  theme_minimal() +
+  labs(title = my_title,
+       subtitle = "Registro das temperaturas nas cidades onde estive nos meses de setembro a dezembro de 2022", 
+       x = "Dia", 
+       y = "Temperatura (°C)",
+       caption = "Fontes: National Centers for Environmental Information; Climatempo. \n
+       Gráfico por Bianca Muniz (@biancamuniz__)") +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(from = floor(min(filtered_df$tmin) / 10) * 10, to = ceiling(max(filtered_df$tmax) / 10) * 10, by = 10)) +
+  geom_vline(data = data.frame(date = seq(min(filtered_df$date), max(filtered_df$date), by = "1 month")),
+             aes(xintercept = date), linetype = "dotted", color = "gray") +
+  theme(plot.title = element_markdown(size = 12, family = "Bitter", face = "bold"),
+        axis.text.x = element_text(angle = 0, vjust = 0.5, hjust = -1, size = 10),
+        plot.subtitle = element_text(family = "Bitter", size = 10),
+        axis.title = element_text(family = "Bitter"),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(size = 10),
+        plot.caption = element_text(family = "Bitter")) +  labs(title = my_title)+
+  ## Adicionando setas
+  geom_curve(
+    aes(
+      x = dia_com_menor_temperatura$date -10, 
+      y = min(filtered_df$tmin), 
+      xend = dia_com_menor_temperatura$date, 
+      yend = min(filtered_df$tmin) - 2),
+    arrow = arrow(length = unit(0.1, "cm")), color = "red") +
+  geom_curve(
+    aes(
+      x = dia_com_maior_temperatura$date, 
+      y = max(filtered_df$tmax) -5, 
+      xend = dia_com_maior_temperatura$date, 
+      yend = max(filtered_df$tmax) + 5), 
+    arrow = arrow(length = unit(0.1, "cm")), color = "red") +
+  geom_curve(
+    aes(
+      x = dia_com_maior_amplitude$date, 
+      y = (max(filtered_df$tmax) + min(filtered_df$tmin)) / 2, 
+      xend = dia_com_maior_amplitude$date, 
+      yend = max(filtered_df$tmax) + 4), 
+    arrow = arrow(length = unit(0.1, "cm")), color = "red") +
+  geom_curve(aes(x = as.Date("2022-09-07"), y = 10, xend = as.Date("2022-10-16"), yend = 10), 
+             curvature = 0, color = "red") +  # Colchete
+  annotate("text", x = as.Date("2022-09-25"), y = 5, label = "40 dias seguidos com \ntemperaturas acima de 30°C", 
+           size = 3, color = "black", family = "Raleway") + # Use o markdown para o subtítulo# Diminui o tamanho do subtítulo
+  ## Adicionando anotações
+  annotate(
+    "text", 
+    x = dia_com_menor_temperatura$date - 30, 
+    y = min(filtered_df$tmin) - 4, 
+    label = "Menor temperatura \nem todo o período:\n-13°C em NYC", 
+    hjust = 0, 
+    vjust = 0, 
+    size = 3, 
+    color = "black", family = "Raleway") +
+  annotate(
+    "text", 
+    x = dia_com_maior_temperatura$date, 
+    y = max(filtered_df$tmax) - 2, 
+    label = "O dia mais quente: \n22/09, 37°C", 
+    hjust = 1, 
+    vjust = -0.75, 
+    size = 3, 
+    color = "black", family = "Raleway") +
+  annotate(
+    "text", 
+    x = dia_com_maior_amplitude$date-10, 
+    y = max(filtered_df$tmax) + 10, 
+    label = "No dia 22/12, último dia que estive no Texas \nencarei uma diferença de 23°C entre \nas temperaturas mínima e máxima!", 
+    hjust = 0.5, 
+    vjust = 1, 
+    size = 3, 
+    color = "black",position = position_dodge(width = 0.2), family = "Raleway")
+figura
+```
+
+
+
+```{r}
+#| echo: false
+# codigo para gerar as referencias dos pacotes!
+knitr::write_bib(
+  x = c("tidyverse", "dados", "palmerpenguins", "knitr"),
+  file = "pacotes.bib"
+  )
+```
+
+
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<!-- final font awesome -->

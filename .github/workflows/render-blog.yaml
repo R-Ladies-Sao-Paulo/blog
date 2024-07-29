@@ -56,6 +56,10 @@ jobs:
             any::ghibli
             any::ggimage
             any::gt
+            any::weathermetrics
+            any::ggtext
+            any::glue
+            
 
 
       - name: Publish to GitHub Pages (and render)

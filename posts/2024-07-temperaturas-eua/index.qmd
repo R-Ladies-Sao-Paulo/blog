@@ -43,11 +43,11 @@ Pensando nessas nuances, fiz um gráfico que mostra as temperaturas diárias que
 ```{r}
 #| message: false
 #| warning: false
-#Carregando os pacotes
-library(tidyverse) #para lidar com os dados (ggplot tá aí!)
-library(lubridate) #para lidar com as datas
-library(weathermetrics) #para converter a temperatura
-library(janitor) #clean_names
+# Carregando os pacotes
+library(tidyverse) # para lidar com os dados (ggplot tá aí!)
+library(lubridate) # para lidar com as datas
+library(weathermetrics) # para converter a temperatura
+library(janitor) # clean_names
 library(ggtext) # para suportar texto com HTML
 library(glue) # para criar strings
 
@@ -55,19 +55,23 @@ Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
 ```
 
 Os dados eu peguei pra uma tarefa da disciplina *Reporting With Data*. Exportei do site os registros das estações de Austin e de Nova York, no período entre setembro e dezembro de 2022. Alguns desafios:
-\* Selecionar o período específico em que eu estive em cada cidade; 
-\* Como a temperatura estava em Fahrenheit, tive que converter para Celsius (afinal, aqui é BR). Usei o pacote `weathermetrics` pra essa tarefa 
-\* Acrescentar dados de São Paulo (onde estive na primeira semana de setembro); 
-\* Formatar datas.
+
+-   Selecionar o período específico em que eu estive em cada cidade;
+
+-   Como a temperatura estava em Fahrenheit, tive que converter para Celsius (afinal, aqui é BR). Usei o pacote `weathermetrics` pra essa tarefa
+
+-   Acrescentar dados de São Paulo (onde estive na primeira semana de setembro);
+
+-   Formatar datas.
 
 ```{r}
 #| message: false
 #| warning: false
-#Carregando os dados
+# Carregando os dados
 df <- read.csv("data/3643365.csv") |> 
   clean_names()
 
-#Formatando as datas
+# Formatando as datas
 df$date <- as.Date(df$date, format = "%Y-%m-%d")
 
 # Filtrando os dados de acordo com as condições de data e estação metereológica
@@ -103,7 +107,7 @@ filtered_df <- filtered_df %>%
     tmax = ifelse(date %in% sp_data$date, sp_data$tmax[match(date, sp_data$date)], tmax)
   )
 
-filtered_df<-filtered_df |> select(name, date, tmin, tmax)
+filtered_df <- filtered_df |> select(name, date, tmin, tmax)
 ```
 
 ### Plotando o gráfico
@@ -142,6 +146,7 @@ O resultado! Admito que não ficou TÃO do jeito que eu queria, mas gostei de fa
 ```{r}
 #| message: false
 #| warning: false
+#| eval: false
 # Use o ggtext para o subtitle que requer HTML
 my_title <- glue(
   "Temperaturas <b><span style = 'color:blue;'>mínimas</span></b> e <b><span style = 'color:orange;'>máximas</span></b> durante meu período nos EUA"
@@ -233,10 +238,11 @@ figura <- ggplot(
     vjust = 1, 
     size = 3, 
     color = "black",position = position_dodge(width = 0.2), family = "Raleway")
+
 figura
 ```
 
-
+![](images/logo.png){width="100%"}
 
 ```{r}
 #| echo: false
@@ -246,8 +252,6 @@ knitr::write_bib(
   file = "pacotes.bib"
   )
 ```
-
-
 
 <!-- inicio font awesome -->
 

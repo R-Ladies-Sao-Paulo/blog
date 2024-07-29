@@ -9,7 +9,7 @@
 <link>https://rladies-sp.org/en.html</link>
 <atom:link href="https://rladies-sp.org/en.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.4.555</generator>
+<generator>quarto-1.5.55</generator>
 <lastBuildDate>Sat, 02 Dec 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>R Packages for Brazilian Data</title>
@@ -532,6 +532,7 @@ background-color: null;
 font-style: inherit;"># Loading packages</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -541,6 +542,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;

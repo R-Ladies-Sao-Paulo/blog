@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/en.html",
+    "items": [
+      "/posts/2023-12-evento-pacotes/english.html",
+      "/posts/2023-06-05-increasing-diversity-sao-paulo/english.html",
+      "/posts/2023-03-evento-open-data-day/english.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/2024-01-planejamento-do-ano/index.html",
@@ -18,14 +26,6 @@
       "/posts/2022-12-graficos-dinamite/index.html",
       "/posts/2022-12-boas-vindas-ao-blog/index.html",
       "/posts/2020-06-rladies-global-blm/index.html",
-      "/posts/2023-12-evento-pacotes/english.html",
-      "/posts/2023-06-05-increasing-diversity-sao-paulo/english.html",
-      "/posts/2023-03-evento-open-data-day/english.html"
-    ]
-  },
-  {
-    "listing": "/en.html",
-    "items": [
       "/posts/2023-12-evento-pacotes/english.html",
       "/posts/2023-06-05-increasing-diversity-sao-paulo/english.html",
       "/posts/2023-03-evento-open-data-day/english.html"

@@ -9,7 +9,7 @@
 <link>https://rladies-sp.org/</link>
 <atom:link href="https://rladies-sp.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Site da R-Ladies São Paulo, com informações sobre a comunidade e textos escritos por participantes.</description>
-<generator>quarto-1.4.555</generator>
+<generator>quarto-1.5.55</generator>
 <lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>As metas foram atualizadas com sucesso!</title>
@@ -654,7 +654,7 @@ Autoria
 <p>Por isso tudo, que tal “scrapear” (ou raspar) a <a href="https://pt.wikipedia.org/wiki/Studio_Ghibli">página do Studio Ghibli, na Wikipédia</a> a maior enciclopédia colaborativa web do mundo, e coletar os dados de todos os filmes já lançados por esse estúdio de cinema? Scrapers e Ghibli-fãs, uni-vos!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
 </div>
@@ -679,6 +679,7 @@ Figura&nbsp;1: Imagem da página do Studio Ghibli, no Wikipédia.
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -688,6 +689,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -697,6 +699,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -706,6 +709,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -715,6 +719,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -726,6 +731,7 @@ background-color: null;
 font-style: inherit;"># o {purrr} faz parte do {tidyverse}</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -739,7 +745,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>Inicialmente, inspecionamos a página do Studio Ghibli na Wikipédia para encontrar os elementos em HTML que estão associados exclusivamente às informações dos filmes (como título, ano de lançamento, duração, diretor, elenco etc). Felizmente, esses dados estão todos resumidos em uma única tabela dentre a única tabela que existe na página (na Seção Filmografia, para ser mais exata) - o que deixou a tarefa de raspagem muito mais fácil, por sinal.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
 </div>
@@ -854,7 +860,7 @@ font-style: inherit;"># parametro XPath</span></span></code></pre></div>
 <p>A tabela (ainda em HTML, lembrando) que acabamos de obter só contém as informações mais gerais dos filmes do Studio Ghibli. Mas… e se quisermos montar uma base de dados em que seja possível, por exemplo, analisar sobre a duração, gênero e elenco dos filmes? Bem, para esse fim, vamos continuar utilizando a tabela anterior, que, como podemos observar na Figura&nbsp;2, está sob a <em>tag</em> <code>&lt;table&gt;</code> e o atributo <code>class='wikitable unsortable'</code>. Percebam, ainda, agora na Figura&nbsp;3, que os títulos são links (identificados com a <em>tag</em> <code>&lt;a&gt;</code>) que direcionam para as páginas individuais de cada um dos filmes, locais onde estão as informações pelas quais estamos interessados.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
 </div>
@@ -1075,6 +1081,7 @@ font-style: inherit;">get_links</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -1153,6 +1160,7 @@ font-style: inherit;">get_progresso</span> <span class="op" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -1572,7 +1580,7 @@ font-style: inherit;">#&gt; [1] "output/31.html"</span></span></code></pre></div
 <p>Ah, na Figura&nbsp;4 é possível ter uma ideia de como é uma barra de progresso.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="586">
 </div>
@@ -1587,7 +1595,7 @@ Figura&nbsp;4: Barra de progresso na prática.
 <p>Notem que, no segundo cenário, optamos pelo arquivo <code>5.html</code>. Ele se refere ao filme “O Túmulo de Vagalumes”, o filme do Studio Ghibli preferido desta que vos escreve - mas o processo de <em>parsing</em> para qualquer um dos 31 arquivos gerados é o mesmo, caso seu filme favorito seja outro. Nesse caso, quando aplicamos a função mágica <code><a href="https://rvest.tidyverse.org/reference/html_table.html">rvest::html_table()</a></code>, o R retorna uma lista com 8 elementos, pois lembre-se que foram coletados todos os nós das <em>tags</em> <code>&lt;a&gt;</code> e todos os atributos da forma <code>href</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://rladies-sp.org/posts/2023-10-ws-ghibli/img/fig4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552">
 </div>
@@ -4223,6 +4231,7 @@ Dica
 <div class="cell">
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -4232,6 +4241,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -4241,6 +4251,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -4250,6 +4261,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -4259,6 +4271,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -4274,6 +4287,7 @@ font-style: inherit;">gerar_tabela</span> <span class="op" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -5147,6 +5161,7 @@ background-color: null;
 font-style: inherit;"># Clique no nome da função para ler a sua documentação.</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -5392,6 +5407,7 @@ background-color: null;
 font-style: inherit;"># Carregando pacotes</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -5401,6 +5417,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -5851,6 +5868,7 @@ background-color: null;
 font-style: inherit;"># Loading packages</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -5860,6 +5878,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -6213,6 +6232,7 @@ Autoria
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -6222,6 +6242,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -6231,6 +6252,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -8471,6 +8493,7 @@ font-style: inherit;">---</span></span>
 background-color: null;
 font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -8482,6 +8505,7 @@ font-style: inherit;"> # -----&gt; Título</span></span>
 background-color: null;
 font-style: inherit;">subtitle</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -8493,6 +8517,7 @@ font-style: inherit;"> # -----&gt; Subtítulo</span></span>
 background-color: null;
 font-style: inherit;">author</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -8504,6 +8529,7 @@ font-style: inherit;"> # -----&gt; Autoria</span></span>
 background-color: null;
 font-style: inherit;">date</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -8515,6 +8541,7 @@ font-style: inherit;"> # -----&gt; Data de publicação</span></span>
 background-color: null;
 font-style: inherit;">date-format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> short</span><span class="co" style="color: #5E5E5E;
@@ -8524,6 +8551,7 @@ font-style: inherit;"> # -----&gt; Formato de data curto: dd/mm/aaaa</span></spa
 background-color: null;
 font-style: inherit;">lang</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> pt</span><span class="co" style="color: #5E5E5E;
@@ -8533,6 +8561,7 @@ font-style: inherit;"> # -----&gt; Linguagem: português</span></span>
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -8542,6 +8571,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -8551,6 +8581,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">code-fold</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -8564,6 +8595,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -8573,18 +8605,22 @@ font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">light</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">pulse</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">,</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">custom.scss</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">]</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> # Tema modo claro</span></span>
@@ -8594,18 +8630,22 @@ font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dark</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">cyborg</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">,</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">custom.scss</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">]</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> # Tema modo escuro</span></span>
@@ -8613,6 +8653,7 @@ font-style: inherit;"> # Tema modo escuro</span></span>
 background-color: null;
 font-style: inherit;">title-block-banner</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -8624,6 +8665,7 @@ font-style: inherit;"> # -----&gt; Estilo de banner no topo do documento</span><
 background-color: null;
 font-style: inherit;">bibliography</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> references.bib</span><span class="co" style="color: #5E5E5E;
@@ -9121,6 +9163,7 @@ Se você não tem o hábito de usar o <code>ggplot2</code>, o código abaixo pod
 <div class="cell">
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -9364,6 +9407,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell">
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -9530,6 +9574,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell">
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;

@@ -11,7 +11,7 @@ categories:
 toc: true # isso habilita o sumário ao lado do post
 image: "images/logo.png" # imagem usada na página inicial junto ao post
 bibliography: "pacotes.bib" # arquivo de bibliografia. Pode adicionar mais arquivos!
-draft: true # enquanto estiver draft: true, o post é um rascunho
+draft: false # enquanto estiver draft: true, o post é um rascunho
 ---
 
 ::: {.callout-note collapse="false"}
@@ -27,8 +27,6 @@ draft: true # enquanto estiver draft: true, o post é um rascunho
 
 Este post foi escrito por Bianca Muniz e publicado originalmente em seu [blog pessoal](https://biamuniz.github.io/blog/posts/eua/).
 :::
-
-
 
 Estive nos EUA durante quatro meses em 2022, entre setembro e dezembro, do final do verão até o começo do inverno. Precisei lidar com o calor texano de 30°C (e muito suor, pressão baixa e protetor solar) e temperaturas negativas no inverno de Nova York (e o hábito de entrar em cafés quentinhos apenas pra reter o calor do meu corpo por uns minutos). Perrengues chiques estadunidenses.
 

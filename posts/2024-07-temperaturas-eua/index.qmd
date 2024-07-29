@@ -3,7 +3,7 @@ title: "DataBia nos EUA"
 subtitle: "Plotando as diferentes temperaturas em Austin e NYC"
 author: 
   - "[Bianca Muniz](https://www.linkedin.com/in/bmuniz/)"
-date: "2024-07-11"
+date: "2024-07-29"
 categories: 
 # exemplo de categorias:
   - "Pessoal"

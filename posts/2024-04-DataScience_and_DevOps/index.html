@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ían Muliterno">
 
-<title>R-Ladies São Paulo</title>
+<title>Commits atômicos e profissionais de dados – R-Ladies São Paulo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/logo.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-en .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-en'] = new List('listing-posts-en', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EB5DDC6HCJ"></script>
 
 <script type="text/javascript">
@@ -108,40 +78,11 @@ gtag('js', new Date());
 gtag('config', 'G-EB5DDC6HCJ', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="R-Ladies São Paulo" href="en.xml" data-external="1"><meta name="twitter:title" content="R-Ladies São Paulo">
-<meta name="twitter:description" content="Blog posts translated to English">
-<meta name="twitter:image" content="https://rladies-sp.org/img/logo.jpg">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Commits atômicos e profissionais de dados – R-Ladies São Paulo">
+<meta name="twitter:description" content="Aprenda a commitar e entenda porque um profissional de dados precisa dar atenção a isto.">
+<meta name="twitter:image" content="https://rladies-sp.org/posts/2024-04-DataScience_and_DevOps/images/logo.jpg">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:site" content="@RLadiesSaoPaulo">
 <meta name="twitter:card" content="summary_large_image">
@@ -154,10 +95,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo.jpg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/logo.jpg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">R-Ladies São Paulo</span>
     </a>
   </div>
@@ -168,11 +109,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./en.html" aria-current="page"> 
+    <a class="nav-link" href="../../en.html"> 
 <span class="menu-text">English</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./"> 
+    <a class="nav-link" href="../../"> 
 <span class="menu-text">Página inicial</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -181,15 +122,15 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-ladies-sp">    
         <li>
-    <a class="dropdown-item" href="./sobre.html">
+    <a class="dropdown-item" href="../../sobre.html">
  <span class="dropdown-text">Sobre a R-Ladies SP</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./coc.html">
+    <a class="dropdown-item" href="../../coc.html">
  <span class="dropdown-text">Código de conduta</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./como-participar.html">
+    <a class="dropdown-item" href="../../como-participar.html">
  <span class="dropdown-text">Como participar?</span></a>
   </li>  
     </ul>
@@ -200,21 +141,21 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">    
         <li>
-    <a class="dropdown-item" href="./contribuir-com-o-blog.html">
+    <a class="dropdown-item" href="../../contribuir-com-o-blog.html">
  <span class="dropdown-text">Como contribuir com o blog?</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sugestoes.html">
+    <a class="dropdown-item" href="../../sugestoes.html">
  <span class="dropdown-text">Sugestão de conteúdos</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./videos.html"> 
+    <a class="nav-link" href="../../videos.html"> 
 <span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./eventos.html"> 
+    <a class="nav-link" href="../../eventos.html"> 
 <span class="menu-text">Próximos eventos</span></a>
   </li>  
 </ul>
@@ -276,22 +217,37 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">R-Ladies São Paulo</h1>
-            <p class="subtitle lead">Blog posts translated to English</p>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Commits atômicos e profissionais de dados</h1>
+            <p class="subtitle lead">Aprenda a commitar e entenda porque um profissional de dados precisa dar atenção a isto.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Tutorial</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Autoria</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://imuliterno.netlify.app/">Ían Muliterno</a> </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">24 de abril de 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -299,156 +255,124 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#sponsors" id="toc-sponsors" class="nav-link active" data-scroll-target="#sponsors">Sponsors</a></li>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#draft" id="toc-draft" class="nav-link" data-scroll-target="#draft">draft</a>
+  <ul class="collapse">
+  <li><a href="#blog-post-embracing-atomic-commits-for-data-professionals" id="toc-blog-post-embracing-atomic-commits-for-data-professionals" class="nav-link" data-scroll-target="#blog-post-embracing-atomic-commits-for-data-professionals">Blog Post: Embracing Atomic Commits for Data Professionals</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/en.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2024-04-DataScience_and_DevOps/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<div id="listing-posts-en" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Packages,Community,Events" data-listing-date-sort="1701475200000" data-listing-file-modified-sort="1722455271111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1101">
-<div class="thumbnail">
-<p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external"></a></p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">
-<p><img loading="lazy" src="./posts/2023-12-evento-pacotes/images/foto-evento.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/2023-12-evento-pacotes/english.html" class="no-external"></a></p>
+<div class="callout-title-container flex-fill">
+Autoria
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">R Packages for Brazilian Data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">Event of R-Ladies São Paulo</a>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Packages'); return false;">
-Packages
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<center>
+<div class="quarto-figure quarto-figure-center" style="width: 30%; border-radius: 50%;">
+<figure class="figure">
+<p><img src="https://avatars.githubusercontent.com/u/21000314?v=4.png" class="img-fluid figure-img"></p>
+<figcaption>Foto</figcaption>
+</figure>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Community'); return false;">
-Community
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
+<p><a href="https://"><i class="bi bi-house-fill"></i></a> <a href="https://github.com/USER"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/USER/"><i class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/USER/"><i class="fab fa-instagram"></i></a></p>
+</center>
+<p>Este post foi escrito por Ían Muliterno, co-organizador da comunidade R-ladies São Paulo. Ían é formado em estatística pela UFPE e trabalha como consultor em cientista de dados e ML engineer. Atualmente além do trabalho, participa de um hackathon da Chainlink e estuda Solidity, para embarcar no mercado de Web3.</p>
 </div>
 </div>
 </div>
-<div class="metadata">
-<a href="./posts/2023-12-evento-pacotes/english.html" class="no-external">
-<div class="listing-date">
-2 de dez. de 2023
-</div>
-<div class="listing-author">
-Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R-Ladies,community,latin america" data-listing-date-sort="1696204800000" data-listing-file-modified-sort="1722455271019" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2722">
-<div class="thumbnail">
-<p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a></p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">
-<p class="card-img-top"><img src="posts/2023-06-05-increasing-diversity-sao-paulo/logo2.jpeg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">Actions to increase diversity in the R-Ladies São Paulo community</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('community'); return false;">
-community
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('latin america'); return false;">
-latin america
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="no-external">
-<div class="listing-date">
-2 de out. de 2023
-</div>
-<div class="listing-author">
-Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Events,Community,Diversity,English" data-listing-date-sort="1679788800000" data-listing-file-modified-sort="1722455270967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3245">
-<div class="thumbnail">
-<p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external"></a></p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">
-<p><img loading="lazy" src="./posts/2023-03-evento-open-data-day/images/logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">Event: Open Data Analysis with R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">An event part of the Open Data Day initiative</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Community'); return false;">
-Community
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Diversity'); return false;">
-Diversity
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('English'); return false;">
-English
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-03-evento-open-data-day/english.html" class="no-external">
-<div class="listing-date">
-26 de mar. de 2023
-</div>
-<div class="listing-author">
-Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Nenhum item correspondente
-</div>
-</div>
-<section id="sponsors" class="level2">
-<h2 class="anchored" data-anchor-id="sponsors">Sponsors</h2>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Com a evolução da área de ciência de dados e machine learning, a integração das práticas de DevOps se tornam cada vez mais essenciais. Se você duvida, basta dar uma olhada no conceito de DevOps e pensar como seria possível fazer o deploy de modelos e trabalhar em cloud, sem a aplicação desses conceitos básicos para um desenvolvedor de software.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.r-consortium.org/all-projects/r-user-group-support-program"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="R Consortium Logo"></a></p>
+<p><a href="https://marvel-b1-cdn.bc0a.com/f00000000236551/dt-cdn.net/wp-content/uploads/2021/07/13429_ILL_DevOpsLoop.png"><img src="images/paste-9B5D36BA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Loop de DevOps ."></a></p>
 </figure>
 </div>
-<figcaption>R Consortium</figcaption>
+<figcaption>Loop de DevOps .</figcaption>
 </figure>
 </div>
+<p>DevOps é uma combinação das palavras “Desenvolvimento” e “Operações”. É uma estratégia que une os times que criam um software com o time que garante que o software funciona bem para o usuário final. O principal objetivo dessa estratégia é acelerar o processo de entrega de um software de qualidade.</p>
+<p>Os principais pilares do DevOps são:</p>
+<ol type="1">
+<li>Automação</li>
+<li>CI/CD</li>
+<li>Colaboração</li>
+<li>Teste e monitoramento</li>
+<li>IaC</li>
+</ol>
+<p>Automation: This is about making repetitive tasks run by themselves without needing a person to do them every time. For example, testing new parts of an app automatically to make sure they work as expected. Continuous Integration and Continuous Deployment (CI/CD): This means constantly adding small changes to the software and making sure they’re good to go live to users. “Integration” is about blending these new changes smoothly with the old ones, and “Deployment” is about putting them into action so people can use them. Collaboration: Everyone involved, from those who write the code to those who deploy it, works closely together. This way, they can solve problems faster and make better software. Monitoring and Testing: Regularly checking the software to make sure it’s working right and finding any issues before they become big problems. This includes testing new updates to ensure they don’t mess anything up. Infrastructure as Code (IaC): This involves managing and setting up computer servers and networks in a way that’s as easy as writing a script or a piece of code. This helps in setting up and changing technical resources fast and consistently. By focusing on these pillars, DevOps helps create better software, faster, and with fewer problems, making everyone’s experience smoother and more enjoyable.</p>
+</section>
+<section id="draft" class="level1">
+<h1>draft</h1>
+<section id="blog-post-embracing-atomic-commits-for-data-professionals" class="level3">
+<h3 class="anchored" data-anchor-id="blog-post-embracing-atomic-commits-for-data-professionals">Blog Post: Embracing Atomic Commits for Data Professionals</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<p>As the fields of data science, machine learning, and artificial intelligence continue to evolve, the integration of DevOps practices into these domains has become increasingly essential. Among the many practices of DevOps, the concept of atomic commits is particularly vital for maintaining the integrity and manageability of code changes. This blog post aims to demystify atomic commits and discuss their importance for data professionals.</p>
+</section>
+<section id="what-are-atomic-commits" class="level4">
+<h4 class="anchored" data-anchor-id="what-are-atomic-commits">What are Atomic Commits?</h4>
+<p>An atomic commit refers to a version control practice where each commit contains a single functional change. This means that each commit is self-contained, with a clear, specific purpose. An atomic commit should be able to pass all tests by itself, ensuring that it does not break the codebase.</p>
+</section>
+<section id="why-atomic-commits" class="level4">
+<h4 class="anchored" data-anchor-id="why-atomic-commits">Why Atomic Commits?</h4>
+<p><strong>1. Clarity:</strong> Atomic commits make it easier to understand the history of changes, which is crucial when debugging or when multiple people are working on the same project.</p>
+<p><strong>2. Revertibility:</strong> With atomic commits, if a particular change introduces a bug, it can be reverted without affecting other unrelated changes.</p>
+<p><strong>3. Code Review:</strong> Smaller, well-defined changes are easier to review, leading to more effective peer reviews.</p>
+</section>
+<section id="examples-of-atomic-commits" class="level4">
+<h4 class="anchored" data-anchor-id="examples-of-atomic-commits">Examples of Atomic Commits</h4>
+<p>Let’s consider a project where you’re developing a machine learning model for predicting customer churn. Here are examples of atomic commits:</p>
+<ul>
+<li><strong>Commit 1:</strong> Add a new feature for extracting the customer’s tenure length.</li>
+<li><strong>Commit 2:</strong> Implement logistic regression for churn prediction.</li>
+<li><strong>Commit 3:</strong> Fix a bug where missing values in the tenure feature caused a crash.</li>
+</ul>
+<p>Each of these commits addresses a specific task or fix, making them atomic.</p>
+</section>
+<section id="devops-requirements-in-data-roles" class="level4">
+<h4 class="anchored" data-anchor-id="devops-requirements-in-data-roles">DevOps Requirements in Data Roles</h4>
+<p>As data professionals venture further into roles that overlap with software engineering, understanding and implementing DevOps practices becomes crucial. Here are some DevOps requirements commonly expected in data roles:</p>
+<p><strong>1. Continuous Integration/Continuous Deployment (CI/CD):</strong> Data scientists need to ensure that their models can be seamlessly integrated and deployed into production systems. This requires regular commits, automated testing, and frequent integration of changes.</p>
+<p><strong>2. Version Control:</strong> Effective use of version control systems like Git is essential for managing code changes, especially in collaborative environments.</p>
+<p><strong>3. Testing and Monitoring:</strong> Automated testing of code and monitoring of the model performance in production are critical to ensure reliability and accuracy of data products.</p>
+<p><strong>4. Containerization:</strong> Tools like Docker are increasingly used to containerize data applications, ensuring consistency across different computing environments.</p>
+</section>
+<section id="how-to-make-atomic-commits" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-make-atomic-commits">How to Make Atomic Commits</h4>
+<p><strong>1. Keep Changes Small and Focused:</strong> Before committing, ask yourself if your changes can be logically divided into smaller parts.</p>
+<p><strong>2. Write Clear Commit Messages:</strong> Each commit should be accompanied by a concise yet descriptive message that explains the rationale behind the change.</p>
+<p><strong>3. Test Before Committing:</strong> Ensure that your changes do not break existing functionality by running tests before committing.</p>
+</section>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
+<p>Adopting atomic commits is not just about following a best practice; it’s about making your workflow more manageable and transparent, especially in fast-paced environments where data scientists and AI engineers collaborate closely with software developers. By incorporating these practices, data professionals can enhance the quality, reliability, and scalability of their data solutions, bridging the gap between data science and operational deployment.</p>
+<hr>
+<p>This blog post could be adapted further based on the specific interests or typical projects of the R-Ladies community, incorporating more R-specific examples or tools.</p>
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
 
 
-
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -879,6 +803,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="R-Ladies-Sao-Paulo/blog" data-repo-id="R_kgDOIip8Qw" data-category="General" data-category-id="DIC_kwDOIip8Q84CS3w3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -887,7 +815,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/en.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/edit/main/posts/2024-04-DataScience_and_DevOps/index.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/R-Ladies-Sao-Paulo/blog/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Página criada com <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

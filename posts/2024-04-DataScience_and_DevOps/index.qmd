@@ -3,7 +3,7 @@ title: "Commits atômicos e profissionais de dados"
 subtitle: "Aprenda a commitar e entenda porque um profissional de dados precisa dar atenção a isto."
 author: 
    - "[Ían Muliterno](https://imuliterno.netlify.app/)" 
-date: "2024-04-24" 
+date: "2024-07-31" 
 categories: 
 # exemplo de categorias:
   - "Tutorial"
@@ -24,14 +24,12 @@ draft: FALSE
 
 </center>
 
-Este post foi escrito por Ían Muliterno, co-organizador da comunidade R-ladies São Paulo. Ían é formado em estatística pela UFPE e trabalha como consultor em cientista de dados e ML engineer. Atualmente além do trabalho, participa de um hackathon da Chainlink e estuda Solidity, para embarcar no mercado de Web3.
+Este post foi escrito por Ían Muliterno, co-organizador da comunidade R-ladies São Paulo. Ían é formado em estatística pela UFPE e trabalha como cientista de dados/ML engineer. Além da área de dados, também é autor do livro "Diversidade - Apenas mais uma virtude", disponível na Amazon Kindle.
 :::
 
 ## Introdução
 
 Com a evolução da área de ciência de dados e machine learning, a integração das práticas de DevOps se tornam cada vez mais essenciais. Se você duvida, basta dar uma olhada no conceito de DevOps e pensar como seria possível fazer o deploy de modelos e trabalhar em cloud, sem a aplicação desses conceitos básicos para um desenvolvedor de software.
-
-[![Loop de DevOps .](images/paste-9B5D36BA.png){fig-align="center"}](https://marvel-b1-cdn.bc0a.com/f00000000236551/dt-cdn.net/wp-content/uploads/2021/07/13429_ILL_DevOpsLoop.png)
 
 DevOps é uma combinação das palavras "Desenvolvimento" e "Operações". É uma estratégia que une os times que criam um software com o time que garante que o software funciona bem para o usuário final. O principal objetivo dessa estratégia é acelerar o processo de entrega de um software de qualidade.
 
@@ -43,69 +41,54 @@ Os principais pilares do DevOps são:
 4.  Teste e monitoramento
 5.  IaC
 
-Automation: This is about making repetitive tasks run by themselves without needing a person to do them every time. For example, testing new parts of an app automatically to make sure they work as expected. Continuous Integration and Continuous Deployment (CI/CD): This means constantly adding small changes to the software and making sure they're good to go live to users. "Integration" is about blending these new changes smoothly with the old ones, and "Deployment" is about putting them into action so people can use them. Collaboration: Everyone involved, from those who write the code to those who deploy it, works closely together. This way, they can solve problems faster and make better software. Monitoring and Testing: Regularly checking the software to make sure it’s working right and finding any issues before they become big problems. This includes testing new updates to ensure they don’t mess anything up. Infrastructure as Code (IaC): This involves managing and setting up computer servers and networks in a way that’s as easy as writing a script or a piece of code. This helps in setting up and changing technical resources fast and consistently. By focusing on these pillars, DevOps helps create better software, faster, and with fewer problems, making everyone’s experience smoother and more enjoyable.
+**Automação**: fazer com que tarefas repetitivas rodem por si só.
 
-# draft
+**Continuous Integration and Continuous Deployment (CI/CD)**: Adicionar mudanças pequenas de maneira constante e imediatamente deixando-as prontas para serem consumidas pelo usuário final.
 
-### Blog Post: Embracing Atomic Commits for Data Professionals
+**Colaboração**: Envolvimento de todos aqueles responsáveis pelo projeto, do rascunho até o lançamento. Isso garante soluções mais rápidas.
 
-#### Introduction
+**Teste e monitoramento**: Testar sempre, especialmente novas features. Os `unit test` são cruciais nesse momento, pois, uma vez setados rodam automaticamente e avisam em caso de erro, pode ser feito por ferramentas como github actions ou Azure DevOps services.
 
-As the fields of data science, machine learning, and artificial intelligence continue to evolve, the integration of DevOps practices into these domains has become increasingly essential. Among the many practices of DevOps, the concept of atomic commits is particularly vital for maintaining the integrity and manageability of code changes. This blog post aims to demystify atomic commits and discuss their importance for data professionals.
+**Infraestrutura como Código (IaC)**: Setar servidores de um jeito tão simples quanto escrever um script de código.
 
-#### What are Atomic Commits?
+#### E onde entram os commits atômicos nessa história?
 
-An atomic commit refers to a version control practice where each commit contains a single functional change. This means that each commit is self-contained, with a clear, specific purpose. An atomic commit should be able to pass all tests by itself, ensuring that it does not break the codebase.
+Primeiro de tudo, commit é o registro de alguma mudança no seu controle de versionamento. Um commit atômico é uma prática onde cada commit contém uma única mudança funcional. Então nada de passar o dia codando e só commitar no fim do dia, imagina ter que reverter uma única coisa feita nesse dia, e precisar fazer `undo` do commit inteiro?! Nesta prática o ideal é, por exemplo, commitar cada nova feature, cada novo módulo ou função. Além disso, um commit atômico deve ser capaz de passar em todos os testes, para assegurar que ele não quebra o código base do seu projeto.
 
-#### Why Atomic Commits?
+#### Porquê commits atômicos?
 
-**1. Clarity:** Atomic commits make it easier to understand the history of changes, which is crucial when debugging or when multiple people are working on the same project.
+**1. Clareza:** Commits atômicos facilitam e dividem com clareza as mudanças históricas, isso é muito importante para debug e colaboração.
 
-**2. Revertibility:** With atomic commits, if a particular change introduces a bug, it can be reverted without affecting other unrelated changes.
+**2. Revertibilidade:** Com o commit constante marcando cada pequena mudança completa, por exemplo, a criação de uma função ou botão num aplicativo, é mais fácil reverter algo sem impactar outras partes do projeto.
 
-**3. Code Review:** Smaller, well-defined changes are easier to review, leading to more effective peer reviews.
+**3. Revisão de código:** Mudanças menores, bem definidas e documentadas também facilitam a revisão de código
 
-#### Examples of Atomic Commits
+#### Exemplo de commits atômicos
 
-Let’s consider a project where you’re developing a machine learning model for predicting customer churn. Here are examples of atomic commits:
+Vamos considerar um projeto onde queremos criar um modelo que prevê churn. Estes são alguns exemplos de commits atômicos.
 
--   **Commit 1:** Add a new feature for extracting the customer's tenure length.
--   **Commit 2:** Implement logistic regression for churn prediction.
--   **Commit 3:** Fix a bug where missing values in the tenure feature caused a crash.
+-   **Commit 1:** \[ Nova feature \] calcular "tempo de casa" do cliente.
+-   **Commit 2:** \[ Implementando modelo \] Regressão logística.
+-   **Commit 3:** \[ Debug \] Onde o cálculo de "tempo de casa" retornou NaN por conta de valores faltantes.
 
-Each of these commits addresses a specific task or fix, making them atomic.
+Cada commit aborda uma única tarefa ou debug e estão bem documentados, o que os tornam commits atômicos.
 
-#### DevOps Requirements in Data Roles
+#### Requisitos de DevOps em análise de dados
 
-As data professionals venture further into roles that overlap with software engineering, understanding and implementing DevOps practices becomes crucial. Here are some DevOps requirements commonly expected in data roles:
+Como comentei no início, posições como Cientista de dados, Machine Learning Engineer ou ainda AI Enginner, estão cada vez mais relacionadas com DevOps, pois um dashboard ou um modelo que precisa ser colocado em produção se beneficia de conceitos de desenvolvimento de software para que seja eficiente. Dependendo da sua rotina na empresa atual, pode ser que não sinta tanto isso, então aqui estão alguns exemplos, muito comuns, de aplicação desses conceitos DevOps, no nosso mundo de dados.
 
-**1. Continuous Integration/Continuous Deployment (CI/CD):** Data scientists need to ensure that their models can be seamlessly integrated and deployed into production systems. This requires regular commits, automated testing, and frequent integration of changes.
+**1. CI/CD:** Quando um cientista de dados colabora num projeto que está dentro do Git, ou outra ferramenta de controle de versionamento, é necessário garantir a integração e deploy limpos, para tal, é necessário commitar com frequência, a cada nova iteração completa.
 
-**2. Version Control:** Effective use of version control systems like Git is essential for managing code changes, especially in collaborative environments.
+**2. Controle de versão:** Cada versão completa do projeto é registrada e pode ser resgatada. Já deve ter acontecido com você de baixar algum pacote e descobrir que precisa atualizar vários outros para poder usa-lo, pois apenas certas versões conversam entre si. Isso garante segurança e flexibilidade para os usuários. Facilidade também é outro ponto importante, é possível que o usuário use uma versão anterior de certo pacote, ao invés de atualizar vários outros
 
-**3. Testing and Monitoring:** Automated testing of code and monitoring of the model performance in production are critical to ensure reliability and accuracy of data products.
+**3. Teste e monitoramento:** Unit tests ainda não é tão comum entre data scientists, mas um MLengineer que trabalha com Azure, por exemplo, perceberá que num autoML, e outros serviços, são gerados os `jobs`, que permitem o monitoramento do que está acontecendo em cada um deles, além disso o Azure ainda possui seu próprio serviço de DevOps, onde testes podem ser configurados e rodam automaticamente cada vez que um commit novo é feito lá dentro.
 
-**4. Containerization:** Tools like Docker are increasingly used to containerize data applications, ensuring consistency across different computing environments.
+**4. Conteinerização:** Ferramentas como Docker estão cada vez mais comuns em aplicações de dados, pois asseguram a consistência quando é necessário atuar em diferentes computadores.
 
-#### How to Make Atomic Commits
+#### Resumo da ópera/Como fazer commits atômicos
 
-**1. Keep Changes Small and Focused:** Before committing, ask yourself if your changes can be logically divided into smaller parts.
+**1. Keep it small:** Sempre analise se a solução que você quer aplicar pode ser quebrada em partes, se sim, cada parte deve se tornar um commit.
 
-**2. Write Clear Commit Messages:** Each commit should be accompanied by a concise yet descriptive message that explains the rationale behind the change.
+**2. Descrições claras:** Sempre use descrições concisas, explicando o racional por trás do seu commit.
 
-**3. Test Before Committing:** Ensure that your changes do not break existing functionality by running tests before committing.
-
-#### Conclusion
-
-Adopting atomic commits is not just about following a best practice; it’s about making your workflow more manageable and transparent, especially in fast-paced environments where data scientists and AI engineers collaborate closely with software developers. By incorporating these practices, data professionals can enhance the quality, reliability, and scalability of their data solutions, bridging the gap between data science and operational deployment.
-
-------------------------------------------------------------------------
-
-This blog post could be adapted further based on the specific interests or typical projects of the R-Ladies community, incorporating more R-specific examples or tools.
-
-<!-- inicio font awesome -->
-
-```{=html}
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
-```
-<!-- final font awesome -->
+**3. Teste antes:** Garanta que seu commit não irá quebrar nada que está funcionando.
